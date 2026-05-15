@@ -1,0 +1,12 @@
+# Binary files (distributed via GitHub Releases, not git)
+*.zip
+*.dll
+*.exe
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary extraction folders
+**/temp/
+**/extract/

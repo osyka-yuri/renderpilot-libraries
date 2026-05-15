@@ -1,0 +1,6426 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-15T21:07:22Z",
+  "entries": [
+    {
+      "entry_id": "nvngx_dlss_1.0.0.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.0.0.0",
+        "sort_key": "0001.0000.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "FineTune"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "65d2e2a86352d77244a73bedd5837f50"
+          },
+          "size_bytes": 4522888
+        },
+        "zip": {
+          "size_bytes": 3914167,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.0.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2018-12-21T01:15:17Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.0.9.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.0.9.0",
+        "sort_key": "0001.0000.0009.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 25966737"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "667b23ed632fd0b9a5f2992ace8c6b51"
+          },
+          "size_bytes": 4487024
+        },
+        "zip": {
+          "size_bytes": 3926613,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.0.9.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2019-03-15T02:36:28Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.0.11.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.0.11.0",
+        "sort_key": "0001.0000.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 25753442"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "41878c22b109427192788dd4fce796c1"
+          },
+          "size_bytes": 4502400
+        },
+        "zip": {
+          "size_bytes": 3945948,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.0.11.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2019-02-07T05:31:25Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.0.13.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.0.13.0",
+        "sort_key": "0001.0000.0013.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 25717033"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a8ed873e61fcb3a105d249824a0b0511"
+          },
+          "size_bytes": 4502216
+        },
+        "zip": {
+          "size_bytes": 3949697,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.0.13.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2019-02-01T05:50:34Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.0.17.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.0.17.0",
+        "sort_key": "0001.0000.0017.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 25916083"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a435b45b0f2586402bceca683dd9f1a6"
+          },
+          "size_bytes": 4487208
+        },
+        "zip": {
+          "size_bytes": 3925657,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.0.17.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2019-03-06T22:45:26Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.1.6.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.1.6.0",
+        "sort_key": "0001.0001.0006.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 26519365"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "5e7b70421ece9dcca09260a38e4e9172"
+          },
+          "size_bytes": 5564400
+        },
+        "zip": {
+          "size_bytes": 4240889,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.1.6.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.1.13.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.1.13.0",
+        "sort_key": "0001.0001.0013.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 27720038"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "5ee9de2ae9d76a32c727c1b6ff21e0fa"
+          },
+          "size_bytes": 5646688
+        },
+        "zip": {
+          "size_bytes": 4239981,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.1.13.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.2.14.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.2.14.0",
+        "sort_key": "0001.0002.0014.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 26937653"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "899ebc3ac0637125d7578d87fef42970"
+          },
+          "size_bytes": 5771120
+        },
+        "zip": {
+          "size_bytes": 4277677,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.2.14.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_1.3.2.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "1.3.2.0",
+        "sort_key": "0001.0003.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 27036528"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b92191e7a0b994a297ff8b2012eba529"
+          },
+          "size_bytes": 5737784
+        },
+        "zip": {
+          "size_bytes": 4239836,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_1.3.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.0.34.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.0.34.0",
+        "sort_key": "0002.0000.0034.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 28581698"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "d30c27ca983f9792512c6f5874c60b2e"
+          },
+          "size_bytes": 6344168
+        },
+        "zip": {
+          "size_bytes": 4275951,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.0.34.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.0.38.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.0.38.0",
+        "sort_key": "0002.0000.0038.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 28843986"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "acb8b647ba19dcc638dd50ff621f7801"
+          },
+          "size_bytes": 6290920
+        },
+        "zip": {
+          "size_bytes": 4266823,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.0.38.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.16.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.16.0",
+        "sort_key": "0002.0001.0016.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 28844053"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "1a30408f7ad1bdaec0ef81b5e2313c4e"
+          },
+          "size_bytes": 11562296
+        },
+        "zip": {
+          "size_bytes": 8178455,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.16.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.19.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.19.0",
+        "sort_key": "0002.0001.0019.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 28939566"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "0a82a657e294219b6dc8875897a2cced"
+          },
+          "size_bytes": 11731432
+        },
+        "zip": {
+          "size_bytes": 8265997,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.19.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.24.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.24.0",
+        "sort_key": "0002.0001.0024.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 28996384"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "5af4c12dde0e9dfa54ed76fe9e4db647"
+          },
+          "size_bytes": 11772216
+        },
+        "zip": {
+          "size_bytes": 8291453,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.24.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.25.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.25.0",
+        "sort_key": "0002.0001.0025.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29009287"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "18b651a8df80464512ed19fa9859b585"
+          },
+          "size_bytes": 11773928
+        },
+        "zip": {
+          "size_bytes": 8294673,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.25.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.28.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.28.0",
+        "sort_key": "0002.0001.0028.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29017803"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f92355a0a6376447c7d0fc0a3cfc2f43"
+          },
+          "size_bytes": 11773416
+        },
+        "zip": {
+          "size_bytes": 8294123,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.28.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.29.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.29.0",
+        "sort_key": "0002.0001.0029.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29067546"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "5f4b894692e9fd415731f0c0aa4a33af"
+          },
+          "size_bytes": 11773928
+        },
+        "zip": {
+          "size_bytes": 8294217,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.29.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2020-09-15T20:15:44Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.31.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.31.0",
+        "sort_key": "0002.0001.0031.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29083287"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "3e68d270cef16027da3ff3ba3b974537"
+          },
+          "size_bytes": 11773752
+        },
+        "zip": {
+          "size_bytes": 8307993,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.31.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.35.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.35.0",
+        "sort_key": "0002.0001.0035.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29167882"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "fb72213cf0f3cf103a16cfe7d930f707"
+          },
+          "size_bytes": 11784504
+        },
+        "zip": {
+          "size_bytes": 8311545,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.35.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.39.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.39.0",
+        "sort_key": "0002.0001.0039.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29218479"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "6cbf57c2d08d775808aef61c9671db5b"
+          },
+          "size_bytes": 11887416
+        },
+        "zip": {
+          "size_bytes": 8343249,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.39.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.40.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.40.0",
+        "sort_key": "0002.0001.0040.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29272686"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8e3ac0a089abe2b319e2926b38db0ff9"
+          },
+          "size_bytes": 11888616
+        },
+        "zip": {
+          "size_bytes": 8343665,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.40.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.50.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.50.0",
+        "sort_key": "0002.0001.0050.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29518444"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "6672c90b5afef2153259f84929364b2a"
+          },
+          "size_bytes": 13758192
+        },
+        "zip": {
+          "size_bytes": 9241877,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.50.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.51.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.51.0",
+        "sort_key": "0002.0001.0051.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29469881"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4950c49d5e337f3146bcd51a26ab8cc6"
+          },
+          "size_bytes": 13758192
+        },
+        "zip": {
+          "size_bytes": 9241961,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.51.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.52.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.52.0",
+        "sort_key": "0002.0001.0052.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29573341"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "430ee0d531f4b89a7cc65524ccc5d912"
+          },
+          "size_bytes": 13758192
+        },
+        "zip": {
+          "size_bytes": 9241965,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.52.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.53.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.53.0",
+        "sort_key": "0002.0001.0053.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29608517"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e696265c702cc90cbcf4974faeebb9f4"
+          },
+          "size_bytes": 13756768
+        },
+        "zip": {
+          "size_bytes": 9241478,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.53.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.55.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.55.0",
+        "sort_key": "0002.0001.0055.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29708548"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "72c53fe8cf9114143680f3bc56cea1a7"
+          },
+          "size_bytes": 13805424
+        },
+        "zip": {
+          "size_bytes": 9251600,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.55.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.58.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.58.0",
+        "sort_key": "0002.0001.0058.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29760797"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "2b1b8d32e4866e7d7734acf2bcc830b1"
+          },
+          "size_bytes": 14905712
+        },
+        "zip": {
+          "size_bytes": 9653791,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.58.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.62.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.62.0",
+        "sort_key": "0002.0001.0062.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29884341"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ecf487bc067ed07b90a3452db0203655"
+          },
+          "size_bytes": 14904688
+        },
+        "zip": {
+          "size_bytes": 9653529,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.62.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.63.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.63.0",
+        "sort_key": "0002.0001.0063.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29912254"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "262b728f1692e2550cf1cc9a41681a59"
+          },
+          "size_bytes": 14904688
+        },
+        "zip": {
+          "size_bytes": 9653502,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.63.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.1.66.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.1.66.0",
+        "sort_key": "0002.0001.0066.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30017708"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "1a81316e57aba6c9c46fae53936c3933"
+          },
+          "size_bytes": 14908784
+        },
+        "zip": {
+          "size_bytes": 9654368,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.1.66.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.6.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.6.0",
+        "sort_key": "0002.0002.0006.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 29980697"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "52219034574426fef16b19d2495648c0"
+          },
+          "size_bytes": 14444400
+        },
+        "zip": {
+          "size_bytes": 9842212,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.6.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.9.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.9.0",
+        "sort_key": "0002.0002.0009.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30084522"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "5b9b917af8fb72d63f073a0e0f621d94"
+          },
+          "size_bytes": 14445936
+        },
+        "zip": {
+          "size_bytes": 9855311,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.9.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.10.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.10.0",
+        "sort_key": "0002.0002.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30115323"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "062215c828802b9202ada4ca4d3619b4"
+          },
+          "size_bytes": 14447984
+        },
+        "zip": {
+          "size_bytes": 9833771,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.10.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.11.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.11.0",
+        "sort_key": "0002.0002.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30183294"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "65345301ba1a985aa9ac3ea6d671abdf"
+          },
+          "size_bytes": 14449864
+        },
+        "zip": {
+          "size_bytes": 9834783,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.11.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.14.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.14.0",
+        "sort_key": "0002.0002.0014.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30231549"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "110f5ca0453c6f3901fd148ea5cc7650"
+          },
+          "size_bytes": 14449872
+        },
+        "zip": {
+          "size_bytes": 9835018,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.14.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.15.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.15.0",
+        "sort_key": "0002.0002.0015.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30254073"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "c9dcdcd97e19529a7c89432693c8ec0c"
+          },
+          "size_bytes": 14450376
+        },
+        "zip": {
+          "size_bytes": 9834964,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.15.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.16.0_8fed151a",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.16.0",
+        "sort_key": "0002.0002.0016.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30278952"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8fed151aa1b7975a1e5968b82df4e918"
+          },
+          "size_bytes": 14448328
+        },
+        "zip": {
+          "size_bytes": 9856696,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.16.0_8fed151a.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.16.0_ad5efa68",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.16.0",
+        "sort_key": "0002.0002.0016.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 30278952"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ad5efa68fa353d1f9d4c0c3acbba85c8"
+          },
+          "size_bytes": 14673608
+        },
+        "zip": {
+          "size_bytes": 9953225,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.16.0_ad5efa68.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.18.0_77a75b96",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.18.0",
+        "sort_key": "0002.0002.0018.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30305775"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "77a75b96dd2d36a4a291f3939d59c221"
+          },
+          "size_bytes": 14450896
+        },
+        "zip": {
+          "size_bytes": 9858170,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.18.0_77a75b96.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.18.0_b2b6fae8",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.18.0",
+        "sort_key": "0002.0002.0018.0000"
+      },
+      "build": {
+        "label": "Beta White Collie 1",
+        "type": "beta",
+        "internal_name": "CL 30439076"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b2b6fae8936719cf81d6b5577f257c40"
+          },
+          "size_bytes": 14452944
+        },
+        "zip": {
+          "size_bytes": 9836993,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.18.0_b2b6fae8.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2021-09-21T01:32:44Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.2.18.0_cd71ee48",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.2.18.0",
+        "sort_key": "0002.0002.0018.0000"
+      },
+      "build": {
+        "label": "Beta White Collie 2",
+        "type": "beta",
+        "internal_name": "CL 30439076"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "cd71ee48b994ac254dff5dec20828be7"
+          },
+          "size_bytes": 14452944
+        },
+        "zip": {
+          "size_bytes": 9836996,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.2.18.0_cd71ee48.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.0.0_7bbbb70f",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.0.0",
+        "sort_key": "0002.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30447826"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "7bbbb70f34fc4f2977ba442ee5fc37ac"
+          },
+          "size_bytes": 14452936
+        },
+        "zip": {
+          "size_bytes": 9837085,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.0.0_7bbbb70f.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.0.0_90b46302",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.0.0",
+        "sort_key": "0002.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 30447826"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "90b46302dc96fc3d38ba26040daecfc3"
+          },
+          "size_bytes": 14677704
+        },
+        "zip": {
+          "size_bytes": 9934056,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.0.0_90b46302.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.1.0_0fc1727a",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.1.0",
+        "sort_key": "0002.0003.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30473807"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "0fc1727ad4a52c29e2897567008b3407"
+          },
+          "size_bytes": 14452944
+        },
+        "zip": {
+          "size_bytes": 9845725,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.1.0_0fc1727a.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.1.0_93b5f0e7",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.1.0",
+        "sort_key": "0002.0003.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 30473807"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "93b5f0e7784860ca4c69deadce577561"
+          },
+          "size_bytes": 14677712
+        },
+        "zip": {
+          "size_bytes": 9945589,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.1.0_93b5f0e7.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.2.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.2.0",
+        "sort_key": "0002.0003.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30482926"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "d62b6857f2f874e3892b30abce3dc603"
+          },
+          "size_bytes": 14461648
+        },
+        "zip": {
+          "size_bytes": 9869134,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.3.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.3.0",
+        "sort_key": "0002.0003.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30520575"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "229dd563c5a7cfe67a927c06333249da"
+          },
+          "size_bytes": 14462152
+        },
+        "zip": {
+          "size_bytes": 9869094,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.3.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.4.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.4.0",
+        "sort_key": "0002.0003.0004.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30584640"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "49b252e0f803a01c0cf6964ed4b16ad8"
+          },
+          "size_bytes": 14464712
+        },
+        "zip": {
+          "size_bytes": 9842975,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.4.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.5.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.5.0",
+        "sort_key": "0002.0003.0005.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30668210"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f59a89ca2150f107a1d9de4ca8ca8ddc"
+          },
+          "size_bytes": 14467280
+        },
+        "zip": {
+          "size_bytes": 9847325,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.5.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.7.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.7.0",
+        "sort_key": "0002.0003.0007.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30888174"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "0c1eda5e9d60b4d66e075fe0cb672794"
+          },
+          "size_bytes": 14621184
+        },
+        "zip": {
+          "size_bytes": 9943081,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.7.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.9.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.9.0",
+        "sort_key": "0002.0003.0009.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30929354"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f3938d96eb0600634cb16e01a4d6ea1f"
+          },
+          "size_bytes": 14619848
+        },
+        "zip": {
+          "size_bytes": 9941333,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.9.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.11.0_e14d1d3c",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.11.0",
+        "sort_key": "0002.0003.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 30954459"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e14d1d3c4da7bb57641ba59a9f456cd4"
+          },
+          "size_bytes": 14804680
+        },
+        "zip": {
+          "size_bytes": 10022876,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.11.0_e14d1d3c.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.11.0_ca186073",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.11.0",
+        "sort_key": "0002.0003.0011.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 31218052"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ca186073ce212602143fdebd2dc80d33"
+          },
+          "size_bytes": 14806784
+        },
+        "zip": {
+          "size_bytes": 10037834,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.11.0_ca186073.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.3.11.0_476d66c9",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.3.11.0",
+        "sort_key": "0002.0003.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 30954459"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "476d66c9f9dc333e907cbdd8c3d227c7"
+          },
+          "size_bytes": 15029968
+        },
+        "zip": {
+          "size_bytes": 10122921,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.3.11.0_476d66c9.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.0.0_f395216f",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.0.0",
+        "sort_key": "0002.0004.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 31105907"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f395216f5c42b2658a4144837b457ddd"
+          },
+          "size_bytes": 14803656
+        },
+        "zip": {
+          "size_bytes": 10035868,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.0.0_f395216f.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.0.0_941eb47d",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.0.0",
+        "sort_key": "0002.0004.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 31105907"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "941eb47df770cbfc434c34ca9239a254"
+          },
+          "size_bytes": 15032952
+        },
+        "zip": {
+          "size_bytes": 10142033,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.0.0_941eb47d.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.2.0_fc7f4870",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.2.0",
+        "sort_key": "0002.0004.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 31258854"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "fc7f487079b5132e132729ea046dd017"
+          },
+          "size_bytes": 14815352
+        },
+        "zip": {
+          "size_bytes": 10037845,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.2.0_fc7f4870.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.2.0_68b0e070",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.2.0",
+        "sort_key": "0002.0004.0002.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 31212662"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "68b0e070cadb1a48237b027549f6a216"
+          },
+          "size_bytes": 14814464
+        },
+        "zip": {
+          "size_bytes": 10037717,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.2.0_68b0e070.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.3.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.3.0",
+        "sort_key": "0002.0004.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 31309745"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "dea5f1dabf86203c3210e21df9cfcf07"
+          },
+          "size_bytes": 14816512
+        },
+        "zip": {
+          "size_bytes": 10049228,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.3.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.6.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.6.0",
+        "sort_key": "0002.0004.0006.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 31353423"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "03a5a7be0e4d83487dd68dfb88fd0036"
+          },
+          "size_bytes": 14852216
+        },
+        "zip": {
+          "size_bytes": 10058368,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.6.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.11.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.11.0",
+        "sort_key": "0002.0004.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 31481051"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "c1e931321a9818fa896abe03823d4c1e"
+          },
+          "size_bytes": 14149736
+        },
+        "zip": {
+          "size_bytes": 9771208,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.11.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.12.0_0aa6cf6b",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.12.0",
+        "sort_key": "0002.0004.0012.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 31617536"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "0aa6cf6b6779919088455e47fbba0a5f"
+          },
+          "size_bytes": 14171176
+        },
+        "zip": {
+          "size_bytes": 9801173,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.12.0_0aa6cf6b.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.12.0_0a71efba",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.12.0",
+        "sort_key": "0002.0004.0012.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 31836525"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "0a71efba8daff9c284ce6010923c01f1"
+          },
+          "size_bytes": 15076392
+        },
+        "zip": {
+          "size_bytes": 10113239,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.12.0_0a71efba.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.12.0_31bfd8f7",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.12.0",
+        "sort_key": "0002.0004.0012.0000"
+      },
+      "build": {
+        "label": "v3",
+        "type": "beta",
+        "internal_name": "CL 32015014"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "31bfd8f750f87e5040557d95c2345080"
+          },
+          "size_bytes": 24002088
+        },
+        "zip": {
+          "size_bytes": 14844011,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.12.0_31bfd8f7.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.4.13.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.4.13.0",
+        "sort_key": "0002.0004.0013.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32022682"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "578d0a372c0d59a704513bb22a7db234"
+          },
+          "size_bytes": 25176120
+        },
+        "zip": {
+          "size_bytes": 15263688,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.4.13.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.5.0.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.5.0.0",
+        "sort_key": "0002.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32141080"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "87a8231ac086ad8ee6b3c57140f25dcc"
+          },
+          "size_bytes": 25176104
+        },
+        "zip": {
+          "size_bytes": 15258435,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.5.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_2.5.1.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "2.5.1.0",
+        "sort_key": "0002.0005.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32211295"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "dfe932d0b3955e649c1f759382d4e0d4"
+          },
+          "size_bytes": 25179192
+        },
+        "zip": {
+          "size_bytes": 15245059,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_2.5.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.1.0_4bb56706",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.1.0",
+        "sort_key": "0003.0001.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32342834"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4bb567067b16b8fabf05d0817a9c971c"
+          },
+          "size_bytes": 36687416
+        },
+        "zip": {
+          "size_bytes": 25975842,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.1.0_4bb56706.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.1.0_40d46848",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.1.0",
+        "sort_key": "0003.0001.0001.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 32436919"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "40d468487ea4e0f56595f8de1ac8ed7c"
+          },
+          "size_bytes": 36687912
+        },
+        "zip": {
+          "size_bytes": 25969931,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.1.0_40d46848.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.1.0_1df72f79",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.1.0",
+        "sort_key": "0003.0001.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 32342834"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "1df72f79aaeea7dfa86fae385641078c"
+          },
+          "size_bytes": 36856360
+        },
+        "zip": {
+          "size_bytes": 26061799,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.1.0_1df72f79.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.2.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.2.0",
+        "sort_key": "0003.0001.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32544569"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "fcede5737d34413ce16cc0be9a6203af"
+          },
+          "size_bytes": 35399736
+        },
+        "zip": {
+          "size_bytes": 24610947,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.11.0_e557b8eb",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.11.0",
+        "sort_key": "0003.0001.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32597869"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e557b8eb18fbd710f82073d9f6fa55a9"
+          },
+          "size_bytes": 35385384
+        },
+        "zip": {
+          "size_bytes": 24603805,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.11.0_e557b8eb.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.11.0_adb36f46",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.11.0",
+        "sort_key": "0003.0001.0011.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 32597869"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "adb36f4684e64ada9c8d82ad365e6d19"
+          },
+          "size_bytes": 35385912
+        },
+        "zip": {
+          "size_bytes": 24604883,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.11.0_adb36f46.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.11.0_6b1e6a22",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.11.0",
+        "sort_key": "0003.0001.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 32597869"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "6b1e6a22cc459b636d9a0170c56a46b6"
+          },
+          "size_bytes": 35552824
+        },
+        "zip": {
+          "size_bytes": 24677601,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.11.0_6b1e6a22.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.13.0_22b2359c",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.13.0",
+        "sort_key": "0003.0001.0013.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 32824515"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "22b2359cf7ec76f523feeec53fa81464"
+          },
+          "size_bytes": 35386424
+        },
+        "zip": {
+          "size_bytes": 24605688,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.13.0_22b2359c.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.13.0_4db1c0e9",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.13.0",
+        "sort_key": "0003.0001.0013.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 32841675"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4db1c0e9c79757bda8fd9116d8137d2f"
+          },
+          "size_bytes": 35400248
+        },
+        "zip": {
+          "size_bytes": 24609612,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.13.0_4db1c0e9.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.13.0_e985d98c",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.13.0",
+        "sort_key": "0003.0001.0013.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 32841675"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e985d98c7b57c8f0fae244b6fce106e8"
+          },
+          "size_bytes": 35568696
+        },
+        "zip": {
+          "size_bytes": 24687532,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.13.0_e985d98c.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.30.0_96f5ced1",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.30.0",
+        "sort_key": "0003.0001.0030.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33088933"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "96f5ced18c119946e4a674c14d908692"
+          },
+          "size_bytes": 51717160
+        },
+        "zip": {
+          "size_bytes": 36267190,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.30.0_96f5ced1.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.1.30.0_5baca228",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.1.30.0",
+        "sort_key": "0003.0001.0030.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 33088933"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "5baca22835d10d0069de04b54a5cc2cd"
+          },
+          "size_bytes": 51860520
+        },
+        "zip": {
+          "size_bytes": 36338901,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.1.30.0_5baca228.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.5.0.0_a6b50794",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33190482"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a6b5079411a58630799478ebb6baa722"
+          },
+          "size_bytes": 51716648
+        },
+        "zip": {
+          "size_bytes": 36267033,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.5.0.0_a6b50794.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.5.0.0_bf68025b",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 33199489"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "bf68025b3603c382fca65b148b979682"
+          },
+          "size_bytes": 51716136
+        },
+        "zip": {
+          "size_bytes": 36267068,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.5.0.0_bf68025b.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.5.0.0_b4c2d625",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 33190482"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b4c2d62576a96b82cfc47e6bb5282244"
+          },
+          "size_bytes": 51859496
+        },
+        "zip": {
+          "size_bytes": 36338246,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.5.0.0_b4c2d625.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.5.10.0_ac477775",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.5.10.0",
+        "sort_key": "0003.0005.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33396148"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ac477775c31346f60c17a7f4f0aa1983"
+          },
+          "size_bytes": 53689400
+        },
+        "zip": {
+          "size_bytes": 37060373,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.5.10.0_ac477775.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.5.10.0_c8fae97c",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.5.10.0",
+        "sort_key": "0003.0005.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 33396148"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "c8fae97c2df886cbf8eb1cc671f9b87c"
+          },
+          "size_bytes": 53850152
+        },
+        "zip": {
+          "size_bytes": 37144469,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.5.10.0_c8fae97c.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.6.0.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.6.0.0",
+        "sort_key": "0003.0006.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33629598"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "49ce45d36d0fe6e498f2aae54d94bdee"
+          },
+          "size_bytes": 47438904
+        },
+        "zip": {
+          "size_bytes": 34167178,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.6.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.0.0_956faf7e",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.0.0",
+        "sort_key": "0003.0007.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33860605"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "956faf7e5de9c4634c5869389f91f11b"
+          },
+          "size_bytes": 51255848
+        },
+        "zip": {
+          "size_bytes": 37726278,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.0.0_956faf7e.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.0.0_060f8a4c",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.0.0",
+        "sort_key": "0003.0007.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 33860605"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "060f8a4c3c25925de8e86f73451fc615"
+          },
+          "size_bytes": 51412024
+        },
+        "zip": {
+          "size_bytes": 37777646,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.0.0_060f8a4c.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.10.0_12627ab9",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.10.0",
+        "sort_key": "0003.0007.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 34360990"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "12627ab9ee39858b6a28039a32d1b7c2"
+          },
+          "size_bytes": 51276856
+        },
+        "zip": {
+          "size_bytes": 37733222,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.10.0_12627ab9.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.10.0_6af88a88",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.10.0",
+        "sort_key": "0003.0007.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 34360990"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "6af88a88ba51c1abe5a81ed0afa08cfc"
+          },
+          "size_bytes": 51432488
+        },
+        "zip": {
+          "size_bytes": 37786087,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.10.0_6af88a88.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.20.0_53dbec92",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.20.0",
+        "sort_key": "0003.0007.0020.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 0"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "53dbec92bb250e667cbc532d5d782316"
+          },
+          "size_bytes": 51291680
+        },
+        "zip": {
+          "size_bytes": 37740900,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.20.0_53dbec92.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.20.0_78eb8bfb",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.20.0",
+        "sort_key": "0003.0007.0020.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": "CL 34733527"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "78eb8bfb301eaa9fbfe90db9edeb20ae"
+          },
+          "size_bytes": 51281960
+        },
+        "zip": {
+          "size_bytes": 37719722,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.20.0_78eb8bfb.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.7.20.0_feb2fa31",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.7.20.0",
+        "sort_key": "0003.0007.0020.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 34733527"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "feb2fa31ae7e4a418a367281aee41e47"
+          },
+          "size_bytes": 51438136
+        },
+        "zip": {
+          "size_bytes": 37790427,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.7.20.0_feb2fa31.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_3.8.10.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "3.8.10.0",
+        "sort_key": "0003.0008.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 0"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "aed94e7029846c356882db166b824f5e"
+          },
+          "size_bytes": 24925344
+        },
+        "zip": {
+          "size_bytes": 14860681,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_3.8.10.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.1.0.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.1.0.0",
+        "sort_key": "0310.0001.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35322723"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "117595d4839dcab18501249cbeee9b7a"
+          },
+          "size_bytes": 44609064
+        },
+        "zip": {
+          "size_bytes": 32363161,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.1.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.2.1.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.2.1.0",
+        "sort_key": "0310.0002.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35454170"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "3a875f45c315d09e5f4548cc9288f178"
+          },
+          "size_bytes": 48971832
+        },
+        "zip": {
+          "size_bytes": 35563423,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.2.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.3.0.0_436bd846",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.3.0.0",
+        "sort_key": "0310.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35956306"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "436bd84602a538c63c4953f78b668204"
+          },
+          "size_bytes": 49012784
+        },
+        "zip": {
+          "size_bytes": 35583701,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.3.0.0_436bd846.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-05-08T22:37:06Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.3.0.0_d75ce10f",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.3.0.0",
+        "sort_key": "0310.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 35956306"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "d75ce10f6555a2c94ad4a5f2c1bc622e"
+          },
+          "size_bytes": 49165856
+        },
+        "zip": {
+          "size_bytes": 35651452,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.3.0.0_d75ce10f.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-05-08T22:37:18Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.4.0.0_f2956394",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.4.0.0",
+        "sort_key": "0310.0004.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 36386704"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f2956394eb8a8474c79b7de83af4d473"
+          },
+          "size_bytes": 29981808
+        },
+        "zip": {
+          "size_bytes": 17837866,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.4.0.0_f2956394.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-08-12T21:48:02Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.4.0.0_8440daa1",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.4.0.0",
+        "sort_key": "0310.0004.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 36386704"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8440daa19ae3df3402f24d1f26ed23b9"
+          },
+          "size_bytes": 30135840
+        },
+        "zip": {
+          "size_bytes": 17903428,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.4.0.0_8440daa1.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-08-12T21:48:27Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.5.0.0_a30d0cfb",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.5.0.0",
+        "sort_key": "0310.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37081176"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a30d0cfbec9d48dcd5f314aea1bde86d"
+          },
+          "size_bytes": 54778992
+        },
+        "zip": {
+          "size_bytes": 27452486,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.5.0.0_a30d0cfb.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-12-20T01:52:02Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.5.0.0_87db238e",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.5.0.0",
+        "sort_key": "0310.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 37081176"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "87db238e66c9d8e1016b65c6c109c9fc"
+          },
+          "size_bytes": 65523824
+        },
+        "zip": {
+          "size_bytes": 31489422,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.5.0.0_87db238e.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-12-20T01:52:25Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.5.2.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.5.2.0",
+        "sort_key": "0310.0005.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37149420"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "55f0fe991b9719186d19fda4866e72e2"
+          },
+          "size_bytes": 73818224
+        },
+        "zip": {
+          "size_bytes": 45216144,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.5.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-09T18:42:46Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.5.3.0_ad596904",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.5.3.0",
+        "sort_key": "0310.0005.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37208806"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ad596904bd96b44156c2f100db2876bf"
+          },
+          "size_bytes": 54779504
+        },
+        "zip": {
+          "size_bytes": 27475868,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.5.3.0_ad596904.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-21T20:52:20Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.5.3.0_a11b9b55",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.5.3.0",
+        "sort_key": "0310.0005.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 37208806"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a11b9b55e322fade3f11ca26d4437217"
+          },
+          "size_bytes": 65523824
+        },
+        "zip": {
+          "size_bytes": 31514190,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.5.3.0_a11b9b55.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-21T20:53:46Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlss_310.6.0.0",
+      "library": {
+        "id": "nvngx_dlss",
+        "file_name": "nvngx_dlss.dll"
+      },
+      "version": {
+        "value": "310.6.0.0",
+        "sort_key": "0310.0006.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37460577"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "63e0ca4ca70193c7ac45dec070df1a27"
+          },
+          "size_bytes": 74061936
+        },
+        "zip": {
+          "size_bytes": 45297612,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlss_310.6.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-03-06T21:04:12Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.5.0.0_cd523b59",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33263601"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "cd523b592b9471b43d0e85d9629a6ae4"
+          },
+          "size_bytes": 70025768
+        },
+        "zip": {
+          "size_bytes": 44989656,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.5.0.0_cd523b59.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.5.0.0_3ed68c94",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": "33284283",
+        "type": "beta",
+        "internal_name": "CL 33284283"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "3ed68c9456dc83bdf66b13d1a9c66f18"
+          },
+          "size_bytes": 70026792
+        },
+        "zip": {
+          "size_bytes": 44990071,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.5.0.0_3ed68c94.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.5.0.0_625907de",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": "33367307",
+        "type": "beta",
+        "internal_name": "CL 33367307"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "625907de06a912414fdb8444c91b262c"
+          },
+          "size_bytes": 71719976
+        },
+        "zip": {
+          "size_bytes": 45582040,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.5.0.0_625907de.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.5.10.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.5.10.0",
+        "sort_key": "0003.0005.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33457773"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ce8b65654872a30dc6b771aae8ca98ad"
+          },
+          "size_bytes": 71894568
+        },
+        "zip": {
+          "size_bytes": 44459772,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.5.10.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.7.0.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.7.0.0",
+        "sort_key": "0003.0007.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33812812"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "622fcb76d37a2d73811756e891cc80e8"
+          },
+          "size_bytes": 38426680
+        },
+        "zip": {
+          "size_bytes": 16643816,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.7.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.7.10.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.7.10.0",
+        "sort_key": "0003.0007.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 34201261"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "fdfac845ab72d509a24ea2c16a1619c4"
+          },
+          "size_bytes": 43790888
+        },
+        "zip": {
+          "size_bytes": 21482406,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.7.10.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_3.7.20.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "3.7.20.0",
+        "sort_key": "0003.0007.0020.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 34733527"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f2f968b15cd295d13d571d0d18170e10"
+          },
+          "size_bytes": 44006968
+        },
+        "zip": {
+          "size_bytes": 21600530,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_3.7.20.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.1.0.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.1.0.0",
+        "sort_key": "0310.0001.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35269843"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "10c793f0b14efedc595838bb8a09fd28"
+          },
+          "size_bytes": 65630248
+        },
+        "zip": {
+          "size_bytes": 32844236,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.1.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.2.0.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.2.0.0",
+        "sort_key": "0310.0002.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35440459"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e6081b848ea68880db8adc83cdfb15dc"
+          },
+          "size_bytes": 72957992
+        },
+        "zip": {
+          "size_bytes": 36030730,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.2.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.2.1.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.2.1.0",
+        "sort_key": "0310.0002.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35520877"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e5311d6c46c2920e2d5347c029f60cb7"
+          },
+          "size_bytes": 72978992
+        },
+        "zip": {
+          "size_bytes": 36051529,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.2.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-10T19:14:02Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.3.0.0_fc7a45af",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.3.0.0",
+        "sort_key": "0310.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 36091688"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "fc7a45afe0a8efa3e9426c875f0cdf2b"
+          },
+          "size_bytes": 72997408
+        },
+        "zip": {
+          "size_bytes": 36043220,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.3.0.0_fc7a45af.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-06-06T23:44:15Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.3.0.0_95b33733",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.3.0.0",
+        "sort_key": "0310.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 36091688"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "95b33733575ab019b4a864eaf4423f2f"
+          },
+          "size_bytes": 83528224
+        },
+        "zip": {
+          "size_bytes": 40029292,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.3.0.0_95b33733.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-06-06T23:44:07Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.4.0.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.4.0.0",
+        "sort_key": "0310.0004.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 36386704"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4d2d5aa25fefdafe119666ab33b38138"
+          },
+          "size_bytes": 28548208
+        },
+        "zip": {
+          "size_bytes": 11104114,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.4.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-08-12T21:47:11Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.5.0.0_ea085a17",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.5.0.0",
+        "sort_key": "0310.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 36965356"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ea085a17325b420c267cd9ed5d12759b"
+          },
+          "size_bytes": 28590704
+        },
+        "zip": {
+          "size_bytes": 11125406,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.5.0.0_ea085a17.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-11-29T21:26:09Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.5.0.0_6026c85b",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.5.0.0",
+        "sort_key": "0310.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 36965356"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "6026c85b9485cb40ed07763d9a411874"
+          },
+          "size_bytes": 39383664
+        },
+        "zip": {
+          "size_bytes": 15169704,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.5.0.0_6026c85b.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-11-29T21:27:48Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.5.2.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.5.2.0",
+        "sort_key": "0310.0005.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37149420"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8cee6d6a59252e5c235e07e07270964c"
+          },
+          "size_bytes": 59922544
+        },
+        "zip": {
+          "size_bytes": 27793653,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.5.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-09T18:41:56Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.5.3.0_4fee3757",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.5.3.0",
+        "sort_key": "0310.0005.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37208806"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4fee3757d08fce63f427d22184bdbcb2"
+          },
+          "size_bytes": 28596848
+        },
+        "zip": {
+          "size_bytes": 11129458,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.5.3.0_4fee3757.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-21T20:50:14Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.5.3.0_34e9f4e5",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.5.3.0",
+        "sort_key": "0310.0005.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 37208806"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "34e9f4e55c413b4a275b6b134fc71401"
+          },
+          "size_bytes": 39390320
+        },
+        "zip": {
+          "size_bytes": 15176308,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.5.3.0_34e9f4e5.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-21T20:48:18Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssd_310.6.0.0",
+      "library": {
+        "id": "nvngx_dlssd",
+        "file_name": "nvngx_dlssd.dll"
+      },
+      "version": {
+        "value": "310.6.0.0",
+        "sort_key": "0310.0006.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37445600"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "295fb560cf80c7f2643e4cb062c27830"
+          },
+          "size_bytes": 59918960
+        },
+        "zip": {
+          "size_bytes": 27791040,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssd_310.6.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-03-04T21:49:55Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.1.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.1.0",
+        "sort_key": "0001.0000.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "756c81decd8ab626058e8daaa08d9a19"
+          },
+          "size_bytes": 12803624
+        },
+        "zip": {
+          "size_bytes": 6899097,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.2.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.2.0",
+        "sort_key": "0001.0000.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "36931062a0b9227011885514914c7a3b"
+          },
+          "size_bytes": 12799528
+        },
+        "zip": {
+          "size_bytes": 6897802,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.3.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.3.0",
+        "sort_key": "0001.0000.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "9a44c28a5e5a915f884e2ed7dfc5d4b4"
+          },
+          "size_bytes": 12799528
+        },
+        "zip": {
+          "size_bytes": 6897953,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.3.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.4.0_9bfac446",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.4.0",
+        "sort_key": "0001.0000.0004.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "9bfac44640d2fa6659ac18369f9870f4"
+          },
+          "size_bytes": 12876840
+        },
+        "zip": {
+          "size_bytes": 6949281,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.4.0_9bfac446.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.4.0_de3479e4",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.4.0",
+        "sort_key": "0001.0000.0004.0000"
+      },
+      "build": {
+        "label": "v2",
+        "type": "beta",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "de3479e49e53a8ab4950f8c72a415239"
+          },
+          "size_bytes": 12876840
+        },
+        "zip": {
+          "size_bytes": 6949140,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.4.0_de3479e4.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.5.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.5.0",
+        "sort_key": "0001.0000.0005.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4f39303b168462a4f2ecf04fead1a9e8"
+          },
+          "size_bytes": 12932648
+        },
+        "zip": {
+          "size_bytes": 6991730,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.5.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.6.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.6.0",
+        "sort_key": "0001.0000.0006.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f869fbd1ad307071cf7997b66c1e1e76"
+          },
+          "size_bytes": 12936744
+        },
+        "zip": {
+          "size_bytes": 6992753,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.6.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_1.0.7.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "1.0.7.0",
+        "sort_key": "0001.0000.0007.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "bbaeb66b55bea5a97ef12b949af52bc0"
+          },
+          "size_bytes": 12936744
+        },
+        "zip": {
+          "size_bytes": 6992860,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_1.0.7.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.1.1.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.1.1.0",
+        "sort_key": "0003.0001.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "3209de901666436042f4ce59344df47f"
+          },
+          "size_bytes": 13181992
+        },
+        "zip": {
+          "size_bytes": 7095877,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.1.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.1.11.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.1.11.0",
+        "sort_key": "0003.0001.0011.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "2a3feb039ffb9ea70dc690b21e918417"
+          },
+          "size_bytes": 12997672
+        },
+        "zip": {
+          "size_bytes": 6943864,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.1.11.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.1.12.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.1.12.0",
+        "sort_key": "0003.0001.0012.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "76f8be4e38a0789bce0dcde2cea9a324"
+          },
+          "size_bytes": 13004328
+        },
+        "zip": {
+          "size_bytes": 6950291,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.1.12.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.1.13.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.1.13.0",
+        "sort_key": "0003.0001.0013.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ef9b5fa50410a45a13014cb55aae950d"
+          },
+          "size_bytes": 13001768
+        },
+        "zip": {
+          "size_bytes": 6961883,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.1.13.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.1.30.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.1.30.0",
+        "sort_key": "0003.0001.0030.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33088933"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8363e2ac2e3e512ac5ab2d364aa4c245"
+          },
+          "size_bytes": 12569128
+        },
+        "zip": {
+          "size_bytes": 6813920,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.1.30.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.5.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.5.0.0",
+        "sort_key": "0003.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33190482"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "1b21da1d91ab05b83625729d0b683797"
+          },
+          "size_bytes": 12582456
+        },
+        "zip": {
+          "size_bytes": 6819366,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.5.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.5.10.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.5.10.0",
+        "sort_key": "0003.0005.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33396148"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4de45236c2aa62cd25f1d670e0c5deaf"
+          },
+          "size_bytes": 11698216
+        },
+        "zip": {
+          "size_bytes": 6455216,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.5.10.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.6.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.6.0.0",
+        "sort_key": "0003.0006.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33629598"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "67453779383c58139267a9b15839bb78"
+          },
+          "size_bytes": 11727912
+        },
+        "zip": {
+          "size_bytes": 6471042,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.6.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.7.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.7.0.0",
+        "sort_key": "0003.0007.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 33904986"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ee98cd63c16316882c3e5d56e51fc680"
+          },
+          "size_bytes": 11778088
+        },
+        "zip": {
+          "size_bytes": 6506502,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.7.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.7.1.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.7.1.0",
+        "sort_key": "0003.0007.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 34181968"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b16e50dd7c60d254aab782278c2ef73c"
+          },
+          "size_bytes": 11779112
+        },
+        "zip": {
+          "size_bytes": 6506990,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.7.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.7.10.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.7.10.0",
+        "sort_key": "0003.0007.0010.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 34270846"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "69e9f9dc32d0aef4e7c986e2339a0e52"
+          },
+          "size_bytes": 9477688
+        },
+        "zip": {
+          "size_bytes": 5108666,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.7.10.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_3.8.1.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "3.8.1.0",
+        "sort_key": "0003.0008.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35007158"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "db7b5c2c8686e1586cc56d5bdb64965c"
+          },
+          "size_bytes": 9283120
+        },
+        "zip": {
+          "size_bytes": 5077776,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_3.8.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.1.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.1.0.0",
+        "sort_key": "0310.0001.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35304964"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "11ecc4bf7fe5cefcf4a737e95b6752ff"
+          },
+          "size_bytes": 7607336
+        },
+        "zip": {
+          "size_bytes": 3798898,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.1.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.2.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.2.0.0",
+        "sort_key": "0310.0002.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35440459"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "26c2eafe046cdd403a1850f71186595c"
+          },
+          "size_bytes": 7595560
+        },
+        "zip": {
+          "size_bytes": 3791822,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.2.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.2.1.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.2.1.0",
+        "sort_key": "0310.0002.0001.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35516211"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "96cb06ff5a84e4e90591973bf99a7d45"
+          },
+          "size_bytes": 7597104
+        },
+        "zip": {
+          "size_bytes": 3792767,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.2.1.0.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.3.0.0_ed5acc14",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.3.0.0",
+        "sort_key": "0310.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 35956306"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ed5acc14ffcbd33b0faf2eaefcc84f89"
+          },
+          "size_bytes": 7602720
+        },
+        "zip": {
+          "size_bytes": 3795509,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.3.0.0_ed5acc14.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-05-08T22:31:47Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.3.0.0_90765c32",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.3.0.0",
+        "sort_key": "0310.0003.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 35956306"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "90765c321f623237e562fd4232a98b93"
+          },
+          "size_bytes": 7933496
+        },
+        "zip": {
+          "size_bytes": 3947526,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.3.0.0_90765c32.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-05-08T22:32:13Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.4.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.4.0.0",
+        "sort_key": "0310.0004.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 36386704"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "9fd3c2a5af635d573cb313bde86e7058"
+          },
+          "size_bytes": 7509024
+        },
+        "zip": {
+          "size_bytes": 3740762,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.4.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-08-12T21:47:16Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.5.0.0_2699ee09",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.5.0.0",
+        "sort_key": "0310.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 36971775"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "2699ee09828839efc1e43228c6708971"
+          },
+          "size_bytes": 7518320
+        },
+        "zip": {
+          "size_bytes": 3742668,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.5.0.0_2699ee09.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-12-01T19:49:08Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.5.0.0_27d59d09",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.5.0.0",
+        "sort_key": "0310.0005.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 36971775"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "27d59d09717e4a9d96d295d051595bde"
+          },
+          "size_bytes": 7955568
+        },
+        "zip": {
+          "size_bytes": 3930822,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.5.0.0_27d59d09.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-12-01T19:48:35Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.5.2.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.5.2.0",
+        "sort_key": "0310.0005.0002.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37149420"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "285f625cd4cec0abcf35c9c869fe58d0"
+          },
+          "size_bytes": 7518320
+        },
+        "zip": {
+          "size_bytes": 3744295,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.5.2.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-09T18:41:16Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.5.3.0_67b3ed47",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.5.3.0",
+        "sort_key": "0310.0005.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37207741"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "67b3ed4705629dfeab04c43c6bdeeb37"
+          },
+          "size_bytes": 7518320
+        },
+        "zip": {
+          "size_bytes": 3744344,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.5.3.0_67b3ed47.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-21T18:43:46Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.5.3.0_9f7a3097",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.5.3.0",
+        "sort_key": "0310.0005.0003.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "debug",
+        "internal_name": "CL 37207741"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "9f7a3097f41a4e5963eecb3001185ef9"
+          },
+          "size_bytes": 7955568
+        },
+        "zip": {
+          "size_bytes": 3934082,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.5.3.0_9f7a3097.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-21T18:44:36Z"
+      }
+    },
+    {
+      "entry_id": "nvngx_dlssg_310.6.0.0",
+      "library": {
+        "id": "nvngx_dlssg",
+        "file_name": "nvngx_dlssg.dll"
+      },
+      "version": {
+        "value": "310.6.0.0",
+        "sort_key": "0310.0006.0000.0000"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "CL 37453033"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8187325390f03f2fe0b23bcbf28fe615"
+          },
+          "size_bytes": 7499376
+        },
+        "zip": {
+          "size_bytes": 3736946,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/nvngx_dlssg_310.6.0.0.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-03-05T20:25:15Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.0.36208",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.0.36208",
+        "sort_key": "0001.0000.0000.36208"
+      },
+      "build": {
+        "label": "3.1.0",
+        "type": "beta",
+        "internal_name": "3.1.0"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "cfcd38f47665ddff195b80c62e3b57e2"
+          },
+          "size_bytes": 6470360
+        },
+        "zip": {
+          "size_bytes": 2395294,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.0.36208.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.0.36604",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.0.36604",
+        "sort_key": "0001.0000.0000.36604"
+      },
+      "build": {
+        "label": "3.1.0",
+        "type": "beta",
+        "internal_name": "3.1.0"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "071eb42e3cbd0989a12465e0e529bcac"
+          },
+          "size_bytes": 6475480
+        },
+        "zip": {
+          "size_bytes": 2402647,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.0.36604.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.0.36752",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.0.36752",
+        "sort_key": "0001.0000.0000.36752"
+      },
+      "build": {
+        "label": "3.1.0",
+        "type": "beta",
+        "internal_name": "3.1.0"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "46f7049b30404d8c4ef685a13ef0bc43"
+          },
+          "size_bytes": 6475992
+        },
+        "zip": {
+          "size_bytes": 2406675,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.0.36752.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.1.37507",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.1.37507",
+        "sort_key": "0001.0000.0001.37507"
+      },
+      "build": {
+        "label": "3.1.1",
+        "type": "beta",
+        "internal_name": "3.1.1"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "2fcbe69a137dba1ff45071a9b64c9581"
+          },
+          "size_bytes": 6609624
+        },
+        "zip": {
+          "size_bytes": 2485793,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.1.37507.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.1.38338",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.1.38338",
+        "sort_key": "0001.0000.0001.38338"
+      },
+      "build": {
+        "label": "3.1.2",
+        "type": "beta",
+        "internal_name": "3.1.2"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "2dc40d2f183920624be396b624466157"
+          },
+          "size_bytes": 6634192
+        },
+        "zip": {
+          "size_bytes": 2507944,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.1.38338.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.1.39157",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.1.39157",
+        "sort_key": "0001.0000.0001.39157"
+      },
+      "build": {
+        "label": "3.1.3",
+        "type": "beta",
+        "internal_name": "3.1.3"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "3ef374f8f7eb44d211bcc0c063a520d9"
+          },
+          "size_bytes": 6647504
+        },
+        "zip": {
+          "size_bytes": 2536509,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.1.39157.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.1.40157",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.1.40157",
+        "sort_key": "0001.0000.0001.40157"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "3.1.3"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "6deffa8d3e83449c961558e26781687b"
+          },
+          "size_bytes": 6647504
+        },
+        "zip": {
+          "size_bytes": 2540506,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.1.40157.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-27T11:30:58Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.1.41314",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.1.41314",
+        "sort_key": "0001.0000.0001.41314"
+      },
+      "build": {
+        "label": "3.1.4",
+        "type": "beta",
+        "internal_name": "3.1.4"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "49230ad94ed6169933cd0457501d9cb4"
+          },
+          "size_bytes": 6675664
+        },
+        "zip": {
+          "size_bytes": 2523926,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.1.41314.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-05-07T13:17:26Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_dx12_1.0.2.38022",
+      "library": {
+        "id": "amd_fidelityfx_dx12",
+        "file_name": "amd_fidelityfx_dx12.dll"
+      },
+      "version": {
+        "value": "1.0.2.38022",
+        "sort_key": "0001.0000.0002.38022"
+      },
+      "build": {
+        "label": "3.1.2",
+        "type": "beta",
+        "internal_name": "3.1.2"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ab23d0e0887e0866578ef142eeb6eec6"
+          },
+          "size_bytes": 6621392
+        },
+        "zip": {
+          "size_bytes": 2507062,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_dx12_1.0.2.38022.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-10-10T09:40:39Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.0.36604",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.0.36604",
+        "sort_key": "0001.0000.0000.36604"
+      },
+      "build": {
+        "label": "3.1.0",
+        "type": "beta",
+        "internal_name": "3.1.0"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a2bc75bc5455e870d71890c774541da9"
+          },
+          "size_bytes": 9200344
+        },
+        "zip": {
+          "size_bytes": 2630265,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.0.36604.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.1.37507",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.1.37507",
+        "sort_key": "0001.0000.0001.37507"
+      },
+      "build": {
+        "label": "3.1.1",
+        "type": "beta",
+        "internal_name": "3.1.1"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "1fc735751d2632e926016206398b8654"
+          },
+          "size_bytes": 9262808
+        },
+        "zip": {
+          "size_bytes": 2645445,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.1.37507.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.1.38338",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.1.38338",
+        "sort_key": "0001.0000.0001.38338"
+      },
+      "build": {
+        "label": "3.1.2",
+        "type": "beta",
+        "internal_name": "3.1.2"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "0d0cdc8d5865027d100daa35b605793f"
+          },
+          "size_bytes": 9277136
+        },
+        "zip": {
+          "size_bytes": 2648662,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.1.38338.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.1.39157",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.1.39157",
+        "sort_key": "0001.0000.0001.39157"
+      },
+      "build": {
+        "label": "3.1.3",
+        "type": "beta",
+        "internal_name": "3.1.3"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "23a87c10a859d5756edbe5a6d7f692b5"
+          },
+          "size_bytes": 9284304
+        },
+        "zip": {
+          "size_bytes": 2667895,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.1.39157.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.1.39321",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.1.39321",
+        "sort_key": "0001.0000.0001.39321"
+      },
+      "build": {
+        "label": "3.1.3",
+        "type": "beta",
+        "internal_name": "3.1.3"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "794d0884d482dfd53eac77977e5ade8c"
+          },
+          "size_bytes": 9294408
+        },
+        "zip": {
+          "size_bytes": 2641377,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.1.39321.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-12-16T11:05:45Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.1.41314",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.1.41314",
+        "sort_key": "0001.0000.0001.41314"
+      },
+      "build": {
+        "label": "3.1.4",
+        "type": "beta",
+        "internal_name": "3.1.4"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "9718fd774c61be1af6af411cf65394cd"
+          },
+          "size_bytes": 9332432
+        },
+        "zip": {
+          "size_bytes": 2604375,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.1.41314.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-05-07T13:17:37Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_vk_1.0.1.42386",
+      "library": {
+        "id": "amd_fidelityfx_vk",
+        "file_name": "amd_fidelityfx_vk.dll"
+      },
+      "version": {
+        "value": "1.0.1.42386",
+        "sort_key": "0001.0000.0001.42386"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": "3.1.4"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8f036c984d570b58c1cd312bb5c780ab"
+          },
+          "size_bytes": 9342112
+        },
+        "zip": {
+          "size_bytes": 2616796,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/amd_fidelityfx_vk_1.0.1.42386.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-06-09T11:45:17Z"
+      }
+    },
+    {
+      "entry_id": "libxess_1.0.0.59",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.0.0.59",
+        "sort_key": "0001.0000.0000.0059"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "feb7639e1043d0dc88d638c21871f566"
+          },
+          "size_bytes": 9271976
+        },
+        "zip": {
+          "size_bytes": 3558544,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.0.0.59.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_1.0.1.12",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.0.1.12",
+        "sort_key": "0001.0000.0001.0012"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "049bfea8c51245a545dc242a7317b9d3"
+          },
+          "size_bytes": 9272488
+        },
+        "zip": {
+          "size_bytes": 3558764,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.0.1.12.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_1.1.0.18",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.1.0.18",
+        "sort_key": "0001.0001.0000.0018"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "c9fb6bb716a087fd537790bebe710d4c"
+          },
+          "size_bytes": 15275688
+        },
+        "zip": {
+          "size_bytes": 7323839,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.1.0.18.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_1.1.0.21",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.1.0.21",
+        "sort_key": "0001.0001.0000.0021"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "7b20cc0a10008f0846ddac99981ac77f"
+          },
+          "size_bytes": 15275688
+        },
+        "zip": {
+          "size_bytes": 7324023,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.1.0.21.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_1.2.0.10",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.2.0.10",
+        "sort_key": "0001.0002.0000.0010"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4c8d7344a1dcf91af9c01b6321c2ba8a"
+          },
+          "size_bytes": 67777552
+        },
+        "zip": {
+          "size_bytes": 47604990,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.2.0.10.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2023-07-12T16:42:24Z"
+      }
+    },
+    {
+      "entry_id": "libxess_1.2.0.13",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.2.0.13",
+        "sort_key": "0001.0002.0000.0013"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b0130df92c02efde7c2c4df42d69ee70"
+          },
+          "size_bytes": 67777552
+        },
+        "zip": {
+          "size_bytes": 47605083,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.2.0.13.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_1.3.0.28",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.3.0.28",
+        "sort_key": "0001.0003.0000.0028"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "dd62b2ef2da5a9be89e18302e38970a2"
+          },
+          "size_bytes": 74108944
+        },
+        "zip": {
+          "size_bytes": 52696830,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.3.0.28.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_1.3.1.32",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "1.3.1.32",
+        "sort_key": "0001.0003.0001.0032"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "10623c59d5e4571bfd6118337ac69491"
+          },
+          "size_bytes": 67095056
+        },
+        "zip": {
+          "size_bytes": 50770385,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_1.3.1.32.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.0.18",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.0.18",
+        "sort_key": "0002.0000.0000.0018"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "367be8343b288372ff8523438f53b62d"
+          },
+          "size_bytes": 120278928
+        },
+        "zip": {
+          "size_bytes": 93400387,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.0.18.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.1.29",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.1.29",
+        "sort_key": "0002.0000.0001.0029"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "8d1adebe2f3fd417fe6ac599114098ac"
+          },
+          "size_bytes": 120956304
+        },
+        "zip": {
+          "size_bytes": 93966756,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.1.29.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-01-10T21:34:34Z"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.1.32",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.1.32",
+        "sort_key": "0002.0000.0001.0032"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "306786b7961439b5330ec10ab9d594b5"
+          },
+          "size_bytes": 124195680
+        },
+        "zip": {
+          "size_bytes": 96527769,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.1.32.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-01-22T03:02:22Z"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.1.34",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.1.34",
+        "sort_key": "0002.0000.0001.0034"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "4edd90eaa5c1d4c93853734b744c0137"
+          },
+          "size_bytes": 124186512
+        },
+        "zip": {
+          "size_bytes": 96521870,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.1.34.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-04T21:51:57Z"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.1.41",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.1.41",
+        "sort_key": "0002.0000.0001.0041"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "f9e8bcab719e249ba8bd50414d42143f"
+          },
+          "size_bytes": 77771112
+        },
+        "zip": {
+          "size_bytes": 59740958,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.1.41.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-03-12T17:49:25Z"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.2.53",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.2.53",
+        "sort_key": "0002.0000.0002.0053"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b6d2a108369fe3cd7fc82af14dd8c60c"
+          },
+          "size_bytes": 77788528
+        },
+        "zip": {
+          "size_bytes": 59744954,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.2.53.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-07-03T08:08:12Z"
+      }
+    },
+    {
+      "entry_id": "libxess_2.0.2.68",
+      "library": {
+        "id": "libxess",
+        "file_name": "libxess.dll"
+      },
+      "version": {
+        "value": "2.0.2.68",
+        "sort_key": "0002.0000.0002.0068"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "d9e2aca10667501dced0e5b69b7d3ea5"
+          },
+          "size_bytes": 77795704
+        },
+        "zip": {
+          "size_bytes": 59746078,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_2.0.2.68.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-10-17T14:23:43Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_0.9.11.9",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "0.9.11.9",
+        "sort_key": "0000.0009.0011.0009"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "7c15036490a8c4679d49429773f542ea"
+          },
+          "size_bytes": 63566736
+        },
+        "zip": {
+          "size_bytes": 19366635,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_0.9.11.9.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-10-16T07:41:43Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.0.0.16",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.0.0.16",
+        "sort_key": "0001.0000.0000.0016"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "bf976a1c2e466b1be6fc4b17d76b50d5"
+          },
+          "size_bytes": 59355536
+        },
+        "zip": {
+          "size_bytes": 18026333,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.0.0.16.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.0.1.26",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.0.1.26",
+        "sort_key": "0001.0000.0001.0026"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "638bc6e8d34559caed89c7015932567e"
+          },
+          "size_bytes": 60188048
+        },
+        "zip": {
+          "size_bytes": 18655745,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.0.1.26.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-01-16T16:48:31Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.0.1.31",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.0.1.31",
+        "sort_key": "0001.0000.0001.0031"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "a51047068f3d1f480f5ffb2bf10f963a"
+          },
+          "size_bytes": 60192144
+        },
+        "zip": {
+          "size_bytes": 18657251,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.0.1.31.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-04T14:46:44Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.1.0.19",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.1.0.19",
+        "sort_key": "0001.0001.0000.0019"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "947f3eb49f1b402374fe97f8b5728ffc"
+          },
+          "size_bytes": 45557608
+        },
+        "zip": {
+          "size_bytes": 27493031,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.1.0.19.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-03-13T13:01:34Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.2.0.87",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.2.0.87",
+        "sort_key": "0001.0002.0000.0087"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "904116c83b5c6115cbe41ff3be513997"
+          },
+          "size_bytes": 45541752
+        },
+        "zip": {
+          "size_bytes": 27478608,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.2.0.87.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-07-19T00:01:34Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.2.2.118",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.2.2.118",
+        "sort_key": "0001.0002.0002.0118"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b68edb6f20585dbc44b96333bf416622"
+          },
+          "size_bytes": 47119216
+        },
+        "zip": {
+          "size_bytes": 28426087,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.2.2.118.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-10-21T22:14:42Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.3.1.68",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.3.1.68",
+        "sort_key": "0001.0003.0001.0068"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ffef0e9856fe361a088d8da96cec34e2"
+          },
+          "size_bytes": 22955384
+        },
+        "zip": {
+          "size_bytes": 13164543,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.3.1.68.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-03-03T16:13:54Z"
+      }
+    },
+    {
+      "entry_id": "libxess_fg_1.3.1.78",
+      "library": {
+        "id": "libxess_fg",
+        "file_name": "libxess_fg.dll"
+      },
+      "version": {
+        "value": "1.3.1.78",
+        "sort_key": "0001.0003.0001.0078"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e5da7e91e3af8a8340b3fef922912e6e"
+          },
+          "size_bytes": 22957432
+        },
+        "zip": {
+          "size_bytes": 13170843,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_fg_1.3.1.78.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-03-31T00:05:48Z"
+      }
+    },
+    {
+      "entry_id": "libxell_1.0.0.139",
+      "library": {
+        "id": "libxell",
+        "file_name": "libxell.dll"
+      },
+      "version": {
+        "value": "1.0.0.139",
+        "sort_key": "0001.0000.0000.0139"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "d469069d3935032f907106331161e78a"
+          },
+          "size_bytes": 237968
+        },
+        "zip": {
+          "size_bytes": 76328,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxell_1.0.0.139.zip"
+        }
+      },
+      "signature": {
+        "status": "unsigned"
+      }
+    },
+    {
+      "entry_id": "libxell_1.0.1.6",
+      "library": {
+        "id": "libxell",
+        "file_name": "libxell.dll"
+      },
+      "version": {
+        "value": "1.0.1.6",
+        "sort_key": "0001.0000.0001.0006"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "ac3c8aebdf60f932cfded7d2bcef93f0"
+          },
+          "size_bytes": 267152
+        },
+        "zip": {
+          "size_bytes": 86471,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxell_1.0.1.6.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-04T17:33:12Z"
+      }
+    },
+    {
+      "entry_id": "libxell_1.1.0.6",
+      "library": {
+        "id": "libxell",
+        "file_name": "libxell.dll"
+      },
+      "version": {
+        "value": "1.1.0.6",
+        "sort_key": "0001.0001.0000.0006"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "b97327b6e9b8073deaf4fa8cbb4286d2"
+          },
+          "size_bytes": 346984
+        },
+        "zip": {
+          "size_bytes": 113745,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxell_1.1.0.6.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-03-12T15:40:23Z"
+      }
+    },
+    {
+      "entry_id": "libxell_1.2.0.9",
+      "library": {
+        "id": "libxell",
+        "file_name": "libxell.dll"
+      },
+      "version": {
+        "value": "1.2.0.9",
+        "sort_key": "0001.0002.0000.0009"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "7371177f39efbbb60a3f1274244c3eca"
+          },
+          "size_bytes": 359792
+        },
+        "zip": {
+          "size_bytes": 117388,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxell_1.2.0.9.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-07-17T21:30:25Z"
+      }
+    },
+    {
+      "entry_id": "libxell_1.2.1.13",
+      "library": {
+        "id": "libxell",
+        "file_name": "libxell.dll"
+      },
+      "version": {
+        "value": "1.2.1.13",
+        "sort_key": "0001.0002.0001.0013"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "32eaec31d4f314b0a0e92ef5aaae2d6f"
+          },
+          "size_bytes": 360312
+        },
+        "zip": {
+          "size_bytes": 117456,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxell_1.2.1.13.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-10-13T11:35:04Z"
+      }
+    },
+    {
+      "entry_id": "libxell_1.3.0.5",
+      "library": {
+        "id": "libxell",
+        "file_name": "libxell.dll"
+      },
+      "version": {
+        "value": "1.3.0.5",
+        "sort_key": "0001.0003.0000.0005"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "2747b644c19058fc594650a7f3705218"
+          },
+          "size_bytes": 411504
+        },
+        "zip": {
+          "size_bytes": 137125,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxell_1.3.0.5.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-03-03T11:31:50Z"
+      }
+    },
+    {
+      "entry_id": "libxess_dx11_2.0.1.41",
+      "library": {
+        "id": "libxess_dx11",
+        "file_name": "libxess_dx11.dll"
+      },
+      "version": {
+        "value": "2.0.1.41",
+        "sort_key": "0002.0000.0001.0041"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "155cc423a077a4f8435d3919f0f1da80"
+          },
+          "size_bytes": 147816
+        },
+        "zip": {
+          "size_bytes": 43905,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_dx11_2.0.1.41.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-03-12T17:49:26Z"
+      }
+    },
+    {
+      "entry_id": "libxess_dx11_2.0.2.53",
+      "library": {
+        "id": "libxess_dx11",
+        "file_name": "libxess_dx11.dll"
+      },
+      "version": {
+        "value": "2.0.2.53",
+        "sort_key": "0002.0000.0002.0053"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "c74e52a82017d654e017279d8f374544"
+          },
+          "size_bytes": 156024
+        },
+        "zip": {
+          "size_bytes": 45237,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_dx11_2.0.2.53.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-07-03T08:08:13Z"
+      }
+    },
+    {
+      "entry_id": "libxess_dx11_2.0.2.68",
+      "library": {
+        "id": "libxess_dx11",
+        "file_name": "libxess_dx11.dll"
+      },
+      "version": {
+        "value": "2.0.2.68",
+        "sort_key": "0002.0000.0002.0068"
+      },
+      "build": {
+        "label": null,
+        "type": "stable",
+        "internal_name": null
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "md5": "e04c7f44bc073d164cbf603215e96eaa"
+          },
+          "size_bytes": 156016
+        },
+        "zip": {
+          "size_bytes": 45240,
+          "download_url": "https://github.com/osyka-yuri/renderpilot-libraries/releases/download/v1.0.0/libxess_dx11_2.0.2.68.zip"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-10-17T14:23:44Z"
+      }
+    }
+  ]
+}
