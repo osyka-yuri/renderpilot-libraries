@@ -7,15 +7,15 @@ $manifest = Get-Content $manifestPath | ConvertFrom-Json
 
 Add-Type -Assembly System.IO.Compression.FileSystem
 
-function Get-FileHashMd5($path) {
-    $md5 = [System.Security.Cryptography.MD5]::Create()
+function Get-FileHashSha256($path) {
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
     $stream = [System.IO.File]::OpenRead($path)
     try {
-        $hash = $md5.ComputeHash($stream)
+        $hash = $sha256.ComputeHash($stream)
         return [BitConverter]::ToString($hash).Replace("-", "").ToLower()
     } finally {
         $stream.Dispose()
-        $md5.Dispose()
+        $sha256.Dispose()
     }
 }
 
@@ -56,8 +56,8 @@ for ($i = 0; $i -lt $total; $i++) {
         $entry.files.dll.size_bytes = (Get-Item $dllPath).Length
         $entry.files.zip.size_bytes = (Get-Item $zipPath).Length
 
-        # Update hash
-        $entry.files.dll.hashes.md5 = Get-FileHashMd5 $dllPath
+        # Update hash (replace entire hashes object to avoid property issues)
+        $entry.files.dll.hashes = @{ sha256 = Get-FileHashSha256 $dllPath }
 
         # Check signature
         $sig = Get-AuthenticodeSignature -FilePath $dllPath
