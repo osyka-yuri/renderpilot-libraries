@@ -1,0 +1,1724 @@
+[
+ {
+  "name": "007 First Light",
+  "slug": "007firstlight",
+  "arch": "X64",
+  "status": "working",
+  "id": "007-first-light"
+ },
+ {
+  "name": "1000xResist",
+  "slug": "1000xresist",
+  "arch": "X64",
+  "status": "working",
+  "id": "1000xresist"
+ },
+ {
+  "name": "Absolum",
+  "slug": "absolum",
+  "arch": "X64",
+  "status": "working",
+  "id": "absolum"
+ },
+ {
+  "name": "AI: The Somnium Files",
+  "slug": "aisomniumfiles",
+  "arch": "X64",
+  "status": "working",
+  "id": "ai-the-somnium-files"
+ },
+ {
+  "name": "Alice: Madness Returns",
+  "slug": "alicemadnessreturns",
+  "arch": "X86",
+  "status": "working",
+  "id": "alice-madness-returns"
+ },
+ {
+  "name": "Alien: Isolation",
+  "slug": "alienisolation",
+  "arch": "X86",
+  "status": "construction",
+  "id": "alien-isolation"
+ },
+ {
+  "name": "Against The Storm",
+  "slug": "_univ",
+  "arch": "X64",
+  "status": "construction",
+  "id": "against-the-storm"
+ },
+ {
+  "name": "Animal Well",
+  "slug": "animalwell",
+  "arch": "X64",
+  "status": "construction",
+  "id": "animal-well"
+ },
+ {
+  "name": "A Plague Tale: Innocence",
+  "slug": "aptinnocence",
+  "arch": "X64",
+  "status": "working",
+  "id": "a-plague-tale-innocence"
+ },
+ {
+  "name": "Arknights: Endfield",
+  "slug": "endfield",
+  "arch": "X64",
+  "status": "working",
+  "id": "arknights-endfield"
+ },
+ {
+  "name": "Armored Core VI: Fires of Rubicon",
+  "slug": "fromsoft_engine",
+  "arch": "X64",
+  "status": "working",
+  "id": "armored-core-vi-fires-of-rubicon"
+ },
+ {
+  "name": "Assassin's Creed™: Director's Cut Edition (DX10)",
+  "slug": "asscreed1",
+  "arch": "X86",
+  "status": "working",
+  "id": "assassin-s-creed-director-s-cut-edition"
+ },
+ {
+  "name": "Assassin’s Creed® IV Black Flag™",
+  "slug": "asscreedblackflag",
+  "arch": "X86",
+  "status": "construction",
+  "id": "assassins-creed-iv-black-flag"
+ },
+ {
+  "name": "Assassin’s Creed® Mirage",
+  "slug": "asscreedmirage",
+  "arch": "X64",
+  "status": "working",
+  "id": "assassins-creed-mirage"
+ },
+ {
+  "name": "Assassin’s Creed® Origins",
+  "slug": "asscreedorigins-odyssey",
+  "arch": "X64",
+  "status": "working",
+  "id": "assassins-creed-origins"
+ },
+ {
+  "name": "Assassin’s Creed® Odyssey",
+  "slug": "asscreedorigins-odyssey",
+  "arch": "X64",
+  "status": "working",
+  "id": "assassins-creed-odyssey"
+ },
+ {
+  "name": "Assassin’s Creed® Shadows",
+  "slug": "asscreedshadows",
+  "arch": "X64",
+  "status": "working",
+  "id": "assassins-creed-shadows"
+ },
+ {
+  "name": "Assassin’s Creed® Valhalla",
+  "slug": "asscreedvalhalla",
+  "arch": "X64",
+  "status": "working",
+  "id": "assassins-creed-valhalla"
+ },
+ {
+  "name": "Atelier Ryza 1",
+  "slug": "ryza",
+  "arch": "X64",
+  "status": "working",
+  "id": "atelier-ryza-1"
+ },
+ {
+  "name": "Atelier Ryza 2",
+  "slug": "ryza2",
+  "arch": "X64",
+  "status": "working",
+  "id": "atelier-ryza-2"
+ },
+ {
+  "name": "Atelier Ryza 3",
+  "slug": "ryza3",
+  "arch": "X64",
+  "status": "working",
+  "id": "atelier-ryza-3"
+ },
+ {
+  "name": "Atelier Ryza DX",
+  "slug": "atelierryzadx",
+  "arch": "X64",
+  "status": "working",
+  "id": "atelier-ryza-dx"
+ },
+ {
+  "name": "Atelier Sophie 1 DX",
+  "slug": "sophie1",
+  "arch": "X64",
+  "status": "working",
+  "id": "atelier-sophie-1-dx"
+ },
+ {
+  "name": "Atelier Yumia: The Alchemist of Memories & the Envisioned Land",
+  "slug": "yumia1",
+  "arch": "X64",
+  "status": "construction",
+  "id": "atelier-yumia-the-alchemist-of-memories-the-envisioned-land"
+ },
+ {
+  "name": "Atlas Fallen (DX12)",
+  "slug": "atlasfallen",
+  "arch": "X64",
+  "status": "working",
+  "id": "atlas-fallen"
+ },
+ {
+  "name": "Avatar: Frontiers of Pandora™",
+  "slug": "avatarfop-swoutlaws",
+  "arch": "X64",
+  "status": "working",
+  "id": "avatar-frontiers-of-pandora"
+ },
+ {
+  "name": "Batman: Arkham Knight",
+  "slug": "batmanak",
+  "arch": "X64",
+  "status": "working",
+  "id": "batman-arkham-knight"
+ },
+ {
+  "name": "Batman: Arkham Asylum",
+  "slug": "batmanaa",
+  "arch": "X86",
+  "status": "working",
+  "id": "batman-arkham-asylum"
+ },
+ {
+  "name": "Beyond Blue",
+  "slug": "beyondblue",
+  "arch": "X64",
+  "status": "working",
+  "id": "beyond-blue"
+ },
+ {
+  "name": "Black Desert Online",
+  "slug": "black-desert-online",
+  "arch": "X64",
+  "status": "working",
+  "id": "black-desert-online"
+ },
+ {
+  "name": "Borderlands GOTY Enhanced",
+  "slug": "borderlandsgotyenhanced",
+  "arch": "X64",
+  "status": "working",
+  "id": "borderlands-goty-enhanced"
+ },
+ {
+  "name": "Borderlands 2 & The Pre-Sequel",
+  "slug": "borderlands2",
+  "arch": "X86",
+  "status": "working",
+  "id": "borderlands-2-the-pre-sequel"
+ },
+ {
+  "name": "Borderlands 4",
+  "slug": "borderlands4",
+  "arch": "X64",
+  "status": "working",
+  "id": "borderlands-4"
+ },
+ {
+  "name": "Bulletstorm: Full Clip Edition",
+  "slug": "bulletstormfullclip",
+  "arch": "X64",
+  "status": "working",
+  "id": "bulletstorm-full-clip-edition"
+ },
+ {
+  "name": "Call of Juarez (dx10)",
+  "slug": "callofjuarez",
+  "arch": "X86",
+  "status": "working",
+  "id": "call-of-juarez"
+ },
+ {
+  "name": "Castlevania Lords of Shadow",
+  "slug": "castlevanialos",
+  "arch": "X86",
+  "status": "working",
+  "id": "castlevania-lords-of-shadow"
+ },
+ {
+  "name": "Child of Light",
+  "slug": "childoflight",
+  "arch": "X86",
+  "status": "working",
+  "id": "child-of-light"
+ },
+ {
+  "name": "Citizen Sleeper 2",
+  "slug": "citizensleeper2",
+  "arch": "X64",
+  "status": "working",
+  "id": "citizen-sleeper-2"
+ },
+ {
+  "name": "Clair Obscur: Expedition 33",
+  "slug": "clairobscur_expedition33",
+  "arch": "X64",
+  "status": "working",
+  "id": "clair-obscur-expedition-33"
+ },
+ {
+  "name": "Clive Barker's Jericho",
+  "slug": "clivebarkersjericho",
+  "arch": "X86",
+  "status": "construction",
+  "id": "clive-barker-s-jericho"
+ },
+ {
+  "name": "CODE VEIN II",
+  "slug": "codevein2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "code-vein-ii"
+ },
+ {
+  "name": "Crimson Desert",
+  "slug": "crimsondesert",
+  "arch": "X64",
+  "status": "construction",
+  "id": "crimson-desert"
+ },
+ {
+  "name": "Cyberpunk 2077",
+  "slug": "cp2077",
+  "arch": "X64",
+  "status": "working",
+  "id": "cyberpunk-2077"
+ },
+ {
+  "name": "Dark Souls: Remastered",
+  "slug": "darksouls",
+  "arch": "X64",
+  "status": "working",
+  "id": "dark-souls-remastered"
+ },
+ {
+  "name": "Darkest Dungeon 2",
+  "slug": "_univ",
+  "arch": "X64",
+  "status": "construction",
+  "id": "darkest-dungeon-2"
+ },
+ {
+  "name": "Darksiders Warmastered Edition",
+  "slug": "darksiders-warmastered",
+  "arch": "X86",
+  "status": "working",
+  "id": "darksiders-warmastered-edition"
+ },
+ {
+  "name": "Dead Island (& Riptide) Definitive Edition",
+  "slug": "deadislandde",
+  "arch": "X64",
+  "status": "construction",
+  "id": "dead-island-definitive-edition"
+ },
+ {
+  "name": "Dead Island 2",
+  "slug": "deadisland2",
+  "arch": "X64",
+  "status": "working",
+  "id": "dead-island-2"
+ },
+ {
+  "name": "Death Stranding : Director's Cut",
+  "slug": "deathstrandingdc",
+  "arch": "X64",
+  "status": "construction",
+  "id": "death-stranding-director-s-cut"
+ },
+ {
+  "name": "Death Stranding 2",
+  "slug": "deathstranding2",
+  "arch": "X64",
+  "status": "working",
+  "id": "death-stranding-2"
+ },
+ {
+  "name": "Deus Ex: Mankind Divided",
+  "slug": "dxmd",
+  "arch": "X64",
+  "status": "working",
+  "id": "deus-ex-mankind-divided"
+ },
+ {
+  "name": "Devil May Cry V",
+  "slug": "dmc5",
+  "arch": "X64",
+  "status": "working",
+  "id": "devil-may-cry-v"
+ },
+ {
+  "name": "Dishonored",
+  "slug": "dishonored",
+  "arch": "X86",
+  "status": "working",
+  "id": "dishonored"
+ },
+ {
+  "name": "DOOM: The Dark Ages",
+  "slug": "doom-tda",
+  "arch": "X64",
+  "status": "working",
+  "id": "doom-the-dark-ages"
+ },
+ {
+  "name": "Dragon Age: Inquisition",
+  "slug": "dai",
+  "arch": "X64",
+  "status": "working",
+  "id": "dragon-age-inquisition"
+ },
+ {
+  "name": "Dragon's Dogma 2",
+  "slug": "dragonsdogma2",
+  "arch": "X64",
+  "status": "working",
+  "id": "dragon-s-dogma-2"
+ },
+ {
+  "name": "Dragon Quest XI (Original & DE)",
+  "slug": "dragonquest-ue",
+  "arch": "X64",
+  "status": "working",
+  "id": "dragon-quest-xi"
+ },
+ {
+  "name": "Dragon Quest VII Remake",
+  "slug": "dragonquest-ue",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "dragon-quest-vii-remake"
+ },
+ {
+  "name": "DRAGON BALL: Sparking! ZERO",
+  "slug": "dbzspark",
+  "arch": "X64",
+  "status": "working",
+  "id": "dragon-ball-sparking-zero"
+ },
+ {
+  "name": "Dying Light",
+  "slug": "dyinglight",
+  "arch": "X64",
+  "status": "working",
+  "id": "dying-light"
+ },
+ {
+  "name": "Dying Light: The Beast",
+  "slug": "dyinglightthebeast",
+  "arch": "X64",
+  "status": "working",
+  "id": "dying-light-the-beast"
+ },
+ {
+  "name": "Elden Ring",
+  "slug": "fromsoft_engine",
+  "arch": "X64",
+  "status": "working",
+  "id": "elden-ring"
+ },
+ {
+  "name": "Elden Ring: Nightreign",
+  "slug": "fromsoft_engine",
+  "arch": "X64",
+  "status": "working",
+  "id": "elden-ring-nightreign"
+ },
+ {
+  "name": "ENDER MAGNOLIA: Bloom in the Mist",
+  "slug": "endermagnolia",
+  "arch": "X64",
+  "status": "construction",
+  "id": "ender-magnolia-bloom-in-the-mist"
+ },
+ {
+  "name": "FANTASIAN Neo Dimension",
+  "slug": "fantasianneodimension",
+  "arch": "X64",
+  "status": "construction",
+  "id": "fantasian-neo-dimension"
+ },
+ {
+  "name": "Fallout 4",
+  "slug": "fallout4",
+  "arch": "X64",
+  "status": "working",
+  "id": "fallout-4"
+ },
+ {
+  "name": "Fallout 76",
+  "slug": "fallout76",
+  "arch": "X64",
+  "status": "working",
+  "id": "fallout-76"
+ },
+ {
+  "name": "Far Cry 2 (dx10)",
+  "slug": "duniaengine",
+  "arch": "X86",
+  "status": "working",
+  "id": "far-cry-2"
+ },
+ {
+  "name": "Far Cry 3 (dx11)",
+  "slug": "duniaengine",
+  "arch": "X86",
+  "status": "working",
+  "id": "far-cry-3"
+ },
+ {
+  "name": "Far Cry 5",
+  "slug": "farcry5",
+  "arch": "X64",
+  "status": "working",
+  "id": "far-cry-5"
+ },
+ {
+  "name": "Far Cry 6",
+  "slug": "farcry6",
+  "arch": "X64",
+  "status": "working",
+  "id": "far-cry-6"
+ },
+ {
+  "name": "Fate/Samurai Remnant",
+  "slug": "fatesamurairemnant",
+  "arch": "X64",
+  "status": "construction",
+  "id": "fate-samurai-remnant"
+ },
+ {
+  "name": "Final Fantasy 7 : Rebirth",
+  "slug": "ff7rebirth",
+  "arch": "X64",
+  "status": "working",
+  "id": "final-fantasy-7-rebirth"
+ },
+ {
+  "name": "Final Fantasy 7 : Remake",
+  "slug": "ff7remake",
+  "arch": "X64",
+  "status": "working",
+  "id": "final-fantasy-7-remake"
+ },
+ {
+  "name": "Final Fantasy X",
+  "slug": "ffx",
+  "arch": "X86",
+  "status": "working",
+  "id": "final-fantasy-x"
+ },
+ {
+  "name": "Final Fantasy XIV",
+  "slug": "ffxiv",
+  "arch": "X64",
+  "status": "working",
+  "id": "final-fantasy-xiv"
+ },
+ {
+  "name": "Final Fantasy XV",
+  "slug": "ffxv",
+  "arch": "X64",
+  "status": "working",
+  "id": "final-fantasy-xv"
+ },
+ {
+  "name": "Forza Horizon 6",
+  "slug": "forzahorizon6",
+  "arch": "X64",
+  "status": "working",
+  "id": "forza-horizon-6"
+ },
+ {
+  "name": "GhostWire Tokyo",
+  "slug": "ghostwiretokyo",
+  "arch": "X64",
+  "status": "working",
+  "id": "ghostwire-tokyo"
+ },
+ {
+  "name": "Go Mecha Ball",
+  "slug": "gomechaball",
+  "arch": "X64",
+  "status": "working",
+  "id": "go-mecha-ball"
+ },
+ {
+  "name": "God of War (2018)",
+  "slug": "gow2018",
+  "arch": "X64",
+  "status": "working",
+  "id": "god-of-war"
+ },
+ {
+  "name": "God of War Ragnarok",
+  "slug": "gowragnarok",
+  "arch": "X64",
+  "status": "working",
+  "id": "god-of-war-ragnarok"
+ },
+ {
+  "name": "Granblue Fantasy: Relink",
+  "slug": "gbfrelink",
+  "arch": "X64",
+  "status": "working",
+  "id": "granblue-fantasy-relink"
+ },
+ {
+  "name": "Grand Theft Auto V : Enhanced",
+  "slug": "gtav-enhanced",
+  "arch": "X64",
+  "status": "working",
+  "id": "grand-theft-auto-v-enhanced"
+ },
+ {
+  "name": "GreedFall",
+  "slug": "greedfall",
+  "arch": "X64",
+  "status": "working",
+  "id": "greedfall"
+ },
+ {
+  "name": "Grim Dawn",
+  "slug": "grimdawn",
+  "arch": "X64",
+  "status": "working",
+  "id": "grim-dawn"
+ },
+ {
+  "name": "Guild Wars 2",
+  "slug": "guildwars2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "guild-wars-2"
+ },
+ {
+  "name": "Hades",
+  "slug": "hades",
+  "arch": "X64",
+  "status": "construction",
+  "id": "hades"
+ },
+ {
+  "name": "Hades 2",
+  "slug": "hades2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "hades-2"
+ },
+ {
+  "name": "Hard Reset Redux",
+  "slug": "roadhogengine",
+  "arch": "X64",
+  "status": "working",
+  "id": "hard-reset-redux"
+ },
+ {
+  "name": "Hardspace: Shipbreaker",
+  "slug": "_univ",
+  "arch": "X64",
+  "status": "construction",
+  "id": "hardspace-shipbreaker"
+ },
+ {
+  "name": "Heaven Burns Red",
+  "slug": "_hbr",
+  "arch": "X64",
+  "status": "working",
+  "id": "heaven-burns-red"
+ },
+ {
+  "name": "Helldivers 2",
+  "slug": "helldivers2",
+  "arch": "X64",
+  "status": "working",
+  "id": "helldivers-2"
+ },
+ {
+  "name": "HITMAN World of Assassination",
+  "slug": "hitmanwoa",
+  "arch": "X64",
+  "status": "working",
+  "id": "hitman-world-of-assassination"
+ },
+ {
+  "name": "Hollow Knight",
+  "slug": "hollowknight",
+  "arch": "X64",
+  "status": "working",
+  "id": "hollow-knight"
+ },
+ {
+  "name": "Hollow Knight: Silksong",
+  "slug": "hollowknight-silksong",
+  "arch": "X64",
+  "status": "working",
+  "id": "hollow-knight-silksong"
+ },
+ {
+  "name": "Immortals Fenyx Rising",
+  "slug": "immortalsfenyxrising",
+  "arch": "X64",
+  "status": "construction",
+  "id": "immortals-fenyx-rising"
+ },
+ {
+  "name": "Indiana Jones and the Great Circle",
+  "slug": "indygreatcircle",
+  "arch": "X64",
+  "status": "construction",
+  "id": "indiana-jones-and-the-great-circle"
+ },
+ {
+  "name": "Ixion",
+  "slug": "_univ",
+  "arch": "X64",
+  "status": "construction",
+  "id": "ixion"
+ },
+ {
+  "name": "James Cameron's Avatar: The Game",
+  "slug": "duniaengine",
+  "arch": "X86",
+  "status": "working",
+  "id": "james-cameron-s-avatar-the-game"
+ },
+ {
+  "name": "Journey",
+  "slug": "journey",
+  "arch": "X64",
+  "status": "working",
+  "id": "journey"
+ },
+ {
+  "name": "Just Cause 4",
+  "slug": "justcause4",
+  "arch": "X64",
+  "status": "working",
+  "id": "just-cause-4"
+ },
+ {
+  "name": "Karma: The Dark World",
+  "slug": "karmathedarkworld",
+  "arch": "X64",
+  "status": "working",
+  "id": "karma-the-dark-world"
+ },
+ {
+  "name": "Kerbal Space Program",
+  "slug": "_ksp",
+  "arch": "X64",
+  "status": "construction",
+  "id": "kerbal-space-program"
+ },
+ {
+  "name": "Kingdom Come: Deliverance II",
+  "slug": "kingdomcome2",
+  "arch": "X64",
+  "status": "working",
+  "id": "kingdom-come-deliverance-ii"
+ },
+ {
+  "name": "Kingdoms of Amalur: Re-Reckoning",
+  "slug": "koarr",
+  "arch": "X86",
+  "status": "working",
+  "id": "kingdoms-of-amalur-re-reckoning"
+ },
+ {
+  "name": "Lunacid",
+  "slug": "lunacid",
+  "arch": "X64",
+  "status": "working",
+  "id": "lunacid"
+ },
+ {
+  "name": "Luigi's Mansion 3",
+  "slug": "lm3",
+  "arch": "X64",
+  "status": "working",
+  "id": "luigi-s-mansion-3"
+ },
+ {
+  "name": "Trails of Cold Steel (3-4-5)",
+  "slug": "senkiseki",
+  "arch": "X64",
+  "status": "working",
+  "id": "trails-of-cold-steel"
+ },
+ {
+  "name": "Trails in the Sky 1st Chapter",
+  "slug": "falcomengine",
+  "arch": "X64",
+  "status": "working",
+  "id": "trails-in-the-sky-1st-chapter"
+ },
+ {
+  "name": "Trails through Daybreak 1&2",
+  "slug": "falcomengine",
+  "arch": "X64",
+  "status": "working",
+  "id": "trails-through-daybreak-1-2"
+ },
+ {
+  "name": "Trails beyond the Horizon",
+  "slug": "falcomengine",
+  "arch": "X64",
+  "status": "working",
+  "id": "trails-beyond-the-horizon"
+ },
+ {
+  "name": "Trails from Zero/to Azure",
+  "slug": "zerokiseki",
+  "arch": "X64",
+  "status": "working",
+  "id": "trails-from-zero-to-azure"
+ },
+ {
+  "name": "Like a Dragon: Pirate Yakuza in Hawaii",
+  "slug": "yakuzapirates",
+  "arch": "X64",
+  "status": "working",
+  "id": "like-a-dragon-pirate-yakuza-in-hawaii"
+ },
+ {
+  "name": "Like a Dragon Gaiden: The Man Who Erased His Name",
+  "slug": "yakuzapirates",
+  "arch": "X64",
+  "status": "working",
+  "id": "like-a-dragon-gaiden-the-man-who-erased-his-name"
+ },
+ {
+  "name": "Like a Dragon: Infinite Wealth",
+  "slug": "yakuzapirates",
+  "arch": "X64",
+  "status": "working",
+  "id": "like-a-dragon-infinite-wealth"
+ },
+ {
+  "name": "Lost Planet",
+  "slug": "lostplanet",
+  "arch": "X86",
+  "status": "working",
+  "id": "lost-planet"
+ },
+ {
+  "name": "Mad Max",
+  "slug": "madmax",
+  "arch": "X64",
+  "status": "working",
+  "id": "mad-max"
+ },
+ {
+  "name": "Mafia: Definitive Edition",
+  "slug": "mafiade",
+  "arch": "X64",
+  "status": "working",
+  "id": "mafia-definitive-edition"
+ },
+ {
+  "name": "Max Payne 3",
+  "slug": "maxpayne3",
+  "arch": "X86",
+  "status": "construction",
+  "id": "max-payne-3"
+ },
+ {
+  "name": "Mario Kart 8 Deluxe",
+  "slug": "mk8",
+  "arch": "X64",
+  "status": "working",
+  "id": "mario-kart-8-deluxe"
+ },
+ {
+  "name": "Marvel's Spider-Man 2",
+  "slug": "spiderman2",
+  "arch": "X64",
+  "status": "working",
+  "id": "marvel-s-spider-man-2"
+ },
+ {
+  "name": "Marvel's Spider-Man Miles Morales",
+  "slug": "spiderman_2018_miles",
+  "arch": "X64",
+  "status": "working",
+  "id": "marvel-s-spider-man-miles-morales"
+ },
+ {
+  "name": "Marvel's Spider-Man Remastered",
+  "slug": "spiderman_2018_miles",
+  "arch": "X64",
+  "status": "working",
+  "id": "marvel-s-spider-man-remastered"
+ },
+ {
+  "name": "Mass Effect : Legendary Edition",
+  "slug": "masseffectle",
+  "arch": "X64",
+  "status": "working",
+  "id": "mass-effect-legendary-edition"
+ },
+ {
+  "name": "Metaphor: ReFantazio",
+  "slug": "metaphorrefantazio",
+  "arch": "X64",
+  "status": "working",
+  "id": "metaphor-refantazio"
+ },
+ {
+  "name": "Metro Exodus Enhanced Edition",
+  "slug": "metroexodus",
+  "arch": "X64",
+  "status": "working",
+  "id": "metro-exodus-enhanced-edition"
+ },
+ {
+  "name": "Metroid Dread",
+  "slug": "metroiddread",
+  "arch": "X64",
+  "status": "working",
+  "id": "metroid-dread"
+ },
+ {
+  "name": "METAL GEAR SOLID Δ: SNAKE EATER",
+  "slug": "mgsdelta",
+  "arch": "X64",
+  "status": "working",
+  "id": "metal-gear-solid-snake-eater"
+ },
+ {
+  "name": "Middle Earth: Shadow of War",
+  "slug": "shadowofwar",
+  "arch": "X64",
+  "status": "working",
+  "id": "middle-earth-shadow-of-war"
+ },
+ {
+  "name": "Monster Hunter Generations Ultimate",
+  "slug": "mhgu",
+  "arch": "X64",
+  "status": "working",
+  "id": "monster-hunter-generations-ultimate"
+ },
+ {
+  "name": "Monster Hunter Rise",
+  "slug": "mhrise",
+  "arch": "X64",
+  "status": "working",
+  "id": "monster-hunter-rise"
+ },
+ {
+  "name": "Monster Hunter: Wilds",
+  "slug": "mhwilds",
+  "arch": "X64",
+  "status": "working",
+  "id": "monster-hunter-wilds"
+ },
+ {
+  "name": "Monster Hunter: World",
+  "slug": "mhworld",
+  "arch": "X64",
+  "status": "working",
+  "id": "monster-hunter-world"
+ },
+ {
+  "name": "Need for Speed™ (2016)",
+  "slug": "nfs16",
+  "arch": "X64",
+  "status": "working",
+  "id": "need-for-speed"
+ },
+ {
+  "name": "NieR Replicant",
+  "slug": "nierreplicant",
+  "arch": "X64",
+  "status": "construction",
+  "id": "nier-replicant"
+ },
+ {
+  "name": "Nights of Azure 1",
+  "slug": "nightsofazure1",
+  "arch": "X64",
+  "status": "construction",
+  "id": "nights-of-azure-1"
+ },
+ {
+  "name": "Nights of Azure 2",
+  "slug": "nightsofazure2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "nights-of-azure-2"
+ },
+ {
+  "name": "Ninja Gaiden 4",
+  "slug": "ninjagaiden4",
+  "arch": "X64",
+  "status": "working",
+  "id": "ninja-gaiden-4"
+ },
+ {
+  "name": "Ninja Gaiden Sigma",
+  "slug": "ngsigma",
+  "arch": "X64",
+  "status": "working",
+  "id": "ninja-gaiden-sigma"
+ },
+ {
+  "name": "Ninja Gaiden Sigma 2",
+  "slug": "ngsigma2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "ninja-gaiden-sigma-2"
+ },
+ {
+  "name": "Nioh 2",
+  "slug": "nioh2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "nioh-2"
+ },
+ {
+  "name": "Nioh 3",
+  "slug": "nioh3",
+  "arch": "X64",
+  "status": "working",
+  "id": "nioh-3"
+ },
+ {
+  "name": "OPUS: Echo of Starsong - Full Bloom Edition",
+  "slug": "opus-eos",
+  "arch": "X64",
+  "status": "working",
+  "id": "opus-echo-of-starsong-full-bloom-edition"
+ },
+ {
+  "name": "Ori and the Will of the Wisps",
+  "slug": "ori2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "ori-and-the-will-of-the-wisps"
+ },
+ {
+  "name": "Party Animals",
+  "slug": "partyanimals",
+  "arch": "X64",
+  "status": "working",
+  "id": "party-animals"
+ },
+ {
+  "name": "Pathfinder: Wrath of the Righteous",
+  "slug": "pathfinder2wotr",
+  "arch": "X64",
+  "status": "construction",
+  "id": "pathfinder-wrath-of-the-righteous"
+ },
+ {
+  "name": "Path of Exile 2 DX11 Only",
+  "slug": "poe2",
+  "arch": "X64",
+  "status": "working",
+  "id": "path-of-exile-2-dx11-only"
+ },
+ {
+  "name": "Penny's Big Breakaway",
+  "slug": "penny",
+  "arch": "X64",
+  "status": "working",
+  "id": "penny-s-big-breakaway"
+ },
+ {
+  "name": "Persona 4 Golden",
+  "slug": "p4g",
+  "arch": "X64",
+  "status": "construction",
+  "id": "persona-4-golden"
+ },
+ {
+  "name": "Persona 5 Royal (Remake from Ersh's)",
+  "slug": "p5r",
+  "arch": "X64",
+  "status": "working",
+  "id": "persona-5-royal"
+ },
+ {
+  "name": "Persona 5 : Strikers",
+  "slug": "_p5s",
+  "arch": "X64",
+  "status": "construction",
+  "id": "persona-5-strikers"
+ },
+ {
+  "name": "Remember Me",
+  "slug": "rememberme",
+  "arch": "X86",
+  "status": "working",
+  "id": "remember-me"
+ },
+ {
+  "name": "Resident Evil 2 Remake",
+  "slug": "re7-2r-3r-village",
+  "arch": "X64",
+  "status": "working",
+  "id": "resident-evil-2-remake"
+ },
+ {
+  "name": "Resident Evil 3 Remake",
+  "slug": "re7-2r-3r-village",
+  "arch": "X64",
+  "status": "working",
+  "id": "resident-evil-3-remake"
+ },
+ {
+  "name": "Resident Evil 4 Remake",
+  "slug": "re4remake",
+  "arch": "X64",
+  "status": "working",
+  "id": "resident-evil-4-remake"
+ },
+ {
+  "name": "Resident Evil 7",
+  "slug": "re7-2r-3r-village",
+  "arch": "X64",
+  "status": "working",
+  "id": "resident-evil-7"
+ },
+ {
+  "name": "Resident Evil Village",
+  "slug": "re7-2r-3r-village",
+  "arch": "X64",
+  "status": "working",
+  "id": "resident-evil-village"
+ },
+ {
+  "name": "Revenge of the Savage Planet",
+  "slug": "rotsp",
+  "arch": "X64",
+  "status": "working",
+  "id": "revenge-of-the-savage-planet"
+ },
+ {
+  "name": "Rise of the Tomb Raider",
+  "slug": "risetombraider",
+  "arch": "X64",
+  "status": "working",
+  "id": "rise-of-the-tomb-raider"
+ },
+ {
+  "name": "Rise of the Ronin",
+  "slug": "riseofronin",
+  "arch": "X64",
+  "status": "construction",
+  "id": "rise-of-the-ronin"
+ },
+ {
+  "name": "RAIDOU Remastered: The Mystery of the Soulless Army",
+  "slug": "raidou",
+  "arch": "X64",
+  "status": "construction",
+  "id": "raidou-remastered-the-mystery-of-the-soulless-army"
+ },
+ {
+  "name": "RoboCop: Rogue City",
+  "slug": "routine",
+  "arch": "X64",
+  "status": "working",
+  "id": "robocop-rogue-city"
+ },
+ {
+  "name": "Routine",
+  "slug": "robocop",
+  "arch": "X64",
+  "status": "working",
+  "id": "routine"
+ },
+ {
+  "name": "Sea of Stars",
+  "slug": "seaofstars",
+  "arch": "X64",
+  "status": "working",
+  "id": "sea-of-stars"
+ },
+ {
+  "name": "Sekiro: Shadows Die Twice",
+  "slug": "fromsoft_engine",
+  "arch": "X64",
+  "status": "working",
+  "id": "sekiro-shadows-die-twice"
+ },
+ {
+  "name": "Shadow Gambit: The Cursed Crew",
+  "slug": "shadowgambit",
+  "arch": "X64",
+  "status": "working",
+  "id": "shadow-gambit-the-cursed-crew"
+ },
+ {
+  "name": "Shadow of the Tomb Raider",
+  "slug": "shadowtombraider",
+  "arch": "X64",
+  "status": "working",
+  "id": "shadow-of-the-tomb-raider"
+ },
+ {
+  "name": "Shadow Warrior (2013) &middot; Shadow Warrior 2",
+  "slug": "roadhogengine",
+  "arch": "X64",
+  "status": "working",
+  "id": "shadow-warrior-middot-shadow-warrior-2"
+ },
+ {
+  "name": "Shin Megami Tensei V",
+  "slug": "smt5",
+  "arch": "X64",
+  "status": "working",
+  "id": "shin-megami-tensei-v"
+ },
+ {
+  "name": "SHINOBI: Art of Vengeance",
+  "slug": "shinobiaov",
+  "arch": "X64",
+  "status": "working",
+  "id": "shinobi-art-of-vengeance"
+ },
+ {
+  "name": "Silent Hill 2 Remake",
+  "slug": "silenthill2remake",
+  "arch": "X64",
+  "status": "working",
+  "id": "silent-hill-2-remake"
+ },
+ {
+  "name": "Silent Hill f",
+  "slug": "silenthillf",
+  "arch": "X64",
+  "status": "working",
+  "id": "silent-hill-f"
+ },
+ {
+  "name": "Sniper Elite 4 (DX11)",
+  "slug": "sniperelite4",
+  "arch": "X64",
+  "status": "working",
+  "id": "sniper-elite-4"
+ },
+ {
+  "name": "Sonic Generations",
+  "slug": "sonicgenerations",
+  "arch": "X86",
+  "status": "construction",
+  "id": "sonic-generations"
+ },
+ {
+  "name": "Sonic Unleashed Recompiled",
+  "slug": "sonicunleashedrecomp",
+  "arch": "X64",
+  "status": "construction",
+  "id": "sonic-unleashed-recompiled"
+ },
+ {
+  "name": "Sons of The Forest",
+  "slug": "sonsoftheforest",
+  "arch": "X64",
+  "status": "working",
+  "id": "sons-of-the-forest"
+ },
+ {
+  "name": "Spec Ops: The Line",
+  "slug": "specopstheline",
+  "arch": "X86",
+  "status": "working",
+  "id": "spec-ops-the-line"
+ },
+ {
+  "name": "Splatoon 2",
+  "slug": "splatoon2",
+  "arch": "X64",
+  "status": "working",
+  "id": "splatoon-2"
+ },
+ {
+  "name": "Splatoon 3",
+  "slug": "splatoon3",
+  "arch": "X64",
+  "status": "working",
+  "id": "splatoon-3"
+ },
+ {
+  "name": "Splinter Cell: Blacklist",
+  "slug": "scblacklist",
+  "arch": "X86",
+  "status": "working",
+  "id": "splinter-cell-blacklist"
+ },
+ {
+  "name": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+  "slug": "ue-extended",
+  "arch": "X64",
+  "status": "working",
+  "id": "s-t-a-l-k-e-r-2-heart-of-chornobyl"
+ },
+ {
+  "name": "Steelrising",
+  "slug": "steelrising",
+  "arch": "X64",
+  "status": "construction",
+  "id": "steelrising"
+ },
+ {
+  "name": "Steel Seed",
+  "slug": "steelseed",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "steel-seed"
+ },
+ {
+  "name": "Starfield",
+  "slug": "starfield",
+  "arch": "X64",
+  "status": "working",
+  "id": "starfield"
+ },
+ {
+  "name": "STAR WARS Jedi: Survivor™",
+  "slug": "jedisurvivor",
+  "arch": "X64",
+  "status": "working",
+  "id": "star-wars-jedi-survivor"
+ },
+ {
+  "name": "Star Wars Outlaws",
+  "slug": "avatarfop-swoutlaws",
+  "arch": "X64",
+  "status": "working",
+  "id": "star-wars-outlaws"
+ },
+ {
+  "name": "Stranger of Paradise: Final Fantasy Origin",
+  "slug": "sopffo",
+  "arch": "X64",
+  "status": "construction",
+  "id": "stranger-of-paradise-final-fantasy-origin"
+ },
+ {
+  "name": "Street Fighter 6",
+  "slug": "streetfighter6",
+  "arch": "X64",
+  "status": "construction",
+  "id": "street-fighter-6"
+ },
+ {
+  "name": "Sunset Overdrive",
+  "slug": "sunsetoverdrive",
+  "arch": "X64",
+  "status": "working",
+  "id": "sunset-overdrive"
+ },
+ {
+  "name": "Sword Art Online Alicization Lycoris",
+  "slug": "sao-alicization",
+  "arch": "X64",
+  "status": "working",
+  "id": "sword-art-online-alicization-lycoris"
+ },
+ {
+  "name": "Tactical Breach Wizards",
+  "slug": "tacticalbreachwizards",
+  "arch": "X64",
+  "status": "working",
+  "id": "tactical-breach-wizards"
+ },
+ {
+  "name": "Tales of Graces f Remastered",
+  "slug": "talesofgracesf",
+  "arch": "X64",
+  "status": "working",
+  "id": "tales-of-graces-f-remastered"
+ },
+ {
+  "name": "Teardown (dx12)",
+  "slug": "teardown",
+  "arch": "X64",
+  "status": "construction",
+  "id": "teardown"
+ },
+ {
+  "name": "Tekken 8",
+  "slug": "tekken8",
+  "arch": "X64",
+  "status": "working",
+  "id": "tekken-8"
+ },
+ {
+  "name": "Terraria",
+  "slug": "terraria",
+  "arch": "X86",
+  "status": "construction",
+  "id": "terraria"
+ },
+ {
+  "name": "tModLoader",
+  "slug": "terraria-tml",
+  "arch": "X64",
+  "status": "working",
+  "id": "tmodloader"
+ },
+ {
+  "name": "The Evil Within 2",
+  "slug": "tew2",
+  "arch": "X64",
+  "status": "construction",
+  "id": "the-evil-within-2"
+ },
+ {
+  "name": "The Elder Scrolls IV: Oblivion Remastered",
+  "slug": "oblivionremastered",
+  "arch": "X64",
+  "status": "construction",
+  "id": "the-elder-scrolls-iv-oblivion-remastered"
+ },
+ {
+  "name": "The Hundred Line: Last Defense Academy",
+  "slug": "thehundredline",
+  "arch": "X64",
+  "status": "construction",
+  "id": "the-hundred-line-last-defense-academy"
+ },
+ {
+  "name": "The Incredible Adventures of Van Helsing: Final Cut",
+  "slug": "vanhelsingfinalcut",
+  "arch": "X64",
+  "status": "working",
+  "id": "the-incredible-adventures-of-van-helsing-final-cut"
+ },
+ {
+  "name": "The Legend of Zelda: Breath of the Wild",
+  "slug": "botw",
+  "arch": "X64",
+  "status": "working",
+  "id": "the-legend-of-zelda-breath-of-the-wild"
+ },
+ {
+  "name": "The Legend of Zelda: Tears of the Kingdom",
+  "slug": "totk",
+  "arch": "X64",
+  "status": "working",
+  "id": "the-legend-of-zelda-tears-of-the-kingdom"
+ },
+ {
+  "name": "The Surge",
+  "slug": "thesurge",
+  "arch": "X64",
+  "status": "working",
+  "id": "the-surge"
+ },
+ {
+  "name": "The Town of Light",
+  "slug": "thetownoflight",
+  "arch": "X64",
+  "status": "working",
+  "id": "the-town-of-light"
+ },
+ {
+  "name": "The Witcher 3",
+  "slug": "thewitcher3",
+  "arch": "X64",
+  "status": "working",
+  "id": "the-witcher-3"
+ },
+ {
+  "name": "The Witness",
+  "slug": "thewitness",
+  "arch": "X64",
+  "status": "construction",
+  "id": "the-witness"
+ },
+ {
+  "name": "Titan Quest Anniversary Edition",
+  "slug": "grimdawn",
+  "arch": "X86",
+  "status": "working",
+  "id": "titan-quest-anniversary-edition"
+ },
+ {
+  "name": "Tomb Raider (2013)",
+  "slug": "tombraider2013",
+  "arch": "X86",
+  "status": "working",
+  "id": "tomb-raider"
+ },
+ {
+  "name": "Tomb Raider (2013) - Definitive Edition",
+  "slug": "tombraider2013de",
+  "arch": "X64",
+  "status": "construction",
+  "id": "tomb-raider-definitive-edition"
+ },
+ {
+  "name": "Total War: Three Kingdoms",
+  "slug": "tw-3kingdoms",
+  "arch": "X64",
+  "status": "working",
+  "id": "total-war-three-kingdoms"
+ },
+ {
+  "name": "Total War: Warhammer 3",
+  "slug": "_univ",
+  "arch": "X64",
+  "status": "working",
+  "id": "total-war-warhammer-3"
+ },
+ {
+  "name": "Trackmania",
+  "slug": "trackmania",
+  "arch": "X64",
+  "status": "construction",
+  "id": "trackmania"
+ },
+ {
+  "name": "Trine 2: Complete Story",
+  "slug": "trine2",
+  "arch": "X64",
+  "status": "working",
+  "id": "trine-2-complete-story"
+ },
+ {
+  "name": "Tunic",
+  "slug": "tunic",
+  "arch": "X64",
+  "status": "working",
+  "id": "tunic"
+ },
+ {
+  "name": "UNCHARTED™: Legacy of Thieves Collection",
+  "slug": "unchartedlotc",
+  "arch": "X64",
+  "status": "working",
+  "id": "uncharted-legacy-of-thieves-collection"
+ },
+ {
+  "name": "Valheim",
+  "slug": "valheim",
+  "arch": "X64",
+  "status": "working",
+  "id": "valheim"
+ },
+ {
+  "name": "Warframe",
+  "slug": "warframe",
+  "arch": "X64",
+  "status": "working",
+  "id": "warframe"
+ },
+ {
+  "name": "Warhammer 40,000: Space Marine 2",
+  "slug": "spacemarine2",
+  "arch": "X64",
+  "status": "working",
+  "id": "warhammer-40-000-space-marine-2"
+ },
+ {
+  "name": "Watch Dogs",
+  "slug": "watchdogs",
+  "arch": "X64",
+  "status": "working",
+  "id": "watch-dogs"
+ },
+ {
+  "name": "Wuchang: Fallen Feathers",
+  "slug": "wuchang",
+  "arch": "X64",
+  "status": "working",
+  "id": "wuchang-fallen-feathers"
+ },
+ {
+  "name": "Wuthering Waves",
+  "slug": "wutheringwaves",
+  "arch": "X64",
+  "status": "working",
+  "id": "wuthering-waves"
+ },
+ {
+  "name": "XCOM 2",
+  "slug": "xcom2",
+  "arch": "X64",
+  "status": "working",
+  "id": "xcom-2"
+ },
+ {
+  "name": "Wo Long: Fallen Dynasty",
+  "slug": "wolong",
+  "arch": "X64",
+  "status": "construction",
+  "id": "wo-long-fallen-dynasty"
+ },
+ {
+  "name": "Yakuza 0",
+  "slug": "yakuza0",
+  "arch": "X64",
+  "status": "construction",
+  "id": "yakuza-0"
+ },
+ {
+  "name": "Yakuza Kiwami 1",
+  "slug": "yakuza0",
+  "arch": "X64",
+  "status": "construction",
+  "id": "yakuza-kiwami-1"
+ },
+ {
+  "name": "YS IX: Monstrum Nox",
+  "slug": "ys9",
+  "arch": "X64",
+  "status": "working",
+  "id": "ys-ix-monstrum-nox"
+ },
+ {
+  "name": "Ys X: Nordics",
+  "slug": "ys10",
+  "arch": "X64",
+  "status": "working",
+  "id": "ys-x-nordics"
+ },
+ {
+  "name": "Ys X: Proud Nordics",
+  "slug": "ys10pn",
+  "arch": "X64",
+  "status": "working",
+  "id": "ys-x-proud-nordics"
+ },
+ {
+  "name": "Xenoblade Chronicles X: Definitive Edition",
+  "slug": "xbcx",
+  "arch": "X64",
+  "status": "working",
+  "id": "xenoblade-chronicles-x-definitive-edition"
+ },
+ {
+  "name": "Zenless Zone Zero",
+  "slug": "zenless-zone-zero",
+  "arch": "X64",
+  "status": "construction",
+  "id": "zenless-zone-zero"
+ },
+ {
+  "name": "Outer Wilds",
+  "slug": "outerwilds",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "outer-wilds"
+ },
+ {
+  "name": "Death's Door",
+  "slug": "deathsdoor",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "death-s-door"
+ },
+ {
+  "name": "Descenders",
+  "slug": "descenders",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "descenders"
+ },
+ {
+  "name": "Dying Light 2",
+  "slug": "dyinglight2",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "dying-light-2"
+ },
+ {
+  "name": "Haste",
+  "slug": "haste",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "haste"
+ },
+ {
+  "name": "L.A. Noire",
+  "slug": "lanoire",
+  "arch": "X86",
+  "status": "unknown",
+  "id": "l-a-noire"
+ },
+ {
+  "name": "Spark the Electric Jester 3",
+  "slug": "spark3",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "spark-the-electric-jester-3"
+ },
+ {
+  "name": "XF: Extreme Formula",
+  "slug": "xfextremeformula",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "xf-extreme-formula"
+ },
+ {
+  "name": "Doom Eternal",
+  "slug": "doom-eternal",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "doom-eternal"
+ },
+ {
+  "name": "Sea of Thieves",
+  "slug": "seaofthieves",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "sea-of-thieves"
+ },
+ {
+  "name": "Persona 5 Royal",
+  "slug": "p5r",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "persona-5-royal-2"
+ },
+ {
+  "name": "Ori and the Blind Forest: Definitive Edition",
+  "slug": "ori1definitive",
+  "arch": "X86",
+  "status": "unknown",
+  "id": "ori-and-the-blind-forest-definitive-edition"
+ },
+ {
+  "name": "Prince of Persia The Lost Crown",
+  "slug": "poptlc",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "prince-of-persia-the-lost-crown"
+ },
+ {
+  "name": "Ace Combat 7",
+  "slug": "acecombat7",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "ace-combat-7"
+ },
+ {
+  "name": "Honkai: Star Rail",
+  "slug": "honkai-starrail",
+  "arch": "X64",
+  "status": "unknown",
+  "id": "honkai-star-rail"
+ }
+]

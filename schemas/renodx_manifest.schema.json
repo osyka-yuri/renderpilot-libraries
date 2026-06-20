@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://renderpilot.app/schema/renodx_manifest.schema.json",
+  "title": "RenoDX manifest",
+  "description": "Three-layer RenoDX manifest: immutable content-addressed artifacts, reusable install recipes, and matchable titles. The Rust validator in renderpilot-orchestration (renodx::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "artifacts", "recipes", "titles"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "generated_at": { "type": "string", "description": "RFC 3339 timestamp." },
+    "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } },
+    "recipes": { "type": "array", "items": { "$ref": "#/$defs/recipe" } },
+    "titles": { "type": "array", "items": { "$ref": "#/$defs/title" } }
+  },
+  "$defs": {
+    "sha256Hex": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "artifactRef": { "type": "string", "pattern": "^sha256:[0-9a-fA-F]{64}$" },
+    "graphicsApi": {
+      "type": "string",
+      "enum": ["D3D9", "D3D10", "D3D11", "D3D12", "OpenGl", "Vulkan", "Unknown"]
+    },
+    "architecture": { "type": "string", "enum": ["X86", "X64"] },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "kind", "arch", "version", "size_bytes", "download", "provenance"],
+      "properties": {
+        "sha256": {
+          "$ref": "#/$defs/sha256Hex",
+          "description": "Lowercase SHA-256 of the *decompressed* payload; the artifact's identity."
+        },
+        "kind": { "type": "string", "enum": ["renodx_addon", "reshade_dll"] },
+        "arch": { "$ref": "#/$defs/architecture" },
+        "version": { "type": "string", "minLength": 1 },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 524288000,
+          "description": "Decompressed payload size in bytes (max 500 MiB)."
+        },
+        "compression": { "type": "string", "enum": ["none", "zstd"], "default": "none" },
+        "download": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url", "host_policy"],
+          "properties": {
+            "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+            "host_policy": {
+              "type": "string",
+              "enum": ["mirror", "upstream"],
+              "description": "mirror = pinned CDN host; upstream = an allow-listed host (reshade.me / static.reshade.me)."
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["author", "license", "credit"],
+          "properties": {
+            "author": { "type": "string", "minLength": 1 },
+            "license": { "type": "string", "minLength": 1 },
+            "credit": { "type": "string", "minLength": 1 },
+            "source_url": { "type": "string" },
+            "upstream_version": { "type": "string" },
+            "updated_at": { "type": "string" }
+          }
+        }
+      }
+    },
+    "recipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "addon_ref", "reshade_ref", "addon_file_name"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "addon_ref": {
+          "$ref": "#/$defs/artifactRef",
+          "description": "Must reference a `renodx_addon` artifact."
+        },
+        "reshade_ref": {
+          "$ref": "#/$defs/artifactRef",
+          "description": "Must reference a `reshade_dll` artifact."
+        },
+        "addon_file_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[^/\\\\]+$",
+          "description": "Bare file name, e.g. renodx-cp2077.addon64 (no path separators or `..`)."
+        },
+        "proxy_dll_override": { "type": "string", "pattern": "^[^/\\\\]+$" },
+        "min_reshade_version": { "type": "string" },
+        "reshade_ini": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "disabled_addons": { "type": "array", "items": { "type": "string" } },
+            "addon_path": { "type": "string" }
+          }
+        },
+        "notes_keys": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "matchRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tier"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["steam_appid", "epic_id", "gog_id", "exe_sha256", "exe_name", "engine", "generic"]
+        },
+        "value": { "type": "string", "default": "" },
+        "tier": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Specificity; higher wins. Conventionally id 100, fingerprint 90, exe-name 70, engine 40, generic 10."
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required_api": { "type": "array", "items": { "$ref": "#/$defs/graphicsApi" } },
+        "required_arch": { "$ref": "#/$defs/architecture" },
+        "min_reshade_version": { "type": "string" },
+        "conflicts": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["anticheat_engine", "online", "severity", "message_key"],
+      "properties": {
+        "anticheat_engine": { "type": "string", "enum": ["eac", "battleye", "none", "unknown"] },
+        "online": { "type": "string", "enum": ["singleplayer", "coop", "pvp", "unknown"] },
+        "severity": { "type": "string", "enum": ["info", "warn", "block"] },
+        "message_key": { "type": "string", "minLength": 1 },
+        "confidence": { "type": "string", "enum": ["high", "medium", "low"], "default": "medium" },
+        "source": { "type": "string" }
+      }
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "match", "risk", "recipe_ref"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "channel": {
+          "type": "string",
+          "enum": ["stable", "beta", "snapshot"],
+          "default": "stable"
+        },
+        "min_app_version": { "type": "string" },
+        "match": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/matchRule" } },
+        "compatibility": { "$ref": "#/$defs/compatibility" },
+        "risk": { "$ref": "#/$defs/risk" },
+        "recipe_ref": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

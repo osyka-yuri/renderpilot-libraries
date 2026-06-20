@@ -1,0 +1,19 @@
+# Binary files (distributed via Cloudflare R2, not git)
+*.zip
+*.dll
+*.exe
+*.tar.zst
+
+# CDN files (served via Cloudflare R2, not git)
+cdn/
+
+# Node tooling dependencies (restored via `npm ci` from package-lock.json)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary extraction folders
+**/temp/
+**/extract/

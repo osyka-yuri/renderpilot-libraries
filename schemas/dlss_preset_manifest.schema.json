@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/dlss_preset_manifest.schema.json",
+  "title": "DLSS Preset Manifest",
+  "description": "Maps render presets to DLSS DLL versions for Super Resolution (SR), Frame Generation (FG), or Ray Reconstruction (RR). Loaded by RenderPilot at runtime from GitHub Pages.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "library_family",
+    "dll_kind",
+    "presets",
+    "version_support"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional JSON Schema reference."
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Manifest schema version. Bumped when structure changes incompatibly."
+    },
+    "library_family": {
+      "type": "string",
+      "enum": ["nvngx_dlss", "nvngx_dlssg", "nvngx_dlssd"],
+      "description": "DLL family this manifest applies to."
+    },
+    "dll_kind": {
+      "type": "string",
+      "enum": ["sr", "fg", "rr"],
+      "description": "Short tag matching the DlssDllKind enum in Rust (sr=Super Resolution, fg=Frame Generation, rr=Ray Reconstruction)."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when this manifest was last regenerated."
+    },
+    "presets": {
+      "type": "object",
+      "description": "Master preset table. Keys are preset DWORD values as decimal strings.",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[0-9]+$": {
+          "type": "object",
+          "required": ["label"],
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Human-readable label shown in the UI."
+            },
+            "deprecated": {
+              "type": "boolean",
+              "description": "If true, this preset exists in the driver but is no longer recommended."
+            }
+          }
+        }
+      }
+    },
+    "version_support": {
+      "type": "array",
+      "description": "Ordered list of (DLL version, supported presets) entries. For a DLL version V, the largest entry with version <= V applies (semver compare).",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["version", "supported_presets", "label"],
+        "additionalProperties": false,
+        "properties": {
+          "version": {
+            "type": "string",
+            "pattern": "^[0-9]+(\\.[0-9]+){0,3}$",
+            "description": "DLL version in 'a.b.c.d' form (1-4 numeric segments)."
+          },
+          "supported_presets": {
+            "type": "array",
+            "description": "Preset DWORD values supported for DLL versions >= this entry (until the next entry overrides them). Must reference keys present in the 'presets' map.",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "label": {
+            "type": "string",
+            "description": "Human-readable version label, e.g. 'DLSS 3.1' or 'DLSS 4 / 310.x'."
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "description": "Free-form maintainer notes for human readers.",
+      "items": { "type": "string" }
+    }
+  }
+}

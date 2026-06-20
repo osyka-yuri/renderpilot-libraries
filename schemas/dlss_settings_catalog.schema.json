@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/dlss_settings_catalog.schema.json",
+  "title": "DLSS Settings Catalog",
+  "description": "Catalog of NVIDIA DLSS driver-profile (NVAPI) settings RenderPilot can write, with their DRS ids and value tables. Loaded by RenderPilot at runtime (bundled fallback, overridable from the local libraries directory / GitHub Pages).",
+  "type": "object",
+  "required": ["schema_version", "settings"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional JSON Schema reference."
+    },
+    "schema_version": {
+      "type": "integer",
+      "const": 1,
+      "description": "Catalog schema version. Bumped when structure changes incompatibly."
+    },
+    "settings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "family", "nvapi_id", "values"],
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$",
+            "description": "Wire-stable identifier, e.g. 'dlss_sr_quality_level'."
+          },
+          "label": {
+            "type": "string",
+            "description": "Short control label shown in the UI."
+          },
+          "family": {
+            "type": "string",
+            "enum": ["sr", "fg", "rr"],
+            "description": "Grouping family for UI sectioning (sr=Super Resolution, fg=Frame Generation, rr=Ray Reconstruction)."
+          },
+          "nvapi_id": {
+            "type": "string",
+            "pattern": "^(0[xX][0-9a-fA-F]+|[0-9]+)$",
+            "description": "NVIDIA DRS setting id as a hex ('0x10E41DF3') or decimal string."
+          },
+          "dll_kind": {
+            "type": "string",
+            "enum": ["sr", "fg", "rr"],
+            "description": "Set ONLY on forced-preset-letter settings; triggers DLL-version preset-manifest filtering of the value list."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional help text shown beside the control."
+          },
+          "min_driver": {
+            "type": "string",
+            "description": "Optional minimum driver-version hint (display only; not enforced)."
+          },
+          "default": {
+            "type": "string",
+            "pattern": "^(0[xX][0-9a-fA-F]+|[0-9]+)$",
+            "description": "DWORD shown when the setting is absent (no override), as a hex or decimal string. Must equal one of the values' dwords. Defaults to 0 when omitted."
+          },
+          "values": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Ordered dropdown options.",
+            "items": {
+              "type": "object",
+              "required": ["label", "wire", "dword"],
+              "additionalProperties": false,
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "description": "Human-readable option label."
+                },
+                "wire": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9_]+$",
+                  "description": "Wire-stable option value (unique within a setting)."
+                },
+                "dword": {
+                  "type": "string",
+                  "pattern": "^(0[xX][0-9a-fA-F]+|[0-9]+)$",
+                  "description": "DRS DWORD value as a hex or decimal string (unique within a setting)."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

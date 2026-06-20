@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/library_catalog.schema.json",
+  "title": "RenderPilot Library Catalog",
+  "description": "Catalog of graphics DLL binaries (DLSS / FSR / XeSS / Streamline / etc.) hosted by RenderPilot. Each entry describes one version of one DLL with its SHA-256, signature info, and download URL.",
+  "type": "object",
+  "required": ["schema_version", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Entry" }
+    }
+  },
+  "$defs": {
+    "Entry": {
+      "type": "object",
+      "required": [
+        "entry_id",
+        "library",
+        "version",
+        "build",
+        "files",
+        "signature"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "entry_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*_[0-9]+(\\.[0-9]+){0,3}(_[0-9a-f]+)?$",
+          "description": "Stable identifier: '<library_id>_<version>' optionally followed by '_<hash_suffix>' to disambiguate same-version variants."
+        },
+        "library": {
+          "type": "object",
+          "required": ["id", "file_name"],
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+            "file_name": { "type": "string", "pattern": "^[a-zA-Z0-9._]+\\.dll$" }
+          }
+        },
+        "version": {
+          "type": "object",
+          "required": ["value", "sort_key"],
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "string",
+              "pattern": "^[0-9]+(\\.[0-9]+){0,3}$",
+              "description": "Human-readable version string."
+            },
+            "sort_key": {
+              "type": "string",
+              "pattern": "^[0-9]{4,}(\\.[0-9]{4,}){3}$",
+              "description": "Sortable form: 4 segments separated by dots, each at least 4 digits (zero-padded). Segment width may exceed 4 (e.g., AMD FidelityFX uses 5-digit build numbers like 36208). Within one library family, segment widths must stay consistent to preserve lexicographic order."
+            }
+          }
+        },
+        "build": {
+          "type": "object",
+          "required": ["label", "type"],
+          "additionalProperties": false,
+          "properties": {
+            "label": { "type": ["string", "null"] },
+            "type": { "type": "string", "enum": ["stable", "beta", "debug"] }
+          }
+        },
+        "files": {
+          "type": "object",
+          "required": ["dll", "zst"],
+          "additionalProperties": false,
+          "properties": {
+            "dll": {
+              "type": "object",
+              "required": ["hashes", "size_bytes"],
+              "additionalProperties": false,
+              "properties": {
+                "hashes": {
+                  "type": "object",
+                  "required": ["sha256"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    }
+                  }
+                },
+                "size_bytes": { "type": "integer", "minimum": 1 }
+              }
+            },
+            "zst": {
+              "type": "object",
+              "required": ["size_bytes", "download_url"],
+              "additionalProperties": false,
+              "properties": {
+                "size_bytes": { "type": "integer", "minimum": 1 },
+                "download_url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://pub-48612a35034d40f88f42b4181547925a\\.r2\\.dev/"
+                }
+              }
+            }
+          }
+        },
+        "signature": {
+          "type": "object",
+          "required": ["status"],
+          "additionalProperties": false,
+          "properties": {
+            "status": { "type": "string", "enum": ["signed", "unsigned"] },
+            "signed_at": { "type": ["string", "null"], "format": "date-time" }
+          }
+        }
+      }
+    }
+  }
+}
