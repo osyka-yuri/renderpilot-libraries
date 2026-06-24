@@ -1,0 +1,3700 @@
+{
+  "schema_version": 3,
+  "generated_at": "2026-06-23T00:00:00Z",
+  "reshade": {
+    "reshade_me_base": "https://reshade.me",
+    "nightly": {
+      "url64": "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(64-bit).zip",
+      "url32": "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(32-bit).zip"
+    }
+  },
+  "generics": [
+    {
+      "engine": "unity",
+      "url64": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon64",
+      "url32": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon32",
+      "label_key": "renodx.generic.unity"
+    },
+    {
+      "engine": "unreal",
+      "slug": "unrealengine",
+      "label_key": "renodx.generic.universal"
+    }
+  ],
+  "defaults": {
+    "risk": {
+      "anticheat_engine": "none",
+      "online": "singleplayer",
+      "severity": "info",
+      "message_key": "renodx.risk.sp_safe",
+      "confidence": "medium",
+      "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+    },
+    "min_app_version": "1.0.0",
+    "channel": "stable"
+  },
+  "titles": [
+    {
+      "id": "007-first-light",
+      "name": "007 First Light",
+      "slug": "007firstlight",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3768760",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "1000xresist",
+      "name": "1000xResist",
+      "slug": "1000xresist",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1675830",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "absolum",
+      "name": "Absolum",
+      "slug": "absolum",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1904480",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "ai-the-somnium-files",
+      "name": "AI: The Somnium Files",
+      "slug": "aisomniumfiles",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "948740",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "alice-madness-returns",
+      "name": "Alice: Madness Returns",
+      "slug": "alicemadnessreturns",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "19680",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "alien-isolation",
+      "name": "Alien: Isolation",
+      "slug": "alienisolation",
+      "arch": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "214490",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "against-the-storm",
+      "name": "Against The Storm",
+      "slug": "_univ",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1336490",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    },
+    {
+      "id": "animal-well",
+      "name": "Animal Well",
+      "slug": "animalwell",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "813230",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "a-plague-tale-innocence",
+      "name": "A Plague Tale: Innocence",
+      "slug": "aptinnocence",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "752590",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "armored-core-vi-fires-of-rubicon",
+      "name": "Armored Core VI: Fires of Rubicon",
+      "slug": "fromsoft_engine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1888160",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "eac",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.eac_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "assassin-s-creed-director-s-cut-edition",
+      "name": "Assassin's Creed™: Director's Cut Edition (DX10)",
+      "slug": "asscreed1",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "15100",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "assassins-creed-iv-black-flag",
+      "name": "Assassin’s Creed® IV Black Flag™",
+      "slug": "asscreedblackflag",
+      "arch": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "242050",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "assassins-creed-mirage",
+      "name": "Assassin’s Creed® Mirage",
+      "slug": "asscreedmirage",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3035570",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "assassins-creed-origins",
+      "name": "Assassin’s Creed® Origins",
+      "slug": "asscreedorigins-odyssey",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "582160",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "assassins-creed-odyssey",
+      "name": "Assassin’s Creed® Odyssey",
+      "slug": "asscreedorigins-odyssey",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "812140",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "assassins-creed-shadows",
+      "name": "Assassin’s Creed® Shadows",
+      "slug": "asscreedshadows",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3159330",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "assassins-creed-valhalla",
+      "name": "Assassin’s Creed® Valhalla",
+      "slug": "asscreedvalhalla",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2208920",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "atelier-ryza-1",
+      "name": "Atelier Ryza 1",
+      "slug": "ryza",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1138750",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64"
+    },
+    {
+      "id": "atelier-ryza-2",
+      "name": "Atelier Ryza 2",
+      "slug": "ryza2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3365040",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-ryza2.addon64"
+    },
+    {
+      "id": "atelier-ryza-3",
+      "name": "Atelier Ryza 3",
+      "slug": "ryza3",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3365050",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-ryza3.addon64"
+    },
+    {
+      "id": "atelier-ryza-dx",
+      "name": "Atelier Ryza DX",
+      "slug": "atelierryzadx",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3365030",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "atelier-sophie-1-dx",
+      "name": "Atelier Sophie 1 DX",
+      "slug": "sophie1",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1502970",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-sophie1.addon64"
+    },
+    {
+      "id": "atelier-yumia-the-alchemist-of-memories-the-envisioned-land",
+      "name": "Atelier Yumia: The Alchemist of Memories & the Envisioned Land",
+      "slug": "yumia1",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3123410",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64"
+    },
+    {
+      "id": "atlas-fallen",
+      "name": "Atlas Fallen (DX12)",
+      "slug": "atlasfallen",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1230530",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "avatar-frontiers-of-pandora",
+      "name": "Avatar: Frontiers of Pandora™",
+      "slug": "avatarfop-swoutlaws",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2840770",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "batman-arkham-knight",
+      "name": "Batman: Arkham Knight",
+      "slug": "batmanak",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "208650",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "batman-arkham-asylum",
+      "name": "Batman: Arkham Asylum",
+      "slug": "batmanaa",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "35140",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "beyond-blue",
+      "name": "Beyond Blue",
+      "slug": "beyondblue",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "883360",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "black-desert-online",
+      "name": "Black Desert Online",
+      "slug": "black-desert-online",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "582660",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "borderlands-2-the-pre-sequel",
+      "name": "Borderlands 2 & The Pre-Sequel",
+      "slug": "borderlands2",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "49520",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "borderlands-4",
+      "name": "Borderlands 4",
+      "slug": "borderlands4",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1285190",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "bulletstorm-full-clip-edition",
+      "name": "Bulletstorm: Full Clip Edition",
+      "slug": "bulletstormfullclip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "501590",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "call-of-juarez",
+      "name": "Call of Juarez (dx10)",
+      "slug": "callofjuarez",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3020",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "castlevania-lords-of-shadow",
+      "name": "Castlevania Lords of Shadow",
+      "slug": "castlevanialos",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "234080",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "child-of-light",
+      "name": "Child of Light",
+      "slug": "childoflight",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "256290",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "citizen-sleeper-2",
+      "name": "Citizen Sleeper 2",
+      "slug": "citizensleeper2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2442460",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "clair-obscur-expedition-33",
+      "name": "Clair Obscur: Expedition 33",
+      "slug": "clairobscur_expedition33",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1903340",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "clive-barker-s-jericho",
+      "name": "Clive Barker's Jericho",
+      "slug": "clivebarkersjericho",
+      "arch": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "exe_name",
+          "value": "jericho.exe",
+          "tier": 70
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "code-vein-ii",
+      "name": "CODE VEIN II",
+      "slug": "codevein2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2362060",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-codevein2.addon64"
+    },
+    {
+      "id": "crimson-desert",
+      "name": "Crimson Desert",
+      "slug": "crimsondesert",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3321460",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "cyberpunk-2077",
+      "name": "Cyberpunk 2077",
+      "slug": "cp2077",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1091500",
+          "tier": 100
+        }
+      ],
+      "compatibility": {
+        "conflicts": [
+          "special_k"
+        ]
+      },
+      "notes_keys": [
+        "renodx.note.cp2077.hdr10"
+      ]
+    },
+    {
+      "id": "dark-souls-remastered",
+      "name": "Dark Souls: Remastered",
+      "slug": "darksouls",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "570940",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "eac",
+        "online": "coop",
+        "severity": "warn",
+        "message_key": "renodx.risk.eac_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "darkest-dungeon-2",
+      "name": "Darkest Dungeon 2",
+      "slug": "_univ",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1940340",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    },
+    {
+      "id": "darksiders-warmastered-edition",
+      "name": "Darksiders Warmastered Edition",
+      "slug": "darksiders-warmastered",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "462780",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "dead-island-definitive-edition",
+      "name": "Dead Island (& Riptide) Definitive Edition",
+      "slug": "deadislandde",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "383150",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://notvoosh.github.io/renodx/renodx-deadislandde.addon64"
+    },
+    {
+      "id": "dead-island-2",
+      "name": "Dead Island 2",
+      "slug": "deadisland2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "934700",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "death-stranding-director-s-cut",
+      "name": "Death Stranding : Director's Cut",
+      "slug": "deathstrandingdc",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1850570",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "death-stranding-2",
+      "name": "Death Stranding 2",
+      "slug": "deathstranding2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3280350",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "deus-ex-mankind-divided",
+      "name": "Deus Ex: Mankind Divided",
+      "slug": "dxmd",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "337000",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "devil-may-cry-v",
+      "name": "Devil May Cry V",
+      "slug": "dmc5",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "601150",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "dishonored",
+      "name": "Dishonored",
+      "slug": "dishonored",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "205100",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "doom-the-dark-ages",
+      "name": "DOOM: The Dark Ages",
+      "slug": "doom-tda",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3017860",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "dragon-age-inquisition",
+      "name": "Dragon Age: Inquisition",
+      "slug": "dai",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1222690",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "dragon-s-dogma-2",
+      "name": "Dragon's Dogma 2",
+      "slug": "dragonsdogma2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2054970",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "dragon-quest-xi",
+      "name": "Dragon Quest XI (Original & DE)",
+      "slug": "dragonquest-ue",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1295510",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
+    },
+    {
+      "id": "dragon-quest-vii-remake",
+      "name": "Dragon Quest VII Remake",
+      "slug": "dragonquest-ue",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2499860",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
+    },
+    {
+      "id": "dragon-ball-sparking-zero",
+      "name": "DRAGON BALL: Sparking! ZERO",
+      "slug": "dbzspark",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1790600",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "dying-light",
+      "name": "Dying Light",
+      "slug": "dyinglight",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "239140",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "coop",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "dying-light-the-beast",
+      "name": "Dying Light: The Beast",
+      "slug": "dyinglightthebeast",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3008130",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "elden-ring",
+      "name": "Elden Ring",
+      "slug": "fromsoft_engine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1245620",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "eac",
+        "online": "coop",
+        "severity": "warn",
+        "message_key": "renodx.risk.eac_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "elden-ring-nightreign",
+      "name": "Elden Ring: Nightreign",
+      "slug": "fromsoft_engine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2622380",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "eac",
+        "online": "coop",
+        "severity": "warn",
+        "message_key": "renodx.risk.eac_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "ender-magnolia-bloom-in-the-mist",
+      "name": "ENDER MAGNOLIA: Bloom in the Mist",
+      "slug": "endermagnolia",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2725260",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-endermagnolia.addon64"
+    },
+    {
+      "id": "fantasian-neo-dimension",
+      "name": "FANTASIAN Neo Dimension",
+      "slug": "fantasianneodimension",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2844850",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-fantasianneodimension.addon64"
+    },
+    {
+      "id": "fallout-4",
+      "name": "Fallout 4",
+      "slug": "fallout4",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "377160",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "fallout-76",
+      "name": "Fallout 76",
+      "slug": "fallout76",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1151340",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "far-cry-2",
+      "name": "Far Cry 2 (dx10)",
+      "slug": "duniaengine",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "19900",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "far-cry-3",
+      "name": "Far Cry 3 (dx11)",
+      "slug": "duniaengine",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "220240",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "far-cry-5",
+      "name": "Far Cry 5",
+      "slug": "farcry5",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "552520",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "far-cry-6",
+      "name": "Far Cry 6",
+      "slug": "farcry6",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2369390",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "fate-samurai-remnant",
+      "name": "Fate/Samurai Remnant",
+      "slug": "fatesamurairemnant",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1902690",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-fatesamurairemnant.addon64"
+    },
+    {
+      "id": "final-fantasy-7-rebirth",
+      "name": "Final Fantasy 7 : Rebirth",
+      "slug": "ff7rebirth",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2909400",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "final-fantasy-7-remake",
+      "name": "Final Fantasy 7 : Remake",
+      "slug": "ff7remake",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1462040",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "final-fantasy-x",
+      "name": "Final Fantasy X",
+      "slug": "ffx",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "359870",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "final-fantasy-xiv",
+      "name": "Final Fantasy XIV",
+      "slug": "ffxiv",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "39210",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "final-fantasy-xv",
+      "name": "Final Fantasy XV",
+      "slug": "ffxv",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "637650",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "forza-horizon-6",
+      "name": "Forza Horizon 6",
+      "slug": "forzahorizon6",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2483190",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://oopydoopy.github.io/renodx/renodx-forzahorizon6.addon64"
+    },
+    {
+      "id": "ghostwire-tokyo",
+      "name": "GhostWire Tokyo",
+      "slug": "ghostwiretokyo",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1475810",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "go-mecha-ball",
+      "name": "Go Mecha Ball",
+      "slug": "gomechaball",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2008510",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "god-of-war",
+      "name": "God of War (2018)",
+      "slug": "gow2018",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1593500",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "god-of-war-ragnarok",
+      "name": "God of War Ragnarok",
+      "slug": "gowragnarok",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2322010",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "granblue-fantasy-relink",
+      "name": "Granblue Fantasy: Relink",
+      "slug": "gbfrelink",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "881020",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "grand-theft-auto-v-enhanced",
+      "name": "Grand Theft Auto V : Enhanced",
+      "slug": "gtav-enhanced",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3240220",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "battleye",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "greedfall",
+      "name": "GreedFall",
+      "slug": "greedfall",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "606880",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "grim-dawn",
+      "name": "Grim Dawn",
+      "slug": "grimdawn",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "219990",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "guild-wars-2",
+      "name": "Guild Wars 2",
+      "slug": "guildwars2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1284210",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      },
+      "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64"
+    },
+    {
+      "id": "hades",
+      "name": "Hades",
+      "slug": "hades",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1145360",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "hades-2",
+      "name": "Hades 2",
+      "slug": "hades2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1145350",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "hard-reset-redux",
+      "name": "Hard Reset Redux",
+      "slug": "roadhogengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "407810",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "hardspace-shipbreaker",
+      "name": "Hardspace: Shipbreaker",
+      "slug": "_univ",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1161580",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    },
+    {
+      "id": "helldivers-2",
+      "name": "Helldivers 2",
+      "slug": "helldivers2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "553850",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "coop",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "hitman-world-of-assassination",
+      "name": "HITMAN World of Assassination",
+      "slug": "hitmanwoa",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1659040",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "hollow-knight",
+      "name": "Hollow Knight",
+      "slug": "hollowknight",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "367520",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "hollow-knight-silksong",
+      "name": "Hollow Knight: Silksong",
+      "slug": "hollowknight-silksong",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1030300",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "immortals-fenyx-rising",
+      "name": "Immortals Fenyx Rising",
+      "slug": "immortalsfenyxrising",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2221920",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "indiana-jones-and-the-great-circle",
+      "name": "Indiana Jones and the Great Circle",
+      "slug": "indygreatcircle",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2677660",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "ixion",
+      "name": "Ixion",
+      "slug": "_univ",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1113120",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    },
+    {
+      "id": "journey",
+      "name": "Journey",
+      "slug": "journey",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "638230",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "just-cause-4",
+      "name": "Just Cause 4",
+      "slug": "justcause4",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "517630",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "karma-the-dark-world",
+      "name": "Karma: The Dark World",
+      "slug": "karmathedarkworld",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1376200",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "kerbal-space-program",
+      "name": "Kerbal Space Program",
+      "slug": "_ksp",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "220200",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_ksp.addon64"
+    },
+    {
+      "id": "kingdom-come-deliverance-ii",
+      "name": "Kingdom Come: Deliverance II",
+      "slug": "kingdomcome2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1771300",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "kingdoms-of-amalur-re-reckoning",
+      "name": "Kingdoms of Amalur: Re-Reckoning",
+      "slug": "koarr",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1041720",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "lunacid",
+      "name": "Lunacid",
+      "slug": "lunacid",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1745510",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "trails-of-cold-steel-cs3",
+      "name": "The Legend of Heroes: Trails of Cold Steel III",
+      "slug": "senkiseki",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "991270",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+    },
+    {
+      "id": "trails-of-cold-steel-cs4",
+      "name": "The Legend of Heroes: Trails of Cold Steel IV",
+      "slug": "senkiseki",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1198090",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+    },
+    {
+      "id": "trails-of-cold-steel-reverie",
+      "name": "The Legend of Heroes: Trails into Reverie",
+      "slug": "senkiseki",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1668540",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+    },
+    {
+      "id": "trails-in-the-sky-1st-chapter",
+      "name": "Trails in the Sky 1st Chapter",
+      "slug": "falcomengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3375780",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+    },
+    {
+      "id": "trails-through-daybreak-1-2-d1",
+      "name": "The Legend of Heroes: Trails through Daybreak",
+      "slug": "falcomengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2138610",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+    },
+    {
+      "id": "trails-through-daybreak-1-2-d2",
+      "name": "The Legend of Heroes: Trails through Daybreak II",
+      "slug": "falcomengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2668430",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+    },
+    {
+      "id": "trails-beyond-the-horizon",
+      "name": "Trails beyond the Horizon",
+      "slug": "falcomengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3316940",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+    },
+    {
+      "id": "trails-from-zero-to-azure-zero",
+      "name": "The Legend of Heroes: Trails from Zero",
+      "slug": "zerokiseki",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1668510",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
+    },
+    {
+      "id": "trails-from-zero-to-azure-azure",
+      "name": "The Legend of Heroes: Trails to Azure",
+      "slug": "zerokiseki",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1668520",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
+    },
+    {
+      "id": "like-a-dragon-pirate-yakuza-in-hawaii",
+      "name": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "slug": "yakuzapirates",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3061810",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+    },
+    {
+      "id": "like-a-dragon-gaiden-the-man-who-erased-his-name",
+      "name": "Like a Dragon Gaiden: The Man Who Erased His Name",
+      "slug": "yakuzapirates",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2375550",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+    },
+    {
+      "id": "like-a-dragon-infinite-wealth",
+      "name": "Like a Dragon: Infinite Wealth",
+      "slug": "yakuzapirates",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2072450",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+    },
+    {
+      "id": "lost-planet",
+      "name": "Lost Planet",
+      "slug": "lostplanet",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "6510",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "mad-max",
+      "name": "Mad Max",
+      "slug": "madmax",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "234140",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "mafia-definitive-edition",
+      "name": "Mafia: Definitive Edition",
+      "slug": "mafiade",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1030840",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "max-payne-3",
+      "name": "Max Payne 3",
+      "slug": "maxpayne3",
+      "arch": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "204100",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "marvel-s-spider-man-2",
+      "name": "Marvel's Spider-Man 2",
+      "slug": "spiderman2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2651280",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "marvel-s-spider-man-miles-morales",
+      "name": "Marvel's Spider-Man Miles Morales",
+      "slug": "spiderman_2018_miles",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1817190",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "marvel-s-spider-man-remastered",
+      "name": "Marvel's Spider-Man Remastered",
+      "slug": "spiderman_2018_miles",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1817070",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "mass-effect-legendary-edition",
+      "name": "Mass Effect : Legendary Edition",
+      "slug": "masseffectle",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1328670",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "metaphor-refantazio",
+      "name": "Metaphor: ReFantazio",
+      "slug": "metaphorrefantazio",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2679460",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "metro-exodus-enhanced-edition",
+      "name": "Metro Exodus Enhanced Edition",
+      "slug": "metro",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "412020",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "metal-gear-solid-snake-eater",
+      "name": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "slug": "mgsdelta",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2417610",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "middle-earth-shadow-of-war",
+      "name": "Middle Earth: Shadow of War",
+      "slug": "shadowofwar",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "356190",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "monster-hunter-rise",
+      "name": "Monster Hunter Rise",
+      "slug": "mhrise",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1446780",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "monster-hunter-wilds",
+      "name": "Monster Hunter: Wilds",
+      "slug": "mhwilds",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2246340",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "monster-hunter-world",
+      "name": "Monster Hunter: World",
+      "slug": "mhworld",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "582010",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "need-for-speed",
+      "name": "Need for Speed™ (2016)",
+      "slug": "nfs16",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1262540",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "nier-replicant",
+      "name": "NieR Replicant",
+      "slug": "nierreplicant",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1113560",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-nierreplicant.addon64"
+    },
+    {
+      "id": "nights-of-azure-1",
+      "name": "Nights of Azure 1",
+      "slug": "nightsofazure1",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "527280",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64"
+    },
+    {
+      "id": "nights-of-azure-2",
+      "name": "Nights of Azure 2",
+      "slug": "nightsofazure2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "636570",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64"
+    },
+    {
+      "id": "ninja-gaiden-4",
+      "name": "Ninja Gaiden 4",
+      "slug": "ninjagaiden4",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2627260",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "ninja-gaiden-sigma",
+      "name": "Ninja Gaiden Sigma",
+      "slug": "ngsigma",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1580780",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "ninja-gaiden-sigma-2",
+      "name": "Ninja Gaiden Sigma 2",
+      "slug": "ngsigma2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1580790",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "nioh-2",
+      "name": "Nioh 2",
+      "slug": "nioh2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1325200",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64"
+    },
+    {
+      "id": "nioh-3",
+      "name": "Nioh 3",
+      "slug": "nioh3",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3681010",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "opus-echo-of-starsong-full-bloom-edition",
+      "name": "OPUS: Echo of Starsong - Full Bloom Edition",
+      "slug": "opus-eos",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1504500",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "ori-and-the-will-of-the-wisps",
+      "name": "Ori and the Will of the Wisps",
+      "slug": "ori2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1057090",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "party-animals",
+      "name": "Party Animals",
+      "slug": "partyanimals",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1260320",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "pathfinder-wrath-of-the-righteous",
+      "name": "Pathfinder: Wrath of the Righteous",
+      "slug": "pathfinder2wotr",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1184370",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64"
+    },
+    {
+      "id": "path-of-exile-2-dx11-only",
+      "name": "Path of Exile 2 DX11 Only",
+      "slug": "poe2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2694490",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      },
+      "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64"
+    },
+    {
+      "id": "penny-s-big-breakaway",
+      "name": "Penny's Big Breakaway",
+      "slug": "penny",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1955230",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "persona-4-golden",
+      "name": "Persona 4 Golden",
+      "slug": "p4g",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1113000",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "persona-5-royal",
+      "name": "Persona 5 Royal (Remake from Ersh's)",
+      "slug": "p5r",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1687950",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "persona-5-strikers",
+      "name": "Persona 5 : Strikers",
+      "slug": "_p5s",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1382330",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64"
+    },
+    {
+      "id": "remember-me",
+      "name": "Remember Me",
+      "slug": "rememberme",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "228300",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "resident-evil-2-remake",
+      "name": "Resident Evil 2 Remake",
+      "slug": "re7-2r-3r-village",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "883710",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "resident-evil-3-remake",
+      "name": "Resident Evil 3 Remake",
+      "slug": "re7-2r-3r-village",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "952060",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "resident-evil-4-remake",
+      "name": "Resident Evil 4 Remake",
+      "slug": "re4remake",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2050650",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "resident-evil-7",
+      "name": "Resident Evil 7",
+      "slug": "re7-2r-3r-village",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "418370",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "resident-evil-village",
+      "name": "Resident Evil Village",
+      "slug": "re7-2r-3r-village",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1196590",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "revenge-of-the-savage-planet",
+      "name": "Revenge of the Savage Planet",
+      "slug": "rotsp",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2787320",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://akuru-q.github.io/renodx/renodx-rotsp.addon64"
+    },
+    {
+      "id": "rise-of-the-tomb-raider",
+      "name": "Rise of the Tomb Raider",
+      "slug": "risetombraider",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "391220",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "rise-of-the-ronin",
+      "name": "Rise of the Ronin",
+      "slug": "riseofronin",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1340990",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-riseofronin.addon64"
+    },
+    {
+      "id": "raidou-remastered-the-mystery-of-the-soulless-army",
+      "name": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "slug": "raidou",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2288350",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64"
+    },
+    {
+      "id": "robocop-rogue-city",
+      "name": "RoboCop: Rogue City",
+      "slug": "routine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1681430",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "routine",
+      "name": "Routine",
+      "slug": "robocop",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "606160",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "sea-of-stars",
+      "name": "Sea of Stars",
+      "slug": "seaofstars",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1244090",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "sekiro-shadows-die-twice",
+      "name": "Sekiro: Shadows Die Twice",
+      "slug": "fromsoft_engine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "814380",
+          "tier": 100
+        }
+      ],
+      "risk": {
+        "anticheat_engine": "eac",
+        "online": "singleplayer",
+        "severity": "warn",
+        "message_key": "renodx.risk.eac_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "shadow-gambit-the-cursed-crew",
+      "name": "Shadow Gambit: The Cursed Crew",
+      "slug": "shadowgambit",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1545560",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://akuru-q.github.io/renodx/renodx-shadowgambit.addon64"
+    },
+    {
+      "id": "shadow-of-the-tomb-raider",
+      "name": "Shadow of the Tomb Raider",
+      "slug": "shadowtombraider",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "750920",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "shadow-warrior-middot-shadow-warrior-2-sw1",
+      "name": "Shadow Warrior (2013)",
+      "slug": "roadhogengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "233130",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "shadow-warrior-middot-shadow-warrior-2-sw2",
+      "name": "Shadow Warrior 2",
+      "slug": "roadhogengine",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "324800",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "shin-megami-tensei-v",
+      "name": "Shin Megami Tensei V",
+      "slug": "smt5",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1875830",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-smt5.addon64"
+    },
+    {
+      "id": "shinobi-art-of-vengeance",
+      "name": "SHINOBI: Art of Vengeance",
+      "slug": "shinobiaov",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2361770",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "silent-hill-2-remake",
+      "name": "Silent Hill 2 Remake",
+      "slug": "silenthill2remake",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2124490",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "silent-hill-f",
+      "name": "Silent Hill f",
+      "slug": "silenthillf",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2947440",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "sniper-elite-4",
+      "name": "Sniper Elite 4 (DX11)",
+      "slug": "sniperelite4",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "312660",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "sonic-generations",
+      "name": "Sonic Generations",
+      "slug": "sonicgenerations",
+      "arch": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "71340",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "sonic-unleashed-recompiled",
+      "name": "Sonic Unleashed Recompiled",
+      "slug": "sonicunleashedrecomp",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "exe_name",
+          "value": "UnleashedRecomp.exe",
+          "tier": 70
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64"
+    },
+    {
+      "id": "sons-of-the-forest",
+      "name": "Sons of The Forest",
+      "slug": "sonsoftheforest",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1326470",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://akuru-q.github.io/renodx/renodx-sonsoftheforest.addon64"
+    },
+    {
+      "id": "spec-ops-the-line",
+      "name": "Spec Ops: The Line",
+      "slug": "specopstheline",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "exe_name",
+          "value": "specops_the_line.exe",
+          "tier": 70
+        }
+      ]
+    },
+    {
+      "id": "splinter-cell-blacklist",
+      "name": "Splinter Cell: Blacklist",
+      "slug": "scblacklist",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "235600",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "s-t-a-l-k-e-r-2-heart-of-chornobyl",
+      "name": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "slug": "stalker2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1643320",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "steelrising",
+      "name": "Steelrising",
+      "slug": "steelrising",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1283400",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://notvoosh.github.io/renodx/renodx-steelrising.addon64"
+    },
+    {
+      "id": "steel-seed",
+      "name": "Steel Seed",
+      "slug": "steelseed",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "458430",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/TheEdmaster87/Steel-Seed-RenoDX-HDR/releases/download/v1.0.4/renodx-steelseed.addon64"
+    },
+    {
+      "id": "starfield",
+      "name": "Starfield",
+      "slug": "starfield",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1716740",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "star-wars-jedi-survivor",
+      "name": "STAR WARS Jedi: Survivor™",
+      "slug": "jedisurvivor",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1774580",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "star-wars-outlaws",
+      "name": "Star Wars Outlaws",
+      "slug": "avatarfop-swoutlaws",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2842040",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "stranger-of-paradise-final-fantasy-origin",
+      "name": "Stranger of Paradise: Final Fantasy Origin",
+      "slug": "sopffo",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1358700",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64"
+    },
+    {
+      "id": "street-fighter-6",
+      "name": "Street Fighter 6",
+      "slug": "streetfighter6",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1364780",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "sunset-overdrive",
+      "name": "Sunset Overdrive",
+      "slug": "sunsetoverdrive",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "847370",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "sword-art-online-alicization-lycoris",
+      "name": "Sword Art Online Alicization Lycoris",
+      "slug": "sao-alicization",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1009290",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-sao-alicization.addon64"
+    },
+    {
+      "id": "tactical-breach-wizards",
+      "name": "Tactical Breach Wizards",
+      "slug": "tacticalbreachwizards",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1043810",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "tales-of-graces-f-remastered",
+      "name": "Tales of Graces f Remastered",
+      "slug": "talesofgracesf",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2530980",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "teardown",
+      "name": "Teardown (dx12)",
+      "slug": "teardown",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1167630",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64"
+    },
+    {
+      "id": "tekken-8",
+      "name": "Tekken 8",
+      "slug": "tekken8",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1778820",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "terraria",
+      "name": "Terraria",
+      "slug": "terraria",
+      "arch": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "105600",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "tmodloader",
+      "name": "tModLoader",
+      "slug": "terraria-tml",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1281930",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "the-evil-within-2",
+      "name": "The Evil Within 2",
+      "slug": "tew2",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "601430",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://marat569.github.io/renodx/renodx-tew2.addon64"
+    },
+    {
+      "id": "the-elder-scrolls-iv-oblivion-remastered",
+      "name": "The Elder Scrolls IV: Oblivion Remastered",
+      "slug": "oblivionremastered",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2623190",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "the-hundred-line-last-defense-academy",
+      "name": "The Hundred Line: Last Defense Academy",
+      "slug": "thehundredline",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3014080",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "the-incredible-adventures-of-van-helsing-final-cut",
+      "name": "The Incredible Adventures of Van Helsing: Final Cut",
+      "slug": "vanhelsingfinalcut",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "400170",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://notvoosh.github.io/renodx/renodx-vanhelsingfinalcut.addon64"
+    },
+    {
+      "id": "the-surge",
+      "name": "The Surge",
+      "slug": "thesurge",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "378540",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "the-town-of-light",
+      "name": "The Town of Light",
+      "slug": "thetownoflight",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "433100",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "the-witcher-3",
+      "name": "The Witcher 3",
+      "slug": "thewitcher3",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "292030",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "the-witness",
+      "name": "The Witness",
+      "slug": "thewitness",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "210970",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "titan-quest-anniversary-edition",
+      "name": "Titan Quest Anniversary Edition",
+      "slug": "grimdawn",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "475150",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "tomb-raider",
+      "name": "Tomb Raider (2013)",
+      "slug": "tombraider2013",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "203160",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "total-war-three-kingdoms",
+      "name": "Total War: Three Kingdoms",
+      "slug": "tw-3kingdoms",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "779340",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://sgtforgery.github.io/renodx/renodx-tw-3kingdoms.addon64"
+    },
+    {
+      "id": "total-war-warhammer-3",
+      "name": "Total War: Warhammer 3",
+      "slug": "_univ",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1142710",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    },
+    {
+      "id": "trackmania",
+      "name": "Trackmania",
+      "slug": "trackmania",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2225070",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "trine-2-complete-story",
+      "name": "Trine 2: Complete Story",
+      "slug": "trine2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "35720",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://github.com/chrisboyer2/renodx/releases/download/v2.0/renodx-trine2.addon64"
+    },
+    {
+      "id": "tunic",
+      "name": "Tunic",
+      "slug": "tunic",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "553420",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "uncharted-legacy-of-thieves-collection",
+      "name": "UNCHARTED™: Legacy of Thieves Collection",
+      "slug": "unchartedlotc",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1659420",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "valheim",
+      "name": "Valheim",
+      "slug": "valheim",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "892970",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "warframe",
+      "name": "Warframe",
+      "slug": "warframe",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "230410",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://hboyyt.github.io/renodx/renodx-warframe.addon64"
+    },
+    {
+      "id": "warhammer-40-000-space-marine-2",
+      "name": "Warhammer 40,000: Space Marine 2",
+      "slug": "spacemarine2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2183900",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "watch-dogs",
+      "name": "Watch Dogs",
+      "slug": "watchdogs",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "243470",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "wuchang-fallen-feathers",
+      "name": "Wuchang: Fallen Feathers",
+      "slug": "wuchang",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2277560",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "wuthering-waves",
+      "name": "Wuthering Waves",
+      "slug": "wutheringwaves",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3513350",
+          "tier": 100
+        }
+      ]
+    },
+    {
+      "id": "xcom-2",
+      "name": "XCOM 2",
+      "slug": "xcom2",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "268500",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://sgtforgery.github.io/renodx/renodx-xcom2.addon64"
+    },
+    {
+      "id": "wo-long-fallen-dynasty",
+      "name": "Wo Long: Fallen Dynasty",
+      "slug": "wolong",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1448440",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64"
+    },
+    {
+      "id": "yakuza-0",
+      "name": "Yakuza 0",
+      "slug": "yakuza0",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2988580",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+    },
+    {
+      "id": "yakuza-kiwami-1",
+      "name": "Yakuza Kiwami 1",
+      "slug": "yakuza0",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "834530",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+    },
+    {
+      "id": "ys-ix-monstrum-nox",
+      "name": "YS IX: Monstrum Nox",
+      "slug": "ys9",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1351630",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://danaforever.github.io/renodx/renodx-ys9.addon64"
+    },
+    {
+      "id": "ys-x-nordics",
+      "name": "Ys X: Nordics",
+      "slug": "ys10",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2570810",
+          "tier": 100
+        },
+        {
+          "kind": "steam_appid",
+          "value": "2731870",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://marat569.github.io/renodx/renodx-ys10.addon64"
+    },
+    {
+      "id": "ys-x-proud-nordics",
+      "name": "Ys X: Proud Nordics",
+      "slug": "ys10pn",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3821790",
+          "tier": 100
+        },
+        {
+          "kind": "steam_appid",
+          "value": "3949290",
+          "tier": 100
+        }
+      ],
+      "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-ys10pn.addon64"
+    },
+    {
+      "id": "zenless-zone-zero",
+      "name": "Zenless Zone Zero",
+      "slug": "zenless-zone-zero",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4162040",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64"
+    },
+    {
+      "id": "outer-wilds",
+      "name": "Outer Wilds",
+      "slug": "outerwilds",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "753640",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "death-s-door",
+      "name": "Death's Door",
+      "slug": "deathsdoor",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "894020",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "descenders",
+      "name": "Descenders",
+      "slug": "descenders",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "681280",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "dying-light-2",
+      "name": "Dying Light 2",
+      "slug": "dyinglight2",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "534380",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "coop",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "haste",
+      "name": "Haste",
+      "slug": "haste",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1796470",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "l-a-noire",
+      "name": "L.A. Noire",
+      "slug": "lanoire",
+      "arch": "X86",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "110800",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "spark-the-electric-jester-3",
+      "name": "Spark the Electric Jester 3",
+      "slug": "spark3",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1629530",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "xf-extreme-formula",
+      "name": "XF: Extreme Formula",
+      "slug": "xfextremeformula",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2539910",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "doom-eternal",
+      "name": "Doom Eternal",
+      "slug": "doom-eternal",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "782330",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "sea-of-thieves",
+      "name": "Sea of Thieves",
+      "slug": "seaofthieves",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1172620",
+          "tier": 100
+        }
+      ],
+      "channel": "beta",
+      "risk": {
+        "anticheat_engine": "battleye",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    },
+    {
+      "id": "persona-5-royal-2",
+      "name": "Persona 5 Royal",
+      "slug": "p5r",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1687950",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "ori-and-the-blind-forest-definitive-edition",
+      "name": "Ori and the Blind Forest: Definitive Edition",
+      "slug": "ori1definitive",
+      "arch": "X86",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "387290",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "prince-of-persia-the-lost-crown",
+      "name": "Prince of Persia The Lost Crown",
+      "slug": "poptlc",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2751000",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "ace-combat-7",
+      "name": "Ace Combat 7",
+      "slug": "acecombat7",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "502500",
+          "tier": 100
+        }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "honkai-star-rail",
+      "name": "Honkai: Star Rail",
+      "slug": "honkai-starrail",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "exe_name",
+          "value": "StarRail.exe",
+          "tier": 70
+        }
+      ],
+      "channel": "beta",
+      "risk": {
+        "anticheat_engine": "unknown",
+        "online": "pvp",
+        "severity": "warn",
+        "message_key": "renodx.risk.anticheat_banrisk",
+        "confidence": "medium",
+        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
+      }
+    }
+  ],
+  "external": {
+    "assassin-s-creed-ezio-trilogy-dgvoodoo": {
+      "url": "https://www.nexusmods.com/assassinscreedii/mods/250",
+      "label_key": "renodx.external.nexus"
+    },
+    "assassin-s-creed-iii-original": {
+      "url": "https://www.nexusmods.com/assassinscreediii/mods/161",
+      "label_key": "renodx.external.nexus"
+    },
+    "assassin-s-creed-iii-remastered": {
+      "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
+      "label_key": "renodx.external.nexus"
+    },
+    "assassin-s-creed-syndicate": {
+      "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
+      "label_key": "renodx.external.nexus"
+    },
+    "assassin-s-creed-unity": {
+      "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
+      "label_key": "renodx.external.nexus"
+    },
+    "crysis-remastered": {
+      "url": "https://discord.com/invite/renodx",
+      "label_key": "renodx.external.discord"
+    },
+    "dirt-4": {
+      "url": "https://www.nexusmods.com/dirt4/mods/3",
+      "label_key": "renodx.external.nexus"
+    },
+    "far-cry-primal": {
+      "url": "https://www.nexusmods.com/farcryprimal/mods/28",
+      "label_key": "renodx.external.nexus"
+    },
+    "ghost-recon-wildlands": {
+      "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
+      "label_key": "renodx.external.nexus"
+    },
+    "mirror-s-edge": {
+      "url": "https://www.nexusmods.com/mirrorsedge/mods/24",
+      "label_key": "renodx.external.nexus"
+    },
+    "no-man-s-sky": {
+      "url": "https://www.nexusmods.com/nomanssky/mods/4061",
+      "label_key": "renodx.external.nexus"
+    },
+    "red-dead-redemption-2-vulkan": {
+      "url": "https://discord.com/invite/renodx",
+      "label_key": "renodx.external.discord"
+    },
+    "steep": {
+      "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
+      "label_key": "renodx.external.nexus"
+    },
+    "control-hdr-ultrawide-dlss-rt-patch": {
+      "url": "https://www.nexusmods.com/control/mods/90",
+      "label_key": "renodx.external.nexus"
+    },
+    "dark-souls-2-ds2lightingengine-sotfs": {
+      "url": "https://www.nexusmods.com/darksouls2/mods/1146",
+      "label_key": "renodx.external.nexus"
+    },
+    "prey-remastered-luma": {
+      "url": "https://www.nexusmods.com/prey2017/mods/149",
+      "label_key": "renodx.external.nexus"
+    },
+    "starfield-luma-native-hdr-and-more": {
+      "url": "https://www.nexusmods.com/starfield/mods/4821",
+      "label_key": "renodx.external.nexus"
+    }
+  }
+}

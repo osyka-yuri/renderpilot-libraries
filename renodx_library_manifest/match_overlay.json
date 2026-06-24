@@ -1,858 +1,1067 @@
 {
- "007-first-light": {
-  "appid": "3768760"
- },
- "1000xresist": {
-  "appid": "1675830"
- },
- "absolum": {
-  "appid": "1904480"
- },
- "ai-the-somnium-files": {
-  "appid": "948740"
- },
- "alice-madness-returns": {
-  "appid": "19680"
- },
- "alien-isolation": {
-  "appid": "214490"
- },
- "against-the-storm": {
-  "appid": "1336490"
- },
- "animal-well": {
-  "appid": "813230"
- },
- "a-plague-tale-innocence": {
-  "appid": "752590"
- },
- "armored-core-vi-fires-of-rubicon": {
-  "appid": "1888160",
-  "risk": {
-   "anticheat_engine": "eac",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.eac_banrisk"
+  "007-first-light": {
+    "appid": "3768760"
+  },
+  "1000xresist": {
+    "appid": "1675830"
+  },
+  "absolum": {
+    "appid": "1904480"
+  },
+  "ai-the-somnium-files": {
+    "appid": "948740"
+  },
+  "alice-madness-returns": {
+    "appid": "19680"
+  },
+  "alien-isolation": {
+    "appid": "214490"
+  },
+  "against-the-storm": {
+    "appid": "1336490",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+  },
+  "animal-well": {
+    "appid": "813230"
+  },
+  "a-plague-tale-innocence": {
+    "appid": "752590"
+  },
+  "armored-core-vi-fires-of-rubicon": {
+    "appid": "1888160",
+    "risk": {
+      "anticheat_engine": "eac",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.eac_banrisk"
+    }
+  },
+  "assassin-s-creed-director-s-cut-edition": {
+    "appid": "15100"
+  },
+  "assassins-creed-iv-black-flag": {
+    "appid": "242050"
+  },
+  "assassins-creed-mirage": {
+    "appid": "3035570"
+  },
+  "assassins-creed-origins": {
+    "appid": "582160"
+  },
+  "assassins-creed-odyssey": {
+    "appid": "812140"
+  },
+  "assassins-creed-shadows": {
+    "appid": "3159330"
+  },
+  "assassins-creed-valhalla": {
+    "appid": "2208920"
+  },
+  "atelier-ryza-2": {
+    "appid": "3365040",
+    "download_url": "https://marat569.github.io/renodx/renodx-ryza2.addon64"
+  },
+  "atelier-ryza-3": {
+    "appid": "3365050",
+    "download_url": "https://marat569.github.io/renodx/renodx-ryza3.addon64"
+  },
+  "atelier-yumia-the-alchemist-of-memories-the-envisioned-land": {
+    "appid": "3123410",
+    "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64"
+  },
+  "atlas-fallen": {
+    "appid": "1230530"
+  },
+  "avatar-frontiers-of-pandora": {
+    "appid": "2840770"
+  },
+  "batman-arkham-knight": {
+    "appid": "208650"
+  },
+  "batman-arkham-asylum": {
+    "appid": "35140"
+  },
+  "beyond-blue": {
+    "appid": "883360"
+  },
+  "black-desert-online": {
+    "appid": "582660",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "borderlands-2-the-pre-sequel": {
+    "appid": "49520"
+  },
+  "borderlands-4": {
+    "appid": "1285190"
+  },
+  "bulletstorm-full-clip-edition": {
+    "appid": "501590"
+  },
+  "call-of-juarez": {
+    "appid": "3020"
+  },
+  "castlevania-lords-of-shadow": {
+    "appid": "234080"
+  },
+  "child-of-light": {
+    "appid": "256290"
+  },
+  "citizen-sleeper-2": {
+    "appid": "2442460"
+  },
+  "clair-obscur-expedition-33": {
+    "appid": "1903340"
+  },
+  "code-vein-ii": {
+    "appid": "2362060",
+    "download_url": "https://marat569.github.io/renodx/renodx-codevein2.addon64"
+  },
+  "crimson-desert": {
+    "appid": "3321460"
+  },
+  "cyberpunk-2077": {
+    "appid": "1091500",
+    "conflicts": [
+      "special_k"
+    ],
+    "notes_keys": [
+      "renodx.note.cp2077.hdr10"
+    ]
+  },
+  "dark-souls-remastered": {
+    "appid": "570940",
+    "risk": {
+      "anticheat_engine": "eac",
+      "online": "coop",
+      "severity": "warn",
+      "message_key": "renodx.risk.eac_banrisk"
+    }
+  },
+  "darkest-dungeon-2": {
+    "appid": "1940340",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+  },
+  "darksiders-warmastered-edition": {
+    "appid": "462780"
+  },
+  "dead-island-definitive-edition": {
+    "appid": "383150",
+    "download_url": "https://notvoosh.github.io/renodx/renodx-deadislandde.addon64"
+  },
+  "dead-island-2": {
+    "appid": "934700"
+  },
+  "death-stranding-director-s-cut": {
+    "appid": "1850570"
+  },
+  "death-stranding-2": {
+    "appid": "3280350"
+  },
+  "deus-ex-mankind-divided": {
+    "appid": "337000"
+  },
+  "devil-may-cry-v": {
+    "appid": "601150"
+  },
+  "dishonored": {
+    "appid": "205100"
+  },
+  "doom-the-dark-ages": {
+    "appid": "3017860"
+  },
+  "dragon-age-inquisition": {
+    "appid": "1222690"
+  },
+  "dragon-s-dogma-2": {
+    "appid": "2054970"
+  },
+  "dragon-quest-xi": {
+    "appid": "1295510",
+    "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
+  },
+  "dragon-ball-sparking-zero": {
+    "appid": "1790600"
+  },
+  "dying-light": {
+    "appid": "239140",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "coop",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "dying-light-the-beast": {
+    "appid": "3008130"
+  },
+  "elden-ring": {
+    "appid": "1245620",
+    "risk": {
+      "anticheat_engine": "eac",
+      "online": "coop",
+      "severity": "warn",
+      "message_key": "renodx.risk.eac_banrisk"
+    }
+  },
+  "elden-ring-nightreign": {
+    "appid": "2622380",
+    "risk": {
+      "anticheat_engine": "eac",
+      "online": "coop",
+      "severity": "warn",
+      "message_key": "renodx.risk.eac_banrisk"
+    }
+  },
+  "ender-magnolia-bloom-in-the-mist": {
+    "appid": "2725260",
+    "download_url": "https://marat569.github.io/renodx/renodx-endermagnolia.addon64"
+  },
+  "fantasian-neo-dimension": {
+    "appid": "2844850",
+    "download_url": "https://marat569.github.io/renodx/renodx-fantasianneodimension.addon64"
+  },
+  "fallout-4": {
+    "appid": "377160"
+  },
+  "fallout-76": {
+    "appid": "1151340",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "far-cry-2": {
+    "appid": "19900"
+  },
+  "far-cry-3": {
+    "appid": "220240"
+  },
+  "far-cry-5": {
+    "appid": "552520"
+  },
+  "far-cry-6": {
+    "appid": "2369390"
+  },
+  "fate-samurai-remnant": {
+    "appid": "1902690",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-fatesamurairemnant.addon64"
+  },
+  "final-fantasy-7-rebirth": {
+    "appid": "2909400"
+  },
+  "final-fantasy-7-remake": {
+    "appid": "1462040"
+  },
+  "final-fantasy-x": {
+    "appid": "359870"
+  },
+  "final-fantasy-xiv": {
+    "appid": "39210",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "final-fantasy-xv": {
+    "appid": "637650"
+  },
+  "forza-horizon-6": {
+    "appid": "2483190",
+    "download_url": "https://oopydoopy.github.io/renodx/renodx-forzahorizon6.addon64"
+  },
+  "ghostwire-tokyo": {
+    "appid": "1475810"
+  },
+  "go-mecha-ball": {
+    "appid": "2008510"
+  },
+  "god-of-war": {
+    "appid": "1593500"
+  },
+  "god-of-war-ragnarok": {
+    "appid": "2322010"
+  },
+  "granblue-fantasy-relink": {
+    "appid": "881020"
+  },
+  "grand-theft-auto-v-enhanced": {
+    "appid": "3240220",
+    "risk": {
+      "anticheat_engine": "battleye",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "greedfall": {
+    "appid": "606880"
+  },
+  "grim-dawn": {
+    "appid": "219990"
+  },
+  "guild-wars-2": {
+    "appid": "1284210",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    },
+    "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64"
+  },
+  "hades": {
+    "appid": "1145360"
+  },
+  "hades-2": {
+    "appid": "1145350"
+  },
+  "hard-reset-redux": {
+    "appid": "407810"
+  },
+  "hardspace-shipbreaker": {
+    "appid": "1161580",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+  },
+  "helldivers-2": {
+    "appid": "553850",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "coop",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "hitman-world-of-assassination": {
+    "appid": "1659040"
+  },
+  "hollow-knight": {
+    "appid": "367520"
+  },
+  "hollow-knight-silksong": {
+    "appid": "1030300"
+  },
+  "immortals-fenyx-rising": {
+    "appid": "2221920"
+  },
+  "indiana-jones-and-the-great-circle": {
+    "appid": "2677660"
+  },
+  "ixion": {
+    "appid": "1113120",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+  },
+  "just-cause-4": {
+    "appid": "517630"
+  },
+  "karma-the-dark-world": {
+    "appid": "1376200"
+  },
+  "kerbal-space-program": {
+    "appid": "220200",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_ksp.addon64"
+  },
+  "kingdom-come-deliverance-ii": {
+    "appid": "1771300"
+  },
+  "kingdoms-of-amalur-re-reckoning": {
+    "appid": "1041720"
+  },
+  "lunacid": {
+    "appid": "1745510"
+  },
+  "trails-in-the-sky-1st-chapter": {
+    "appid": "3375780",
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+  },
+  "like-a-dragon-pirate-yakuza-in-hawaii": {
+    "appid": "3061810",
+    "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+  },
+  "like-a-dragon-gaiden-the-man-who-erased-his-name": {
+    "appid": "2375550",
+    "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+  },
+  "like-a-dragon-infinite-wealth": {
+    "appid": "2072450",
+    "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+  },
+  "mad-max": {
+    "appid": "234140"
+  },
+  "mafia-definitive-edition": {
+    "appid": "1030840"
+  },
+  "max-payne-3": {
+    "appid": "204100"
+  },
+  "marvel-s-spider-man-2": {
+    "appid": "2651280"
+  },
+  "marvel-s-spider-man-miles-morales": {
+    "appid": "1817190"
+  },
+  "marvel-s-spider-man-remastered": {
+    "appid": "1817070"
+  },
+  "mass-effect-legendary-edition": {
+    "appid": "1328670"
+  },
+  "metaphor-refantazio": {
+    "appid": "2679460"
+  },
+  "metro-exodus-enhanced-edition": {
+    "appid": "412020",
+    "slug": "metro"
+  },
+  "metal-gear-solid-snake-eater": {
+    "appid": "2417610"
+  },
+  "middle-earth-shadow-of-war": {
+    "appid": "356190"
+  },
+  "monster-hunter-rise": {
+    "appid": "1446780"
+  },
+  "monster-hunter-wilds": {
+    "appid": "2246340"
+  },
+  "monster-hunter-world": {
+    "appid": "582010"
+  },
+  "need-for-speed": {
+    "appid": "1262540"
+  },
+  "nier-replicant": {
+    "appid": "1113560",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-nierreplicant.addon64"
+  },
+  "nights-of-azure-2": {
+    "appid": "636570",
+    "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64"
+  },
+  "ninja-gaiden-4": {
+    "appid": "2627260"
+  },
+  "nioh-2": {
+    "appid": "1325200",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64"
+  },
+  "nioh-3": {
+    "appid": "3681010"
+  },
+  "opus-echo-of-starsong-full-bloom-edition": {
+    "appid": "1504500"
+  },
+  "ori-and-the-will-of-the-wisps": {
+    "appid": "1057090"
+  },
+  "party-animals": {
+    "appid": "1260320"
+  },
+  "pathfinder-wrath-of-the-righteous": {
+    "appid": "1184370",
+    "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64"
+  },
+  "path-of-exile-2-dx11-only": {
+    "appid": "2694490",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    },
+    "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64"
+  },
+  "penny-s-big-breakaway": {
+    "appid": "1955230"
+  },
+  "persona-4-golden": {
+    "appid": "1113000"
+  },
+  "persona-5-royal": {
+    "appid": "1687950"
+  },
+  "persona-5-strikers": {
+    "appid": "1382330",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64"
+  },
+  "resident-evil-2-remake": {
+    "appid": "883710"
+  },
+  "resident-evil-4-remake": {
+    "appid": "2050650"
+  },
+  "resident-evil-7": {
+    "appid": "418370"
+  },
+  "resident-evil-village": {
+    "appid": "1196590"
+  },
+  "revenge-of-the-savage-planet": {
+    "appid": "2787320",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-rotsp.addon64"
+  },
+  "rise-of-the-tomb-raider": {
+    "appid": "391220"
+  },
+  "rise-of-the-ronin": {
+    "appid": "1340990",
+    "download_url": "https://marat569.github.io/renodx/renodx-riseofronin.addon64"
+  },
+  "raidou-remastered-the-mystery-of-the-soulless-army": {
+    "appid": "2288350",
+    "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64"
+  },
+  "robocop-rogue-city": {
+    "appid": "1681430"
+  },
+  "routine": {
+    "appid": "606160"
+  },
+  "sea-of-stars": {
+    "appid": "1244090"
+  },
+  "sekiro-shadows-die-twice": {
+    "appid": "814380",
+    "risk": {
+      "anticheat_engine": "eac",
+      "online": "singleplayer",
+      "severity": "warn",
+      "message_key": "renodx.risk.eac_banrisk"
+    }
+  },
+  "shadow-gambit-the-cursed-crew": {
+    "appid": "1545560",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-shadowgambit.addon64"
+  },
+  "shadow-of-the-tomb-raider": {
+    "appid": "750920"
+  },
+  "shin-megami-tensei-v": {
+    "appid": "1875830",
+    "download_url": "https://marat569.github.io/renodx/renodx-smt5.addon64"
+  },
+  "shinobi-art-of-vengeance": {
+    "appid": "2361770"
+  },
+  "silent-hill-f": {
+    "appid": "2947440"
+  },
+  "sniper-elite-4": {
+    "appid": "312660"
+  },
+  "sonic-generations": {
+    "appid": "71340"
+  },
+  "sons-of-the-forest": {
+    "appid": "1326470",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-sonsoftheforest.addon64"
+  },
+  "spec-ops-the-line": {
+    "exe": "specops_the_line.exe"
+  },
+  "splinter-cell-blacklist": {
+    "appid": "235600"
+  },
+  "s-t-a-l-k-e-r-2-heart-of-chornobyl": {
+    "appid": "1643320",
+    "slug": "stalker2"
+  },
+  "steelrising": {
+    "appid": "1283400",
+    "download_url": "https://notvoosh.github.io/renodx/renodx-steelrising.addon64"
+  },
+  "steel-seed": {
+    "appid": "458430",
+    "download_url": "https://github.com/TheEdmaster87/Steel-Seed-RenoDX-HDR/releases/download/v1.0.4/renodx-steelseed.addon64"
+  },
+  "starfield": {
+    "appid": "1716740"
+  },
+  "star-wars-jedi-survivor": {
+    "appid": "1774580"
+  },
+  "star-wars-outlaws": {
+    "appid": "2842040"
+  },
+  "stranger-of-paradise-final-fantasy-origin": {
+    "appid": "1358700",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64"
+  },
+  "street-fighter-6": {
+    "appid": "1364780"
+  },
+  "sunset-overdrive": {
+    "appid": "847370"
+  },
+  "sword-art-online-alicization-lycoris": {
+    "appid": "1009290",
+    "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-sao-alicization.addon64"
+  },
+  "tactical-breach-wizards": {
+    "appid": "1043810"
+  },
+  "tales-of-graces-f-remastered": {
+    "appid": "2530980"
+  },
+  "teardown": {
+    "appid": "1167630",
+    "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64"
+  },
+  "tekken-8": {
+    "appid": "1778820"
+  },
+  "terraria": {
+    "appid": "105600"
+  },
+  "the-evil-within-2": {
+    "appid": "601430",
+    "download_url": "https://marat569.github.io/renodx/renodx-tew2.addon64"
+  },
+  "the-elder-scrolls-iv-oblivion-remastered": {
+    "appid": "2623190"
+  },
+  "the-hundred-line-last-defense-academy": {
+    "appid": "3014080"
+  },
+  "the-incredible-adventures-of-van-helsing-final-cut": {
+    "appid": "400170",
+    "download_url": "https://notvoosh.github.io/renodx/renodx-vanhelsingfinalcut.addon64"
+  },
+  "the-surge": {
+    "appid": "378540"
+  },
+  "the-town-of-light": {
+    "appid": "433100"
+  },
+  "the-witcher-3": {
+    "appid": "292030"
+  },
+  "the-witness": {
+    "appid": "210970"
+  },
+  "titan-quest-anniversary-edition": {
+    "appid": "475150"
+  },
+  "total-war-three-kingdoms": {
+    "appid": "779340",
+    "download_url": "https://sgtforgery.github.io/renodx/renodx-tw-3kingdoms.addon64"
+  },
+  "total-war-warhammer-3": {
+    "appid": "1142710",
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+  },
+  "trackmania": {
+    "appid": "2225070"
+  },
+  "trine-2-complete-story": {
+    "appid": "35720",
+    "download_url": "https://github.com/chrisboyer2/renodx/releases/download/v2.0/renodx-trine2.addon64"
+  },
+  "tunic": {
+    "appid": "553420"
+  },
+  "uncharted-legacy-of-thieves-collection": {
+    "appid": "1659420"
+  },
+  "valheim": {
+    "appid": "892970"
+  },
+  "warframe": {
+    "appid": "230410",
+    "download_url": "https://hboyyt.github.io/renodx/renodx-warframe.addon64"
+  },
+  "warhammer-40-000-space-marine-2": {
+    "appid": "2183900"
+  },
+  "watch-dogs": {
+    "appid": "243470"
+  },
+  "wuchang-fallen-feathers": {
+    "appid": "2277560"
+  },
+  "wuthering-waves": {
+    "appid": "3513350"
+  },
+  "xcom-2": {
+    "appid": "268500",
+    "download_url": "https://sgtforgery.github.io/renodx/renodx-xcom2.addon64"
+  },
+  "wo-long-fallen-dynasty": {
+    "appid": "1448440",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64"
+  },
+  "yakuza-0": {
+    "appid": "2988580",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+  },
+  "zenless-zone-zero": {
+    "appid": "4162040",
+    "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64"
+  },
+  "outer-wilds": {
+    "appid": "753640"
+  },
+  "death-s-door": {
+    "appid": "894020"
+  },
+  "descenders": {
+    "appid": "681280"
+  },
+  "dying-light-2": {
+    "appid": "534380",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "coop",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "haste": {
+    "appid": "1796470"
+  },
+  "l-a-noire": {
+    "appid": "110800"
+  },
+  "spark-the-electric-jester-3": {
+    "appid": "1629530"
+  },
+  "xf-extreme-formula": {
+    "appid": "2539910"
+  },
+  "doom-eternal": {
+    "appid": "782330"
+  },
+  "sea-of-thieves": {
+    "appid": "1172620",
+    "risk": {
+      "anticheat_engine": "battleye",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "persona-5-royal-2": {
+    "appid": "1687950"
+  },
+  "ori-and-the-blind-forest-definitive-edition": {
+    "appid": "387290"
+  },
+  "prince-of-persia-the-lost-crown": {
+    "appid": "2751000"
+  },
+  "ace-combat-7": {
+    "appid": "502500"
+  },
+  "honkai-star-rail": {
+    "exe": "StarRail.exe",
+    "risk": {
+      "anticheat_engine": "unknown",
+      "online": "pvp",
+      "severity": "warn",
+      "message_key": "renodx.risk.anticheat_banrisk"
+    }
+  },
+  "atelier-ryza-dx": {
+    "appid": "3365030"
+  },
+  "atelier-sophie-1-dx": {
+    "appid": "1502970",
+    "download_url": "https://marat569.github.io/renodx/renodx-sophie1.addon64"
+  },
+  "dragon-quest-vii-remake": {
+    "appid": "2499860",
+    "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
+  },
+  "journey": {
+    "appid": "638230"
+  },
+  "lost-planet": {
+    "appid": "6510"
+  },
+  "nights-of-azure-1": {
+    "appid": "527280",
+    "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64"
+  },
+  "ninja-gaiden-sigma": {
+    "appid": "1580780"
+  },
+  "ninja-gaiden-sigma-2": {
+    "appid": "1580790"
+  },
+  "remember-me": {
+    "appid": "228300"
+  },
+  "resident-evil-3-remake": {
+    "appid": "952060"
+  },
+  "silent-hill-2-remake": {
+    "appid": "2124490"
+  },
+  "ys-ix-monstrum-nox": {
+    "appid": "1351630",
+    "download_url": "https://danaforever.github.io/renodx/renodx-ys9.addon64"
+  },
+  "tomb-raider": {
+    "appid": "203160"
+  },
+  "yakuza-kiwami-1": {
+    "appid": "834530",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+  },
+  "tmodloader": {
+    "appid": "1281930"
+  },
+  "atelier-ryza-1": {
+    "appid": "1138750",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64"
+  },
+  "trails-of-cold-steel": {
+    "split": [
+      {
+        "suffix": "cs3",
+        "name": "The Legend of Heroes: Trails of Cold Steel III",
+        "appid": "991270"
+      },
+      {
+        "suffix": "cs4",
+        "name": "The Legend of Heroes: Trails of Cold Steel IV",
+        "appid": "1198090"
+      },
+      {
+        "suffix": "reverie",
+        "name": "The Legend of Heroes: Trails into Reverie",
+        "appid": "1668540"
+      }
+    ],
+    "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+  },
+  "trails-through-daybreak-1-2": {
+    "split": [
+      {
+        "suffix": "d1",
+        "name": "The Legend of Heroes: Trails through Daybreak",
+        "appid": "2138610"
+      },
+      {
+        "suffix": "d2",
+        "name": "The Legend of Heroes: Trails through Daybreak II",
+        "appid": "2668430"
+      }
+    ],
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+  },
+  "trails-from-zero-to-azure": {
+    "split": [
+      {
+        "suffix": "zero",
+        "name": "The Legend of Heroes: Trails from Zero",
+        "appid": "1668510"
+      },
+      {
+        "suffix": "azure",
+        "name": "The Legend of Heroes: Trails to Azure",
+        "appid": "1668520"
+      }
+    ],
+    "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
+  },
+  "trails-beyond-the-horizon": {
+    "appid": "3316940",
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+  },
+  "shadow-warrior-middot-shadow-warrior-2": {
+    "split": [
+      {
+        "suffix": "sw1",
+        "name": "Shadow Warrior (2013)",
+        "appid": "233130"
+      },
+      {
+        "suffix": "sw2",
+        "name": "Shadow Warrior 2",
+        "appid": "324800"
+      }
+    ]
+  },
+  "ys-x-nordics": {
+    "appids": [
+      "2570810",
+      "2731870"
+    ],
+    "download_url": "https://marat569.github.io/renodx/renodx-ys10.addon64"
+  },
+  "ys-x-proud-nordics": {
+    "appids": [
+      "3821790",
+      "3949290"
+    ],
+    "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-ys10pn.addon64"
+  },
+  "clive-barker-s-jericho": {
+    "exe": "jericho.exe"
+  },
+  "sonic-unleashed-recompiled": {
+    "exe": "UnleashedRecomp.exe",
+    "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64"
+  },
+  "assassin-s-creed-ezio-trilogy-dgvoodoo": {
+    "external": {
+      "url": "https://www.nexusmods.com/assassinscreedii/mods/250",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "assassin-s-creed-iii-original": {
+    "external": {
+      "url": "https://www.nexusmods.com/assassinscreediii/mods/161",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "assassin-s-creed-iii-remastered": {
+    "external": {
+      "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "assassin-s-creed-syndicate": {
+    "external": {
+      "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "assassin-s-creed-unity": {
+    "external": {
+      "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "berserk-and-the-band-of-the-hawk": {
+    "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64"
+  },
+  "black-myth-wukong": {
+    "slug": "bmw"
+  },
+  "crysis-remastered": {
+    "external": {
+      "url": "https://discord.com/invite/renodx",
+      "label_key": "renodx.external.discord"
+    }
+  },
+  "dirt-4": {
+    "external": {
+      "url": "https://www.nexusmods.com/dirt4/mods/3",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "dirt-rally-2-0": {
+    "slug": "dirtrally2"
+  },
+  "far-cry-primal": {
+    "external": {
+      "url": "https://www.nexusmods.com/farcryprimal/mods/28",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "girls-frontline-2-exilium": {
+    "slug": "gfl2"
+  },
+  "ghost-recon-wildlands": {
+    "external": {
+      "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "heaven-burns-red": {
+    "download_url": "https://pmnoxx.github.io/renodx/renodx-_hbr.addon64"
+  },
+  "luigi-s-mansion-3": {
+    "download_url": "https://souperman9.github.io/renodx/renodx-lm3.addon64"
+  },
+  "lego-harry-potter-collection": {
+    "download_url": "https://souperman9.github.io/renodx/renodx-legohpc.addon64"
+  },
+  "mirror-s-edge": {
+    "external": {
+      "url": "https://www.nexusmods.com/mirrorsedge/mods/24",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "monster-hunter-generations-ultimate": {
+    "download_url": "https://souperman9.github.io/renodx/renodx-mhgu.addon64"
+  },
+  "no-man-s-sky": {
+    "external": {
+      "url": "https://www.nexusmods.com/nomanssky/mods/4061",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "the-outer-worlds-2": {
+    "slug": "outerworlds2"
+  },
+  "red-dead-redemption": {
+    "slug": "rdr1"
+  },
+  "red-dead-redemption-2-vulkan": {
+    "external": {
+      "url": "https://discord.com/invite/renodx",
+      "label_key": "renodx.external.discord"
+    }
+  },
+  "resident-evil-requiem": {
+    "slug": "re9requiem"
+  },
+  "steep": {
+    "external": {
+      "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "the-legend-of-zelda-breath-of-the-wild": {
+    "download_url": "https://souperman9.github.io/renodx/renodx-botw.addon64"
+  },
+  "the-legend-of-zelda-tears-of-the-kingdom": {
+    "download_url": "https://souperman9.github.io/renodx/renodx-totk.addon64"
+  },
+  "the-first-berserker-khazan": {
+    "download_url": "https://marat569.github.io/renodx/renodx-bersekerKhazan.addon64"
+  },
+  "warhammer-40-000-darktide": {
+    "slug": "darktide"
+  },
+  "control-hdr-ultrawide-dlss-rt-patch": {
+    "external": {
+      "url": "https://www.nexusmods.com/control/mods/90",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "dark-souls-2-ds2lightingengine-sotfs": {
+    "external": {
+      "url": "https://www.nexusmods.com/darksouls2/mods/1146",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "prey-remastered-luma": {
+    "external": {
+      "url": "https://www.nexusmods.com/prey2017/mods/149",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "starfield-luma-native-hdr-and-more": {
+    "external": {
+      "url": "https://www.nexusmods.com/starfield/mods/4821",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "bioshock-remastered": {
+    "slug": "bioshock"
   }
- },
- "assassin-s-creed-director-s-cut-edition": {
-  "appid": "15100"
- },
- "assassins-creed-iv-black-flag": {
-  "appid": "242050"
- },
- "assassins-creed-mirage": {
-  "appid": "3035570"
- },
- "assassins-creed-origins": {
-  "appid": "582160"
- },
- "assassins-creed-odyssey": {
-  "appid": "812140"
- },
- "assassins-creed-shadows": {
-  "appid": "3159330"
- },
- "assassins-creed-valhalla": {
-  "appid": "2208920"
- },
- "atelier-ryza-2": {
-  "appid": "3365040"
- },
- "atelier-ryza-3": {
-  "appid": "3365050"
- },
- "atelier-yumia-the-alchemist-of-memories-the-envisioned-land": {
-  "appid": "3123410"
- },
- "atlas-fallen": {
-  "appid": "1230530"
- },
- "avatar-frontiers-of-pandora": {
-  "appid": "2840770"
- },
- "batman-arkham-knight": {
-  "appid": "208650"
- },
- "batman-arkham-asylum": {
-  "appid": "35140"
- },
- "beyond-blue": {
-  "appid": "883360"
- },
- "black-desert-online": {
-  "appid": "582660",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "borderlands-2-the-pre-sequel": {
-  "appid": "49520"
- },
- "borderlands-4": {
-  "appid": "1285190"
- },
- "bulletstorm-full-clip-edition": {
-  "appid": "501590"
- },
- "call-of-juarez": {
-  "appid": "3020"
- },
- "castlevania-lords-of-shadow": {
-  "appid": "234080"
- },
- "child-of-light": {
-  "appid": "256290"
- },
- "citizen-sleeper-2": {
-  "appid": "2442460"
- },
- "clair-obscur-expedition-33": {
-  "appid": "1903340"
- },
- "code-vein-ii": {
-  "appid": "2362060"
- },
- "crimson-desert": {
-  "appid": "3321460"
- },
- "cyberpunk-2077": {
-  "appid": "1091500",
-  "conflicts": [
-   "special_k"
-  ],
-  "notes": [
-   "renodx.note.cp2077.hdr10"
-  ]
- },
- "dark-souls-remastered": {
-  "appid": "570940",
-  "risk": {
-   "anticheat_engine": "eac",
-   "online": "coop",
-   "severity": "warn",
-   "message_key": "renodx.risk.eac_banrisk"
-  }
- },
- "darkest-dungeon-2": {
-  "appid": "1940340"
- },
- "darksiders-warmastered-edition": {
-  "appid": "462780"
- },
- "dead-island-definitive-edition": {
-  "appid": "383150"
- },
- "dead-island-2": {
-  "appid": "934700"
- },
- "death-stranding-director-s-cut": {
-  "appid": "1850570"
- },
- "death-stranding-2": {
-  "appid": "3280350"
- },
- "deus-ex-mankind-divided": {
-  "appid": "337000"
- },
- "devil-may-cry-v": {
-  "appid": "601150"
- },
- "dishonored": {
-  "appid": "205100"
- },
- "doom-the-dark-ages": {
-  "appid": "3017860"
- },
- "dragon-age-inquisition": {
-  "appid": "1222690"
- },
- "dragon-s-dogma-2": {
-  "appid": "2054970"
- },
- "dragon-quest-xi": {
-  "appid": "1295510"
- },
- "dragon-ball-sparking-zero": {
-  "appid": "1790600"
- },
- "dying-light": {
-  "appid": "239140",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "coop",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "dying-light-the-beast": {
-  "appid": "3008130"
- },
- "elden-ring": {
-  "appid": "1245620",
-  "risk": {
-   "anticheat_engine": "eac",
-   "online": "coop",
-   "severity": "warn",
-   "message_key": "renodx.risk.eac_banrisk"
-  }
- },
- "elden-ring-nightreign": {
-  "appid": "2622380",
-  "risk": {
-   "anticheat_engine": "eac",
-   "online": "coop",
-   "severity": "warn",
-   "message_key": "renodx.risk.eac_banrisk"
-  }
- },
- "ender-magnolia-bloom-in-the-mist": {
-  "appid": "2725260"
- },
- "fantasian-neo-dimension": {
-  "appid": "2844850"
- },
- "fallout-4": {
-  "appid": "377160"
- },
- "fallout-76": {
-  "appid": "1151340",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "far-cry-2": {
-  "appid": "19900"
- },
- "far-cry-3": {
-  "appid": "220240"
- },
- "far-cry-5": {
-  "appid": "552520"
- },
- "far-cry-6": {
-  "appid": "2369390"
- },
- "fate-samurai-remnant": {
-  "appid": "1902690"
- },
- "final-fantasy-7-rebirth": {
-  "appid": "2909400"
- },
- "final-fantasy-7-remake": {
-  "appid": "1462040"
- },
- "final-fantasy-x": {
-  "appid": "359870"
- },
- "final-fantasy-xiv": {
-  "appid": "39210",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "final-fantasy-xv": {
-  "appid": "637650"
- },
- "forza-horizon-6": {
-  "appid": "2483190"
- },
- "ghostwire-tokyo": {
-  "appid": "1475810"
- },
- "go-mecha-ball": {
-  "appid": "2008510"
- },
- "god-of-war": {
-  "appid": "1593500"
- },
- "god-of-war-ragnarok": {
-  "appid": "2322010"
- },
- "granblue-fantasy-relink": {
-  "appid": "881020"
- },
- "grand-theft-auto-v-enhanced": {
-  "appid": "3240220",
-  "risk": {
-   "anticheat_engine": "battleye",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "greedfall": {
-  "appid": "606880"
- },
- "grim-dawn": {
-  "appid": "219990"
- },
- "guild-wars-2": {
-  "appid": "1284210",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "hades": {
-  "appid": "1145360"
- },
- "hades-2": {
-  "appid": "1145350"
- },
- "hard-reset-redux": {
-  "appid": "407810"
- },
- "hardspace-shipbreaker": {
-  "appid": "1161580"
- },
- "helldivers-2": {
-  "appid": "553850",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "coop",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "hitman-world-of-assassination": {
-  "appid": "1659040"
- },
- "hollow-knight": {
-  "appid": "367520"
- },
- "hollow-knight-silksong": {
-  "appid": "1030300"
- },
- "immortals-fenyx-rising": {
-  "appid": "2221920"
- },
- "indiana-jones-and-the-great-circle": {
-  "appid": "2677660"
- },
- "ixion": {
-  "appid": "1113120"
- },
- "just-cause-4": {
-  "appid": "517630"
- },
- "karma-the-dark-world": {
-  "appid": "1376200"
- },
- "kerbal-space-program": {
-  "appid": "220200"
- },
- "kingdom-come-deliverance-ii": {
-  "appid": "1771300"
- },
- "kingdoms-of-amalur-re-reckoning": {
-  "appid": "1041720"
- },
- "lunacid": {
-  "appid": "1745510"
- },
- "trails-in-the-sky-1st-chapter": {
-  "appid": "3375780"
- },
- "like-a-dragon-pirate-yakuza-in-hawaii": {
-  "appid": "3061810"
- },
- "like-a-dragon-gaiden-the-man-who-erased-his-name": {
-  "appid": "2375550"
- },
- "like-a-dragon-infinite-wealth": {
-  "appid": "2072450"
- },
- "mad-max": {
-  "appid": "234140"
- },
- "mafia-definitive-edition": {
-  "appid": "1030840"
- },
- "max-payne-3": {
-  "appid": "204100"
- },
- "marvel-s-spider-man-2": {
-  "appid": "2651280"
- },
- "marvel-s-spider-man-miles-morales": {
-  "appid": "1817190"
- },
- "marvel-s-spider-man-remastered": {
-  "appid": "1817070"
- },
- "mass-effect-legendary-edition": {
-  "appid": "1328670"
- },
- "metaphor-refantazio": {
-  "appid": "2679460"
- },
- "metro-exodus-enhanced-edition": {
-  "appid": "412020"
- },
- "metal-gear-solid-snake-eater": {
-  "appid": "2417610"
- },
- "middle-earth-shadow-of-war": {
-  "appid": "356190"
- },
- "monster-hunter-rise": {
-  "appid": "1446780"
- },
- "monster-hunter-wilds": {
-  "appid": "2246340"
- },
- "monster-hunter-world": {
-  "appid": "582010"
- },
- "need-for-speed": {
-  "appid": "1262540"
- },
- "nier-replicant": {
-  "appid": "1113560"
- },
- "nights-of-azure-2": {
-  "appid": "636570"
- },
- "ninja-gaiden-4": {
-  "appid": "2627260"
- },
- "nioh-2": {
-  "appid": "1325200"
- },
- "nioh-3": {
-  "appid": "3681010"
- },
- "opus-echo-of-starsong-full-bloom-edition": {
-  "appid": "1504500"
- },
- "ori-and-the-will-of-the-wisps": {
-  "appid": "1057090"
- },
- "party-animals": {
-  "appid": "1260320"
- },
- "pathfinder-wrath-of-the-righteous": {
-  "appid": "1184370"
- },
- "path-of-exile-2-dx11-only": {
-  "appid": "2694490",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "penny-s-big-breakaway": {
-  "appid": "1955230"
- },
- "persona-4-golden": {
-  "appid": "1113000"
- },
- "persona-5-royal": {
-  "appid": "1687950"
- },
- "persona-5-strikers": {
-  "appid": "1382330"
- },
- "resident-evil-2-remake": {
-  "appid": "883710"
- },
- "resident-evil-4-remake": {
-  "appid": "2050650"
- },
- "resident-evil-7": {
-  "appid": "418370"
- },
- "resident-evil-village": {
-  "appid": "1196590"
- },
- "revenge-of-the-savage-planet": {
-  "appid": "2787320"
- },
- "rise-of-the-tomb-raider": {
-  "appid": "391220"
- },
- "rise-of-the-ronin": {
-  "appid": "1340990"
- },
- "raidou-remastered-the-mystery-of-the-soulless-army": {
-  "appid": "2288350"
- },
- "robocop-rogue-city": {
-  "appid": "1681430"
- },
- "routine": {
-  "appid": "606160"
- },
- "sea-of-stars": {
-  "appid": "1244090"
- },
- "sekiro-shadows-die-twice": {
-  "appid": "814380",
-  "risk": {
-   "anticheat_engine": "eac",
-   "online": "singleplayer",
-   "severity": "warn",
-   "message_key": "renodx.risk.eac_banrisk"
-  }
- },
- "shadow-gambit-the-cursed-crew": {
-  "appid": "1545560"
- },
- "shadow-of-the-tomb-raider": {
-  "appid": "750920"
- },
- "shin-megami-tensei-v": {
-  "appid": "1875830"
- },
- "shinobi-art-of-vengeance": {
-  "appid": "2361770"
- },
- "silent-hill-f": {
-  "appid": "2947440"
- },
- "sniper-elite-4": {
-  "appid": "312660"
- },
- "sonic-generations": {
-  "appid": "71340"
- },
- "sons-of-the-forest": {
-  "appid": "1326470"
- },
- "spec-ops-the-line": {
-  "exe": "specops_the_line.exe"
- },
- "splinter-cell-blacklist": {
-  "appid": "235600"
- },
- "s-t-a-l-k-e-r-2-heart-of-chornobyl": {
-  "appid": "1643320"
- },
- "steelrising": {
-  "appid": "1283400"
- },
- "steel-seed": {
-  "appid": "458430"
- },
- "starfield": {
-  "appid": "1716740"
- },
- "star-wars-jedi-survivor": {
-  "appid": "1774580"
- },
- "star-wars-outlaws": {
-  "appid": "2842040"
- },
- "stranger-of-paradise-final-fantasy-origin": {
-  "appid": "1358700"
- },
- "street-fighter-6": {
-  "appid": "1364780"
- },
- "sunset-overdrive": {
-  "appid": "847370"
- },
- "sword-art-online-alicization-lycoris": {
-  "appid": "1009290"
- },
- "tactical-breach-wizards": {
-  "appid": "1043810"
- },
- "tales-of-graces-f-remastered": {
-  "appid": "2530980"
- },
- "teardown": {
-  "appid": "1167630"
- },
- "tekken-8": {
-  "appid": "1778820"
- },
- "terraria": {
-  "appid": "105600"
- },
- "the-evil-within-2": {
-  "appid": "601430"
- },
- "the-elder-scrolls-iv-oblivion-remastered": {
-  "appid": "2623190"
- },
- "the-hundred-line-last-defense-academy": {
-  "appid": "3014080"
- },
- "the-incredible-adventures-of-van-helsing-final-cut": {
-  "appid": "400170"
- },
- "the-surge": {
-  "appid": "378540"
- },
- "the-town-of-light": {
-  "appid": "433100"
- },
- "the-witcher-3": {
-  "appid": "292030"
- },
- "the-witness": {
-  "appid": "210970"
- },
- "titan-quest-anniversary-edition": {
-  "appid": "475150"
- },
- "total-war-three-kingdoms": {
-  "appid": "779340"
- },
- "total-war-warhammer-3": {
-  "appid": "1142710"
- },
- "trackmania": {
-  "appid": "2225070"
- },
- "trine-2-complete-story": {
-  "appid": "35720"
- },
- "tunic": {
-  "appid": "553420"
- },
- "uncharted-legacy-of-thieves-collection": {
-  "appid": "1659420"
- },
- "valheim": {
-  "appid": "892970"
- },
- "warframe": {
-  "appid": "230410"
- },
- "warhammer-40-000-space-marine-2": {
-  "appid": "2183900"
- },
- "watch-dogs": {
-  "appid": "243470"
- },
- "wuchang-fallen-feathers": {
-  "appid": "2277560"
- },
- "wuthering-waves": {
-  "appid": "3513350"
- },
- "xcom-2": {
-  "appid": "268500"
- },
- "wo-long-fallen-dynasty": {
-  "appid": "1448440"
- },
- "yakuza-0": {
-  "appid": "2988580"
- },
- "zenless-zone-zero": {
-  "appid": "4162040"
- },
- "outer-wilds": {
-  "appid": "753640"
- },
- "death-s-door": {
-  "appid": "894020"
- },
- "descenders": {
-  "appid": "681280"
- },
- "dying-light-2": {
-  "appid": "534380",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "coop",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "haste": {
-  "appid": "1796470"
- },
- "l-a-noire": {
-  "appid": "110800"
- },
- "spark-the-electric-jester-3": {
-  "appid": "1629530"
- },
- "xf-extreme-formula": {
-  "appid": "2539910"
- },
- "doom-eternal": {
-  "appid": "782330"
- },
- "sea-of-thieves": {
-  "appid": "1172620",
-  "risk": {
-   "anticheat_engine": "battleye",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "persona-5-royal-2": {
-  "appid": "1687950"
- },
- "ori-and-the-blind-forest-definitive-edition": {
-  "appid": "387290"
- },
- "prince-of-persia-the-lost-crown": {
-  "appid": "2751000"
- },
- "ace-combat-7": {
-  "appid": "502500"
- },
- "honkai-star-rail": {
-  "exe": "StarRail.exe",
-  "risk": {
-   "anticheat_engine": "unknown",
-   "online": "pvp",
-   "severity": "warn",
-   "message_key": "renodx.risk.anticheat_banrisk"
-  }
- },
- "atelier-ryza-dx": {
-  "appid": "3365030"
- },
- "atelier-sophie-1-dx": {
-  "appid": "1502970"
- },
- "borderlands-goty-enhanced": {
-  "appid": "729040"
- },
- "dragon-quest-vii-remake": {
-  "appid": "2499860"
- },
- "journey": {
-  "appid": "638230"
- },
- "lost-planet": {
-  "appid": "6510"
- },
- "nights-of-azure-1": {
-  "appid": "527280"
- },
- "ninja-gaiden-sigma": {
-  "appid": "1580780"
- },
- "ninja-gaiden-sigma-2": {
-  "appid": "1580790"
- },
- "remember-me": {
-  "appid": "228300"
- },
- "resident-evil-3-remake": {
-  "appid": "952060"
- },
- "silent-hill-2-remake": {
-  "appid": "2124490"
- },
- "ys-ix-monstrum-nox": {
-  "appid": "1351630"
- },
- "tomb-raider": {
-  "appid": "203160"
- },
- "yakuza-kiwami-1": {
-  "appid": "834530"
- },
- "tmodloader": {
-  "appid": "1281930"
- },
- "atelier-ryza-1": {
-  "appid": "1138750"
- },
- "trails-of-cold-steel": {
-  "split": [
-   {
-    "suffix": "cs3",
-    "name": "The Legend of Heroes: Trails of Cold Steel III",
-    "appid": "991270"
-   },
-   {
-    "suffix": "cs4",
-    "name": "The Legend of Heroes: Trails of Cold Steel IV",
-    "appid": "1198090"
-   },
-   {
-    "suffix": "reverie",
-    "name": "The Legend of Heroes: Trails into Reverie",
-    "appid": "1668540"
-   }
-  ]
- },
- "trails-through-daybreak-1-2": {
-  "split": [
-   {
-    "suffix": "d1",
-    "name": "The Legend of Heroes: Trails through Daybreak",
-    "appid": "2138610"
-   },
-   {
-    "suffix": "d2",
-    "name": "The Legend of Heroes: Trails through Daybreak II",
-    "appid": "2668430"
-   }
-  ]
- },
- "trails-from-zero-to-azure": {
-  "split": [
-   {
-    "suffix": "zero",
-    "name": "The Legend of Heroes: Trails from Zero",
-    "appid": "1668510"
-   },
-   {
-    "suffix": "azure",
-    "name": "The Legend of Heroes: Trails to Azure",
-    "appid": "1668520"
-   }
-  ]
- },
- "trails-beyond-the-horizon": {
-  "appid": "3316940"
- },
- "shadow-warrior-middot-shadow-warrior-2": {
-  "split": [
-   {
-    "suffix": "sw1",
-    "name": "Shadow Warrior (2013)",
-    "appid": "233130"
-   },
-   {
-    "suffix": "sw2",
-    "name": "Shadow Warrior 2",
-    "appid": "324800"
-   }
-  ]
- },
- "ys-x-nordics": {
-  "appids": [
-   "2570810",
-   "2731870"
-  ]
- },
- "ys-x-proud-nordics": {
-  "appids": [
-   "3821790",
-   "3949290"
-  ]
- },
- "clive-barker-s-jericho": {
-  "exe": "jericho.exe"
- },
- "sonic-unleashed-recompiled": {
-  "exe": "UnleashedRecomp.exe"
- }
 }

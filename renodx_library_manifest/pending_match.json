@@ -1,80 +1,170 @@
 [
- {
-  "id": "arknights-endfield",
-  "name": "Arknights: Endfield",
-  "slug": "endfield",
-  "arch": "X64"
- },
- {
-  "id": "heaven-burns-red",
-  "name": "Heaven Burns Red",
-  "slug": "_hbr",
-  "arch": "X64"
- },
- {
-  "id": "james-cameron-s-avatar-the-game",
-  "name": "James Cameron's Avatar: The Game",
-  "slug": "duniaengine",
-  "arch": "X86"
- },
- {
-  "id": "luigi-s-mansion-3",
-  "name": "Luigi's Mansion 3",
-  "slug": "lm3",
-  "arch": "X64"
- },
- {
-  "id": "mario-kart-8-deluxe",
-  "name": "Mario Kart 8 Deluxe",
-  "slug": "mk8",
-  "arch": "X64"
- },
- {
-  "id": "metroid-dread",
-  "name": "Metroid Dread",
-  "slug": "metroiddread",
-  "arch": "X64"
- },
- {
-  "id": "monster-hunter-generations-ultimate",
-  "name": "Monster Hunter Generations Ultimate",
-  "slug": "mhgu",
-  "arch": "X64"
- },
- {
-  "id": "splatoon-2",
-  "name": "Splatoon 2",
-  "slug": "splatoon2",
-  "arch": "X64"
- },
- {
-  "id": "splatoon-3",
-  "name": "Splatoon 3",
-  "slug": "splatoon3",
-  "arch": "X64"
- },
- {
-  "id": "the-legend-of-zelda-breath-of-the-wild",
-  "name": "The Legend of Zelda: Breath of the Wild",
-  "slug": "botw",
-  "arch": "X64"
- },
- {
-  "id": "the-legend-of-zelda-tears-of-the-kingdom",
-  "name": "The Legend of Zelda: Tears of the Kingdom",
-  "slug": "totk",
-  "arch": "X64"
- },
- {
-  "id": "tomb-raider-definitive-edition",
-  "name": "Tomb Raider (2013) - Definitive Edition",
-  "slug": "tombraider2013de",
-  "arch": "X64"
- },
- {
-  "id": "xenoblade-chronicles-x-definitive-edition",
-  "name": "Xenoblade Chronicles X: Definitive Edition",
-  "slug": "xbcx",
-  "arch": "X64"
- }
+  {
+    "id": "arknights-endfield",
+    "name": "Arknights: Endfield",
+    "slug": "endfield",
+    "arch": "X64"
+  },
+  {
+    "id": "avowed",
+    "name": "Avowed",
+    "slug": "avowed",
+    "arch": "X64"
+  },
+  {
+    "id": "baldur-s-gate-3",
+    "name": "Baldur's Gate 3",
+    "slug": "baldursgate3",
+    "arch": "X64"
+  },
+  {
+    "id": "berserk-and-the-band-of-the-hawk",
+    "name": "BERSERK and the Band of the Hawk",
+    "slug": "BerserkBotH",
+    "arch": "X64"
+  },
+  {
+    "id": "black-myth-wukong",
+    "name": "Black Myth: Wukong",
+    "slug": "bmw",
+    "arch": "X64"
+  },
+  {
+    "id": "cronos-the-new-dawn",
+    "name": "Cronos: The New Dawn",
+    "slug": "cronosthenewdawn",
+    "arch": "X64"
+  },
+  {
+    "id": "digimon-story-time-stranger",
+    "name": "Digimon Story: Time Stranger",
+    "slug": "digimonstorytimestranger",
+    "arch": "X64"
+  },
+  {
+    "id": "dirt-rally-2-0",
+    "name": "DiRT Rally 2.0",
+    "slug": "dirtrally2",
+    "arch": "X64"
+  },
+  {
+    "id": "girls-frontline-2-exilium",
+    "name": "GIRLS' FRONTLINE 2: EXILIUM",
+    "slug": "gfl2",
+    "arch": "X64"
+  },
+  {
+    "id": "heaven-burns-red",
+    "name": "Heaven Burns Red",
+    "slug": "_hbr",
+    "arch": "X64"
+  },
+  {
+    "id": "james-cameron-s-avatar-the-game",
+    "name": "James Cameron's Avatar: The Game",
+    "slug": "duniaengine",
+    "arch": "X86"
+  },
+  {
+    "id": "luigi-s-mansion-3",
+    "name": "Luigi's Mansion 3",
+    "slug": "lm3",
+    "arch": "X64"
+  },
+  {
+    "id": "lego-harry-potter-collection",
+    "name": "Lego Harry Potter Collection",
+    "slug": "legohpc",
+    "arch": "X64"
+  },
+  {
+    "id": "monster-hunter-generations-ultimate",
+    "name": "Monster Hunter Generations Ultimate",
+    "slug": "mhgu",
+    "arch": "X64"
+  },
+  {
+    "id": "the-outer-worlds-2",
+    "name": "The Outer Worlds 2",
+    "slug": "outerworlds2",
+    "arch": "X64"
+  },
+  {
+    "id": "pragmata",
+    "name": "Pragmata",
+    "slug": "pragmata",
+    "arch": "X64"
+  },
+  {
+    "id": "red-dead-redemption",
+    "name": "Red Dead Redemption",
+    "slug": "rdr1",
+    "arch": "X64"
+  },
+  {
+    "id": "resident-evil-requiem",
+    "name": "Resident Evil Requiem",
+    "slug": "re9requiem",
+    "arch": "X64"
+  },
+  {
+    "id": "the-legend-of-zelda-breath-of-the-wild",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "slug": "botw",
+    "arch": "X64"
+  },
+  {
+    "id": "the-legend-of-zelda-tears-of-the-kingdom",
+    "name": "The Legend of Zelda: Tears of the Kingdom",
+    "slug": "totk",
+    "arch": "X64"
+  },
+  {
+    "id": "the-first-berserker-khazan",
+    "name": "The First Berserker: Khazan",
+    "slug": "bersekerKhazan",
+    "arch": "X64"
+  },
+  {
+    "id": "warhammer-40-000-darktide",
+    "name": "Warhammer 40,000: Darktide",
+    "slug": "darktide",
+    "arch": "X64"
+  },
+  {
+    "id": "dark-souls-3-ds3lightingengine-light",
+    "name": "Dark Souls 3 - DS3LightingEngine (light)",
+    "slug": "dark-souls-3-ds3lightingengine-light",
+    "arch": "X64"
+  },
+  {
+    "id": "sekirorendererupdate",
+    "name": "SekiroRendererUpdate",
+    "slug": "sekirorendererupdate",
+    "arch": "X64"
+  },
+  {
+    "id": "kingdom-come-deliverance-luma-native-hdr-steam-only",
+    "name": "Kingdom Come: Deliverance - Luma Native HDR (Steam ONLY)",
+    "slug": "kingdom-come-deliverance-luma-native-hdr-steam-only",
+    "arch": "X64"
+  },
+  {
+    "id": "luma-framework",
+    "name": "Luma Framework",
+    "slug": "luma-framework",
+    "arch": "X64"
+  },
+  {
+    "id": "this-war-of-mine",
+    "name": "This War of mine",
+    "slug": "this-war-of-mine",
+    "arch": "X64"
+  },
+  {
+    "id": "bioshock-remastered",
+    "name": "Bioshock Remastered",
+    "slug": "bioshock",
+    "arch": "X64"
+  }
 ]

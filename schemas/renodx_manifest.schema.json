@@ -2,103 +2,112 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://renderpilot.app/schema/renodx_manifest.schema.json",
   "title": "RenoDX manifest",
-  "description": "Three-layer RenoDX manifest: immutable content-addressed artifacts, reusable install recipes, and matchable titles. The Rust validator in renderpilot-orchestration (renodx::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
+  "description": "Overrides + catalogue manifest for RenoDX HDR installs. Carries NO hashes/sizes: add-ons are fetched live from upstream (clshortfuse.github.io and engine-generic repos), so this document only maps games to their slug + match rules + per-game overrides, plus the global ReShade sources, engine-generic fallbacks, and shared defaults. Schema version 3 introduces a top-level `defaults` block so the per-title `risk`/`min_app_version`/`channel`/`compatibility` boilerplate is emitted only when it deviates from the defaults (the app merges `defaults` with each title). The Rust validator in renderpilot-orchestration (renodx::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "generated_at", "artifacts", "recipes", "titles"],
+  "required": ["schema_version", "generated_at", "reshade", "generics", "defaults", "titles"],
   "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
-    "generated_at": { "type": "string", "description": "RFC 3339 timestamp." },
-    "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } },
-    "recipes": { "type": "array", "items": { "$ref": "#/$defs/recipe" } },
-    "titles": { "type": "array", "items": { "$ref": "#/$defs/title" } }
+    "schema_version": { "type": "integer", "const": 3 },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC 3339 timestamp, date-only granularity (T00:00:00Z). Honors SOURCE_DATE_EPOCH for reproducible builds."
+    },
+    "reshade": { "$ref": "#/$defs/reshade" },
+    "generics": {
+      "type": "array",
+      "description": "Engine-detected fallbacks, tried when no per-game title matches.",
+      "items": { "$ref": "#/$defs/generic" }
+    },
+    "defaults": {
+      "$ref": "#/$defs/defaults",
+      "description": "Shared title defaults. The app applies these to every title that omits the corresponding field; the generator only emits a per-title field when it differs from these."
+    },
+    "titles": { "type": "array", "items": { "$ref": "#/$defs/title" } },
+    "external": {
+      "type": "object",
+      "description": "Games whose add-on is distributed off-GitHub (Discord/Nexus); keyed by title id. The app shows a link + manual-install path instead of a direct install.",
+      "additionalProperties": { "$ref": "#/$defs/externalSource" }
+    },
+    "native_hdr": {
+      "type": "array",
+      "description": "Title ids of games with native HDR — RenoDX is not offered.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "blacklist": {
+      "type": "object",
+      "description": "Title ids → reason key for games where RenoDX is known-broken / unsupported.",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    }
   },
   "$defs": {
-    "sha256Hex": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
-    "artifactRef": { "type": "string", "pattern": "^sha256:[0-9a-fA-F]{64}$" },
+    "architecture": { "type": "string", "enum": ["X86", "X64"] },
     "graphicsApi": {
       "type": "string",
       "enum": ["D3D9", "D3D10", "D3D11", "D3D12", "OpenGl", "Vulkan", "Unknown"]
     },
-    "architecture": { "type": "string", "enum": ["X86", "X64"] },
-    "artifact": {
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "description": "RenoDX add-on slug = the upstream src/games folder name (e.g. cp2077, jedisurvivor, _univ). The add-on file is renodx-<slug>.addon64/32."
+    },
+    "httpsUrl": { "type": "string", "format": "uri", "pattern": "^https://" },
+    "engine": {
+      "type": "string",
+      "enum": ["unreal", "unreal_extended", "unity"],
+      "description": "Engine a generic fallback targets."
+    },
+    "semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Dotted triple, e.g. 1.0.0."
+    },
+    "reshade": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["sha256", "kind", "arch", "version", "size_bytes", "download", "provenance"],
+      "description": "Global add-on-enabled ReShade host sources. Stable = scraped from reshade.me; nightly = crosire CI via nightly.link.",
+      "required": ["nightly"],
       "properties": {
-        "sha256": {
-          "$ref": "#/$defs/sha256Hex",
-          "description": "Lowercase SHA-256 of the *decompressed* payload; the artifact's identity."
+        "reshade_me_base": {
+          "$ref": "#/$defs/httpsUrl",
+          "description": "Base URL scraped for ReShade_Setup_<ver>_Addon.exe (default https://reshade.me)."
         },
-        "kind": { "type": "string", "enum": ["renodx_addon", "reshade_dll"] },
-        "arch": { "$ref": "#/$defs/architecture" },
-        "version": { "type": "string", "minLength": 1 },
-        "size_bytes": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 524288000,
-          "description": "Decompressed payload size in bytes (max 500 MiB)."
-        },
-        "compression": { "type": "string", "enum": ["none", "zstd"], "default": "none" },
-        "download": {
+        "nightly": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["url", "host_policy"],
+          "required": ["url64", "url32"],
           "properties": {
-            "url": { "type": "string", "format": "uri", "pattern": "^https://" },
-            "host_policy": {
-              "type": "string",
-              "enum": ["mirror", "upstream"],
-              "description": "mirror = pinned CDN host; upstream = an allow-listed host (reshade.me / static.reshade.me)."
-            }
-          }
-        },
-        "provenance": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["author", "license", "credit"],
-          "properties": {
-            "author": { "type": "string", "minLength": 1 },
-            "license": { "type": "string", "minLength": 1 },
-            "credit": { "type": "string", "minLength": 1 },
-            "source_url": { "type": "string" },
-            "upstream_version": { "type": "string" },
-            "updated_at": { "type": "string" }
+            "url64": { "$ref": "#/$defs/httpsUrl" },
+            "url32": { "$ref": "#/$defs/httpsUrl" }
           }
         }
       }
     },
-    "recipe": {
+    "generic": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "addon_ref", "reshade_ref", "addon_file_name"],
+      "required": ["engine"],
+      "description": "An engine-generic add-on. Either a clshortfuse slug (default host) or explicit url64/url32 for generics hosted elsewhere (e.g. the Unity generic at NotVoosh/renodx-unity).",
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "addon_ref": {
-          "$ref": "#/$defs/artifactRef",
-          "description": "Must reference a `renodx_addon` artifact."
-        },
-        "reshade_ref": {
-          "$ref": "#/$defs/artifactRef",
-          "description": "Must reference a `reshade_dll` artifact."
-        },
-        "addon_file_name": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "^[^/\\\\]+$",
-          "description": "Bare file name, e.g. renodx-cp2077.addon64 (no path separators or `..`)."
-        },
-        "proxy_dll_override": { "type": "string", "pattern": "^[^/\\\\]+$" },
-        "min_reshade_version": { "type": "string" },
-        "reshade_ini": {
-          "type": "object",
-          "additionalProperties": false,
-          "properties": {
-            "disabled_addons": { "type": "array", "items": { "type": "string" } },
-            "addon_path": { "type": "string" }
-          }
-        },
-        "notes_keys": { "type": "array", "items": { "type": "string" } }
+        "engine": { "$ref": "#/$defs/engine" },
+        "slug": { "$ref": "#/$defs/slug" },
+        "url64": { "$ref": "#/$defs/httpsUrl" },
+        "url32": { "$ref": "#/$defs/httpsUrl" },
+        "label_key": { "type": "string", "minLength": 1 }
+      },
+      "oneOf": [
+        { "required": ["slug"] },
+        { "required": ["url64"] }
+      ]
+    },
+    "externalSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "label_key"],
+      "properties": {
+        "url": { "$ref": "#/$defs/httpsUrl" },
+        "label_key": { "type": "string", "minLength": 1 }
       }
     },
     "matchRule": {
@@ -121,11 +130,11 @@
     "compatibility": {
       "type": "object",
       "additionalProperties": false,
+      "description": "Compatibility constraints. When omitted, the app treats a title as {required_arch: title.arch, required_api: [], conflicts: []}. required_arch is therefore never emitted (it always equals arch); this object only appears when required_api or conflicts are non-empty.",
       "properties": {
-        "required_api": { "type": "array", "items": { "$ref": "#/$defs/graphicsApi" } },
+        "required_api": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/graphicsApi" } },
         "required_arch": { "$ref": "#/$defs/architecture" },
-        "min_reshade_version": { "type": "string" },
-        "conflicts": { "type": "array", "items": { "type": "string" } }
+        "conflicts": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
       }
     },
     "risk": {
@@ -141,23 +150,47 @@
         "source": { "type": "string" }
       }
     },
-    "title": {
+    "defaults": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "match", "risk", "recipe_ref"],
+      "required": ["risk", "min_app_version", "channel"],
+      "description": "Title defaults applied by the app when a title omits the field.",
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "name": { "type": "string", "minLength": 1 },
+        "risk": { "$ref": "#/$defs/risk" },
+        "min_app_version": { "$ref": "#/$defs/semver" },
         "channel": {
           "type": "string",
           "enum": ["stable", "beta", "snapshot"],
-          "default": "stable"
+          "description": "Default release channel. The generator derives stable for working titles and beta otherwise, then only emits a per-title channel when it differs from this default."
+        }
+      }
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "slug", "arch", "status", "match"],
+      "description": "An installable RenoDX title. risk / min_app_version / channel / compatibility are omitted when they equal the top-level defaults (the app merges).",
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "slug": { "$ref": "#/$defs/slug" },
+        "arch": { "$ref": "#/$defs/architecture" },
+        "status": {
+          "type": "string",
+          "enum": ["working", "construction", "unknown"],
+          "description": "Upstream wiki test-map status: working = verified, construction = WIP/experimental, unknown = untested."
         },
-        "min_app_version": { "type": "string" },
+        "channel": {
+          "type": "string",
+          "enum": ["stable", "beta", "snapshot"]
+        },
+        "min_app_version": { "$ref": "#/$defs/semver" },
         "match": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/matchRule" } },
         "compatibility": { "$ref": "#/$defs/compatibility" },
         "risk": { "$ref": "#/$defs/risk" },
-        "recipe_ref": { "type": "string", "minLength": 1 }
+        "proxy_dll_override": { "type": "string", "pattern": "^[^/\\\\]+$" },
+        "notes_keys": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "download_url": { "$ref": "#/$defs/httpsUrl", "description": "Direct download URL for add-ons hosted outside the official clshortfuse snapshot (e.g. a third-party github.io). The app fetches this instead of the snapshot asset." }
       }
     }
   }

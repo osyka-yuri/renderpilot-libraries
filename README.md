@@ -65,7 +65,8 @@ flowchart LR
 ├── dlss_d_presets.json            DLSS Ray Reconstruction presets per version
 ├── dlss_settings.json             NVAPI DLSS driver-settings catalog (bundled in-app)
 ├── schemas/                       JSON Schemas (draft 2020-12) for every manifest
-├── renodx_library_manifest/       RenoDX install-manifest authoring source (not yet published)
+├── renodx_manifest.json           RenoDX HDR overrides + catalogue (served; no binaries)
+├── renodx_library_manifest/       RenoDX manifest authoring source (generator + wiki inputs)
 ├── scripts/                       Node tooling — validate.mjs · publish-r2.mjs · catalog.mjs
 ├── cdn/                           zstd binaries (git-ignored; mirrored to R2)
 └── .github/workflows/publish.yml  validate → publish CI
@@ -81,30 +82,35 @@ Public origin: `https://pub-48612a35034d40f88f42b4181547925a.r2.dev/`
 | `dlss_presets.json` | DLSS Super Resolution presets | `dlss_preset_manifest.schema.json` |
 | `dlss_g_presets.json` | DLSS Frame Generation presets | `dlss_preset_manifest.schema.json` |
 | `dlss_d_presets.json` | DLSS Ray Reconstruction presets | `dlss_preset_manifest.schema.json` |
+| `renodx_manifest.json` | RenoDX HDR overrides + catalogue (no binaries) | `renodx_manifest.schema.json` |
 | `<id>_<version>.dll.zst` | zstd-compressed DLL payloads (one per catalog entry) | — |
 
 > `dlss_settings.json` is **bundled into the app** at compile time, so it is validated
 > here (as the source of that bundled copy) but **not** uploaded.
 
-## 🎮 RenoDX manifest (authoring source — not yet published)
+## 🎮 RenoDX manifest (served)
 
-`renodx_library_manifest/` is the authoring source for `renodx_manifest.json`, the curated
-RenoDX install manifest the app fetches from the R2 root. Schema: `schemas/renodx_manifest.schema.json`.
+`renodx_manifest.json` (repo root) is the RenoDX HDR **overrides + catalogue** the app fetches
+from the R2 root; `renodx_library_manifest/` is its authoring source. Schema:
+`schemas/renodx_manifest.schema.json`.
+
+Unlike the library catalogue it carries **no binaries or hashes** — RenoDX add-ons are rolling
+per-game snapshots fetched **live from upstream** (`clshortfuse.github.io`, engine-generic repos)
+at install time. The manifest only maps game → slug + match rules + per-game overrides, plus the
+global ReShade sources, engine generics, and a shared `defaults` block (risk / `min_app_version` /
+`channel` the app merges onto every title), so it publishes as plain JSON like the others. A title
+only repeats a field when it deviates from those defaults (schema v3).
 
 | File | Purpose |
 | :--- | :--- |
-| `renodx_manifest.json` | Generated manifest (238 titles · 210 recipes · 452 artifacts) |
-| `generate_manifest.py` | Offline, data-driven generator |
-| `wiki_games.json` | RenoDX wiki Mods table snapshot (one row per game) |
-| `match_overlay.json` | Per-title Steam AppIDs / exe / risk / conflicts overlay |
-| `pending_match.json` | Titles still lacking an AppID/exe (next-pass to-do) |
-| `PUBLISHING.md` | Full mirror + hashing + publish pipeline |
+| `renodx_manifest.json` (root) | Generated, served manifest — schema v3 (237 titles + engine generics; per-title boilerplate hoisted into `defaults`) |
+| `renodx_library_manifest/generate-manifest.mjs` | Offline generator (`npm run generate:renodx`) |
+| `renodx_library_manifest/wiki_games.json` | RenoDX wiki Mods snapshot (one row per game) |
+| `renodx_library_manifest/match_overlay.json` | Per-title AppIDs / exe / risk / category overlay |
+| `renodx_library_manifest/PUBLISHING.md` | Authoring & publish flow + the `check:slugs` gate |
 
-> **Not served yet.** Every artifact still carries placeholder `sha256` / `size_bytes`, so
-> the app would reject every install. Going live requires the steps in `PUBLISHING.md` —
-> mirror the RenoDX add-ons + the add-on-enabled ReShade DLL to R2, substitute the real
-> decompressed hashes/sizes, then serve `renodx_manifest.json` from the R2 root. Until then
-> CI validates its structure but never uploads it.
+> `npm run check:slugs` is the availability gate — it asserts every title's
+> `renodx-<slug>.addon*` exists in the upstream `snapshot` release before going live.
 
 ## 🧰 Tooling
 
@@ -147,7 +153,7 @@ JSON Schema (draft 2020-12), under `schemas/`:
 | `library_catalog.schema.json` | `manifest.json` |
 | `dlss_preset_manifest.schema.json` | the three `dlss_*_presets.json` |
 | `dlss_settings_catalog.schema.json` | `dlss_settings.json` |
-| `renodx_manifest.schema.json` | `renodx_library_manifest/renodx_manifest.json` |
+| `renodx_manifest.schema.json` | `renodx_manifest.json` |
 
 ## 📥 Adding a library version
 

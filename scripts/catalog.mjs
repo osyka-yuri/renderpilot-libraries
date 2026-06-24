@@ -15,21 +15,20 @@ export const schemaChecks = [
   { file: 'dlss_g_presets.json', schema: 'schemas/dlss_preset_manifest.schema.json' },
   { file: 'dlss_d_presets.json', schema: 'schemas/dlss_preset_manifest.schema.json' },
   { file: 'dlss_settings.json', schema: 'schemas/dlss_settings_catalog.schema.json' },
-  {
-    file: 'renodx_library_manifest/renodx_manifest.json',
-    schema: 'schemas/renodx_manifest.schema.json',
-  },
+  { file: 'renodx_manifest.json', schema: 'schemas/renodx_manifest.schema.json' },
 ];
 
 // The JSON the app fetches from R2 — the only documents CI publishes.
 // Deliberately excluded:
-//   - dlss_settings.json     bundled into the app at compile time, not fetched.
-//   - renodx_manifest.json   placeholder hashes; publishing it would break installs.
+//   - dlss_settings.json   bundled into the app at compile time, not fetched.
+// (renodx_manifest.json carries no hashes/binaries — add-ons are fetched live from
+//  upstream — so it is safe to publish; the slug-availability check guards content.)
 export const servedJson = [
   'manifest.json',
   'dlss_presets.json',
   'dlss_g_presets.json',
   'dlss_d_presets.json',
+  'renodx_manifest.json',
 ];
 
 // Cloudflare R2. The public host is the pinned download origin baked into every
