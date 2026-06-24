@@ -35,8 +35,8 @@
           },
           "family": {
             "type": "string",
-            "enum": ["sr", "fg", "rr"],
-            "description": "Grouping family for UI sectioning (sr=Super Resolution, fg=Frame Generation, rr=Ray Reconstruction)."
+            "enum": ["sr", "fg", "rr", "nr"],
+            "description": "Grouping family for UI sectioning (sr=Super Resolution, fg=Frame Generation, rr=Ray Reconstruction, nr=Neural Rendering)."
           },
           "nvapi_id": {
             "type": "string",
@@ -45,7 +45,7 @@
           },
           "dll_kind": {
             "type": "string",
-            "enum": ["sr", "fg", "rr"],
+            "enum": ["sr", "fg", "rr", "nr"],
             "description": "Set ONLY on forced-preset-letter settings; triggers DLL-version preset-manifest filtering of the value list."
           },
           "description": {
