@@ -1,0 +1,6 @@
+node_modules
+cdn
+scratch
+.gitattributes
+package-lock.json
+pnpm-lock.yaml

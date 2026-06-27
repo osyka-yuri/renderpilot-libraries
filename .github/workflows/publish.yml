@@ -2,7 +2,7 @@ name: Publish
 
 # Validate every JSON manifest against its schema, then — only on main —
 # publish the app-fetched JSON to Cloudflare R2. Binaries (cdn/*.dll.zst) are
-# not in git; the owner uploads them locally via `npm run publish`.
+# not in git; the owner uploads them locally via `pnpm run publish`.
 
 on:
   push:
@@ -20,12 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: npm
-      - run: npm ci
-      - run: npm run validate
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run check
 
   publish:
     name: Publish JSON manifests to R2
@@ -34,13 +35,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - name: Publish to R2 (JSON only)
-        run: npm run publish:json
+        run: pnpm run publish:json
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}

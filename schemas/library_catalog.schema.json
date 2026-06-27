@@ -23,14 +23,7 @@
   "$defs": {
     "Entry": {
       "type": "object",
-      "required": [
-        "entry_id",
-        "library",
-        "version",
-        "build",
-        "files",
-        "signature"
-      ],
+      "required": ["entry_id", "library", "version", "build", "files", "signature"],
       "additionalProperties": false,
       "properties": {
         "entry_id": {

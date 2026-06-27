@@ -3262,7 +3262,7 @@
         "file_name": "nvngx_dlss.dll"
       },
       "version": {
-"value":  "310.7.0.0",
+        "value": "310.7.0.0",
         "sort_key": "0310.0007.0000.0000"
       },
       "build": {
@@ -3882,7 +3882,7 @@
         "file_name": "nvngx_dlssd.dll"
       },
       "version": {
-"value":  "310.7.0.0",
+        "value": "310.7.0.0",
         "sort_key": "0310.0007.0000.0000"
       },
       "build": {
@@ -4905,7 +4905,7 @@
         "file_name": "nvngx_dlssg.dll"
       },
       "version": {
-"value":  "310.7.0.0",
+        "value": "310.7.0.0",
         "sort_key": "0310.0007.0000.0000"
       },
       "build": {
@@ -8563,7 +8563,7 @@
         "file_name": "sl.common.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8594,7 +8594,7 @@
         "file_name": "sl.deepdvc.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8625,7 +8625,7 @@
         "file_name": "sl.directsr.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8656,7 +8656,7 @@
         "file_name": "sl.dlss.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8687,7 +8687,7 @@
         "file_name": "sl.dlss_d.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8718,7 +8718,7 @@
         "file_name": "sl.dlss_g.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8749,7 +8749,7 @@
         "file_name": "sl.interposer.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8780,7 +8780,7 @@
         "file_name": "sl.nis.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8811,7 +8811,7 @@
         "file_name": "sl.nvperf.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8842,7 +8842,7 @@
         "file_name": "sl.pcl.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {
@@ -8873,7 +8873,7 @@
         "file_name": "sl.reflex.dll"
       },
       "version": {
-"value":  "2.12.0.0",
+        "value": "2.12.0.0",
         "sort_key": "0002.0012.0000.0000"
       },
       "build": {

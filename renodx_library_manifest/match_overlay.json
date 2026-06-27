@@ -94,7 +94,7 @@
     }
   },
   "borderlands-2-the-pre-sequel": {
-    "appid": "49520"
+    "appids": ["49520", "261640"]
   },
   "borderlands-4": {
     "appid": "1285190"
@@ -126,12 +126,8 @@
   },
   "cyberpunk-2077": {
     "appid": "1091500",
-    "conflicts": [
-      "special_k"
-    ],
-    "notes_keys": [
-      "renodx.note.cp2077.hdr10"
-    ]
+    "conflicts": ["special_k"],
+    "notes_keys": ["renodx.note.cp2077.hdr10"]
   },
   "dark-souls-remastered": {
     "appid": "570940",
@@ -150,7 +146,7 @@
     "appid": "462780"
   },
   "dead-island-definitive-edition": {
-    "appid": "383150",
+    "appids": ["383150", "383180"],
     "download_url": "https://notvoosh.github.io/renodx/renodx-deadislandde.addon64"
   },
   "dead-island-2": {
@@ -181,7 +177,7 @@
     "appid": "2054970"
   },
   "dragon-quest-xi": {
-    "appid": "1295510",
+    "appids": ["742120", "1295510"],
     "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
   },
   "dragon-ball-sparking-zero": {
@@ -567,7 +563,7 @@
     "download_url": "https://akuru-q.github.io/renodx/renodx-sonsoftheforest.addon64"
   },
   "spec-ops-the-line": {
-    "exe": "specops_the_line.exe"
+    "appid": "50300"
   },
   "splinter-cell-blacklist": {
     "appid": "235600"
@@ -750,9 +746,6 @@
       "message_key": "renodx.risk.anticheat_banrisk"
     }
   },
-  "persona-5-royal-2": {
-    "appid": "1687950"
-  },
   "ori-and-the-blind-forest-definitive-edition": {
     "appid": "387290"
   },
@@ -822,7 +815,7 @@
     "appid": "1281930"
   },
   "atelier-ryza-1": {
-    "appid": "1138750",
+    "appid": "1121560",
     "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64"
   },
   "trails-of-cold-steel": {
@@ -894,102 +887,116 @@
     ]
   },
   "ys-x-nordics": {
-    "appids": [
-      "2570810",
-      "2731870"
-    ],
+    "appids": ["2570810", "2731870"],
     "download_url": "https://marat569.github.io/renodx/renodx-ys10.addon64"
   },
   "ys-x-proud-nordics": {
-    "appids": [
-      "3821790",
-      "3949290"
-    ],
+    "appids": ["3821790", "3949290"],
     "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-ys10pn.addon64"
   },
   "clive-barker-s-jericho": {
-    "exe": "jericho.exe"
+    "appid": "11420"
   },
   "sonic-unleashed-recompiled": {
     "exe": "UnleashedRecomp.exe",
     "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64"
   },
   "assassin-s-creed-ezio-trilogy-dgvoodoo": {
+    "appids": ["33230", "48190", "201870"],
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedii/mods/250",
       "label_key": "renodx.external.nexus"
     }
   },
   "assassin-s-creed-iii-original": {
+    "appid": "208480",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreediii/mods/161",
       "label_key": "renodx.external.nexus"
     }
   },
   "assassin-s-creed-iii-remastered": {
+    "appid": "911400",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
       "label_key": "renodx.external.nexus"
     }
   },
   "assassin-s-creed-syndicate": {
+    "appid": "368500",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
       "label_key": "renodx.external.nexus"
     }
   },
   "assassin-s-creed-unity": {
+    "appid": "289650",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
       "label_key": "renodx.external.nexus"
     }
   },
   "berserk-and-the-band-of-the-hawk": {
+    "appid": "502280",
     "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64"
   },
   "black-myth-wukong": {
+    "appid": "2358720",
     "slug": "bmw"
   },
   "crysis-remastered": {
+    "appid": "1715130",
     "external": {
       "url": "https://discord.com/invite/renodx",
       "label_key": "renodx.external.discord"
     }
   },
   "dirt-4": {
+    "appid": "421020",
+    "exe": "dirt4.exe",
     "external": {
       "url": "https://www.nexusmods.com/dirt4/mods/3",
       "label_key": "renodx.external.nexus"
     }
   },
   "dirt-rally-2-0": {
+    "appid": "690790",
     "slug": "dirtrally2"
   },
   "far-cry-primal": {
+    "appid": "371660",
     "external": {
       "url": "https://www.nexusmods.com/farcryprimal/mods/28",
       "label_key": "renodx.external.nexus"
     }
   },
   "girls-frontline-2-exilium": {
+    "appid": "3347400",
     "slug": "gfl2"
   },
   "ghost-recon-wildlands": {
+    "appid": "460930",
     "external": {
       "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
       "label_key": "renodx.external.nexus"
     }
   },
   "heaven-burns-red": {
+    "appid": "1973710",
     "download_url": "https://pmnoxx.github.io/renodx/renodx-_hbr.addon64"
+  },
+  "james-cameron-s-avatar-the-game": {
+    "appid": "33280"
   },
   "luigi-s-mansion-3": {
     "download_url": "https://souperman9.github.io/renodx/renodx-lm3.addon64"
   },
   "lego-harry-potter-collection": {
+    "appid": "2950340",
     "download_url": "https://souperman9.github.io/renodx/renodx-legohpc.addon64"
   },
   "mirror-s-edge": {
+    "appid": "17410",
     "external": {
       "url": "https://www.nexusmods.com/mirrorsedge/mods/24",
       "label_key": "renodx.external.nexus"
@@ -999,27 +1006,33 @@
     "download_url": "https://souperman9.github.io/renodx/renodx-mhgu.addon64"
   },
   "no-man-s-sky": {
+    "appid": "275850",
     "external": {
       "url": "https://www.nexusmods.com/nomanssky/mods/4061",
       "label_key": "renodx.external.nexus"
     }
   },
   "the-outer-worlds-2": {
+    "appid": "1449110",
     "slug": "outerworlds2"
   },
   "red-dead-redemption": {
+    "appid": "2668510",
     "slug": "rdr1"
   },
   "red-dead-redemption-2-vulkan": {
+    "appid": "1174180",
     "external": {
       "url": "https://discord.com/invite/renodx",
       "label_key": "renodx.external.discord"
     }
   },
   "resident-evil-requiem": {
+    "appid": "3764200",
     "slug": "re9requiem"
   },
   "steep": {
+    "appid": "460920",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
       "label_key": "renodx.external.nexus"
@@ -1032,24 +1045,29 @@
     "download_url": "https://souperman9.github.io/renodx/renodx-totk.addon64"
   },
   "the-first-berserker-khazan": {
+    "appid": "2680010",
     "download_url": "https://marat569.github.io/renodx/renodx-bersekerKhazan.addon64"
   },
   "warhammer-40-000-darktide": {
+    "appid": "1361210",
     "slug": "darktide"
   },
   "control-hdr-ultrawide-dlss-rt-patch": {
+    "appid": "870780",
     "external": {
       "url": "https://www.nexusmods.com/control/mods/90",
       "label_key": "renodx.external.nexus"
     }
   },
   "dark-souls-2-ds2lightingengine-sotfs": {
+    "appid": "335300",
     "external": {
       "url": "https://www.nexusmods.com/darksouls2/mods/1146",
       "label_key": "renodx.external.nexus"
     }
   },
   "prey-remastered-luma": {
+    "appid": "480490",
     "external": {
       "url": "https://www.nexusmods.com/prey2017/mods/149",
       "label_key": "renodx.external.nexus"
@@ -1062,6 +1080,29 @@
     }
   },
   "bioshock-remastered": {
+    "appid": "409710",
     "slug": "bioshock"
+  },
+  "avowed": {
+    "appid": "2457220"
+  },
+  "baldur-s-gate-3": {
+    "appid": "1086940"
+  },
+  "cronos-the-new-dawn": {
+    "appid": "2101960"
+  },
+  "digimon-story-time-stranger": {
+    "appid": "1984270"
+  },
+  "pragmata": {
+    "appid": "3357650"
+  },
+  "dark-souls-3-ds3lightingengine-light": {
+    "appid": "374320",
+    "external": {
+      "url": "https://discord.gg/BCxEWGKJcD",
+      "label_key": "renodx.external.discord"
+    }
   }
 }
