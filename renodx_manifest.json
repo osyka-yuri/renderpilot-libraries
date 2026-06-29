@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-06-27T00:00:00Z",
+  "generated_at": "2026-06-28T00:00:00Z",
   "reshade": {
-    "reshade_me_base": "https://reshade.me",
+    "stable": { "url": "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe" },
     "nightly": {
       "url64": "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(64-bit).zip",
       "url32": "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(32-bit).zip"
@@ -11,6 +11,7 @@
   "generics": [
     {
       "engine": "unity",
+      "slug": "unityengine",
       "url64": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon64",
       "url32": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon32",
       "label_key": "renodx.generic.unity"

@@ -2,9 +2,11 @@
 // Build-time guard: assert every installable RenoDX title's add-on exists
 // in the clshortfuse snapshot release.
 //
-// The app derives `renodx-<slug>.addon64|32` and fetches it live from the
-// snapshot release, so a slug that is not published there would create a dead
-// Install button.
+// Snapshot-hosted entries derive `renodx-<slug>.addon64|32` and fetch it live
+// from the snapshot release, so a slug that is not published there would create
+// a dead Install button. Entries with explicit URL overrides can still carry a
+// slug as their canonical local identity; their URL basename must match that
+// local identity so a user-downloaded add-on is the same file the app manages.
 //
 // Snapshot-hosted:
 //   - normal installable titles without `download_url`;
@@ -24,19 +26,18 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { repoRoot } from "./catalog.mjs";
+import {
+  MAX_ISSUES_TO_PRINT,
+  assertManifestShape,
+  checkExplicitAddonNames,
+  checkGenerics,
+  checkTitles,
+} from "./lib/renodx-slug-checks.mjs";
 
 const SNAPSHOT_API =
   "https://api.github.com/repos/clshortfuse/renodx/releases/tags/snapshot";
 
 const USER_AGENT = "renderpilot-libraries";
-const MAX_MISSING_TO_PRINT = 40;
-
-const OFF_SNAPSHOT_TITLE_KINDS = new Set(["external", "native_hdr", "blacklist"]);
-
-const ADDON_EXTENSION_BY_ARCH = new Map([
-  ["X64", "addon64"],
-  ["X86", "addon32"],
-]);
 
 class SnapshotUnavailableError extends Error {
   constructor(message, options) {
@@ -113,145 +114,20 @@ async function snapshotAssetNames() {
   );
 }
 
-function isRecord(value) {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
-function requiredString(value, fieldName) {
-  if (typeof value !== "string" || value.trim() === "") {
-    throw new Error(`${fieldName} must be a non-empty string`);
+function printIssues(header, issues) {
+  if (issues.length === 0) {
+    return;
   }
 
-  return value.trim();
-}
+  console.error(header);
 
-function assertManifestShape(manifest) {
-  if (!isRecord(manifest)) {
-    throw new Error("renodx_manifest.json must contain a JSON object");
+  for (const item of issues.slice(0, MAX_ISSUES_TO_PRINT)) {
+    console.error(`  - ${item}`);
   }
 
-  if (!Array.isArray(manifest.titles)) {
-    throw new Error("renodx_manifest.json must contain a `titles` array");
+  if (issues.length > MAX_ISSUES_TO_PRINT) {
+    console.error(`  …and ${issues.length - MAX_ISSUES_TO_PRINT} more`);
   }
-
-  if (!Array.isArray(manifest.generics)) {
-    throw new Error("renodx_manifest.json must contain a `generics` array");
-  }
-}
-
-function assertTitle(title, index) {
-  if (!isRecord(title)) {
-    throw new Error(`titles[${index}] must be an object`);
-  }
-}
-
-function assertGeneric(generic, index) {
-  if (!isRecord(generic)) {
-    throw new Error(`generics[${index}] must be an object`);
-  }
-}
-
-function titleLabel(title, index) {
-  return typeof title.id === "string" && title.id.trim() !== ""
-    ? title.id.trim()
-    : `titles[${index}]`;
-}
-
-function genericLabel(generic, index) {
-  return typeof generic.engine === "string" && generic.engine.trim() !== ""
-    ? `generic:${generic.engine.trim()}`
-    : `generics[${index}]`;
-}
-
-function isOffSnapshotTitle(title) {
-  if (title.download_url) {
-    return true;
-  }
-
-  return OFF_SNAPSHOT_TITLE_KINDS.has(title.category?.kind);
-}
-
-function isSnapshotHostedGeneric(generic) {
-  return Boolean(generic.slug) && !generic.url64 && !generic.url32 && !generic.download_url;
-}
-
-function addonFile(slug, arch) {
-  const extension = ADDON_EXTENSION_BY_ARCH.get(arch);
-
-  if (!extension) {
-    throw new Error(
-      `Unsupported RenoDX architecture "${arch}". Expected one of: ${[
-        ...ADDON_EXTENSION_BY_ARCH.keys(),
-      ].join(", ")}`,
-    );
-  }
-
-  return `renodx-${slug}.${extension}`;
-}
-
-function expectedTitleAddon(title, index) {
-  const label = titleLabel(title, index);
-  const slug = requiredString(title.slug, `${label}.slug`);
-  const arch = requiredString(title.arch, `${label}.arch`);
-
-  return addonFile(slug, arch);
-}
-
-function expectedGenericAddon(generic, index) {
-  const label = genericLabel(generic, index);
-  const slug = requiredString(generic.slug, `${label}.slug`);
-
-  return addonFile(slug, "X64");
-}
-
-function checkTitles(titles, assets) {
-  const missing = [];
-  let checked = 0;
-  let skipped = 0;
-
-  for (const [index, title] of titles.entries()) {
-    assertTitle(title, index);
-
-    if (isOffSnapshotTitle(title)) {
-      skipped++;
-      continue;
-    }
-
-    checked++;
-
-    const expectedAddon = expectedTitleAddon(title, index);
-
-    if (!assets.has(expectedAddon)) {
-      missing.push(`${titleLabel(title, index)} (${expectedAddon})`);
-    }
-  }
-
-  return { checked, skipped, missing };
-}
-
-function checkGenerics(generics, assets) {
-  const missing = [];
-  let checked = 0;
-  let skipped = 0;
-
-  for (const [index, generic] of generics.entries()) {
-    assertGeneric(generic, index);
-
-    if (!isSnapshotHostedGeneric(generic)) {
-      skipped++;
-      continue;
-    }
-
-    checked++;
-
-    const expectedAddon = expectedGenericAddon(generic, index);
-
-    if (!assets.has(expectedAddon)) {
-      missing.push(`${genericLabel(generic, index)} (${expectedAddon})`);
-    }
-  }
-
-  return { checked, skipped, missing };
 }
 
 function printMissingAndFail(missing) {
@@ -260,13 +136,24 @@ function printMissingAndFail(missing) {
       "`external`, add an explicit download URL, or drop them:",
   );
 
-  for (const item of missing.slice(0, MAX_MISSING_TO_PRINT)) {
+  for (const item of missing.slice(0, MAX_ISSUES_TO_PRINT)) {
     console.error(`  - ${item}`);
   }
 
-  if (missing.length > MAX_MISSING_TO_PRINT) {
-    console.error(`  …and ${missing.length - MAX_MISSING_TO_PRINT} more`);
+  if (missing.length > MAX_ISSUES_TO_PRINT) {
+    console.error(`  …and ${missing.length - MAX_ISSUES_TO_PRINT} more`);
   }
+
+  process.exitCode = 1;
+}
+
+function printExplicitCheckErrorsAndFail({ structural, mismatches }) {
+  const total = structural.length + mismatches.length;
+
+  console.error(`\n✗ ${total} explicit add-on URL problem(s) found:`);
+
+  printIssues("  structural:", structural);
+  printIssues("  basename mismatches:", mismatches);
 
   process.exitCode = 1;
 }
@@ -274,6 +161,19 @@ function printMissingAndFail(missing) {
 async function main() {
   const manifest = await readJson("renodx_manifest.json");
   assertManifestShape(manifest);
+
+  const explicitResult = checkExplicitAddonNames(manifest);
+
+  if (explicitResult.structural.length > 0 || explicitResult.mismatches.length > 0) {
+    printExplicitCheckErrorsAndFail(explicitResult);
+    return;
+  }
+
+  console.log(
+    `✓ explicit RenoDX add-on URLs match canonical local names ` +
+      `(${explicitResult.checked} URLs checked, ` +
+      `${explicitResult.skipped} entries skipped).`,
+  );
 
   let assets;
 

@@ -9,7 +9,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "check": "pnpm run format:check && pnpm run validate && pnpm run check:renodx-generated && pnpm run test:renodx && pnpm run check:slugs",
+    "check": "pnpm run format:check && pnpm run validate && pnpm run check:renodx-generated && pnpm run test:renodx && pnpm run test:scripts && pnpm run check:slugs",
     "validate": "node scripts/validate.mjs",
     "check:slugs": "node scripts/check-renodx-slugs.mjs",
     "check:renodx-generated": "node renodx_library_manifest/generate-manifest.mjs --check",
@@ -17,6 +17,7 @@
     "generate:renodx": "node renodx_library_manifest/generate-manifest.mjs",
     "sync:wiki": "node scripts/sync-wiki.mjs && pnpm run generate:renodx",
     "test:renodx": "node --test \"renodx_library_manifest/test/*.test.mjs\"",
+    "test:scripts": "node --test \"scripts/test/*.test.mjs\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "publish": "node scripts/publish-r2.mjs",

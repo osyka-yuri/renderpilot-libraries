@@ -30,7 +30,9 @@ export const DEFAULTS = deepFreeze({
 });
 
 export const RESHADE = deepFreeze({
-  reshade_me_base: "https://reshade.me",
+  stable: {
+    url: "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe",
+  },
   nightly: {
     url64:
       "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(64-bit).zip",
@@ -42,6 +44,7 @@ export const RESHADE = deepFreeze({
 export const GENERICS = deepFreeze([
   {
     engine: "unity",
+    slug: "unityengine",
     url64:
       "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon64",
     url32:

@@ -62,12 +62,19 @@
     "reshade": {
       "type": "object",
       "additionalProperties": false,
-      "description": "Global add-on-enabled ReShade host sources. Stable = scraped from reshade.me; nightly = crosire CI via nightly.link.",
-      "required": ["nightly"],
+      "description": "Global add-on-enabled ReShade host sources. Stable is the manifest-current versioned reshade.me add-on installer; nightly is crosire CI via nightly.link.",
+      "required": ["stable", "nightly"],
       "properties": {
-        "reshade_me_base": {
-          "$ref": "#/$defs/httpsUrl",
-          "description": "Base URL scraped for ReShade_Setup_<ver>_Addon.exe (default https://reshade.me)."
+        "stable": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url"],
+          "properties": {
+            "url": {
+              "$ref": "#/$defs/httpsUrl",
+              "description": "Versioned reshade.me ReShade_Setup_<version>_Addon.exe URL. Update this manifest field when stable advances."
+            }
+          }
         },
         "nightly": {
           "type": "object",
@@ -84,7 +91,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["engine"],
-      "description": "An engine-generic add-on. Either a clshortfuse slug (default host) or explicit url64/url32 for generics hosted elsewhere (e.g. the Unity generic at NotVoosh/renodx-unity).",
+      "description": "An engine-generic add-on. `slug` is the canonical local add-on identity; optional explicit url64/url32 override the download host for generics published outside clshortfuse.github.io (e.g. Unity at NotVoosh/renodx-unity). Entries without a slug must provide both explicit URLs.",
       "properties": {
         "engine": { "$ref": "#/$defs/engine" },
         "slug": { "$ref": "#/$defs/slug" },
@@ -92,7 +99,11 @@
         "url32": { "$ref": "#/$defs/httpsUrl" },
         "label_key": { "type": "string", "minLength": 1 }
       },
-      "oneOf": [{ "required": ["slug"] }, { "required": ["url64", "url32"] }]
+      "dependentRequired": {
+        "url64": ["url32"],
+        "url32": ["url64"]
+      },
+      "anyOf": [{ "required": ["slug"] }, { "required": ["url64", "url32"] }]
     },
     "category": {
       "description": "How a matched game is routed. Omitted = installable (a normal RenoDX install); the other kinds categorize the game and carry their payload.",
