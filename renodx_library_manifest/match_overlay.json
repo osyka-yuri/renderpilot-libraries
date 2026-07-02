@@ -518,9 +518,7 @@
     "appids": ["1313140"]
   },
   "cyberpunk-2077": {
-    "appid": "1091500",
-    "conflicts": ["special_k"],
-    "notes_keys": ["renodx.note.cp2077.hdr10"]
+    "appid": "1091500"
   },
   "daemon-x-machina": {
     "appids": ["1167450"]

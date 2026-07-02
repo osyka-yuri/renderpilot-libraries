@@ -329,6 +329,10 @@ function applyCompatibility(title, overlay) {
     compatibility.conflicts = overlay.conflicts;
   }
 
+  if (overlay.compatibility_source) {
+    compatibility.source = overlay.compatibility_source;
+  }
+
   if (Object.keys(compatibility).length > 0) {
     title.compatibility = compatibility;
   }

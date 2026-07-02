@@ -693,9 +693,7 @@
       "arch": "X64",
       "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1091500", "tier": 100 }],
-      "channel": "beta",
-      "compatibility": { "conflicts": ["special_k"] },
-      "notes_keys": ["renodx.note.cp2077.hdr10"]
+      "channel": "beta"
     },
     {
       "id": "dark-souls-remastered",

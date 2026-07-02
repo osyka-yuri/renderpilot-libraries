@@ -10,6 +10,7 @@ export const KNOWN_OVERLAY_FIELDS = new Set([
   "required_api",
   "notes_keys",
   "proxy_dll_override",
+  "compatibility_source",
   "download_url",
   "min_app_version",
   "external",
@@ -143,6 +144,7 @@ function validateOverlayShape(overlay, context) {
   }
 
   validateOptionalStringArray(overlay.conflicts, `${context}.conflicts`);
+  validateOptionalString(overlay.compatibility_source, `${context}.compatibility_source`);
   validateOptionalStringArray(overlay.required_api, `${context}.required_api`);
   validateOptionalStringArray(overlay.notes_keys, `${context}.notes_keys`);
   validateOptionalString(overlay.proxy_dll_override, `${context}.proxy_dll_override`);

@@ -82,6 +82,7 @@ Overlay keys (under the title id) — all optional, merged onto the defaults:
 | `download_url`             | direct URL for an installable add-on hosted off the clshortfuse snapshot; cannot be combined with `category` markers           |
 | `risk`                     | partial override merged onto `defaults.risk` (e.g. `{anticheat_engine:"eac",online:"coop",severity:"warn",message_key:"..."}`) |
 | `conflicts`                | add-on conflict ids → emitted as `compatibility.conflicts`                                                                     |
+| `compatibility_source`     | provenance URL/note for `conflicts`; emitted as `compatibility.source`, required when `conflicts` is set                       |
 | `required_api`             | required graphics APIs → emitted as `compatibility.required_api`                                                               |
 | `notes_keys`               | localized note keys shown for the title                                                                                        |
 | `proxy_dll_override`       | override the injected proxy DLL file name                                                                                      |
