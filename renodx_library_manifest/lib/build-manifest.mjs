@@ -150,6 +150,11 @@ export function buildManifest({
     const appids = normalizeAppids(entry, context);
     const exe = normalizeExeName(entry.exe, `${context}.exe`);
 
+    if (entry.ignore) {
+      // Cleanly skip duplicate or broken wiki entries so they don't clutter pending_match
+      return;
+    }
+
     if (appids.length === 0 && !exe) {
       pending.push({ id, name, slug, arch });
       return;

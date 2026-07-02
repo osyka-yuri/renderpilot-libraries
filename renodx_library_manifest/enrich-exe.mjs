@@ -4,7 +4,6 @@
 // non-Steam installs by exe_name without making generate-manifest.mjs networked.
 
 import { rename, rm } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
 
 import { gameExesFromAppinfo } from "./lib/steam-appinfo.mjs";
 import {
@@ -19,8 +18,10 @@ import {
   writeFormattedJsonFile,
 } from "./lib/json.mjs";
 
-const OVERLAY_FILE = fileURLToPath(new URL("./match_overlay.json", import.meta.url));
-const CACHE_FILE = fileURLToPath(new URL("./appid_exe.json", import.meta.url));
+import path from "node:path";
+
+const OVERLAY_FILE = path.join(import.meta.dirname, "match_overlay.json");
+const CACHE_FILE = path.join(import.meta.dirname, "appid_exe.json");
 
 const STEAMCMD_INFO_API = (appid) => `https://api.steamcmd.net/v1/info/${appid}`;
 

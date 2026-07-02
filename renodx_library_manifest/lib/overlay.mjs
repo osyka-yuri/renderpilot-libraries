@@ -16,6 +16,7 @@ export const KNOWN_OVERLAY_FIELDS = new Set([
   "native_hdr",
   "blacklist",
   "split",
+  "ignore",
 ]);
 
 export const KNOWN_SPLIT_FIELDS = new Set([...KNOWN_OVERLAY_FIELDS, "suffix", "name"]);

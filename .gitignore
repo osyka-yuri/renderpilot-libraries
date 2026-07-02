@@ -17,3 +17,7 @@ Thumbs.db
 # Temporary extraction folders
 **/temp/
 **/extract/
+
+# Local generator outputs
+scripts/.cache/
+renodx_library_manifest/unmatched.json

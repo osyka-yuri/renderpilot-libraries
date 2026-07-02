@@ -20,7 +20,6 @@
 
 import { readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { isPlainObject, assertPlainObject } from "./lib/common.mjs";
 import {
   extractMarkdownTables,
@@ -28,7 +27,7 @@ import {
   parseWikiRow,
 } from "./lib/sync-wiki-parsing.mjs";
 
-const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
+const SCRIPT_DIR = import.meta.dirname;
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
 
 const WIKI_URL = "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md";

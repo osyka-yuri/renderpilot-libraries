@@ -7,7 +7,6 @@
 
 import { existsSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 import { buildManifest, generatedAtFromEnv } from "./lib/build-manifest.mjs";
 import {
@@ -17,7 +16,7 @@ import {
   stringifyFormattedJson,
 } from "./lib/json.mjs";
 
-const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
+const SCRIPT_DIR = import.meta.dirname;
 const REPO_ROOT = path.join(SCRIPT_DIR, "..");
 
 const FILES = Object.freeze({

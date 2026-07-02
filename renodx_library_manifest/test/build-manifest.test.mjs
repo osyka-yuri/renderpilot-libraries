@@ -63,6 +63,22 @@ test("buildManifest keeps unmatched categorized rows pending", () => {
   ]);
 });
 
+test("buildManifest drops items with ignore flag entirely", () => {
+  const result = buildManifest({
+    generatedAt: "2026-06-27T00:00:00Z",
+    wiki: [game("garbage-game", "Garbage Game")],
+    overlay: {
+      "garbage-game": {
+        ignore: true,
+      },
+    },
+    warn: () => {},
+  });
+
+  assert.equal(result.manifest.titles.length, 0);
+  assert.deepEqual(result.pending, []); // NOT in pending
+});
+
 test("buildManifest rejects duplicate match rules across titles", () => {
   assert.throws(
     () =>

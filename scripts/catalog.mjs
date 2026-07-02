@@ -8,9 +8,8 @@
 // validation and publishing rules cannot drift apart.
 
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
-const moduleDir = path.dirname(fileURLToPath(import.meta.url));
+const moduleDir = import.meta.dirname;
 
 export const repoRoot = path.resolve(moduleDir, "..");
 
