@@ -85,20 +85,24 @@ export function extractMarkdownTables(markdown) {
 
 export function getModsTableHeaderColumns(headers) {
   const nameIndex = headers.findIndex((h) => h === "name");
-  // Some tables use status, some might lack it, but we need both Name and either Status or Maintainer
-  // actually, the main table uses Name and Maintainer. Unity table uses Name, Status, Notes.
-  const isMainTable = headers.includes("maintainer");
-  const isEngineTable = headers.includes("status");
+  const maintainerIndex = headers.findIndex((h) => h === "maintainer");
+  const statusIndex = headers.findIndex((h) => h === "status");
+  const linksIndex = headers.findIndex((h) => h === "links");
+  const notesIndex = headers.findIndex((h) => h === "notes");
 
-  if (nameIndex < 0 || (!isMainTable && !isEngineTable)) {
+  // A valid mods table must at least have a Name column and one other characteristic column.
+  const hasSupportingColumn = maintainerIndex >= 0 || statusIndex >= 0 || linksIndex >= 0;
+
+  if (nameIndex < 0 || !hasSupportingColumn) {
     return null;
   }
 
   return {
     nameIndex,
-    statusIndex: headers.findIndex((h) => h === "status" || h === "maintainer"),
-    linksIndex: headers.findIndex((h) => h === "links"),
-    notesIndex: headers.findIndex((h) => h === "notes"),
+    maintainerIndex,
+    statusIndex,
+    linksIndex,
+    notesIndex,
   };
 }
 
@@ -127,21 +131,27 @@ export function parseStatus(statusColumn) {
   return "unknown";
 }
 
+function getCellValue(columns, index) {
+  if (index >= 0 && index < columns.length) {
+    return columns[index] ?? "";
+  }
+  return "";
+}
+
 export function parseWikiRow(columns, columnsMapping, engineContext) {
   if (columns.length < 2) {
     return null;
   }
 
-  const name = extractMarkdownLinkLabel(columns[columnsMapping.nameIndex]);
+  const name = extractMarkdownLinkLabel(getCellValue(columns, columnsMapping.nameIndex));
 
   if (!name) {
     return null;
   }
 
-  const linksColumn =
-    columnsMapping.linksIndex >= 0 ? (columns[columnsMapping.linksIndex] ?? "") : "";
-  const notesColumn =
-    columnsMapping.notesIndex >= 0 ? (columns[columnsMapping.notesIndex] ?? "") : "";
+  const linksColumn = getCellValue(columns, columnsMapping.linksIndex);
+  const notesColumn = getCellValue(columns, columnsMapping.notesIndex);
+  const statusColumn = getCellValue(columns, columnsMapping.statusIndex);
 
   const addonMatch = linksColumn.match(ADDON_URL_RE);
   const addonUrl = addonMatch?.[1] ?? null;
@@ -164,7 +174,7 @@ export function parseWikiRow(columns, columnsMapping, engineContext) {
 
   return {
     name,
-    status: parseStatus(columns[columnsMapping.statusIndex] ?? ""),
+    status: parseStatus(statusColumn),
     addonUrl,
     arch,
     addonSlug,

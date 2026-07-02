@@ -2107,7 +2107,11 @@
     "appid": "1716740"
   },
   "starfield-luma-native-hdr-and-more": {
-    "ignore": true
+    "ignore": true,
+    "external": {
+      "url": "https://www.nexusmods.com/starfield/mods/4821",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "steamworld-build": {
     "appids": ["2134770"]
@@ -2798,5 +2802,23 @@
   },
   "luma-framework": {
     "ignore": true
+  },
+  "mario-kart-8-deluxe": {
+    "external": {
+      "url": "https://www.nexusmods.com/mariokart8deluxe/mods/57",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "the-legend-of-zelda-breath-of-the-wild": {
+    "external": {
+      "url": "https://www.nexusmods.com/legendofzeldabreathofthewild/mods/100",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "the-legend-of-zelda-tears-of-the-kingdom": {
+    "external": {
+      "url": "https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/175",
+      "label_key": "renodx.external.nexus"
+    }
   }
 }

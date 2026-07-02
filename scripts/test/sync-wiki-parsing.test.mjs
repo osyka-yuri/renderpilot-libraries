@@ -97,3 +97,42 @@ test("parseStatus correctly translates emoji to status", () => {
   assert.equal(parseStatus("🚧"), "construction");
   assert.equal(parseStatus("something else"), "unknown");
 });
+
+test("getModsTableHeaderColumns maps all known columns correctly", () => {
+  const headers = ["name", "maintainer", "links", "status", "notes"];
+  const mapping = getModsTableHeaderColumns(headers);
+  assert.deepEqual(mapping, {
+    nameIndex: 0,
+    maintainerIndex: 1,
+    linksIndex: 2,
+    statusIndex: 3,
+    notesIndex: 4,
+  });
+});
+
+test("getModsTableHeaderColumns handles missing columns gracefully", () => {
+  const headers = ["name", "maintainer", "links"];
+  const mapping = getModsTableHeaderColumns(headers);
+  assert.deepEqual(mapping, {
+    nameIndex: 0,
+    maintainerIndex: 1,
+    linksIndex: 2,
+    statusIndex: -1,
+    notesIndex: -1,
+  });
+});
+
+test("getModsTableHeaderColumns rejects invalid tables", () => {
+  assert.equal(getModsTableHeaderColumns(["status", "notes"]), null); // Missing name
+  assert.equal(getModsTableHeaderColumns(["name", "random1", "random2"]), null); // Missing supporting columns
+});
+
+test("parseWikiRow handles out of bounds column access gracefully", () => {
+  const columnsMapping = { nameIndex: 0, statusIndex: 3, linksIndex: -1, notesIndex: -1 };
+  // Only 2 columns provided
+  const row = parseWikiRow(["Game", "Maintainer"], columnsMapping, "unity");
+
+  assert.ok(row);
+  assert.equal(row.name, "Game");
+  assert.equal(row.status, "unknown"); // statusIndex is 3, out of bounds
+});
