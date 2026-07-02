@@ -21,6 +21,12 @@
 import { readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isPlainObject, assertPlainObject } from "./lib/common.mjs";
+import {
+  extractMarkdownTables,
+  getModsTableHeaderColumns,
+  parseWikiRow,
+} from "./lib/sync-wiki-parsing.mjs";
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
@@ -73,22 +79,9 @@ function slugify(name) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }
-
-function isPlainObject(value) {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
 function assertArray(value, label) {
   if (!Array.isArray(value)) {
     throw new Error(`${label} must be a JSON array.`);
-  }
-
-  return value;
-}
-
-function assertPlainObject(value, label) {
-  if (!isPlainObject(value)) {
-    throw new Error(`${label} must be a JSON object.`);
   }
 
   return value;
@@ -183,136 +176,23 @@ async function fetchSnapshotAssets() {
   }
 }
 
-function splitMarkdownTableRow(line) {
-  const trimmed = line.trim();
-
-  if (!trimmed.startsWith("|")) {
-    return [];
-  }
-
-  const body = trimmed.endsWith("|") ? trimmed.slice(1, -1) : trimmed.slice(1);
-
-  const cells = [];
-  let cell = "";
-  let escaped = false;
-
-  for (const char of body) {
-    if (escaped) {
-      cell += char;
-      escaped = false;
-      continue;
-    }
-
-    if (char === "\\") {
-      escaped = true;
-      continue;
-    }
-
-    if (char === "|") {
-      cells.push(cell.trim());
-      cell = "";
-      continue;
-    }
-
-    cell += char;
-  }
-
-  cells.push(cell.trim());
-  return cells;
-}
-
-function isModsTableHeader(line) {
-  return /^\|\s*Name\s*\|/i.test(line) && /\|\s*Maintainer\s*\|/i.test(line);
-}
-
-function isTableSeparator(line) {
-  return /^\|\s*:?-{3,}:?\s*\|/.test(line.trim());
-}
-
-function extractMarkdownLinkLabel(value) {
-  const match = String(value).match(/\[([^\]]+)]\([^)]+\)/);
-  return (match?.[1] ?? value).trim();
-}
-
-function extractUrl(value, regex) {
-  return (
-    String(value)
-      .match(regex)?.[1]
-      ?.replace(/[.,;]+$/, "") ?? null
-  );
-}
-
-function parseStatus(statusColumn) {
-  if (statusColumn.includes(":white_check_mark:") || statusColumn.includes("✅")) {
-    return "working";
-  }
-
-  if (statusColumn.includes(":construction:") || statusColumn.includes("🚧")) {
-    return "construction";
-  }
-
-  return "unknown";
-}
-
-function parseWikiRow(line) {
-  const columns = splitMarkdownTableRow(line);
-
-  if (columns.length < 4) {
-    return null;
-  }
-
-  const name = extractMarkdownLinkLabel(columns[0]);
-
-  if (!name) {
-    return null;
-  }
-
-  const linksColumn = columns[2] ?? "";
-  const addonMatch = linksColumn.match(ADDON_URL_RE);
-  const addonUrl = addonMatch?.[1] ?? null;
-  const arch = addonMatch?.[2] === "32" ? "X86" : "X64";
-
-  const addonSlug =
-    addonUrl?.match(/renodx-([a-zA-Z0-9_-]+)\.addon(?:32|64)/i)?.[1] ?? null;
-
-  return {
-    name,
-    status: parseStatus(columns[3] ?? ""),
-    addonUrl,
-    arch,
-    addonSlug,
-    nexusUrl: extractUrl(linksColumn, NEXUS_URL_RE),
-    discordUrl: extractUrl(linksColumn, DISCORD_URL_RE),
-  };
-}
-
 function parseWikiRows(markdown) {
+  const tables = extractMarkdownTables(markdown);
   const rows = [];
-  let inModsTable = false;
   let sawModsTable = false;
 
-  for (const line of markdown.split(/\r?\n/)) {
-    if (!inModsTable) {
-      if (isModsTableHeader(line)) {
-        inModsTable = true;
-        sawModsTable = true;
+  for (const table of tables) {
+    const columnsMapping = getModsTableHeaderColumns(table.headers);
+    if (!columnsMapping) {
+      continue;
+    }
+
+    sawModsTable = true;
+    for (const cells of table.rows) {
+      const row = parseWikiRow(cells, columnsMapping, table.engineContext);
+      if (row) {
+        rows.push(row);
       }
-
-      continue;
-    }
-
-    if (isTableSeparator(line)) {
-      continue;
-    }
-
-    if (!line.trimStart().startsWith("|")) {
-      break;
-    }
-
-    const row = parseWikiRow(line);
-
-    if (row) {
-      rows.push(row);
     }
   }
 
@@ -552,7 +432,10 @@ function reconcileWikiRows({ rows, existingWiki, overlay, officialAssets }) {
     const id = resolveId(row.name, lookups);
 
     if (seenIds.has(id)) {
-      throw new Error(`Wiki produced duplicate id "${id}" while processing "${row.name}".`);
+      console.warn(
+        `Wiki produced duplicate id "${id}" while processing "${row.name}", skipping duplicate row.`,
+      );
+      continue;
     }
 
     seenIds.add(id);

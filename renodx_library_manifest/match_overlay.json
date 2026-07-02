@@ -380,15 +380,24 @@
   },
   "like-a-dragon-pirate-yakuza-in-hawaii": {
     "appid": "3061810",
-    "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "like-a-dragon-gaiden-the-man-who-erased-his-name": {
     "appid": "2375550",
-    "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "like-a-dragon-infinite-wealth": {
     "appid": "2072450",
-    "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "mad-max": {
     "appid": "234140"
@@ -836,7 +845,10 @@
         "appid": "1668540"
       }
     ],
-    "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+    "external": {
+      "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
+      "label_key": "renodx.external.discord"
+    }
   },
   "trails-through-daybreak-1-2": {
     "split": [
@@ -888,7 +900,10 @@
   },
   "ys-x-nordics": {
     "appids": ["2570810", "2731870"],
-    "download_url": "https://marat569.github.io/renodx/renodx-ys10.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/ysxnordics/mods/11",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "ys-x-proud-nordics": {
     "appids": ["3821790", "3949290"],
@@ -993,7 +1008,10 @@
   },
   "lego-harry-potter-collection": {
     "appid": "2950340",
-    "download_url": "https://souperman9.github.io/renodx/renodx-legohpc.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/legoharrypottercollection/mods/4",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "mirror-s-edge": {
     "appid": "17410",
@@ -1039,10 +1057,16 @@
     }
   },
   "the-legend-of-zelda-breath-of-the-wild": {
-    "download_url": "https://souperman9.github.io/renodx/renodx-botw.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/legendofzeldabreathofthewild/mods/100",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "the-legend-of-zelda-tears-of-the-kingdom": {
-    "download_url": "https://souperman9.github.io/renodx/renodx-totk.addon64"
+    "external": {
+      "url": "https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/175",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "the-first-berserker-khazan": {
     "appid": "2680010",
@@ -1103,6 +1127,21 @@
     "external": {
       "url": "https://discord.gg/BCxEWGKJcD",
       "label_key": "renodx.external.discord"
+    }
+  },
+  "greedfall-the-dying-world": {
+    "download_url": "https://github.com/RankFTW/renodx/releases/download/snapshot/renodx-greedfall2.addon64"
+  },
+  "mario-kart-8-deluxe": {
+    "external": {
+      "url": "https://www.nexusmods.com/mariokart8deluxe/mods/57",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "xenoblade-chronicles-x-definitive-edition": {
+    "external": {
+      "url": "https://www.nexusmods.com/xenobladechroniclesx/mods/12",
+      "label_key": "renodx.external.nexus"
     }
   }
 }

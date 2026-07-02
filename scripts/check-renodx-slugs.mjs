@@ -34,30 +34,7 @@ import {
   checkTitles,
 } from "./lib/renodx-slug-checks.mjs";
 
-const SNAPSHOT_API =
-  "https://api.github.com/repos/clshortfuse/renodx/releases/tags/snapshot";
-
-const USER_AGENT = "renderpilot-libraries";
-
-class SnapshotUnavailableError extends Error {
-  constructor(message, options) {
-    super(message, options);
-    this.name = "SnapshotUnavailableError";
-  }
-}
-
-function githubHeaders() {
-  const headers = {
-    "User-Agent": USER_AGENT,
-    Accept: "application/vnd.github+json",
-  };
-
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-  }
-
-  return headers;
-}
+import { fetchSnapshotRelease, SnapshotUnavailableError } from "./lib/github.mjs";
 
 async function readJson(relativePath) {
   const filePath = path.join(repoRoot, relativePath);
@@ -67,32 +44,6 @@ async function readJson(relativePath) {
     return JSON.parse(contents);
   } catch (err) {
     throw new Error(`Could not parse ${relativePath}: ${err.message}`, {
-      cause: err,
-    });
-  }
-}
-
-async function fetchSnapshotRelease() {
-  let res;
-
-  try {
-    res = await fetch(SNAPSHOT_API, { headers: githubHeaders() });
-  } catch (err) {
-    throw new SnapshotUnavailableError(`request failed: ${err.message}`, {
-      cause: err,
-    });
-  }
-
-  if (!res.ok) {
-    throw new SnapshotUnavailableError(
-      `GitHub API returned ${res.status} ${res.statusText}`,
-    );
-  }
-
-  try {
-    return await res.json();
-  } catch (err) {
-    throw new SnapshotUnavailableError(`GitHub API returned invalid JSON: ${err.message}`, {
       cause: err,
     });
   }
@@ -131,18 +82,11 @@ function printIssues(header, issues) {
 }
 
 function printMissingAndFail(missing) {
-  console.error(
+  printIssues(
     `\n✗ ${missing.length} add-on(s) are missing upstream — mark them ` +
       "`external`, add an explicit download URL, or drop them:",
+    missing,
   );
-
-  for (const item of missing.slice(0, MAX_ISSUES_TO_PRINT)) {
-    console.error(`  - ${item}`);
-  }
-
-  if (missing.length > MAX_ISSUES_TO_PRINT) {
-    console.error(`  …and ${missing.length - MAX_ISSUES_TO_PRINT} more`);
-  }
 
   process.exitCode = 1;
 }
@@ -192,7 +136,7 @@ async function main() {
 
   console.log(`Snapshot release: ${assets.size} assets.`);
 
-  const titleResult = checkTitles(manifest.titles, assets);
+  const titleResult = checkTitles(manifest.titles, manifest.generics, assets);
   const genericResult = checkGenerics(manifest.generics, assets);
 
   const missing = [...titleResult.missing, ...genericResult.missing];

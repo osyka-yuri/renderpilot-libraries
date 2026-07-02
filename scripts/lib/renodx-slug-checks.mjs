@@ -6,27 +6,20 @@
 // fetch, the console output, and `main`.
 
 import path from "node:path";
+import {
+  isPlainObject as isRecord,
+  requiredNonEmptyString as requiredString,
+} from "./common.mjs";
+import {
+  ADDON_EXTENSION_BY_ARCH,
+  addonFile,
+  addonBasenameFromUrl,
+  sameFileName,
+} from "./addon-naming.mjs";
 
 export const OFF_SNAPSHOT_TITLE_KINDS = new Set(["external", "native_hdr", "blacklist"]);
 
-export const ADDON_EXTENSION_BY_ARCH = new Map([
-  ["X64", "addon64"],
-  ["X86", "addon32"],
-]);
-
 export const MAX_ISSUES_TO_PRINT = 40;
-
-export function isRecord(value) {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
-export function requiredString(value, fieldName) {
-  if (typeof value !== "string" || value.trim() === "") {
-    throw new Error(`${fieldName} must be a non-empty string`);
-  }
-
-  return value.trim();
-}
 
 export function assertManifestShape(manifest) {
   if (!isRecord(manifest)) {
@@ -78,45 +71,6 @@ export function isSnapshotHostedGeneric(generic) {
   return Boolean(generic.slug) && !generic.url64 && !generic.url32 && !generic.download_url;
 }
 
-export function addonFile(slug, arch) {
-  const extension = ADDON_EXTENSION_BY_ARCH.get(arch);
-
-  if (!extension) {
-    throw new Error(
-      `Unsupported RenoDX architecture "${arch}". Expected one of: ${[
-        ...ADDON_EXTENSION_BY_ARCH.keys(),
-      ].join(", ")}`,
-    );
-  }
-
-  return `renodx-${slug}.${extension}`;
-}
-
-export function addonBasenameFromUrl(url, fieldName) {
-  const value = requiredString(url, fieldName);
-  let parsed;
-
-  try {
-    parsed = new URL(value);
-  } catch (err) {
-    throw new Error(`${fieldName} must be a valid URL: ${err.message}`, {
-      cause: err,
-    });
-  }
-
-  const basename = path.posix.basename(parsed.pathname);
-
-  if (!basename || basename === "." || basename === "/") {
-    throw new Error(`${fieldName} must end with an add-on file name`);
-  }
-
-  return basename;
-}
-
-export function sameFileName(left, right) {
-  return left.toLowerCase() === right.toLowerCase();
-}
-
 export function expectedTitleAddon(title, index) {
   const label = titleLabel(title, index);
   const slug = requiredString(title.slug, `${label}.slug`);
@@ -132,15 +86,19 @@ export function expectedGenericAddon(generic, index) {
   return addonFile(slug, "X64");
 }
 
-export function checkTitles(titles, assets) {
+export function checkTitles(titles, generics, assets) {
   const missing = [];
   let checked = 0;
   let skipped = 0;
 
+  const offSnapshotSlugs = new Set(
+    generics.filter((g) => !isSnapshotHostedGeneric(g)).map((g) => g.slug),
+  );
+
   for (const [index, title] of titles.entries()) {
     assertTitle(title, index);
 
-    if (isOffSnapshotTitle(title)) {
+    if (isOffSnapshotTitle(title) || offSnapshotSlugs.has(title.slug)) {
       skipped++;
       continue;
     }

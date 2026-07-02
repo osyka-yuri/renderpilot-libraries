@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-06-28T00:00:00Z",
+  "generated_at": "2026-07-02T00:00:00Z",
   "reshade": {
     "stable": { "url": "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe" },
     "nightly": {
@@ -36,59 +36,64 @@
       "name": "007 First Light",
       "slug": "007firstlight",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3768760", "tier": 100 },
         { "kind": "exe_name", "value": "007FirstLight.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "1000xresist",
       "name": "1000xResist",
       "slug": "1000xresist",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1675830", "tier": 100 },
         { "kind": "exe_name", "value": "1000xRESIST.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "absolum",
       "name": "Absolum",
       "slug": "absolum",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1904480", "tier": 100 },
         { "kind": "exe_name", "value": "Absolum.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "ai-the-somnium-files",
       "name": "AI: The Somnium Files",
       "slug": "aisomniumfiles",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "948740", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "948740", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "alice-madness-returns",
       "name": "Alice: Madness Returns",
       "slug": "alicemadnessreturns",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "19680", "tier": 100 },
         { "kind": "exe_name", "value": "AliceMadnessReturns.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "alien-isolation",
       "name": "Alien: Isolation",
       "slug": "alienisolation",
-      "arch": "X86",
-      "status": "construction",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "214490", "tier": 100 },
         { "kind": "exe_name", "value": "AI.exe", "tier": 70 }
@@ -100,7 +105,7 @@
       "name": "Against The Storm",
       "slug": "_univ",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1336490", "tier": 100 },
         { "kind": "exe_name", "value": "Against the Storm.exe", "tier": 70 }
@@ -113,7 +118,7 @@
       "name": "Animal Well",
       "slug": "animalwell",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "813230", "tier": 100 },
         { "kind": "exe_name", "value": "Animal Well.exe", "tier": 70 }
@@ -125,19 +130,21 @@
       "name": "A Plague Tale: Innocence",
       "slug": "aptinnocence",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "752590", "tier": 100 },
         { "kind": "exe_name", "value": "APlagueTaleInnocence_x64.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "armored-core-vi-fires-of-rubicon",
       "name": "Armored Core VI: Fires of Rubicon",
       "slug": "fromsoft_engine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1888160", "tier": 100 }],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "eac",
         "online": "pvp",
@@ -151,19 +158,20 @@
       "id": "assassin-s-creed-director-s-cut-edition",
       "name": "Assassin's Creed™: Director's Cut Edition (DX10)",
       "slug": "asscreed1",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "15100", "tier": 100 },
         { "kind": "exe_name", "value": "AssassinsCreed_Game.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassin-s-creed-ezio-trilogy-dgvoodoo",
       "name": "Assassin’s Creed® Ezio Trilogy (dgVoodoo)",
       "slug": "assassin-s-creed-ezio-trilogy-dgvoodoo",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedii/mods/250",
@@ -184,7 +192,7 @@
       "name": "Assassin’s Creed® III Original",
       "slug": "assassin-s-creed-iii-original",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreediii/mods/161",
@@ -193,14 +201,15 @@
       "match": [
         { "kind": "steam_appid", "value": "208480", "tier": 100 },
         { "kind": "exe_name", "value": "AC3SP.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassin-s-creed-iii-remastered",
       "name": "Assassin’s Creed® III Remastered",
       "slug": "assassin-s-creed-iii-remastered",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
@@ -210,14 +219,15 @@
         { "kind": "steam_appid", "value": "911400", "tier": 100 },
         { "kind": "exe_name", "value": "ACIII.exe", "tier": 70 },
         { "kind": "exe_name", "value": "ACLiberation.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassins-creed-iv-black-flag",
       "name": "Assassin’s Creed® IV Black Flag™",
       "slug": "asscreedblackflag",
-      "arch": "X86",
-      "status": "construction",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "242050", "tier": 100 },
         { "kind": "exe_name", "value": "AC4BFSP.exe", "tier": 70 }
@@ -229,51 +239,55 @@
       "name": "Assassin’s Creed® Mirage",
       "slug": "asscreedmirage",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3035570", "tier": 100 },
         { "kind": "exe_name", "value": "ACMirage.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassins-creed-origins",
       "name": "Assassin’s Creed® Origins",
       "slug": "asscreedorigins-odyssey",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "582160", "tier": 100 },
         { "kind": "exe_name", "value": "ACOrigins.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassins-creed-odyssey",
       "name": "Assassin’s Creed® Odyssey",
       "slug": "asscreedorigins-odyssey",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "812140", "tier": 100 },
         { "kind": "exe_name", "value": "ACOdyssey.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassins-creed-shadows",
       "name": "Assassin’s Creed® Shadows",
       "slug": "asscreedshadows",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3159330", "tier": 100 },
         { "kind": "exe_name", "value": "ACShadows.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassin-s-creed-syndicate",
       "name": "Assassin’s Creed® Syndicate",
       "slug": "assassin-s-creed-syndicate",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
@@ -282,14 +296,15 @@
       "match": [
         { "kind": "steam_appid", "value": "368500", "tier": 100 },
         { "kind": "exe_name", "value": "ACS.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassin-s-creed-unity",
       "name": "Assassin’s Creed® Unity",
       "slug": "assassin-s-creed-unity",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
@@ -298,29 +313,32 @@
       "match": [
         { "kind": "steam_appid", "value": "289650", "tier": 100 },
         { "kind": "exe_name", "value": "ACU.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "assassins-creed-valhalla",
       "name": "Assassin’s Creed® Valhalla",
       "slug": "asscreedvalhalla",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2208920", "tier": 100 },
         { "kind": "exe_name", "value": "ACValhalla.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "atelier-ryza-1",
       "name": "Atelier Ryza 1",
       "slug": "ryza",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1121560", "tier": 100 },
         { "kind": "exe_name", "value": "Atelier_Ryza.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64"
     },
     {
@@ -328,11 +346,12 @@
       "name": "Atelier Ryza 2",
       "slug": "ryza2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3365040", "tier": 100 },
         { "kind": "exe_name", "value": "Atelier_Ryza_2_DX.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-ryza2.addon64"
     },
     {
@@ -340,11 +359,12 @@
       "name": "Atelier Ryza 3",
       "slug": "ryza3",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3365050", "tier": 100 },
         { "kind": "exe_name", "value": "Atelier_Ryza_3_DX.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-ryza3.addon64"
     },
     {
@@ -352,19 +372,21 @@
       "name": "Atelier Ryza DX",
       "slug": "atelierryzadx",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3365030", "tier": 100 },
         { "kind": "exe_name", "value": "Atelier_Ryza_DX.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "atelier-sophie-1-dx",
       "name": "Atelier Sophie 1 DX",
       "slug": "sophie1",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1502970", "tier": 100 }],
+      "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-sophie1.addon64"
     },
     {
@@ -372,7 +394,7 @@
       "name": "Atelier Yumia: The Alchemist of Memories & the Envisioned Land",
       "slug": "yumia1",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3123410", "tier": 100 },
         { "kind": "exe_name", "value": "Atelier_Yumia.exe", "tier": 70 }
@@ -385,68 +407,74 @@
       "name": "Atlas Fallen (DX12)",
       "slug": "atlasfallen",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1230530", "tier": 100 },
         { "kind": "exe_name", "value": "AtlasFallen.exe", "tier": 70 },
         { "kind": "exe_name", "value": "AtlasFallen (DirectX 12).exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "avatar-frontiers-of-pandora",
       "name": "Avatar: Frontiers of Pandora™",
       "slug": "avatarfop-swoutlaws",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2840770", "tier": 100 },
         { "kind": "exe_name", "value": "afop.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "avowed",
       "name": "Avowed",
       "slug": "avowed",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2457220", "tier": 100 },
         { "kind": "exe_name", "value": "Avowed.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "baldur-s-gate-3",
       "name": "Baldur's Gate 3",
       "slug": "baldursgate3",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1086940", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1086940", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "batman-arkham-knight",
       "name": "Batman: Arkham Knight",
       "slug": "batmanak",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "208650", "tier": 100 },
         { "kind": "exe_name", "value": "BatmanAK.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "batman-arkham-asylum",
       "name": "Batman: Arkham Asylum",
       "slug": "batmanaa",
-      "arch": "X86",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "35140", "tier": 100 }]
+      "arch": "X64",
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "35140", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "berserk-and-the-band-of-the-hawk",
       "name": "BERSERK and the Band of the Hawk",
       "slug": "BerserkBotH",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "502280", "tier": 100 },
         { "kind": "exe_name", "value": "BERSERK.exe", "tier": 70 }
@@ -459,30 +487,33 @@
       "name": "Beyond Blue",
       "slug": "beyondblue",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "883360", "tier": 100 },
         { "kind": "exe_name", "value": "BeyondBlue.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "black-myth-wukong",
       "name": "Black Myth: Wukong",
       "slug": "bmw",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2358720", "tier": 100 },
         { "kind": "exe_name", "value": "b1.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "black-desert-online",
       "name": "Black Desert Online",
       "slug": "black-desert-online",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "582660", "tier": 100 }],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "unknown",
         "online": "pvp",
@@ -496,97 +527,105 @@
       "id": "borderlands-2-the-pre-sequel",
       "name": "Borderlands 2 & The Pre-Sequel",
       "slug": "borderlands2",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "49520", "tier": 100 },
         { "kind": "steam_appid", "value": "261640", "tier": 100 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "borderlands-4",
       "name": "Borderlands 4",
       "slug": "borderlands4",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1285190", "tier": 100 },
         { "kind": "exe_name", "value": "Borderlands4.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "bulletstorm-full-clip-edition",
       "name": "Bulletstorm: Full Clip Edition",
       "slug": "bulletstormfullclip",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "501590", "tier": 100 },
         { "kind": "exe_name", "value": "StormGame-Win64-Shipping.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "call-of-juarez",
       "name": "Call of Juarez (dx10)",
       "slug": "callofjuarez",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3020", "tier": 100 },
         { "kind": "exe_name", "value": "CoJ.exe", "tier": 70 },
         { "kind": "exe_name", "value": "CoJ_DX10.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "castlevania-lords-of-shadow",
       "name": "Castlevania Lords of Shadow",
       "slug": "castlevanialos",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "234080", "tier": 100 },
         { "kind": "exe_name", "value": "castlevanialosue.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "child-of-light",
       "name": "Child of Light",
       "slug": "childoflight",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "256290", "tier": 100 },
         { "kind": "exe_name", "value": "ChildofLight.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "citizen-sleeper-2",
       "name": "Citizen Sleeper 2",
       "slug": "citizensleeper2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2442460", "tier": 100 },
         { "kind": "exe_name", "value": "Citizen Sleeper 2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "clair-obscur-expedition-33",
       "name": "Clair Obscur: Expedition 33",
       "slug": "clairobscur_expedition33",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1903340", "tier": 100 },
         { "kind": "exe_name", "value": "Expedition33_Steam.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "clive-barker-s-jericho",
       "name": "Clive Barker's Jericho",
       "slug": "clivebarkersjericho",
-      "arch": "X86",
-      "status": "construction",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "11420", "tier": 100 },
         { "kind": "exe_name", "value": "jericho.exe", "tier": 70 }
@@ -598,7 +637,7 @@
       "name": "CODE VEIN II",
       "slug": "codevein2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2362060", "tier": 100 },
         { "kind": "exe_name", "value": "CodeVein2.exe", "tier": 70 }
@@ -611,7 +650,7 @@
       "name": "Crimson Desert",
       "slug": "crimsondesert",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3321460", "tier": 100 },
         { "kind": "exe_name", "value": "CrimsonDesert.exe", "tier": 70 }
@@ -623,18 +662,19 @@
       "name": "Cronos: The New Dawn",
       "slug": "cronosthenewdawn",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2101960", "tier": 100 },
         { "kind": "exe_name", "value": "Cronos.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "crysis-remastered",
       "name": "Crysis Remastered",
       "slug": "crysis-remastered",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://discord.com/invite/renodx",
@@ -651,8 +691,9 @@
       "name": "Cyberpunk 2077",
       "slug": "cp2077",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1091500", "tier": 100 }],
+      "channel": "beta",
       "compatibility": { "conflicts": ["special_k"] },
       "notes_keys": ["renodx.note.cp2077.hdr10"]
     },
@@ -661,11 +702,12 @@
       "name": "Dark Souls: Remastered",
       "slug": "darksouls",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "570940", "tier": 100 },
         { "kind": "exe_name", "value": "DarkSoulsRemastered.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "eac",
         "online": "coop",
@@ -680,7 +722,7 @@
       "name": "Darkest Dungeon 2",
       "slug": "_univ",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1940340", "tier": 100 },
         { "kind": "exe_name", "value": "Darkest Dungeon II.exe", "tier": 70 }
@@ -692,19 +734,20 @@
       "id": "darksiders-warmastered-edition",
       "name": "Darksiders Warmastered Edition",
       "slug": "darksiders-warmastered",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "462780", "tier": 100 },
         { "kind": "exe_name", "value": "darksiders1.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "dead-island-definitive-edition",
       "name": "Dead Island (& Riptide) Definitive Edition",
       "slug": "deadislandde",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "383150", "tier": 100 },
         { "kind": "steam_appid", "value": "383180", "tier": 100 },
@@ -719,18 +762,19 @@
       "name": "Dead Island 2",
       "slug": "deadisland2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "934700", "tier": 100 },
         { "kind": "exe_name", "value": "DeadIsland.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "death-stranding-director-s-cut",
       "name": "Death Stranding : Director's Cut",
       "slug": "deathstrandingdc",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1850570", "tier": 100 },
         { "kind": "exe_name", "value": "ds.exe", "tier": 70 }
@@ -742,40 +786,43 @@
       "name": "Death Stranding 2",
       "slug": "deathstranding2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3280350", "tier": 100 },
         { "kind": "exe_name", "value": "DS2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "deus-ex-mankind-divided",
       "name": "Deus Ex: Mankind Divided",
       "slug": "dxmd",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "337000", "tier": 100 },
         { "kind": "exe_name", "value": "DXMD.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "devil-may-cry-v",
       "name": "Devil May Cry V",
       "slug": "dmc5",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "601150", "tier": 100 },
         { "kind": "exe_name", "value": "DevilMayCry5.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "digimon-story-time-stranger",
       "name": "Digimon Story: Time Stranger",
       "slug": "digimonstorytimestranger",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1984270", "tier": 100 },
         { "kind": "exe_name", "value": "Digimon Story Time Stranger.exe", "tier": 70 }
@@ -787,7 +834,7 @@
       "name": "DiRT 4",
       "slug": "dirt-4",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/dirt4/mods/3",
@@ -796,69 +843,76 @@
       "match": [
         { "kind": "steam_appid", "value": "421020", "tier": 100 },
         { "kind": "exe_name", "value": "dirt4.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "dirt-rally-2-0",
       "name": "DiRT Rally 2.0",
       "slug": "dirtrally2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "690790", "tier": 100 },
         { "kind": "exe_name", "value": "dirtrally2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "dishonored",
       "name": "Dishonored",
       "slug": "dishonored",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "205100", "tier": 100 },
         { "kind": "exe_name", "value": "Dishonored.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "doom-the-dark-ages",
       "name": "DOOM: The Dark Ages",
       "slug": "doom-tda",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "3017860", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "3017860", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "dragon-age-inquisition",
       "name": "Dragon Age: Inquisition",
       "slug": "dai",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1222690", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1222690", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "dragon-s-dogma-2",
       "name": "Dragon's Dogma 2",
       "slug": "dragonsdogma2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2054970", "tier": 100 },
         { "kind": "exe_name", "value": "DD2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "dragon-quest-xi",
       "name": "Dragon Quest XI (Original & DE)",
       "slug": "dragonquest-ue",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "742120", "tier": 100 },
         { "kind": "steam_appid", "value": "1295510", "tier": 100 },
         { "kind": "exe_name", "value": "DRAGON QUEST XI.exe", "tier": 70 },
         { "kind": "exe_name", "value": "DRAGON QUEST XI S.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
     },
     {
@@ -879,22 +933,24 @@
       "name": "DRAGON BALL: Sparking! ZERO",
       "slug": "dbzspark",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1790600", "tier": 100 },
         { "kind": "exe_name", "value": "SparkingZERO.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "dying-light",
       "name": "Dying Light",
       "slug": "dyinglight",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "239140", "tier": 100 },
         { "kind": "exe_name", "value": "DyingLightGame.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "unknown",
         "online": "coop",
@@ -909,19 +965,21 @@
       "name": "Dying Light: The Beast",
       "slug": "dyinglightthebeast",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3008130", "tier": 100 },
         { "kind": "exe_name", "value": "DyingLightGame_TheBeast_x64_rwdi.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "elden-ring",
       "name": "Elden Ring",
       "slug": "fromsoft_engine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1245620", "tier": 100 }],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "eac",
         "online": "coop",
@@ -936,8 +994,9 @@
       "name": "Elden Ring: Nightreign",
       "slug": "fromsoft_engine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "2622380", "tier": 100 }],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "eac",
         "online": "coop",
@@ -952,7 +1011,7 @@
       "name": "ENDER MAGNOLIA: Bloom in the Mist",
       "slug": "endermagnolia",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2725260", "tier": 100 },
         { "kind": "exe_name", "value": "EnderMagnolia.exe", "tier": 70 }
@@ -965,7 +1024,7 @@
       "name": "FANTASIAN Neo Dimension",
       "slug": "fantasianneodimension",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2844850", "tier": 100 },
         { "kind": "exe_name", "value": "FantasianND.exe", "tier": 70 }
@@ -978,19 +1037,21 @@
       "name": "Fallout 4",
       "slug": "fallout4",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "377160", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "377160", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "fallout-76",
       "name": "Fallout 76",
       "slug": "fallout76",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1151340", "tier": 100 },
         { "kind": "exe_name", "value": "Fallout76.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "unknown",
         "online": "pvp",
@@ -1004,49 +1065,53 @@
       "id": "far-cry-2",
       "name": "Far Cry 2 (dx10)",
       "slug": "duniaengine",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "19900", "tier": 100 },
         { "kind": "exe_name", "value": "FarCry2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "far-cry-3",
       "name": "Far Cry 3 (dx11)",
       "slug": "duniaengine",
-      "arch": "X86",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "220240", "tier": 100 }]
+      "arch": "X64",
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "220240", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "far-cry-5",
       "name": "Far Cry 5",
       "slug": "farcry5",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "552520", "tier": 100 },
         { "kind": "exe_name", "value": "FarCry5.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "far-cry-6",
       "name": "Far Cry 6",
       "slug": "farcry6",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2369390", "tier": 100 },
         { "kind": "exe_name", "value": "FarCry6.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "far-cry-primal",
       "name": "Far Cry Primal",
       "slug": "far-cry-primal",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/farcryprimal/mods/28",
@@ -1055,14 +1120,15 @@
       "match": [
         { "kind": "steam_appid", "value": "371660", "tier": 100 },
         { "kind": "exe_name", "value": "FCPrimal.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "fate-samurai-remnant",
       "name": "Fate/Samurai Remnant",
       "slug": "fatesamurairemnant",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1902690", "tier": 100 },
         { "kind": "exe_name", "value": "FateSamuraiRemnant.exe", "tier": 70 }
@@ -1075,41 +1141,45 @@
       "name": "Final Fantasy 7 : Rebirth",
       "slug": "ff7rebirth",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2909400", "tier": 100 },
         { "kind": "exe_name", "value": "ff7rebirth.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "final-fantasy-7-remake",
       "name": "Final Fantasy 7 : Remake",
       "slug": "ff7remake",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1462040", "tier": 100 },
         { "kind": "exe_name", "value": "ff7remake.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "final-fantasy-x",
       "name": "Final Fantasy X",
       "slug": "ffx",
-      "arch": "X86",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "359870", "tier": 100 }]
+      "arch": "X64",
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "359870", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "final-fantasy-xiv",
       "name": "Final Fantasy XIV",
       "slug": "ffxiv",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "39210", "tier": 100 },
         { "kind": "exe_name", "value": "ffxivboot.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "unknown",
         "online": "pvp",
@@ -1124,22 +1194,24 @@
       "name": "Final Fantasy XV",
       "slug": "ffxv",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "637650", "tier": 100 },
         { "kind": "exe_name", "value": "ffxv_s.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "forza-horizon-6",
       "name": "Forza Horizon 6",
       "slug": "forzahorizon6",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2483190", "tier": 100 },
         { "kind": "exe_name", "value": "forzahorizon6.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://oopydoopy.github.io/renodx/renodx-forzahorizon6.addon64"
     },
     {
@@ -1147,18 +1219,19 @@
       "name": "GIRLS' FRONTLINE 2: EXILIUM",
       "slug": "gfl2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3347400", "tier": 100 },
         { "kind": "exe_name", "value": "GF2_Exilium.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "ghost-recon-wildlands",
       "name": "Ghost Recon® Wildlands",
       "slug": "ghost-recon-wildlands",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
@@ -1175,66 +1248,72 @@
       "name": "GhostWire Tokyo",
       "slug": "ghostwiretokyo",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1475810", "tier": 100 },
         { "kind": "exe_name", "value": "GWT.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "go-mecha-ball",
       "name": "Go Mecha Ball",
       "slug": "gomechaball",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2008510", "tier": 100 },
         { "kind": "exe_name", "value": "GoMechaBall.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "god-of-war",
       "name": "God of War (2018)",
       "slug": "gow2018",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1593500", "tier": 100 },
         { "kind": "exe_name", "value": "GoW.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "god-of-war-ragnarok",
       "name": "God of War Ragnarok",
       "slug": "gowragnarok",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2322010", "tier": 100 },
         { "kind": "exe_name", "value": "GoWR.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "granblue-fantasy-relink",
       "name": "Granblue Fantasy: Relink",
       "slug": "gbfrelink",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "881020", "tier": 100 },
         { "kind": "exe_name", "value": "granblue_fantasy_relink.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "grand-theft-auto-v-enhanced",
       "name": "Grand Theft Auto V : Enhanced",
       "slug": "gtav-enhanced",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3240220", "tier": 100 },
         { "kind": "exe_name", "value": "PlayGTAV.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "battleye",
         "online": "pvp",
@@ -1249,29 +1328,31 @@
       "name": "GreedFall",
       "slug": "greedfall",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "606880", "tier": 100 },
         { "kind": "exe_name", "value": "GreedFall.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "grim-dawn",
       "name": "Grim Dawn",
       "slug": "grimdawn",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "219990", "tier": 100 },
         { "kind": "exe_name", "value": "grim dawn.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "guild-wars-2",
       "name": "Guild Wars 2",
       "slug": "guildwars2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1284210", "tier": 100 },
         { "kind": "exe_name", "value": "Gw2-64.exe", "tier": 70 }
@@ -1292,7 +1373,7 @@
       "name": "Hades",
       "slug": "hades",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1145360", "tier": 100 },
         { "kind": "exe_name", "value": "Hades.exe", "tier": 70 }
@@ -1304,7 +1385,7 @@
       "name": "Hades 2",
       "slug": "hades2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1145350", "tier": 100 },
         { "kind": "exe_name", "value": "Hades2.exe", "tier": 70 }
@@ -1316,15 +1397,16 @@
       "name": "Hard Reset Redux",
       "slug": "roadhogengine",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "407810", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "407810", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "hardspace-shipbreaker",
       "name": "Hardspace: Shipbreaker",
       "slug": "_univ",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1161580", "tier": 100 },
         { "kind": "exe_name", "value": "Shipbreaker.exe", "tier": 70 }
@@ -1337,11 +1419,12 @@
       "name": "Heaven Burns Red",
       "slug": "_hbr",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1973710", "tier": 100 },
         { "kind": "exe_name", "value": "HeavenBurnsRed.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://pmnoxx.github.io/renodx/renodx-_hbr.addon64"
     },
     {
@@ -1349,11 +1432,12 @@
       "name": "Helldivers 2",
       "slug": "helldivers2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "553850", "tier": 100 },
         { "kind": "exe_name", "value": "helldivers2.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "unknown",
         "online": "coop",
@@ -1368,37 +1452,40 @@
       "name": "HITMAN World of Assassination",
       "slug": "hitmanwoa",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1659040", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1659040", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "hollow-knight",
       "name": "Hollow Knight",
       "slug": "hollowknight",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "367520", "tier": 100 },
         { "kind": "exe_name", "value": "hollow_knight.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "hollow-knight-silksong",
       "name": "Hollow Knight: Silksong",
       "slug": "hollowknight-silksong",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1030300", "tier": 100 },
         { "kind": "exe_name", "value": "Hollow Knight Silksong.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "immortals-fenyx-rising",
       "name": "Immortals Fenyx Rising",
       "slug": "immortalsfenyxrising",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2221920", "tier": 100 },
         { "kind": "exe_name", "value": "ImmortalsFenyxRising.exe", "tier": 70 }
@@ -1410,7 +1497,7 @@
       "name": "Indiana Jones and the Great Circle",
       "slug": "indygreatcircle",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2677660", "tier": 100 },
         { "kind": "exe_name", "value": "TheGreatCircle.exe", "tier": 70 }
@@ -1422,7 +1509,7 @@
       "name": "Ixion",
       "slug": "_univ",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1113120", "tier": 100 },
         { "kind": "exe_name", "value": "Ixion.exe", "tier": 70 }
@@ -1434,56 +1521,61 @@
       "id": "james-cameron-s-avatar-the-game",
       "name": "James Cameron's Avatar: The Game",
       "slug": "duniaengine",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "33280", "tier": 100 },
         { "kind": "exe_name", "value": "Avatar.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "journey",
       "name": "Journey",
       "slug": "journey",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "638230", "tier": 100 },
         { "kind": "exe_name", "value": "Journey.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "just-cause-4",
       "name": "Just Cause 4",
       "slug": "justcause4",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "517630", "tier": 100 },
         { "kind": "exe_name", "value": "JustCause4.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "karma-the-dark-world",
       "name": "Karma: The Dark World",
       "slug": "karmathedarkworld",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1376200", "tier": 100 },
         { "kind": "exe_name", "value": "Karma.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "kerbal-space-program",
       "name": "Kerbal Space Program",
       "slug": "_ksp",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "220200", "tier": 100 },
         { "kind": "exe_name", "value": "KSP_x64.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_ksp.addon64"
     },
     {
@@ -1491,80 +1583,99 @@
       "name": "Kingdom Come: Deliverance II",
       "slug": "kingdomcome2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1771300", "tier": 100 },
         { "kind": "exe_name", "value": "KingdomCome.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "kingdoms-of-amalur-re-reckoning",
       "name": "Kingdoms of Amalur: Re-Reckoning",
       "slug": "koarr",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1041720", "tier": 100 },
         { "kind": "exe_name", "value": "koa.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "lunacid",
       "name": "Lunacid",
       "slug": "lunacid",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1745510", "tier": 100 },
         { "kind": "exe_name", "value": "LUNACID.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "trails-of-cold-steel-cs3",
       "name": "The Legend of Heroes: Trails of Cold Steel III",
       "slug": "senkiseki",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
+        "label_key": "renodx.external.discord"
+      },
       "match": [
         { "kind": "steam_appid", "value": "991270", "tier": 100 },
         { "kind": "exe_name", "value": "ed8_3_PC.exe", "tier": 70 }
       ],
-      "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+      "channel": "beta"
     },
     {
       "id": "trails-of-cold-steel-cs4",
       "name": "The Legend of Heroes: Trails of Cold Steel IV",
       "slug": "senkiseki",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
+        "label_key": "renodx.external.discord"
+      },
       "match": [
         { "kind": "steam_appid", "value": "1198090", "tier": 100 },
         { "kind": "exe_name", "value": "ed8_4_PC.exe", "tier": 70 }
       ],
-      "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+      "channel": "beta"
     },
     {
       "id": "trails-of-cold-steel-reverie",
       "name": "The Legend of Heroes: Trails into Reverie",
       "slug": "senkiseki",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
+        "label_key": "renodx.external.discord"
+      },
       "match": [
         { "kind": "steam_appid", "value": "1668540", "tier": 100 },
         { "kind": "exe_name", "value": "hnk.exe", "tier": 70 }
       ],
-      "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+      "channel": "beta"
     },
     {
       "id": "trails-in-the-sky-1st-chapter",
       "name": "Trails in the Sky 1st Chapter",
       "slug": "falcomengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3375780", "tier": 100 },
         { "kind": "exe_name", "value": "sora_1st.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
     },
     {
@@ -1572,11 +1683,12 @@
       "name": "The Legend of Heroes: Trails through Daybreak",
       "slug": "falcomengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2138610", "tier": 100 },
         { "kind": "exe_name", "value": "kuro.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
     },
     {
@@ -1584,11 +1696,12 @@
       "name": "The Legend of Heroes: Trails through Daybreak II",
       "slug": "falcomengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2668430", "tier": 100 },
         { "kind": "exe_name", "value": "kuro2.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
     },
     {
@@ -1596,11 +1709,12 @@
       "name": "Trails beyond the Horizon",
       "slug": "falcomengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3316940", "tier": 100 },
         { "kind": "exe_name", "value": "kai.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
     },
     {
@@ -1608,11 +1722,12 @@
       "name": "The Legend of Heroes: Trails from Zero",
       "slug": "zerokiseki",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1668510", "tier": 100 },
         { "kind": "exe_name", "value": "zero.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
     },
     {
@@ -1620,11 +1735,12 @@
       "name": "The Legend of Heroes: Trails to Azure",
       "slug": "zerokiseki",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1668520", "tier": 100 },
         { "kind": "exe_name", "value": "ao.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
     },
     {
@@ -1632,83 +1748,106 @@
       "name": "Lego Harry Potter Collection",
       "slug": "legohpc",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/legoharrypottercollection/mods/4",
+        "label_key": "renodx.external.nexus"
+      },
       "match": [
         { "kind": "steam_appid", "value": "2950340", "tier": 100 },
         { "kind": "exe_name", "value": "LHPC.exe", "tier": 70 }
       ],
-      "download_url": "https://souperman9.github.io/renodx/renodx-legohpc.addon64"
+      "channel": "beta"
     },
     {
       "id": "like-a-dragon-pirate-yakuza-in-hawaii",
       "name": "Like a Dragon: Pirate Yakuza in Hawaii",
       "slug": "yakuzapirates",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
+        "label_key": "renodx.external.nexus"
+      },
       "match": [{ "kind": "steam_appid", "value": "3061810", "tier": 100 }],
-      "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+      "channel": "beta"
     },
     {
       "id": "like-a-dragon-gaiden-the-man-who-erased-his-name",
       "name": "Like a Dragon Gaiden: The Man Who Erased His Name",
       "slug": "yakuzapirates",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
+        "label_key": "renodx.external.nexus"
+      },
       "match": [
         { "kind": "steam_appid", "value": "2375550", "tier": 100 },
         { "kind": "exe_name", "value": "likeadragongaiden.exe", "tier": 70 }
       ],
-      "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+      "channel": "beta"
     },
     {
       "id": "like-a-dragon-infinite-wealth",
       "name": "Like a Dragon: Infinite Wealth",
       "slug": "yakuzapirates",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
+        "label_key": "renodx.external.nexus"
+      },
       "match": [{ "kind": "steam_appid", "value": "2072450", "tier": 100 }],
-      "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64"
+      "channel": "beta"
     },
     {
       "id": "lost-planet",
       "name": "Lost Planet",
       "slug": "lostplanet",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "6510", "tier": 100 },
         { "kind": "exe_name", "value": "LostPlanetDX9.exe", "tier": 70 },
         { "kind": "exe_name", "value": "LostPlanetDX10.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "mad-max",
       "name": "Mad Max",
       "slug": "madmax",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "234140", "tier": 100 },
         { "kind": "exe_name", "value": "MadMax.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "mafia-definitive-edition",
       "name": "Mafia: Definitive Edition",
       "slug": "mafiade",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1030840", "tier": 100 },
         { "kind": "exe_name", "value": "mafiadefinitiveedition.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "max-payne-3",
       "name": "Max Payne 3",
       "slug": "maxpayne3",
-      "arch": "X86",
-      "status": "construction",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "204100", "tier": 100 },
         { "kind": "exe_name", "value": "PlayMaxPayne3.exe", "tier": 70 }
@@ -1720,92 +1859,100 @@
       "name": "Marvel's Spider-Man 2",
       "slug": "spiderman2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2651280", "tier": 100 },
         { "kind": "exe_name", "value": "Spider-Man2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "marvel-s-spider-man-miles-morales",
       "name": "Marvel's Spider-Man Miles Morales",
       "slug": "spiderman_2018_miles",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1817190", "tier": 100 },
         { "kind": "exe_name", "value": "MilesMorales.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "marvel-s-spider-man-remastered",
       "name": "Marvel's Spider-Man Remastered",
       "slug": "spiderman_2018_miles",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1817070", "tier": 100 },
         { "kind": "exe_name", "value": "Spider-Man.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "mass-effect-legendary-edition",
       "name": "Mass Effect : Legendary Edition",
       "slug": "masseffectle",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1328670", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1328670", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "metaphor-refantazio",
       "name": "Metaphor: ReFantazio",
       "slug": "metaphorrefantazio",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2679460", "tier": 100 },
         { "kind": "exe_name", "value": "METAPHOR.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "metro-exodus-enhanced-edition",
       "name": "Metro Exodus Enhanced Edition",
       "slug": "metro",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "412020", "tier": 100 },
         { "kind": "exe_name", "value": "MetroExodus.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "metal-gear-solid-snake-eater",
       "name": "METAL GEAR SOLID Δ: SNAKE EATER",
       "slug": "mgsdelta",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2417610", "tier": 100 },
         { "kind": "exe_name", "value": "MGSDelta.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "middle-earth-shadow-of-war",
       "name": "Middle Earth: Shadow of War",
       "slug": "shadowofwar",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "356190", "tier": 100 },
         { "kind": "exe_name", "value": "ShadowOfWar.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "mirror-s-edge",
       "name": "Mirror's Edge",
       "slug": "mirror-s-edge",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/mirrorsedge/mods/24",
@@ -1814,55 +1961,60 @@
       "match": [
         { "kind": "steam_appid", "value": "17410", "tier": 100 },
         { "kind": "exe_name", "value": "MirrorsEdge.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "monster-hunter-rise",
       "name": "Monster Hunter Rise",
       "slug": "mhrise",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1446780", "tier": 100 },
         { "kind": "exe_name", "value": "MonsterHunterRise.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "monster-hunter-wilds",
       "name": "Monster Hunter: Wilds",
       "slug": "mhwilds",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2246340", "tier": 100 },
         { "kind": "exe_name", "value": "MonsterHunterWilds.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "monster-hunter-world",
       "name": "Monster Hunter: World",
       "slug": "mhworld",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "582010", "tier": 100 },
         { "kind": "exe_name", "value": "MonsterHunterWorld.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "need-for-speed",
       "name": "Need for Speed™ (2016)",
       "slug": "nfs16",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1262540", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1262540", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "nier-replicant",
       "name": "NieR Replicant",
       "slug": "nierreplicant",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1113560", "tier": 100 },
         { "kind": "exe_name", "value": "NieR Replicant ver.1.22474487139.exe", "tier": 70 }
@@ -1875,7 +2027,7 @@
       "name": "Nights of Azure 1",
       "slug": "nightsofazure1",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "527280", "tier": 100 }],
       "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64"
@@ -1885,7 +2037,7 @@
       "name": "Nights of Azure 2",
       "slug": "nightsofazure2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "636570", "tier": 100 }],
       "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64"
@@ -1895,29 +2047,31 @@
       "name": "Ninja Gaiden 4",
       "slug": "ninjagaiden4",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2627260", "tier": 100 },
         { "kind": "exe_name", "value": "NINJAGAIDEN4-Steam.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "ninja-gaiden-sigma",
       "name": "Ninja Gaiden Sigma",
       "slug": "ngsigma",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1580780", "tier": 100 },
         { "kind": "exe_name", "value": "NINJA GAIDEN SIGMA.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "ninja-gaiden-sigma-2",
       "name": "Ninja Gaiden Sigma 2",
       "slug": "ngsigma2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1580790", "tier": 100 },
         { "kind": "exe_name", "value": "NINJA GAIDEN SIGMA2.exe", "tier": 70 }
@@ -1929,7 +2083,7 @@
       "name": "Nioh 2",
       "slug": "nioh2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1325200", "tier": 100 },
         { "kind": "exe_name", "value": "nioh2.exe", "tier": 70 }
@@ -1942,18 +2096,19 @@
       "name": "Nioh 3",
       "slug": "nioh3",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3681010", "tier": 100 },
         { "kind": "exe_name", "value": "Nioh3.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "no-man-s-sky",
       "name": "No Man's Sky",
       "slug": "no-man-s-sky",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/nomanssky/mods/4061",
@@ -1962,58 +2117,63 @@
       "match": [
         { "kind": "steam_appid", "value": "275850", "tier": 100 },
         { "kind": "exe_name", "value": "NMS.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "opus-echo-of-starsong-full-bloom-edition",
       "name": "OPUS: Echo of Starsong - Full Bloom Edition",
       "slug": "opus-eos",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1504500", "tier": 100 },
         { "kind": "exe_name", "value": "OPUS Echo of Starsong.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "ori-and-the-will-of-the-wisps",
       "name": "Ori and the Will of the Wisps",
       "slug": "ori2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1057090", "tier": 100 },
         { "kind": "exe_name", "value": "oriwotw.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "the-outer-worlds-2",
       "name": "The Outer Worlds 2",
       "slug": "outerworlds2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1449110", "tier": 100 },
         { "kind": "exe_name", "value": "TheOuterWorlds2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "party-animals",
       "name": "Party Animals",
       "slug": "partyanimals",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1260320", "tier": 100 },
         { "kind": "exe_name", "value": "PartyAnimals.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "pathfinder-wrath-of-the-righteous",
       "name": "Pathfinder: Wrath of the Righteous",
       "slug": "pathfinder2wotr",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1184370", "tier": 100 },
         { "kind": "exe_name", "value": "Wrath.exe", "tier": 70 }
@@ -2026,11 +2186,12 @@
       "name": "Path of Exile 2 DX11 Only",
       "slug": "poe2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2694490", "tier": 100 },
         { "kind": "exe_name", "value": "PathOfExileSteam.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "unknown",
         "online": "pvp",
@@ -2046,18 +2207,19 @@
       "name": "Penny's Big Breakaway",
       "slug": "penny",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1955230", "tier": 100 },
         { "kind": "exe_name", "value": "PennysBigBreakaway.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "persona-4-golden",
       "name": "Persona 4 Golden",
       "slug": "p4g",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1113000", "tier": 100 },
         { "kind": "exe_name", "value": "P4G.exe", "tier": 70 }
@@ -2069,18 +2231,19 @@
       "name": "Persona 5 Royal (Remake from Ersh's)",
       "slug": "p5r",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1687950", "tier": 100 },
         { "kind": "exe_name", "value": "P5R.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "persona-5-strikers",
       "name": "Persona 5 : Strikers",
       "slug": "_p5s",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1382330", "tier": 100 }],
       "channel": "beta",
       "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64"
@@ -2090,29 +2253,31 @@
       "name": "Pragmata",
       "slug": "pragmata",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3357650", "tier": 100 },
         { "kind": "exe_name", "value": "PRAGMATA.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "red-dead-redemption",
       "name": "Red Dead Redemption",
       "slug": "rdr1",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2668510", "tier": 100 },
         { "kind": "exe_name", "value": "PlayRDR.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "red-dead-redemption-2-vulkan",
       "name": "Red Dead Redemption 2 (Vulkan)",
       "slug": "red-dead-redemption-2-vulkan",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://discord.com/invite/renodx",
@@ -2128,89 +2293,97 @@
       "id": "remember-me",
       "name": "Remember Me",
       "slug": "rememberme",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "228300", "tier": 100 },
         { "kind": "exe_name", "value": "RememberMe.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "resident-evil-2-remake",
       "name": "Resident Evil 2 Remake",
       "slug": "re7-2r-3r-village",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "883710", "tier": 100 },
         { "kind": "exe_name", "value": "re2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "resident-evil-3-remake",
       "name": "Resident Evil 3 Remake",
       "slug": "re7-2r-3r-village",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "952060", "tier": 100 },
         { "kind": "exe_name", "value": "re3.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "resident-evil-4-remake",
       "name": "Resident Evil 4 Remake",
       "slug": "re4remake",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2050650", "tier": 100 },
         { "kind": "exe_name", "value": "re4.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "resident-evil-7",
       "name": "Resident Evil 7",
       "slug": "re7-2r-3r-village",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "418370", "tier": 100 },
         { "kind": "exe_name", "value": "re7.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "resident-evil-requiem",
       "name": "Resident Evil Requiem",
       "slug": "re9requiem",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3764200", "tier": 100 },
         { "kind": "exe_name", "value": "re9.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "resident-evil-village",
       "name": "Resident Evil Village",
       "slug": "re7-2r-3r-village",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1196590", "tier": 100 },
         { "kind": "exe_name", "value": "re8.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "revenge-of-the-savage-planet",
       "name": "Revenge of the Savage Planet",
       "slug": "rotsp",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2787320", "tier": 100 },
         { "kind": "exe_name", "value": "Towers.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://akuru-q.github.io/renodx/renodx-rotsp.addon64"
     },
     {
@@ -2218,18 +2391,19 @@
       "name": "Rise of the Tomb Raider",
       "slug": "risetombraider",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "391220", "tier": 100 },
         { "kind": "exe_name", "value": "ROTTR.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "rise-of-the-ronin",
       "name": "Rise of the Ronin",
       "slug": "riseofronin",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1340990", "tier": 100 },
         { "kind": "exe_name", "value": "Ronin.exe", "tier": 70 }
@@ -2242,7 +2416,7 @@
       "name": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "slug": "raidou",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2288350", "tier": 100 },
         { "kind": "exe_name", "value": "Raidou TMOTSA.exe", "tier": 70 }
@@ -2255,44 +2429,48 @@
       "name": "RoboCop: Rogue City",
       "slug": "routine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1681430", "tier": 100 },
         { "kind": "exe_name", "value": "RoboCop.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "routine",
       "name": "Routine",
       "slug": "robocop",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "606160", "tier": 100 },
         { "kind": "exe_name", "value": "Routine.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "sea-of-stars",
       "name": "Sea of Stars",
       "slug": "seaofstars",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1244090", "tier": 100 },
         { "kind": "exe_name", "value": "SeaOfStars.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "sekiro-shadows-die-twice",
       "name": "Sekiro: Shadows Die Twice",
       "slug": "fromsoft_engine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "814380", "tier": 100 },
         { "kind": "exe_name", "value": "sekiro.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "risk": {
         "anticheat_engine": "eac",
         "online": "singleplayer",
@@ -2307,11 +2485,12 @@
       "name": "Shadow Gambit: The Cursed Crew",
       "slug": "shadowgambit",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1545560", "tier": 100 },
         { "kind": "exe_name", "value": "ShadowGambit_TCC.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://akuru-q.github.io/renodx/renodx-shadowgambit.addon64"
     },
     {
@@ -2319,44 +2498,48 @@
       "name": "Shadow of the Tomb Raider",
       "slug": "shadowtombraider",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "750920", "tier": 100 },
         { "kind": "exe_name", "value": "SOTTR.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "shadow-warrior-middot-shadow-warrior-2-sw1",
       "name": "Shadow Warrior (2013)",
       "slug": "roadhogengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "233130", "tier": 100 },
         { "kind": "exe_name", "value": "sw.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "shadow-warrior-middot-shadow-warrior-2-sw2",
       "name": "Shadow Warrior 2",
       "slug": "roadhogengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "324800", "tier": 100 },
         { "kind": "exe_name", "value": "ShadowWarrior2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "shin-megami-tensei-v",
       "name": "Shin Megami Tensei V",
       "slug": "smt5",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1875830", "tier": 100 },
         { "kind": "exe_name", "value": "SMT5V.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-smt5.addon64"
     },
     {
@@ -2364,51 +2547,55 @@
       "name": "SHINOBI: Art of Vengeance",
       "slug": "shinobiaov",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2361770", "tier": 100 },
         { "kind": "exe_name", "value": "SHINOBI_AOV.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "silent-hill-2-remake",
       "name": "Silent Hill 2 Remake",
       "slug": "silenthill2remake",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2124490", "tier": 100 },
         { "kind": "exe_name", "value": "SHProto.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "silent-hill-f",
       "name": "Silent Hill f",
       "slug": "silenthillf",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2947440", "tier": 100 },
         { "kind": "exe_name", "value": "SHf.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "sniper-elite-4",
       "name": "Sniper Elite 4 (DX11)",
       "slug": "sniperelite4",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "312660", "tier": 100 },
         { "kind": "exe_name", "value": "SniperElite4.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "sonic-generations",
       "name": "Sonic Generations",
       "slug": "sonicgenerations",
-      "arch": "X86",
-      "status": "construction",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "71340", "tier": 100 },
         { "kind": "exe_name", "value": "SonicGenerations.exe", "tier": 70 }
@@ -2420,7 +2607,7 @@
       "name": "Sonic Unleashed Recompiled",
       "slug": "sonicunleashedrecomp",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [{ "kind": "exe_name", "value": "UnleashedRecomp.exe", "tier": 70 }],
       "channel": "beta",
       "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64"
@@ -2430,49 +2617,53 @@
       "name": "Sons of The Forest",
       "slug": "sonsoftheforest",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1326470", "tier": 100 },
         { "kind": "exe_name", "value": "SonsOfTheForest.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://akuru-q.github.io/renodx/renodx-sonsoftheforest.addon64"
     },
     {
       "id": "spec-ops-the-line",
       "name": "Spec Ops: The Line",
       "slug": "specopstheline",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "50300", "tier": 100 },
         { "kind": "exe_name", "value": "SpecOpsTheLine.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "splinter-cell-blacklist",
       "name": "Splinter Cell: Blacklist",
       "slug": "scblacklist",
-      "arch": "X86",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "235600", "tier": 100 }]
+      "arch": "X64",
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "235600", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "s-t-a-l-k-e-r-2-heart-of-chornobyl",
       "name": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
       "slug": "stalker2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1643320", "tier": 100 },
         { "kind": "exe_name", "value": "Stalker2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "steelrising",
       "name": "Steelrising",
       "slug": "steelrising",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1283400", "tier": 100 },
         { "kind": "exe_name", "value": "Steelrising.exe", "tier": 70 }
@@ -2498,7 +2689,7 @@
       "name": "Steep",
       "slug": "steep",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
@@ -2507,44 +2698,48 @@
       "match": [
         { "kind": "steam_appid", "value": "460920", "tier": 100 },
         { "kind": "exe_name", "value": "steep.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "starfield",
       "name": "Starfield",
       "slug": "starfield",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1716740", "tier": 100 },
         { "kind": "exe_name", "value": "Starfield.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "star-wars-jedi-survivor",
       "name": "STAR WARS Jedi: Survivor™",
       "slug": "jedisurvivor",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1774580", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1774580", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "star-wars-outlaws",
       "name": "Star Wars Outlaws",
       "slug": "avatarfop-swoutlaws",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2842040", "tier": 100 },
         { "kind": "exe_name", "value": "Outlaws.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "stranger-of-paradise-final-fantasy-origin",
       "name": "Stranger of Paradise: Final Fantasy Origin",
       "slug": "sopffo",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1358700", "tier": 100 },
         { "kind": "exe_name", "value": "SOPFFO.exe", "tier": 70 }
@@ -2557,34 +2752,37 @@
       "name": "Street Fighter 6",
       "slug": "streetfighter6",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1364780", "tier": 100 },
         { "kind": "exe_name", "value": "StreetFighter6.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "sunset-overdrive",
       "name": "Sunset Overdrive",
       "slug": "sunsetoverdrive",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "847370", "tier": 100 },
         { "kind": "exe_name", "value": "Sunset.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "sword-art-online-alicization-lycoris",
       "name": "Sword Art Online Alicization Lycoris",
       "slug": "sao-alicization",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1009290", "tier": 100 },
         { "kind": "exe_name", "value": "Launch_Game.exe", "tier": 70 },
         { "kind": "exe_name", "value": "sao_al.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-sao-alicization.addon64"
     },
     {
@@ -2592,29 +2790,31 @@
       "name": "Tactical Breach Wizards",
       "slug": "tacticalbreachwizards",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1043810", "tier": 100 },
         { "kind": "exe_name", "value": "Tactical Breach Wizards.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "tales-of-graces-f-remastered",
       "name": "Tales of Graces f Remastered",
       "slug": "talesofgracesf",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2530980", "tier": 100 },
         { "kind": "exe_name", "value": "Tales of Graces f Remastered.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "teardown",
       "name": "Teardown (dx12)",
       "slug": "teardown",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1167630", "tier": 100 },
         { "kind": "exe_name", "value": "teardown.exe", "tier": 70 }
@@ -2627,18 +2827,19 @@
       "name": "Tekken 8",
       "slug": "tekken8",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1778820", "tier": 100 },
         { "kind": "exe_name", "value": "TEKKEN 8.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "terraria",
       "name": "Terraria",
       "slug": "terraria",
-      "arch": "X86",
-      "status": "construction",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "105600", "tier": 100 },
         { "kind": "exe_name", "value": "Terraria.exe", "tier": 70 }
@@ -2650,15 +2851,16 @@
       "name": "tModLoader",
       "slug": "terraria-tml",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1281930", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "1281930", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "the-evil-within-2",
       "name": "The Evil Within 2",
       "slug": "tew2",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "601430", "tier": 100 },
         { "kind": "exe_name", "value": "TEW2.exe", "tier": 70 }
@@ -2671,7 +2873,7 @@
       "name": "The Elder Scrolls IV: Oblivion Remastered",
       "slug": "oblivionremastered",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2623190", "tier": 100 },
         { "kind": "exe_name", "value": "OblivionRemastered.exe", "tier": 70 }
@@ -2683,7 +2885,7 @@
       "name": "The Hundred Line: Last Defense Academy",
       "slug": "thehundredline",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3014080", "tier": 100 },
         { "kind": "exe_name", "value": "HUNDRED_LINE.exe", "tier": 70 }
@@ -2695,11 +2897,12 @@
       "name": "The Incredible Adventures of Van Helsing: Final Cut",
       "slug": "vanhelsingfinalcut",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "400170", "tier": 100 },
         { "kind": "exe_name", "value": "VanHelsing.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://notvoosh.github.io/renodx/renodx-vanhelsingfinalcut.addon64"
     },
     {
@@ -2707,37 +2910,40 @@
       "name": "The Surge",
       "slug": "thesurge",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "378540", "tier": 100 },
         { "kind": "exe_name", "value": "TheSurge.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "the-town-of-light",
       "name": "The Town of Light",
       "slug": "thetownoflight",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "433100", "tier": 100 },
         { "kind": "exe_name", "value": "ttol.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "the-witcher-3",
       "name": "The Witcher 3",
       "slug": "thewitcher3",
       "arch": "X64",
-      "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "292030", "tier": 100 }]
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "292030", "tier": 100 }],
+      "channel": "beta"
     },
     {
       "id": "the-witness",
       "name": "The Witness",
       "slug": "thewitness",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "210970", "tier": 100 },
         { "kind": "exe_name", "value": "witness_d3d11.exe", "tier": 70 }
@@ -2749,42 +2955,46 @@
       "name": "The First Berserker: Khazan",
       "slug": "bersekerKhazan",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2680010", "tier": 100 },
         { "kind": "exe_name", "value": "KZ.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-bersekerKhazan.addon64"
     },
     {
       "id": "titan-quest-anniversary-edition",
       "name": "Titan Quest Anniversary Edition",
       "slug": "grimdawn",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "475150", "tier": 100 },
         { "kind": "exe_name", "value": "TQ.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "tomb-raider",
       "name": "Tomb Raider (2013)",
       "slug": "tombraider2013",
-      "arch": "X86",
-      "status": "working",
+      "arch": "X64",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "203160", "tier": 100 },
         { "kind": "exe_name", "value": "TombRaider.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "total-war-three-kingdoms",
       "name": "Total War: Three Kingdoms",
       "slug": "tw-3kingdoms",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "779340", "tier": 100 }],
+      "channel": "beta",
       "download_url": "https://sgtforgery.github.io/renodx/renodx-tw-3kingdoms.addon64"
     },
     {
@@ -2792,12 +3002,13 @@
       "name": "Total War: Warhammer 3",
       "slug": "_univ",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1142710", "tier": 100 },
         { "kind": "exe_name", "value": "twmm.exe", "tier": 70 },
         { "kind": "exe_name", "value": "Warhammer3.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
     },
     {
@@ -2805,7 +3016,7 @@
       "name": "Trackmania",
       "slug": "trackmania",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2225070", "tier": 100 },
         { "kind": "exe_name", "value": "Trackmania.exe", "tier": 70 }
@@ -2817,8 +3028,9 @@
       "name": "Trine 2: Complete Story",
       "slug": "trine2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "35720", "tier": 100 }],
+      "channel": "beta",
       "download_url": "https://github.com/chrisboyer2/renodx/releases/download/v2.0/renodx-trine2.addon64"
     },
     {
@@ -2826,41 +3038,45 @@
       "name": "Tunic",
       "slug": "tunic",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "553420", "tier": 100 },
         { "kind": "exe_name", "value": "Tunic.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "uncharted-legacy-of-thieves-collection",
       "name": "UNCHARTED™: Legacy of Thieves Collection",
       "slug": "unchartedlotc",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1659420", "tier": 100 },
         { "kind": "exe_name", "value": "u4.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "valheim",
       "name": "Valheim",
       "slug": "valheim",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "892970", "tier": 100 },
         { "kind": "exe_name", "value": "valheim.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "warframe",
       "name": "Warframe",
       "slug": "warframe",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "230410", "tier": 100 }],
+      "channel": "beta",
       "download_url": "https://hboyyt.github.io/renodx/renodx-warframe.addon64"
     },
     {
@@ -2868,7 +3084,7 @@
       "name": "Warhammer 40,000: Darktide",
       "slug": "darktide",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "1361210", "tier": 100 }],
       "channel": "beta"
     },
@@ -2877,55 +3093,60 @@
       "name": "Warhammer 40,000: Space Marine 2",
       "slug": "spacemarine2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2183900", "tier": 100 },
         { "kind": "exe_name", "value": "Warhammer 40000 Space Marine 2.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "watch-dogs",
       "name": "Watch Dogs",
       "slug": "watchdogs",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "243470", "tier": 100 },
         { "kind": "exe_name", "value": "Watch_Dogs.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "wuchang-fallen-feathers",
       "name": "Wuchang: Fallen Feathers",
       "slug": "wuchang",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "2277560", "tier": 100 },
         { "kind": "exe_name", "value": "Project_Plague.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "wuthering-waves",
       "name": "Wuthering Waves",
       "slug": "wutheringwaves",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3513350", "tier": 100 },
         { "kind": "exe_name", "value": "Wuthering Waves.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "xcom-2",
       "name": "XCOM 2",
       "slug": "xcom2",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "268500", "tier": 100 },
         { "kind": "exe_name", "value": "XCom2.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://sgtforgery.github.io/renodx/renodx-xcom2.addon64"
     },
     {
@@ -2933,7 +3154,7 @@
       "name": "Wo Long: Fallen Dynasty",
       "slug": "wolong",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1448440", "tier": 100 },
         { "kind": "exe_name", "value": "WoLong.exe", "tier": 70 }
@@ -2946,7 +3167,7 @@
       "name": "Yakuza 0",
       "slug": "yakuza0",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [{ "kind": "steam_appid", "value": "2988580", "tier": 100 }],
       "channel": "beta",
       "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
@@ -2956,7 +3177,7 @@
       "name": "Yakuza Kiwami 1",
       "slug": "yakuza0",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "834530", "tier": 100 },
         { "kind": "exe_name", "value": "YakuzaKiwami.exe", "tier": 70 }
@@ -2969,11 +3190,12 @@
       "name": "YS IX: Monstrum Nox",
       "slug": "ys9",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1351630", "tier": 100 },
         { "kind": "exe_name", "value": "ys9.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://danaforever.github.io/renodx/renodx-ys9.addon64"
     },
     {
@@ -2981,24 +3203,30 @@
       "name": "Ys X: Nordics",
       "slug": "ys10",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/ysxnordics/mods/11",
+        "label_key": "renodx.external.nexus"
+      },
       "match": [
         { "kind": "steam_appid", "value": "2570810", "tier": 100 },
         { "kind": "steam_appid", "value": "2731870", "tier": 100 }
       ],
-      "download_url": "https://marat569.github.io/renodx/renodx-ys10.addon64"
+      "channel": "beta"
     },
     {
       "id": "ys-x-proud-nordics",
       "name": "Ys X: Proud Nordics",
       "slug": "ys10pn",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "3821790", "tier": 100 },
         { "kind": "steam_appid", "value": "3949290", "tier": 100 },
         { "kind": "exe_name", "value": "ysx_pn.exe", "tier": 70 }
       ],
+      "channel": "beta",
       "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-ys10pn.addon64"
     },
     {
@@ -3006,7 +3234,7 @@
       "name": "Zenless Zone Zero",
       "slug": "zenless-zone-zero",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "4162040", "tier": 100 },
         { "kind": "exe_name", "value": "HYP.exe", "tier": 70 }
@@ -3015,11 +3243,77 @@
       "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64"
     },
     {
-      "id": "control-hdr-ultrawide-dlss-rt-patch",
-      "name": "CONTROL - HDR Ultrawide DLSS RT Patch",
-      "slug": "control-hdr-ultrawide-dlss-rt-patch",
+      "id": "death-s-door",
+      "name": "Death's Door",
+      "slug": "deathsdoor",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "894020", "tier": 100 },
+        { "kind": "exe_name", "value": "DeathsDoor.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "descenders",
+      "name": "Descenders",
+      "slug": "descenders",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "681280", "tier": 100 },
+        { "kind": "exe_name", "value": "Descenders.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "haste",
+      "name": "Haste",
+      "slug": "haste",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1796470", "tier": 100 },
+        { "kind": "exe_name", "value": "Haste.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "outer-wilds",
+      "name": "Outer Wilds",
+      "slug": "outerwilds",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "753640", "tier": 100 },
+        { "kind": "exe_name", "value": "OuterWilds.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "spark-the-electric-jester-3",
+      "name": "Spark the Electric Jester 3",
+      "slug": "unityengine",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1629530", "tier": 100 },
+        { "kind": "exe_name", "value": "Spark the Electric Jester 3.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "xf-extreme-formula",
+      "name": "XF Extreme Formula",
+      "slug": "xfextremeformula",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2539910", "tier": 100 },
+        { "kind": "exe_name", "value": "XF ExtremeFormula.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "control-hdr-ultrawide-dlss-rt-patch",
+      "name": "CONTROL - HDR Ultrawide DLSS RT Patch",
+      "slug": "unityengine",
+      "arch": "X64",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/control/mods/90",
@@ -3028,14 +3322,15 @@
       "match": [
         { "kind": "steam_appid", "value": "870780", "tier": 100 },
         { "kind": "exe_name", "value": "Control.exe", "tier": 70 }
-      ]
+      ],
+      "channel": "beta"
     },
     {
       "id": "dark-souls-2-ds2lightingengine-sotfs",
       "name": "Dark Souls 2 - DS2LightingEngine SotFS",
-      "slug": "dark-souls-2-ds2lightingengine-sotfs",
+      "slug": "unityengine",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/darksouls2/mods/1146",
@@ -3050,9 +3345,9 @@
     {
       "id": "dark-souls-3-ds3lightingengine-light",
       "name": "Dark Souls 3 - DS3LightingEngine (light)",
-      "slug": "dark-souls-3-ds3lightingengine-light",
+      "slug": "unityengine",
       "arch": "X64",
-      "status": "construction",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://discord.gg/BCxEWGKJcD",
@@ -3067,9 +3362,9 @@
     {
       "id": "prey-remastered-luma",
       "name": "Prey Remastered - Luma",
-      "slug": "prey-remastered-luma",
+      "slug": "unityengine",
       "arch": "X64",
-      "status": "working",
+      "status": "unknown",
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/prey2017/mods/149",
@@ -3078,41 +3373,6 @@
       "match": [
         { "kind": "steam_appid", "value": "480490", "tier": 100 },
         { "kind": "exe_name", "value": "Prey.exe", "tier": 70 }
-      ]
-    },
-    {
-      "id": "outer-wilds",
-      "name": "Outer Wilds",
-      "slug": "outerwilds",
-      "arch": "X64",
-      "status": "unknown",
-      "match": [
-        { "kind": "steam_appid", "value": "753640", "tier": 100 },
-        { "kind": "exe_name", "value": "OuterWilds.exe", "tier": 70 }
-      ],
-      "channel": "beta"
-    },
-    {
-      "id": "death-s-door",
-      "name": "Death's Door",
-      "slug": "deathsdoor",
-      "arch": "X64",
-      "status": "unknown",
-      "match": [
-        { "kind": "steam_appid", "value": "894020", "tier": 100 },
-        { "kind": "exe_name", "value": "DeathsDoor.exe", "tier": 70 }
-      ],
-      "channel": "beta"
-    },
-    {
-      "id": "descenders",
-      "name": "Descenders",
-      "slug": "descenders",
-      "arch": "X64",
-      "status": "unknown",
-      "match": [
-        { "kind": "steam_appid", "value": "681280", "tier": 100 },
-        { "kind": "exe_name", "value": "Descenders.exe", "tier": 70 }
       ],
       "channel": "beta"
     },
@@ -3120,7 +3380,7 @@
       "id": "dying-light-2",
       "name": "Dying Light 2",
       "slug": "dyinglight2",
-      "arch": "X64",
+      "arch": "X86",
       "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "534380", "tier": 100 },
@@ -3137,18 +3397,6 @@
       }
     },
     {
-      "id": "haste",
-      "name": "Haste",
-      "slug": "haste",
-      "arch": "X64",
-      "status": "unknown",
-      "match": [
-        { "kind": "steam_appid", "value": "1796470", "tier": 100 },
-        { "kind": "exe_name", "value": "Haste.exe", "tier": 70 }
-      ],
-      "channel": "beta"
-    },
-    {
       "id": "l-a-noire",
       "name": "L.A. Noire",
       "slug": "lanoire",
@@ -3157,30 +3405,6 @@
       "match": [
         { "kind": "steam_appid", "value": "110800", "tier": 100 },
         { "kind": "exe_name", "value": "PlayLAN.exe", "tier": 70 }
-      ],
-      "channel": "beta"
-    },
-    {
-      "id": "spark-the-electric-jester-3",
-      "name": "Spark the Electric Jester 3",
-      "slug": "spark3",
-      "arch": "X64",
-      "status": "unknown",
-      "match": [
-        { "kind": "steam_appid", "value": "1629530", "tier": 100 },
-        { "kind": "exe_name", "value": "Spark the Electric Jester 3.exe", "tier": 70 }
-      ],
-      "channel": "beta"
-    },
-    {
-      "id": "xf-extreme-formula",
-      "name": "XF: Extreme Formula",
-      "slug": "xfextremeformula",
-      "arch": "X64",
-      "status": "unknown",
-      "match": [
-        { "kind": "steam_appid", "value": "2539910", "tier": 100 },
-        { "kind": "exe_name", "value": "XF ExtremeFormula.exe", "tier": 70 }
       ],
       "channel": "beta"
     },
@@ -3197,7 +3421,7 @@
       "id": "sea-of-thieves",
       "name": "Sea of Thieves",
       "slug": "seaofthieves",
-      "arch": "X64",
+      "arch": "X86",
       "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "1172620", "tier": 100 },
@@ -3216,8 +3440,8 @@
     {
       "id": "ori-and-the-blind-forest-definitive-edition",
       "name": "Ori and the Blind Forest: Definitive Edition",
-      "slug": "ori1definitive",
-      "arch": "X86",
+      "slug": "unityengine",
+      "arch": "X64",
       "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "387290", "tier": 100 },
@@ -3240,7 +3464,7 @@
     {
       "id": "prince-of-persia-the-lost-crown",
       "name": "Prince of Persia The Lost Crown",
-      "slug": "poptlc",
+      "slug": "unityengine",
       "arch": "X64",
       "status": "unknown",
       "match": [
@@ -3253,7 +3477,7 @@
       "id": "ace-combat-7",
       "name": "Ace Combat 7",
       "slug": "acecombat7",
-      "arch": "X64",
+      "arch": "X86",
       "status": "unknown",
       "match": [
         { "kind": "steam_appid", "value": "502500", "tier": 100 },
@@ -3264,7 +3488,7 @@
     {
       "id": "honkai-star-rail",
       "name": "Honkai: Star Rail",
-      "slug": "honkai-starrail",
+      "slug": "unityengine",
       "arch": "X64",
       "status": "unknown",
       "match": [{ "kind": "exe_name", "value": "StarRail.exe", "tier": 70 }],

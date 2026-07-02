@@ -10,6 +10,12 @@ import {
   normalizeSlug,
   validateOverlay,
 } from "./overlay.mjs";
+import {
+  isPlainObject,
+  assertPlainObject,
+  requiredNonEmptyString,
+  deepFreeze,
+} from "../../scripts/lib/common.mjs";
 
 export const SCHEMA_VERSION = 3;
 export const RENODX_SOURCE = "https://github.com/clshortfuse/renodx/wiki/Mods";
@@ -474,24 +480,6 @@ function reserveOutputId(seenIds, id, context) {
   seenIds.add(id);
 }
 
-function requiredNonEmptyString(value, context) {
-  if (typeof value !== "string" || value.trim() === "") {
-    throw new Error(`${context} must be a non-empty string`);
-  }
-
-  return value.trim();
-}
-
-function assertPlainObject(value, context) {
-  if (!isPlainObject(value)) {
-    throw new Error(`${context} must be an object`);
-  }
-}
-
-function isPlainObject(value) {
-  return value !== null && typeof value === "object" && !Array.isArray(value);
-}
-
 function isDefaultRisk(risk) {
   const defaultKeys = Object.keys(DEFAULT_RISK);
   const riskKeys = Object.keys(risk);
@@ -534,18 +522,4 @@ function parseSourceDateEpoch(env) {
   }
 
   return seconds;
-}
-
-function deepFreeze(value) {
-  if (!value || typeof value !== "object" || Object.isFrozen(value)) {
-    return value;
-  }
-
-  Object.freeze(value);
-
-  for (const child of Object.values(value)) {
-    deepFreeze(child);
-  }
-
-  return value;
 }

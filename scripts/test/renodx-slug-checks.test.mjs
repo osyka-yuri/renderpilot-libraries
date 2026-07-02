@@ -2,11 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
-  ADDON_EXTENSION_BY_ARCH,
   MAX_ISSUES_TO_PRINT,
   OFF_SNAPSHOT_TITLE_KINDS,
-  addonBasenameFromUrl,
-  addonFile,
   assertGeneric,
   assertManifestShape,
   assertTitle,
@@ -20,9 +17,14 @@ import {
   genericLabel,
   isOffSnapshotTitle,
   isSnapshotHostedGeneric,
-  sameFileName,
   titleLabel,
 } from "../lib/renodx-slug-checks.mjs";
+import {
+  ADDON_EXTENSION_BY_ARCH,
+  addonBasenameFromUrl,
+  addonFile,
+  sameFileName,
+} from "../lib/addon-naming.mjs";
 
 test("ADDON_EXTENSION_BY_ARCH maps X64 and X86", () => {
   assert.equal(ADDON_EXTENSION_BY_ARCH.get("X64"), "addon64");
@@ -179,7 +181,7 @@ test("checkTitles reports missing snapshot assets and skips off-snapshot titles"
   ];
   const assets = new Set(["renodx-present.addon64"]);
 
-  const result = checkTitles(titles, assets);
+  const result = checkTitles(titles, [], assets);
 
   assert.equal(result.checked, 2);
   assert.equal(result.skipped, 2);

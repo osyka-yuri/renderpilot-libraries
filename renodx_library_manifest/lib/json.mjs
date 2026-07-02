@@ -113,26 +113,9 @@ export async function writeFormattedJsonFile(file, value) {
   writeTextFile(file, await stringifyFormattedJson(value, file));
 }
 
-export function hasOwn(value, key) {
-  return Object.prototype.hasOwnProperty.call(value, key);
-}
+import { isPlainObject, assertPlainObject, hasOwn } from "../../scripts/lib/common.mjs";
 
-export function isPlainObject(value) {
-  if (value === null || typeof value !== "object") {
-    return false;
-  }
-
-  const prototype = Object.getPrototypeOf(value);
-  return prototype === Object.prototype || prototype === null;
-}
-
-export function assertPlainObject(value, context) {
-  if (!isPlainObject(value)) {
-    throw new Error(`${context} must be a plain object`);
-  }
-
-  return value;
-}
+export { isPlainObject, assertPlainObject, hasOwn };
 
 export function sortNumericObject(value, context = "object") {
   assertPlainObject(value, context);
