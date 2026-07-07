@@ -18,6 +18,8 @@ const SCHEMAS = Object.freeze({
   dlssPresetManifest: "schemas/dlss_preset_manifest.schema.json",
   dlssSettingsCatalog: "schemas/dlss_settings_catalog.schema.json",
   renodxManifest: "schemas/renodx_manifest.schema.json",
+  lumaManifest: "schemas/luma_manifest.schema.json",
+  reshadeManifest: "schemas/reshade_manifest.schema.json",
 });
 
 const defineDocuments = (documents) =>
@@ -65,6 +67,16 @@ export const jsonDocuments = defineDocuments([
   {
     file: "renodx_manifest.json",
     schema: SCHEMAS.renodxManifest,
+    publishedToR2: true,
+  },
+  {
+    file: "luma_manifest.json",
+    schema: SCHEMAS.lumaManifest,
+    publishedToR2: true,
+  },
+  {
+    file: "reshade_manifest.json",
+    schema: SCHEMAS.reshadeManifest,
     publishedToR2: true,
   },
 ]);

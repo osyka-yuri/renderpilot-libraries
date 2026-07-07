@@ -17,6 +17,7 @@ import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
+import { errorMessage, UsageError } from "./lib/common.mjs";
 import { r2, repoRoot, servedJson } from "./catalog.mjs";
 
 const CDN_DIR_NAME = "cdn";
@@ -30,10 +31,6 @@ const KNOWN_FLAGS = new Map([
   ["--help", "help"],
   ["-h", "help"],
 ]);
-
-class UsageError extends Error {
-  name = "UsageError";
-}
 
 async function main(argv = process.argv.slice(2), env = process.env) {
   const options = parseArgs(argv);
@@ -371,11 +368,7 @@ function printHelp() {
   --dry-run    List the objects that would be considered; no network, no credentials.
   --force      Upload every object even if the remote copy already matches.
 
-Credentials: R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (object-scoped R2 S3 token).`);
-}
-
-function errorMessage(err) {
-  return err?.message ?? String(err);
+  Credentials: R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (object-scoped R2 S3 token).`);
 }
 
 main().catch((err) => {

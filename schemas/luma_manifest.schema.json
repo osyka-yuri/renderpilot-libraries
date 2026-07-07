@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://renderpilot.app/schema/luma_manifest.schema.json",
+  "title": "Luma Framework manifest",
+  "description": "Overrides + catalogue manifest for Luma Framework installs. Carries NO hashes/sizes: the add-on is fetched live from a single upstream rolling GitHub Release (Filoppi/Luma-Framework), so this document only maps games to a release asset file name + match rules + per-game overrides, plus the ReShade host source (always nightly — Luma has no stable channel) and shared defaults. Deliberately narrower than the RenoDX manifest: there is no top-level `generics` fallback list (every Generic-Mod-compatible game is an explicit title with `generic: true`), no `external`/`native_hdr` category (every asset lives on the same GitHub Release), and no `slug`/`download_url`/`compatibility` fields. The Rust validator in renderpilot-orchestration (luma::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "reshade", "defaults", "titles"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC 3339 timestamp, date-only granularity (T00:00:00Z). Honors SOURCE_DATE_EPOCH for reproducible builds."
+    },
+    "reshade": { "$ref": "#/$defs/reshade" },
+    "defaults": {
+      "$ref": "#/$defs/defaults",
+      "description": "Shared title defaults. The app applies these to every title that omits the corresponding field; the generator only emits a per-title field when it differs from these."
+    },
+    "titles": {
+      "type": "array",
+      "description": "The single catalogue of every game Luma is known to work with. Each entry is matched by its rules and optionally routed by `category` (blacklist). Omitted category means installable.",
+      "items": { "$ref": "#/$defs/title" }
+    }
+  },
+  "$defs": {
+    "architecture": { "type": "string", "enum": ["X86", "X64"] },
+    "httpsUrl": { "type": "string", "format": "uri", "pattern": "^https://" },
+    "semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Dotted triple, e.g. 1.0.0."
+    },
+    "asset": {
+      "type": "string",
+      "pattern": "^Luma-[A-Za-z0-9._()'-]+(-x32)?\\.zip$",
+      "description": "GitHub Release asset file name (e.g. Luma-Dishonored_2.zip, Luma-Unreal_Engine.zip). A `-x32` suffix must agree with `arch: X86`. `-Test`/`-Dev` build markers are curated out (Publishing assets only)."
+    },
+    "reshade": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min_version", "nightly"],
+      "description": "Luma always installs the nightly ReShade host (its bundled dxgi.dll pins a recent crosire/reshade main commit, and the host's add-on loader rejects an add-on whose API version exceeds its own) — there is no `stable` field to pick from, unlike RenoDX. `min_version` gates *reusing* an already-present foreign host: one older than this is repaired rather than silently reused.",
+      "properties": {
+        "min_version": {
+          "$ref": "#/$defs/semver",
+          "description": "Minimum ReShade host version Luma's current builds require."
+        },
+        "nightly": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url64", "url32"],
+          "properties": {
+            "url64": { "$ref": "#/$defs/httpsUrl" },
+            "url32": { "$ref": "#/$defs/httpsUrl" }
+          }
+        }
+      }
+    },
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "reason"],
+      "description": "How a matched game is routed. Omitted = installable (a normal Luma install). Deliberately narrower than RenoDX's category: every Luma asset lives on the same GitHub Release, so there is no `external`; a native-HDR title is simply absent from the catalogue rather than modelled.",
+      "properties": {
+        "kind": { "const": "blacklist" },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "description": "i18n key explaining why (known-broken, or requires an external prerequisite this installer doesn't automate, e.g. Vanquish's dgVoodoo)."
+        }
+      }
+    },
+    "matchRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "tier"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "steam_appid",
+            "epic_id",
+            "gog_id",
+            "exe_sha256",
+            "exe_name",
+            "engine",
+            "generic"
+          ]
+        },
+        "value": { "type": "string", "minLength": 1 },
+        "tier": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Specificity; higher wins. Conventionally id 100, fingerprint 90, exe-name 70, engine 40, generic 10."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": ["steam_appid", "epic_id", "gog_id", "exe_sha256", "exe_name"]
+              }
+            },
+            "required": ["kind"]
+          },
+          "then": { "required": ["value"] }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "steam_appid" } },
+            "required": ["kind"]
+          },
+          "then": {
+            "properties": { "value": { "type": "string", "pattern": "^[1-9]\\d*$" } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "exe_sha256" } },
+            "required": ["kind"]
+          },
+          "then": {
+            "properties": { "value": { "type": "string", "pattern": "^[0-9a-f]{64}$" } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "exe_name" } },
+            "required": ["kind"]
+          },
+          "then": {
+            "properties": {
+              "value": { "type": "string", "pattern": "^[^/\\\\]+\\.[eE][xX][eE]$" }
+            }
+          }
+        }
+      ]
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min_app_version", "channel"],
+      "description": "Title defaults applied by the app when a title omits the field.",
+      "properties": {
+        "min_app_version": { "$ref": "#/$defs/semver" },
+        "channel": {
+          "type": "string",
+          "enum": ["stable", "beta", "snapshot"],
+          "description": "Default curation-maturity channel. The generator derives stable for working titles and beta otherwise, then only emits a per-title channel when it differs from this default."
+        }
+      }
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "asset", "arch", "match"],
+      "description": "A catalogue entry — a game Luma is known to work with, matched by its rules and routed by `category` (default installable). min_app_version / channel are omitted when they equal the top-level defaults (the app merges). `status` defaults to `unknown` when omitted.",
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "asset": { "$ref": "#/$defs/asset" },
+        "arch": { "$ref": "#/$defs/architecture" },
+        "status": {
+          "type": "string",
+          "enum": ["working", "construction", "unknown"],
+          "description": "Upstream wiki test-map status: working = verified, construction = WIP/experimental, unknown = untested."
+        },
+        "category": { "$ref": "#/$defs/category" },
+        "channel": {
+          "type": "string",
+          "enum": ["stable", "beta", "snapshot"]
+        },
+        "min_app_version": { "$ref": "#/$defs/semver" },
+        "match": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/matchRule" }
+        },
+        "launch_args": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Required launch arguments (e.g. -dx11, -nod3d9ex), shown to the user as a copyable callout rather than written automatically."
+        },
+        "generic": {
+          "type": "boolean",
+          "description": "Whether `asset` is a shared Generic-Mod build (Unreal Engine) curated onto this specific title, rather than a dedicated per-game build."
+        },
+        "notes_keys": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

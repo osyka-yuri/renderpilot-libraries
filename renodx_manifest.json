@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-02T00:00:00Z",
+  "generated_at": "2026-07-06T00:00:00Z",
   "reshade": {
     "stable": { "url": "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe" },
     "nightly": {
@@ -18,18 +18,7 @@
     },
     { "engine": "unreal", "slug": "unrealengine", "label_key": "renodx.generic.universal" }
   ],
-  "defaults": {
-    "risk": {
-      "anticheat_engine": "none",
-      "online": "singleplayer",
-      "severity": "info",
-      "message_key": "renodx.risk.sp_safe",
-      "confidence": "medium",
-      "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-    },
-    "min_app_version": "1.0.0",
-    "channel": "stable"
-  },
+  "defaults": { "min_app_version": "1.0.0", "channel": "stable" },
   "titles": [
     {
       "id": "007-first-light",
@@ -137,15 +126,7 @@
       "slug": "fromsoft_engine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1888160", "tier": 100 }],
-      "risk": {
-        "anticheat_engine": "eac",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.eac_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "match": [{ "kind": "steam_appid", "value": "1888160", "tier": 100 }]
     },
     {
       "id": "assassin-s-creed-director-s-cut-edition",
@@ -482,15 +463,7 @@
       "slug": "black-desert-online",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "582660", "tier": 100 }],
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "match": [{ "kind": "steam_appid", "value": "582660", "tier": 100 }]
     },
     {
       "id": "borderlands-2-the-pre-sequel",
@@ -663,15 +636,7 @@
       "match": [
         { "kind": "steam_appid", "value": "570940", "tier": 100 },
         { "kind": "exe_name", "value": "DarkSoulsRemastered.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "eac",
-        "online": "coop",
-        "severity": "warn",
-        "message_key": "renodx.risk.eac_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "darkest-dungeon-2",
@@ -892,15 +857,7 @@
       "match": [
         { "kind": "steam_appid", "value": "239140", "tier": 100 },
         { "kind": "exe_name", "value": "DyingLightGame.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "coop",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "dying-light-the-beast",
@@ -919,15 +876,7 @@
       "slug": "fromsoft_engine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1245620", "tier": 100 }],
-      "risk": {
-        "anticheat_engine": "eac",
-        "online": "coop",
-        "severity": "warn",
-        "message_key": "renodx.risk.eac_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "match": [{ "kind": "steam_appid", "value": "1245620", "tier": 100 }]
     },
     {
       "id": "elden-ring-nightreign",
@@ -935,15 +884,7 @@
       "slug": "fromsoft_engine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "2622380", "tier": 100 }],
-      "risk": {
-        "anticheat_engine": "eac",
-        "online": "coop",
-        "severity": "warn",
-        "message_key": "renodx.risk.eac_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "match": [{ "kind": "steam_appid", "value": "2622380", "tier": 100 }]
     },
     {
       "id": "ender-magnolia-bloom-in-the-mist",
@@ -988,15 +929,7 @@
       "match": [
         { "kind": "steam_appid", "value": "1151340", "tier": 100 },
         { "kind": "exe_name", "value": "Fallout76.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "far-cry-2",
@@ -1107,15 +1040,7 @@
       "match": [
         { "kind": "steam_appid", "value": "39210", "tier": 100 },
         { "kind": "exe_name", "value": "ffxivboot.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "final-fantasy-xv",
@@ -1232,15 +1157,7 @@
       "match": [
         { "kind": "steam_appid", "value": "3240220", "tier": 100 },
         { "kind": "exe_name", "value": "PlayGTAV.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "battleye",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "greedfall",
@@ -1284,14 +1201,6 @@
         { "kind": "exe_name", "value": "Gw2-64.exe", "tier": 70 }
       ],
       "channel": "beta",
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      },
       "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64"
     },
     {
@@ -1360,15 +1269,7 @@
       "match": [
         { "kind": "steam_appid", "value": "553850", "tier": 100 },
         { "kind": "exe_name", "value": "helldivers2.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "coop",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "hitman-world-of-assassination",
@@ -2066,14 +1967,6 @@
         { "kind": "steam_appid", "value": "2694490", "tier": 100 },
         { "kind": "exe_name", "value": "PathOfExileSteam.exe", "tier": 70 }
       ],
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      },
       "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64"
     },
     {
@@ -2327,15 +2220,7 @@
       "match": [
         { "kind": "steam_appid", "value": "814380", "tier": 100 },
         { "kind": "exe_name", "value": "sekiro.exe", "tier": 70 }
-      ],
-      "risk": {
-        "anticheat_engine": "eac",
-        "online": "singleplayer",
-        "severity": "warn",
-        "message_key": "renodx.risk.eac_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      ]
     },
     {
       "id": "shadow-gambit-the-cursed-crew",
@@ -3057,7 +2942,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "427410", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "427410", "tier": 100 },
+        { "kind": "exe_name", "value": "AbioticFactor.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -3066,7 +2954,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "384190", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "384190", "tier": 100 },
+        { "kind": "exe_name", "value": "AbzuGame.exe", "tier": 70 }
+      ]
     },
     {
       "id": "adorable-adventures",
@@ -3115,7 +3006,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "979690", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "979690", "tier": 100 },
+        { "kind": "exe_name", "value": "TheAscent.exe", "tier": 70 }
+      ]
     },
     {
       "id": "the-alters",
@@ -3131,7 +3025,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "649950", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "649950", "tier": 100 },
+        { "kind": "exe_name", "value": "Ashen.exe", "tier": 70 }
+      ]
     },
     {
       "id": "asterigos-curse-of-the-stars",
@@ -3164,7 +3061,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "845070", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "845070", "tier": 100 },
+        { "kind": "exe_name", "value": "CaptainSpirit-Win64-Shipping.exe", "tier": 70 }
+      ]
     },
     {
       "id": "banishers-ghosts-of-new-eden",
@@ -3198,7 +3098,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "692850", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "692850", "tier": 100 },
+        { "kind": "exe_name", "value": "BloodstainedRotN.exe", "tier": 70 }
+      ]
     },
     {
       "id": "borderlands-3",
@@ -3248,7 +3151,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1042490", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1042490", "tier": 100 },
+        { "kind": "exe_name", "value": "COTS.exe", "tier": 70 }
+      ]
     },
     {
       "id": "cepheus-protocol",
@@ -3291,7 +3197,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1430680", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1430680", "tier": 100 },
+        { "kind": "exe_name", "value": "Clash.exe", "tier": 70 }
+      ]
     },
     {
       "id": "code-vein",
@@ -3299,7 +3208,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "678960", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "678960", "tier": 100 },
+        { "kind": "exe_name", "value": "CodeVein.exe", "tier": 70 }
+      ]
     },
     {
       "id": "colony-ship-a-post-earth-role-playing-game",
@@ -3347,7 +3259,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "606280", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "606280", "tier": 100 },
+        { "kind": "exe_name", "value": "Darksiders3.exe", "tier": 70 }
+      ]
     },
     {
       "id": "darksiders-genesis",
@@ -3364,7 +3279,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "842100", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "842100", "tier": 100 },
+        { "kind": "exe_name", "value": "Daymare_MASTER.exe", "tier": 70 }
+      ]
     },
     {
       "id": "daymare-1994-sandcastle",
@@ -3388,7 +3306,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "3745310", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "3745310", "tier": 100 },
+        { "kind": "exe_name", "value": "DEADLINE_DELIVERY.exe", "tier": 70 }
+      ]
     },
     {
       "id": "deadlink",
@@ -3428,7 +3349,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1216060", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1216060", "tier": 100 },
+        { "kind": "exe_name", "value": "DNFDUEL.exe", "tier": 70 }
+      ]
     },
     {
       "id": "dragon-ball-z-kakarot",
@@ -3436,7 +3360,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "851850", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "851850", "tier": 100 },
+        { "kind": "exe_name", "value": "AT.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -3575,7 +3502,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1139900", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1139900", "tier": 100 },
+        { "kind": "exe_name", "value": "Ghostrunner.exe", "tier": 70 }
+      ]
     },
     {
       "id": "ghostrunner-2",
@@ -3620,7 +3550,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "962130", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "962130", "tier": 100 },
+        { "kind": "exe_name", "value": "Grounded.exe", "tier": 70 }
+      ]
     },
     {
       "id": "guilty-gear-strive",
@@ -3628,7 +3561,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "1384160", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "1384160", "tier": 100 },
+        { "kind": "exe_name", "value": "GGST.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -3637,7 +3573,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1087760", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1087760", "tier": 100 },
+        { "kind": "exe_name", "value": "Dust.exe", "tier": 70 }
+      ]
     },
     {
       "id": "hell-is-us",
@@ -3727,7 +3666,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1426210", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1426210", "tier": 100 },
+        { "kind": "exe_name", "value": "ItTakesTwo.exe", "tier": 70 }
+      ]
     },
     {
       "id": "jdm-japanese-drift-master",
@@ -3759,7 +3701,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "979070", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "979070", "tier": 100 },
+        { "kind": "exe_name", "value": "JDGame.exe", "tier": 70 }
+      ]
     },
     {
       "id": "kena-bridge-of-spirits",
@@ -3825,7 +3770,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "936790", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "936790", "tier": 100 },
+        { "kind": "exe_name", "value": "LifeIsStrange3.exe", "tier": 70 }
+      ]
     },
     {
       "id": "lightyear-frontier",
@@ -3841,7 +3789,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "424840", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "424840", "tier": 100 },
+        { "kind": "exe_name", "value": "LittleNightmares.exe", "tier": 70 }
+      ]
     },
     {
       "id": "little-nightmares-enhanced-edition",
@@ -4109,7 +4060,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "607080", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "607080", "tier": 100 },
+        { "kind": "exe_name", "value": "Psychonauts2.exe", "tier": 70 }
+      ]
     },
     {
       "id": "the-quarry",
@@ -4144,7 +4098,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "1799930", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "1799930", "tier": 100 },
+        { "kind": "exe_name", "value": "Redout2.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -4153,7 +4110,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "617290", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "617290", "tier": 100 },
+        { "kind": "exe_name", "value": "Remnant.exe", "tier": 70 }
+      ]
     },
     {
       "id": "remnant-2",
@@ -4235,7 +4195,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "775500", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "775500", "tier": 100 },
+        { "kind": "exe_name", "value": "ScarletNexus.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -4336,7 +4299,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "996580", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "996580", "tier": 100 },
+        { "kind": "exe_name", "value": "Spyro.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -4361,7 +4327,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1332010", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1332010", "tier": 100 },
+        { "kind": "exe_name", "value": "Stray.exe", "tier": 70 }
+      ]
     },
     {
       "id": "styx-shards-of-darkness",
@@ -4369,7 +4338,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "355790", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "355790", "tier": 100 },
+        { "kind": "exe_name", "value": "Styx2.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -4378,7 +4350,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "813630", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "813630", "tier": 100 },
+        { "kind": "exe_name", "value": "Supraland.exe", "tier": 70 }
+      ]
     },
     {
       "id": "sword-and-fairy-7",
@@ -4402,7 +4377,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "740130", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "740130", "tier": 100 },
+        { "kind": "exe_name", "value": "Tales of Arise.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -4420,7 +4398,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "389730", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "389730", "tier": 100 },
+        { "kind": "exe_name", "value": "TEKKEN 7.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -4429,7 +4410,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1180660", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1180660", "tier": 100 },
+        { "kind": "exe_name", "value": "TME-Win64-Shipping.exe", "tier": 70 }
+      ]
     },
     {
       "id": "terminator-resistance",
@@ -4470,7 +4454,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1286680", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1286680", "tier": 100 },
+        { "kind": "exe_name", "value": "Wonderlands.exe", "tier": 70 }
+      ]
     },
     {
       "id": "tokyo-xtreme-racer",
@@ -4494,7 +4481,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1370050", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1370050", "tier": 100 },
+        { "kind": "exe_name", "value": "TrekToYomi.exe", "tier": 70 }
+      ]
     },
     {
       "id": "trepang2",
@@ -4535,7 +4525,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "427290", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "427290", "tier": 100 },
+        { "kind": "exe_name", "value": "AVGame-Win64-Shipping.exe", "tier": 70 }
+      ]
     },
     {
       "id": "visions-of-mana",
@@ -4559,7 +4552,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "2005010", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "2005010", "tier": 100 },
+        { "kind": "exe_name", "value": "Warhammer 40,000 Boltgun.exe", "tier": 70 }
+      ]
     },
     {
       "id": "we-happy-few",
@@ -4575,7 +4571,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "1097350", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "1097350", "tier": 100 },
+        { "kind": "exe_name", "value": "WeirdWest.exe", "tier": 70 }
+      ]
     },
     {
       "id": "what-remains-of-edith-finch",
@@ -4583,7 +4582,10 @@
       "slug": "unrealengine",
       "arch": "X64",
       "status": "working",
-      "match": [{ "kind": "steam_appid", "value": "501300", "tier": 100 }]
+      "match": [
+        { "kind": "steam_appid", "value": "501300", "tier": 100 },
+        { "kind": "exe_name", "value": "FinchGame.exe", "tier": 70 }
+      ]
     },
     {
       "id": "witchfire",
@@ -5644,7 +5646,10 @@
       "slug": "unityengine",
       "arch": "X64",
       "status": "construction",
-      "match": [{ "kind": "steam_appid", "value": "609320", "tier": 100 }],
+      "match": [
+        { "kind": "steam_appid", "value": "609320", "tier": 100 },
+        { "kind": "exe_name", "value": "FarLoneSails.exe", "tier": 70 }
+      ],
       "channel": "beta"
     },
     {
@@ -7947,15 +7952,7 @@
         { "kind": "steam_appid", "value": "534380", "tier": 100 },
         { "kind": "exe_name", "value": "DyingLightGame_x64_rwdi.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "coop",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "channel": "beta"
     },
     {
       "id": "l-a-noire",
@@ -7988,15 +7985,7 @@
         { "kind": "steam_appid", "value": "1172620", "tier": 100 },
         { "kind": "exe_name", "value": "SeaOfThieves.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "risk": {
-        "anticheat_engine": "battleye",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "channel": "beta"
     },
     {
       "id": "this-war-of-mine",
@@ -8062,15 +8051,7 @@
       "arch": "X64",
       "status": "unknown",
       "match": [{ "kind": "exe_name", "value": "StarRail.exe", "tier": 70 }],
-      "channel": "beta",
-      "risk": {
-        "anticheat_engine": "unknown",
-        "online": "pvp",
-        "severity": "warn",
-        "message_key": "renodx.risk.anticheat_banrisk",
-        "confidence": "medium",
-        "source": "https://github.com/clshortfuse/renodx/wiki/Mods"
-      }
+      "channel": "beta"
     }
   ]
 }

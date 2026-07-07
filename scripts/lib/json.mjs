@@ -1,11 +1,10 @@
+import { readFile } from "node:fs/promises";
 import { readFileSync, writeFileSync } from "node:fs";
+
+import { assertPlainObject, errorMessage } from "./common.mjs";
 
 const JSON_INDENT = 2;
 const UTF8 = "utf8";
-
-function errorMessage(error) {
-  return error instanceof Error ? error.message : String(error);
-}
 
 function fail(context, message, cause) {
   throw new Error(`${context}: ${message}`, { cause });
@@ -65,7 +64,7 @@ function compareNumericKeys(a, b) {
   return Number(a) - Number(b);
 }
 
-export function stringifyJson(value) {
+function stringifyJson(value) {
   return `${stringifyJsonInternal(value, "JSON", JSON_INDENT)}\n`;
 }
 
@@ -105,17 +104,30 @@ export function readJsonFile(file, context = file) {
   }
 }
 
-export function writeJsonFile(file, value) {
-  writeTextFile(file, stringifyJson(value));
+/**
+ * Async counterpart of `readJsonFile` for scripts that already run in an
+ * async context (`check-renodx-slugs.mjs`, `check-luma-assets.mjs`). Reads
+ * `file` from disk, parses it, and rethrows a wrapped error with the shared
+ * `invalid JSON - …` wording on a parse failure.
+ */
+export async function readJsonFileAsync(file, context = file) {
+  let text;
+  try {
+    text = await readFile(file, UTF8);
+  } catch (error) {
+    fail(context, errorMessage(error), error);
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    fail(context, `invalid JSON - ${errorMessage(error)}`, error);
+  }
 }
 
 export async function writeFormattedJsonFile(file, value) {
   writeTextFile(file, await stringifyFormattedJson(value, file));
 }
-
-import { isPlainObject, assertPlainObject, hasOwn } from "../../scripts/lib/common.mjs";
-
-export { isPlainObject, assertPlainObject, hasOwn };
 
 export function sortNumericObject(value, context = "object") {
   assertPlainObject(value, context);

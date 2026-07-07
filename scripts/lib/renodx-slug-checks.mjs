@@ -19,8 +19,6 @@ import {
 
 export const OFF_SNAPSHOT_TITLE_KINDS = new Set(["external", "native_hdr", "blacklist"]);
 
-export const MAX_ISSUES_TO_PRINT = 40;
-
 export function assertManifestShape(manifest) {
   if (!isRecord(manifest)) {
     throw new Error("renodx_manifest.json must contain a JSON object");

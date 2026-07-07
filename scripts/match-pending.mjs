@@ -1,27 +1,68 @@
-import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { mkdir, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { errorMessage, isMissingFileError } from "./lib/common.mjs";
+import { readJsonFileAsync, stringifyFormattedJson } from "./lib/json.mjs";
+import { repoRoot } from "./catalog.mjs";
 import { searchSteamStore, normalize } from "./lib/steam-search.mjs";
+import { collectOverlayAppids as collectRenoOverlayAppids } from "../renodx_library_manifest/lib/overlay.mjs";
+import { collectOverlayAppids as collectLumaOverlayAppids } from "../luma_library_manifest/lib/overlay.mjs";
 
-const ENCODING = "utf8";
-const JSON_INDENT = 2;
+// Every per-tool manifest pipeline (RenoDX, Luma, …) shares the same
+// pending-match workflow: `generate-manifest.mjs` lists unmatched games in
+// `pending_match.json`; this script resolves as many as it can via the Steam
+// Store search API and writes the result into `match_overlay.json`.
+const TOOLS = Object.freeze({
+  renodx: Object.freeze({
+    manifestDir: "renodx_library_manifest",
+    manifestFile: "renodx_manifest.json",
+    collectOverlayAppids: collectRenoOverlayAppids,
+  }),
+  luma: Object.freeze({
+    manifestDir: "luma_library_manifest",
+    manifestFile: "luma_manifest.json",
+    collectOverlayAppids: collectLumaOverlayAppids,
+  }),
+});
 
-const SCRIPT_DIR = import.meta.dirname;
-const REPO_ROOT = path.resolve(SCRIPT_DIR, "..");
-const MANIFEST_DIR = path.join(REPO_ROOT, "renodx_library_manifest");
-
-const FILES = {
-  pendingMatch: path.join(MANIFEST_DIR, "pending_match.json"),
-  matchOverlay: path.join(MANIFEST_DIR, "match_overlay.json"),
-  unmatched: path.join(MANIFEST_DIR, "unmatched.json"),
-  manifest: path.join(REPO_ROOT, "renodx_manifest.json"),
-};
+const DEFAULT_TOOL = "renodx";
 
 const UNMATCHED_REASON = {
   apiFailed: "API Request Failed",
   noExactMatch: "No exact match found in Steam Store search",
 };
 
-async function main() {
+export function parseToolArg(argv) {
+  const toolArg = argv.find((arg) => arg.startsWith("--tool="));
+  const tool = toolArg ? toolArg.slice("--tool=".length) : DEFAULT_TOOL;
+
+  if (!Object.hasOwn(TOOLS, tool)) {
+    throw new Error(
+      `Unknown --tool "${tool}"; expected one of: ${Object.keys(TOOLS).join(", ")}`,
+    );
+  }
+
+  return tool;
+}
+
+export function filesForTool(tool) {
+  const { manifestDir, manifestFile } = TOOLS[tool];
+  const manifestDirPath = path.join(repoRoot, manifestDir);
+
+  return {
+    pendingMatch: path.join(manifestDirPath, "pending_match.json"),
+    matchOverlay: path.join(manifestDirPath, "match_overlay.json"),
+    unmatched: path.join(manifestDirPath, "unmatched.json"),
+    manifest: path.join(repoRoot, manifestFile),
+  };
+}
+
+async function main(argv = process.argv.slice(2)) {
+  const tool = parseToolArg(argv);
+  const toolConfig = TOOLS[tool];
+  const FILES = filesForTool(tool);
+
+  console.log(`Resolving pending matches for: ${tool}`);
+
   const pendingGames = await readJsonFile(FILES.pendingMatch, validatePendingGames);
 
   const matchOverlay = await readOptionalJsonFile(
@@ -35,10 +76,13 @@ async function main() {
     FILES.manifest,
     () => new Set(),
     collectManifestSteamAppIds,
-    "No existing renodx_manifest.json found. Skipping global duplicate check.",
+    `No existing ${path.basename(FILES.manifest)} found. Skipping global duplicate check.`,
   );
 
-  const locallyClaimedAppIds = collectOverlaySteamAppIds(matchOverlay);
+  const locallyClaimedAppIds = collectOverlaySteamAppIds(
+    matchOverlay,
+    toolConfig.collectOverlayAppids,
+  );
   const unmatchedGames = [];
 
   let matchCount = 0;
@@ -56,7 +100,7 @@ async function main() {
     const searchResult = await findExactSteamApp(game.name);
 
     if (searchResult.kind === "error") {
-      console.warn(`  -> Steam search failed: ${getErrorMessage(searchResult.error)}`);
+      console.warn(`  -> Steam search failed: ${errorMessage(searchResult.error)}`);
 
       unmatchedGames.push({
         id: game.id,
@@ -145,8 +189,7 @@ async function findExactSteamApp(gameName) {
 }
 
 async function readJsonFile(filePath, validate) {
-  const rawJson = await readFile(filePath, ENCODING);
-  const parsedJson = parseJson(rawJson, filePath);
+  const parsedJson = await readJsonFileAsync(filePath, toRepoRelativePath(filePath));
 
   return validate(parsedJson, filePath);
 }
@@ -161,17 +204,6 @@ async function readOptionalJsonFile(filePath, fallback, validate, missingMessage
     }
 
     throw error;
-  }
-}
-
-function parseJson(rawJson, filePath) {
-  try {
-    return JSON.parse(rawJson);
-  } catch (error) {
-    throw new Error(
-      `Invalid JSON in ${toRepoRelativePath(filePath)}: ${getErrorMessage(error)}`,
-      { cause: error },
-    );
   }
 }
 
@@ -212,7 +244,7 @@ function validatePendingGames(value, filePath) {
   });
 }
 
-function validateMatchOverlay(value, filePath) {
+export function validateMatchOverlay(value, filePath) {
   if (!isRecord(value)) {
     throw new TypeError(`${toRepoRelativePath(filePath)} must contain an object.`);
   }
@@ -246,11 +278,12 @@ function validateMatchOverlay(value, filePath) {
   return overlay;
 }
 
-function collectManifestSteamAppIds(manifest) {
+export function collectManifestSteamAppIds(manifest, filePath) {
   const appIds = new Set();
+  const label = path.basename(filePath);
 
   if (!isRecord(manifest)) {
-    throw new TypeError("renodx_manifest.json must contain an object.");
+    throw new TypeError(`${label} must contain an object.`);
   }
 
   if (manifest.titles == null) {
@@ -258,7 +291,7 @@ function collectManifestSteamAppIds(manifest) {
   }
 
   if (!Array.isArray(manifest.titles)) {
-    throw new TypeError("renodx_manifest.json titles must be an array.");
+    throw new TypeError(`${label} titles must be an array.`);
   }
 
   for (const title of manifest.titles) {
@@ -276,18 +309,13 @@ function collectManifestSteamAppIds(manifest) {
   return appIds;
 }
 
-function collectOverlaySteamAppIds(matchOverlay) {
-  const appIds = new Set();
-
-  for (const entry of matchOverlay.values()) {
-    if (!Array.isArray(entry.appids)) {
-      continue;
-    }
-
-    for (const appid of entry.appids) {
-      appIds.add(String(appid));
-    }
+export function collectOverlaySteamAppIds(matchOverlay, collectOverlayAppids) {
+  if (typeof collectOverlayAppids !== "function") {
+    throw new TypeError("collectOverlayAppids must be a function");
   }
+
+  const appIds = new Set();
+  collectOverlayAppids(mapToSortedObject(matchOverlay), appIds);
 
   return appIds;
 }
@@ -301,16 +329,12 @@ async function writeJsonFileAtomic(filePath, value) {
   );
 
   try {
-    await writeFile(tempPath, stringifyJson(value), ENCODING);
+    await writeFile(tempPath, await stringifyFormattedJson(value, filePath), "utf8");
     await rename(tempPath, filePath);
   } catch (error) {
     await rm(tempPath, { force: true }).catch(() => {});
     throw error;
   }
-}
-
-function stringifyJson(value) {
-  return `${JSON.stringify(value, null, JSON_INDENT)}\n`;
 }
 
 function mapToSortedObject(map) {
@@ -341,16 +365,8 @@ function toNonEmptyString(value) {
   return String(value).trim();
 }
 
-function isMissingFileError(error) {
-  return isRecord(error) && error.code === "ENOENT";
-}
-
-function getErrorMessage(error) {
-  return error instanceof Error ? error.message : String(error);
-}
-
 function toRepoRelativePath(filePath) {
-  return path.relative(REPO_ROOT, filePath) || filePath;
+  return path.relative(repoRoot, filePath) || filePath;
 }
 
 if (import.meta.main) {

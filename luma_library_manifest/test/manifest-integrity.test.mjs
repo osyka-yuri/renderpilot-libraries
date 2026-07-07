@@ -1,0 +1,62 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import path from "node:path";
+
+const SCRIPT_DIR = import.meta.dirname;
+const REPO_ROOT = path.resolve(SCRIPT_DIR, "../..");
+
+const DISHONORED_2 = {
+  id: "dishonored-2",
+  asset: "Luma-Dishonored_2.zip",
+  appid: "403640",
+};
+const TEKKEN_7 = "tekken-7";
+
+test("manifest integrity - committed luma_manifest.json is well-formed and internally consistent", async () => {
+  const manifestPath = path.join(REPO_ROOT, "luma_manifest.json");
+  const data = await fs.readFile(manifestPath, "utf-8");
+  const manifest = JSON.parse(data);
+
+  assert.ok(Array.isArray(manifest.titles), "Manifest should have a titles array");
+  assert.ok(manifest.titles.length > 0, "Manifest should have at least one title");
+  assert.equal(manifest.schema_version, 1);
+  assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
+  assert.match(manifest.defaults.min_app_version, /^\d+\.\d+\.\d+$/);
+  assert.equal(manifest.defaults.channel, "stable");
+  assert.match(manifest.reshade.min_version, /^\d+\.\d+\.\d+$/);
+
+  const dishonored2 = manifest.titles.find((t) => t.id === DISHONORED_2.id);
+  assert.ok(dishonored2, `${DISHONORED_2.id} must be present`);
+  assert.equal(dishonored2.asset, DISHONORED_2.asset);
+  assert.ok(
+    dishonored2.match.some(
+      (rule) =>
+        rule.kind === "steam_appid" &&
+        rule.value === DISHONORED_2.appid &&
+        rule.tier === 100,
+    ),
+    "Dishonored 2 should match by its Steam AppID",
+  );
+
+  const tekken7 = manifest.titles.find((t) => t.id === TEKKEN_7);
+  assert.ok(tekken7, `${TEKKEN_7} must be present`);
+  assert.equal(tekken7.generic, true);
+  assert.deepEqual(tekken7.launch_args, ["-nod3d9ex"]);
+  const sharingItsAsset = manifest.titles.filter((t) => t.asset === tekken7.asset);
+  assert.ok(sharingItsAsset.length > 1, "the generic asset should be shared across titles");
+
+  const seen = new Map();
+  for (const title of manifest.titles) {
+    for (const rule of title.match) {
+      const key = `${rule.kind}:${String(rule.value ?? "").toLowerCase()}`;
+      const owner = seen.get(key);
+      assert.equal(
+        owner,
+        undefined,
+        `match rule ${key} claimed by both "${owner}" and "${title.id}"`,
+      );
+      seen.set(key, title.id);
+    }
+  }
+});

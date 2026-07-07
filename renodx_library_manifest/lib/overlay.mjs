@@ -1,11 +1,24 @@
-import { assertPlainObject, hasOwn } from "./json.mjs";
+import {
+  addNormalizedAppids,
+  normalizeAppid,
+  normalizeAppids,
+  normalizeExeName,
+  warnUnknownFields,
+} from "../../scripts/lib/overlay-shared.mjs";
+import {
+  assertNonEmptyArray,
+  assertPlainObject,
+  hasOwn,
+  requiredNonEmptyString,
+} from "../../scripts/lib/common.mjs";
+
+export { normalizeAppid, normalizeAppids, normalizeExeName };
 
 export const KNOWN_OVERLAY_FIELDS = new Set([
   "appid",
   "appids",
   "exe",
   "slug",
-  "risk",
   "conflicts",
   "required_api",
   "notes_keys",
@@ -32,30 +45,11 @@ const INHERITED_SPLIT_FIELDS = new Set(
 
 const CATEGORY_FIELDS = ["native_hdr", "blacklist", "external"];
 
-const APPID_RE = /^[1-9]\d*$/u;
 const SLUG_RE = /^[A-Za-z0-9._-]+$/u;
-const EXE_EXTENSION_RE = /\.exe$/iu;
-const WINDOWS_BASENAME_FORBIDDEN_RE = /[<>:"/\\|?*\u0000-\u001F]/u;
 const WHITESPACE_RE = /\s/u;
 
-function validateWarningSink(warn) {
-  if (typeof warn !== "function") {
-    throw new Error("warn must be a function");
-  }
-}
-
-function assertNonEmptyArray(value, context) {
-  if (!Array.isArray(value)) {
-    throw new Error(`${context} must be an array`);
-  }
-
-  if (value.length === 0) {
-    throw new Error(`${context} must not be empty`);
-  }
-}
-
-function normalizeOptionalString(value, context) {
-  if (value === undefined) return undefined;
+function validateOptionalString(value, context) {
+  if (value === undefined) return;
 
   if (typeof value !== "string") {
     throw new Error(`${context} must be a string`);
@@ -65,22 +59,6 @@ function normalizeOptionalString(value, context) {
   if (trimmed === "") {
     throw new Error(`${context} must be a non-empty string`);
   }
-
-  return trimmed;
-}
-
-function normalizeRequiredString(value, context) {
-  const normalized = normalizeOptionalString(value, context);
-
-  if (normalized === undefined) {
-    throw new Error(`${context} must be a non-empty string`);
-  }
-
-  return normalized;
-}
-
-function validateOptionalString(value, context) {
-  normalizeOptionalString(value, context);
 }
 
 function validateOptionalStringArray(value, context) {
@@ -89,14 +67,8 @@ function validateOptionalStringArray(value, context) {
   assertNonEmptyArray(value, context);
 
   value.forEach((item, index) => {
-    normalizeRequiredString(item, `${context}[${index}]`);
+    requiredNonEmptyString(item, `${context}[${index}]`);
   });
-}
-
-function addNormalizedAppids(out, overlay, context) {
-  for (const appid of normalizeAppids(overlay, context)) {
-    out.add(appid);
-  }
 }
 
 function validateNativeHdrCategory(overlay, context) {
@@ -110,7 +82,7 @@ function validateNativeHdrCategory(overlay, context) {
 function validateBlacklistCategory(overlay, context) {
   return {
     kind: "blacklist",
-    reason: normalizeRequiredString(overlay.blacklist, `${context}.blacklist`),
+    reason: requiredNonEmptyString(overlay.blacklist, `${context}.blacklist`),
   };
 }
 
@@ -120,7 +92,7 @@ function validateExternalCategory(overlay, context) {
   return {
     kind: "external",
     url: normalizeHttpsUrl(overlay.external.url, `${context}.external.url`),
-    label_key: normalizeRequiredString(
+    label_key: requiredNonEmptyString(
       overlay.external.label_key,
       `${context}.external.label_key`,
     ),
@@ -139,16 +111,16 @@ function validateOverlayShape(overlay, context) {
     normalizeHttpsUrl(overlay.download_url, `${context}.download_url`);
   }
 
-  if (hasOwn(overlay, "risk")) {
-    assertPlainObject(overlay.risk, `${context}.risk`);
-  }
-
   validateOptionalStringArray(overlay.conflicts, `${context}.conflicts`);
   validateOptionalString(overlay.compatibility_source, `${context}.compatibility_source`);
   validateOptionalStringArray(overlay.required_api, `${context}.required_api`);
   validateOptionalStringArray(overlay.notes_keys, `${context}.notes_keys`);
   validateOptionalString(overlay.proxy_dll_override, `${context}.proxy_dll_override`);
   validateOptionalString(overlay.min_app_version, `${context}.min_app_version`);
+
+  if (hasOwn(overlay, "ignore") && typeof overlay.ignore !== "boolean") {
+    throw new Error(`${context}.ignore must be a boolean`);
+  }
 
   categoryOf(overlay, context);
 }
@@ -196,113 +168,8 @@ function collectAppidsRecursively(value, into, context) {
   }
 }
 
-export function warnUnknownFields(value, knownFields, context, warn = console.warn) {
-  validateWarningSink(warn);
-
-  for (const key of Object.keys(value)) {
-    if (!knownFields.has(key)) {
-      warn(`⚠ ${context} has unknown field "${key}" (typo? ignored)`);
-    }
-  }
-}
-
-export function addCaseInsensitiveUnique(out, value) {
-  if (value === null || value === undefined || value === "") return;
-
-  if (typeof value !== "string") {
-    throw new Error("value must be a string");
-  }
-
-  const normalized = value.toLowerCase();
-
-  if (!out.some((existing) => existing.toLowerCase() === normalized)) {
-    out.push(value);
-  }
-}
-
-export function normalizeAppid(value, context) {
-  const appid =
-    typeof value === "number" && Number.isSafeInteger(value)
-      ? String(value)
-      : typeof value === "string"
-        ? value.trim()
-        : null;
-
-  if (!appid || !APPID_RE.test(appid)) {
-    throw new Error(`${context} must be a positive Steam AppID`);
-  }
-
-  return appid;
-}
-
-export function normalizeAppids(overlay, context) {
-  assertPlainObject(overlay, context);
-
-  const appids = [];
-
-  const push = (value, field) => {
-    addCaseInsensitiveUnique(appids, normalizeAppid(value, `${context}.${field}`));
-  };
-
-  if (hasOwn(overlay, "appid")) {
-    push(overlay.appid, "appid");
-  }
-
-  if (hasOwn(overlay, "appids")) {
-    assertNonEmptyArray(overlay.appids, `${context}.appids`);
-
-    overlay.appids.forEach((appid, index) => {
-      push(appid, `appids[${index}]`);
-    });
-  }
-
-  return appids;
-}
-
-export function collectOverlayAppids(value, into, context = "match_overlay.json") {
-  collectAppidsRecursively(value, into, context);
-}
-
-export function normalizeExeName(value, context) {
-  if (value === null || value === undefined) {
-    return null;
-  }
-
-  const exe = normalizeRequiredString(value, context);
-
-  if (
-    exe === ".exe" ||
-    !EXE_EXTENSION_RE.test(exe) ||
-    WINDOWS_BASENAME_FORBIDDEN_RE.test(exe)
-  ) {
-    throw new Error(`${context} must be an .exe basename`);
-  }
-
-  return exe;
-}
-
-export function normalizeCachedExes(value, context) {
-  if (!Array.isArray(value)) {
-    throw new Error(`${context} must be an array`);
-  }
-
-  const out = [];
-
-  value.forEach((exe, index) => {
-    const normalized = normalizeExeName(exe, `${context}[${index}]`);
-
-    if (normalized === null) {
-      throw new Error(`${context}[${index}] must be an .exe basename`);
-    }
-
-    addCaseInsensitiveUnique(out, normalized);
-  });
-
-  return out;
-}
-
 export function normalizeSlug(value, context) {
-  const slug = normalizeRequiredString(value, context);
+  const slug = requiredNonEmptyString(value, context);
 
   if (!SLUG_RE.test(slug)) {
     throw new Error(`${context} must be a non-empty RenoDX slug`);
@@ -311,8 +178,8 @@ export function normalizeSlug(value, context) {
   return slug;
 }
 
-export function normalizeHttpsUrl(value, context) {
-  const url = normalizeRequiredString(value, context);
+function normalizeHttpsUrl(value, context) {
+  const url = requiredNonEmptyString(value, context);
 
   if (WHITESPACE_RE.test(url)) {
     throw new Error(`${context} must be a valid https URL`);
@@ -383,7 +250,6 @@ export function inheritedSplitOverlay(parent, split) {
 }
 
 export function validateOverlay(overlay, wikiIds, warn = console.warn) {
-  validateWarningSink(warn);
   assertPlainObject(overlay, "match_overlay.json");
 
   for (const [id, entry] of Object.entries(overlay)) {
@@ -392,7 +258,7 @@ export function validateOverlay(overlay, wikiIds, warn = console.warn) {
     assertPlainObject(entry, context);
 
     if (!wikiIds.has(id)) {
-      warn(`⚠ ${context} has no matching wiki entry (orphan)`);
+      warn(`Warning: ${context} has no matching wiki entry (orphan)`);
     }
 
     warnUnknownFields(entry, KNOWN_OVERLAY_FIELDS, context, warn);
@@ -410,9 +276,13 @@ export function validateOverlay(overlay, wikiIds, warn = console.warn) {
   }
 }
 
+export function collectOverlayAppids(value, into, context = "match_overlay.json") {
+  collectAppidsRecursively(value, into, context);
+}
+
 export function collectMatchedAppids(wiki, overlay) {
   if (!Array.isArray(wiki)) {
-    throw new Error("wiki must be an array");
+    throw new Error("wiki_games.json must be an array");
   }
 
   assertPlainObject(overlay, "match_overlay.json");
@@ -422,11 +292,9 @@ export function collectMatchedAppids(wiki, overlay) {
   wiki.forEach((game, index) => {
     assertPlainObject(game, `wiki[${index}]`);
 
-    const id = normalizeRequiredString(game.id, `wiki[${index}].id`);
+    const id = requiredNonEmptyString(game.id, `wiki[${index}].id`);
     const entry = overlay[id] ?? {};
     const context = `overlay "${id}"`;
-
-    assertPlainObject(entry, context);
 
     if (!hasOwn(entry, "split")) {
       addNormalizedAppids(appids, entry, context);

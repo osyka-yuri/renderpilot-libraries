@@ -1,27 +1,7 @@
-import assert from "node:assert/strict";
 import test from "node:test";
+import assert from "node:assert/strict";
 
-import {
-  categoryOf,
-  inheritedSplitOverlay,
-  normalizeAppid,
-  normalizeAppids,
-  normalizeExeName,
-  validateOverlay,
-} from "../lib/overlay.mjs";
-
-test("normalizes appids and exe basenames", () => {
-  assert.equal(normalizeAppid(123, "appid"), "123");
-  assert.equal(normalizeAppid(" 456 ", "appid"), "456");
-  assert.deepEqual(normalizeAppids({ appid: "100", appids: ["100", "200"] }, "overlay"), [
-    "100",
-    "200",
-  ]);
-  assert.equal(normalizeExeName(" Game.EXE ", "exe"), "Game.EXE");
-
-  assert.throws(() => normalizeAppid("0", "appid"), /positive Steam AppID/);
-  assert.throws(() => normalizeExeName("bin/Game.exe", "exe"), /basename/);
-});
+import { categoryOf, inheritedSplitOverlay, validateOverlay } from "../lib/overlay.mjs";
 
 test("rejects category conflicts and category plus download_url", () => {
   assert.deepEqual(
@@ -67,7 +47,6 @@ test("split overlays inherit metadata but not parent match identifiers", () => {
       appid: "100",
       exe: "Parent.exe",
       slug: "sharedslug",
-      risk: { severity: "warn" },
       notes_keys: ["note.key"],
     },
     { suffix: "child", name: "Child", appid: "200" },
@@ -76,7 +55,6 @@ test("split overlays inherit metadata but not parent match identifiers", () => {
   assert.equal(split.appid, "200");
   assert.equal(split.exe, undefined);
   assert.equal(split.slug, "sharedslug");
-  assert.deepEqual(split.risk, { severity: "warn" });
   assert.deepEqual(split.notes_keys, ["note.key"]);
 });
 

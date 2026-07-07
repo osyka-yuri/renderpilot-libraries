@@ -1,0 +1,449 @@
+{
+  "abiotic-factor": {
+    "appids": ["427410"]
+  },
+  "abzu": {
+    "appids": ["384190"]
+  },
+  "ace-combat-7": {
+    "appids": ["502500"]
+  },
+  "agony-unrated": {
+    "appids": ["879420"]
+  },
+  "alchemy-garden": {
+    "appids": ["935400"]
+  },
+  "alfred-hitchcock-vertigo": {
+    "appids": ["1449320"]
+  },
+  "aliens-fireteam-elite": {
+    "appids": ["1549970"]
+  },
+  "ancestors-legacy": {
+    "appids": ["620590"]
+  },
+  "ancestors-the-humankind-odyssey": {
+    "appids": ["536270"]
+  },
+  "ashen": {
+    "appids": ["649950"]
+  },
+  "batman-arkham-knight": {
+    "appids": ["208650"]
+  },
+  "beyond-two-souls": {
+    "appids": ["960990"]
+  },
+  "bioshock-series": {
+    "appids": ["409710", "409720"]
+  },
+  "bloodstained-ritual-of-the-night": {
+    "appids": ["692850"]
+  },
+  "blue-reflection-second-light": {
+    "appids": ["1423600"]
+  },
+  "borderlands-2-and-the-pre-sequel": {
+    "appids": ["49520", "261640"]
+  },
+  "borderlands-goty-enhanced": {
+    "appids": ["729040"]
+  },
+  "burnout-paradise-remastered": {
+    "appids": ["1238080"]
+  },
+  "call-of-the-sea": {
+    "appids": ["1042490"]
+  },
+  "chess-ultra": {
+    "appids": ["518060"]
+  },
+  "circus-electrique": {
+    "appids": ["1666250"]
+  },
+  "clash-artifacts-of-chaos": {
+    "appids": ["1430680"]
+  },
+  "close-to-the-sun": {
+    "appids": ["968870"]
+  },
+  "cocoon": {
+    "appids": ["1497440"]
+  },
+  "cod-black-ops-3": {
+    "appids": ["311210"]
+  },
+  "code-vein": {
+    "appids": ["678960"]
+  },
+  "coral-island": {
+    "appids": ["1158160"]
+  },
+  "crab-champions": {
+    "appids": ["774801"]
+  },
+  "crash-bandicoot-4": {
+    "appids": ["1378990"]
+  },
+  "crymachina": {
+    "appids": ["2258500"]
+  },
+  "cygni-all-guns-blazing": {
+    "appids": ["1248080"]
+  },
+  "darksiders-3": {
+    "appids": ["606280"]
+  },
+  "daymare-1998": {
+    "appids": ["842100"]
+  },
+  "dead-island-2": {
+    "appids": ["934700"]
+  },
+  "deadline-delivery": {
+    "appids": ["3745310"]
+  },
+  "desolate": {
+    "appids": ["671510"]
+  },
+  "deus-ex-human-revolution": {
+    "appids": ["238010"]
+  },
+  "deus-ex-mankind-divided": {
+    "appids": ["337000"]
+  },
+  "devils-hunt": {
+    "appids": ["887720"]
+  },
+  "die-young": {
+    "appids": ["433170"]
+  },
+  "dishonored-2": {
+    "appid": "403640"
+  },
+  "dnf-duel": {
+    "appids": ["1216060"]
+  },
+  "dragon-ball-z-kakarot": {
+    "appids": ["851850"]
+  },
+  "dragon-quest-11-s": {
+    "appids": ["1295510"]
+  },
+  "dying-light-2": {
+    "appids": ["534380"]
+  },
+  "eriksholm-the-stolen-dream": {
+    "appids": ["2377280"]
+  },
+  "fallout-4": {
+    "appids": ["377160"]
+  },
+  "far-changing-tides": {
+    "appids": ["1570010"]
+  },
+  "far-lone-sails": {
+    "appids": ["609320"]
+  },
+  "filament": {
+    "appids": ["1137350"]
+  },
+  "final-fantasy-15": {
+    "appids": ["637650"]
+  },
+  "final-fantasy-7-remake": {
+    "appids": ["1462040"]
+  },
+  "ghostrunner": {
+    "appids": ["1139900"]
+  },
+  "goat-simulator-3": {
+    "appids": ["850190"]
+  },
+  "granblue-fantasy-relink": {
+    "appids": ["881020"]
+  },
+  "greedfall": {
+    "appids": ["606880"]
+  },
+  "grounded": {
+    "appids": ["962130"]
+  },
+  "guilty-gear-strive": {
+    "appids": ["1384160"]
+  },
+  "gylt": {
+    "appids": ["2206210"]
+  },
+  "hatsune-miku-project-diva-mega-mix-plus": {
+    "appids": ["1761390"]
+  },
+  "heavy-rain": {
+    "appids": ["960910"]
+  },
+  "hellblade-senuas-sacrifice": {
+    "appids": ["414340"]
+  },
+  "hollow-knight-silksong": {
+    "appids": ["1030300"]
+  },
+  "inside": {
+    "appids": ["304430"]
+  },
+  "it-takes-two": {
+    "appids": ["1426210"]
+  },
+  "just-cause-3": {
+    "appids": ["225540"]
+  },
+  "just-die-already": {
+    "appids": ["979070"]
+  },
+  "kao-the-kangaroo": {
+    "appids": ["1370140"]
+  },
+  "kingdom-come-deliverance": {
+    "appids": ["379430"]
+  },
+  "kingdom-hearts-3": {
+    "appids": ["2552450"]
+  },
+  "la-noire": {
+    "appids": ["110800"]
+  },
+  "lara-croft-temple-of-osiris": {
+    "appids": ["289690"]
+  },
+  "layers-of-fear-2": {
+    "appids": ["1029890"]
+  },
+  "lego-city-undercover": {
+    "appids": ["578330"]
+  },
+  "life-is-strange-2": {
+    "appids": ["532210"]
+  },
+  "life-is-strange-true-colors": {
+    "appids": ["936790"]
+  },
+  "little-nightmares": {
+    "appids": ["424840"]
+  },
+  "mafia-2-definitive-edition": {
+    "appids": ["1030830"]
+  },
+  "mafia-3": {
+    "appids": ["360430"]
+  },
+  "maneater": {
+    "appids": ["629820"]
+  },
+  "mass-effect-andromeda": {
+    "appids": ["1238000"]
+  },
+  "metaphor-refantazio": {
+    "appids": ["2679460"]
+  },
+  "metro-2033-redux": {
+    "appids": ["286690"]
+  },
+  "mirrors-edge-catalyst": {
+    "appids": ["1233570"]
+  },
+  "monster-hunter-world": {
+    "appids": ["582010"]
+  },
+  "mordhau": {
+    "appids": ["629760"]
+  },
+  "mortal-kombat-11": {
+    "appids": ["976310"]
+  },
+  "mothergunship": {
+    "appids": ["574090"]
+  },
+  "mutant-year-zero-road-to-eden": {
+    "appids": ["760060"]
+  },
+  "nier-automata": {
+    "appids": ["524220"]
+  },
+  "nioh": {
+    "appids": ["485510"]
+  },
+  "orcs-must-die-3": {
+    "appids": ["1522820"]
+  },
+  "persona-5-royal": {
+    "appids": ["1687950"]
+  },
+  "prey-2017": {
+    "appids": ["480490"]
+  },
+  "project-wingman": {
+    "appids": ["895870"]
+  },
+  "psychonauts-2": {
+    "appids": ["607080"]
+  },
+  "quantum-break": {
+    "appids": ["474960"]
+  },
+  "redeemer-enhanced-edition": {
+    "appids": ["447290"]
+  },
+  "redout": {
+    "appids": ["517710"]
+  },
+  "redout-2": {
+    "appids": ["1799930"]
+  },
+  "relicta": {
+    "appids": ["941570"]
+  },
+  "remnant-from-the-ashes": {
+    "appids": ["617290"]
+  },
+  "ruiner": {
+    "appids": ["464060"]
+  },
+  "saints-row-the-third-remastered": {
+    "appids": ["978300"]
+  },
+  "scarlet-nexus": {
+    "appids": ["775500"]
+  },
+  "scorn": {
+    "appids": ["698670"]
+  },
+  "selfloss": {
+    "appids": ["1086620"]
+  },
+  "shenmue-1-and-2": {
+    "appids": ["758330"]
+  },
+  "shenmue-3": {
+    "appids": ["878670"]
+  },
+  "sherlock-holmes-chapter-one": {
+    "appids": ["1137300"]
+  },
+  "shin-megami-tensei-5-vengeance": {
+    "appids": ["1875830"]
+  },
+  "snake-pass": {
+    "appids": ["544330"]
+  },
+  "song-of-nunu": {
+    "appids": ["1333200"]
+  },
+  "spirit-of-the-north": {
+    "appids": ["1213700"]
+  },
+  "spyro-reignited-trilogy": {
+    "appids": ["996580"]
+  },
+  "star-wars-jedi-fallen-order": {
+    "appids": ["1172380"]
+  },
+  "state-of-decay-2": {
+    "appids": ["495420"]
+  },
+  "steel-rats": {
+    "appids": ["619700"]
+  },
+  "stray": {
+    "appids": ["1332010"]
+  },
+  "styx-shards-of-darkness": {
+    "appids": ["355790"]
+  },
+  "submerged-hidden-depths": {
+    "appids": ["1614270"]
+  },
+  "succubus": {
+    "appids": ["985830"]
+  },
+  "supraland": {
+    "appids": ["813630"]
+  },
+  "tales-of-arise": {
+    "appids": ["740130"]
+  },
+  "tandem-a-tale-of-shadows": {
+    "appids": ["1436920"]
+  },
+  "tekken-7": {
+    "appid": "389730"
+  },
+  "tell-me-why": {
+    "appids": ["1180660"]
+  },
+  "tetris-effect-connected": {
+    "appids": ["1003590"]
+  },
+  "the-ascent": {
+    "appids": ["979690"]
+  },
+  "the-awesome-adventures-of-captain-spirit": {
+    "appids": ["845070"]
+  },
+  "the-dark-pictures-man-of-medan": {
+    "appids": ["939850"]
+  },
+  "the-evil-within-2": {
+    "appids": ["601430"]
+  },
+  "the-gunk": {
+    "appids": ["1087760"]
+  },
+  "the-pathless": {
+    "appids": ["1492680"]
+  },
+  "the-sinking-city": {
+    "appids": ["750130"]
+  },
+  "thief-2014": {
+    "appids": ["239160"]
+  },
+  "thumper": {
+    "appids": ["356400"]
+  },
+  "tiny-tinas-wonderlands": {
+    "appids": ["1286680"]
+  },
+  "titanfall-2": {
+    "appids": ["1237970"]
+  },
+  "trek-to-yomi": {
+    "appids": ["1370050"]
+  },
+  "tribes-of-midgard": {
+    "appids": ["858820"]
+  },
+  "trine-5": {
+    "appids": ["1436700"]
+  },
+  "tyrants-realm": {
+    "appids": ["2259260"]
+  },
+  "vampyr": {
+    "appids": ["427290"]
+  },
+  "warhammer-40000-boltgun": {
+    "appids": ["2005010"]
+  },
+  "watch-dogs-2": {
+    "appids": ["447040"]
+  },
+  "weird-west": {
+    "appids": ["1097350"]
+  },
+  "what-remains-of-edith-finch": {
+    "appids": ["501300"]
+  },
+  "witch-it": {
+    "appids": ["559650"]
+  }
+}

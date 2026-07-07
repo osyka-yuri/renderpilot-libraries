@@ -1,4 +1,4 @@
-import { addCaseInsensitiveUnique } from "./overlay.mjs";
+import { addCaseInsensitiveUnique } from "./common.mjs";
 
 const WINDOWS_OS = "windows";
 const DEFAULT_BRANCH = "default";

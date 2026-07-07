@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-// Generate the RenoDX overrides manifest (schema v3) from authoritative inputs.
+// Generate the Luma Framework overrides manifest (schema v1) from authoritative
+// inputs.
 //
-// The app fetches RenoDX add-ons live from upstream, so this manifest carries no
-// artifacts or hashes. The authoring inputs stay in this folder; the served
-// manifest is written to the repository root.
+// The app fetches the Luma add-on live from a single upstream rolling GitHub
+// Release, so this manifest carries no artifacts or hashes. The authoring
+// inputs stay in this folder; the served manifest is written to the
+// repository root.
 
 import path from "node:path";
 
@@ -15,17 +17,17 @@ import { repoRoot } from "../scripts/catalog.mjs";
 const SCRIPT_DIR = import.meta.dirname;
 
 const FILES = Object.freeze({
-  wiki: path.join(SCRIPT_DIR, "wiki_games.json"),
+  curatedGames: path.join(SCRIPT_DIR, "curated_games.json"),
   overlay: path.join(SCRIPT_DIR, "match_overlay.json"),
   exeCache: path.join(repoRoot, "scripts", "steam-appid-exe.json"),
   pending: path.join(SCRIPT_DIR, "pending_match.json"),
-  manifest: path.join(repoRoot, "renodx_manifest.json"),
+  manifest: path.join(repoRoot, "luma_manifest.json"),
 });
 
 const HELP_TEXT = `Usage: node generate-manifest.mjs [--check]
 
-Generate renodx_manifest.json from wiki_games.json, match_overlay.json, and the
-optional steam-appid-exe.json cache.
+Generate luma_manifest.json from curated_games.json, match_overlay.json, and
+the optional steam-appid-exe.json cache.
 
   --check   Do not write files; fail if generated outputs differ.
   -h, --help
@@ -37,16 +39,14 @@ runGenerateManifestMain(() => ({
   helpText: HELP_TEXT,
   build: (inputs) => buildManifest(inputs),
   readInputs: ({ exeCache, generatedAt }) => ({
-    wiki: readJsonFile(FILES.wiki, path.basename(FILES.wiki)),
+    curatedGames: readJsonFile(FILES.curatedGames, path.basename(FILES.curatedGames)),
     overlay: readJsonFile(FILES.overlay, path.basename(FILES.overlay)),
     exeCache,
     generatedAt,
   }),
   printSummary: (stats) => {
     console.log(
-      `manifest: ${stats.titles} titles (${stats.external} external, ` +
-        `${stats.native_hdr} native-hdr, ${stats.blacklist} blacklist), ` +
-        `${stats.generics} generics`,
+      `manifest: ${stats.titles} titles (${stats.generic} generic, ${stats.blacklist} blacklist)`,
     );
 
     if (stats.ambiguousDerivedExes > 0) {

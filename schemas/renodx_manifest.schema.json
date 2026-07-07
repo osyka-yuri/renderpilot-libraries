@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://renderpilot.app/schema/renodx_manifest.schema.json",
   "title": "RenoDX manifest",
-  "description": "Overrides + catalogue manifest for RenoDX HDR installs. Carries NO hashes/sizes: add-ons are fetched live from upstream (clshortfuse.github.io and engine-generic repos), so this document only maps games to their slug + match rules + per-game overrides, plus the global ReShade sources, engine-generic fallbacks, and shared defaults. Schema version 3 introduces a top-level `defaults` block so the per-title `risk`/`min_app_version`/`channel`/`compatibility` boilerplate is emitted only when it deviates from the defaults (the app merges `defaults` with each title). The Rust validator in renderpilot-orchestration (renodx::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
+  "description": "Overrides + catalogue manifest for RenoDX HDR installs. Carries NO hashes/sizes: add-ons are fetched live from upstream (clshortfuse.github.io and engine-generic repos), so this document only maps games to their slug + match rules + per-game overrides, plus the global ReShade sources, engine-generic fallbacks, and shared defaults. Schema version 3 introduces a top-level `defaults` block so the per-title `min_app_version`/`channel`/`compatibility` boilerplate is emitted only when it deviates from the defaults (the app merges `defaults` with each title). The Rust validator in renderpilot-orchestration (renodx::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -191,6 +191,15 @@
               "value": { "type": "string", "pattern": "^[^/\\\\]+\\.[eE][xX][eE]$" }
             }
           }
+        },
+        {
+          "if": {
+            "properties": { "kind": { "const": "exe_sha256" } },
+            "required": ["kind"]
+          },
+          "then": {
+            "properties": { "value": { "type": "string", "pattern": "^[0-9a-f]{64}$" } }
+          }
         }
       ]
     },
@@ -213,33 +222,12 @@
         "source": { "type": "string" }
       }
     },
-    "risk": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["anticheat_engine", "online", "severity", "message_key"],
-      "properties": {
-        "anticheat_engine": {
-          "type": "string",
-          "enum": ["eac", "battleye", "none", "unknown"]
-        },
-        "online": { "type": "string", "enum": ["singleplayer", "coop", "pvp", "unknown"] },
-        "severity": { "type": "string", "enum": ["info", "warn", "block"] },
-        "message_key": { "type": "string", "minLength": 1 },
-        "confidence": {
-          "type": "string",
-          "enum": ["high", "medium", "low"],
-          "default": "medium"
-        },
-        "source": { "type": "string" }
-      }
-    },
     "defaults": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["risk", "min_app_version", "channel"],
+      "required": ["min_app_version", "channel"],
       "description": "Title defaults applied by the app when a title omits the field.",
       "properties": {
-        "risk": { "$ref": "#/$defs/risk" },
         "min_app_version": { "$ref": "#/$defs/semver" },
         "channel": {
           "type": "string",
@@ -252,7 +240,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["id", "name", "slug", "arch", "status", "match"],
-      "description": "A catalogue entry — a game RenoDX knows, matched by its rules and routed by `category` (default installable). risk / min_app_version / channel / compatibility are omitted when they equal the top-level defaults (the app merges).",
+      "description": "A catalogue entry — a game RenoDX knows, matched by its rules and routed by `category` (default installable). min_app_version / channel / compatibility are omitted when they equal the top-level defaults (the app merges).",
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "name": { "type": "string", "minLength": 1 },
@@ -275,7 +263,6 @@
           "items": { "$ref": "#/$defs/matchRule" }
         },
         "compatibility": { "$ref": "#/$defs/compatibility" },
-        "risk": { "$ref": "#/$defs/risk" },
         "proxy_dll_override": { "type": "string", "pattern": "^[^/\\\\]+$" },
         "notes_keys": {
           "type": "array",

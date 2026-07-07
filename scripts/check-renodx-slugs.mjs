@@ -23,11 +23,11 @@
 //
 //   node scripts/check-renodx-slugs.mjs
 
-import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { repoRoot } from "./catalog.mjs";
+import { readJsonFileAsync } from "./lib/json.mjs";
+import { printIssues } from "./lib/checks.mjs";
 import {
-  MAX_ISSUES_TO_PRINT,
   assertManifestShape,
   checkExplicitAddonNames,
   checkGenerics,
@@ -35,19 +35,6 @@ import {
 } from "./lib/renodx-slug-checks.mjs";
 
 import { fetchSnapshotRelease, SnapshotUnavailableError } from "./lib/github.mjs";
-
-async function readJson(relativePath) {
-  const filePath = path.join(repoRoot, relativePath);
-  const contents = await readFile(filePath, "utf8");
-
-  try {
-    return JSON.parse(contents);
-  } catch (err) {
-    throw new Error(`Could not parse ${relativePath}: ${err.message}`, {
-      cause: err,
-    });
-  }
-}
 
 async function snapshotAssetNames() {
   const release = await fetchSnapshotRelease();
@@ -63,22 +50,6 @@ async function snapshotAssetNames() {
       .map((asset) => asset?.name)
       .filter((name) => typeof name === "string" && name.length > 0),
   );
-}
-
-function printIssues(header, issues) {
-  if (issues.length === 0) {
-    return;
-  }
-
-  console.error(header);
-
-  for (const item of issues.slice(0, MAX_ISSUES_TO_PRINT)) {
-    console.error(`  - ${item}`);
-  }
-
-  if (issues.length > MAX_ISSUES_TO_PRINT) {
-    console.error(`  …and ${issues.length - MAX_ISSUES_TO_PRINT} more`);
-  }
 }
 
 function printMissingAndFail(missing) {
@@ -103,7 +74,10 @@ function printExplicitCheckErrorsAndFail({ structural, mismatches }) {
 }
 
 async function main() {
-  const manifest = await readJson("renodx_manifest.json");
+  const manifest = await readJsonFileAsync(
+    path.join(repoRoot, "renodx_manifest.json"),
+    "renodx_manifest.json",
+  );
   assertManifestShape(manifest);
 
   const explicitResult = checkExplicitAddonNames(manifest);

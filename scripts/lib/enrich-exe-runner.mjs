@@ -1,27 +1,29 @@
-#!/usr/bin/env node
-// Enrich the RenoDX overlay with canonical launch executable basenames derived
-// from Steam appinfo. The generated appid_exe.json cache lets the manifest match
-// non-Steam installs by exe_name without making generate-manifest.mjs networked.
+// Shared runner for the Steam AppID → executable-basename enrichment step.
+// Both manifest pipelines (RenoDX and Luma) consume the same shared cache
+// (`scripts/steam-appid-exe.json`), so the thin `scripts/enrich-exe.mjs`
+// entry point just supplies the cache path + per-tool AppID collectors; this
+// module owns all the mechanics: CLI parsing, Steam appinfo fetch with
+// retry, cache prune, atomic write.
+//
+//   runEnrichExeMain({
+//     cacheFile,       // path to the shared appid→exe cache
+//     collectAppids,   // () => iterable<string>  — union of every tool's overlay
+//   })
 
 import { rename, rm } from "node:fs/promises";
-
-import { gameExesFromAppinfo } from "./lib/steam-appinfo.mjs";
-import {
-  collectOverlayAppids,
-  normalizeAppid,
-  normalizeCachedExes,
-} from "./lib/overlay.mjs";
-import {
-  assertPlainObject,
-  readJsonFile,
-  sortNumericObject,
-  writeFormattedJsonFile,
-} from "./lib/json.mjs";
-
 import path from "node:path";
 
-const OVERLAY_FILE = path.join(import.meta.dirname, "match_overlay.json");
-const CACHE_FILE = path.join(import.meta.dirname, "appid_exe.json");
+import {
+  UsageError,
+  assertPlainObject,
+  errorMessage,
+  forEachConcurrent,
+  hasOwn,
+  isMissingFileError,
+} from "./common.mjs";
+import { readJsonFile, sortNumericObject, writeFormattedJsonFile } from "./json.mjs";
+import { gameExesFromAppinfo } from "./steam-appinfo.mjs";
+import { normalizeAppid, normalizeCachedExes } from "./overlay-shared.mjs";
 
 const STEAMCMD_INFO_API = (appid) => `https://api.steamcmd.net/v1/info/${appid}`;
 
@@ -36,15 +38,6 @@ const FETCH_HEADERS = Object.freeze({
   "User-Agent": "renderpilot-libraries",
 });
 
-const hasOwn = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
-
-class UsageError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = "UsageError";
-  }
-}
-
 class HttpError extends Error {
   constructor(status, statusText) {
     super(`HTTP ${status}${statusText ? ` ${statusText}` : ""}`);
@@ -53,16 +46,14 @@ class HttpError extends Error {
   }
 }
 
-function printHelp() {
-  console.log(`Usage: node enrich-exe.mjs [--force]
+const HELP_TEXT = `Usage: node enrich-exe.mjs [--force]
 
-Fetch public Windows launch executable basenames for every Steam AppID in
-match_overlay.json and update appid_exe.json.
+Fetch public Windows launch executable basenames for every Steam AppID claimed
+by any tool's match_overlay.json and update the shared appid→exe cache.
 
   --force   Refetch AppIDs that are already present in the cache.
   -h, --help
-            Show this help message.`);
-}
+            Show this help message.`;
 
 function parseArgs(argv) {
   const options = {
@@ -126,10 +117,6 @@ function isRetryableError(error) {
   return true;
 }
 
-function formatError(error) {
-  return error instanceof Error ? error.message : String(error);
-}
-
 async function fetchJsonWithTimeout(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), CONFIG.requestTimeoutMs);
@@ -148,7 +135,7 @@ async function fetchJsonWithTimeout(url) {
     try {
       return await response.json();
     } catch (error) {
-      throw new Error(`invalid JSON response: ${formatError(error)}`);
+      throw new Error(`invalid JSON response: ${errorMessage(error)}`);
     }
   } catch (error) {
     if (error?.name === "AbortError") {
@@ -184,7 +171,7 @@ async function fetchGameExes(appid) {
       const lastAttempt = attempt === CONFIG.retries;
 
       if (lastAttempt || !isRetryableError(error)) {
-        console.warn(`warn ${appid}: ${formatError(error)}`);
+        console.warn(`Warning: ${appid}: ${errorMessage(error)}`);
         return null;
       }
 
@@ -195,45 +182,31 @@ async function fetchGameExes(appid) {
   return null;
 }
 
-function isMissingFileError(error) {
-  return /\bENOENT\b/.test(formatError(error));
-}
-
-function readCache() {
+function readCache(cacheFile) {
   let cache;
 
   try {
-    cache = readJsonFile(CACHE_FILE, "appid_exe.json");
+    cache = readJsonFile(cacheFile, "steam-appid-exe.json");
   } catch (error) {
     if (isMissingFileError(error)) return {};
     throw error;
   }
 
-  assertPlainObject(cache, "appid_exe.json");
+  assertPlainObject(cache, "steam-appid-exe.json");
 
   const normalized = {};
 
   for (const [rawAppid, rawExes] of Object.entries(cache)) {
-    const appid = normalizeAppid(rawAppid, `appid_exe.json key "${rawAppid}"`);
-    const exes = normalizeCachedExes(rawExes, `appid_exe.json.${appid}`);
+    const appid = normalizeAppid(rawAppid, `steam-appid-exe.json key "${rawAppid}"`);
+    const exes = normalizeCachedExes(rawExes, `steam-appid-exe.json.${appid}`);
 
     normalized[appid] = normalizeCachedExes(
       [...(normalized[appid] ?? []), ...exes],
-      `appid_exe.json.${appid}`,
+      `steam-appid-exe.json.${appid}`,
     );
   }
 
   return normalized;
-}
-
-function readOverlayAppids() {
-  const overlay = readJsonFile(OVERLAY_FILE, "match_overlay.json");
-  assertPlainObject(overlay, "match_overlay.json");
-
-  const appids = new Set();
-  collectOverlayAppids(overlay, appids);
-
-  return [...appids].sort((a, b) => Number(a) - Number(b));
 }
 
 function pruneCache(cache, allowedAppids) {
@@ -249,26 +222,6 @@ function pruneCache(cache, allowedAppids) {
   return removed;
 }
 
-async function forEachConcurrent(items, concurrency, worker) {
-  if (!Number.isInteger(concurrency) || concurrency < 1) {
-    throw new Error(`invalid concurrency: ${concurrency}`);
-  }
-
-  let nextIndex = 0;
-
-  async function runWorker() {
-    while (true) {
-      const index = nextIndex++;
-      if (index >= items.length) return;
-
-      await worker(items[index], index);
-    }
-  }
-
-  const workerCount = Math.min(concurrency, items.length);
-  await Promise.all(Array.from({ length: workerCount }, runWorker));
-}
-
 async function writeFormattedJsonFileAtomically(file, value) {
   const tempFile = `${file}.${process.pid}.${Date.now()}.tmp`;
 
@@ -281,17 +234,17 @@ async function writeFormattedJsonFileAtomically(file, value) {
   }
 }
 
-async function enrichCache({ force }) {
-  const appids = readOverlayAppids();
+async function enrichCache({ cacheFile, collectAppids, force }) {
+  const appids = [...collectAppids()].sort((a, b) => Number(a) - Number(b));
   const appidSet = new Set(appids);
 
-  const cache = readCache();
+  const cache = readCache(cacheFile);
   const pruned = pruneCache(cache, appidSet);
 
   const todo = force ? appids : appids.filter((appid) => !hasOwn(cache, appid));
 
   console.log(
-    `overlay AppIDs: ${appids.length}; fetching: ${todo.length}` +
+    `AppIDs to cover: ${appids.length}; fetching: ${todo.length}` +
       `${force ? " (force)" : ""}` +
       `${pruned > 0 ? `; pruned: ${pruned}` : ""}`,
   );
@@ -324,34 +277,69 @@ async function enrichCache({ force }) {
   });
 
   const sorted = sortNumericObject(cache);
-  await writeFormattedJsonFileAtomically(CACHE_FILE, sorted);
+  await writeFormattedJsonFileAtomically(cacheFile, sorted);
 
   console.log(
     `cache: ${Object.keys(sorted).length} AppIDs ` +
       `(${stats.withExes} with exes, ` +
       `${stats.withoutExes} none, ` +
-      `${stats.failed} failed) -> appid_exe.json`,
+      `${stats.failed} failed) -> ${path.basename(cacheFile)}`,
   );
 }
 
-async function main(argv = process.argv.slice(2)) {
-  const options = parseArgs(argv);
-
-  if (options.help) {
-    printHelp();
-    return;
+/**
+ * @param {object} opts
+ * @param {string}   opts.cacheFile     — path to the shared appid→exe cache
+ * @param {function} opts.collectAppids — () => iterable<string> (union of every tool's overlay)
+ * @param {string[]} [opts.argv]        — defaults to `process.argv.slice(2)`
+ * @param {boolean}  [opts.force]       — overrides `--force` from argv when set explicitly
+ * @returns {Promise<number>} exit code (0 ok, 1 failure)
+ */
+export async function runEnrichExe({ cacheFile, collectAppids, argv, force }) {
+  if (typeof collectAppids !== "function") {
+    throw new Error("runEnrichExe: collectAppids must be a function");
   }
 
-  await enrichCache(options);
+  const cliOptions = parseArgs(argv ?? process.argv.slice(2));
+
+  if (cliOptions.help) {
+    console.log(HELP_TEXT);
+    return 0;
+  }
+
+  try {
+    await enrichCache({
+      cacheFile,
+      collectAppids,
+      force: force ?? cliOptions.force,
+    });
+    return 0;
+  } catch (error) {
+    if (error instanceof UsageError) {
+      console.error(error.message);
+      console.error("");
+      console.log(HELP_TEXT);
+    } else {
+      console.error(errorMessage(error));
+    }
+    return 1;
+  }
 }
 
-main().catch((error) => {
-  if (error instanceof UsageError) {
-    console.error(error.message);
-    printHelp();
-  } else {
-    console.error(error);
-  }
-
-  process.exitCode = 1;
-});
+/**
+ * Thin entry-point wrapper: invokes `runEnrichExe` and propagates the
+ * returned exit code to `process.exitCode`. Mirrors `runGenerateManifestMain`
+ * so both runners share the same exit-code contract (return code, wrapper
+ * sets `process.exitCode`).
+ */
+export function runEnrichExeMain(options) {
+  runEnrichExe(options).then(
+    (exitCode) => {
+      process.exitCode = exitCode;
+    },
+    (error) => {
+      console.error(errorMessage(error));
+      process.exitCode = 1;
+    },
+  );
+}

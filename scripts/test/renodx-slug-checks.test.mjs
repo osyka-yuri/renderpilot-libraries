@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
+import { MAX_ISSUES_TO_PRINT } from "../lib/checks.mjs";
 import {
-  MAX_ISSUES_TO_PRINT,
   OFF_SNAPSHOT_TITLE_KINDS,
   assertGeneric,
   assertManifestShape,

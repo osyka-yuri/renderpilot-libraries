@@ -118,13 +118,7 @@
     "appids": ["840210"]
   },
   "armored-core-vi-fires-of-rubicon": {
-    "appid": "1888160",
-    "risk": {
-      "anticheat_engine": "eac",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.eac_banrisk"
-    }
+    "appid": "1888160"
   },
   "art-of-rally": {
     "appids": ["550320"]
@@ -343,13 +337,7 @@
     "appids": ["1071870"]
   },
   "black-desert-online": {
-    "appid": "582660",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "582660"
   },
   "black-myth-wukong": {
     "appid": "2358720",
@@ -541,13 +529,7 @@
     }
   },
   "dark-souls-remastered": {
-    "appid": "570940",
-    "risk": {
-      "anticheat_engine": "eac",
-      "online": "coop",
-      "severity": "warn",
-      "message_key": "renodx.risk.eac_banrisk"
-    }
+    "appid": "570940"
   },
   "darkest-dungeon-2": {
     "appid": "1940340",
@@ -713,22 +695,10 @@
     "appids": ["721180"]
   },
   "dying-light": {
-    "appid": "239140",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "coop",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "239140"
   },
   "dying-light-2": {
-    "appid": "534380",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "coop",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "534380"
   },
   "dying-light-the-beast": {
     "appid": "3008130"
@@ -758,22 +728,10 @@
     "appids": ["1546310"]
   },
   "elden-ring": {
-    "appid": "1245620",
-    "risk": {
-      "anticheat_engine": "eac",
-      "online": "coop",
-      "severity": "warn",
-      "message_key": "renodx.risk.eac_banrisk"
-    }
+    "appid": "1245620"
   },
   "elden-ring-nightreign": {
-    "appid": "2622380",
-    "risk": {
-      "anticheat_engine": "eac",
-      "online": "coop",
-      "severity": "warn",
-      "message_key": "renodx.risk.eac_banrisk"
-    }
+    "appid": "2622380"
   },
   "elderborn": {
     "appids": ["727850"]
@@ -834,13 +792,7 @@
     "appid": "377160"
   },
   "fallout-76": {
-    "appid": "1151340",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "1151340"
   },
   "fantasian-neo-dimension": {
     "appid": "2844850",
@@ -900,13 +852,7 @@
     "appid": "359870"
   },
   "final-fantasy-xiv": {
-    "appid": "39210",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "39210"
   },
   "final-fantasy-xv": {
     "appid": "637650"
@@ -1011,13 +957,7 @@
     "appids": ["1546970", "1546990", "1547000"]
   },
   "grand-theft-auto-v-enhanced": {
-    "appid": "3240220",
-    "risk": {
-      "anticheat_engine": "battleye",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "3240220"
   },
   "great-god-grove": {
     "appids": ["2840190"]
@@ -1040,12 +980,6 @@
   },
   "guild-wars-2": {
     "appid": "1284210",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    },
     "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64"
   },
   "guilty-gear-strive": {
@@ -1093,13 +1027,7 @@
     "appids": ["1620730"]
   },
   "helldivers-2": {
-    "appid": "553850",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "coop",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "553850"
   },
   "herdling": {
     "appids": ["3047750"]
@@ -1129,13 +1057,7 @@
     "appids": ["2123640"]
   },
   "honkai-star-rail": {
-    "exe": "StarRail.exe",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "exe": "StarRail.exe"
   },
   "hordelord": {
     "appids": ["3676260"]
@@ -1680,12 +1602,6 @@
   },
   "path-of-exile-2-dx11-only": {
     "appid": "2694490",
-    "risk": {
-      "anticheat_engine": "unknown",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    },
     "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64"
   },
   "pathfinder-kingmaker": {
@@ -1924,22 +1840,10 @@
     "appid": "1244090"
   },
   "sea-of-thieves": {
-    "appid": "1172620",
-    "risk": {
-      "anticheat_engine": "battleye",
-      "online": "pvp",
-      "severity": "warn",
-      "message_key": "renodx.risk.anticheat_banrisk"
-    }
+    "appid": "1172620"
   },
   "sekiro-shadows-die-twice": {
-    "appid": "814380",
-    "risk": {
-      "anticheat_engine": "eac",
-      "online": "singleplayer",
-      "severity": "warn",
-      "message_key": "renodx.risk.eac_banrisk"
-    }
+    "appid": "814380"
   },
   "sektori": {
     "appids": ["2105620"]
@@ -2659,12 +2563,6 @@
     "appid": "268500",
     "download_url": "https://sgtforgery.github.io/renodx/renodx-xcom2.addon64"
   },
-  "xenoblade-chronicles-x-definitive-edition": {
-    "external": {
-      "url": "https://www.nexusmods.com/xenobladechroniclesx/mods/12",
-      "label_key": "renodx.external.nexus"
-    }
-  },
   "xf-extreme-formula": {
     "appid": "2539910"
   },
@@ -2802,23 +2700,5 @@
   },
   "luma-framework": {
     "ignore": true
-  },
-  "mario-kart-8-deluxe": {
-    "external": {
-      "url": "https://www.nexusmods.com/mariokart8deluxe/mods/57",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "the-legend-of-zelda-breath-of-the-wild": {
-    "external": {
-      "url": "https://www.nexusmods.com/legendofzeldabreathofthewild/mods/100",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "the-legend-of-zelda-tears-of-the-kingdom": {
-    "external": {
-      "url": "https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/175",
-      "label_key": "renodx.external.nexus"
-    }
   }
 }

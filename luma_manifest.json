@@ -1,0 +1,1878 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-06T00:00:00Z",
+  "reshade": {
+    "min_version": "6.7.0",
+    "nightly": {
+      "url64": "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(64-bit).zip",
+      "url32": "https://nightly.link/crosire/reshade/workflows/build/main/ReShade%20(32-bit).zip"
+    }
+  },
+  "defaults": { "min_app_version": "1.0.0", "channel": "stable" },
+  "titles": [
+    {
+      "id": "alfred-hitchcock-vertigo",
+      "name": "Alfred Hitchcock - Vertigo",
+      "asset": "Luma-Unity_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1449320", "tier": 100 },
+        { "kind": "exe_name", "value": "Vertigo.exe", "tier": 70 }
+      ],
+      "generic": true
+    },
+    {
+      "id": "burnout-paradise-remastered",
+      "name": "Burnout Paradise Remastered",
+      "asset": "Luma-Burnout_Paradise_Remastered-x32.zip",
+      "arch": "X86",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1238080", "tier": 100 }]
+    },
+    {
+      "id": "cod-black-ops-3",
+      "name": "Call of Duty: Black Ops III",
+      "asset": "Luma-Call_of_Duty_Black_Ops_3.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "311210", "tier": 100 },
+        { "kind": "exe_name", "value": "blackops3.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "cocoon",
+      "name": "Cocoon",
+      "asset": "Luma-Unity_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1497440", "tier": 100 },
+        { "kind": "exe_name", "value": "universe.exe", "tier": 70 }
+      ],
+      "generic": true
+    },
+    {
+      "id": "deus-ex-human-revolution",
+      "name": "Deus Ex: Human Revolution",
+      "asset": "Luma-Deus_Ex_Human_Revolution_Director.s_Cut-x32.zip",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "238010", "tier": 100 },
+        { "kind": "exe_name", "value": "DXHRDC.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "dishonored-2",
+      "name": "Dishonored 2",
+      "asset": "Luma-Dishonored_2.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "403640", "tier": 100 },
+        { "kind": "exe_name", "value": "Dishonored2.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "far-changing-tides",
+      "name": "FAR: Changing Tides",
+      "asset": "Luma-Unity_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1570010", "tier": 100 },
+        { "kind": "exe_name", "value": "FarChangingTides.exe", "tier": 70 }
+      ],
+      "generic": true
+    },
+    {
+      "id": "far-lone-sails",
+      "name": "FAR: Lone Sails",
+      "asset": "Luma-Unity_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "609320", "tier": 100 },
+        { "kind": "exe_name", "value": "FarLoneSails.exe", "tier": 70 }
+      ],
+      "generic": true
+    },
+    {
+      "id": "final-fantasy-7-remake",
+      "name": "Final Fantasy VII Remake",
+      "asset": "Luma-Final_Fantasy_VII_Remake.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1462040", "tier": 100 },
+        { "kind": "exe_name", "value": "ff7remake.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "granblue-fantasy-relink",
+      "name": "Granblue Fantasy: Relink",
+      "asset": "Luma-Granblue_Fantasy_Relink.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "881020", "tier": 100 },
+        { "kind": "exe_name", "value": "granblue_fantasy_relink.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "greedfall",
+      "name": "GreedFall",
+      "asset": "Luma-Greedfall.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "606880", "tier": 100 },
+        { "kind": "exe_name", "value": "GreedFall.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "hatsune-miku-project-diva-mega-mix-plus",
+      "name": "Hatsune Miku: Project DIVA Mega Mix+",
+      "asset": "Luma-Project_Diva_Mega_Mix.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1761390", "tier": 100 },
+        { "kind": "exe_name", "value": "DivaMegaMix.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "heavy-rain",
+      "name": "Heavy Rain",
+      "asset": "Luma-Heavy_Rain.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "960910", "tier": 100 },
+        { "kind": "exe_name", "value": "HeavyRain.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "hollow-knight-silksong",
+      "name": "Hollow Knight: Silksong",
+      "asset": "Luma-Unity_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1030300", "tier": 100 },
+        { "kind": "exe_name", "value": "Hollow Knight Silksong.exe", "tier": 70 }
+      ],
+      "generic": true
+    },
+    {
+      "id": "inside",
+      "name": "INSIDE",
+      "asset": "Luma-INSIDE.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "304430", "tier": 100 },
+        { "kind": "exe_name", "value": "INSIDE.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "just-cause-3",
+      "name": "Just Cause 3",
+      "asset": "Luma-Just_Cause_3.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "225540", "tier": 100 },
+        { "kind": "exe_name", "value": "JustCause3.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "lara-croft-temple-of-osiris",
+      "name": "Lara Croft and the Temple of Osiris",
+      "asset": "Luma-Lara_Croft_and_the_Temple_of_Osiris-x32.zip",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "289690", "tier": 100 },
+        { "kind": "exe_name", "value": "LC2.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "lego-city-undercover",
+      "name": "LEGO City Undercover",
+      "asset": "Luma-Lego_City_Undercover.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "578330", "tier": 100 },
+        { "kind": "exe_name", "value": "LEGOLCUR_DX11.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "mafia-2-definitive-edition",
+      "name": "Mafia II: Definitive Edition",
+      "asset": "Luma-Mafia_II_Definitive_Edition.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1030830", "tier": 100 },
+        { "kind": "exe_name", "value": "Mafia II Definitive Edition.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "mafia-3",
+      "name": "Mafia III",
+      "asset": "Luma-Mafia_III.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "360430", "tier": 100 },
+        { "kind": "exe_name", "value": "mafia3definitiveedition.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "metro-2033-redux",
+      "name": "Metro 2033 Redux",
+      "asset": "Luma-Metro_Redux.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "286690", "tier": 100 },
+        { "kind": "exe_name", "value": "metro.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.windowed_borderless_only"]
+    },
+    {
+      "id": "nioh",
+      "name": "Nioh",
+      "asset": "Luma-Nioh.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "485510", "tier": 100 },
+        { "kind": "exe_name", "value": "nioh.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "persona-5-royal",
+      "name": "Persona 5 Royal",
+      "asset": "Luma-Persona_5.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1687950", "tier": 100 },
+        { "kind": "exe_name", "value": "P5R.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "prey-2017",
+      "name": "Prey",
+      "asset": "Luma-Prey.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "480490", "tier": 100 },
+        { "kind": "exe_name", "value": "Prey.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.prey_extra_data", "luma.note.bundled_dlss"]
+    },
+    {
+      "id": "thief-2014",
+      "name": "Thief",
+      "asset": "Luma-Thief_.2014.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "239160", "tier": 100 },
+        { "kind": "exe_name", "value": "shipping-thiefgame.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "thumper",
+      "name": "Thumper",
+      "asset": "Luma-Thumper.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "356400", "tier": 100 },
+        { "kind": "exe_name", "value": "THUMPER_win8.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "THUMPER_dx9.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "trine-5",
+      "name": "Trine 5: A Clockwork Conspiracy",
+      "asset": "Luma-Trine_5.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1436700", "tier": 100 },
+        { "kind": "exe_name", "value": "trine5.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "watch-dogs-2",
+      "name": "Watch Dogs 2",
+      "asset": "Luma-Watch_Dogs_2.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "447040", "tier": 100 },
+        { "kind": "exe_name", "value": "WatchDogs2.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "quantum-break",
+      "name": "Quantum Break",
+      "asset": "Luma-Quantum_Break.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "474960", "tier": 100 },
+        { "kind": "exe_name", "value": "QuantumBreak.exe", "tier": 70 }
+      ],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "mass-effect-andromeda",
+      "name": "Mass Effect: Andromeda",
+      "asset": "Luma-Mass_Effect_Andromeda.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1238000", "tier": 100 }],
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "abiotic-factor",
+      "name": "Abiotic Factor",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "427410", "tier": 100 },
+        { "kind": "exe_name", "value": "AbioticFactor.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "abzu",
+      "name": "ABZU",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "384190", "tier": 100 },
+        { "kind": "exe_name", "value": "AbzuGame.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "ace-combat-7",
+      "name": "Ace Combat 7: Skies Unknown",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "502500", "tier": 100 },
+        { "kind": "exe_name", "value": "Ace7Game.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "agony-unrated",
+      "name": "Agony UNRATED",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "879420", "tier": 100 },
+        { "kind": "exe_name", "value": "Agony.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "alchemy-garden",
+      "name": "Alchemy Garden",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "935400", "tier": 100 },
+        { "kind": "exe_name", "value": "AlchemyGardenUE.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "aliens-fireteam-elite",
+      "name": "Aliens: Fireteam Elite",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1549970", "tier": 100 },
+        { "kind": "exe_name", "value": "Endeavor.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "ancestors-the-humankind-odyssey",
+      "name": "Ancestors: The Humankind Odyssey",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "536270", "tier": 100 },
+        { "kind": "exe_name", "value": "Ancestors-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "ancestors-legacy",
+      "name": "Ancestors Legacy",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "620590", "tier": 100 },
+        { "kind": "exe_name", "value": "Anc-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "ashen",
+      "name": "ASHEN",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "649950", "tier": 100 },
+        { "kind": "exe_name", "value": "Ashen.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "bloodstained-ritual-of-the-night",
+      "name": "Bloodstained: Ritual of the Night",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "692850", "tier": 100 },
+        { "kind": "exe_name", "value": "BloodstainedRotN.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "call-of-the-sea",
+      "name": "Call of the Sea",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1042490", "tier": 100 },
+        { "kind": "exe_name", "value": "COTS.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "chess-ultra",
+      "name": "Chess Ultra",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "518060", "tier": 100 },
+        { "kind": "exe_name", "value": "Chess2-Win64-Shipping.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "Chess2-Win32-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "circus-electrique",
+      "name": "Circus Electrique",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1666250", "tier": 100 },
+        { "kind": "exe_name", "value": "CircusElectrique.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "code-vein",
+      "name": "CODE VEIN",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "678960", "tier": 100 },
+        { "kind": "exe_name", "value": "CodeVein.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "coral-island",
+      "name": "Coral Island",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1158160", "tier": 100 },
+        { "kind": "exe_name", "value": "ProjectCoral.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "crab-champions",
+      "name": "Crab Champions",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "774801", "tier": 100 },
+        { "kind": "exe_name", "value": "CrabChampions.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "crash-bandicoot-4",
+      "name": "Crash Bandicoot 4: It's About Time",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1378990", "tier": 100 }],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "clash-artifacts-of-chaos",
+      "name": "Clash: Artifacts of Chaos",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1430680", "tier": 100 },
+        { "kind": "exe_name", "value": "Clash.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "close-to-the-sun",
+      "name": "Close to the Sun",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "968870", "tier": 100 },
+        { "kind": "exe_name", "value": "ctts.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "crymachina",
+      "name": "CRYMACHINA",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2258500", "tier": 100 },
+        { "kind": "exe_name", "value": "machina.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "cygni-all-guns-blazing",
+      "name": "CYGNI: All Guns Blazing",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1248080", "tier": 100 },
+        { "kind": "exe_name", "value": "Cygni.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "darksiders-3",
+      "name": "Darksiders III",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "606280", "tier": 100 },
+        { "kind": "exe_name", "value": "Darksiders3.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "daymare-1998",
+      "name": "Daymare: 1998",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "842100", "tier": 100 },
+        { "kind": "exe_name", "value": "Daymare_MASTER.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "dead-island-2",
+      "name": "Dead Island 2",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "934700", "tier": 100 },
+        { "kind": "exe_name", "value": "DeadIsland.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "deadline-delivery",
+      "name": "DEADLINE DELIVERY",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "3745310", "tier": 100 },
+        { "kind": "exe_name", "value": "DEADLINE_DELIVERY.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "desolate",
+      "name": "DESOLATE",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "671510", "tier": 100 }],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "devils-hunt",
+      "name": "Devil's Hunt",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "887720", "tier": 100 },
+        { "kind": "exe_name", "value": "DevilsHuntUnreal.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "die-young",
+      "name": "Die Young",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "433170", "tier": 100 },
+        { "kind": "exe_name", "value": "DieYoung-Win64-Shipping.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "DieYoungPrologue-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "dnf-duel",
+      "name": "DNF Duel",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1216060", "tier": 100 },
+        { "kind": "exe_name", "value": "DNFDUEL.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "dragon-ball-z-kakarot",
+      "name": "DRAGON BALL Z: KAKAROT",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "851850", "tier": 100 },
+        { "kind": "exe_name", "value": "AT.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "dragon-quest-11-s",
+      "name": "DRAGON QUEST XI S: Echoes of an Elusive Age - Definitive Edition",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1295510", "tier": 100 },
+        { "kind": "exe_name", "value": "DRAGON QUEST XI S.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "eriksholm-the-stolen-dream",
+      "name": "Eriksholm: The Stolen Dream",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2377280", "tier": 100 },
+        { "kind": "exe_name", "value": "Eriksholm.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "filament",
+      "name": "Filament",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1137350", "tier": 100 },
+        { "kind": "exe_name", "value": "Filament.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "ghostrunner",
+      "name": "Ghostrunner",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1139900", "tier": 100 },
+        { "kind": "exe_name", "value": "Ghostrunner.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "goat-simulator-3",
+      "name": "Goat Simulator 3",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "850190", "tier": 100 },
+        { "kind": "exe_name", "value": "Goat2.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "grounded",
+      "name": "Grounded",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "962130", "tier": 100 },
+        { "kind": "exe_name", "value": "Grounded.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "guilty-gear-strive",
+      "name": "GUILTY GEAR -STRIVE-",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1384160", "tier": 100 },
+        { "kind": "exe_name", "value": "GGST.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "gylt",
+      "name": "GYLT",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2206210", "tier": 100 },
+        { "kind": "exe_name", "value": "Gylt.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "hellblade-senuas-sacrifice",
+      "name": "Hellblade: Senua's Sacrifice",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "414340", "tier": 100 },
+        { "kind": "exe_name", "value": "HellbladeGame.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "it-takes-two",
+      "name": "It Takes Two",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1426210", "tier": 100 },
+        { "kind": "exe_name", "value": "ItTakesTwo.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "just-die-already",
+      "name": "Just Die Already",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "979070", "tier": 100 },
+        { "kind": "exe_name", "value": "JDGame.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "kao-the-kangaroo",
+      "name": "Kao the Kangaroo",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1370140", "tier": 100 },
+        { "kind": "exe_name", "value": "Kao the Kangaroo.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "kingdom-hearts-3",
+      "name": "KINGDOM HEARTS III",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2552450", "tier": 100 },
+        { "kind": "exe_name", "value": "KINGDOM HEARTS III.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "layers-of-fear-2",
+      "name": "Layers of Fear 2",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1029890", "tier": 100 },
+        { "kind": "exe_name", "value": "LOF2.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "life-is-strange-2",
+      "name": "Life is Strange 2",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "532210", "tier": 100 },
+        { "kind": "exe_name", "value": "LIS2-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "life-is-strange-true-colors",
+      "name": "Life is Strange: True Colors",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "936790", "tier": 100 },
+        { "kind": "exe_name", "value": "LifeIsStrange3.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "little-nightmares",
+      "name": "LITTLE NIGHTMARES",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "424840", "tier": 100 },
+        { "kind": "exe_name", "value": "LittleNightmares.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "maneater",
+      "name": "Maneater",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "629820", "tier": 100 },
+        { "kind": "exe_name", "value": "Maneater.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "mothergunship",
+      "name": "Mothergunship",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "574090", "tier": 100 },
+        { "kind": "exe_name", "value": "TowerOfGuns2.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "mordhau",
+      "name": "MORDHAU",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "629760", "tier": 100 },
+        { "kind": "exe_name", "value": "Mordhau.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "mutant-year-zero-road-to-eden",
+      "name": "Mutant Year Zero: Road to Eden",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "760060", "tier": 100 },
+        { "kind": "exe_name", "value": "ZoneUE4.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "orcs-must-die-3",
+      "name": "Orcs Must Die! 3",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1522820", "tier": 100 },
+        { "kind": "exe_name", "value": "Orcs Must Die! 3.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "project-wingman",
+      "name": "Project Wingman",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "895870", "tier": 100 },
+        { "kind": "exe_name", "value": "ProjectWingman.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "psychonauts-2",
+      "name": "Psychonauts 2",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "607080", "tier": 100 },
+        { "kind": "exe_name", "value": "Psychonauts2.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "redeemer-enhanced-edition",
+      "name": "Redeemer: Enhanced Edition",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "447290", "tier": 100 },
+        { "kind": "exe_name", "value": "ExampleGame-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "redout",
+      "name": "Redout: Enhanced Edition",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "517710", "tier": 100 },
+        { "kind": "exe_name", "value": "redout.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "redout-2",
+      "name": "Redout 2",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1799930", "tier": 100 },
+        { "kind": "exe_name", "value": "Redout2.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "relicta",
+      "name": "Relicta",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "941570", "tier": 100 },
+        { "kind": "exe_name", "value": "Relicta.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "remnant-from-the-ashes",
+      "name": "Remnant: From the Ashes",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "617290", "tier": 100 },
+        { "kind": "exe_name", "value": "Remnant.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "ruiner",
+      "name": "RUINER",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "464060", "tier": 100 },
+        { "kind": "exe_name", "value": "Ruiner.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "scarlet-nexus",
+      "name": "SCARLET NEXUS",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "775500", "tier": 100 },
+        { "kind": "exe_name", "value": "ScarletNexus.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "scorn",
+      "name": "Scorn",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "698670", "tier": 100 },
+        { "kind": "exe_name", "value": "Scorn.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "selfloss",
+      "name": "Selfloss",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1086620", "tier": 100 },
+        { "kind": "exe_name", "value": "Selfloss.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "shin-megami-tensei-5-vengeance",
+      "name": "Shin Megami Tensei V: Vengeance",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1875830", "tier": 100 },
+        { "kind": "exe_name", "value": "SMT5V.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "shenmue-3",
+      "name": "Shenmue III",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "878670", "tier": 100 },
+        { "kind": "exe_name", "value": "Shenmue3.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "snake-pass",
+      "name": "Snake Pass",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "544330", "tier": 100 },
+        { "kind": "exe_name", "value": "SnakePass.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "spirit-of-the-north",
+      "name": "Spirit of the North",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1213700", "tier": 100 },
+        { "kind": "exe_name", "value": "Infused.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "spyro-reignited-trilogy",
+      "name": "Spyro Reignited Trilogy",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "996580", "tier": 100 },
+        { "kind": "exe_name", "value": "Spyro.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "star-wars-jedi-fallen-order",
+      "name": "STAR WARS Jedi: Fallen Order",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1172380", "tier": 100 }],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "state-of-decay-2",
+      "name": "State of Decay 2",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "495420", "tier": 100 },
+        { "kind": "exe_name", "value": "StateOfDecay2-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "steel-rats",
+      "name": "Steel Rats",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "619700", "tier": 100 },
+        { "kind": "exe_name", "value": "SteelRats.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "stray",
+      "name": "Stray",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1332010", "tier": 100 },
+        { "kind": "exe_name", "value": "Stray.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "styx-shards-of-darkness",
+      "name": "Styx: Shards of Darkness",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "355790", "tier": 100 },
+        { "kind": "exe_name", "value": "Styx2.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "submerged-hidden-depths",
+      "name": "Submerged: Hidden Depths",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1614270", "tier": 100 },
+        { "kind": "exe_name", "value": "Submerged.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "succubus",
+      "name": "SUCCUBUS",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "985830", "tier": 100 },
+        { "kind": "exe_name", "value": "Succubus.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "supraland",
+      "name": "Supraland",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "813630", "tier": 100 },
+        { "kind": "exe_name", "value": "Supraland.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tales-of-arise",
+      "name": "Tales of Arise",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "740130", "tier": 100 },
+        { "kind": "exe_name", "value": "Tales of Arise.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tandem-a-tale-of-shadows",
+      "name": "Tandem: A Tale of Shadows",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1436920", "tier": 100 },
+        { "kind": "exe_name", "value": "Shadows.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tekken-7",
+      "name": "TEKKEN 7",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "389730", "tier": 100 },
+        { "kind": "exe_name", "value": "TEKKEN 7.exe", "tier": 70 }
+      ],
+      "launch_args": ["-nod3d9ex"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tell-me-why",
+      "name": "Tell Me Why",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1180660", "tier": 100 },
+        { "kind": "exe_name", "value": "TME-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tetris-effect-connected",
+      "name": "Tetris Effect: Connected",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1003590", "tier": 100 },
+        { "kind": "exe_name", "value": "TetrisEffect.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "the-ascent",
+      "name": "The Ascent",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "979690", "tier": 100 },
+        { "kind": "exe_name", "value": "TheAscent.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "the-awesome-adventures-of-captain-spirit",
+      "name": "The Awesome Adventures of Captain Spirit",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "845070", "tier": 100 },
+        { "kind": "exe_name", "value": "CaptainSpirit-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "the-dark-pictures-man-of-medan",
+      "name": "The Dark Pictures Anthology: Man of Medan",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "939850", "tier": 100 },
+        { "kind": "exe_name", "value": "ManOfMedan.exe", "tier": 70 }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "the-gunk",
+      "name": "The Gunk",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1087760", "tier": 100 },
+        { "kind": "exe_name", "value": "Dust.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "the-pathless",
+      "name": "The Pathless",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1492680", "tier": 100 },
+        { "kind": "exe_name", "value": "Pathless.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "the-sinking-city",
+      "name": "The Sinking City",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "750130", "tier": 100 },
+        { "kind": "exe_name", "value": "TheSinkingCityRemastered.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "TSCGame.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tiny-tinas-wonderlands",
+      "name": "Tiny Tina's Wonderlands",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1286680", "tier": 100 },
+        { "kind": "exe_name", "value": "Wonderlands.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "trek-to-yomi",
+      "name": "Trek to Yomi",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1370050", "tier": 100 },
+        { "kind": "exe_name", "value": "TrekToYomi.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tribes-of-midgard",
+      "name": "Tribes of Midgard",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "858820", "tier": 100 },
+        { "kind": "exe_name", "value": "TOM.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "tyrants-realm",
+      "name": "Tyrant's Realm",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2259260", "tier": 100 },
+        { "kind": "exe_name", "value": "AIProject.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "vampyr",
+      "name": "Vampyr",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "427290", "tier": 100 },
+        { "kind": "exe_name", "value": "AVGame-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "warhammer-40000-boltgun",
+      "name": "Warhammer 40,000: Boltgun",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2005010", "tier": 100 },
+        { "kind": "exe_name", "value": "Warhammer 40,000 Boltgun.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "weird-west",
+      "name": "Weird West",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1097350", "tier": 100 },
+        { "kind": "exe_name", "value": "WeirdWest.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "what-remains-of-edith-finch",
+      "name": "What Remains of Edith Finch",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "501300", "tier": 100 },
+        { "kind": "exe_name", "value": "FinchGame.exe", "tier": 70 }
+      ],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "witch-it",
+      "name": "Witch It",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "559650", "tier": 100 },
+        {
+          "kind": "exe_name",
+          "value": "PropWitchHuntModule-Win64-Shipping.exe",
+          "tier": 70
+        }
+      ],
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "sherlock-holmes-chapter-one",
+      "name": "Sherlock Holmes Chapter One",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1137300", "tier": 100 },
+        { "kind": "exe_name", "value": "SHCO.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "song-of-nunu",
+      "name": "Song of Nunu: A League of Legends Story",
+      "asset": "Luma-Unreal_Engine.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1333200", "tier": 100 },
+        { "kind": "exe_name", "value": "SongOfNunu.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "launch_args": ["-dx11"],
+      "generic": true,
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "bioshock-series",
+      "name": "BioShock Remastered / BioShock 2 Remastered",
+      "asset": "Luma-BioShock_Series-x32.zip",
+      "arch": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "409710", "tier": 100 },
+        { "kind": "steam_appid", "value": "409720", "tier": 100 },
+        { "kind": "exe_name", "value": "BioshockHD.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "Bioshock2HD.exe", "tier": 70 }
+      ]
+    },
+    {
+      "id": "batman-arkham-knight",
+      "name": "Batman: Arkham Knight",
+      "asset": "Luma-Batman_Arkham_Knight.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "208650", "tier": 100 },
+        { "kind": "exe_name", "value": "BatmanAK.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "beyond-two-souls",
+      "name": "Beyond: Two Souls",
+      "asset": "Luma-Beyond_Two_Souls.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "960990", "tier": 100 },
+        { "kind": "exe_name", "value": "BeyondTwoSouls_Steam.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "blue-reflection-second-light",
+      "name": "Blue Reflection: Second Light",
+      "asset": "Luma-Blue_Reflection_Second_Light.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "1423600", "tier": 100 },
+        { "kind": "exe_name", "value": "BLUE REFLECTION Second Light.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "borderlands-goty-enhanced",
+      "name": "Borderlands: Game of the Year Enhanced",
+      "asset": "Luma-Borderlands_GOTY_Enhanced.zip",
+      "arch": "X64",
+      "match": [{ "kind": "steam_appid", "value": "729040", "tier": 100 }],
+      "channel": "beta"
+    },
+    {
+      "id": "borderlands-2-and-the-pre-sequel",
+      "name": "Borderlands 2 and The Pre-Sequel",
+      "asset": "Luma-Borderlands_2_and_The_Pre-Sequel-x32.zip",
+      "arch": "X86",
+      "match": [
+        { "kind": "steam_appid", "value": "49520", "tier": 100 },
+        { "kind": "steam_appid", "value": "261640", "tier": 100 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "deus-ex-mankind-divided",
+      "name": "Deus Ex: Mankind Divided",
+      "asset": "Luma-Deus_Ex_Mankind_Divided.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "337000", "tier": 100 },
+        { "kind": "exe_name", "value": "DXMD.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "dying-light-2",
+      "name": "Dying Light 2 Stay Human",
+      "asset": "Luma-Dying_Light_2.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "534380", "tier": 100 },
+        { "kind": "exe_name", "value": "DyingLightGame_x64_rwdi.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "fallout-4",
+      "name": "Fallout 4",
+      "asset": "Luma-Fallout_4.zip",
+      "arch": "X64",
+      "match": [{ "kind": "steam_appid", "value": "377160", "tier": 100 }],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "final-fantasy-15",
+      "name": "FINAL FANTASY XV",
+      "asset": "Luma-Final_Fantasy_XV.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "637650", "tier": 100 },
+        { "kind": "exe_name", "value": "ffxv_s.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "kingdom-come-deliverance",
+      "name": "Kingdom Come: Deliverance",
+      "asset": "Luma-Kingdom_Come_Deliverance.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "379430", "tier": 100 },
+        { "kind": "exe_name", "value": "KingdomCome.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "la-noire",
+      "name": "L.A. Noire",
+      "asset": "Luma-L.A._Noire-x32.zip",
+      "arch": "X86",
+      "match": [
+        { "kind": "steam_appid", "value": "110800", "tier": 100 },
+        { "kind": "exe_name", "value": "PlayLAN.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "metaphor-refantazio",
+      "name": "Metaphor: ReFantazio",
+      "asset": "Luma-Metaphor.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "2679460", "tier": 100 },
+        { "kind": "exe_name", "value": "METAPHOR.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "mirrors-edge-catalyst",
+      "name": "Mirror's Edge Catalyst",
+      "asset": "Luma-Mirror.s_Edge_Catalyst.zip",
+      "arch": "X64",
+      "status": "construction",
+      "match": [{ "kind": "steam_appid", "value": "1233570", "tier": 100 }],
+      "channel": "beta"
+    },
+    {
+      "id": "monster-hunter-world",
+      "name": "Monster Hunter: World",
+      "asset": "Luma-Monster_Hunter_World.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "582010", "tier": 100 },
+        { "kind": "exe_name", "value": "MonsterHunterWorld.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "mortal-kombat-11",
+      "name": "Mortal Kombat 11",
+      "asset": "Luma-Mortal_Kombat_11.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "976310", "tier": 100 },
+        { "kind": "exe_name", "value": "MK11.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "nier-automata",
+      "name": "NieR: Automata",
+      "asset": "Luma-NieR_Automata.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "524220", "tier": 100 },
+        { "kind": "exe_name", "value": "NieRAutomata.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "saints-row-the-third-remastered",
+      "name": "Saints Row: The Third Remastered",
+      "asset": "Luma-Saints_Row_The_Third_Remastered.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "978300", "tier": 100 },
+        { "kind": "exe_name", "value": "SRTTR.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "shenmue-1-and-2",
+      "name": "Shenmue I & II",
+      "asset": "Luma-Shenmue_I_._II.zip",
+      "arch": "X64",
+      "match": [{ "kind": "steam_appid", "value": "758330", "tier": 100 }],
+      "channel": "beta"
+    },
+    {
+      "id": "the-evil-within-2",
+      "name": "The Evil Within 2",
+      "asset": "Luma-The_Evil_Within_2.zip",
+      "arch": "X64",
+      "match": [
+        { "kind": "steam_appid", "value": "601430", "tier": 100 },
+        { "kind": "exe_name", "value": "TEW2.exe", "tier": 70 }
+      ],
+      "channel": "beta",
+      "notes_keys": ["luma.note.bundled_dlss"]
+    },
+    {
+      "id": "titanfall-2",
+      "name": "Titanfall 2",
+      "asset": "Luma-Titanfall_2.zip",
+      "arch": "X64",
+      "match": [{ "kind": "steam_appid", "value": "1237970", "tier": 100 }],
+      "channel": "beta"
+    }
+  ]
+}
