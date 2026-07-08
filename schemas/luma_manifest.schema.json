@@ -26,6 +26,10 @@
   },
   "$defs": {
     "architecture": { "type": "string", "enum": ["X86", "X64"] },
+    "directXGraphicsApi": {
+      "type": "string",
+      "enum": ["D3D9", "D3D10", "D3D11", "D3D12"]
+    },
     "httpsUrl": { "type": "string", "format": "uri", "pattern": "^https://" },
     "semver": {
       "type": "string",
@@ -70,6 +74,54 @@
           "minLength": 1,
           "description": "i18n key explaining why (known-broken, or requires an external prerequisite this installer doesn't automate, e.g. Vanquish's dgVoodoo)."
         }
+      }
+    },
+    "externalRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "version", "accepted_detected_apis", "proxy_dll", "config"],
+      "description": "Manual prerequisite RenderPilot does not install or configure. The matcher may accept the listed detected APIs for this title and install the ReShade host into the declared proxy DLL slot while the UI surfaces the exact config block.",
+      "properties": {
+        "kind": { "const": "dgvoodoo2" },
+        "version": { "$ref": "#/$defs/semver" },
+        "accepted_detected_apis": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/directXGraphicsApi" }
+        },
+        "proxy_dll": {
+          "type": "string",
+          "enum": ["dxgi.dll", "d3d9.dll", "d3d10.dll", "d3d11.dll", "d3d12.dll"]
+        },
+        "config": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/externalConfigSection" }
+        }
+      }
+    },
+    "externalConfigSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["section", "entries"],
+      "properties": {
+        "section": { "type": "string", "minLength": 1 },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/externalConfigEntry" }
+        }
+      }
+    },
+    "externalConfigEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "value"],
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "value": { "type": "string", "minLength": 1 },
+        "comment": { "type": "string", "minLength": 1 }
       }
     },
     "matchRule": {
@@ -185,6 +237,7 @@
           "items": { "type": "string", "minLength": 1 },
           "description": "Required launch arguments (e.g. -dx11, -nod3d9ex), shown to the user as a copyable callout rather than written automatically."
         },
+        "external_requirement": { "$ref": "#/$defs/externalRequirement" },
         "generic": {
           "type": "boolean",
           "description": "Whether `asset` is a shared Generic-Mod build (Unreal Engine) curated onto this specific title, rather than a dedicated per-game build."

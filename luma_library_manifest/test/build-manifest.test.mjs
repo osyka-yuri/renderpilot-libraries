@@ -12,6 +12,30 @@ const game = (id, overrides = {}) => ({
   ...overrides,
 });
 
+const dgVoodooRequirement = (overrides = {}) => ({
+  kind: "dgvoodoo2",
+  version: "2.87.3",
+  accepted_detected_apis: ["D3D9"],
+  proxy_dll: "dxgi.dll",
+  config: [
+    {
+      section: "General",
+      entries: [{ key: "OutputAPI", value: "d3d11_fl11_0" }],
+    },
+    {
+      section: "DirectX",
+      entries: [
+        {
+          key: "VideoCard",
+          value: "geforce_9800_gt",
+          comment: "fixes dynamic shadows",
+        },
+      ],
+    },
+  ],
+  ...overrides,
+});
+
 test("buildManifest emits a title once it has a match identifier", () => {
   const result = buildManifest({
     generatedAt: "2026-07-05T00:00:00Z",
@@ -126,6 +150,43 @@ test("buildManifest carries generic/launch_args/notes_keys straight from the cur
   assert.equal(title.generic, true);
   assert.deepEqual(title.launch_args, ["-nod3d9ex"]);
   assert.deepEqual(title.notes_keys, ["luma.note.generic_mod"]);
+});
+
+test("buildManifest carries a manual external requirement from the curated game", () => {
+  const externalRequirement = dgVoodooRequirement();
+  const result = buildManifest({
+    generatedAt: "2026-07-05T00:00:00Z",
+    curatedGames: [
+      game("borderlands-2-and-the-pre-sequel", {
+        asset: "Luma-Borderlands_2_and_The_Pre-Sequel-x32.zip",
+        arch: "X86",
+        external_requirement: externalRequirement,
+      }),
+    ],
+    overlay: { "borderlands-2-and-the-pre-sequel": { appids: ["49520", "261640"] } },
+    warn: () => {},
+  });
+
+  assert.deepEqual(result.manifest.titles[0].external_requirement, externalRequirement);
+});
+
+test("buildManifest rejects non-DirectX APIs in an external requirement", () => {
+  assert.throws(
+    () =>
+      buildManifest({
+        generatedAt: "2026-07-05T00:00:00Z",
+        curatedGames: [
+          game("bad-wrapper", {
+            external_requirement: dgVoodooRequirement({
+              accepted_detected_apis: ["Vulkan"],
+            }),
+          }),
+        ],
+        overlay: { "bad-wrapper": { appid: "1" } },
+        warn: () => {},
+      }),
+    /must be one of/,
+  );
 });
 
 test("buildManifest derives channel from status (working -> stable default omitted, else beta)", () => {

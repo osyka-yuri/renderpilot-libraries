@@ -23,6 +23,18 @@ import {
   normalizedStatus,
   reserveOutputId,
 } from "../../scripts/lib/build-manifest-shared.mjs";
+import {
+  SEMVER_RE,
+  DIRECTX_GRAPHICS_APIS,
+  RESHADE_PROXY_DLLS,
+  assertSemver,
+  assertSingleLineString,
+  assertOptionalSingleLineString,
+  assertOptionalNonEmptyStringArray,
+  assertAllowedValue,
+  assertAllowedValues,
+  assertUniqueStringValues,
+} from "../../scripts/lib/validators.mjs";
 
 export const SCHEMA_VERSION = 1;
 
@@ -39,7 +51,18 @@ const ASSET_SUFFIX = ".zip";
 const ASSET_FORBIDDEN_MARKERS = ["-test", "-dev"];
 const ASSET_X32_SUFFIX = "-x32";
 const ASSET_NAME_CHAR_RE = /^[A-Za-z0-9._()'-]+$/u;
+const EXTERNAL_REQUIREMENT_KIND = "dgvoodoo2";
 
+// ── Layer 1: buildManifest – orchestrate normalize → validate → assemble ──
+
+/**
+ * Orchestrates the three-layer manifest build:
+ *  1. Normalize & validate every authoring input.
+ *  2. Ensure structural invariants (unique match rules, output ids).
+ *  3. Assemble the public wire-shape objects.
+ *
+ * Returns `{ manifest, pending, stats }` for the shared runner to format/write.
+ */
 export function buildManifest({
   curatedGames,
   overlay = {},
@@ -47,8 +70,10 @@ export function buildManifest({
   generatedAt,
   warn = console.warn,
 } = {}) {
+  // ── Layer 1: normalize and validate ──
+
   const games = normalizeCuratedGames(curatedGames);
-  const overlayById = assertOverlayShape(overlay);
+  const overlayById = assertPlainObject(overlay, "match_overlay.json");
   const curatedIds = new Set(games.map((game) => game.id));
 
   validateOverlay(overlayById, curatedIds, warn);
@@ -64,6 +89,8 @@ export function buildManifest({
     exeToAppids,
   );
 
+  // ── Layer 2: assemble wire-shape ──
+
   const titles = [];
   const pending = [];
   const seenOutputIds = new Set();
@@ -74,8 +101,6 @@ export function buildManifest({
     const entry = overlayById[game.id] ?? {};
 
     if (entry.ignore) {
-      // Cleanly skip a row (e.g. a duplicate or retired curation entry) so it
-      // doesn't clutter pending_match.json.
       continue;
     }
 
@@ -88,7 +113,7 @@ export function buildManifest({
     }
 
     titles.push(
-      makeTitle({
+      assembleTitle({
         game,
         appids,
         exe,
@@ -96,6 +121,8 @@ export function buildManifest({
       }),
     );
   }
+
+  // ── Layer 3: validate cross-title invariants ──
 
   assertUniqueMatchRules(titles);
 
@@ -112,7 +139,9 @@ export function buildManifest({
   };
 }
 
-function makeTitle({ game, appids, exe, derivedExes }) {
+// ── Layer 2: assemble a single title wire-shape ──
+
+function assembleTitle({ game, appids, exe, derivedExes }) {
   const status = normalizedStatus(game.status, VALID_STATUSES);
   const title = {
     id: game.id,
@@ -138,6 +167,10 @@ function makeTitle({ game, appids, exe, derivedExes }) {
     title.launch_args = game.launch_args;
   }
 
+  if (game.external_requirement) {
+    title.external_requirement = game.external_requirement;
+  }
+
   if (game.generic) {
     title.generic = true;
   }
@@ -148,6 +181,8 @@ function makeTitle({ game, appids, exe, derivedExes }) {
 
   return title;
 }
+
+// ── Layer 1: normalize + validate ──
 
 function normalizeCuratedGames(curatedGames) {
   if (!Array.isArray(curatedGames)) {
@@ -177,9 +212,16 @@ function normalizeCuratedGame(game, index) {
     status: game.status,
     category: normalizeCategory(game.blacklist, context),
     min_app_version: game.min_app_version,
-    launch_args: normalizeOptionalStringArray(game.launch_args, `${context}.launch_args`),
+    launch_args: assertOptionalNonEmptyStringArray(
+      game.launch_args,
+      `${context}.launch_args`,
+    ),
+    external_requirement: normalizeExternalRequirement(
+      game.external_requirement,
+      `${context}.external_requirement`,
+    ),
     generic: Boolean(game.generic),
-    notes_keys: normalizeOptionalStringArray(game.notes_keys, `${context}.notes_keys`),
+    notes_keys: assertOptionalNonEmptyStringArray(game.notes_keys, `${context}.notes_keys`),
   };
 }
 
@@ -233,22 +275,97 @@ function normalizeCategory(blacklist, context) {
   };
 }
 
-function normalizeOptionalStringArray(value, context) {
+// ── Layer 1a: normalize external_requirement (Luma-specific) ──
+
+function normalizeExternalRequirement(value, context) {
   if (value === undefined) {
-    return [];
+    return null;
   }
 
+  assertPlainObject(value, context);
+
+  const kind = requiredNonEmptyString(value.kind, `${context}.kind`);
+  if (kind !== EXTERNAL_REQUIREMENT_KIND) {
+    throw new Error(`${context}.kind must be "${EXTERNAL_REQUIREMENT_KIND}"`);
+  }
+
+  const version = assertSemver(
+    requiredNonEmptyString(value.version, `${context}.version`),
+    `${context}.version`,
+  );
+
+  return {
+    kind,
+    version,
+    accepted_detected_apis: normalizeAcceptedDetectedApis(
+      value.accepted_detected_apis,
+      `${context}.accepted_detected_apis`,
+    ),
+    proxy_dll: normalizeExternalProxyDll(value.proxy_dll, `${context}.proxy_dll`),
+    config: normalizeExternalConfig(value.config, `${context}.config`),
+  };
+}
+
+function normalizeAcceptedDetectedApis(value, context) {
+  const apis = assertOptionalNonEmptyStringArray(value, context);
+  if (apis.length === 0) {
+    throw new Error(`${context} must be a non-empty array`);
+  }
+  assertAllowedValues(apis, DIRECTX_GRAPHICS_APIS, context);
+  return assertUniqueStringValues(apis, context);
+}
+
+function normalizeExternalProxyDll(value, context) {
+  return assertAllowedValue(
+    requiredNonEmptyString(value, context).toLowerCase(),
+    RESHADE_PROXY_DLLS,
+    context,
+  );
+}
+
+function normalizeExternalConfig(value, context) {
   if (!Array.isArray(value) || value.length === 0) {
     throw new Error(`${context} must be a non-empty array`);
   }
 
-  return value.map((item, index) => requiredNonEmptyString(item, `${context}[${index}]`));
+  return value.map((section, index) =>
+    normalizeExternalConfigSection(section, `${context}[${index}]`),
+  );
 }
 
-function assertOverlayShape(overlay) {
-  assertPlainObject(overlay, "match_overlay.json");
-  return overlay;
+function normalizeExternalConfigSection(value, context) {
+  assertPlainObject(value, context);
+  return {
+    section: assertSingleLineString(value.section, `${context}.section`),
+    entries: normalizeExternalConfigEntries(value.entries, `${context}.entries`),
+  };
 }
+
+function normalizeExternalConfigEntries(value, context) {
+  if (!Array.isArray(value) || value.length === 0) {
+    throw new Error(`${context} must be a non-empty array`);
+  }
+
+  return value.map((entry, index) =>
+    normalizeExternalConfigEntry(entry, `${context}[${index}]`),
+  );
+}
+
+function normalizeExternalConfigEntry(value, context) {
+  assertPlainObject(value, context);
+  const entry = {
+    key: assertSingleLineString(value.key, `${context}.key`),
+    value: assertSingleLineString(value.value, `${context}.value`),
+  };
+
+  if (value.comment !== undefined) {
+    entry.comment = assertOptionalSingleLineString(value.comment, `${context}.comment`);
+  }
+
+  return entry;
+}
+
+// ── Layer 3: stats ──
 
 function buildStats(titles, pending, ambiguousDerivedExeKeys) {
   return {

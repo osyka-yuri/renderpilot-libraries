@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-06T00:00:00Z",
+  "generated_at": "2026-07-07T00:00:00Z",
   "reshade": {
     "min_version": "6.7.0",
     "nightly": {
@@ -1709,7 +1709,35 @@
         { "kind": "steam_appid", "value": "49520", "tier": 100 },
         { "kind": "steam_appid", "value": "261640", "tier": 100 }
       ],
-      "channel": "beta"
+      "channel": "beta",
+      "external_requirement": {
+        "kind": "dgvoodoo2",
+        "version": "2.87.3",
+        "accepted_detected_apis": ["D3D9"],
+        "proxy_dll": "dxgi.dll",
+        "config": [
+          {
+            "section": "General",
+            "entries": [{ "key": "OutputAPI", "value": "d3d11_fl11_0" }]
+          },
+          {
+            "section": "DirectX",
+            "entries": [
+              {
+                "key": "VideoCard",
+                "value": "geforce_9800_gt",
+                "comment": "fixes dynamic shadows"
+              },
+              {
+                "key": "dgVoodooWatermark",
+                "value": "false",
+                "comment": "removes the dgVoodoo watermark"
+              },
+              { "key": "VRAM", "value": "1024" }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "deus-ex-mankind-divided",

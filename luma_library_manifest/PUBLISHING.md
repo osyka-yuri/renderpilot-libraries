@@ -19,7 +19,9 @@ every other title curated onto that Generic Mod — resolution never falls back
 to an engine guess the way RenoDX's `generics` do. There is also no
 `external`/`native_hdr` category (every Luma asset lives on the same GitHub
 Release) and no `slug`/`compatibility`/`proxy_dll_override`/`download_url`
-field.
+field. A title that needs a manual wrapper can instead carry an
+`external_requirement`; RenderPilot still installs only Luma/ReShade and shows
+the prerequisite config to the user.
 
 ## ReShade sources
 
@@ -52,9 +54,14 @@ Non-installable routing is carried by `title.category`:
 
 - omitted `category` — normal installable Luma add-on;
 - `blacklist` — known-broken, or requires an external prerequisite this
-  installer doesn't automate (e.g. Vanquish's dgVoodoo — excluded from the
-  catalogue entirely rather than blacklisted, since there is nothing this
-  installer can offer for it).
+  installer cannot use as a manual bridge.
+
+An installable title may additionally declare `external_requirement` for a
+manual prerequisite that makes the Luma install viable. The current supported
+kind is `dgvoodoo2`: it lists the wrapper version, detected DirectX APIs that
+may be accepted for that title, the ReShade proxy DLL slot to use, and the
+exact config block RenderPilot shows/copies. RenderPilot does not download or
+write dgVoodoo files.
 
 `pending_match.json` is a generated todo-list for curated rows that still lack
 a Steam AppID or exact executable basename. A blacklisted row still stays
@@ -62,11 +69,11 @@ pending until the app can match it to an installed game.
 
 ## Inputs
 
-| File                 | What it holds                                                                                                                                                                                                                                                                         |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `curated_games.json` | one row per Luma-compatible game: name, release `asset` file name, `arch`, wiki test-map `status` (working/construction/unknown), `generic`, `launch_args`, `notes_keys`, `blacklist` reason — all hand-curated directly (there is no auto-scraped wiki file to layer overrides onto) |
-| `match_overlay.json` | **only** the Steam AppID(s)/exe a curated row needs to become installable — nothing else lives here, unlike RenoDX's overlay                                                                                                                                                          |
-| `pending_match.json` | generated todo-list: curated rows still lacking an AppID/exe match                                                                                                                                                                                                                    |
+| File                 | What it holds                                                                                                                                                                                                                                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `curated_games.json` | one row per Luma-compatible game: name, release `asset` file name, `arch`, wiki test-map `status` (working/construction/unknown), `generic`, `launch_args`, `external_requirement`, `notes_keys`, `blacklist` reason — all hand-curated directly (there is no auto-scraped wiki file to layer overrides onto) |
+| `match_overlay.json` | **only** the Steam AppID(s)/exe a curated row needs to become installable — nothing else lives here, unlike RenoDX's overlay                                                                                                                                                                                  |
+| `pending_match.json` | generated todo-list: curated rows still lacking an AppID/exe match                                                                                                                                                                                                                                            |
 
 The Steam AppID → executable cache (`scripts/steam-appid-exe.json`) is shared
 with the RenoDX pipeline — see the repo root README. Both generators filter it
@@ -111,14 +118,15 @@ over guessing an AppID; duplicate match rules are rejected by the generator.
 Curated-game fields (on the `curated_games.json` row itself) — all optional
 except `id`/`name`/`asset`/`arch`:
 
-| Field             | Effect                                                                                              |
-| ----------------- | --------------------------------------------------------------------------------------------------- |
-| `status`          | `working` / `construction` / `unknown` — drives the derived `channel` (working → stable, else beta) |
-| `generic`         | `true` when `asset` is a shared Generic-Mod build (Unreal/Unity) rather than a dedicated build      |
-| `launch_args`     | required launch arguments (e.g. `-dx11`, `-nod3d9ex`), shown as a copyable callout                  |
-| `notes_keys`      | localized note keys shown for the title                                                             |
-| `blacklist`       | i18n reason key → emitted as `title.category`                                                       |
-| `min_app_version` | override the default minimum app version                                                            |
+| Field                  | Effect                                                                                                                           |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `status`               | `working` / `construction` / `unknown` — drives the derived `channel` (working → stable, else beta)                              |
+| `generic`              | `true` when `asset` is a shared Generic-Mod build (Unreal/Unity) rather than a dedicated build                                   |
+| `launch_args`          | required launch arguments (e.g. `-dx11`, `-nod3d9ex`), shown as a copyable callout                                               |
+| `external_requirement` | manual prerequisite metadata; currently `dgvoodoo2` with `version`, `accepted_detected_apis`, `proxy_dll`, and copyable `config` |
+| `notes_keys`           | localized note keys shown for the title                                                                                          |
+| `blacklist`            | i18n reason key → emitted as `title.category`                                                                                    |
+| `min_app_version`      | override the default minimum app version                                                                                         |
 
 Overlay keys (under the game id, in `match_overlay.json`):
 
@@ -132,7 +140,7 @@ Overlay keys (under the game id, in `match_overlay.json`):
   newer app.
 - The generator only emits a title field when it differs from `defaults`, so
   most edits touch a single key.
-- A game that needs an external prerequisite this installer doesn't automate
-  (e.g. Vanquish's dgVoodoo) is excluded from `curated_games.json` entirely in
-  v1, rather than blacklisted — there would be nothing for the "Install"
-  action to do differently.
+- A game that needs a manual prerequisite is installable only when the Luma
+  profile can still install useful files and the requirement declares the exact
+  proxy/config the user must provide. Otherwise leave it out of
+  `curated_games.json` or blacklist it with a clear reason.

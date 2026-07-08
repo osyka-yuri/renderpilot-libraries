@@ -11,6 +11,7 @@ const DISHONORED_2 = {
   asset: "Luma-Dishonored_2.zip",
   appid: "403640",
 };
+const BORDERLANDS_2_AND_TPS = "borderlands-2-and-the-pre-sequel";
 const TEKKEN_7 = "tekken-7";
 
 test("manifest integrity - committed luma_manifest.json is well-formed and internally consistent", async () => {
@@ -37,6 +38,17 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
         rule.tier === 100,
     ),
     "Dishonored 2 should match by its Steam AppID",
+  );
+
+  const borderlands = manifest.titles.find((t) => t.id === BORDERLANDS_2_AND_TPS);
+  assert.ok(borderlands, `${BORDERLANDS_2_AND_TPS} must be present`);
+  assert.equal(borderlands.external_requirement.kind, "dgvoodoo2");
+  assert.equal(borderlands.external_requirement.version, "2.87.3");
+  assert.deepEqual(borderlands.external_requirement.accepted_detected_apis, ["D3D9"]);
+  assert.equal(borderlands.external_requirement.proxy_dll, "dxgi.dll");
+  assert.deepEqual(
+    borderlands.external_requirement.config.map((section) => section.section),
+    ["General", "DirectX"],
   );
 
   const tekken7 = manifest.titles.find((t) => t.id === TEKKEN_7);

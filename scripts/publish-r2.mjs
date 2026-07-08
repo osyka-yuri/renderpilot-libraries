@@ -62,7 +62,7 @@ async function main(argv = process.argv.slice(2), env = process.env) {
       console.log(`  = ${object.key} (up to date)`);
     } else {
       summary.uploaded += 1;
-      console.log(`  ↑ ${object.key} (${result.bytes} bytes)`);
+      console.log(`  ↑ ${object.key} sha256:${result.sha256} (${result.bytes} bytes)`);
     }
   }
 
@@ -212,6 +212,7 @@ async function publishObject(s3, object, { force }) {
   return {
     action: "uploaded",
     bytes: local.size,
+    sha256: local.sha256Hex,
   };
 }
 
@@ -231,6 +232,7 @@ async function readLocalObject(object) {
     body,
     size: body.length,
     md5Hex: md5Hex(body),
+    sha256Hex: sha256Hex(body),
     contentType: contentTypeForKey(object.key),
   };
 }
@@ -324,6 +326,10 @@ function isMissingObjectError(err) {
 
 function md5Hex(buf) {
   return createHash("md5").update(buf).digest("hex");
+}
+
+function sha256Hex(buf) {
+  return createHash("sha256").update(buf).digest("hex");
 }
 
 function normalizeEtag(etag) {
