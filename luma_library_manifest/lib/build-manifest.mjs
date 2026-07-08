@@ -4,12 +4,7 @@ import {
   normalizeExeName,
   validateOverlay,
 } from "./overlay.mjs";
-import {
-  assertPlainObject,
-  deepFreeze,
-  requiredNonEmptyString,
-} from "../../scripts/lib/common.mjs";
-import { RESHADE_NIGHTLY } from "../../scripts/lib/reshade-sources.mjs";
+import { assertPlainObject, requiredNonEmptyString } from "../../scripts/lib/common.mjs";
 import {
   DEFAULTS,
   VALID_STATUSES,
@@ -29,7 +24,6 @@ import {
   RESHADE_PROXY_DLLS,
   assertSemver,
   assertSingleLineString,
-  assertOptionalSingleLineString,
   assertOptionalNonEmptyStringArray,
   assertAllowedValue,
   assertAllowedValues,
@@ -38,13 +32,10 @@ import {
 
 export const SCHEMA_VERSION = 1;
 
-// Luma always installs the nightly ReShade host (no stable field, unlike
-// RenoDX) and the minimum host version its current builds require against a
-// reused foreign host (see `addons::luma::types::LumaReshadeConfig`).
-export const RESHADE = deepFreeze({
-  min_version: "6.7.0",
-  nightly: RESHADE_NIGHTLY,
-});
+// Luma's add-on-loader compatibility floor for reusing an already-present
+// ReShade host. Download URLs live in the standalone `reshade_manifest.json`,
+// not in the Luma catalogue.
+export const MIN_RESHADE_VERSION = "6.7.0";
 
 const ASSET_PREFIX = "Luma-";
 const ASSET_SUFFIX = ".zip";
@@ -52,6 +43,7 @@ const ASSET_FORBIDDEN_MARKERS = ["-test", "-dev"];
 const ASSET_X32_SUFFIX = "-x32";
 const ASSET_NAME_CHAR_RE = /^[A-Za-z0-9._()'-]+$/u;
 const EXTERNAL_REQUIREMENT_KIND = "dgvoodoo2";
+const WINDOWS_FILE_FORBIDDEN_RE = /[<>:"/\\|?*\x00-\x1f]/u;
 
 // ── Layer 1: buildManifest – orchestrate normalize → validate → assemble ──
 
@@ -130,7 +122,7 @@ export function buildManifest({
     manifest: {
       schema_version: SCHEMA_VERSION,
       generated_at: generatedAt,
-      reshade: RESHADE,
+      min_reshade_version: MIN_RESHADE_VERSION,
       defaults: DEFAULTS,
       titles,
     },
@@ -294,6 +286,17 @@ function normalizeExternalRequirement(value, context) {
     `${context}.version`,
   );
 
+  const source = normalizeManagedSource(value.source, `${context}.source`);
+  const installMap = normalizeInstallMap(value.install_map, `${context}.install_map`);
+  const configFile = normalizeGameDirectoryFile(
+    value.config_file,
+    `${context}.config_file`,
+  );
+  ensureNoInstallTargetConflict(
+    [...installMap.map((entry) => entry.dest), configFile],
+    `${context}.install_map/config_file`,
+  );
+
   return {
     kind,
     version,
@@ -301,7 +304,13 @@ function normalizeExternalRequirement(value, context) {
       value.accepted_detected_apis,
       `${context}.accepted_detected_apis`,
     ),
-    proxy_dll: normalizeExternalProxyDll(value.proxy_dll, `${context}.proxy_dll`),
+    reshade_proxy_dll: normalizeExternalProxyDll(
+      value.reshade_proxy_dll,
+      `${context}.reshade_proxy_dll`,
+    ),
+    source,
+    install_map: installMap,
+    config_file: configFile,
     config: normalizeExternalConfig(value.config, `${context}.config`),
   };
 }
@@ -359,10 +368,106 @@ function normalizeExternalConfigEntry(value, context) {
   };
 
   if (value.comment !== undefined) {
-    entry.comment = assertOptionalSingleLineString(value.comment, `${context}.comment`);
+    throw new Error(
+      `${context}.comment is not supported in managed config entries; comments belong in authoring documentation`,
+    );
   }
 
   return entry;
+}
+
+function normalizeManagedSource(value, context) {
+  assertPlainObject(value, context);
+
+  const url = requiredNonEmptyString(value.url, `${context}.url`);
+  if (!url.startsWith("https://")) {
+    throw new Error(`${context}.url must be an HTTPS URL`);
+  }
+
+  const sha256 = requiredNonEmptyString(value.sha256, `${context}.sha256`).toLowerCase();
+  if (!/^[0-9a-f]{64}$/.test(sha256)) {
+    throw new Error(`${context}.sha256 must be a 64-character hex string`);
+  }
+
+  const size = Number(value.size);
+  if (!Number.isInteger(size) || size < 1) {
+    throw new Error(`${context}.size must be a positive integer`);
+  }
+
+  return { url, sha256, size };
+}
+
+function normalizeInstallMap(value, context) {
+  if (!Array.isArray(value) || value.length === 0) {
+    throw new Error(`${context} must be a non-empty array`);
+  }
+
+  const entries = value.map((entry, index) =>
+    normalizeInstallMapEntry(entry, `${context}[${index}]`),
+  );
+  ensureUniqueBy(entries, (entry) => entry.source.toLowerCase(), `${context}.source`);
+  ensureUniqueBy(entries, (entry) => entry.dest.toLowerCase(), `${context}.dest`);
+  return entries;
+}
+
+function normalizeInstallMapEntry(value, context) {
+  assertPlainObject(value, context);
+
+  const source = normalizeArchivePath(
+    requiredNonEmptyString(value.source, `${context}.source`),
+    `${context}.source`,
+  );
+  const dest = normalizeGameDirectoryFile(
+    requiredNonEmptyString(value.dest, `${context}.dest`),
+    `${context}.dest`,
+  );
+
+  const sha256 = requiredNonEmptyString(value.sha256, `${context}.sha256`).toLowerCase();
+  if (!/^[0-9a-f]{64}$/.test(sha256)) {
+    throw new Error(`${context}.sha256 must be a 64-character hex string`);
+  }
+
+  const size = Number(value.size);
+  if (!Number.isInteger(size) || size < 1) {
+    throw new Error(`${context}.size must be a positive integer`);
+  }
+
+  return { source, dest, sha256, size };
+}
+
+function normalizeArchivePath(value, context) {
+  const path = assertSingleLineString(value, context);
+  if (
+    path.includes("\\") ||
+    path.startsWith("/") ||
+    path.split("/").some((segment) => segment === "" || segment === "." || segment === "..")
+  ) {
+    throw new Error(`${context} must be a safe relative archive path`);
+  }
+  return path;
+}
+
+function normalizeGameDirectoryFile(value, context) {
+  const file = assertSingleLineString(value, context);
+  if (file === "." || file === ".." || WINDOWS_FILE_FORBIDDEN_RE.test(file)) {
+    throw new Error(`${context} must be a safe game-directory filename`);
+  }
+  return file;
+}
+
+function ensureUniqueBy(items, keyOf, context) {
+  const seen = new Set();
+  for (const item of items) {
+    const key = keyOf(item);
+    if (seen.has(key)) {
+      throw new Error(`${context} contains duplicate "${key}"`);
+    }
+    seen.add(key);
+  }
+}
+
+function ensureNoInstallTargetConflict(destinations, context) {
+  ensureUniqueBy(destinations, (value) => value.toLowerCase(), context);
 }
 
 // ── Layer 3: stats ──

@@ -38,7 +38,7 @@ test("integrity - the committed reshade_manifest.json matches the shared source 
   assert.deepEqual(manifest.nightly, RESHADE_NIGHTLY);
 });
 
-test("integrity - renodx_manifest.json and luma_manifest.json embed the same nightly sources as reshade_manifest.json (no drift between the three published documents)", async () => {
+test("integrity - renodx_manifest.json embeds shared sources while luma_manifest.json delegates to reshade_manifest.json", async () => {
   const [reshade, renodx, luma] = await Promise.all(
     ["reshade_manifest.json", "renodx_manifest.json", "luma_manifest.json"].map(
       async (file) => JSON.parse(await fs.readFile(path.join(REPO_ROOT, file), "utf-8")),
@@ -46,6 +46,7 @@ test("integrity - renodx_manifest.json and luma_manifest.json embed the same nig
   );
 
   assert.deepEqual(renodx.reshade.nightly, reshade.nightly);
-  assert.deepEqual(luma.reshade.nightly, reshade.nightly);
   assert.deepEqual(renodx.reshade.stable, reshade.stable);
+  assert.equal("reshade" in luma, false);
+  assert.match(luma.min_reshade_version, /^\d+\.\d+\.\d+$/);
 });

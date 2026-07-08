@@ -2,10 +2,16 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://renderpilot.app/schema/luma_manifest.schema.json",
   "title": "Luma Framework manifest",
-  "description": "Overrides + catalogue manifest for Luma Framework installs. Carries NO hashes/sizes: the add-on is fetched live from a single upstream rolling GitHub Release (Filoppi/Luma-Framework), so this document only maps games to a release asset file name + match rules + per-game overrides, plus the ReShade host source (always nightly — Luma has no stable channel) and shared defaults. Deliberately narrower than the RenoDX manifest: there is no top-level `generics` fallback list (every Generic-Mod-compatible game is an explicit title with `generic: true`), no `external`/`native_hdr` category (every asset lives on the same GitHub Release), and no `slug`/`download_url`/`compatibility` fields. The Rust validator in renderpilot-orchestration (luma::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
+  "description": "Overrides + catalogue manifest for Luma Framework installs. Carries NO payload hashes/sizes: the add-on is fetched live from a single upstream rolling GitHub Release (Filoppi/Luma-Framework), so this document maps games to a release asset file name + match rules + per-game overrides, plus Luma's minimum ReShade host version and shared title defaults. ReShade download sources live in the standalone reshade_manifest.json. Deliberately narrower than the RenoDX manifest: there is no top-level `generics` fallback list (every Generic-Mod-compatible game is an explicit title with `generic: true`), no `external`/`native_hdr` category (every asset lives on the same GitHub Release), and no `slug`/`download_url`/`compatibility` fields. The Rust validator in renderpilot-orchestration (luma::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "generated_at", "reshade", "defaults", "titles"],
+  "required": [
+    "schema_version",
+    "generated_at",
+    "min_reshade_version",
+    "defaults",
+    "titles"
+  ],
   "properties": {
     "schema_version": { "type": "integer", "const": 1 },
     "generated_at": {
@@ -13,7 +19,10 @@
       "format": "date-time",
       "description": "RFC 3339 timestamp, date-only granularity (T00:00:00Z). Honors SOURCE_DATE_EPOCH for reproducible builds."
     },
-    "reshade": { "$ref": "#/$defs/reshade" },
+    "min_reshade_version": {
+      "$ref": "#/$defs/semver",
+      "description": "Minimum ReShade host version Luma's current builds require when RenderPilot considers reusing an already-present host. ReShade download URLs are intentionally not part of the Luma manifest."
+    },
     "defaults": {
       "$ref": "#/$defs/defaults",
       "description": "Shared title defaults. The app applies these to every title that omits the corresponding field; the generator only emits a per-title field when it differs from these."
@@ -41,27 +50,6 @@
       "pattern": "^Luma-[A-Za-z0-9._()'-]+(-x32)?\\.zip$",
       "description": "GitHub Release asset file name (e.g. Luma-Dishonored_2.zip, Luma-Unreal_Engine.zip). A `-x32` suffix must agree with `arch: X86`. `-Test`/`-Dev` build markers are curated out (Publishing assets only)."
     },
-    "reshade": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["min_version", "nightly"],
-      "description": "Luma always installs the nightly ReShade host (its bundled dxgi.dll pins a recent crosire/reshade main commit, and the host's add-on loader rejects an add-on whose API version exceeds its own) — there is no `stable` field to pick from, unlike RenoDX. `min_version` gates *reusing* an already-present foreign host: one older than this is repaired rather than silently reused.",
-      "properties": {
-        "min_version": {
-          "$ref": "#/$defs/semver",
-          "description": "Minimum ReShade host version Luma's current builds require."
-        },
-        "nightly": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["url64", "url32"],
-          "properties": {
-            "url64": { "$ref": "#/$defs/httpsUrl" },
-            "url32": { "$ref": "#/$defs/httpsUrl" }
-          }
-        }
-      }
-    },
     "category": {
       "type": "object",
       "additionalProperties": false,
@@ -79,8 +67,17 @@
     "externalRequirement": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["kind", "version", "accepted_detected_apis", "proxy_dll", "config"],
-      "description": "Manual prerequisite RenderPilot does not install or configure. The matcher may accept the listed detected APIs for this title and install the ReShade host into the declared proxy DLL slot while the UI surfaces the exact config block.",
+      "required": [
+        "kind",
+        "version",
+        "accepted_detected_apis",
+        "reshade_proxy_dll",
+        "source",
+        "install_map",
+        "config_file",
+        "config"
+      ],
+      "description": "Managed installer-owned dependency that RenderPilot downloads, verifies, installs, and configures. The matcher may accept the listed detected APIs for this title and install the ReShade host into the declared proxy DLL slot.",
       "properties": {
         "kind": { "const": "dgvoodoo2" },
         "version": { "$ref": "#/$defs/semver" },
@@ -90,16 +87,67 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/directXGraphicsApi" }
         },
-        "proxy_dll": {
+        "reshade_proxy_dll": {
           "type": "string",
-          "enum": ["dxgi.dll", "d3d9.dll", "d3d10.dll", "d3d11.dll", "d3d12.dll"]
+          "enum": ["dxgi.dll", "d3d9.dll", "d3d10.dll", "d3d11.dll", "d3d12.dll"],
+          "description": "ReShade host proxy DLL slot (e.g. dxgi.dll). Distinct from dgVoodoo's own wrapper DLL (e.g. D3D9.dll), which is declared in install_map."
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url", "sha256", "size"],
+          "description": "Managed archive source for downloading and verifying the dependency.",
+          "properties": {
+            "url": { "$ref": "#/$defs/httpsUrl" },
+            "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "size": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "install_map": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Archive path -> game directory path mapping for files extracted from the dependency archive.",
+          "items": { "$ref": "#/$defs/installMapEntry" }
         },
         "config": {
           "type": "array",
           "minItems": 1,
-          "items": { "$ref": "#/$defs/externalConfigSection" }
+          "items": { "$ref": "#/$defs/externalConfigSection" },
+          "description": "Keys to merge into the dependency's configuration file on top of the default config shipped in the archive."
+        },
+        "config_file": {
+          "$ref": "#/$defs/gameDirectoryFile",
+          "description": "Root-level archive file and game-directory target file used as the dependency config base."
         }
       }
+    },
+    "installMapEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "dest", "sha256", "size"],
+      "description": "A single file mapping from the dependency archive to the game install directory, with integrity metadata.",
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/archivePath",
+          "description": "Path inside the archive (e.g. MS/x86/D3D9.dll)."
+        },
+        "dest": {
+          "$ref": "#/$defs/gameDirectoryFile",
+          "description": "Target filename in the game directory (e.g. D3D9.dll)."
+        },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "size": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "archivePath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*\\\\)(?!.*(?:^|/)\\.\\.?($|/))(?!.*//).+$"
+    },
+    "gameDirectoryFile": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!\\.\\.?$)[^<>:\"/\\\\|?*]+$"
     },
     "externalConfigSection": {
       "type": "object",
@@ -120,8 +168,7 @@
       "required": ["key", "value"],
       "properties": {
         "key": { "type": "string", "minLength": 1 },
-        "value": { "type": "string", "minLength": 1 },
-        "comment": { "type": "string", "minLength": 1 }
+        "value": { "type": "string", "minLength": 1 }
       }
     },
     "matchRule": {

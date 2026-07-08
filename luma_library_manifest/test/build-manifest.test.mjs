@@ -16,7 +16,21 @@ const dgVoodooRequirement = (overrides = {}) => ({
   kind: "dgvoodoo2",
   version: "2.87.3",
   accepted_detected_apis: ["D3D9"],
-  proxy_dll: "dxgi.dll",
+  reshade_proxy_dll: "dxgi.dll",
+  source: {
+    url: "https://github.com/dege-diosg/dgVoodoo2/releases/download/v2.87.3/dgVoodoo2_87_3.zip",
+    sha256: "6fb954bed55bf70e948c5045a663a9df31ea206faf105e327bafe46c318f867f",
+    size: 9082391,
+  },
+  install_map: [
+    {
+      source: "MS/x86/D3D9.dll",
+      dest: "D3D9.dll",
+      sha256: "c13e3c0969d2c70a1a63cf96b83c7cd3bc47f925f28ec92c07d5b72d6df4c240",
+      size: 485888,
+    },
+  ],
+  config_file: "dgVoodoo.conf",
   config: [
     {
       section: "General",
@@ -24,13 +38,7 @@ const dgVoodooRequirement = (overrides = {}) => ({
     },
     {
       section: "DirectX",
-      entries: [
-        {
-          key: "VideoCard",
-          value: "geforce_9800_gt",
-          comment: "fixes dynamic shadows",
-        },
-      ],
+      entries: [{ key: "VideoCard", value: "geforce_9800_gt" }],
     },
   ],
   ...overrides,
@@ -46,6 +54,8 @@ test("buildManifest emits a title once it has a match identifier", () => {
     warn: () => {},
   });
 
+  assert.match(result.manifest.min_reshade_version, /^\d+\.\d+\.\d+$/);
+  assert.equal("reshade" in result.manifest, false);
   assert.equal(result.manifest.titles.length, 1);
   const [title] = result.manifest.titles;
   assert.equal(title.id, "dishonored-2");
@@ -152,7 +162,7 @@ test("buildManifest carries generic/launch_args/notes_keys straight from the cur
   assert.deepEqual(title.notes_keys, ["luma.note.generic_mod"]);
 });
 
-test("buildManifest carries a manual external requirement from the curated game", () => {
+test("buildManifest carries a managed external requirement from the curated game", () => {
   const externalRequirement = dgVoodooRequirement();
   const result = buildManifest({
     generatedAt: "2026-07-05T00:00:00Z",
@@ -186,6 +196,84 @@ test("buildManifest rejects non-DirectX APIs in an external requirement", () => 
         warn: () => {},
       }),
     /must be one of/,
+  );
+});
+
+test("buildManifest rejects unsafe managed archive paths", () => {
+  assert.throws(
+    () =>
+      buildManifest({
+        generatedAt: "2026-07-05T00:00:00Z",
+        curatedGames: [
+          game("bad-wrapper", {
+            external_requirement: dgVoodooRequirement({
+              install_map: [
+                {
+                  source: "../D3D9.dll",
+                  dest: "D3D9.dll",
+                  sha256: "b".repeat(64),
+                  size: 1,
+                },
+              ],
+            }),
+          }),
+        ],
+        overlay: { "bad-wrapper": { appid: "1" } },
+        warn: () => {},
+      }),
+    /safe relative archive path/,
+  );
+});
+
+test("buildManifest rejects unsafe managed game-directory filenames", () => {
+  assert.throws(
+    () =>
+      buildManifest({
+        generatedAt: "2026-07-05T00:00:00Z",
+        curatedGames: [
+          game("bad-wrapper", {
+            external_requirement: dgVoodooRequirement({
+              install_map: [
+                {
+                  source: "MS/x86/D3D9.dll",
+                  dest: "nested/D3D9.dll",
+                  sha256: "b".repeat(64),
+                  size: 1,
+                },
+              ],
+            }),
+          }),
+        ],
+        overlay: { "bad-wrapper": { appid: "1" } },
+        warn: () => {},
+      }),
+    /safe game-directory filename/,
+  );
+});
+
+test("buildManifest rejects duplicate managed install targets", () => {
+  assert.throws(
+    () =>
+      buildManifest({
+        generatedAt: "2026-07-05T00:00:00Z",
+        curatedGames: [
+          game("bad-wrapper", {
+            external_requirement: dgVoodooRequirement({
+              install_map: [
+                {
+                  source: "MS/x86/D3D9.dll",
+                  dest: "dgVoodoo.conf",
+                  sha256: "b".repeat(64),
+                  size: 1,
+                },
+              ],
+            }),
+          }),
+        ],
+        overlay: { "bad-wrapper": { appid: "1" } },
+        warn: () => {},
+      }),
+    /duplicate/,
   );
 });
 

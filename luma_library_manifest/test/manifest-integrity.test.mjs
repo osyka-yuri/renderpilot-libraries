@@ -23,9 +23,10 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
   assert.ok(manifest.titles.length > 0, "Manifest should have at least one title");
   assert.equal(manifest.schema_version, 1);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
+  assert.match(manifest.min_reshade_version, /^\d+\.\d+\.\d+$/);
+  assert.equal("reshade" in manifest, false);
   assert.match(manifest.defaults.min_app_version, /^\d+\.\d+\.\d+$/);
   assert.equal(manifest.defaults.channel, "stable");
-  assert.match(manifest.reshade.min_version, /^\d+\.\d+\.\d+$/);
 
   const dishonored2 = manifest.titles.find((t) => t.id === DISHONORED_2.id);
   assert.ok(dishonored2, `${DISHONORED_2.id} must be present`);
@@ -45,7 +46,20 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
   assert.equal(borderlands.external_requirement.kind, "dgvoodoo2");
   assert.equal(borderlands.external_requirement.version, "2.87.3");
   assert.deepEqual(borderlands.external_requirement.accepted_detected_apis, ["D3D9"]);
-  assert.equal(borderlands.external_requirement.proxy_dll, "dxgi.dll");
+  assert.equal(borderlands.external_requirement.reshade_proxy_dll, "dxgi.dll");
+  assert.equal(typeof borderlands.external_requirement.source.url, "string");
+  assert.match(borderlands.external_requirement.source.sha256, /^[0-9a-f]{64}$/);
+  assert.ok(borderlands.external_requirement.source.size > 0);
+  assert.ok(Array.isArray(borderlands.external_requirement.install_map));
+  assert.ok(borderlands.external_requirement.install_map.length > 0);
+  const dllEntry = borderlands.external_requirement.install_map.find(
+    (e) => e.dest === "D3D9.dll",
+  );
+  assert.ok(dllEntry);
+  assert.equal(dllEntry.source, "MS/x86/D3D9.dll");
+  assert.match(dllEntry.sha256, /^[0-9a-f]{64}$/);
+  assert.ok(dllEntry.size > 0);
+  assert.equal(borderlands.external_requirement.config_file, "dgVoodoo.conf");
   assert.deepEqual(
     borderlands.external_requirement.config.map((section) => section.section),
     ["General", "DirectX"],

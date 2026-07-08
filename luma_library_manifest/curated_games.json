@@ -1179,7 +1179,21 @@
       "kind": "dgvoodoo2",
       "version": "2.87.3",
       "accepted_detected_apis": ["D3D9"],
-      "proxy_dll": "dxgi.dll",
+      "reshade_proxy_dll": "dxgi.dll",
+      "source": {
+        "url": "https://github.com/dege-diosg/dgVoodoo2/releases/download/v2.87.3/dgVoodoo2_87_3.zip",
+        "sha256": "6fb954bed55bf70e948c5045a663a9df31ea206faf105e327bafe46c318f867f",
+        "size": 9082391
+      },
+      "install_map": [
+        {
+          "source": "MS/x86/D3D9.dll",
+          "dest": "D3D9.dll",
+          "sha256": "c13e3c0969d2c70a1a63cf96b83c7cd3bc47f925f28ec92c07d5b72d6df4c240",
+          "size": 485888
+        }
+      ],
+      "config_file": "dgVoodoo.conf",
       "config": [
         {
           "section": "General",
@@ -1188,16 +1202,8 @@
         {
           "section": "DirectX",
           "entries": [
-            {
-              "key": "VideoCard",
-              "value": "geforce_9800_gt",
-              "comment": "fixes dynamic shadows"
-            },
-            {
-              "key": "dgVoodooWatermark",
-              "value": "false",
-              "comment": "removes the dgVoodoo watermark"
-            },
+            { "key": "VideoCard", "value": "geforce_9800_gt" },
+            { "key": "dgVoodooWatermark", "value": "false" },
             { "key": "VRAM", "value": "1024" }
           ]
         }
