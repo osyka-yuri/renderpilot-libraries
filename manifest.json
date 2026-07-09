@@ -6542,6 +6542,37 @@
       }
     },
     {
+      "entry_id": "amd_fidelityfx_loader_dx12_2.3.0.2740",
+      "library": {
+        "id": "amd_fidelityfx_loader_dx12",
+        "file_name": "amd_fidelityfx_loader_dx12.dll"
+      },
+      "version": {
+        "value": "2.3.0.2740",
+        "sort_key": "0002.0003.0000.2740"
+      },
+      "build": {
+        "label": "FidelityFX SDK 2.3.0",
+        "type": "stable"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "sha256": "e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa"
+          },
+          "size_bytes": 26376
+        },
+        "zst": {
+          "size_bytes": 14779,
+          "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_loader_dx12_2.3.0.2740.dll.zst"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-04-26T00:00:00Z"
+      }
+    },
+    {
       "entry_id": "amd_fidelityfx_upscaler_dx12_4.0.2.44888",
       "library": {
         "id": "amd_fidelityfx_upscaler_dx12",
@@ -6627,6 +6658,37 @@
         "zst": {
           "size_bytes": 2254023,
           "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_upscaler_dx12_4.1.0.0.dll.zst"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-04-26T00:00:00Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_upscaler_dx12_4.1.1.2740",
+      "library": {
+        "id": "amd_fidelityfx_upscaler_dx12",
+        "file_name": "amd_fidelityfx_upscaler_dx12.dll"
+      },
+      "version": {
+        "value": "4.1.1.2740",
+        "sort_key": "0004.0001.0001.2740"
+      },
+      "build": {
+        "label": "FSR 4.1.1",
+        "type": "stable"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "sha256": "d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46"
+          },
+          "size_bytes": 28761864
+        },
+        "zst": {
+          "size_bytes": 3449426,
+          "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_upscaler_dx12_4.1.1.2740.dll.zst"
         }
       },
       "signature": {
@@ -6728,6 +6790,37 @@
       }
     },
     {
+      "entry_id": "amd_fidelityfx_framegeneration_dx12_4.0.1.2740",
+      "library": {
+        "id": "amd_fidelityfx_framegeneration_dx12",
+        "file_name": "amd_fidelityfx_framegeneration_dx12.dll"
+      },
+      "version": {
+        "value": "4.0.1.2740",
+        "sort_key": "0004.0000.0001.2740"
+      },
+      "build": {
+        "label": "FSR FG 4.0.1",
+        "type": "stable"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "sha256": "02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18"
+          },
+          "size_bytes": 40085776
+        },
+        "zst": {
+          "size_bytes": 23865709,
+          "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_framegeneration_dx12_4.0.1.2740.dll.zst"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-04-26T00:00:00Z"
+      }
+    },
+    {
       "entry_id": "amd_fidelityfx_denoiser_dx12_1.0.0.604",
       "library": {
         "id": "amd_fidelityfx_denoiser_dx12",
@@ -6790,6 +6883,37 @@
       }
     },
     {
+      "entry_id": "amd_fidelityfx_denoiser_dx12_1.2.0.2740",
+      "library": {
+        "id": "amd_fidelityfx_denoiser_dx12",
+        "file_name": "amd_fidelityfx_denoiser_dx12.dll"
+      },
+      "version": {
+        "value": "1.2.0.2740",
+        "sort_key": "0001.0002.0000.2740"
+      },
+      "build": {
+        "label": "FSR Ray Regen 1.2.0",
+        "type": "stable"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "sha256": "48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3"
+          },
+          "size_bytes": 13782280
+        },
+        "zst": {
+          "size_bytes": 2349898,
+          "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_denoiser_dx12_1.2.0.2740.dll.zst"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-04-26T00:00:00Z"
+      }
+    },
+    {
       "entry_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.0",
       "library": {
         "id": "amd_fidelityfx_radiancecache_dx12",
@@ -6844,6 +6968,37 @@
         "zst": {
           "size_bytes": 383086,
           "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_radiancecache_dx12_0.9.0.604.dll.zst"
+        }
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-04-26T00:00:00Z"
+      }
+    },
+    {
+      "entry_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.2740",
+      "library": {
+        "id": "amd_fidelityfx_radiancecache_dx12",
+        "file_name": "amd_fidelityfx_radiancecache_dx12.dll"
+      },
+      "version": {
+        "value": "0.9.0.2740",
+        "sort_key": "0000.0009.0000.2740"
+      },
+      "build": {
+        "label": "FSR Radiance Cache 0.9.0 (preview)",
+        "type": "stable"
+      },
+      "files": {
+        "dll": {
+          "hashes": {
+            "sha256": "256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0"
+          },
+          "size_bytes": 798992
+        },
+        "zst": {
+          "size_bytes": 384342,
+          "download_url": "https://pub-48612a35034d40f88f42b4181547925a.r2.dev/amd_fidelityfx_radiancecache_dx12_0.9.0.2740.dll.zst"
         }
       },
       "signature": {
