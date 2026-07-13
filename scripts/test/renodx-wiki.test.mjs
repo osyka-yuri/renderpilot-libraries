@@ -1,11 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { extractMarkdownTables } from "../lib/wiki-markdown.mjs";
 import {
-  extractMarkdownTables,
   getModsTableHeaderColumns,
-  parseWikiRow,
+  parseRenodxWikiRows,
   parseStatus,
-} from "../lib/sync-wiki-parsing.mjs";
+  parseWikiRow,
+  reconcileRenodxWiki,
+} from "../lib/renodx-wiki.mjs";
 
 test("extractMarkdownTables captures tables and their preceding context", () => {
   const markdown = `
@@ -135,4 +137,82 @@ test("parseWikiRow handles out of bounds column access gracefully", () => {
   assert.ok(row);
   assert.equal(row.name, "Game");
   assert.equal(row.status, "unknown"); // statusIndex is 3, out of bounds
+});
+
+test("parseRenodxWikiRows preserves the existing Mods-table parser contract", () => {
+  const rows = parseRenodxWikiRows(`
+### Unity
+| Name | Maintainer | Status | Links | Notes |
+| --- | --- | --- | --- |
+| Game | Owner | ✅ | | |
+`);
+  assert.deepEqual(rows, [
+    {
+      name: "Game",
+      status: "working",
+      addonUrl: null,
+      arch: "X64",
+      addonSlug: "unityengine",
+      nexusUrl: null,
+      discordUrl: null,
+    },
+  ]);
+});
+
+test("reconcileRenodxWiki keeps the established catalogue and overlay result", () => {
+  const existingWiki = [{ id: "known", name: "Known Game", slug: "known", arch: "X64" }];
+  const overlay = {
+    known: { slug: "known", external: { url: "https://old.example", label_key: "old" } },
+  };
+  const rows = [
+    {
+      name: "Known Game",
+      status: "working",
+      addonUrl:
+        "https://clshortfuse.github.io/games/renodx-known/releases/download/v1/renodx-known.addon64",
+      arch: "X64",
+      addonSlug: "known",
+      nexusUrl: null,
+      discordUrl: null,
+    },
+    {
+      name: "External Game",
+      status: "construction",
+      addonUrl: null,
+      arch: "X64",
+      addonSlug: null,
+      nexusUrl: "https://www.nexusmods.com/game/mods/1",
+      discordUrl: null,
+    },
+  ];
+
+  const result = reconcileRenodxWiki({
+    rows,
+    existingWiki,
+    overlay,
+    officialAssets: new Set(),
+  });
+  assert.deepEqual(result.wikiGames, [
+    { id: "known", name: "Known Game", slug: "known", arch: "X64", status: "working" },
+    {
+      id: "external-game",
+      name: "External Game",
+      slug: "external-game",
+      arch: "X64",
+      status: "construction",
+    },
+  ]);
+  assert.deepEqual(result.overlay, {
+    known: { slug: "known" },
+    "external-game": {
+      external: {
+        url: "https://www.nexusmods.com/game/mods/1",
+        label_key: "renodx.external.nexus",
+      },
+    },
+  });
+  assert.deepEqual(overlay.known.external, {
+    url: "https://old.example",
+    label_key: "old",
+  });
 });

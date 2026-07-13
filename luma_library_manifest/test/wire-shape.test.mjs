@@ -9,19 +9,23 @@ import { buildManifest, SCHEMA_VERSION } from "../lib/build-manifest.mjs";
 const SCRIPT_DIR = import.meta.dirname;
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "../..");
 
-const game = (id, overrides = {}) => ({
-  id,
-  name: overrides.name ?? id,
-  asset: overrides.asset ?? `Luma-${id}.zip`,
-  arch: overrides.arch ?? "X64",
-  status: overrides.status ?? "working",
-  ...overrides,
-});
+const game = (id, overrides = {}) => {
+  const asset = overrides.asset ?? `Luma-${id}.zip`;
+  return {
+    id,
+    name: overrides.name ?? id,
+    asset,
+    addon_file: overrides.addon_file ?? asset.replace(/\.zip$/u, ".addon"),
+    arch: overrides.arch ?? "X64",
+    status: overrides.status ?? "working",
+    ...overrides,
+  };
+};
 
 // ── top-level wire contract ──
 
 test("schema_version is the current Luma manifest schema", () => {
-  assert.equal(SCHEMA_VERSION, 1);
+  assert.equal(SCHEMA_VERSION, 2);
 });
 
 test("committed luma_manifest.json uses the current top-level contract", async () => {
@@ -29,7 +33,7 @@ test("committed luma_manifest.json uses the current top-level contract", async (
   const data = await fs.readFile(manifestPath, "utf-8");
   const manifest = JSON.parse(data);
 
-  assert.equal(manifest.schema_version, 1);
+  assert.equal(manifest.schema_version, 2);
   assert.match(manifest.min_reshade_version, /^\d+\.\d+\.\d+$/);
   assert.equal("reshade" in manifest, false);
 });
@@ -50,6 +54,7 @@ test("title without external_requirement has no external_requirement field", () 
   assert.equal(title.id, "catalog-game");
   assert.equal(title.name, "Catalog Game");
   assert.equal(title.asset, "Luma-Catalog.zip");
+  assert.equal(title.addon_file, "Luma-Catalog.addon");
   assert.equal(title.status, "working");
   assert.equal(title.channel, undefined);
   assert.equal(title.min_app_version, undefined);
@@ -61,7 +66,7 @@ test("title without external_requirement has no external_requirement field", () 
 
 // ── title with external_requirement emits the managed dependency field ──
 
-test("Borderlands dgVoodoo requirement emits external_requirement on schema v1", () => {
+test("Borderlands dgVoodoo requirement emits external_requirement on schema v2", () => {
   const dgVoodooRequirement = {
     kind: "dgvoodoo2",
     version: "2.87.3",
@@ -98,6 +103,7 @@ test("Borderlands dgVoodoo requirement emits external_requirement on schema v1",
     curatedGames: [
       game("borderlands-2-and-the-pre-sequel", {
         asset: "Luma-Borderlands_2_and_The_Pre-Sequel-x32.zip",
+        addon_file: "Luma-Borderlands 2 and The Pre-Sequel.addon",
         arch: "X86",
         external_requirement: dgVoodooRequirement,
       }),
@@ -108,9 +114,10 @@ test("Borderlands dgVoodoo requirement emits external_requirement on schema v1",
     warn: () => {},
   });
 
-  assert.equal(result.manifest.schema_version, 1);
+  assert.equal(result.manifest.schema_version, 2);
 
   const [title] = result.manifest.titles;
+  assert.equal(title.addon_file, "Luma-Borderlands 2 and The Pre-Sequel.addon");
   assert.equal("external_requirement" in title, true);
   assert.deepEqual(title.external_requirement, dgVoodooRequirement);
 });

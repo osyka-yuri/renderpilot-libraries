@@ -3,14 +3,18 @@ import test from "node:test";
 
 import { buildManifest } from "../lib/build-manifest.mjs";
 
-const game = (id, overrides = {}) => ({
-  id,
-  name: overrides.name ?? id,
-  asset: overrides.asset ?? `Luma-${id}.zip`,
-  arch: overrides.arch ?? "X64",
-  status: overrides.status ?? "working",
-  ...overrides,
-});
+const game = (id, overrides = {}) => {
+  const asset = overrides.asset ?? `Luma-${id}.zip`;
+  return {
+    id,
+    name: overrides.name ?? id,
+    asset,
+    addon_file: overrides.addon_file ?? asset.replace(/\.zip$/u, ".addon"),
+    arch: overrides.arch ?? "X64",
+    status: overrides.status ?? "working",
+    ...overrides,
+  };
+};
 
 const dgVoodooRequirement = (overrides = {}) => ({
   kind: "dgvoodoo2",
@@ -60,6 +64,7 @@ test("buildManifest emits a title once it has a match identifier", () => {
   const [title] = result.manifest.titles;
   assert.equal(title.id, "dishonored-2");
   assert.equal(title.asset, "Luma-Dishonored_2.zip");
+  assert.equal(title.addon_file, "Luma-Dishonored_2.addon");
   assert.deepEqual(title.match, [{ kind: "steam_appid", value: "403640", tier: 100 }]);
   assert.deepEqual(result.pending, []);
 });
@@ -319,6 +324,35 @@ test("buildManifest rejects an -x32 asset suffix that disagrees with arch", () =
         warn: () => {},
       }),
     /-x32 suffix must agree with arch/,
+  );
+});
+
+test("buildManifest requires a safe root Luma add-on filename", () => {
+  assert.throws(
+    () =>
+      buildManifest({
+        generatedAt: "2026-07-05T00:00:00Z",
+        curatedGames: [game("unsafe", { addon_file: "nested/Luma-Unsafe.addon" })],
+        overlay: { unsafe: { appid: "1" } },
+        warn: () => {},
+      }),
+    /safe game-directory filename/,
+  );
+});
+
+test("buildManifest rejects one release asset claiming two payload identities", () => {
+  assert.throws(
+    () =>
+      buildManifest({
+        generatedAt: "2026-07-05T00:00:00Z",
+        curatedGames: [
+          game("one", { asset: "Luma-Shared.zip", addon_file: "Luma-One.addon" }),
+          game("two", { asset: "Luma-Shared.zip", addon_file: "Luma-Two.addon" }),
+        ],
+        overlay: { one: { appid: "1" }, two: { appid: "2" } },
+        warn: () => {},
+      }),
+    /maps to multiple root add-ons/,
   );
 });
 

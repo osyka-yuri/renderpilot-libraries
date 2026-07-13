@@ -21,7 +21,7 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
 
   assert.ok(Array.isArray(manifest.titles), "Manifest should have a titles array");
   assert.ok(manifest.titles.length > 0, "Manifest should have at least one title");
-  assert.equal(manifest.schema_version, 1);
+  assert.equal(manifest.schema_version, 2);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
   assert.match(manifest.min_reshade_version, /^\d+\.\d+\.\d+$/);
   assert.equal("reshade" in manifest, false);
@@ -31,6 +31,7 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
   const dishonored2 = manifest.titles.find((t) => t.id === DISHONORED_2.id);
   assert.ok(dishonored2, `${DISHONORED_2.id} must be present`);
   assert.equal(dishonored2.asset, DISHONORED_2.asset);
+  assert.equal(dishonored2.addon_file, "Luma-Dishonored 2.addon");
   assert.ok(
     dishonored2.match.some(
       (rule) =>
@@ -43,6 +44,7 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
 
   const borderlands = manifest.titles.find((t) => t.id === BORDERLANDS_2_AND_TPS);
   assert.ok(borderlands, `${BORDERLANDS_2_AND_TPS} must be present`);
+  assert.equal(borderlands.addon_file, "Luma-Borderlands 2 and The Pre-Sequel.addon");
   assert.equal(borderlands.external_requirement.kind, "dgvoodoo2");
   assert.equal(borderlands.external_requirement.version, "2.87.3");
   assert.deepEqual(borderlands.external_requirement.accepted_detected_apis, ["D3D9"]);
@@ -73,7 +75,15 @@ test("manifest integrity - committed luma_manifest.json is well-formed and inter
   assert.ok(sharingItsAsset.length > 1, "the generic asset should be shared across titles");
 
   const seen = new Map();
+  const payloadByAsset = new Map();
   for (const title of manifest.titles) {
+    assert.match(title.addon_file, /^Luma-.+\.addon$/u);
+    const payload = payloadByAsset.get(title.asset);
+    assert.ok(
+      payload === undefined || payload === title.addon_file,
+      `asset ${title.asset} maps to multiple payload names`,
+    );
+    payloadByAsset.set(title.asset, title.addon_file);
     for (const rule of title.match) {
       const key = `${rule.kind}:${String(rule.value ?? "").toLowerCase()}`;
       const owner = seen.get(key);

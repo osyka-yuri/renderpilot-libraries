@@ -30,7 +30,7 @@ import {
   assertUniqueStringValues,
 } from "../../scripts/lib/validators.mjs";
 
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 
 // Luma's add-on-loader compatibility floor for reusing an already-present
 // ReShade host. Download URLs live in the standalone `reshade_manifest.json`,
@@ -42,6 +42,8 @@ const ASSET_SUFFIX = ".zip";
 const ASSET_FORBIDDEN_MARKERS = ["-test", "-dev"];
 const ASSET_X32_SUFFIX = "-x32";
 const ASSET_NAME_CHAR_RE = /^[A-Za-z0-9._()'-]+$/u;
+const ADDON_PREFIX = "Luma-";
+const ADDON_SUFFIX = ".addon";
 const EXTERNAL_REQUIREMENT_KIND = "dgvoodoo2";
 const WINDOWS_FILE_FORBIDDEN_RE = /[<>:"/\\|?*\x00-\x1f]/u;
 
@@ -117,6 +119,7 @@ export function buildManifest({
   // ── Layer 3: validate cross-title invariants ──
 
   assertUniqueMatchRules(titles);
+  assertAssetPayloadIdentity(titles);
 
   return {
     manifest: {
@@ -139,6 +142,7 @@ function assembleTitle({ game, appids, exe, derivedExes }) {
     id: game.id,
     name: game.name,
     asset: game.asset,
+    addon_file: game.addon_file,
     arch: game.arch,
   };
 
@@ -200,6 +204,10 @@ function normalizeCuratedGame(game, index) {
       arch,
       context,
     ),
+    addon_file: normalizeAddonFile(
+      requiredNonEmptyString(game.addon_file, `${context}.addon_file`),
+      context,
+    ),
     arch,
     status: game.status,
     category: normalizeCategory(game.blacklist, context),
@@ -215,6 +223,18 @@ function normalizeCuratedGame(game, index) {
     generic: Boolean(game.generic),
     notes_keys: assertOptionalNonEmptyStringArray(game.notes_keys, `${context}.notes_keys`),
   };
+}
+
+function normalizeAddonFile(addonFile, context) {
+  const file = normalizeGameDirectoryFile(addonFile, `${context}.addon_file`);
+  const lower = file.toLowerCase();
+  if (!file.startsWith(ADDON_PREFIX) || !lower.endsWith(ADDON_SUFFIX)) {
+    throw new Error(`${context}.addon_file "${file}" must be a Luma root .addon filename`);
+  }
+  if (file.slice(ADDON_PREFIX.length, -ADDON_SUFFIX.length).trim().length === 0) {
+    throw new Error(`${context}.addon_file must include a name between Luma- and .addon`);
+  }
+  return file;
 }
 
 function normalizeAsset(asset, arch, context) {
@@ -468,6 +488,19 @@ function ensureUniqueBy(items, keyOf, context) {
 
 function ensureNoInstallTargetConflict(destinations, context) {
   ensureUniqueBy(destinations, (value) => value.toLowerCase(), context);
+}
+
+function assertAssetPayloadIdentity(titles) {
+  const payloadByAsset = new Map();
+  for (const title of titles) {
+    const previous = payloadByAsset.get(title.asset);
+    if (previous !== undefined && previous !== title.addon_file) {
+      throw new Error(
+        `asset "${title.asset}" maps to multiple root add-ons: "${previous}" and "${title.addon_file}"`,
+      );
+    }
+    payloadByAsset.set(title.asset, title.addon_file);
+  }
 }
 
 // ── Layer 3: stats ──

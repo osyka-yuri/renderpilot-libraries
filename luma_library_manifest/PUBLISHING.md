@@ -8,7 +8,7 @@ GitHub Release — there is no per-game upstream repository and no snapshot to
 mirror — so RenderPilot fetches the add-on **live from upstream**
 (`github.com/Filoppi/Luma-Framework/releases/latest/download/<asset>`) at
 install time. This manifest is an **overrides + catalogue** document (schema
-v1): game → release asset file name, match rules, per-game overrides, the
+v2): game → release asset and root add-on file names, match rules, per-game overrides, the
 minimum ReShade host version Luma requires when reusing a detected host,
 optional managed dependency sources, and a shared `defaults` block. ReShade
 download sources live in the standalone `reshade_manifest.json`.
@@ -35,16 +35,16 @@ Changing ReShade download URLs means editing `scripts/lib/reshade-sources.mjs`
 and regenerating the shared documents (`pnpm run generate:reshade && pnpm run
 generate:renodx`) — `generate:luma` is not part of that source update.
 
-## Schema v1 — `defaults`
+## Schema v2 — `defaults`
 
 The per-title boilerplate that is identical for almost every game (`min_app_version`,
 `channel`) lives once in a top-level `defaults` object. The
 generator emits a per-title field **only when it deviates** from the default,
 and the app merges `defaults` onto each title at load time. A verified
-single-player game with no overrides is five keys: `id`, `name`, `asset`,
-`arch`, `match` (`status` defaults to `unknown` when omitted).
+single-player game with no overrides is six keys: `id`, `name`, `asset`,
+`addon_file`, `arch`, `match` (`status` defaults to `unknown` when omitted).
 
-## Schema v1 — categories and pending
+## Schema v2 — categories and pending
 
 A curated game lives in `titles[]` once it has a usable match identifier.
 Non-installable routing is carried by `title.category`:
@@ -68,11 +68,11 @@ pending until the app can match it to an installed game.
 
 ## Inputs
 
-| File                 | What it holds                                                                                                                                                                                                                                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `curated_games.json` | one row per Luma-compatible game: name, release `asset` file name, `arch`, wiki test-map `status` (working/construction/unknown), `generic`, `launch_args`, `external_requirement`, `notes_keys`, `blacklist` reason — all hand-curated directly (there is no auto-scraped wiki file to layer overrides onto) |
-| `match_overlay.json` | **only** the Steam AppID(s)/exe a curated row needs to become installable — nothing else lives here, unlike RenoDX's overlay                                                                                                                                                                                  |
-| `pending_match.json` | generated todo-list: curated rows still lacking an AppID/exe match                                                                                                                                                                                                                                            |
+| File                 | What it holds                                                                                                                                                                                                                                                                                                                          |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `curated_games.json` | one row per Luma-compatible game: name, release `asset` and exact root `addon_file` names, `arch`, status, optional `wiki_aliases`, `generic`, `launch_args`, `external_requirement`, `notes_keys`, and `blacklist` reason. Game inclusion and all install metadata are hand-curated; only statuses can be synchronised from the Wiki. |
+| `match_overlay.json` | **only** the Steam AppID(s)/exe a curated row needs to become installable — nothing else lives here, unlike RenoDX's overlay                                                                                                                                                                                                           |
+| `pending_match.json` | generated todo-list: curated rows still lacking an AppID/exe match                                                                                                                                                                                                                                                                     |
 
 The Steam AppID → executable cache (`scripts/steam-appid-exe.json`) is shared
 with the RenoDX pipeline — see the repo root README. Both generators filter it
@@ -85,6 +85,9 @@ covers every title either tool curates.
 pnpm run enrich:exe         # refresh scripts/steam-appid-exe.json from Steam appinfo (network)
 pnpm run generate:luma      # regenerate luma_manifest.json (repo root) + pending_match.json
 pnpm run check:luma-assets  # HEAD every referenced asset against the live "latest" release (network)
+pnpm run check:luma-payload-layout # validate every asset's root .addon through ZIP metadata ranges
+pnpm run sync:luma-wiki     # update only status fields from the Luma Wiki (network)
+pnpm run sync:luma-wiki:check # report status drift without writing files
 pnpm run check              # format, schema, generated output, tests, asset gates
 # then push to main — CI validates and publishes luma_manifest.json to the R2 root.
 ```
@@ -95,6 +98,13 @@ list to fetch (unlike RenoDX's `check:slugs`), so it HEADs
 `titles[]`, follows the redirect to the concrete `latest-<N>` tag, and asserts
 that redirect target both names the same asset and ultimately resolves (200).
 It soft-passes when GitHub is unreachable so offline runs aren't blocked.
+
+`check:luma-payload-layout` is the complementary **payload-identity gate**.
+It resolves each release asset with a HEAD request, then fetches only the ZIP
+tail and central-directory ranges. The check requires one root `.addon` entry
+whose exact case-sensitive name equals `addon_file`; it never downloads or
+extracts the add-on payload. A complete GitHub outage is a warning, while a
+partial outage, malformed archive, layout change, or identity mismatch fails.
 
 `generate:luma` is **reproducible**: set `SOURCE_DATE_EPOCH` to pin
 `generated_at` (UTC midnight), e.g. `SOURCE_DATE_EPOCH=1782172800 pnpm run
@@ -115,11 +125,13 @@ over guessing an AppID; duplicate match rules are rejected by the generator.
 ## Editing the set
 
 Curated-game fields (on the `curated_games.json` row itself) — all optional
-except `id`/`name`/`asset`/`arch`:
+except `id`/`name`/`asset`/`addon_file`/`arch`. `addon_file` is the exact root
+`.addon` entry in the release ZIP; it must not be derived from the ZIP name:
 
 | Field                  | Effect                                                                                                                                                                              |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `status`               | `working` / `construction` / `unknown` — drives the derived `channel` (working → stable, else beta)                                                                                 |
+| `wiki_aliases`         | authoring-only upstream Wiki title aliases; use only when the Wiki's name is intentionally different from `name`                                                                    |
 | `generic`              | `true` when `asset` is a shared Generic-Mod build (Unreal/Unity) rather than a dedicated build                                                                                      |
 | `launch_args`          | required launch arguments (e.g. `-dx11`, `-nod3d9ex`), shown as a copyable callout                                                                                                  |
 | `external_requirement` | managed dependency metadata; currently `dgvoodoo2` with `version`, `accepted_detected_apis`, `reshade_proxy_dll`, `source`, `install_map`, `config_file`, and config merge `config` |
@@ -143,3 +155,13 @@ Overlay keys (under the game id, in `match_overlay.json`):
   still install useful files and the requirement declares every managed
   download, installed file, and config key RenderPilot must own. Otherwise leave
   it out of `curated_games.json` or blacklist it with a clear reason.
+
+## Wiki status synchronisation
+
+`sync:luma-wiki` reads the raw `Luma-Framework` Wiki page and changes only a
+curated row's `status`. A Wiki row is accepted only when it identifies one row
+unambiguously by a unique release asset, normalised title name, or explicit
+`wiki_aliases` entry. Shared generic assets alone are never enough to match a
+game. New, unmatched, and ambiguous Wiki rows are reported but do not add,
+remove, or modify curated games; use `sync:luma-wiki:check` in review or CI to
+detect a status change without writing files.

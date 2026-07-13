@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://renderpilot.app/schema/luma_manifest.schema.json",
   "title": "Luma Framework manifest",
-  "description": "Overrides + catalogue manifest for Luma Framework installs. Carries NO payload hashes/sizes: the add-on is fetched live from a single upstream rolling GitHub Release (Filoppi/Luma-Framework), so this document maps games to a release asset file name + match rules + per-game overrides, plus Luma's minimum ReShade host version and shared title defaults. ReShade download sources live in the standalone reshade_manifest.json. Deliberately narrower than the RenoDX manifest: there is no top-level `generics` fallback list (every Generic-Mod-compatible game is an explicit title with `generic: true`), no `external`/`native_hdr` category (every asset lives on the same GitHub Release), and no `slug`/`download_url`/`compatibility` fields. The Rust validator in renderpilot-orchestration (luma::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
+  "description": "Overrides + catalogue manifest for Luma Framework installs. Carries NO payload hashes/sizes: the add-on is fetched live from a single upstream rolling GitHub Release (Filoppi/Luma-Framework), so this document maps games to an asset file name and its exact root add-on file name, match rules, per-game overrides, plus Luma's minimum ReShade host version and shared title defaults. ReShade download sources live in the standalone reshade_manifest.json. Deliberately narrower than the RenoDX manifest: there is no top-level `generics` fallback list (every Generic-Mod-compatible game is an explicit title with `generic: true`), no `external`/`native_hdr` category (every asset lives on the same GitHub Release), and no `slug`/`download_url`/`compatibility` fields. The Rust validator in renderpilot-orchestration (luma::parse_manifest) is the canonical gatekeeper; this schema mirrors it for editor tooling and CI.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -13,7 +13,7 @@
     "titles"
   ],
   "properties": {
-    "schema_version": { "type": "integer", "const": 1 },
+    "schema_version": { "type": "integer", "const": 2 },
     "generated_at": {
       "type": "string",
       "format": "date-time",
@@ -49,6 +49,12 @@
       "type": "string",
       "pattern": "^Luma-[A-Za-z0-9._()'-]+(-x32)?\\.zip$",
       "description": "GitHub Release asset file name (e.g. Luma-Dishonored_2.zip, Luma-Unreal_Engine.zip). A `-x32` suffix must agree with `arch: X86`. `-Test`/`-Dev` build markers are curated out (Publishing assets only)."
+    },
+    "addonFile": {
+      "type": "string",
+      "minLength": 12,
+      "pattern": "^Luma-[^<>:\"/\\\\|?*\\u0000-\\u001F]+\\.addon$",
+      "description": "Exact root add-on filename inside the release ZIP. It is independent of the ZIP asset name and is the only disk-recovery identity."
     },
     "category": {
       "type": "object",
@@ -255,12 +261,13 @@
     "title": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "asset", "arch", "match"],
+      "required": ["id", "name", "asset", "addon_file", "arch", "match"],
       "description": "A catalogue entry — a game Luma is known to work with, matched by its rules and routed by `category` (default installable). min_app_version / channel are omitted when they equal the top-level defaults (the app merges). `status` defaults to `unknown` when omitted.",
       "properties": {
         "id": { "type": "string", "minLength": 1 },
         "name": { "type": "string", "minLength": 1 },
         "asset": { "$ref": "#/$defs/asset" },
+        "addon_file": { "$ref": "#/$defs/addonFile" },
         "arch": { "$ref": "#/$defs/architecture" },
         "status": {
           "type": "string",

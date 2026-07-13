@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Generate the Luma Framework overrides manifest (schema v1) from authoritative
+// Generate the Luma Framework overrides manifest (schema v2) from authoritative
 // inputs.
 //
 // The app fetches the Luma add-on live from a single upstream rolling GitHub
