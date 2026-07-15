@@ -2,6 +2,11 @@
 // Build-time guard: assert every installable RenoDX title's add-on exists
 // in the clshortfuse snapshot release.
 //
+// Reads the legacy v3 projection (`renodx_manifest.json`, vocabulary
+// `titles` / `generics`). That document is the historical install surface
+// whose slug/URL rules this guard was written against; the canonical v1
+// catalogue is projected into it by `generate:renodx`.
+//
 // Snapshot-hosted entries derive `renodx-<slug>.addon64|32` and fetch it live
 // from the snapshot release, so a slug that is not published there would create
 // a dead Install button. Entries with explicit URL overrides can still carry a
@@ -23,8 +28,7 @@
 //
 //   node scripts/check-renodx-slugs.mjs
 
-import path from "node:path";
-import { repoRoot } from "./catalog.mjs";
+import { addonCatalogs } from "./catalog.mjs";
 import { readJsonFileAsync } from "./lib/json.mjs";
 import { printIssues } from "./lib/checks.mjs";
 import {
@@ -75,7 +79,7 @@ function printExplicitCheckErrorsAndFail({ structural, mismatches }) {
 
 async function main() {
   const manifest = await readJsonFileAsync(
-    path.join(repoRoot, "renodx_manifest.json"),
+    addonCatalogs.renodx.outputs.legacy.file,
     "renodx_manifest.json",
   );
   assertManifestShape(manifest);

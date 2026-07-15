@@ -20,5 +20,4 @@ Thumbs.db
 
 # Local generator outputs
 scripts/.cache/
-renodx_library_manifest/unmatched.json
-luma_library_manifest/unmatched.json
+catalogs/addons/*/unmatched.json

@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://renderpilot.app/schema/addons/v1/renodx.json",
+  "title": "RenoDX v1 manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "games", "engine_profiles"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "games": { "type": "array", "items": { "$ref": "#/$defs/game" } },
+    "engine_profiles": { "type": "array", "items": { "$ref": "#/$defs/engineProfile" } }
+  },
+  "$defs": {
+    "status": { "enum": ["working", "construction", "unknown"] },
+    "architecture": { "enum": ["X86", "X64"] },
+    "graphicsApi": {
+      "type": "string",
+      "enum": ["D3D9", "D3D10", "D3D11", "D3D12", "OpenGl", "Vulkan", "Unknown"]
+    },
+    "message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "fallback_text"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "fallback_text": { "type": "string", "minLength": 1 }
+      }
+    },
+    "match": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value", "tier"],
+      "properties": {
+        "kind": { "enum": ["steam_appid", "epic_id", "gog_id", "exe_sha256", "exe_name"] },
+        "value": { "type": "string", "minLength": 1 },
+        "tier": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "addon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug"],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[A-Za-z0-9._-]+$" },
+        "source": { "type": "string", "format": "uri", "pattern": "^https://" }
+      }
+    },
+    "availability": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "url", "message"],
+          "properties": {
+            "kind": { "const": "external" },
+            "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+            "message": { "$ref": "#/$defs/message" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind"],
+          "properties": { "kind": { "const": "native_hdr" } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "message"],
+          "properties": {
+            "kind": { "const": "blocked" },
+            "message": { "$ref": "#/$defs/message" }
+          }
+        }
+      ]
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "description": "Compatibility constraints projected from overlay required_api / conflicts / compatibility_source. Omitted when empty. required_arch is never published (always equals architecture).",
+      "properties": {
+        "required_api": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/graphicsApi" }
+        },
+        "conflicts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "source": { "type": "string", "minLength": 1 }
+      }
+    },
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "architecture", "status", "match", "addon"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "architecture": { "$ref": "#/$defs/architecture" },
+        "status": { "$ref": "#/$defs/status" },
+        "match": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/match" } },
+        "addon": { "$ref": "#/$defs/addon" },
+        "availability": { "$ref": "#/$defs/availability" },
+        "constraints": { "$ref": "#/$defs/constraints" },
+        "proxy_dll": { "type": "string", "pattern": "^[^/\\\\]+$" }
+      }
+    },
+    "engineProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engine", "status", "addon", "message"],
+      "properties": {
+        "engine": { "enum": ["unreal", "unreal_extended", "unity"] },
+        "status": { "$ref": "#/$defs/status" },
+        "addon": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "slug": { "type": "string", "pattern": "^[A-Za-z0-9._-]+$" },
+            "sources": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["x64", "x86"],
+              "properties": {
+                "x64": { "type": "string", "format": "uri", "pattern": "^https://" },
+                "x86": { "type": "string", "format": "uri", "pattern": "^https://" }
+              }
+            }
+          }
+        },
+        "message": { "$ref": "#/$defs/message" }
+      }
+    }
+  }
+}

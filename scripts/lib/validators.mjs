@@ -5,10 +5,13 @@
 // slots.  Extracting them here keeps the tool-specific builders focused on
 // their own wire-shape assembly and stops the two copies from drifting.
 //
-// Tool-specific concerns (RenoDX slug/split/download_url/compatibility,
-// Luma asset/generic/external_requirement) stay in their own build-manifest.mjs.
+// Tool-specific concerns stay in each catalogue: RenoDX slug/split/overlay
+// fields in `catalogs/addons/renodx/lib/`, Luma assets/guidance in
+// `build-manifest.mjs`, managed dependencies in `managed-dependency.mjs`.
 
 export const SEMVER_RE = /^\d+\.\d+\.\d+$/u;
+
+export const LOWERCASE_SHA256_RE = /^[0-9a-f]{64}$/u;
 
 export const DIRECTX_GRAPHICS_APIS = Object.freeze(
   new Set(["D3D9", "D3D10", "D3D11", "D3D12"]),
@@ -35,13 +38,6 @@ export function assertSingleLineString(value, context) {
     throw new Error(`${context} must be a single-line string`);
   }
   return trimmed;
-}
-
-export function assertOptionalSingleLineString(value, context) {
-  if (value === undefined || value === null) {
-    return null;
-  }
-  return assertSingleLineString(value, context);
 }
 
 export function assertNonEmptyStringArray(value, context) {

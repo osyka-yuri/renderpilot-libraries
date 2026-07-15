@@ -18,6 +18,8 @@ import { UsageError } from "../lib/common.mjs";
 
 // ── helpers ──
 
+const document = (file, r2Key = file) => ({ file, r2Key });
+
 const mockReadFile = (files) => async (absPath) => {
   for (const [key, data] of Object.entries(files)) {
     if (absPath.endsWith(key)) return Buffer.from(data, "utf-8");
@@ -100,7 +102,7 @@ test("sha256Hex of empty buffer is not all zeros", () => {
 test("loadLocalJson reads a file and computes key/size/sha256", async () => {
   const readFile = mockReadFile({ "manifest.json": '{"key":"value"}' });
 
-  const result = await loadLocalJson("manifest.json", "/repo", readFile);
+  const result = await loadLocalJson(document("manifest.json"), "/repo", readFile);
 
   assert.equal(result.key, "manifest.json");
   assert.equal(result.relPath, "manifest.json");
@@ -109,25 +111,25 @@ test("loadLocalJson reads a file and computes key/size/sha256", async () => {
   assert.equal(result.sha256.length, 64);
 });
 
-test("loadLocalJson normalises Windows paths to POSIX keys", async () => {
+test("loadLocalJson uses the registry's explicit R2 key", async () => {
   const readFile = mockReadFile({
     "renodx_manifest.json": '{"x":1}',
   });
 
   const result = await loadLocalJson(
-    "renodx_library_manifest\\..\\renodx_manifest.json",
+    document("renodx_manifest.json", "legacy/renodx.json"),
     "/repo",
     readFile,
   );
 
-  assert.equal(result.key, "renodx_manifest.json");
+  assert.equal(result.key, "legacy/renodx.json");
 });
 
 test("loadLocalJson rethrows missing-file errors with context", async () => {
   const readFile = mockReadFile({});
 
   await assert.rejects(
-    () => loadLocalJson("nope.json", "/repo", readFile),
+    () => loadLocalJson(document("nope.json"), "/repo", readFile),
     /failed to read nope\.json/,
   );
 });
@@ -150,7 +152,7 @@ test("same bytes => same SHA-256 between local and remote", async () => {
   const readFile = mockReadFile({ "file.json": body });
   const fetchFn = mockFetch({ "file.json": body });
 
-  const local = await loadLocalJson("file.json", "/repo", readFile);
+  const local = await loadLocalJson(document("file.json"), "/repo", readFile);
   const remote = await fetchRemoteJson("file.json", "pub.example.com", fetchFn);
 
   assert.equal(local.sha256, remote.sha256);
@@ -160,7 +162,7 @@ test("same size but different bytes => different SHA-256", async () => {
   const readFile = mockReadFile({ "file.json": "aaaaaaaaaa" });
   const fetchFn = mockFetch({ "file.json": "bbbbbbbbbb" });
 
-  const local = await loadLocalJson("file.json", "/repo", readFile);
+  const local = await loadLocalJson(document("file.json"), "/repo", readFile);
   const remote = await fetchRemoteJson("file.json", "pub.example.com", fetchFn);
 
   assert.equal(local.size, remote.size);
@@ -230,7 +232,7 @@ test("checkOne returns OK when local and remote match", async () => {
   const readFile = mockReadFile({ "match.json": body });
   const fetchFn = mockFetch({ "match.json": body });
 
-  const local = await loadLocalJson("match.json", "/repo", readFile);
+  const local = await loadLocalJson(document("match.json"), "/repo", readFile);
   const result = await checkOne(local, "pub.example.com", fetchFn);
 
   assert.equal(result.key, "match.json");
@@ -243,7 +245,7 @@ test("checkOne returns MISMATCH when bytes differ", async () => {
   const readFile = mockReadFile({ "diff.json": "local-data" });
   const fetchFn = mockFetch({ "diff.json": "remote-data" });
 
-  const local = await loadLocalJson("diff.json", "/repo", readFile);
+  const local = await loadLocalJson(document("diff.json"), "/repo", readFile);
   const result = await checkOne(local, "pub.example.com", fetchFn);
 
   assert.equal(result.status, "mismatch");
@@ -256,7 +258,7 @@ test("checkOne returns unavailable when remote returns 404", async () => {
     "notfound.json": { status: 404, statusText: "Not Found" },
   });
 
-  const local = await loadLocalJson("notfound.json", "/repo", readFile);
+  const local = await loadLocalJson(document("notfound.json"), "/repo", readFile);
   const result = await checkOne(local, "pub.example.com", fetchFn);
 
   assert.equal(result.status, "unavailable");
@@ -270,7 +272,7 @@ test("checkOne returns unavailable on network error", async () => {
     throw new Error("DNS lookup failed");
   };
 
-  const local = await loadLocalJson("test.json", "/repo", readFile);
+  const local = await loadLocalJson(document("test.json"), "/repo", readFile);
   const result = await checkOne(local, "pub.example.com", fetchFn);
 
   assert.equal(result.status, "unavailable");
@@ -286,13 +288,13 @@ test("formatResult shows OK for passing results", () => {
 
 test("formatResult shows MISMATCH with reason for failing results", () => {
   const result = {
-    key: "luma_manifest.json",
+    key: "addons/v1/luma.json",
     status: "mismatch",
     reason: "SHA-256 mismatch (local aaa, remote bbb)",
   };
   const formatted = formatResult(result);
   assert.match(formatted, /MISMATCH/);
-  assert.match(formatted, /luma_manifest\.json/);
+  assert.match(formatted, /addons\/v1\/luma\.json/);
   assert.match(formatted, /SHA-256 mismatch/);
 });
 
@@ -409,7 +411,7 @@ test("formatFailureAdvice includes both actions for mixed failures", () => {
 test("loadLocalJson does not call fetch", async () => {
   const readFile = mockReadFile({ "file.json": "{}" });
   // If loadLocalJson called fetch, this would throw because no fetchFn is provided
-  const result = await loadLocalJson("file.json", "/repo", readFile);
+  const result = await loadLocalJson(document("file.json"), "/repo", readFile);
   assert.equal(result.key, "file.json");
   assert.equal(result.sha256.length, 64);
 });
@@ -429,7 +431,7 @@ test("fetchRemoteJson is only called when --dry-run is false", async () => {
   };
 
   const readFile = mockReadFile({ "file.json": "{}" });
-  const local = await loadLocalJson("file.json", "/repo", readFile);
+  const local = await loadLocalJson(document("file.json"), "/repo", readFile);
 
   // At this point (dry-run path in CLI would stop here), fetch has NOT been called.
   assert.equal(fetchCalled, false);

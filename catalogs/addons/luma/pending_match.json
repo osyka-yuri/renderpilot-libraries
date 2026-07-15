@@ -1,0 +1,174 @@
+[
+  {
+    "id": "kid-a-mnesia-exhibition",
+    "name": "Kid A Mnesia Exhibition",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "heaven-burns-red",
+    "name": "Heaven Burns Red",
+    "asset": "Luma-Heaven_Burns_Red.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "avencolony",
+    "name": "Aven Colony",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "biomutant",
+    "name": "Biomutant",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "blairwitch",
+    "name": "Blair Witch",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "borderlands-3",
+    "name": "Borderlands 3",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "bramblethemountainking",
+    "name": "Bramble: The Mountain King",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "breathedge",
+    "name": "Breathedge",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "bussimulator-21",
+    "name": "Bus Simulator 21",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "daemonxmachina",
+    "name": "Daemon x Machina",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "daylight",
+    "name": "Daylight",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "daysgone",
+    "name": "Days Gone",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "deceiveinc",
+    "name": "Deceive Inc.",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "destroyallhumansclonecarnage",
+    "name": "Destroy All Humans! – Clone Carnage",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "dragonquestxiechoesofanelusiveage",
+    "name": "DRAGON QUEST XI: Echoes of an Elusive Age",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  { "id": "echo", "name": "ECHO", "asset": "Luma-Unreal_Engine.zip", "arch": "X64" },
+  {
+    "id": "gigabash",
+    "name": "GigaBash",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "hellletloose",
+    "name": "Hell Let Loose",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  { "id": "kholat", "name": "Kholat", "asset": "Luma-Unreal_Engine.zip", "arch": "X64" },
+  {
+    "id": "littlenightmaresenhancededition",
+    "name": "Little Nightmares Enhanced Edition",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "littlenightmaresiii",
+    "name": "Little Nightmares III",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "masterdetectivearchivesraincodeplus",
+    "name": "Master Detective Archives: RAIN CODE Plus",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "narutotoborutoshinobistriker",
+    "name": "NARUTO TO BORUTO: SHINOBI STRIKER",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "persona-3reload",
+    "name": "Persona 3 Reload",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "poppyplaytime",
+    "name": "Poppy Playtime",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "predecessor",
+    "name": "Predecessor",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  { "id": "rime", "name": "Rime", "asset": "Luma-Unreal_Engine.zip", "arch": "X64" },
+  {
+    "id": "roboquest",
+    "name": "RoboQuest",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "sherwoodextreme",
+    "name": "Sherwood Extreme",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  { "id": "sifu", "name": "Sifu", "asset": "Luma-Unreal_Engine.zip", "arch": "X64" },
+  {
+    "id": "theouterworldsspacerschoiceedition",
+    "name": "The Outer Worlds: Spacer's Choice Edition",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  },
+  {
+    "id": "thevanishingofethancarterredux",
+    "name": "The Vanishing of Ethan Carter Redux",
+    "asset": "Luma-Unreal_Engine.zip",
+    "arch": "X64"
+  }
+]

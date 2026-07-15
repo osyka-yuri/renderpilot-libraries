@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://renderpilot.app/schema/addons/v1/reshade.json",
+  "title": "ReShade v1 manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "channels"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "channels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nightly"],
+      "properties": {
+        "stable": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url"],
+          "properties": {
+            "url": { "type": "string", "format": "uri", "pattern": "^https://" }
+          }
+        },
+        "nightly": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["url64", "url32"],
+          "properties": {
+            "url64": { "type": "string", "format": "uri", "pattern": "^https://" },
+            "url32": { "type": "string", "format": "uri", "pattern": "^https://" }
+          }
+        }
+      }
+    }
+  }
+}

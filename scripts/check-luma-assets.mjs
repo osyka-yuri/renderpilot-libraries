@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Build-time guard: assert every asset referenced by luma_manifest.json still
+// Build-time guard: assert every asset referenced by the Luma v1 document still
 // exists on the upstream Luma Framework rolling release, and that the
 // "latest" alias still resolves to a tagged build (latest-<run_number>).
 //
@@ -22,9 +22,7 @@
 //
 //   node scripts/check-luma-assets.mjs
 
-import path from "node:path";
-
-import { repoRoot } from "./catalog.mjs";
+import { addonCatalogs } from "./catalog.mjs";
 import { forEachConcurrent } from "./lib/common.mjs";
 import { readJsonFileAsync } from "./lib/json.mjs";
 import { printIssues } from "./lib/checks.mjs";
@@ -124,8 +122,8 @@ async function checkAsset(asset) {
 
 async function main() {
   const manifest = await readJsonFileAsync(
-    path.join(repoRoot, "luma_manifest.json"),
-    "luma_manifest.json",
+    addonCatalogs.luma.outputs.manifest.file,
+    "addons/v1/luma.json",
   );
   assertManifestShape(manifest);
 

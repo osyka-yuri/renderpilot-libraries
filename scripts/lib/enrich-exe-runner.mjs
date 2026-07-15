@@ -1,16 +1,13 @@
 // Shared runner for the Steam AppID → executable-basename enrichment step.
-// Both manifest pipelines (RenoDX and Luma) consume the same shared cache
-// (`scripts/steam-appid-exe.json`), so the thin `scripts/enrich-exe.mjs`
-// entry point just supplies the cache path + per-tool AppID collectors; this
-// module owns all the mechanics: CLI parsing, Steam appinfo fetch with
-// retry, cache prune, atomic write.
+// The thin `scripts/enrich-exe.mjs` entry point supplies the cache path and
+// AppID collector; this module owns CLI parsing, Steam appinfo fetch/retry,
+// cache pruning, and atomic persistence.
 //
 //   runEnrichExeMain({
 //     cacheFile,       // path to the shared appid→exe cache
-//     collectAppids,   // () => iterable<string>  — union of every tool's overlay
+//     collectAppids,   // () => iterable<string>
 //   })
 
-import { rename, rm } from "node:fs/promises";
 import path from "node:path";
 
 import {
@@ -49,7 +46,7 @@ class HttpError extends Error {
 const HELP_TEXT = `Usage: node enrich-exe.mjs [--force]
 
 Fetch public Windows launch executable basenames for every Steam AppID claimed
-by any tool's match_overlay.json and update the shared appid→exe cache.
+by the RenoDX match overlay and update its appid→exe cache.
 
   --force   Refetch AppIDs that are already present in the cache.
   -h, --help
@@ -222,18 +219,6 @@ function pruneCache(cache, allowedAppids) {
   return removed;
 }
 
-async function writeFormattedJsonFileAtomically(file, value) {
-  const tempFile = `${file}.${process.pid}.${Date.now()}.tmp`;
-
-  try {
-    await writeFormattedJsonFile(tempFile, value);
-    await rename(tempFile, file);
-  } catch (error) {
-    await rm(tempFile, { force: true }).catch(() => {});
-    throw error;
-  }
-}
-
 async function enrichCache({ cacheFile, collectAppids, force }) {
   const appids = [...collectAppids()].sort((a, b) => Number(a) - Number(b));
   const appidSet = new Set(appids);
@@ -277,7 +262,7 @@ async function enrichCache({ cacheFile, collectAppids, force }) {
   });
 
   const sorted = sortNumericObject(cache);
-  await writeFormattedJsonFileAtomically(cacheFile, sorted);
+  await writeFormattedJsonFile(cacheFile, sorted);
 
   console.log(
     `cache: ${Object.keys(sorted).length} AppIDs ` +
@@ -290,7 +275,7 @@ async function enrichCache({ cacheFile, collectAppids, force }) {
 /**
  * @param {object} opts
  * @param {string}   opts.cacheFile     — path to the shared appid→exe cache
- * @param {function} opts.collectAppids — () => iterable<string> (union of every tool's overlay)
+ * @param {function} opts.collectAppids — () => iterable<string> from the caller's authoring source
  * @param {string[]} [opts.argv]        — defaults to `process.argv.slice(2)`
  * @param {boolean}  [opts.force]       — overrides `--force` from argv when set explicitly
  * @returns {Promise<number>} exit code (0 ok, 1 failure)

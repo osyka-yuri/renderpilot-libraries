@@ -1,10 +1,6 @@
 // Shared transport, CLI, and persistence for wiki synchronizers.
 
-import { rename, rm, writeFile } from "node:fs/promises";
-import path from "node:path";
-
 import { UsageError, errorMessage } from "./common.mjs";
-import { stringifyFormattedJson } from "./json.mjs";
 
 export const WIKI_USER_AGENT = "renderpilot-libraries";
 export const DEFAULT_WIKI_TIMEOUT_MS = 30_000;
@@ -69,30 +65,6 @@ export async function fetchJsonWithTimeout(url, options = {}) {
     return await response.json();
   } catch (error) {
     throw new Error(`Invalid JSON from ${url}: ${errorMessage(error)}`, { cause: error });
-  }
-}
-
-export async function writeFormattedJsonAtomic(file, value) {
-  const text = await stringifyFormattedJson(value, file);
-  await writeTextAtomic(file, text);
-}
-
-export async function writeJsonAtomic(file, value) {
-  await writeTextAtomic(file, `${JSON.stringify(value, null, 2)}\n`);
-}
-
-async function writeTextAtomic(file, text) {
-  const temp = path.join(
-    path.dirname(file),
-    `.${path.basename(file)}.${process.pid}.${Date.now()}.tmp`,
-  );
-
-  try {
-    await writeFile(temp, text, "utf8");
-    await rename(temp, file);
-  } catch (error) {
-    await rm(temp, { force: true }).catch(() => {});
-    throw error;
   }
 }
 

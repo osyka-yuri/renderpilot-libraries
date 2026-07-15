@@ -18,7 +18,7 @@ import path from "node:path";
 import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
 import { errorMessage, UsageError } from "./lib/common.mjs";
-import { r2, repoRoot, servedJson } from "./catalog.mjs";
+import { publishedJsonDocuments, r2, repoRoot } from "./catalog.mjs";
 
 const CDN_DIR_NAME = "cdn";
 const BINARY_SUFFIX = ".dll.zst";
@@ -97,12 +97,12 @@ function parseArgs(argv) {
   return options;
 }
 
-// Object key = file basename: everything is served from the bucket root, which
-// is what the download URLs baked into manifest.json expect.
+// Object keys retain the catalog-relative path.  Legacy compatibility files stay
+// at the bucket root; current documents are deliberately versioned under addons/v1.
 async function resolveObjects({ jsonOnly }) {
-  const objects = servedJson.map((rel) => ({
-    key: objectKeyFromRelativePath(rel),
-    abs: path.resolve(repoRoot, rel),
+  const objects = publishedJsonDocuments.map(({ file, r2Key }) => ({
+    key: r2Key,
+    abs: path.resolve(repoRoot, file),
   }));
 
   if (jsonOnly) {
@@ -142,13 +142,6 @@ async function readCdnEntries(cdnDir) {
       cause: err,
     });
   }
-}
-
-function objectKeyFromRelativePath(relPath) {
-  // catalog paths are repo-relative and usually POSIX-style. Normalize here so
-  // key derivation remains stable across platforms.
-  const normalized = relPath.replaceAll(path.win32.sep, path.posix.sep);
-  return path.posix.basename(normalized);
 }
 
 function assertUniqueKeys(objects) {

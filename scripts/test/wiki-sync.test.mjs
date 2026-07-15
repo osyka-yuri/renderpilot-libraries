@@ -5,13 +5,8 @@ import path from "node:path";
 import test from "node:test";
 
 import { UsageError } from "../lib/common.mjs";
-import {
-  fetchWikiMarkdown,
-  jsonChanged,
-  parseWikiSyncArgs,
-  writeFormattedJsonAtomic,
-  writeJsonAtomic,
-} from "../lib/wiki-sync.mjs";
+import { writeFormattedJsonFile, writeJsonFileAtomic } from "../lib/json.mjs";
+import { fetchWikiMarkdown, jsonChanged, parseWikiSyncArgs } from "../lib/wiki-sync.mjs";
 
 test("parseWikiSyncArgs accepts check aliases and rejects unknown arguments", () => {
   assert.deepEqual(parseWikiSyncArgs([]), { check: false, help: false });
@@ -41,8 +36,8 @@ test("atomic JSON writers replace the target with complete JSON", async () => {
   const formattedPath = path.join(directory, "formatted.json");
 
   try {
-    await writeJsonAtomic(rawPath, { value: 1 });
-    await writeFormattedJsonAtomic(formattedPath, { value: [1, 2] });
+    await writeJsonFileAtomic(rawPath, { value: 1 });
+    await writeFormattedJsonFile(formattedPath, { value: [1, 2] });
     assert.deepEqual(JSON.parse(await readFile(rawPath, "utf8")), { value: 1 });
     assert.deepEqual(JSON.parse(await readFile(formattedPath, "utf8")), { value: [1, 2] });
   } finally {

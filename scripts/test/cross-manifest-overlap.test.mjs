@@ -14,7 +14,7 @@ function steamAppids(title) {
 
 function appidIndex(manifest) {
   const index = new Map();
-  for (const title of manifest.titles) {
+  for (const title of manifest.games) {
     for (const appid of steamAppids(title)) {
       if (!index.has(appid)) {
         index.set(appid, []);
@@ -27,7 +27,7 @@ function appidIndex(manifest) {
 
 async function loadManifests() {
   const [renodx, luma] = await Promise.all(
-    ["renodx_manifest.json", "luma_manifest.json"].map(async (file) =>
+    ["addons/v1/renodx.json", "addons/v1/luma.json"].map(async (file) =>
       JSON.parse(await fs.readFile(path.join(REPO_ROOT, file), "utf-8")),
     ),
   );
@@ -59,8 +59,8 @@ function sharedTitlePairs(renodx, luma) {
 test("sanity - shared Steam-AppID overlap between renodx and luma manifests", async () => {
   const { renodx, luma } = await loadManifests();
 
-  assert.ok(renodx.titles.length > 0, "renodx_manifest.json has no titles");
-  assert.ok(luma.titles.length > 0, "luma_manifest.json has no titles");
+  assert.ok(renodx.games.length > 0, "RenoDX v1 has no games");
+  assert.ok(luma.games.length > 0, "Luma v1 has no games");
 
   const pairs = sharedTitlePairs(renodx, luma);
   assert.ok(

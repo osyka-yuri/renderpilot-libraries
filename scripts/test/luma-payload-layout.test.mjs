@@ -134,9 +134,19 @@ test("Content-Range validation requires an exact bounded partial response", () =
 test("collectAssetPayloadIdentities enforces one add-on name per asset", () => {
   assert.deepEqual(
     collectAssetPayloadIdentities({
-      titles: [
-        { asset: "Luma-Unreal_Engine.zip", addon_file: "Luma-Unreal Engine.addon" },
-        { asset: "Luma-Unreal_Engine.zip", addon_file: "Luma-Unreal Engine.addon" },
+      games: [
+        {
+          package: {
+            release_asset: "Luma-Unreal_Engine.zip",
+            addon_file: "Luma-Unreal Engine.addon",
+          },
+        },
+        {
+          package: {
+            release_asset: "Luma-Unreal_Engine.zip",
+            addon_file: "Luma-Unreal Engine.addon",
+          },
+        },
       ],
     }),
     [{ asset: "Luma-Unreal_Engine.zip", addonFile: "Luma-Unreal Engine.addon" }],
@@ -144,9 +154,9 @@ test("collectAssetPayloadIdentities enforces one add-on name per asset", () => {
   assert.throws(
     () =>
       collectAssetPayloadIdentities({
-        titles: [
-          { asset: "Luma-Shared.zip", addon_file: "Luma-One.addon" },
-          { asset: "Luma-Shared.zip", addon_file: "Luma-Two.addon" },
+        games: [
+          { package: { release_asset: "Luma-Shared.zip", addon_file: "Luma-One.addon" } },
+          { package: { release_asset: "Luma-Shared.zip", addon_file: "Luma-Two.addon" } },
         ],
       }),
     /maps to multiple root add-ons/,

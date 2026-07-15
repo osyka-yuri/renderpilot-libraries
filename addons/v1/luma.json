@@ -1,0 +1,3683 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-15T00:00:00Z",
+  "minimum_reshade_version": "6.7.0",
+  "games": [
+    {
+      "id": "alfred-hitchcock-vertigo",
+      "name": "Alfred Hitchcock - Vertigo",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1449320", "tier": 100 },
+        { "kind": "exe_name", "value": "Vertigo.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "burnout-paradise-remastered",
+      "name": "Burnout Paradise Remastered",
+      "architecture": "X86",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1238080", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Burnout_Paradise_Remastered-x32.zip",
+        "addon_file": "Luma-Burnout Paradise Remastered.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "cod-black-ops-3",
+      "name": "Call of Duty: Black Ops III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "311210", "tier": 100 },
+        { "kind": "exe_name", "value": "blackops3.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Call_of_Duty_Black_Ops_3.zip",
+        "addon_file": "Luma-Call of Duty Black Ops 3.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.cod-black-ops-3.warning",
+          "kind": "warning",
+          "fallback_text": "Avoid official public matchmaking while Luma is installed. This may result in a ban."
+        },
+        {
+          "id": "luma.cod-black-ops-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "cocoon",
+      "name": "Cocoon",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1497440", "tier": 100 },
+        { "kind": "exe_name", "value": "universe.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "deus-ex-human-revolution",
+      "name": "Deus Ex: Human Revolution",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "238010", "tier": 100 },
+        { "kind": "exe_name", "value": "DXHRDC.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Deus_Ex_Human_Revolution_Director.s_Cut-x32.zip",
+        "addon_file": "Luma-Deus Ex Human Revolution Director's Cut.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.deus-ex-human-revolution.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "Not compatible with Boris ENB (DX9). Works on DE and original Edition. The Gold Filter Restoration mod is redundant with this"
+        }
+      ]
+    },
+    {
+      "id": "dishonored-2",
+      "name": "Dishonored 2",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "403640", "tier": 100 },
+        { "kind": "exe_name", "value": "Dishonored2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Dishonored_2.zip",
+        "addon_file": "Luma-Dishonored 2.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.dishonored-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "far-changing-tides",
+      "name": "FAR: Changing Tides",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1570010", "tier": 100 },
+        { "kind": "exe_name", "value": "FarChangingTides.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "far-lone-sails",
+      "name": "FAR: Lone Sails",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "609320", "tier": 100 },
+        { "kind": "exe_name", "value": "FarLoneSails.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "final-fantasy-7-remake",
+      "name": "Final Fantasy VII Remake",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1462040", "tier": 100 },
+        { "kind": "exe_name", "value": "ff7remake.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Final_Fantasy_VII_Remake.zip",
+        "addon_file": "Luma-Final Fantasy VII Remake.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.final-fantasy-7-remake.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "granblue-fantasy-relink",
+      "name": "Granblue Fantasy: Relink",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "881020", "tier": 100 },
+        { "kind": "exe_name", "value": "granblue_fantasy_relink.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Granblue_Fantasy_Relink.zip",
+        "addon_file": "Luma-Granblue Fantasy Relink.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.granblue-fantasy-relink.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "greedfall",
+      "name": "GreedFall",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "606880", "tier": 100 },
+        { "kind": "exe_name", "value": "GreedFall.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Greedfall.zip",
+        "addon_file": "Luma-GreedFall.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.greedfall.warning",
+          "kind": "warning",
+          "fallback_text": "DLSS only (no HDR atm)"
+        },
+        {
+          "id": "luma.greedfall.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "hatsune-miku-project-diva-mega-mix-plus",
+      "name": "Hatsune Miku: Project DIVA Mega Mix+",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1761390", "tier": 100 },
+        { "kind": "exe_name", "value": "DivaMegaMix.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Project_Diva_Mega_Mix.zip",
+        "addon_file": "Luma-Project Diva Mega Mix.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.hatsune-miku-project-diva-mega-mix-plus.warning",
+          "kind": "warning",
+          "fallback_text": "If bugged, don't use Exclusive Fullscreen. Press (ALT + ENTER) to exit it."
+        }
+      ]
+    },
+    {
+      "id": "heavy-rain",
+      "name": "Heavy Rain",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "960910", "tier": 100 },
+        { "kind": "exe_name", "value": "HeavyRain.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Heavy_Rain.zip",
+        "addon_file": "Luma-Heavy Rain.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.heavy-rain.warning",
+          "kind": "warning",
+          "fallback_text": "Ultrawide might only work on Steam"
+        }
+      ]
+    },
+    {
+      "id": "hollow-knight-silksong",
+      "name": "Hollow Knight: Silksong",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1030300", "tier": 100 },
+        { "kind": "exe_name", "value": "Hollow Knight Silksong.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "inside",
+      "name": "INSIDE",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "304430", "tier": 100 },
+        { "kind": "exe_name", "value": "INSIDE.exe", "tier": 70 }
+      ],
+      "package": { "release_asset": "Luma-INSIDE.zip", "addon_file": "Luma-INSIDE.addon" },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.inside.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "Not compatible with Xbox Store version"
+        }
+      ]
+    },
+    {
+      "id": "just-cause-3",
+      "name": "Just Cause 3",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "225540", "tier": 100 },
+        { "kind": "exe_name", "value": "JustCause3.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Just_Cause_3.zip",
+        "addon_file": "Luma-Just Cause 3.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.just-cause-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "lara-croft-temple-of-osiris",
+      "name": "Lara Croft and the Temple of Osiris",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "289690", "tier": 100 },
+        { "kind": "exe_name", "value": "LC2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Lara_Croft_and_the_Temple_of_Osiris-x32.zip",
+        "addon_file": "Luma-Lara Croft and the Temple of Osiris.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.lara-croft-temple-of-osiris.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "Not compatible with Xbox Store version"
+        }
+      ]
+    },
+    {
+      "id": "lego-city-undercover",
+      "name": "LEGO City Undercover",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "578330", "tier": 100 },
+        { "kind": "exe_name", "value": "LEGOLCUR_DX11.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Lego_City_Undercover.zip",
+        "addon_file": "Luma-Lego City Undercover.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "mafia-2-definitive-edition",
+      "name": "Mafia II: Definitive Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1030830", "tier": 100 },
+        { "kind": "exe_name", "value": "Mafia II Definitive Edition.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Mafia_II_Definitive_Edition.zip",
+        "addon_file": "Luma-Mafia II Definitive Edition.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "mafia-3",
+      "name": "Mafia III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "360430", "tier": 100 },
+        { "kind": "exe_name", "value": "mafia3definitiveedition.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Mafia_III.zip",
+        "addon_file": "Luma-Mafia III.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.mafia-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "metro-2033-redux",
+      "name": "Metro 2033 Redux",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "286690", "tier": 100 },
+        { "kind": "exe_name", "value": "metro.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Metro_Redux.zip",
+        "addon_file": "Luma-Metro Redux.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.metro-2033-redux.warning",
+          "kind": "warning",
+          "fallback_text": "Requires using windowed/borderless windowed modes, either via mods or setting fullscreen off in the game's config file."
+        },
+        {
+          "id": "luma.metro-2033-redux.windowed_borderless_only",
+          "kind": "game_setting",
+          "fallback_text": "Use borderless windowed mode."
+        }
+      ]
+    },
+    {
+      "id": "middle-earth-shadow-of-war",
+      "name": "Middle-earth: Shadow of War",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "356190", "tier": 100 },
+        { "kind": "exe_name", "value": "ShadowOfWar.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Middle-earth_Shadow_of_War.zip",
+        "addon_file": "Luma-Middle-earth Shadow of War.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.middle-earth-shadow-of-war.dlss-only",
+          "kind": "compatibility",
+          "fallback_text": "This profile adds DLSS support only; HDR is not currently supported."
+        }
+      ]
+    },
+    {
+      "id": "nioh",
+      "name": "Nioh",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "485510", "tier": 100 },
+        { "kind": "exe_name", "value": "nioh.exe", "tier": 70 }
+      ],
+      "package": { "release_asset": "Luma-Nioh.zip", "addon_file": "Luma-Nioh.addon" },
+      "profile": "game"
+    },
+    {
+      "id": "persona-5-royal",
+      "name": "Persona 5 Royal",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1687950", "tier": 100 },
+        { "kind": "exe_name", "value": "P5R.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Persona_5.zip",
+        "addon_file": "Luma-Persona 5.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.persona-5-royal.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "prey-2017",
+      "name": "Prey",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "480490", "tier": 100 },
+        { "kind": "exe_name", "value": "Prey.exe", "tier": 70 }
+      ],
+      "package": { "release_asset": "Luma-Prey.zip", "addon_file": "Luma-Prey.addon" },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.prey-2017.prey_extra_data",
+          "kind": "warning",
+          "fallback_text": "Keep Prey's additional Luma data files together with the add-on."
+        },
+        {
+          "id": "luma.prey-2017.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "thief-2014",
+      "name": "Thief",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "239160", "tier": 100 },
+        { "kind": "exe_name", "value": "shipping-thiefgame.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Thief_.2014.zip",
+        "addon_file": "Luma-Thief (2014).addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "thumper",
+      "name": "Thumper",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "356400", "tier": 100 },
+        { "kind": "exe_name", "value": "THUMPER_win8.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "THUMPER_dx9.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Thumper.zip",
+        "addon_file": "Luma-Thumper.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "trine-5",
+      "name": "Trine 5: A Clockwork Conspiracy",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1436700", "tier": 100 },
+        { "kind": "exe_name", "value": "trine5.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Trine_5.zip",
+        "addon_file": "Luma-Trine 5.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "watch-dogs-2",
+      "name": "Watch Dogs 2",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "447040", "tier": 100 },
+        { "kind": "exe_name", "value": "WatchDogs2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Watch_Dogs_2.zip",
+        "addon_file": "Luma-Watch Dogs 2.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.watch-dogs-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "quantum-break",
+      "name": "Quantum Break",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "474960", "tier": 100 },
+        { "kind": "exe_name", "value": "QuantumBreak.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Quantum_Break.zip",
+        "addon_file": "Luma-Quantum Break.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.quantum-break.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "mass-effect-andromeda",
+      "name": "Mass Effect: Andromeda",
+      "architecture": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1238000", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Mass_Effect_Andromeda.zip",
+        "addon_file": "Luma-Mass Effect Andromeda.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.mass-effect-andromeda.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "Only DLAA / FSR 3 Native AA modes are available; this is not DLSS or FSR super-resolution."
+        },
+        {
+          "id": "luma.mass-effect-andromeda.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "abiotic-factor",
+      "name": "Abiotic Factor",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "427410", "tier": 100 },
+        { "kind": "exe_name", "value": "AbioticFactor.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.abiotic-factor.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-DX11"
+        },
+        {
+          "id": "luma.abiotic-factor.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "abzu",
+      "name": "ABZU",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "384190", "tier": 100 },
+        { "kind": "exe_name", "value": "AbzuGame.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "unsupported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.abzu.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "ace-combat-7",
+      "name": "Ace Combat 7: Skies Unknown",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "502500", "tier": 100 },
+        { "kind": "exe_name", "value": "Ace7Game.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.ace-combat-7.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "Follow this in-game prerequisite: AA \"FXAA High\"."
+        },
+        {
+          "id": "luma.ace-combat-7.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.ace-combat-7.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "agony-unrated",
+      "name": "Agony UNRATED",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "879420", "tier": 100 },
+        { "kind": "exe_name", "value": "Agony.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.agony-unrated.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "alchemy-garden",
+      "name": "Alchemy Garden",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "935400", "tier": 100 },
+        { "kind": "exe_name", "value": "AlchemyGardenUE.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.alchemy-garden.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "aliens-fireteam-elite",
+      "name": "Aliens: Fireteam Elite",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1549970", "tier": 100 },
+        { "kind": "exe_name", "value": "Endeavor.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.aliens-fireteam-elite.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "ancestors-the-humankind-odyssey",
+      "name": "Ancestors: The Humankind Odyssey",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "536270", "tier": 100 },
+        { "kind": "exe_name", "value": "Ancestors-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.ancestors-the-humankind-odyssey.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "ancestors-legacy",
+      "name": "Ancestors Legacy",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "620590", "tier": 100 },
+        { "kind": "exe_name", "value": "Anc-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.ancestors-legacy.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.ancestors-legacy.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "ashen",
+      "name": "ASHEN",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "649950", "tier": 100 },
+        { "kind": "exe_name", "value": "Ashen.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.ashen.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "bloodstained-ritual-of-the-night",
+      "name": "Bloodstained: Ritual of the Night",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "692850", "tier": 100 },
+        { "kind": "exe_name", "value": "BloodstainedRotN.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.bloodstained-ritual-of-the-night.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "call-of-the-sea",
+      "name": "Call of the Sea",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1042490", "tier": 100 },
+        { "kind": "exe_name", "value": "COTS.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.call-of-the-sea.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: Global quality \"Epic\"."
+        },
+        {
+          "id": "luma.call-of-the-sea.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "chess-ultra",
+      "name": "Chess Ultra",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "518060", "tier": 100 },
+        { "kind": "exe_name", "value": "Chess2-Win64-Shipping.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "Chess2-Win32-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.chess-ultra.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "circus-electrique",
+      "name": "Circus Electrique",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1666250", "tier": 100 },
+        { "kind": "exe_name", "value": "CircusElectrique.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.circus-electrique.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.circus-electrique.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "code-vein",
+      "name": "CODE VEIN",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "678960", "tier": 100 },
+        { "kind": "exe_name", "value": "CodeVein.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.code-vein.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA Highest."
+        },
+        {
+          "id": "luma.code-vein.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "coral-island",
+      "name": "Coral Island",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1158160", "tier": 100 },
+        { "kind": "exe_name", "value": "ProjectCoral.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.coral-island.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "crab-champions",
+      "name": "Crab Champions",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "774801", "tier": 100 },
+        { "kind": "exe_name", "value": "CrabChampions.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.crab-champions.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: High Anti-aliasing Type."
+        },
+        {
+          "id": "luma.crab-champions.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "crash-bandicoot-4",
+      "name": "Crash Bandicoot 4: It's About Time",
+      "architecture": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1378990", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.crash-bandicoot-4.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: at least Medium (2x) Antialiasing Quality."
+        },
+        {
+          "id": "luma.crash-bandicoot-4.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "clash-artifacts-of-chaos",
+      "name": "Clash: Artifacts of Chaos",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1430680", "tier": 100 },
+        { "kind": "exe_name", "value": "Clash.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.clash-artifacts-of-chaos.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA quality \"Very High\"."
+        },
+        {
+          "id": "luma.clash-artifacts-of-chaos.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "close-to-the-sun",
+      "name": "Close to the Sun",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "968870", "tier": 100 },
+        { "kind": "exe_name", "value": "ctts.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.close-to-the-sun.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA 4X."
+        },
+        {
+          "id": "luma.close-to-the-sun.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "cygni-all-guns-blazing",
+      "name": "CYGNI: All Guns Blazing",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1248080", "tier": 100 },
+        { "kind": "exe_name", "value": "Cygni.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.cygni-all-guns-blazing.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.cygni-all-guns-blazing.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "darksiders-3",
+      "name": "Darksiders III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "606280", "tier": 100 },
+        { "kind": "exe_name", "value": "Darksiders3.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.darksiders-3.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA Epic."
+        },
+        {
+          "id": "luma.darksiders-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "daymare-1998",
+      "name": "Daymare: 1998",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "842100", "tier": 100 },
+        { "kind": "exe_name", "value": "Daymare_MASTER.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.daymare-1998.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "Luma works on its own but crashes when combined with OptiScaler or UUU."
+        },
+        {
+          "id": "luma.daymare-1998.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "dead-island-2",
+      "name": "Dead Island 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "934700", "tier": 100 },
+        { "kind": "exe_name", "value": "DeadIsland.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.dead-island-2.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-dx11"
+        },
+        {
+          "id": "luma.dead-island-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "deadline-delivery",
+      "name": "DEADLINE DELIVERY",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "3745310", "tier": 100 },
+        { "kind": "exe_name", "value": "DEADLINE_DELIVERY.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.deadline-delivery.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: \"Ultra\"."
+        },
+        {
+          "id": "luma.deadline-delivery.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "desolate",
+      "name": "DESOLATE",
+      "architecture": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "671510", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.desolate.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "devils-hunt",
+      "name": "Devil's Hunt",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "887720", "tier": 100 },
+        { "kind": "exe_name", "value": "DevilsHuntUnreal.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.devils-hunt.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "die-young",
+      "name": "Die Young",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "433170", "tier": 100 },
+        { "kind": "exe_name", "value": "DieYoung-Win64-Shipping.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "DieYoungPrologue-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.die-young.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: TAA \"High\" or \"Epic\"."
+        },
+        {
+          "id": "luma.die-young.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "dnf-duel",
+      "name": "DNF Duel",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1216060", "tier": 100 },
+        { "kind": "exe_name", "value": "DNFDUEL.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.dnf-duel.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "Follow this in-game prerequisite: AA does not work in character selection screen."
+        },
+        {
+          "id": "luma.dnf-duel.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.dnf-duel.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "dragon-ball-z-kakarot",
+      "name": "DRAGON BALL Z: KAKAROT",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "851850", "tier": 100 },
+        { "kind": "exe_name", "value": "AT.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.dragon-ball-z-kakarot.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: TAA + use BDZKFix for the Legacy version/its updated fork for the HD version."
+        },
+        {
+          "id": "luma.dragon-ball-z-kakarot.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "dragon-quest-11-s",
+      "name": "DRAGON QUEST XI S: Echoes of an Elusive Age - Definitive Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1295510", "tier": 100 },
+        { "kind": "exe_name", "value": "DRAGON QUEST XI S.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.dragon-quest-11-s.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=6\nr.temporalaasamples=2"
+        },
+        {
+          "id": "luma.dragon-quest-11-s.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "eriksholm-the-stolen-dream",
+      "name": "Eriksholm: The Stolen Dream",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2377280", "tier": 100 },
+        { "kind": "exe_name", "value": "Eriksholm.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.eriksholm-the-stolen-dream.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "filament",
+      "name": "Filament",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1137350", "tier": 100 },
+        { "kind": "exe_name", "value": "Filament.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.filament.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA \"High\" or \"Very High\"."
+        },
+        {
+          "id": "luma.filament.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "ghostrunner",
+      "name": "Ghostrunner",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1139900", "tier": 100 },
+        { "kind": "exe_name", "value": "Ghostrunner.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "unknown", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.ghostrunner.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "goat-simulator-3",
+      "name": "Goat Simulator 3",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "850190", "tier": 100 },
+        { "kind": "exe_name", "value": "Goat2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.goat-simulator-3.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: High AA."
+        },
+        {
+          "id": "luma.goat-simulator-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "grounded",
+      "name": "Grounded",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "962130", "tier": 100 },
+        { "kind": "exe_name", "value": "Grounded.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.grounded.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "guilty-gear-strive",
+      "name": "GUILTY GEAR -STRIVE-",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1384160", "tier": 100 },
+        { "kind": "exe_name", "value": "GGST.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.guilty-gear-strive.warning",
+          "kind": "warning",
+          "fallback_text": "AA does not work in character selection screen. In-game: AA \"Temporal Anti Aliasing\" Modify Engine.ini [SystemSettings] r.DefaultFeature.AntiAliasing=2 r.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.guilty-gear-strive.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "gylt",
+      "name": "GYLT",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2206210", "tier": 100 },
+        { "kind": "exe_name", "value": "Gylt.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.gylt.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-dx11"
+        },
+        {
+          "id": "luma.gylt.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "hellblade-senuas-sacrifice",
+      "name": "Hellblade: Senua's Sacrifice",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "414340", "tier": 100 },
+        { "kind": "exe_name", "value": "HellbladeGame.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.hellblade-senuas-sacrifice.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-DX11"
+        },
+        {
+          "id": "luma.hellblade-senuas-sacrifice.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "it-takes-two",
+      "name": "It Takes Two",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1426210", "tier": 100 },
+        { "kind": "exe_name", "value": "ItTakesTwo.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "experimental", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.it-takes-two.warning",
+          "kind": "warning",
+          "fallback_text": "Only works on the title screen sequence"
+        },
+        {
+          "id": "luma.it-takes-two.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "just-die-already",
+      "name": "Just Die Already",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "979070", "tier": 100 },
+        { "kind": "exe_name", "value": "JDGame.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.just-die-already.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.just-die-already.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "kao-the-kangaroo",
+      "name": "Kao the Kangaroo",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1370140", "tier": 100 },
+        { "kind": "exe_name", "value": "Kao the Kangaroo.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.kao-the-kangaroo.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA \"High\"."
+        },
+        {
+          "id": "luma.kao-the-kangaroo.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "kingdom-hearts-3",
+      "name": "KINGDOM HEARTS III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2552450", "tier": 100 },
+        { "kind": "exe_name", "value": "KINGDOM HEARTS III.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.kingdom-hearts-3.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "Follow this in-game prerequisite: \"TXAA\"."
+        },
+        {
+          "id": "luma.kingdom-hearts-3.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.AntiAliasingMethod=2"
+        },
+        {
+          "id": "luma.kingdom-hearts-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "layers-of-fear-2",
+      "name": "Layers of Fear 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1029890", "tier": 100 },
+        { "kind": "exe_name", "value": "LOF2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.layers-of-fear-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "life-is-strange-2",
+      "name": "Life is Strange 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "532210", "tier": 100 },
+        { "kind": "exe_name", "value": "LIS2-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.life-is-strange-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "life-is-strange-true-colors",
+      "name": "Life is Strange: True Colors",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "936790", "tier": 100 },
+        { "kind": "exe_name", "value": "LifeIsStrange3.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "experimental", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.life-is-strange-true-colors.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-dx11"
+        },
+        {
+          "id": "luma.life-is-strange-true-colors.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "little-nightmares",
+      "name": "LITTLE NIGHTMARES",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "424840", "tier": 100 },
+        { "kind": "exe_name", "value": "LittleNightmares.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.little-nightmares.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "maneater",
+      "name": "Maneater",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "629820", "tier": 100 },
+        { "kind": "exe_name", "value": "Maneater.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.maneater.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "mothergunship",
+      "name": "Mothergunship",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "574090", "tier": 100 },
+        { "kind": "exe_name", "value": "TowerOfGuns2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.mothergunship.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.mothergunship.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "mordhau",
+      "name": "MORDHAU",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "629760", "tier": 100 },
+        { "kind": "exe_name", "value": "Mordhau.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.mordhau.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "mutant-year-zero-road-to-eden",
+      "name": "Mutant Year Zero: Road to Eden",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "760060", "tier": 100 },
+        { "kind": "exe_name", "value": "ZoneUE4.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.mutant-year-zero-road-to-eden.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA \"High\". Recommended to use r.motionblur.amount=0 via Engine.ini for motion clarity."
+        },
+        {
+          "id": "luma.mutant-year-zero-road-to-eden.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "orcs-must-die-3",
+      "name": "Orcs Must Die! 3",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1522820", "tier": 100 },
+        { "kind": "exe_name", "value": "Orcs Must Die! 3.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.orcs-must-die-3.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA quality \"High\"."
+        },
+        {
+          "id": "luma.orcs-must-die-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "project-wingman",
+      "name": "Project Wingman",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "895870", "tier": 100 },
+        { "kind": "exe_name", "value": "ProjectWingman.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.project-wingman.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "Follow this in-game prerequisite: AA \"FXAA\"."
+        },
+        {
+          "id": "luma.project-wingman.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.project-wingman.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "psychonauts-2",
+      "name": "Psychonauts 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "607080", "tier": 100 },
+        { "kind": "exe_name", "value": "Psychonauts2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.psychonauts-2.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-dx11"
+        },
+        {
+          "id": "luma.psychonauts-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "redeemer-enhanced-edition",
+      "name": "Redeemer: Enhanced Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "447290", "tier": 100 },
+        { "kind": "exe_name", "value": "ExampleGame-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.redeemer-enhanced-edition.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "redout",
+      "name": "Redout: Enhanced Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "517710", "tier": 100 },
+        { "kind": "exe_name", "value": "redout.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.redout.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-DX11"
+        },
+        {
+          "id": "luma.redout.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "redout-2",
+      "name": "Redout 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1799930", "tier": 100 },
+        { "kind": "exe_name", "value": "Redout2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.redout-2.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-DX11"
+        },
+        {
+          "id": "luma.redout-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "relicta",
+      "name": "Relicta",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "941570", "tier": 100 },
+        { "kind": "exe_name", "value": "Relicta.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.relicta.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "remnant-from-the-ashes",
+      "name": "Remnant: From the Ashes",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "617290", "tier": 100 },
+        { "kind": "exe_name", "value": "Remnant.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.remnant-from-the-ashes.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.remnant-from-the-ashes.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "ruiner",
+      "name": "RUINER",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "464060", "tier": 100 },
+        { "kind": "exe_name", "value": "Ruiner.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.ruiner.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "scarlet-nexus",
+      "name": "SCARLET NEXUS",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "775500", "tier": 100 },
+        { "kind": "exe_name", "value": "ScarletNexus.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.scarlet-nexus.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA \"TXAA\"."
+        },
+        {
+          "id": "luma.scarlet-nexus.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "scorn",
+      "name": "Scorn",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "698670", "tier": 100 },
+        { "kind": "exe_name", "value": "Scorn.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.scorn.warning",
+          "kind": "warning",
+          "fallback_text": "Has native support of FSR 2.1, so DLSS or any other upscaler can be added via OptiScaler."
+        },
+        {
+          "id": "luma.scorn.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "selfloss",
+      "name": "Selfloss",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1086620", "tier": 100 },
+        { "kind": "exe_name", "value": "Selfloss.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.selfloss.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "shin-megami-tensei-5-vengeance",
+      "name": "Shin Megami Tensei V: Vengeance",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1875830", "tier": 100 },
+        { "kind": "exe_name", "value": "SMT5V.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.shin-megami-tensei-5-vengeance.warning",
+          "kind": "warning",
+          "fallback_text": "Needs Lyall's Fix to force TAA."
+        },
+        {
+          "id": "luma.shin-megami-tensei-5-vengeance.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "shenmue-3",
+      "name": "Shenmue III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "878670", "tier": 100 },
+        { "kind": "exe_name", "value": "Shenmue3.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.shenmue-3.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "snake-pass",
+      "name": "Snake Pass",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "544330", "tier": 100 },
+        { "kind": "exe_name", "value": "SnakePass.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.snake-pass.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "spirit-of-the-north",
+      "name": "Spirit of the North",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1213700", "tier": 100 },
+        { "kind": "exe_name", "value": "Infused.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.spirit-of-the-north.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: Graphics Quality \"Ultra\"."
+        },
+        {
+          "id": "luma.spirit-of-the-north.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "spyro-reignited-trilogy",
+      "name": "Spyro Reignited Trilogy",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "996580", "tier": 100 },
+        { "kind": "exe_name", "value": "Spyro.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.spyro-reignited-trilogy.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: High TAA."
+        },
+        {
+          "id": "luma.spyro-reignited-trilogy.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "star-wars-jedi-fallen-order",
+      "name": "STAR WARS Jedi: Fallen Order",
+      "architecture": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "1172380", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.star-wars-jedi-fallen-order.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "state-of-decay-2",
+      "name": "State of Decay 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "495420", "tier": 100 },
+        { "kind": "exe_name", "value": "StateOfDecay2-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.state-of-decay-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "steel-rats",
+      "name": "Steel Rats",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "619700", "tier": 100 },
+        { "kind": "exe_name", "value": "SteelRats.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.steel-rats.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "stray",
+      "name": "Stray",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1332010", "tier": 100 },
+        { "kind": "exe_name", "value": "Stray.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.stray.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "styx-shards-of-darkness",
+      "name": "Styx: Shards of Darkness",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "355790", "tier": 100 },
+        { "kind": "exe_name", "value": "Styx2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.styx-shards-of-darkness.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.styx-shards-of-darkness.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "submerged-hidden-depths",
+      "name": "Submerged: Hidden Depths",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1614270", "tier": 100 },
+        { "kind": "exe_name", "value": "Submerged.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.submerged-hidden-depths.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA \"High\"."
+        },
+        {
+          "id": "luma.submerged-hidden-depths.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "succubus",
+      "name": "SUCCUBUS",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "985830", "tier": 100 },
+        { "kind": "exe_name", "value": "Succubus.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.succubus.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "supraland",
+      "name": "Supraland",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "813630", "tier": 100 },
+        { "kind": "exe_name", "value": "Supraland.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.supraland.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA \"Temporal Anti Aliasing\"."
+        },
+        {
+          "id": "luma.supraland.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tales-of-arise",
+      "name": "Tales of Arise",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "740130", "tier": 100 },
+        { "kind": "exe_name", "value": "Tales of Arise.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.tales-of-arise.warning",
+          "kind": "warning",
+          "fallback_text": "Requires Arise-SDK, UseUE4TAA = true"
+        },
+        {
+          "id": "luma.tales-of-arise.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tandem-a-tale-of-shadows",
+      "name": "Tandem: A Tale of Shadows",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1436920", "tier": 100 },
+        { "kind": "exe_name", "value": "Shadows.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.tandem-a-tale-of-shadows.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tekken-7",
+      "name": "TEKKEN 7",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "389730", "tier": 100 },
+        { "kind": "exe_name", "value": "TEKKEN 7.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-nod3d9ex"] },
+      "guidance": [
+        {
+          "id": "luma.tekken-7.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "Follow this in-game prerequisite: Use -nod3d9ex launch argument."
+        },
+        {
+          "id": "luma.tekken-7.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[/Script/Engine.RendererSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4\nr.TemporalAASamples=16"
+        },
+        {
+          "id": "luma.tekken-7.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tell-me-why",
+      "name": "Tell Me Why",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1180660", "tier": 100 },
+        { "kind": "exe_name", "value": "TME-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.tell-me-why.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tetris-effect-connected",
+      "name": "Tetris Effect: Connected",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1003590", "tier": 100 },
+        { "kind": "exe_name", "value": "TetrisEffect.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.tetris-effect-connected.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "Follow this in-game prerequisite: AA \"FXAA:6\" and Rendering Scale 100%."
+        },
+        {
+          "id": "luma.tetris-effect-connected.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[/Script/Engine.RendererSettings]\nr.DefaultFeature.AntiAliasing=2\nr.TemporalAA.Upsampling=1"
+        },
+        {
+          "id": "luma.tetris-effect-connected.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "the-ascent",
+      "name": "The Ascent",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "979690", "tier": 100 },
+        { "kind": "exe_name", "value": "TheAscent.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.the-ascent.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-DX11"
+        },
+        {
+          "id": "luma.the-ascent.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "the-awesome-adventures-of-captain-spirit",
+      "name": "The Awesome Adventures of Captain Spirit",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "845070", "tier": 100 },
+        { "kind": "exe_name", "value": "CaptainSpirit-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.the-awesome-adventures-of-captain-spirit.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "the-dark-pictures-man-of-medan",
+      "name": "The Dark Pictures Anthology: Man of Medan",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "939850", "tier": 100 },
+        { "kind": "exe_name", "value": "ManOfMedan.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.the-dark-pictures-man-of-medan.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-dx11"
+        },
+        {
+          "id": "luma.the-dark-pictures-man-of-medan.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "the-gunk",
+      "name": "The Gunk",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1087760", "tier": 100 },
+        { "kind": "exe_name", "value": "Dust.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.the-gunk.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "the-pathless",
+      "name": "The Pathless",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1492680", "tier": 100 },
+        { "kind": "exe_name", "value": "Pathless.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.the-pathless.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "the-sinking-city",
+      "name": "The Sinking City",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "750130", "tier": 100 },
+        { "kind": "exe_name", "value": "TheSinkingCityRemastered.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "TSCGame.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "unknown", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.the-sinking-city.warning",
+          "kind": "warning",
+          "fallback_text": "The original works. Remastered unknown."
+        },
+        {
+          "id": "luma.the-sinking-city.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tiny-tinas-wonderlands",
+      "name": "Tiny Tina's Wonderlands",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1286680", "tier": 100 },
+        { "kind": "exe_name", "value": "Wonderlands.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.tiny-tinas-wonderlands.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "trek-to-yomi",
+      "name": "Trek to Yomi",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1370050", "tier": 100 },
+        { "kind": "exe_name", "value": "TrekToYomi.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.trek-to-yomi.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tribes-of-midgard",
+      "name": "Tribes of Midgard",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "858820", "tier": 100 },
+        { "kind": "exe_name", "value": "TOM.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.tribes-of-midgard.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.tribes-of-midgard.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "tyrants-realm",
+      "name": "Tyrant's Realm",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2259260", "tier": 100 },
+        { "kind": "exe_name", "value": "AIProject.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "supported" },
+      "guidance": [
+        {
+          "id": "luma.tyrants-realm.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "vampyr",
+      "name": "Vampyr",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "427290", "tier": 100 },
+        { "kind": "exe_name", "value": "AVGame-Win64-Shipping.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.vampyr.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, use: AA TXAA 6X."
+        },
+        {
+          "id": "luma.vampyr.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "warhammer-40000-boltgun",
+      "name": "Warhammer 40,000: Boltgun",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2005010", "tier": 100 },
+        { "kind": "exe_name", "value": "Warhammer 40,000 Boltgun.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.warhammer-40000-boltgun.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+        },
+        {
+          "id": "luma.warhammer-40000-boltgun.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "weird-west",
+      "name": "Weird West",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1097350", "tier": 100 },
+        { "kind": "exe_name", "value": "WeirdWest.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.weird-west.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "what-remains-of-edith-finch",
+      "name": "What Remains of Edith Finch",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "501300", "tier": 100 },
+        { "kind": "exe_name", "value": "FinchGame.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "guidance": [
+        {
+          "id": "luma.what-remains-of-edith-finch.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "DLAA works without extra changes, but the game may not fully close after exit. OptiScaler can resolve the exit issue."
+        },
+        {
+          "id": "luma.what-remains-of-edith-finch.warning",
+          "kind": "warning",
+          "fallback_text": "The game is broken at 4K. Set Effects to Low before applying the manual Engine.ini settings."
+        },
+        {
+          "id": "luma.what-remains-of-edith-finch.engine_ini",
+          "kind": "engine_ini",
+          "fallback_text": "Apply the following settings manually in Engine.ini.",
+          "code": "[SystemSettings]\nr.TranslucencyLightingVolumeDim=64\nr.RefractionQuality=2\nr.SSR.Quality=4\nr.SceneColorFormat=3\nr.DetailMode=2\nr.TranslucencyVolumeBlur=1\nr.MaterialQualityLevel=1\nr.SSR.Temporal=0"
+        },
+        {
+          "id": "luma.what-remains-of-edith-finch.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "witch-it",
+      "name": "Witch It",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "559650", "tier": 100 },
+        {
+          "kind": "exe_name",
+          "value": "PropWitchHuntModule-Win64-Shipping.exe",
+          "tier": 70
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "supported", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.witch-it.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-DX11"
+        },
+        {
+          "id": "luma.witch-it.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "sherlock-holmes-chapter-one",
+      "name": "Sherlock Holmes Chapter One",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1137300", "tier": 100 },
+        { "kind": "exe_name", "value": "SHCO.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "experimental", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.sherlock-holmes-chapter-one.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-dx11"
+        },
+        {
+          "id": "luma.sherlock-holmes-chapter-one.warning",
+          "kind": "warning",
+          "fallback_text": "-dx11 launch argument Issues Poor CPU performance in DX11 mode. DLAA with AutoExposure:On have jagged edges on grass."
+        },
+        {
+          "id": "luma.sherlock-holmes-chapter-one.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "song-of-nunu",
+      "name": "Song of Nunu: A League of Legends Story",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1333200", "tier": 100 },
+        { "kind": "exe_name", "value": "SongOfNunu.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Unreal_Engine.zip",
+        "addon_file": "Luma-Unreal Engine.addon"
+      },
+      "profile": "unreal",
+      "features": { "dlss_fsr": "experimental", "hdr": "unknown" },
+      "requirements": { "launch_arguments": ["-dx11"] },
+      "guidance": [
+        {
+          "id": "luma.song-of-nunu.launch_argument",
+          "kind": "launch_argument",
+          "fallback_text": "Add this launch argument manually.",
+          "code": "-oss=Steam -dx11"
+        },
+        {
+          "id": "luma.song-of-nunu.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "bioshock-series",
+      "name": "BioShock Remastered / BioShock 2 Remastered",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "409710", "tier": 100 },
+        { "kind": "steam_appid", "value": "409720", "tier": 100 },
+        { "kind": "exe_name", "value": "BioshockHD.exe", "tier": 70 },
+        { "kind": "exe_name", "value": "Bioshock2HD.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-BioShock_Series-x32.zip",
+        "addon_file": "Luma-BioShock Series.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "batman-arkham-knight",
+      "name": "Batman: Arkham Knight",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "208650", "tier": 100 },
+        { "kind": "exe_name", "value": "BatmanAK.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Batman_Arkham_Knight.zip",
+        "addon_file": "Luma-Batman Arkham Knight.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.batman-arkham-knight.warning",
+          "kind": "warning",
+          "fallback_text": "DLSS only (no HDR atm)"
+        },
+        {
+          "id": "luma.batman-arkham-knight.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "beyond-two-souls",
+      "name": "Beyond: Two Souls",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "960990", "tier": 100 },
+        { "kind": "exe_name", "value": "BeyondTwoSouls_Steam.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Beyond_Two_Souls.zip",
+        "addon_file": "Luma-Beyond Two Souls.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "blue-reflection-second-light",
+      "name": "Blue Reflection: Second Light",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "1423600", "tier": 100 },
+        { "kind": "exe_name", "value": "BLUE REFLECTION Second Light.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Blue_Reflection_Second_Light.zip",
+        "addon_file": "Luma-Blue Reflection Second Light.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.blue-reflection-second-light.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "borderlands-goty-enhanced",
+      "name": "Borderlands: Game of the Year Enhanced",
+      "architecture": "X64",
+      "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "729040", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Borderlands_GOTY_Enhanced.zip",
+        "addon_file": "Luma-Borderlands GOTY Enhanced.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "borderlands-2-and-the-pre-sequel",
+      "name": "Borderlands 2 and The Pre-Sequel",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "49520", "tier": 100 },
+        { "kind": "steam_appid", "value": "261640", "tier": 100 }
+      ],
+      "package": {
+        "release_asset": "Luma-Borderlands_2_and_The_Pre-Sequel-x32.zip",
+        "addon_file": "Luma-Borderlands 2 and The Pre-Sequel.addon"
+      },
+      "profile": "game",
+      "requirements": {
+        "managed_dependency": {
+          "kind": "dgvoodoo2",
+          "version": "2.87.3",
+          "accepted_detected_apis": ["D3D9"],
+          "reshade_proxy_dll": "dxgi.dll",
+          "source": {
+            "url": "https://github.com/dege-diosg/dgVoodoo2/releases/download/v2.87.3/dgVoodoo2_87_3.zip",
+            "sha256": "6fb954bed55bf70e948c5045a663a9df31ea206faf105e327bafe46c318f867f",
+            "size": 9082391
+          },
+          "install_map": [
+            {
+              "source": "MS/x86/D3D9.dll",
+              "dest": "D3D9.dll",
+              "sha256": "c13e3c0969d2c70a1a63cf96b83c7cd3bc47f925f28ec92c07d5b72d6df4c240",
+              "size": 485888
+            }
+          ],
+          "config_file": "dgVoodoo.conf",
+          "config": [
+            {
+              "section": "General",
+              "entries": [{ "key": "OutputAPI", "value": "d3d11_fl11_0" }]
+            },
+            {
+              "section": "DirectX",
+              "entries": [
+                { "key": "VideoCard", "value": "geforce_9800_gt" },
+                { "key": "dgVoodooWatermark", "value": "false" },
+                { "key": "VRAM", "value": "1024" }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "deus-ex-mankind-divided",
+      "name": "Deus Ex: Mankind Divided",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "337000", "tier": 100 },
+        { "kind": "exe_name", "value": "DXMD.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Deus_Ex_Mankind_Divided.zip",
+        "addon_file": "Luma-Deus Ex Mankind Divided.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.deus-ex-mankind-divided.warning",
+          "kind": "warning",
+          "fallback_text": "DLSS only (no HDR atm)"
+        },
+        {
+          "id": "luma.deus-ex-mankind-divided.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "dying-light-2",
+      "name": "Dying Light 2 Stay Human",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "534380", "tier": 100 },
+        { "kind": "exe_name", "value": "DyingLightGame_x64_rwdi.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Dying_Light_2.zip",
+        "addon_file": "Luma-Dying Light 2.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "fallout-4",
+      "name": "Fallout 4",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [{ "kind": "steam_appid", "value": "377160", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Fallout_4.zip",
+        "addon_file": "Luma-Fallout 4.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.fallout-4.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "final-fantasy-15",
+      "name": "FINAL FANTASY XV",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "637650", "tier": 100 },
+        { "kind": "exe_name", "value": "ffxv_s.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Final_Fantasy_XV.zip",
+        "addon_file": "Luma-Final Fantasy XV.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "kingdom-come-deliverance",
+      "name": "Kingdom Come: Deliverance",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "379430", "tier": 100 },
+        { "kind": "exe_name", "value": "KingdomCome.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Kingdom_Come_Deliverance.zip",
+        "addon_file": "Luma-Kingdom Come Deliverance.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.kingdom-come-deliverance.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "la-noire",
+      "name": "L.A. Noire",
+      "architecture": "X86",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "110800", "tier": 100 },
+        { "kind": "exe_name", "value": "PlayLAN.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-L.A._Noire-x32.zip",
+        "addon_file": "Luma-L.A. Noire.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "metaphor-refantazio",
+      "name": "Metaphor: ReFantazio",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "2679460", "tier": 100 },
+        { "kind": "exe_name", "value": "METAPHOR.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Metaphor.zip",
+        "addon_file": "Luma-Metaphor.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.metaphor-refantazio.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "Only DLAA / FSR Native AA modes are available; this is not DLSS or FSR super-resolution."
+        },
+        {
+          "id": "luma.metaphor-refantazio.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "mirrors-edge-catalyst",
+      "name": "Mirror's Edge Catalyst",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [{ "kind": "steam_appid", "value": "1233570", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Mirror.s_Edge_Catalyst.zip",
+        "addon_file": "Luma-Mirror's Edge Catalyst.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "monster-hunter-world",
+      "name": "Monster Hunter: World",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "582010", "tier": 100 },
+        { "kind": "exe_name", "value": "MonsterHunterWorld.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Monster_Hunter_World.zip",
+        "addon_file": "Luma-Monster Hunter World.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.monster-hunter-world.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "mortal-kombat-11",
+      "name": "Mortal Kombat 11",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "976310", "tier": 100 },
+        { "kind": "exe_name", "value": "MK11.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Mortal_Kombat_11.zip",
+        "addon_file": "Luma-Mortal Kombat 11.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.mortal-kombat-11.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "nier-automata",
+      "name": "NieR: Automata",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "524220", "tier": 100 },
+        { "kind": "exe_name", "value": "NieRAutomata.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-NieR_Automata.zip",
+        "addon_file": "Luma-NieR Automata.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "saints-row-the-third-remastered",
+      "name": "Saints Row: The Third Remastered",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "978300", "tier": 100 },
+        { "kind": "exe_name", "value": "SRTTR.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Saints_Row_The_Third_Remastered.zip",
+        "addon_file": "Luma-Saints Row The Third Remastered.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "shenmue-1-and-2",
+      "name": "Shenmue I & II",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [{ "kind": "steam_appid", "value": "758330", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Shenmue_I_._II.zip",
+        "addon_file": "Luma-Shenmue I & II.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "the-evil-within-2",
+      "name": "The Evil Within 2",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "601430", "tier": 100 },
+        { "kind": "exe_name", "value": "TEW2.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-The_Evil_Within_2.zip",
+        "addon_file": "Luma-The Evil Within 2.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.the-evil-within-2.bundled_dlss",
+          "kind": "compatibility",
+          "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        }
+      ]
+    },
+    {
+      "id": "titanfall-2",
+      "name": "Titanfall 2",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [{ "kind": "steam_appid", "value": "1237970", "tier": 100 }],
+      "package": {
+        "release_asset": "Luma-Titanfall_2.zip",
+        "addon_file": "Luma-Titanfall 2.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "vanquish",
+      "name": "Vanquish",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "460810", "tier": 100 },
+        { "kind": "exe_name", "value": "Vanquish.exe", "tier": 70 }
+      ],
+      "package": {
+        "release_asset": "Luma-Vanquish-x32.zip",
+        "addon_file": "Luma-Vanquish.addon"
+      },
+      "profile": "game",
+      "requirements": {
+        "managed_dependency": {
+          "kind": "dgvoodoo2",
+          "version": "2.87.3",
+          "accepted_detected_apis": ["D3D9"],
+          "reshade_proxy_dll": "dxgi.dll",
+          "source": {
+            "url": "https://github.com/dege-diosg/dgVoodoo2/releases/download/v2.87.3/dgVoodoo2_87_3.zip",
+            "sha256": "6fb954bed55bf70e948c5045a663a9df31ea206faf105e327bafe46c318f867f",
+            "size": 9082391
+          },
+          "install_map": [
+            {
+              "source": "MS/x86/D3D9.dll",
+              "dest": "D3D9.dll",
+              "sha256": "c13e3c0969d2c70a1a63cf96b83c7cd3bc47f925f28ec92c07d5b72d6df4c240",
+              "size": 485888
+            }
+          ],
+          "config_file": "dgVoodoo.conf",
+          "config": [
+            {
+              "section": "General",
+              "entries": [{ "key": "OutputAPI", "value": "d3d11_fl11_0" }]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

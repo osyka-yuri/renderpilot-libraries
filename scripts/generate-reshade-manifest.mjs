@@ -1,26 +1,28 @@
 #!/usr/bin/env node
-// Generate the standalone `reshade_manifest.json` (repo root) from
-// `scripts/lib/reshade-sources.mjs` — the single published source of truth
-// for ReShade host URLs both the RenoDX and Luma manifests overlay onto their
-// own embedded (legacy-compat) `reshade` blocks at runtime.
+// Generate the standalone ReShade host manifest.
 //
-// This has no curated authoring inputs: the whole document is derived from
-// constants, so `--check` reuses the committed file's own `generated_at` and
-// diffs through the shared generated-output runner.
+// This script emits the current standalone v1 source catalogue and the flat
+// root compatibility projection. Current tool-v1 catalogues contain no ReShade
+// URLs; the RenoDX generator embeds this data only in its legacy v3 projection.
 
-import path from "node:path";
-
-import { buildReshadeManifest } from "./lib/reshade-manifest.mjs";
+import {
+  buildLegacyV1ReshadeManifest,
+  buildV1ReshadeManifest,
+} from "../catalogs/addons/reshade/build-manifest.mjs";
 import { runGenerateManifestMain } from "./lib/generate-manifest-runner.mjs";
-import { repoRoot } from "./catalog.mjs";
+import { addonCatalogs, repoRoot } from "./catalog.mjs";
 
 const FILES = Object.freeze({
-  manifest: path.join(repoRoot, "reshade_manifest.json"),
+  outputs: {
+    manifest: addonCatalogs.reshade.outputs.manifest.file,
+    legacy: addonCatalogs.reshade.outputs.legacy.file,
+  },
 });
 
 const HELP_TEXT = `Usage: node generate-reshade-manifest.mjs [--check]
 
-Generate reshade_manifest.json from scripts/lib/reshade-sources.mjs.
+Generate the v1 ReShade document and the legacy schema-v1 compatibility
+projection from the shared channel source.
 
   --check   Do not write the file; fail if the generated output differs.
   -h, --help
@@ -30,13 +32,14 @@ runGenerateManifestMain(() => ({
   files: FILES,
   repoRoot,
   helpText: HELP_TEXT,
-  build: ({ generatedAt }) => ({
-    manifest: buildReshadeManifest({ generatedAt }),
-  }),
+  build: ({ generatedAt }) => {
+    const manifest = buildV1ReshadeManifest({ generatedAt });
+    return { outputs: { manifest, legacy: buildLegacyV1ReshadeManifest(manifest) } };
+  },
   readInputs: ({ generatedAt }) => ({ generatedAt }),
   printSummary: (_stats, { ok }) => {
     if (ok) {
-      console.log("reshade_manifest.json: stable present, nightly url64/url32 set");
+      console.log("ReShade v1 and schema-v1 legacy projection are up to date");
     }
   },
 }));

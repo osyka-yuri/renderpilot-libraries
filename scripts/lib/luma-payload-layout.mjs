@@ -168,24 +168,24 @@ export function rootAddonFromZip(zipBytes) {
 }
 
 export function collectAssetPayloadIdentities(manifest) {
-  if (!isPlainObject(manifest) || !Array.isArray(manifest.titles)) {
-    throw new Error("luma_manifest.json must be an object with a titles array");
+  if (!isPlainObject(manifest) || !Array.isArray(manifest.games)) {
+    throw new Error("addons/v1/luma.json must be an object with a games array");
   }
 
   const identities = new Map();
-  for (const [index, title] of manifest.titles.entries()) {
-    if (!isPlainObject(title)) {
-      throw new Error(`luma_manifest.json titles[${index}] must be an object`);
+  for (const [index, game] of manifest.games.entries()) {
+    if (!isPlainObject(game) || !isPlainObject(game.package)) {
+      throw new Error(`addons/v1/luma.json games[${index}] must have a package object`);
     }
-    const { asset, addon_file: addonFile } = title;
+    const { release_asset: asset, addon_file: addonFile } = game.package;
     if (typeof asset !== "string" || asset.length === 0) {
       throw new Error(
-        `luma_manifest.json titles[${index}].asset must be a non-empty string`,
+        `addons/v1/luma.json games[${index}].package.release_asset must be a non-empty string`,
       );
     }
     if (typeof addonFile !== "string" || addonFile.length === 0) {
       throw new Error(
-        `luma_manifest.json titles[${index}].addon_file must be a non-empty string`,
+        `addons/v1/luma.json games[${index}].package.addon_file must be a non-empty string`,
       );
     }
 

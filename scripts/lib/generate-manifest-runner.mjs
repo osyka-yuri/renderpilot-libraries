@@ -1,29 +1,34 @@
 // Shared CLI/IO runner for generated manifest scripts (RenoDX, Luma, and the
 // standalone ReShade host manifest). The scripts differ only in which inputs
-// they read, how they build their manifest object, how many generated files
-// they emit, and the shape of their summary output. Everything else — argument
+// they read, how they build their documents, how many generated files they
+// emit, and the shape of their summary output. Everything else — argument
 // parsing, the `--check` vs write flow, the `generated_at` round-trip for
 // reproducible checks, output formatting, and exit-code plumbing — lives here.
 //
 //   await runGenerateManifest({
-//     files:   { manifest, pending?, exeCache? },
-//     build:   (inputs) => buildManifest(inputs),  // tool-specific
-//     readInputs,                                    // tool-specific input reader
-//     printSummary,                                  // tool-specific stats printer
-//     helpText,                                      // tool-specific usage string
+//     files: {
+//       outputs: { manifest, legacy?, pending? },
+//       exeCache?,
+//     },
+//     build: (inputs) => ({ outputs, stats? }),
+//     readInputs,
+//     printSummary,
+//     helpText,
 //   })
 //
-// `readInputs({ exeCache })` returns the remaining `buildManifest` args
-// (e.g. `{ wiki, overlay, exeCache, generatedAt }` for RenoDX,
-// `{ curatedGames, overlay, exeCache, generatedAt }` for Luma, or just
-// `{ generatedAt }` for ReShade), so each tool owns how its authoring files map
-// onto its `buildManifest` signature.
+// `files.outputs.manifest` is the primary document used for `generated_at`
+// round-trips under `--check`.
 
-import { existsSync, writeFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import path from "node:path";
 
 import { errorMessage, generatedAtFromEnv, assertPlainObject } from "./common.mjs";
-import { readJsonFile, readTextFile, stringifyFormattedJson } from "./json.mjs";
+import {
+  readJsonFile,
+  readTextFile,
+  stringifyFormattedJson,
+  writeTextFileAtomic,
+} from "./json.mjs";
 
 const FLAGS = Object.freeze({
   check: "--check",
@@ -81,6 +86,14 @@ function readExeCache(exeCacheFile) {
   return cache;
 }
 
+function primaryManifestFile(files) {
+  const manifest = files.outputs?.manifest;
+  if (!manifest) {
+    throw new Error("files.outputs.manifest is required (primary generated document path)");
+  }
+  return manifest;
+}
+
 function readGeneratedAtForRun(check, manifestFile) {
   if (!check || !existsSync(manifestFile)) {
     return generatedAtFromEnv();
@@ -98,21 +111,15 @@ function readGeneratedAtForRun(check, manifestFile) {
 }
 
 function generatedOutputSpecs(result, files) {
-  const specs = [
-    {
-      key: "manifest",
-      file: files.manifest,
-      value: result.manifest,
-    },
-  ];
-
-  if (files.pending) {
-    specs.push({
-      key: "pending",
-      file: files.pending,
-      value: result.pending,
-    });
+  if (!files.outputs || typeof files.outputs !== "object") {
+    throw new Error("files.outputs must map output keys to absolute file paths");
   }
+
+  const specs = Object.entries(files.outputs).map(([key, file]) => ({
+    key,
+    file,
+    value: result.outputs?.[key],
+  }));
 
   return specs;
 }
@@ -172,17 +179,17 @@ function checkGeneratedOutput({ file, text }, repoRoot) {
   return true;
 }
 
-function writeGeneratedOutputs(outputs, repoRoot) {
+async function writeGeneratedOutputs(outputs, repoRoot) {
   for (const output of outputs) {
-    writeGeneratedOutput(output, repoRoot);
+    await writeGeneratedOutput(output, repoRoot);
   }
 
   return true;
 }
 
-function writeGeneratedOutput({ file, text }, repoRoot) {
+async function writeGeneratedOutput({ file, text }, repoRoot) {
   try {
-    writeFileSync(file, text);
+    await writeTextFileAtomic(file, text);
   } catch (error) {
     throw new Error(`${relativeFile(file, repoRoot)}: ${errorMessage(error)}`);
   }
@@ -190,8 +197,8 @@ function writeGeneratedOutput({ file, text }, repoRoot) {
 
 /**
  * @param {object} opts
- * @param {object}    opts.files       — { manifest, pending?, exeCache? } paths
- * @param {function}  opts.build       — ({ ...inputs }) => manifest-build result
+ * @param {object}    opts.files       — { outputs: { manifest, ... }, exeCache? }
+ * @param {function}  opts.build       — ({ ...inputs }) => { outputs, stats? }
  * @param {function}  opts.readInputs  — ({ exeCache, generatedAt }) => inputs for `build`
  * @param {function} [opts.printSummary] — (stats, context) => void
  * @param {string}    opts.helpText
@@ -223,7 +230,7 @@ export async function runGenerateManifest({
   }
 
   const exeCache = readExeCache(files.exeCache);
-  const generatedAt = readGeneratedAtForRun(args.check, files.manifest);
+  const generatedAt = readGeneratedAtForRun(args.check, primaryManifestFile(files));
   const inputs = readInputs({ exeCache, generatedAt });
 
   const result = build(inputs);
@@ -232,7 +239,7 @@ export async function runGenerateManifest({
 
   const ok = args.check
     ? checkGeneratedOutputs(outputs, repoRoot)
-    : writeGeneratedOutputs(outputs, repoRoot);
+    : await writeGeneratedOutputs(outputs, repoRoot);
 
   printSummary(result.stats, { check: args.check, ok });
   return ok ? 0 : 1;

@@ -24,28 +24,29 @@ export class AssetUnavailableError extends Error {
 }
 
 /**
- * Asserts `manifest` is a plain object carrying a `titles` array — the
+ * Asserts `manifest` is a plain object carrying a v1 `games` array — the
  * minimal shape `collectReferencedAssets` reads. Luma has no `generics`
  * array (unlike RenoDX), so this is intentionally narrower than
  * `assertManifestShape` in `renodx-slug-checks.mjs`.
  */
 export function assertManifestShape(manifest) {
-  if (!isPlainObject(manifest) || !Array.isArray(manifest.titles)) {
-    throw new Error("luma_manifest.json must be an object with a titles array");
+  if (!isPlainObject(manifest) || !Array.isArray(manifest.games)) {
+    throw new Error("addons/v1/luma.json must be an object with a games array");
   }
 }
 
 /**
- * Collects the unique, non-empty `title.asset` values referenced by a
- * luma_manifest, returned as a sorted array. The HEAD loop in
+ * Collects the unique, non-empty `game.package.release_asset` values referenced
+ * by the v1 Luma document, returned as a sorted array. The HEAD loop in
  * `check-luma-assets.mjs` walks this list.
  */
 export function collectReferencedAssets(manifest) {
   const assets = new Set();
 
-  for (const title of manifest.titles) {
-    if (title && typeof title.asset === "string" && title.asset.length > 0) {
-      assets.add(title.asset);
+  for (const game of manifest.games) {
+    const asset = game?.package?.release_asset;
+    if (typeof asset === "string" && asset.length > 0) {
+      assets.add(asset);
     }
   }
 

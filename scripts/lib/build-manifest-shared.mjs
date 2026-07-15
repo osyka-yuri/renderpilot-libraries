@@ -1,26 +1,19 @@
-// Shared building blocks for both manifest builders
-// (`renodx_library_manifest/lib/build-manifest.mjs` and
-// `luma_library_manifest/lib/build-manifest.mjs`). The two pipelines emit
-// different manifest shapes (RenoDX carries `generics`/`split`/`slug`/
-// `compatibility`/`download_url`; Luma is narrower), but the low-level
-// machinery — match-rule uniqueness, the exe-cache → derived-exe resolver,
-// match-rule construction, id reservation, default overrides — is identical
-// and lives here.
+// Shared building blocks for the add-on manifest builders
+// (`catalogs/addons/renodx/lib/build-manifest.mjs` and
+// `catalogs/addons/luma/lib/build-manifest.mjs`). The pipelines emit different
+// public shapes, but the low-level machinery — match-rule uniqueness, the
+// exe-cache → derived-exe resolver, match-rule construction, id reservation,
+// and id reservation — is identical and lives here.
 //
-// Tool-specific `buildManifest`/`makeTitle`/`normalizeWiki|Curated`/
-// `buildStats` stay in their own `build-manifest.mjs`.
+// Tool-specific `buildManifest` / assemble / normalize / `buildStats` stay in
+// each catalogue's own `build-manifest.mjs`.
 
-import { addCaseInsensitiveUnique, deepFreeze } from "./common.mjs";
+import { addCaseInsensitiveUnique } from "./common.mjs";
 import { normalizeAppid, normalizeCachedExes } from "./overlay-shared.mjs";
 
 export const MATCH_TIERS = Object.freeze({
   steamAppid: 100,
   exeName: 70,
-});
-
-export const DEFAULTS = deepFreeze({
-  min_app_version: "1.0.0",
-  channel: "stable",
 });
 
 export const VALID_STATUSES = Object.freeze(
@@ -171,41 +164,10 @@ export function normalizedStatus(status, validStatuses) {
   return validStatuses.has(normalized) ? normalized : "unknown";
 }
 
-export function countTitlesByCategoryKind(titles, kind) {
-  return titles.filter((title) => title.category?.kind === kind).length;
-}
-
 export function reserveOutputId(seenIds, id, context) {
   if (seenIds.has(id)) {
     throw new Error(`duplicate title id "${id}" at ${context}`);
   }
 
   seenIds.add(id);
-}
-
-/**
- * Maps a per-title `status` to the published `channel`. Working titles go on
- * `stable`; anything else (`construction`/`unknown`/invalid) goes on `beta`.
- * The field is emitted only when it deviates from `DEFAULTS.channel`.
- */
-export function applyChannel(title, status) {
-  const channel = status === "working" ? "stable" : "beta";
-
-  if (channel !== DEFAULTS.channel) {
-    title.channel = channel;
-  }
-}
-
-/**
- * Emits `min_app_version` when `source.min_app_version` deviates from
- * `DEFAULTS.min_app_version`. `source` is whichever object the tool's
- * `makeTitle` already has in hand — RenoDX's per-title overlay entry, or
- * Luma's normalized curated-games row — both expose the same field.
- */
-export function applyMinAppVersion(title, source) {
-  const minAppVersion = source.min_app_version ?? DEFAULTS.min_app_version;
-
-  if (minAppVersion !== DEFAULTS.min_app_version) {
-    title.min_app_version = minAppVersion;
-  }
 }

@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://renderpilot.app/schema/addons/v1/luma.json",
+  "title": "Luma v1 manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "minimum_reshade_version", "games"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "minimum_reshade_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "games": { "type": "array", "items": { "$ref": "#/$defs/game" } }
+  },
+  "$defs": {
+    "message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "fallback_text"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "fallback_text": { "type": "string", "minLength": 1 }
+      }
+    },
+    "guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "kind", "fallback_text"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "kind": {
+          "enum": [
+            "game_setting",
+            "engine_ini",
+            "launch_argument",
+            "warning",
+            "compatibility",
+            "external_tool"
+          ]
+        },
+        "fallback_text": { "type": "string", "minLength": 1 },
+        "code": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["kind"],
+            "properties": {
+              "kind": { "enum": ["engine_ini", "launch_argument"] }
+            }
+          },
+          "then": { "required": ["code"] },
+          "else": { "not": { "required": ["code"] } }
+        }
+      ]
+    },
+    "match": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value", "tier"],
+      "properties": {
+        "kind": { "enum": ["steam_appid", "epic_id", "gog_id", "exe_sha256", "exe_name"] },
+        "value": { "type": "string", "minLength": 1, "pattern": "\\S" },
+        "tier": { "type": "integer", "minimum": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "steam_appid" } } },
+          "then": {
+            "properties": {
+              "value": { "pattern": "^[1-9]\\d*$" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "exe_name" } } },
+          "then": {
+            "properties": {
+              "value": {
+                "pattern": "^(?!\\.[eE][xX][eE]$)[^<>:\"/\\\\|?*\\u0000-\\u001F]+\\.[eE][xX][eE]$"
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "exe_sha256" } } },
+          "then": {
+            "properties": {
+              "value": { "$ref": "#/$defs/sha256" }
+            }
+          }
+        }
+      ]
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dlss_fsr", "hdr"],
+      "properties": {
+        "dlss_fsr": { "enum": ["supported", "unsupported", "experimental", "unknown"] },
+        "hdr": { "enum": ["supported", "unsupported", "experimental", "unknown"] }
+      }
+    },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "positiveSize": { "type": "integer", "minimum": 1 },
+    "gameDirectoryFile": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^/\\\\]+$"
+    },
+    "pinnedSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "sha256", "size"],
+      "properties": {
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "size": { "$ref": "#/$defs/positiveSize" }
+      }
+    },
+    "installMapEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "dest", "sha256", "size"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "dest": { "$ref": "#/$defs/gameDirectoryFile" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "size": { "$ref": "#/$defs/positiveSize" }
+      }
+    },
+    "managedConfigEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "value"],
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "value": { "type": "string", "minLength": 1 }
+      }
+    },
+    "managedConfigSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["section", "entries"],
+      "properties": {
+        "section": { "type": "string", "minLength": 1 },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/managedConfigEntry" }
+        }
+      }
+    },
+    "managedDependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "version",
+        "accepted_detected_apis",
+        "reshade_proxy_dll",
+        "source",
+        "install_map",
+        "config_file",
+        "config"
+      ],
+      "properties": {
+        "kind": { "const": "dgvoodoo2" },
+        "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "accepted_detected_apis": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["D3D9", "D3D10", "D3D11", "D3D12"] }
+        },
+        "reshade_proxy_dll": {
+          "enum": ["dxgi.dll", "d3d9.dll", "d3d10.dll", "d3d11.dll", "d3d12.dll"]
+        },
+        "source": { "$ref": "#/$defs/pinnedSource" },
+        "install_map": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/installMapEntry" }
+        },
+        "config_file": { "$ref": "#/$defs/gameDirectoryFile" },
+        "config": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/managedConfigSection" }
+        }
+      }
+    },
+    "requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "description": "Install-time requirements. Omitted when empty. Either or both keys may be present.",
+      "properties": {
+        "launch_arguments": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "managed_dependency": { "$ref": "#/$defs/managedDependency" }
+      }
+    },
+    "game": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "architecture", "status", "match", "package", "profile"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "architecture": { "enum": ["X86", "X64"] },
+        "status": { "enum": ["working", "construction", "unknown"] },
+        "match": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/match" } },
+        "package": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["release_asset", "addon_file"],
+          "properties": {
+            "release_asset": { "type": "string", "minLength": 1 },
+            "addon_file": { "type": "string", "minLength": 1 }
+          }
+        },
+        "profile": { "enum": ["game", "unreal", "unity"] },
+        "features": { "$ref": "#/$defs/features" },
+        "requirements": { "$ref": "#/$defs/requirements" },
+        "guidance": { "type": "array", "items": { "$ref": "#/$defs/guidance" } },
+        "availability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "message"],
+          "properties": {
+            "kind": { "const": "blocked" },
+            "message": { "$ref": "#/$defs/message" }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "profile": { "const": "unreal" } } },
+          "then": {
+            "required": ["features"],
+            "properties": {
+              "package": {
+                "properties": {
+                  "release_asset": { "const": "Luma-Unreal_Engine.zip" }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "profile": { "const": "unity" } } },
+          "then": {
+            "not": { "required": ["features"] },
+            "oneOf": [
+              {
+                "properties": {
+                  "architecture": { "const": "X64" },
+                  "package": {
+                    "properties": {
+                      "release_asset": { "const": "Luma-Unity_Engine.zip" }
+                    }
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "architecture": { "const": "X86" },
+                  "package": {
+                    "properties": {
+                      "release_asset": { "const": "Luma-Unity_Engine-x32.zip" }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if": { "properties": { "profile": { "const": "game" } } },
+          "then": {
+            "not": { "required": ["features"] },
+            "properties": {
+              "package": {
+                "properties": {
+                  "release_asset": {
+                    "not": {
+                      "enum": [
+                        "Luma-Unreal_Engine.zip",
+                        "Luma-Unity_Engine.zip",
+                        "Luma-Unity_Engine-x32.zip"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

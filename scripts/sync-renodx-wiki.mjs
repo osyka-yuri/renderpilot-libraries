@@ -5,20 +5,18 @@
 // lib/renodx-wiki.mjs; this file owns only IO and the command contract.
 
 import { readFile } from "node:fs/promises";
-import path from "node:path";
-
+import { addonCatalogs } from "./catalog.mjs";
 import { UsageError, assertPlainObject, errorMessage } from "./lib/common.mjs";
 import { githubHeaders } from "./lib/github.mjs";
+import { writeJsonFileAtomic } from "./lib/json.mjs";
 import {
   jsonChanged,
   fetchJsonWithTimeout,
   fetchWikiMarkdown,
   parseWikiSyncArgs,
-  writeJsonAtomic,
 } from "./lib/wiki-sync.mjs";
 import { parseRenodxWikiRows, reconcileRenodxWiki } from "./lib/renodx-wiki.mjs";
 
-const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const WIKI_URL = "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md";
 const SNAPSHOT_API =
   "https://api.github.com/repos/clshortfuse/renodx/releases/tags/snapshot";
@@ -66,8 +64,8 @@ async function main() {
     return;
   }
 
-  const wikiPath = path.join(REPO_ROOT, "renodx_library_manifest", "wiki_games.json");
-  const overlayPath = path.join(REPO_ROOT, "renodx_library_manifest", "match_overlay.json");
+  const wikiPath = addonCatalogs.renodx.sources.wiki;
+  const overlayPath = addonCatalogs.renodx.sources.overlay;
   const existingWiki = await readJsonOrDefault(wikiPath, []);
   if (!Array.isArray(existingWiki)) throw new Error(`${wikiPath} must be a JSON array.`);
   const overlay = assertPlainObject(await readJsonOrDefault(overlayPath, {}), overlayPath);
@@ -93,8 +91,8 @@ async function main() {
     return;
   }
 
-  await writeJsonAtomic(wikiPath, result.wikiGames);
-  await writeJsonAtomic(overlayPath, result.overlay);
+  await writeJsonFileAtomic(wikiPath, result.wikiGames);
+  await writeJsonFileAtomic(overlayPath, result.overlay);
   console.log(
     [
       `Synced ${result.wikiGames.length} games.`,

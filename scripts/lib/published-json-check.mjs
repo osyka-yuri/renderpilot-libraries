@@ -51,24 +51,26 @@ export function sha256Hex(buf) {
 // ── local loading ──
 
 /**
- * Reads a repo-relative JSON file and returns `{ key, relPath, size, sha256 }`.
+ * Reads a publication-registry entry (`{ file, r2Key }`) and returns the
+ * local digest together with its explicit remote key.
  *
  * `readFile` is `(absPath: string) => Promise<Buffer>`.
  */
-export async function loadLocalJson(relPath, repoRoot, readFile) {
-  const abs = path.resolve(repoRoot, relPath);
+export async function loadLocalJson(document, repoRoot, readFile) {
+  const { file, r2Key } = document;
+  const abs = path.resolve(repoRoot, file);
   let body;
   try {
     body = await readFile(abs);
   } catch (error) {
-    throw new Error(`failed to read ${relPath}: ${errorMessage(error)}`, {
+    throw new Error(`failed to read ${file}: ${errorMessage(error)}`, {
       cause: error,
     });
   }
 
   return {
-    key: path.posix.basename(relPath.replaceAll(path.win32.sep, path.posix.sep)),
-    relPath,
+    key: r2Key,
+    relPath: file,
     size: body.length,
     sha256: sha256Hex(body),
   };

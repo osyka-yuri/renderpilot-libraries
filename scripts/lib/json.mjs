@@ -1,5 +1,6 @@
-import { readFile } from "node:fs/promises";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFile, rename, rm, writeFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 
 import { assertPlainObject, errorMessage } from "./common.mjs";
 
@@ -28,14 +29,6 @@ function stringifyJsonInternal(value, context, space) {
   }
 
   return text;
-}
-
-function writeTextFile(file, text, context = file) {
-  try {
-    writeFileSync(file, text, UTF8);
-  } catch (error) {
-    fail(context, errorMessage(error), error);
-  }
 }
 
 async function loadPrettier(context) {
@@ -125,8 +118,27 @@ export async function readJsonFileAsync(file, context = file) {
   }
 }
 
+export async function writeTextFileAtomic(file, text, context = file) {
+  const temp = path.join(
+    path.dirname(file),
+    `.${path.basename(file)}.${process.pid}.${Date.now()}.tmp`,
+  );
+
+  try {
+    await writeFile(temp, text, UTF8);
+    await rename(temp, file);
+  } catch (error) {
+    await rm(temp, { force: true }).catch(() => {});
+    fail(context, errorMessage(error), error);
+  }
+}
+
+export async function writeJsonFileAtomic(file, value) {
+  await writeTextFileAtomic(file, stringifyJson(value));
+}
+
 export async function writeFormattedJsonFile(file, value) {
-  writeTextFile(file, await stringifyFormattedJson(value, file));
+  await writeTextFileAtomic(file, await stringifyFormattedJson(value, file));
 }
 
 export function sortNumericObject(value, context = "object") {

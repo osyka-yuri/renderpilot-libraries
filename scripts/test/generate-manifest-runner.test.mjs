@@ -19,7 +19,9 @@ async function withTempDir(fn) {
 test("runGenerateManifest writes and checks a single generated manifest output", async () => {
   await withTempDir(async (repoRoot) => {
     const files = {
-      manifest: path.join(repoRoot, "reshade_manifest.json"),
+      outputs: {
+        manifest: path.join(repoRoot, "reshade_manifest.json"),
+      },
     };
 
     const options = {
@@ -27,9 +29,11 @@ test("runGenerateManifest writes and checks a single generated manifest output",
       repoRoot,
       helpText: "help",
       build: ({ generatedAt }) => ({
-        manifest: {
-          schema_version: 1,
-          generated_at: generatedAt,
+        outputs: {
+          manifest: {
+            schema_version: 1,
+            generated_at: generatedAt,
+          },
         },
       }),
       readInputs: ({ generatedAt }) => ({ generatedAt }),
@@ -43,8 +47,10 @@ test("runGenerateManifest writes and checks a single generated manifest output",
 test("runGenerateManifest writes and checks manifest plus pending outputs", async () => {
   await withTempDir(async (repoRoot) => {
     const files = {
-      manifest: path.join(repoRoot, "tool_manifest.json"),
-      pending: path.join(repoRoot, "tool_pending.json"),
+      outputs: {
+        manifest: path.join(repoRoot, "tool_manifest.json"),
+        pending: path.join(repoRoot, "tool_pending.json"),
+      },
       exeCache: path.join(repoRoot, "steam-appid-exe.json"),
     };
 
@@ -55,17 +61,64 @@ test("runGenerateManifest writes and checks manifest plus pending outputs", asyn
       repoRoot,
       helpText: "help",
       build: ({ generatedAt, exeCache }) => ({
-        manifest: {
-          schema_version: 1,
-          generated_at: generatedAt,
-          exes: exeCache["10"],
+        outputs: {
+          manifest: {
+            schema_version: 1,
+            generated_at: generatedAt,
+            exes: exeCache["10"],
+          },
+          pending: [{ id: "needs-match" }],
         },
-        pending: [{ id: "needs-match" }],
       }),
       readInputs: ({ exeCache, generatedAt }) => ({ exeCache, generatedAt }),
     };
 
     assert.equal(await runGenerateManifest(options), 0);
     assert.equal(await runGenerateManifest({ ...options, argv: ["--check"] }), 0);
+  });
+});
+
+test("runGenerateManifest writes and checks primary plus legacy projection", async () => {
+  await withTempDir(async (repoRoot) => {
+    const files = {
+      outputs: {
+        manifest: path.join(repoRoot, "addons", "v1", "tool.json"),
+        legacy: path.join(repoRoot, "tool_legacy.json"),
+      },
+    };
+
+    await fs.mkdir(path.dirname(files.outputs.manifest), { recursive: true });
+
+    const options = {
+      files,
+      repoRoot,
+      helpText: "help",
+      build: ({ generatedAt }) => ({
+        outputs: {
+          manifest: { schema_version: 1, generated_at: generatedAt, games: [] },
+          legacy: { schema_version: 3, generated_at: generatedAt, titles: [] },
+        },
+      }),
+      readInputs: ({ generatedAt }) => ({ generatedAt }),
+    };
+
+    assert.equal(await runGenerateManifest(options), 0);
+    assert.equal(await runGenerateManifest({ ...options, argv: ["--check"] }), 0);
+  });
+});
+
+test("runGenerateManifest requires files.outputs.manifest", async () => {
+  await withTempDir(async (repoRoot) => {
+    await assert.rejects(
+      () =>
+        runGenerateManifest({
+          files: { outputs: {} },
+          repoRoot,
+          helpText: "help",
+          build: () => ({ outputs: {} }),
+          readInputs: () => ({}),
+        }),
+      /files\.outputs\.manifest is required/,
+    );
   });
 });

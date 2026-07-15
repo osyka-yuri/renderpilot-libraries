@@ -15,7 +15,7 @@
 import { readFile } from "node:fs/promises";
 
 import { errorMessage, UsageError } from "./lib/common.mjs";
-import { r2, repoRoot, servedJson } from "./catalog.mjs";
+import { publishedJsonDocuments, r2, repoRoot } from "./catalog.mjs";
 import {
   parseCheckArgs,
   loadLocalJson,
@@ -50,7 +50,9 @@ async function main(argv = process.argv.slice(2)) {
   }
 
   const locals = await Promise.all(
-    servedJson.map((rel) => loadLocalJson(rel, repoRoot, BUF_READ_FILE)),
+    publishedJsonDocuments.map((document) =>
+      loadLocalJson(document, repoRoot, BUF_READ_FILE),
+    ),
   );
 
   if (options.dryRun) {

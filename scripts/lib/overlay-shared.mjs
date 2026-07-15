@@ -1,13 +1,10 @@
-// Shared overlay primitives used by both the RenoDX and Luma manifest
-// pipelines (`renodx_library_manifest/lib/overlay.mjs` and
-// `luma_library_manifest/lib/overlay.mjs`). Anything that is identical
-// between the two tools lives here so the two cannot drift on the basic
-// shape of match-overlay validation (AppID parsing, exe-basename rules,
-// unknown-field warnings, the recursive-vs-flat appid collectors).
+// Shared match-identity and overlay primitives. AppID parsing and executable
+// basename rules are used by both add-on authoring pipelines; unknown-field
+// warnings and recursive collectors support the RenoDX match overlay.
 //
-// Tool-specific overlay concerns (RenoDX's `split`/`slug`/`category`/
-// `external`/`native_hdr`, Luma's curated-games-driven `validateOverlay`)
-// stay in their own `overlay.mjs`.
+// Luma no longer uses a separate match_overlay; match rules live on curated
+// profiles. RenoDX-specific concerns (`split` / `slug` / `category` /
+// `external` / `native_hdr`) stay in `catalogs/addons/renodx/lib/overlay.mjs`.
 
 import {
   addCaseInsensitiveUnique,
@@ -117,18 +114,5 @@ export function normalizeCachedExes(value, context) {
 export function addNormalizedAppids(out, overlay, context) {
   for (const appid of normalizeAppids(overlay, context)) {
     out.add(appid);
-  }
-}
-
-/**
- * Flat (non-recursive) collector: gathers `appid`/`appids` from each
- * top-level overlay entry. Used by Luma (which has no `split`) and by
- * `enrich-exe.mjs` to find which AppIDs to fetch.
- */
-export function collectOverlayAppidsFlat(value, into, context = "match_overlay.json") {
-  assertPlainObject(value, context);
-
-  for (const [id, entry] of Object.entries(value)) {
-    addNormalizedAppids(into, entry, `${context}."${id}"`);
   }
 }

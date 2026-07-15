@@ -13,13 +13,21 @@ const moduleDir = import.meta.dirname;
 
 export const repoRoot = path.resolve(moduleDir, "..");
 
+export const resolveRepoPath = (...segments) => path.join(repoRoot, ...segments);
+
+export const sharedFiles = Object.freeze({
+  steamExeCache: resolveRepoPath("scripts", "steam-appid-exe.json"),
+});
+
 const SCHEMAS = Object.freeze({
   libraryCatalog: "schemas/library_catalog.schema.json",
   dlssPresetManifest: "schemas/dlss_preset_manifest.schema.json",
   dlssSettingsCatalog: "schemas/dlss_settings_catalog.schema.json",
-  renodxManifest: "schemas/renodx_manifest.schema.json",
-  lumaManifest: "schemas/luma_manifest.schema.json",
-  reshadeManifest: "schemas/reshade_manifest.schema.json",
+  renodxManifestV1: "catalogs/addons/renodx/manifest-v1.schema.json",
+  renodxManifestV3: "catalogs/addons/renodx/manifest-v3.schema.json",
+  lumaManifestV1: "catalogs/addons/luma/manifest-v1.schema.json",
+  reshadeManifestV1Current: "catalogs/addons/reshade/manifest-v1.schema.json",
+  reshadeLegacyManifestV1: "catalogs/addons/reshade/manifest-legacy-v1.schema.json",
 });
 
 const defineDocuments = (documents) =>
@@ -34,29 +42,33 @@ const defineDocuments = (documents) =>
  * `dlss_settings.json` is intentionally not published because it is bundled into
  * the app at compile time.
  *
- * `renodx_manifest.json` is safe to publish because it carries no hashes or
- * binaries; add-ons are fetched live from upstream. The slug-availability check
- * guards its contents.
+ * Versioned v1 documents are consumed only by the current application. The two
+ * root legacy documents are kept exclusively for pre-v1 clients until a
+ * separately announced end of life.
  */
 export const jsonDocuments = defineDocuments([
   {
     file: "manifest.json",
     schema: SCHEMAS.libraryCatalog,
+    r2Key: "manifest.json",
     publishedToR2: true,
   },
   {
     file: "dlss_presets.json",
     schema: SCHEMAS.dlssPresetManifest,
+    r2Key: "dlss_presets.json",
     publishedToR2: true,
   },
   {
     file: "dlss_g_presets.json",
     schema: SCHEMAS.dlssPresetManifest,
+    r2Key: "dlss_g_presets.json",
     publishedToR2: true,
   },
   {
     file: "dlss_d_presets.json",
     schema: SCHEMAS.dlssPresetManifest,
+    r2Key: "dlss_d_presets.json",
     publishedToR2: true,
   },
   {
@@ -65,18 +77,33 @@ export const jsonDocuments = defineDocuments([
     publishedToR2: false,
   },
   {
-    file: "renodx_manifest.json",
-    schema: SCHEMAS.renodxManifest,
+    file: "addons/v1/renodx.json",
+    schema: SCHEMAS.renodxManifestV1,
+    r2Key: "addons/v1/renodx.json",
     publishedToR2: true,
   },
   {
-    file: "luma_manifest.json",
-    schema: SCHEMAS.lumaManifest,
+    file: "renodx_manifest.json",
+    schema: SCHEMAS.renodxManifestV3,
+    r2Key: "renodx_manifest.json",
+    publishedToR2: true,
+  },
+  {
+    file: "addons/v1/luma.json",
+    schema: SCHEMAS.lumaManifestV1,
+    r2Key: "addons/v1/luma.json",
+    publishedToR2: true,
+  },
+  {
+    file: "addons/v1/reshade.json",
+    schema: SCHEMAS.reshadeManifestV1Current,
+    r2Key: "addons/v1/reshade.json",
     publishedToR2: true,
   },
   {
     file: "reshade_manifest.json",
-    schema: SCHEMAS.reshadeManifest,
+    schema: SCHEMAS.reshadeLegacyManifestV1,
+    r2Key: "reshade_manifest.json",
     publishedToR2: true,
   },
 ]);
@@ -88,9 +115,82 @@ export const schemaChecks = Object.freeze(
 );
 
 // The JSON files the app fetches from R2 — the only documents CI publishes.
-export const servedJson = Object.freeze(
-  jsonDocuments.filter(({ publishedToR2 }) => publishedToR2).map(({ file }) => file),
+export const publishedJsonDocuments = Object.freeze(
+  jsonDocuments
+    .filter(({ publishedToR2 }) => publishedToR2)
+    .map(({ file, r2Key }) => Object.freeze({ file, r2Key })),
 );
+
+const documentByFile = new Map(jsonDocuments.map((document) => [document.file, document]));
+
+function generatedDocument(file) {
+  const document = documentByFile.get(file);
+  if (!document) {
+    throw new Error(`Unknown generated document: ${file}`);
+  }
+  return Object.freeze({
+    file: resolveRepoPath(...file.split("/")),
+    relativeFile: document.file,
+    schema: resolveRepoPath(...document.schema.split("/")),
+    r2Key: document.r2Key ?? null,
+  });
+}
+
+const addonCatalog = (name, sources, outputs) =>
+  Object.freeze({
+    directory: resolveRepoPath("catalogs", "addons", name),
+    sources: Object.freeze(
+      Object.fromEntries(
+        Object.entries(sources).map(([key, file]) => [
+          key,
+          resolveRepoPath("catalogs", "addons", name, file),
+        ]),
+      ),
+    ),
+    outputs: Object.freeze(
+      Object.fromEntries(
+        Object.entries(outputs).map(([key, file]) => [key, generatedDocument(file)]),
+      ),
+    ),
+  });
+
+/**
+ * Complete add-on repository layout. Generators, synchronizers, matchers, and
+ * remote tooling import this registry instead of reconstructing paths or R2
+ * object keys independently.
+ */
+export const addonCatalogs = Object.freeze({
+  luma: addonCatalog(
+    "luma",
+    {
+      curatedGames: "curated_games.json",
+      pending: "pending_match.json",
+      unmatched: "unmatched.json",
+    },
+    { manifest: "addons/v1/luma.json" },
+  ),
+  renodx: addonCatalog(
+    "renodx",
+    {
+      wiki: "wiki_games.json",
+      overlay: "match_overlay.json",
+      pending: "pending_match.json",
+      unmatched: "unmatched.json",
+    },
+    {
+      manifest: "addons/v1/renodx.json",
+      legacy: "renodx_manifest.json",
+    },
+  ),
+  reshade: addonCatalog(
+    "reshade",
+    {},
+    {
+      manifest: "addons/v1/reshade.json",
+      legacy: "reshade_manifest.json",
+    },
+  ),
+});
 
 const DEFAULT_R2 = Object.freeze({
   bucket: "renderpilot-libraries",

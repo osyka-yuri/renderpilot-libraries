@@ -7,7 +7,6 @@ import {
   RESHADE_PROXY_DLLS,
   assertSemver,
   assertSingleLineString,
-  assertOptionalSingleLineString,
   assertNonEmptyStringArray,
   assertOptionalNonEmptyStringArray,
   assertUniqueStringValues,
@@ -53,12 +52,6 @@ test("assertSingleLineString rejects multiline config values", () => {
   assert.throws(() => assertSingleLineString("line1\r\nline2", "field"), /single-line/);
   assert.throws(() => assertSingleLineString("", "field"), /non-empty/);
   assert.throws(() => assertSingleLineString("   ", "field"), /non-empty/);
-});
-
-test("assertOptionalSingleLineString returns null for missing values", () => {
-  assert.equal(assertOptionalSingleLineString(undefined, "field"), null);
-  assert.equal(assertOptionalSingleLineString(null, "field"), null);
-  assert.equal(assertOptionalSingleLineString("value", "field"), "value");
 });
 
 // ── string arrays ──

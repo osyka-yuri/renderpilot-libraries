@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-06T00:00:00Z",
+  "generated_at": "2026-07-15T00:00:00Z",
   "reshade": {
     "stable": { "url": "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe" },
     "nightly": {
@@ -11,12 +11,12 @@
   "generics": [
     {
       "engine": "unity",
+      "label_key": "renodx.generic.unity",
       "slug": "unityengine",
       "url64": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon64",
-      "url32": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon32",
-      "label_key": "renodx.generic.unity"
+      "url32": "https://github.com/NotVoosh/renodx-unity/releases/download/snapshot/renodx-unityengine.addon32"
     },
-    { "engine": "unreal", "slug": "unrealengine", "label_key": "renodx.generic.universal" }
+    { "engine": "unreal", "label_key": "renodx.generic.universal", "slug": "unrealengine" }
   ],
   "defaults": { "min_app_version": "1.0.0", "channel": "stable" },
   "titles": [
@@ -94,8 +94,8 @@
         { "kind": "steam_appid", "value": "1336490", "tier": 100 },
         { "kind": "exe_name", "value": "Against the Storm.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+      "channel": "beta"
     },
     {
       "id": "animal-well",
@@ -145,11 +145,6 @@
       "slug": "assassin-s-creed-ezio-trilogy-dgvoodoo",
       "arch": "X64",
       "status": "construction",
-      "category": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/assassinscreedii/mods/250",
-        "label_key": "renodx.external.nexus"
-      },
       "match": [
         { "kind": "steam_appid", "value": "33230", "tier": 100 },
         { "kind": "steam_appid", "value": "48190", "tier": 100 },
@@ -158,6 +153,11 @@
         { "kind": "exe_name", "value": "ACBSP.exe", "tier": 70 },
         { "kind": "exe_name", "value": "ACRSP.exe", "tier": 70 }
       ],
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/assassinscreedii/mods/250",
+        "label_key": "renodx.external.nexus"
+      },
       "channel": "beta"
     },
     {
@@ -166,15 +166,15 @@
       "slug": "assassin-s-creed-iii-original",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "208480", "tier": 100 },
+        { "kind": "exe_name", "value": "AC3SP.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreediii/mods/161",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "208480", "tier": 100 },
-        { "kind": "exe_name", "value": "AC3SP.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "assassin-s-creed-iii-remastered",
@@ -182,16 +182,16 @@
       "slug": "assassin-s-creed-iii-remastered",
       "arch": "X64",
       "status": "working",
-      "category": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
-        "label_key": "renodx.external.nexus"
-      },
       "match": [
         { "kind": "steam_appid", "value": "911400", "tier": 100 },
         { "kind": "exe_name", "value": "ACIII.exe", "tier": 70 },
         { "kind": "exe_name", "value": "ACLiberation.exe", "tier": 70 }
-      ]
+      ],
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
+        "label_key": "renodx.external.nexus"
+      }
     },
     {
       "id": "assassins-creed-iv-black-flag",
@@ -204,6 +204,22 @@
         { "kind": "exe_name", "value": "AC4BFSP.exe", "tier": 70 }
       ],
       "channel": "beta"
+    },
+    {
+      "id": "assassin-s-creed-black-flag-resynced",
+      "name": "Assassin’s Creed®: Black Flag Resynced",
+      "slug": "asscreedblackflagresynced",
+      "arch": "X64",
+      "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "3751950", "tier": 100 },
+        { "kind": "exe_name", "value": "ACBlackFlag.exe", "tier": 70 }
+      ],
+      "category": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/assassinscreedblackflagresynced/mods/42",
+        "label_key": "renodx.external.nexus"
+      }
     },
     {
       "id": "assassins-creed-mirage",
@@ -255,15 +271,15 @@
       "slug": "assassin-s-creed-syndicate",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "368500", "tier": 100 },
+        { "kind": "exe_name", "value": "ACS.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "368500", "tier": 100 },
-        { "kind": "exe_name", "value": "ACS.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "assassin-s-creed-unity",
@@ -271,15 +287,15 @@
       "slug": "assassin-s-creed-unity",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "289650", "tier": 100 },
+        { "kind": "exe_name", "value": "ACU.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "289650", "tier": 100 },
-        { "kind": "exe_name", "value": "ACU.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "assassins-creed-valhalla",
@@ -358,8 +374,8 @@
         { "kind": "steam_appid", "value": "3123410", "tier": 100 },
         { "kind": "exe_name", "value": "Atelier_Yumia.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64",
+      "channel": "beta"
     },
     {
       "id": "atlas-fallen",
@@ -432,8 +448,8 @@
         { "kind": "steam_appid", "value": "502280", "tier": 100 },
         { "kind": "exe_name", "value": "BERSERK.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64",
+      "channel": "beta"
     },
     {
       "id": "beyond-blue",
@@ -474,17 +490,6 @@
       "match": [
         { "kind": "steam_appid", "value": "49520", "tier": 100 },
         { "kind": "steam_appid", "value": "261640", "tier": 100 }
-      ]
-    },
-    {
-      "id": "borderlands-4",
-      "name": "Borderlands 4",
-      "slug": "borderlands4",
-      "arch": "X64",
-      "status": "working",
-      "match": [
-        { "kind": "steam_appid", "value": "1285190", "tier": 100 },
-        { "kind": "exe_name", "value": "Borderlands4.exe", "tier": 70 }
       ]
     },
     {
@@ -571,12 +576,11 @@
       "name": "CODE VEIN II",
       "slug": "codevein2",
       "arch": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         { "kind": "steam_appid", "value": "2362060", "tier": 100 },
         { "kind": "exe_name", "value": "CodeVein2.exe", "tier": 70 }
       ],
-      "channel": "beta",
       "download_url": "https://marat569.github.io/renodx/renodx-codevein2.addon64"
     },
     {
@@ -608,15 +612,15 @@
       "slug": "crysis-remastered",
       "arch": "X64",
       "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1715130", "tier": 100 },
+        { "kind": "exe_name", "value": "CrysisRemastered.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://discord.com/invite/renodx",
         "label_key": "renodx.external.discord"
       },
-      "match": [
-        { "kind": "steam_appid", "value": "1715130", "tier": 100 },
-        { "kind": "exe_name", "value": "CrysisRemastered.exe", "tier": 70 }
-      ],
       "channel": "beta"
     },
     {
@@ -648,8 +652,8 @@
         { "kind": "steam_appid", "value": "1940340", "tier": 100 },
         { "kind": "exe_name", "value": "Darkest Dungeon II.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+      "channel": "beta"
     },
     {
       "id": "darksiders-warmastered-edition",
@@ -674,8 +678,8 @@
         { "kind": "exe_name", "value": "DeadIslandGame.exe", "tier": 70 },
         { "kind": "exe_name", "value": "DeadIslandRiptideGame.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://notvoosh.github.io/renodx/renodx-deadislandde.addon64"
+      "download_url": "https://notvoosh.github.io/renodx/renodx-deadislandde.addon64",
+      "channel": "beta"
     },
     {
       "id": "dead-island-2",
@@ -751,15 +755,15 @@
       "slug": "dirt-4",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "421020", "tier": 100 },
+        { "kind": "exe_name", "value": "dirt4.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/dirt4/mods/3",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "421020", "tier": 100 },
-        { "kind": "exe_name", "value": "dirt4.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "dirt-rally-2-0",
@@ -834,8 +838,8 @@
         { "kind": "steam_appid", "value": "2499860", "tier": 100 },
         { "kind": "exe_name", "value": "DQ7R.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
+      "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64",
+      "channel": "beta"
     },
     {
       "id": "dragon-ball-sparking-zero",
@@ -896,8 +900,8 @@
         { "kind": "steam_appid", "value": "2725260", "tier": 100 },
         { "kind": "exe_name", "value": "EnderMagnolia.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-endermagnolia.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-endermagnolia.addon64",
+      "channel": "beta"
     },
     {
       "id": "fantasian-neo-dimension",
@@ -909,8 +913,8 @@
         { "kind": "steam_appid", "value": "2844850", "tier": 100 },
         { "kind": "exe_name", "value": "FantasianND.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-fantasianneodimension.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-fantasianneodimension.addon64",
+      "channel": "beta"
     },
     {
       "id": "fallout-4",
@@ -978,15 +982,15 @@
       "slug": "far-cry-primal",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "371660", "tier": 100 },
+        { "kind": "exe_name", "value": "FCPrimal.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/farcryprimal/mods/28",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "371660", "tier": 100 },
-        { "kind": "exe_name", "value": "FCPrimal.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "fate-samurai-remnant",
@@ -998,8 +1002,8 @@
         { "kind": "steam_appid", "value": "1902690", "tier": 100 },
         { "kind": "exe_name", "value": "FateSamuraiRemnant.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-fatesamurairemnant.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-fatesamurairemnant.addon64",
+      "channel": "beta"
     },
     {
       "id": "final-fantasy-7-rebirth",
@@ -1082,15 +1086,15 @@
       "slug": "ghost-recon-wildlands",
       "arch": "X64",
       "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "460930", "tier": 100 },
+        { "kind": "exe_name", "value": "GRW.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
         "label_key": "renodx.external.nexus"
       },
-      "match": [
-        { "kind": "steam_appid", "value": "460930", "tier": 100 },
-        { "kind": "exe_name", "value": "GRW.exe", "tier": 70 }
-      ],
       "channel": "beta"
     },
     {
@@ -1200,8 +1204,8 @@
         { "kind": "steam_appid", "value": "1284210", "tier": 100 },
         { "kind": "exe_name", "value": "Gw2-64.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64"
+      "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64",
+      "channel": "beta"
     },
     {
       "id": "hades",
@@ -1245,8 +1249,8 @@
         { "kind": "steam_appid", "value": "1161580", "tier": 100 },
         { "kind": "exe_name", "value": "Shipbreaker.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+      "channel": "beta"
     },
     {
       "id": "heaven-burns-red",
@@ -1335,8 +1339,8 @@
         { "kind": "steam_appid", "value": "1113120", "tier": 100 },
         { "kind": "exe_name", "value": "Ixion.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+      "channel": "beta"
     },
     {
       "id": "james-cameron-s-avatar-the-game",
@@ -1433,15 +1437,15 @@
       "slug": "senkiseki",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "991270", "tier": 100 },
+        { "kind": "exe_name", "value": "ed8_3_PC.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
         "label_key": "renodx.external.discord"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "991270", "tier": 100 },
-        { "kind": "exe_name", "value": "ed8_3_PC.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "trails-of-cold-steel-cs4",
@@ -1449,15 +1453,15 @@
       "slug": "senkiseki",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1198090", "tier": 100 },
+        { "kind": "exe_name", "value": "ed8_4_PC.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
         "label_key": "renodx.external.discord"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "1198090", "tier": 100 },
-        { "kind": "exe_name", "value": "ed8_4_PC.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "trails-of-cold-steel-reverie",
@@ -1465,15 +1469,15 @@
       "slug": "senkiseki",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "1668540", "tier": 100 },
+        { "kind": "exe_name", "value": "hnk.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://discord.com/channels/1408098019194310818/1410855640112566375",
         "label_key": "renodx.external.discord"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "1668540", "tier": 100 },
-        { "kind": "exe_name", "value": "hnk.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "trails-in-the-sky-1st-chapter",
@@ -1553,15 +1557,15 @@
       "slug": "legohpc",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2950340", "tier": 100 },
+        { "kind": "exe_name", "value": "LHPC.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/legoharrypottercollection/mods/4",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "2950340", "tier": 100 },
-        { "kind": "exe_name", "value": "LHPC.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "like-a-dragon-pirate-yakuza-in-hawaii",
@@ -1569,12 +1573,12 @@
       "slug": "yakuzapirates",
       "arch": "X64",
       "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "3061810", "tier": 100 }],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [{ "kind": "steam_appid", "value": "3061810", "tier": 100 }]
+      }
     },
     {
       "id": "like-a-dragon-gaiden-the-man-who-erased-his-name",
@@ -1582,15 +1586,15 @@
       "slug": "yakuzapirates",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2375550", "tier": 100 },
+        { "kind": "exe_name", "value": "likeadragongaiden.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "2375550", "tier": 100 },
-        { "kind": "exe_name", "value": "likeadragongaiden.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "like-a-dragon-infinite-wealth",
@@ -1598,12 +1602,12 @@
       "slug": "yakuzapirates",
       "arch": "X64",
       "status": "working",
+      "match": [{ "kind": "steam_appid", "value": "2072450", "tier": 100 }],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [{ "kind": "steam_appid", "value": "2072450", "tier": 100 }]
+      }
     },
     {
       "id": "lost-planet",
@@ -1686,7 +1690,7 @@
     },
     {
       "id": "mass-effect-legendary-edition",
-      "name": "Mass Effect : Legendary Edition",
+      "name": "Mass Effect: Legendary Edition",
       "slug": "masseffectle",
       "arch": "X64",
       "status": "working",
@@ -1742,15 +1746,15 @@
       "slug": "mirror-s-edge",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "17410", "tier": 100 },
+        { "kind": "exe_name", "value": "MirrorsEdge.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/mirrorsedge/mods/24",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "17410", "tier": 100 },
-        { "kind": "exe_name", "value": "MirrorsEdge.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "monster-hunter-rise",
@@ -1803,8 +1807,8 @@
         { "kind": "steam_appid", "value": "1113560", "tier": 100 },
         { "kind": "exe_name", "value": "NieR Replicant ver.1.22474487139.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-nierreplicant.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-nierreplicant.addon64",
+      "channel": "beta"
     },
     {
       "id": "nights-of-azure-1",
@@ -1813,8 +1817,8 @@
       "arch": "X64",
       "status": "construction",
       "match": [{ "kind": "steam_appid", "value": "527280", "tier": 100 }],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64",
+      "channel": "beta"
     },
     {
       "id": "nights-of-azure-2",
@@ -1823,8 +1827,8 @@
       "arch": "X64",
       "status": "construction",
       "match": [{ "kind": "steam_appid", "value": "636570", "tier": 100 }],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64",
+      "channel": "beta"
     },
     {
       "id": "ninja-gaiden-4",
@@ -1870,8 +1874,8 @@
         { "kind": "steam_appid", "value": "1325200", "tier": 100 },
         { "kind": "exe_name", "value": "nioh2.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64",
+      "channel": "beta"
     },
     {
       "id": "nioh-3",
@@ -1890,15 +1894,15 @@
       "slug": "no-man-s-sky",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "275850", "tier": 100 },
+        { "kind": "exe_name", "value": "NMS.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/nomanssky/mods/4061",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "275850", "tier": 100 },
-        { "kind": "exe_name", "value": "NMS.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "opus-echo-of-starsong-full-bloom-edition",
@@ -1954,8 +1958,8 @@
         { "kind": "steam_appid", "value": "1184370", "tier": 100 },
         { "kind": "exe_name", "value": "Wrath.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64",
+      "channel": "beta"
     },
     {
       "id": "path-of-exile-2-dx11-only",
@@ -2010,8 +2014,8 @@
       "arch": "X64",
       "status": "construction",
       "match": [{ "kind": "steam_appid", "value": "1382330", "tier": 100 }],
-      "channel": "beta",
-      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64"
+      "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64",
+      "channel": "beta"
     },
     {
       "id": "pragmata",
@@ -2041,15 +2045,15 @@
       "slug": "red-dead-redemption-2-vulkan",
       "arch": "X64",
       "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "1174180", "tier": 100 },
+        { "kind": "exe_name", "value": "PlayRDR2.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://discord.com/invite/renodx",
         "label_key": "renodx.external.discord"
       },
-      "match": [
-        { "kind": "steam_appid", "value": "1174180", "tier": 100 },
-        { "kind": "exe_name", "value": "PlayRDR2.exe", "tier": 70 }
-      ],
       "channel": "beta"
     },
     {
@@ -2162,8 +2166,8 @@
         { "kind": "steam_appid", "value": "1340990", "tier": 100 },
         { "kind": "exe_name", "value": "Ronin.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-riseofronin.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-riseofronin.addon64",
+      "channel": "beta"
     },
     {
       "id": "raidou-remastered-the-mystery-of-the-soulless-army",
@@ -2175,8 +2179,8 @@
         { "kind": "steam_appid", "value": "2288350", "tier": 100 },
         { "kind": "exe_name", "value": "Raidou TMOTSA.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64",
+      "channel": "beta"
     },
     {
       "id": "robocop-rogue-city",
@@ -2192,7 +2196,7 @@
     {
       "id": "routine",
       "name": "Routine",
-      "slug": "robocop",
+      "slug": "routine",
       "arch": "X64",
       "status": "working",
       "match": [
@@ -2342,8 +2346,8 @@
       "arch": "X64",
       "status": "construction",
       "match": [{ "kind": "exe_name", "value": "UnleashedRecomp.exe", "tier": 70 }],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64",
+      "channel": "beta"
     },
     {
       "id": "sons-of-the-forest",
@@ -2397,8 +2401,8 @@
         { "kind": "steam_appid", "value": "1283400", "tier": 100 },
         { "kind": "exe_name", "value": "Steelrising.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://notvoosh.github.io/renodx/renodx-steelrising.addon64"
+      "download_url": "https://notvoosh.github.io/renodx/renodx-steelrising.addon64",
+      "channel": "beta"
     },
     {
       "id": "steel-seed",
@@ -2418,15 +2422,15 @@
       "slug": "steep",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "460920", "tier": 100 },
+        { "kind": "exe_name", "value": "steep.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "460920", "tier": 100 },
-        { "kind": "exe_name", "value": "steep.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "starfield",
@@ -2468,8 +2472,8 @@
         { "kind": "steam_appid", "value": "1358700", "tier": 100 },
         { "kind": "exe_name", "value": "SOPFFO.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64",
+      "channel": "beta"
     },
     {
       "id": "street-fighter-6",
@@ -2538,8 +2542,8 @@
         { "kind": "steam_appid", "value": "1167630", "tier": 100 },
         { "kind": "exe_name", "value": "teardown.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64"
+      "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64",
+      "channel": "beta"
     },
     {
       "id": "tekken-8",
@@ -2582,8 +2586,8 @@
         { "kind": "steam_appid", "value": "601430", "tier": 100 },
         { "kind": "exe_name", "value": "TEW2.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://marat569.github.io/renodx/renodx-tew2.addon64"
+      "download_url": "https://marat569.github.io/renodx/renodx-tew2.addon64",
+      "channel": "beta"
     },
     {
       "id": "the-elder-scrolls-iv-oblivion-remastered",
@@ -2813,17 +2817,6 @@
       ]
     },
     {
-      "id": "wuchang-fallen-feathers",
-      "name": "Wuchang: Fallen Feathers",
-      "slug": "wuchang",
-      "arch": "X64",
-      "status": "working",
-      "match": [
-        { "kind": "steam_appid", "value": "2277560", "tier": 100 },
-        { "kind": "exe_name", "value": "Project_Plague.exe", "tier": 70 }
-      ]
-    },
-    {
       "id": "wuthering-waves",
       "name": "Wuthering Waves",
       "slug": "wutheringwaves",
@@ -2856,8 +2849,8 @@
         { "kind": "steam_appid", "value": "1448440", "tier": 100 },
         { "kind": "exe_name", "value": "WoLong.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64",
+      "channel": "beta"
     },
     {
       "id": "yakuza-0",
@@ -2866,8 +2859,8 @@
       "arch": "X64",
       "status": "construction",
       "match": [{ "kind": "steam_appid", "value": "2988580", "tier": 100 }],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64",
+      "channel": "beta"
     },
     {
       "id": "yakuza-kiwami-1",
@@ -2879,8 +2872,8 @@
         { "kind": "steam_appid", "value": "834530", "tier": 100 },
         { "kind": "exe_name", "value": "YakuzaKiwami.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+      "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64",
+      "channel": "beta"
     },
     {
       "id": "ys-ix-monstrum-nox",
@@ -2900,15 +2893,15 @@
       "slug": "ys10",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "2570810", "tier": 100 },
+        { "kind": "steam_appid", "value": "2731870", "tier": 100 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/ysxnordics/mods/11",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "2570810", "tier": 100 },
-        { "kind": "steam_appid", "value": "2731870", "tier": 100 }
-      ]
+      }
     },
     {
       "id": "ys-x-proud-nordics",
@@ -2933,8 +2926,8 @@
         { "kind": "steam_appid", "value": "4162040", "tier": 100 },
         { "kind": "exe_name", "value": "HYP.exe", "tier": 70 }
       ],
-      "channel": "beta",
-      "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64"
+      "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64",
+      "channel": "beta"
     },
     {
       "id": "abiotic-factor",
@@ -7882,15 +7875,15 @@
       "slug": "unityengine",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "870780", "tier": 100 },
+        { "kind": "exe_name", "value": "Control.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/control/mods/90",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "870780", "tier": 100 },
-        { "kind": "exe_name", "value": "Control.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "dark-souls-2-ds2lightingengine-sotfs",
@@ -7898,15 +7891,15 @@
       "slug": "unityengine",
       "arch": "X64",
       "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "335300", "tier": 100 },
+        { "kind": "exe_name", "value": "DarkSoulsII.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/darksouls2/mods/1146",
         "label_key": "renodx.external.nexus"
       },
-      "match": [
-        { "kind": "steam_appid", "value": "335300", "tier": 100 },
-        { "kind": "exe_name", "value": "DarkSoulsII.exe", "tier": 70 }
-      ],
       "channel": "beta"
     },
     {
@@ -7915,15 +7908,15 @@
       "slug": "unityengine",
       "arch": "X64",
       "status": "construction",
+      "match": [
+        { "kind": "steam_appid", "value": "374320", "tier": 100 },
+        { "kind": "exe_name", "value": "DarkSoulsIII.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://discord.gg/BCxEWGKJcD",
         "label_key": "renodx.external.discord"
       },
-      "match": [
-        { "kind": "steam_appid", "value": "374320", "tier": 100 },
-        { "kind": "exe_name", "value": "DarkSoulsIII.exe", "tier": 70 }
-      ],
       "channel": "beta"
     },
     {
@@ -7932,15 +7925,15 @@
       "slug": "unityengine",
       "arch": "X64",
       "status": "working",
+      "match": [
+        { "kind": "steam_appid", "value": "480490", "tier": 100 },
+        { "kind": "exe_name", "value": "Prey.exe", "tier": 70 }
+      ],
       "category": {
         "kind": "external",
         "url": "https://www.nexusmods.com/prey2017/mods/149",
         "label_key": "renodx.external.nexus"
-      },
-      "match": [
-        { "kind": "steam_appid", "value": "480490", "tier": 100 },
-        { "kind": "exe_name", "value": "Prey.exe", "tier": 70 }
-      ]
+      }
     },
     {
       "id": "dying-light-2",
@@ -8051,6 +8044,30 @@
       "arch": "X64",
       "status": "unknown",
       "match": [{ "kind": "exe_name", "value": "StarRail.exe", "tier": 70 }],
+      "channel": "beta"
+    },
+    {
+      "id": "wuchang-fallen-feathers",
+      "name": "Wuchang: Fallen Feathers",
+      "slug": "unityengine",
+      "arch": "X64",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "2277560", "tier": 100 },
+        { "kind": "exe_name", "value": "Project_Plague.exe", "tier": 70 }
+      ],
+      "channel": "beta"
+    },
+    {
+      "id": "borderlands-4",
+      "name": "Borderlands 4",
+      "slug": "borderlands4",
+      "arch": "X86",
+      "status": "unknown",
+      "match": [
+        { "kind": "steam_appid", "value": "1285190", "tier": 100 },
+        { "kind": "exe_name", "value": "Borderlands4.exe", "tier": 70 }
+      ],
       "channel": "beta"
     }
   ]

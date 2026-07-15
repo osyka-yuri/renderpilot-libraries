@@ -2,9 +2,7 @@
 // Verify that each Luma release asset still has the exact root .addon named by
 // the manifest. This reads only ZIP metadata through bounded HTTP ranges.
 
-import path from "node:path";
-
-import { repoRoot } from "./catalog.mjs";
+import { addonCatalogs } from "./catalog.mjs";
 import { forEachConcurrent } from "./lib/common.mjs";
 import { printIssues } from "./lib/checks.mjs";
 import { readJsonFileAsync } from "./lib/json.mjs";
@@ -163,8 +161,8 @@ async function checkPayload({ asset, addonFile }) {
 
 async function main() {
   const manifest = await readJsonFileAsync(
-    path.join(repoRoot, "luma_manifest.json"),
-    "luma_manifest.json",
+    addonCatalogs.luma.outputs.manifest.file,
+    "addons/v1/luma.json",
   );
   const payloads = collectAssetPayloadIdentities(manifest);
   console.log(`Checking root payload identity for ${payloads.length} Luma asset(s)...`);

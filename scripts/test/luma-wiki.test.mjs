@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { parseLumaWikiRows, reconcileLumaStatuses } from "../lib/luma-wiki.mjs";
+import {
+  lumaWikiNoteFingerprint,
+  parseLumaWikiRows,
+  reconcileLumaStatuses,
+} from "../lib/luma-wiki.mjs";
 
 test("parseLumaWikiRows extracts Completed, WIP, and Unreal status tables", () => {
   const rows = parseLumaWikiRows(`
@@ -25,13 +29,29 @@ test("parseLumaWikiRows extracts Completed, WIP, and Unreal status tables", () =
       status: "working",
       asset: "Luma-Exact.zip",
       section: "completed",
+      note: null,
     },
-    { name: "Work in Progress", status: "construction", asset: null, section: "wip" },
+    {
+      name: "Planned",
+      status: "unknown",
+      asset: "Luma-Planned.zip",
+      section: "completed",
+      note: null,
+    },
+    {
+      name: "Work in Progress",
+      status: "construction",
+      asset: null,
+      section: "wip",
+      note: null,
+    },
     {
       name: "Unreal Game",
       status: "working",
       asset: "Luma-Unreal_Engine.zip",
       section: "unreal",
+      features: { dlss_fsr: "supported", hdr: "unknown" },
+      note: null,
     },
   ]);
 });
@@ -50,12 +70,16 @@ test("reconcileLumaStatuses uses unique asset, normalized names, and explicit al
       id: "unreal-one",
       name: "Unreal One",
       asset: "Luma-Unreal_Engine.zip",
+      profile: "unreal",
+      features: { dlss_fsr: "unknown", hdr: "unknown" },
       status: "unknown",
     },
     {
       id: "unreal-two",
       name: "Unreal Two",
       asset: "Luma-Unreal_Engine.zip",
+      profile: "unreal",
+      features: { dlss_fsr: "unknown", hdr: "unknown" },
       status: "unknown",
     },
   ];
@@ -93,13 +117,84 @@ test("reconcileLumaStatuses uses unique asset, normalized names, and explicit al
     ],
   );
   assert.deepEqual(result.unmatched, ["Unreal Two"]);
-  assert.equal(result.notInCurated.length, 0);
-  assert.equal(result.ambiguous.length, 1);
+  assert.equal(result.notInCurated.length, 1);
+  assert.equal(result.ambiguous.length, 0);
   assert.equal(
     result.nextCuratedGames.find((game) => game.id === "exact").status,
     "working",
   );
   assert.equal(curatedGames[0].status, "unknown", "input remains immutable");
+  assert.deepEqual(
+    result.nextCuratedGames.find((game) => game.id === "unreal-one").features,
+    { dlss_fsr: "unknown", hdr: "unknown" },
+  );
+});
+
+test("parseLumaWikiRows maps every explicit feature marker and leaves blank cells unknown", () => {
+  const [row] = parseLumaWikiRows(`
+| Name | DLSS/FSR | HDR |
+| --- | --- | --- |
+| Feature Matrix | 🚧 | ⛔ |
+`);
+  assert.deepEqual(row.features, { dlss_fsr: "experimental", hdr: "unsupported" });
+});
+
+test("parseLumaWikiRows accepts a feature table with only an HDR column", () => {
+  const [row] = parseLumaWikiRows(`
+| Name | HDR |
+| --- | --- |
+| HDR only | ✅ |
+`);
+
+  assert.deepEqual(row.features, { dlss_fsr: "unknown", hdr: "supported" });
+});
+
+test("parseLumaWikiRows does not invent features outside the UE matrix", () => {
+  const rows = parseLumaWikiRows(`
+| Name | Download Link | Status |
+| --- | --- | --- |
+| No feature columns | Luma-No_Features.zip | ✅ |
+`);
+
+  assert.equal(rows[0].features, undefined);
+});
+
+test("reconcileLumaStatuses blocks a changed Wiki note without publishing its raw text", () => {
+  const result = reconcileLumaStatuses({
+    curatedGames: [
+      {
+        id: "wiki-game",
+        name: "Wiki Game",
+        asset: "Luma-Unreal_Engine.zip",
+        profile: "unreal",
+        status: "unknown",
+        features: { dlss_fsr: "unknown", hdr: "unknown" },
+        wiki_note_reviews: [
+          {
+            section: "unreal",
+            name: "Wiki Game",
+            fingerprint: lumaWikiNoteFingerprint("Reviewed instruction"),
+            disposition: "published",
+            guidance_ids: ["luma.wiki-game.warning"],
+          },
+        ],
+      },
+    ],
+    wikiRows: [
+      {
+        name: "Wiki Game",
+        section: "unreal",
+        asset: "Luma-Unreal_Engine.zip",
+        status: "working",
+        features: { dlss_fsr: "supported", hdr: "unknown" },
+        note: "Changed upstream instruction",
+      },
+    ],
+  });
+
+  assert.deepEqual(result.reviewDrift, [
+    { type: "changed", section: "unreal", name: "Wiki Game", game: "Wiki Game" },
+  ]);
 });
 
 test("reconcileLumaStatuses rejects conflicting asset and name matches", () => {
