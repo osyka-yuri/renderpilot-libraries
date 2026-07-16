@@ -38,15 +38,19 @@ test("manifest integrity - committed RenoDX v1 document is well-formed and inter
   const blackFlagResynced = manifest.games.find(
     (title) => title.id === "assassin-s-creed-black-flag-resynced",
   );
+  const blackFlagOriginal = manifest.games.find(
+    (title) => title.id === "assassins-creed-iv-black-flag",
+  );
   assert.ok(blackFlagResynced, "Black Flag Resynced must be a distinct title");
+  assert.ok(blackFlagOriginal, "original Black Flag must remain a distinct title");
   assert.equal(blackFlagResynced.name, "Assassin’s Creed®: Black Flag Resynced");
   assert.equal(blackFlagResynced.architecture, "X64");
   assert.equal(blackFlagResynced.status, "working");
   assert.equal(blackFlagResynced.addon.slug, "asscreedblackflagresynced");
-  assert.equal(blackFlagResynced.availability.kind, "external");
   assert.equal(
-    blackFlagResynced.availability.url,
-    "https://www.nexusmods.com/assassinscreedblackflagresynced/mods/42",
+    blackFlagResynced.availability,
+    undefined,
+    "Resynced is official snapshot delivery, not external/Nexus",
   );
   assert.ok(
     blackFlagResynced.match.some(
@@ -57,6 +61,18 @@ test("manifest integrity - committed RenoDX v1 document is well-formed and inter
     blackFlagResynced.match.some(
       (rule) => rule.kind === "exe_name" && rule.value === "ACBlackFlag.exe",
     ),
+  );
+  assert.equal(blackFlagOriginal.addon.slug, "asscreedblackflag");
+  assert.ok(
+    blackFlagOriginal.match.some(
+      (rule) => rule.kind === "steam_appid" && rule.value === "242050",
+    ),
+  );
+  assert.ok(
+    blackFlagOriginal.match.some(
+      (rule) => rule.kind === "exe_name" && rule.value === "AC4BFSP.exe",
+    ),
+    "original Black Flag must keep AC4BFSP.exe, not the Resynced exe",
   );
 
   const seen = new Map();

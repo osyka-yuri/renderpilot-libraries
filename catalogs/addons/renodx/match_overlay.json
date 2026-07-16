@@ -2727,10 +2727,6 @@
   },
   "assassin-s-creed-black-flag-resynced": {
     "appid": "3751950",
-    "slug": "asscreedblackflagresynced",
-    "external": {
-      "url": "https://www.nexusmods.com/assassinscreedblackflagresynced/mods/42",
-      "label_key": "renodx.external.nexus"
-    }
+    "slug": "asscreedblackflagresynced"
   }
 }

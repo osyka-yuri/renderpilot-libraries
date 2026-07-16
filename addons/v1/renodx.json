@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-15T00:00:00Z",
+  "generated_at": "2026-07-16T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -202,15 +202,7 @@
         { "kind": "steam_appid", "value": "3751950", "tier": 100 },
         { "kind": "exe_name", "value": "ACBlackFlag.exe", "tier": 70 }
       ],
-      "addon": { "slug": "asscreedblackflagresynced" },
-      "availability": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/assassinscreedblackflagresynced/mods/42",
-        "message": {
-          "id": "renodx.external.nexus",
-          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
-        }
-      }
+      "addon": { "slug": "asscreedblackflagresynced" }
     },
     {
       "id": "assassins-creed-mirage",

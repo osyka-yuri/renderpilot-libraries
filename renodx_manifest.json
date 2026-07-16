@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-15T00:00:00Z",
+  "generated_at": "2026-07-16T00:00:00Z",
   "reshade": {
     "stable": { "url": "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe" },
     "nightly": {
@@ -214,12 +214,7 @@
       "match": [
         { "kind": "steam_appid", "value": "3751950", "tier": 100 },
         { "kind": "exe_name", "value": "ACBlackFlag.exe", "tier": 70 }
-      ],
-      "category": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/assassinscreedblackflagresynced/mods/42",
-        "label_key": "renodx.external.nexus"
-      }
+      ]
     },
     {
       "id": "assassins-creed-mirage",
