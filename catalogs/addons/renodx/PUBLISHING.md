@@ -10,7 +10,7 @@ pnpm run sync:renodx-wiki
 pnpm run check:slugs
 ```
 
-`sync:renodx-wiki` writes the wiki snapshot/overlay and regenerates `addons/v1/renodx.json`.
+`sync:renodx-wiki` writes the wiki snapshot/overlay and regenerates `addons/v1/renodx.json`. The daily `wiki-drift` workflow runs `sync:renodx-wiki --check` and opens/updates GitHub Issue `wiki-drift: renodx` only when the log shows **explicit catalogue drift** (not on soft network failures or unclassified crashes). It never writes files. Clear the issue by running `sync:renodx-wiki`, opening a PR, and merging.
 
 The generator emits the canonical `addons/v1/renodx.json` document. Do not invent a parallel root-level compatibility file.
 

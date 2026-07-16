@@ -1,0 +1,41 @@
+name: Wiki drift
+
+# Notify-only: run RenoDX + Luma wiki --check on a schedule. On real catalogue
+# drift, upsert a dedicated GitHub Issue. On clean check, close that Issue.
+# Soft network failures do not open issues. Never writes wiki snapshots or PRs.
+# Not part of the default PR `check` suite (PR CI already runs sync:*-wiki:check).
+
+on:
+  schedule:
+    - cron: "30 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: wiki-drift
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Wiki drift check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          # pnpm 11.12.0 currently breaks action-setup's self-installer:
+          # https://github.com/pnpm/action-setup/issues/276
+          version: 11.11.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Check wiki drift and notify
+        run: pnpm run check:wiki-drift:notify
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

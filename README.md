@@ -34,6 +34,7 @@ pnpm run generate:luma
 pnpm run check
 pnpm run refresh:reshade:check
 pnpm run check:upstream-health
+pnpm run check:wiki-drift
 pnpm run publish:json:dry-run
 ```
 
@@ -42,6 +43,8 @@ pnpm run publish:json:dry-run
 `pnpm run check:offline` is the network-free subset (format + validate + generated + unit tests) used by the ReShade refresh bot before opening a PR.
 
 `pnpm run refresh:reshade:check` detects a newer stable ReShade Addon installer; `refresh:reshade:write` rewrites `scripts/lib/reshade-sources.mjs` and regenerates `addons/v1/reshade.json` only. Scheduled workflows open a PR when an update is live — they do not push to `main` or write R2. `pnpm run check:upstream-health` probes committed pins (ReShade channels and Luma managed-dependency archives); it is schedule-only and not part of default `pnpm check`.
+
+`pnpm run check:wiki-drift` runs RenoDX + Luma wiki `--check` (no writes). Like upstream-health it is schedule-only and not part of default `pnpm check` (PR CI already runs `sync:*-wiki:check`). The daily `wiki-drift` workflow uses `--notify` and upserts/closes GitHub Issues titled `wiki-drift: renodx` / `wiki-drift: luma` only when classifiers see **explicit catalogue drift markers** (not soft network skips or unclassified failures).
 
 `scripts/catalog.mjs` is the repository and publication registry: generators, synchronizers, matchers, validators, and remote checks take add-on source/output paths, schemas, and explicit R2 keys from it. Versioned object paths are preserved during publication.
 

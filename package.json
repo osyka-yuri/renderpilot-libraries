@@ -32,6 +32,8 @@
     "test:scripts": "node --test \"scripts/test/*.test.mjs\"",
     "check:published-json": "node scripts/check-published-json.mjs",
     "check:upstream-health": "node scripts/check-upstream-health.mjs --suite=all",
+    "check:wiki-drift": "node scripts/check-wiki-drift.mjs",
+    "check:wiki-drift:notify": "node scripts/check-wiki-drift.mjs --notify",
     "check:all-generated": "pnpm run check:reshade-generated && pnpm run check:renodx-generated && pnpm run check:luma-generated",
     "refresh:reshade:check": "node scripts/refresh-reshade-stable.mjs --check",
     "refresh:reshade:write": "node scripts/refresh-reshade-stable.mjs --write",
