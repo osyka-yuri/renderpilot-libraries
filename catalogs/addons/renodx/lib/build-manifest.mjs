@@ -2,8 +2,6 @@ import {
   categoryOf,
   collectMatchedAppids,
   inheritedSplitOverlay,
-  normalizeAppids,
-  normalizeExeName,
   normalizeSlug,
   validateOverlay,
 } from "./overlay.mjs";
@@ -26,6 +24,10 @@ import {
   normalizedStatus,
   reserveOutputId,
 } from "../../../../scripts/lib/build-manifest-shared.mjs";
+import {
+  normalizeAppids,
+  normalizeExeName,
+} from "../../../../scripts/lib/overlay-shared.mjs";
 
 export const GENERICS = deepFreeze([
   {
@@ -48,7 +50,6 @@ export const GENERICS = deepFreeze([
 
 /**
  * Builds the RenoDX v1 public document from wiki + overlay inputs.
- * Legacy v3 is produced separately by `legacy-v3.mjs` at the publication edge.
  */
 export function buildManifest({
   wiki,
@@ -256,13 +257,12 @@ function countByAvailabilityKind(games, kind) {
 
 function buildStats(games, pending, ambiguousDerivedExeKeys) {
   return {
-    titles: games.length,
+    games: games.length,
     pending: pending.length,
-    generics: GENERICS.length,
+    engineProfiles: GENERICS.length,
     ambiguousDerivedExes: ambiguousDerivedExeKeys.size,
     external: countByAvailabilityKind(games, "external"),
     native_hdr: countByAvailabilityKind(games, "native_hdr"),
-    // v1 uses "blocked"; stats keep the historical blacklist label for CLI output.
-    blacklist: countByAvailabilityKind(games, "blocked"),
+    blocked: countByAvailabilityKind(games, "blocked"),
   };
 }

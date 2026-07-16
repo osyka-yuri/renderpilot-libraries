@@ -1,6 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { setTimeout as delay } from "node:timers/promises";
+
+import { errorMessage, sleep } from "./common.mjs";
+import { STEAM_TIMEOUT_MS, fetchWithTimeout } from "./http.mjs";
 
 const SCRIPT_DIR = import.meta.dirname;
 const REPO_ROOT = path.resolve(SCRIPT_DIR, "../..");
@@ -12,7 +14,6 @@ const STEAM_LANGUAGE = "english";
 const STEAM_COUNTRY = "US";
 
 const MAX_ATTEMPTS = 4;
-const REQUEST_TIMEOUT_MS = 10_000;
 const SUCCESS_THROTTLE_MS = 250;
 const RETRY_BASE_DELAY_MS = 500;
 const RETRY_MAX_DELAY_MS = 5_000;
@@ -144,9 +145,10 @@ async function searchSteamStoreUncached(searchTerm) {
 
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
     try {
-      const response = await fetch(url, {
-        headers: { accept: "application/json" },
-        signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+      const response = await fetchWithTimeout(url, {
+        method: "GET",
+        timeoutMs: STEAM_TIMEOUT_MS,
+        headers: { Accept: "application/json" },
       });
 
       if (isRetriableStatus(response.status) && attempt < MAX_ATTEMPTS) {
@@ -166,13 +168,13 @@ async function searchSteamStoreUncached(searchTerm) {
 
       cache[searchTerm] = items;
       await saveCache(cache);
-      await delay(SUCCESS_THROTTLE_MS);
+      await sleep(SUCCESS_THROTTLE_MS);
 
       return items;
     } catch (error) {
       if (attempt >= MAX_ATTEMPTS) {
         console.error(
-          `[Steam API] Failed to search for "${searchTerm}" after ${MAX_ATTEMPTS} attempts: ${getErrorMessage(error)}`,
+          `[Steam API] Failed to search for "${searchTerm}" after ${MAX_ATTEMPTS} attempts: ${errorMessage(error)}`,
         );
         return null;
       }
@@ -204,7 +206,7 @@ async function readCacheFile() {
       return {};
     }
 
-    console.warn(`[Steam cache] Ignoring unreadable cache file: ${getErrorMessage(error)}`);
+    console.warn(`[Steam cache] Ignoring unreadable cache file: ${errorMessage(error)}`);
     return {};
   }
 }
@@ -221,7 +223,7 @@ async function saveCache(cache) {
   try {
     await saveQueue;
   } catch (error) {
-    console.error(`[Steam cache] Failed to save cache: ${getErrorMessage(error)}`);
+    console.error(`[Steam cache] Failed to save cache: ${errorMessage(error)}`);
   }
 }
 
@@ -386,7 +388,7 @@ async function waitBeforeRetry(searchTerm, attempt, headers) {
   console.warn(
     `[Steam API] Retrying "${searchTerm}" in ${waitMs}ms (attempt ${attempt + 1}/${MAX_ATTEMPTS}).`,
   );
-  await delay(waitMs);
+  await sleep(waitMs);
 }
 
 /**
@@ -441,12 +443,4 @@ function isPlainObject(value) {
  */
 function isNodeError(error) {
   return error instanceof Error && "code" in error;
-}
-
-/**
- * @param {unknown} error
- * @returns {string}
- */
-function getErrorMessage(error) {
-  return error instanceof Error ? error.message : String(error);
 }

@@ -1,70 +1,66 @@
 // Shared transport, CLI, and persistence for wiki synchronizers.
 
-import { UsageError, errorMessage } from "./common.mjs";
+import { errorMessage } from "./common.mjs";
+import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
+import { UpstreamNetworkError, WIKI_TIMEOUT_MS, fetchWithTimeout } from "./http.mjs";
 
-export const WIKI_USER_AGENT = "renderpilot-libraries";
-export const DEFAULT_WIKI_TIMEOUT_MS = 30_000;
+const WIKI_SYNC_OPTIONS = Object.freeze({
+  check: { type: "boolean" },
+  "dry-run": { type: "boolean" },
+  help: { type: "boolean", short: "h" },
+});
 
 export function parseWikiSyncArgs(args) {
-  const parsed = { check: false, help: false };
-
-  for (const arg of args) {
-    if (arg === "--check" || arg === "--dry-run") {
-      parsed.check = true;
-    } else if (arg === "--help" || arg === "-h") {
-      parsed.help = true;
-    } else {
-      throw new UsageError(`Unknown argument: ${arg}`);
-    }
+  if (wantsHelp(args)) {
+    return { check: false, help: true };
   }
 
-  return parsed;
+  const { values } = parseCliArgs(args, WIKI_SYNC_OPTIONS);
+  return {
+    check: Boolean(values.check || values["dry-run"]),
+    help: false,
+  };
 }
 
-async function fetchWithTimeout(url, { timeoutMs, headers = {} }) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
-  timeout.unref?.();
-
+async function fetchOk(url, { timeoutMs, headers = {}, fetchFn } = {}) {
   try {
-    const response = await fetch(url, { headers, signal: controller.signal });
+    const response = await fetchWithTimeout(url, {
+      fetchFn,
+      timeoutMs: timeoutMs ?? WIKI_TIMEOUT_MS,
+      method: "GET",
+      headers,
+    });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} ${response.statusText}`);
     }
     return response;
   } catch (error) {
-    if (error?.name === "AbortError") {
-      throw new Error(`Request timed out after ${timeoutMs}ms: ${url}`);
+    if (error instanceof UpstreamNetworkError) {
+      throw error;
     }
-    throw new Error(`Request failed for ${url}: ${errorMessage(error)}`, { cause: error });
-  } finally {
-    clearTimeout(timeout);
-  }
-}
-
-export async function fetchWikiMarkdown(url, options = {}) {
-  try {
-    const response = await fetchWithTimeout(url, {
-      timeoutMs: options.timeoutMs ?? DEFAULT_WIKI_TIMEOUT_MS,
-      headers: { "User-Agent": WIKI_USER_AGENT, ...options.headers },
-    });
-    return await response.text();
-  } catch (error) {
-    throw new Error(`Could not fetch wiki ${url}: ${errorMessage(error)}`, {
+    throw new UpstreamNetworkError(`Request failed for ${url}: ${errorMessage(error)}`, {
       cause: error,
     });
   }
 }
 
-export async function fetchJsonWithTimeout(url, options = {}) {
-  const response = await fetchWithTimeout(url, {
-    timeoutMs: options.timeoutMs ?? DEFAULT_WIKI_TIMEOUT_MS,
-    headers: { "User-Agent": WIKI_USER_AGENT, ...options.headers },
-  });
+export async function fetchWikiMarkdown(url, options = {}) {
   try {
-    return await response.json();
+    const response = await fetchOk(url, {
+      timeoutMs: options.timeoutMs ?? WIKI_TIMEOUT_MS,
+      headers: options.headers,
+      fetchFn: options.fetchFn,
+    });
+    return await response.text();
   } catch (error) {
-    throw new Error(`Invalid JSON from ${url}: ${errorMessage(error)}`, { cause: error });
+    if (error instanceof UpstreamNetworkError) {
+      throw new UpstreamNetworkError(`Could not fetch wiki ${url}: ${error.message}`, {
+        cause: error,
+      });
+    }
+    throw new Error(`Could not fetch wiki ${url}: ${errorMessage(error)}`, {
+      cause: error,
+    });
   }
 }
 

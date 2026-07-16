@@ -12,8 +12,6 @@ import {
   requiredNonEmptyString,
 } from "../../../../scripts/lib/common.mjs";
 
-export { normalizeAppid, normalizeAppids, normalizeExeName };
-
 export const KNOWN_OVERLAY_FIELDS = new Set([
   "appid",
   "appids",

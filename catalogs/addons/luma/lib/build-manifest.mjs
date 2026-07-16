@@ -122,7 +122,7 @@ function assertUniqueGuidanceIds(games) {
 
 function buildStats(games, pending) {
   return {
-    titles: games.length,
+    games: games.length,
     pending: pending.length,
     engineProfiles: games.filter((game) => game.profile !== "game").length,
     blacklist: games.filter((game) => game.availability?.kind === "blocked").length,

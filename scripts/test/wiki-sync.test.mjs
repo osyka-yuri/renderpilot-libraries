@@ -10,7 +10,13 @@ import { fetchWikiMarkdown, jsonChanged, parseWikiSyncArgs } from "../lib/wiki-s
 
 test("parseWikiSyncArgs accepts check aliases and rejects unknown arguments", () => {
   assert.deepEqual(parseWikiSyncArgs([]), { check: false, help: false });
-  assert.deepEqual(parseWikiSyncArgs(["--dry-run", "--help"]), { check: true, help: true });
+  assert.deepEqual(parseWikiSyncArgs(["--dry-run"]), { check: true, help: false });
+  assert.deepEqual(parseWikiSyncArgs(["--check"]), { check: true, help: false });
+  // Help wins over other flags (including --dry-run).
+  assert.deepEqual(parseWikiSyncArgs(["--dry-run", "--help"]), {
+    check: false,
+    help: true,
+  });
   assert.throws(() => parseWikiSyncArgs(["--unexpected"]), UsageError);
 });
 

@@ -115,7 +115,7 @@
       "additionalProperties": false,
       "required": ["engine", "status", "addon", "message"],
       "properties": {
-        "engine": { "enum": ["unreal", "unreal_extended", "unity"] },
+        "engine": { "enum": ["unreal", "unity"] },
         "status": { "$ref": "#/$defs/status" },
         "addon": {
           "type": "object",

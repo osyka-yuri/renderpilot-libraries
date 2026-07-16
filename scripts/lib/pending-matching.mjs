@@ -85,12 +85,12 @@ export function collectManifestSteamAppIds(manifest, filePath) {
   const label = path.basename(filePath);
   if (!isRecord(manifest)) throw new TypeError(`${label} must contain an object.`);
 
-  const games = manifest.games ?? manifest.titles;
+  const games = manifest.games;
   if (games == null) return appIds;
   if (!Array.isArray(games)) throw new TypeError(`${label} games must be an array.`);
 
-  for (const title of games) {
-    for (const rule of isRecord(title) && Array.isArray(title.match) ? title.match : []) {
+  for (const game of games) {
+    for (const rule of isRecord(game) && Array.isArray(game.match) ? game.match : []) {
       if (isSteamAppIdRule(rule)) appIds.add(String(rule.value));
     }
   }

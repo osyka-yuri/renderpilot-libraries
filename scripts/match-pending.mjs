@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 import { addonCatalogs } from "./catalog.mjs";
-import { errorMessage, UsageError } from "./lib/common.mjs";
+import { UsageError } from "./lib/common.mjs";
+import { parseCliArgs, wantsHelp } from "./lib/cli-args.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
 import { runPendingMatching } from "./lib/pending-matching.mjs";
 import {
   createLumaPendingStore,
@@ -20,25 +22,30 @@ const TOOLS = Object.freeze({
   }),
 });
 
-export function parseToolArg(argv) {
-  let tool = DEFAULT_TOOL;
-  let foundTool = false;
+const HELP_TEXT = `Usage: node scripts/match-pending.mjs [--tool=renodx|luma]
 
-  for (const arg of argv) {
-    if (!arg.startsWith("--tool=")) {
-      throw new UsageError(`Unknown argument: ${arg}`);
-    }
-    if (foundTool) throw new UsageError("--tool may be specified only once");
-    foundTool = true;
-    tool = arg.slice("--tool=".length);
+Match pending Steam AppIDs for an add-on catalogue and write resolved overlays.
+
+  --tool=renodx|luma   Catalogue to process (default: renodx).
+  -h, --help           Show this help message.`;
+
+export function parseToolArg(argv) {
+  if (wantsHelp(argv)) {
+    return { help: true, tool: DEFAULT_TOOL };
   }
 
+  const { values } = parseCliArgs(argv, {
+    tool: { type: "string", default: DEFAULT_TOOL },
+    help: { type: "boolean", short: "h" },
+  });
+
+  const tool = String(values.tool ?? DEFAULT_TOOL);
   if (!Object.hasOwn(TOOLS, tool)) {
     throw new UsageError(
       `Unknown --tool "${tool}"; expected one of: ${Object.keys(TOOLS).join(", ")}`,
     );
   }
-  return tool;
+  return { help: false, tool };
 }
 
 export function filesForTool(tool) {
@@ -54,8 +61,11 @@ export function filesForTool(tool) {
   };
 }
 
-async function main(argv = process.argv.slice(2)) {
-  const tool = parseToolArg(argv);
+function printHelp() {
+  console.error(HELP_TEXT);
+}
+
+async function main({ tool }) {
   await runPendingMatching({
     tool,
     files: filesForTool(tool),
@@ -64,10 +74,9 @@ async function main(argv = process.argv.slice(2)) {
 }
 
 if (import.meta.main) {
-  main().catch((error) => {
-    console.error(
-      error instanceof UsageError ? `Usage error: ${error.message}` : errorMessage(error),
-    );
-    process.exitCode = 1;
+  runCliMain({
+    parse: parseToolArg,
+    help: printHelp,
+    main,
   });
 }

@@ -4,7 +4,6 @@ import assert from "node:assert/strict";
 
 import {
   parseCheckArgs,
-  sha256Hex,
   loadLocalJson,
   fetchRemoteJson,
   compareHashes,
@@ -73,8 +72,16 @@ test("parseCheckArgs recognizes long flags", () => {
 });
 
 test("parseCheckArgs recognizes short flags", () => {
-  assert.deepEqual(parseCheckArgs(["-v", "-h"]), {
+  assert.deepEqual(parseCheckArgs(["-v"]), {
     verbose: true,
+    dryRun: false,
+    help: false,
+  });
+});
+
+test("parseCheckArgs help wins over other flags", () => {
+  assert.deepEqual(parseCheckArgs(["-v", "-h"]), {
+    verbose: false,
     dryRun: false,
     help: true,
   });
@@ -82,19 +89,6 @@ test("parseCheckArgs recognizes short flags", () => {
 
 test("parseCheckArgs throws on unknown flags", () => {
   assert.throws(() => parseCheckArgs(["--unknown"]), UsageError);
-});
-
-// ── sha256Hex ──
-
-test("sha256Hex produces consistent hashes", () => {
-  const hex = sha256Hex(Buffer.from("hello world", "utf-8"));
-  assert.equal(hex, "b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9");
-});
-
-test("sha256Hex of empty buffer is not all zeros", () => {
-  const hex = sha256Hex(Buffer.alloc(0));
-  assert.equal(hex.length, 64);
-  assert.notEqual(hex, "0".repeat(64));
 });
 
 // ── loadLocalJson ──
@@ -113,16 +107,16 @@ test("loadLocalJson reads a file and computes key/size/sha256", async () => {
 
 test("loadLocalJson uses the registry's explicit R2 key", async () => {
   const readFile = mockReadFile({
-    "renodx_manifest.json": '{"x":1}',
+    "renodx.json": '{"x":1}',
   });
 
   const result = await loadLocalJson(
-    document("renodx_manifest.json", "legacy/renodx.json"),
+    document("renodx.json", "addons/v1/renodx.json"),
     "/repo",
     readFile,
   );
 
-  assert.equal(result.key, "legacy/renodx.json");
+  assert.equal(result.key, "addons/v1/renodx.json");
 });
 
 test("loadLocalJson rethrows missing-file errors with context", async () => {

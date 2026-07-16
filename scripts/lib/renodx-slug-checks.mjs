@@ -1,213 +1,234 @@
-// Pure helpers for the RenoDX slug/add-on availability guard.
+// Pure helpers for the RenoDX slug/add-on availability guard against the
+// canonical v1 catalogue (`addons/v1/renodx.json`).
 //
 // Kept free of IO and network access so the name-derivation, classification,
 // and mismatch logic is unit-testable. The wrapper script
 // (scripts/check-renodx-slugs.mjs) owns the manifest read, the GitHub snapshot
 // fetch, the console output, and `main`.
 
-import path from "node:path";
 import {
   isPlainObject as isRecord,
   requiredNonEmptyString as requiredString,
 } from "./common.mjs";
-import {
-  ADDON_EXTENSION_BY_ARCH,
-  addonFile,
-  addonBasenameFromUrl,
-  sameFileName,
-} from "./addon-naming.mjs";
+import { addonFile, addonBasenameFromUrl, sameFileName } from "./addon-naming.mjs";
 
-export const OFF_SNAPSHOT_TITLE_KINDS = new Set(["external", "native_hdr", "blacklist"]);
+/** v1 availability kinds that are never installed from the official snapshot. */
+export const OFF_SNAPSHOT_AVAILABILITY_KINDS = new Set([
+  "external",
+  "native_hdr",
+  "blocked",
+]);
 
 export function assertManifestShape(manifest) {
   if (!isRecord(manifest)) {
-    throw new Error("renodx_manifest.json must contain a JSON object");
+    throw new Error("addons/v1/renodx.json must contain a JSON object");
   }
 
-  if (!Array.isArray(manifest.titles)) {
-    throw new Error("renodx_manifest.json must contain a `titles` array");
+  if (!Array.isArray(manifest.games)) {
+    throw new Error("addons/v1/renodx.json must contain a `games` array");
   }
 
-  if (!Array.isArray(manifest.generics)) {
-    throw new Error("renodx_manifest.json must contain a `generics` array");
-  }
-}
-
-export function assertTitle(title, index) {
-  if (!isRecord(title)) {
-    throw new Error(`titles[${index}] must be an object`);
+  if (!Array.isArray(manifest.engine_profiles)) {
+    throw new Error("addons/v1/renodx.json must contain an `engine_profiles` array");
   }
 }
 
-export function assertGeneric(generic, index) {
-  if (!isRecord(generic)) {
-    throw new Error(`generics[${index}] must be an object`);
+export function assertGame(game, index) {
+  if (!isRecord(game)) {
+    throw new Error(`games[${index}] must be an object`);
   }
 }
 
-export function titleLabel(title, index) {
-  return typeof title.id === "string" && title.id.trim() !== ""
-    ? title.id.trim()
-    : `titles[${index}]`;
+export function assertProfile(profile, index) {
+  if (!isRecord(profile)) {
+    throw new Error(`engine_profiles[${index}] must be an object`);
+  }
 }
 
-export function genericLabel(generic, index) {
-  return typeof generic.engine === "string" && generic.engine.trim() !== ""
-    ? `generic:${generic.engine.trim()}`
-    : `generics[${index}]`;
+export function gameLabel(game, index) {
+  return typeof game.id === "string" && game.id.trim() !== ""
+    ? game.id.trim()
+    : `games[${index}]`;
 }
 
-export function isOffSnapshotTitle(title) {
-  if (title.download_url) {
+export function profileLabel(profile, index) {
+  return typeof profile.engine === "string" && profile.engine.trim() !== ""
+    ? `engine_profile:${profile.engine.trim()}`
+    : `engine_profiles[${index}]`;
+}
+
+export function isOffSnapshotGame(game) {
+  if (game?.addon?.source) {
     return true;
   }
 
-  return OFF_SNAPSHOT_TITLE_KINDS.has(title.category?.kind);
+  return OFF_SNAPSHOT_AVAILABILITY_KINDS.has(game?.availability?.kind);
 }
 
-export function isSnapshotHostedGeneric(generic) {
-  return Boolean(generic.slug) && !generic.url64 && !generic.url32 && !generic.download_url;
+/** Snapshot-hosted engine profile: has slug, no explicit per-arch sources. */
+export function isSnapshotHostedProfile(profile) {
+  return Boolean(profile?.addon?.slug) && !profile?.addon?.sources;
 }
 
-export function expectedTitleAddon(title, index) {
-  const label = titleLabel(title, index);
-  const slug = requiredString(title.slug, `${label}.slug`);
-  const arch = requiredString(title.arch, `${label}.arch`);
+export function expectedGameAddon(game, index) {
+  const label = gameLabel(game, index);
+  const slug = requiredString(game?.addon?.slug, `${label}.addon.slug`);
+  const arch = requiredString(game?.architecture, `${label}.architecture`);
 
   return addonFile(slug, arch);
 }
 
-export function expectedGenericAddon(generic, index) {
-  const label = genericLabel(generic, index);
-  const slug = requiredString(generic.slug, `${label}.slug`);
+export function expectedProfileAddon(profile, index) {
+  const label = profileLabel(profile, index);
+  const slug = requiredString(profile?.addon?.slug, `${label}.addon.slug`);
 
   return addonFile(slug, "X64");
 }
 
-export function checkTitles(titles, generics, assets) {
+export function checkGames(games, engineProfiles, assets) {
   const missing = [];
   let checked = 0;
   let skipped = 0;
 
   const offSnapshotSlugs = new Set(
-    generics.filter((g) => !isSnapshotHostedGeneric(g)).map((g) => g.slug),
+    engineProfiles
+      .filter((profile) => !isSnapshotHostedProfile(profile))
+      .map((profile) => profile?.addon?.slug)
+      .filter((slug) => typeof slug === "string" && slug.length > 0),
   );
 
-  for (const [index, title] of titles.entries()) {
-    assertTitle(title, index);
+  for (const [index, game] of games.entries()) {
+    assertGame(game, index);
 
-    if (isOffSnapshotTitle(title) || offSnapshotSlugs.has(title.slug)) {
+    if (isOffSnapshotGame(game) || offSnapshotSlugs.has(game?.addon?.slug)) {
       skipped++;
       continue;
     }
 
     checked++;
 
-    const expectedAddon = expectedTitleAddon(title, index);
+    const expectedAddon = expectedGameAddon(game, index);
 
     if (!assets.has(expectedAddon)) {
-      missing.push(`${titleLabel(title, index)} (${expectedAddon})`);
+      missing.push(`${gameLabel(game, index)} (${expectedAddon})`);
     }
   }
 
   return { checked, skipped, missing };
 }
 
-export function checkGenerics(generics, assets) {
+export function checkProfiles(engineProfiles, assets) {
   const missing = [];
   let checked = 0;
   let skipped = 0;
 
-  for (const [index, generic] of generics.entries()) {
-    assertGeneric(generic, index);
+  for (const [index, profile] of engineProfiles.entries()) {
+    assertProfile(profile, index);
 
-    if (!isSnapshotHostedGeneric(generic)) {
+    if (!isSnapshotHostedProfile(profile)) {
       skipped++;
       continue;
     }
 
     checked++;
 
-    const expectedAddon = expectedGenericAddon(generic, index);
+    const expectedAddon = expectedProfileAddon(profile, index);
 
     if (!assets.has(expectedAddon)) {
-      missing.push(`${genericLabel(generic, index)} (${expectedAddon})`);
+      missing.push(`${profileLabel(profile, index)} (${expectedAddon})`);
     }
   }
 
   return { checked, skipped, missing };
 }
 
-export function checkExplicitTitleAddonNames(titles) {
+export function checkExplicitGameAddonNames(games) {
   const mismatches = [];
   let checked = 0;
   let skipped = 0;
 
-  for (const [index, title] of titles.entries()) {
-    assertTitle(title, index);
+  for (const [index, game] of games.entries()) {
+    assertGame(game, index);
 
-    if (!title.download_url) {
+    if (!game?.addon?.source) {
       skipped++;
       continue;
     }
 
     checked++;
 
-    const label = titleLabel(title, index);
-    const expected = expectedTitleAddon(title, index);
-    const actual = addonBasenameFromUrl(title.download_url, `${label}.download_url`);
+    const label = gameLabel(game, index);
+    const expected = expectedGameAddon(game, index);
+    const actual = addonBasenameFromUrl(game.addon.source, `${label}.addon.source`);
 
     if (!sameFileName(actual, expected)) {
       mismatches.push(`${label}: ${actual} should be ${expected}`);
     }
   }
 
-  return { checked, skipped, mismatches, structural: [] };
+  return { checked, skipped, mismatches };
 }
 
-export function checkExplicitGenericAddonNames(generics) {
+export function checkExplicitProfileAddonNames(engineProfiles) {
   const mismatches = [];
   const structural = [];
   let checked = 0;
   let skipped = 0;
 
-  for (const [index, generic] of generics.entries()) {
-    assertGeneric(generic, index);
+  for (const [index, profile] of engineProfiles.entries()) {
+    assertProfile(profile, index);
 
-    const label = genericLabel(generic, index);
+    const label = profileLabel(profile, index);
+    const sources = profile?.addon?.sources;
 
-    if (Boolean(generic.url64) !== Boolean(generic.url32)) {
-      structural.push(`${label}: url64 and url32 must be provided together`);
-      continue;
-    }
-
-    if (!generic.url64 && !generic.url32) {
+    if (!sources) {
       skipped++;
       continue;
     }
 
-    if (!generic.slug) {
+    if (!isRecord(sources)) {
+      structural.push(`${label}: addon.sources must be an object`);
+      continue;
+    }
+
+    const has64 = Boolean(sources.x64);
+    const has32 = Boolean(sources.x86);
+
+    if (has64 !== has32) {
+      structural.push(`${label}: addon.sources.x64 and x86 must be provided together`);
+      continue;
+    }
+
+    if (!has64 && !has32) {
       skipped++;
       continue;
     }
 
-    const localSlug = requiredString(generic.slug, `${label}.slug`);
+    if (!profile?.addon?.slug) {
+      skipped++;
+      continue;
+    }
+
+    const localSlug = requiredString(profile.addon.slug, `${label}.addon.slug`);
 
     for (const [field, arch] of [
-      ["url64", "X64"],
-      ["url32", "X86"],
+      ["x64", "X64"],
+      ["x86", "X86"],
     ]) {
-      if (!generic[field]) {
+      if (!sources[field]) {
         continue;
       }
 
       checked++;
 
       const expected = addonFile(localSlug, arch);
-      const actual = addonBasenameFromUrl(generic[field], `${label}.${field}`);
+      const actual = addonBasenameFromUrl(
+        sources[field],
+        `${label}.addon.sources.${field}`,
+      );
 
       if (!sameFileName(actual, expected)) {
-        mismatches.push(`${label}.${field}: ${actual} should be ${expected}`);
+        mismatches.push(`${label}.addon.sources.${field}: ${actual} should be ${expected}`);
       }
     }
   }
@@ -216,13 +237,13 @@ export function checkExplicitGenericAddonNames(generics) {
 }
 
 export function checkExplicitAddonNames(manifest) {
-  const titleResult = checkExplicitTitleAddonNames(manifest.titles);
-  const genericResult = checkExplicitGenericAddonNames(manifest.generics);
+  const gameResult = checkExplicitGameAddonNames(manifest.games);
+  const profileResult = checkExplicitProfileAddonNames(manifest.engine_profiles);
 
   return {
-    checked: titleResult.checked + genericResult.checked,
-    skipped: titleResult.skipped + genericResult.skipped,
-    mismatches: [...titleResult.mismatches, ...genericResult.mismatches],
-    structural: [...titleResult.structural, ...genericResult.structural],
+    checked: gameResult.checked + profileResult.checked,
+    skipped: gameResult.skipped + profileResult.skipped,
+    mismatches: [...gameResult.mismatches, ...profileResult.mismatches],
+    structural: profileResult.structural,
   };
 }

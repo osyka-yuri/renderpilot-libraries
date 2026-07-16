@@ -17,7 +17,11 @@ import {
   forEachConcurrent,
   hasOwn,
   isMissingFileError,
+  sleep,
 } from "./common.mjs";
+import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
+import { applyExitCode } from "./cli-main.mjs";
+import { DEFAULT_TIMEOUT_MS, HttpStatusError, fetchJsonWithTimeout } from "./http.mjs";
 import { readJsonFile, sortNumericObject, writeFormattedJsonFile } from "./json.mjs";
 import { gameExesFromAppinfo } from "./steam-appinfo.mjs";
 import { normalizeAppid, normalizeCachedExes } from "./overlay-shared.mjs";
@@ -27,21 +31,9 @@ const STEAMCMD_INFO_API = (appid) => `https://api.steamcmd.net/v1/info/${appid}`
 const CONFIG = Object.freeze({
   concurrency: 4,
   retries: 2,
-  requestTimeoutMs: 15_000,
+  requestTimeoutMs: DEFAULT_TIMEOUT_MS,
   retryBaseDelayMs: 500,
 });
-
-const FETCH_HEADERS = Object.freeze({
-  "User-Agent": "renderpilot-libraries",
-});
-
-class HttpError extends Error {
-  constructor(status, statusText) {
-    super(`HTTP ${status}${statusText ? ` ${statusText}` : ""}`);
-    this.name = "HttpError";
-    this.status = status;
-  }
-}
 
 const HELP_TEXT = `Usage: node enrich-exe.mjs [--force]
 
@@ -53,48 +45,18 @@ by the RenoDX match overlay and update its appid→exe cache.
             Show this help message.`;
 
 function parseArgs(argv) {
-  const options = {
-    force: false,
+  if (wantsHelp(argv)) {
+    return { force: false, help: true };
+  }
+
+  const { values } = parseCliArgs(argv, {
+    force: { type: "boolean" },
+    help: { type: "boolean", short: "h" },
+  });
+  return {
+    force: Boolean(values.force),
     help: false,
   };
-
-  let endOfOptions = false;
-
-  for (const arg of argv) {
-    if (endOfOptions) {
-      throw new UsageError(`Unexpected argument: ${arg}`);
-    }
-
-    switch (arg) {
-      case "--":
-        endOfOptions = true;
-        break;
-
-      case "--force":
-        options.force = true;
-        break;
-
-      case "-h":
-      case "--help":
-        options.help = true;
-        break;
-
-      default:
-        throw new UsageError(`Unknown flag: ${arg}`);
-    }
-  }
-
-  return options;
-}
-
-function ensureFetchAvailable() {
-  if (typeof fetch !== "function") {
-    throw new Error("global fetch is unavailable; use Node.js 18+.");
-  }
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function retryDelayMs(attempt) {
@@ -102,7 +64,7 @@ function retryDelayMs(attempt) {
 }
 
 function isRetryableError(error) {
-  if (error instanceof HttpError) {
+  if (error instanceof HttpStatusError) {
     return (
       error.status === 408 ||
       error.status === 425 ||
@@ -112,37 +74,6 @@ function isRetryableError(error) {
   }
 
   return true;
-}
-
-async function fetchJsonWithTimeout(url) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), CONFIG.requestTimeoutMs);
-  timeout.unref?.();
-
-  try {
-    const response = await fetch(url, {
-      headers: FETCH_HEADERS,
-      signal: controller.signal,
-    });
-
-    if (!response.ok) {
-      throw new HttpError(response.status, response.statusText);
-    }
-
-    try {
-      return await response.json();
-    } catch (error) {
-      throw new Error(`invalid JSON response: ${errorMessage(error)}`);
-    }
-  } catch (error) {
-    if (error?.name === "AbortError") {
-      throw new Error(`request timed out after ${CONFIG.requestTimeoutMs}ms`);
-    }
-
-    throw error;
-  } finally {
-    clearTimeout(timeout);
-  }
 }
 
 function extractAppinfo(apiResponse, appid) {
@@ -159,7 +90,9 @@ function extractAppinfo(apiResponse, appid) {
 async function fetchGameExes(appid) {
   for (let attempt = 0; attempt <= CONFIG.retries; attempt++) {
     try {
-      const apiResponse = await fetchJsonWithTimeout(STEAMCMD_INFO_API(appid));
+      const apiResponse = await fetchJsonWithTimeout(STEAMCMD_INFO_API(appid), {
+        timeoutMs: CONFIG.requestTimeoutMs,
+      });
       const appinfo = extractAppinfo(apiResponse, appid);
       const exes = gameExesFromAppinfo(appinfo);
 
@@ -234,10 +167,6 @@ async function enrichCache({ cacheFile, collectAppids, force }) {
       `${pruned > 0 ? `; pruned: ${pruned}` : ""}`,
   );
 
-  if (todo.length > 0) {
-    ensureFetchAvailable();
-  }
-
   const stats = {
     withExes: 0,
     withoutExes: 0,
@@ -273,26 +202,29 @@ async function enrichCache({ cacheFile, collectAppids, force }) {
 }
 
 /**
+ * Single CLI implementation. Returns exit code (0 ok, 1 failure, 2 usage).
+ * Process entrypoints call `runEnrichExeMain`, which only applies the code.
+ *
  * @param {object} opts
- * @param {string}   opts.cacheFile     — path to the shared appid→exe cache
- * @param {function} opts.collectAppids — () => iterable<string> from the caller's authoring source
- * @param {string[]} [opts.argv]        — defaults to `process.argv.slice(2)`
- * @param {boolean}  [opts.force]       — overrides `--force` from argv when set explicitly
- * @returns {Promise<number>} exit code (0 ok, 1 failure)
+ * @param {string}   opts.cacheFile
+ * @param {function} opts.collectAppids
+ * @param {string[]} [opts.argv]
+ * @param {boolean}  [opts.force]
+ * @returns {Promise<number>}
  */
 export async function runEnrichExe({ cacheFile, collectAppids, argv, force }) {
   if (typeof collectAppids !== "function") {
     throw new Error("runEnrichExe: collectAppids must be a function");
   }
 
-  const cliOptions = parseArgs(argv ?? process.argv.slice(2));
-
-  if (cliOptions.help) {
-    console.log(HELP_TEXT);
-    return 0;
-  }
-
   try {
+    const cliOptions = parseArgs(argv ?? process.argv.slice(2));
+
+    if (cliOptions.help) {
+      console.error(HELP_TEXT);
+      return 0;
+    }
+
     await enrichCache({
       cacheFile,
       collectAppids,
@@ -303,28 +235,30 @@ export async function runEnrichExe({ cacheFile, collectAppids, argv, force }) {
     if (error instanceof UsageError) {
       console.error(error.message);
       console.error("");
-      console.log(HELP_TEXT);
-    } else {
-      console.error(errorMessage(error));
+      console.error(HELP_TEXT);
+      return 2;
     }
+    console.error(errorMessage(error));
     return 1;
   }
 }
 
 /**
- * Thin entry-point wrapper: invokes `runEnrichExe` and propagates the
- * returned exit code to `process.exitCode`. Mirrors `runGenerateManifestMain`
- * so both runners share the same exit-code contract (return code, wrapper
- * sets `process.exitCode`).
+ * Process entry-point: runs `runEnrichExe` and assigns `process.exitCode`.
  */
 export function runEnrichExeMain(options) {
-  runEnrichExe(options).then(
-    (exitCode) => {
-      process.exitCode = exitCode;
-    },
+  const { cacheFile, collectAppids, argv, force } = options;
+  if (typeof collectAppids !== "function") {
+    console.error("runEnrichExeMain: collectAppids must be a function");
+    applyExitCode(1);
+    return;
+  }
+
+  runEnrichExe({ cacheFile, collectAppids, argv, force }).then(
+    (code) => applyExitCode(code),
     (error) => {
       console.error(errorMessage(error));
-      process.exitCode = 1;
+      applyExitCode(1);
     },
   );
 }

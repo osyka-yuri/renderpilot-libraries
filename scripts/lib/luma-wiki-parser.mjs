@@ -1,6 +1,5 @@
-import { createHash } from "node:crypto";
-
 import { UNREAL_ASSET } from "../../catalogs/addons/luma/lib/v1.mjs";
+import { sha256Hex } from "./hash.mjs";
 import { extractMarkdownTables, wikiStatusFromCell } from "./wiki-markdown.mjs";
 
 const LUMA_ASSET_RE = /Luma-[A-Za-z0-9_.()-]+(?:-x32)?\.zip/i;
@@ -75,7 +74,7 @@ export function normalizeLumaWikiNote(value) {
 }
 
 export function lumaWikiNoteFingerprint(note) {
-  return createHash("sha256").update(normalizeLumaWikiNote(note), "utf8").digest("hex");
+  return sha256Hex(Buffer.from(normalizeLumaWikiNote(note), "utf8"));
 }
 
 function tableColumns(headers, type) {

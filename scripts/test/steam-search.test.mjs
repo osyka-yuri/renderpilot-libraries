@@ -5,7 +5,8 @@ import path from "node:path";
 import { test } from "node:test";
 import { pathToFileURL } from "node:url";
 
-const SOURCE_MODULE = new URL("../lib/steam-search.mjs", import.meta.url);
+const LIB_DIR = new URL("../lib/", import.meta.url);
+const SOURCE_DEPS = ["steam-search.mjs", "common.mjs", "http.mjs"];
 
 async function importSteamSearchInTempRepo(t) {
   const repoRoot = await fs.mkdtemp(path.join(os.tmpdir(), "steam-search-test-"));
@@ -13,7 +14,9 @@ async function importSteamSearchInTempRepo(t) {
   const tempModulePath = path.join(tempLibDir, "steam-search.mjs");
 
   await fs.mkdir(tempLibDir, { recursive: true });
-  await fs.copyFile(SOURCE_MODULE, tempModulePath);
+  for (const name of SOURCE_DEPS) {
+    await fs.copyFile(new URL(name, LIB_DIR), path.join(tempLibDir, name));
+  }
 
   t.after(async () => {
     await fs.rm(repoRoot, { recursive: true, force: true });
@@ -83,12 +86,14 @@ test("searchSteamStore() trims whitespace, fetches Steam, sanitizes items, and w
   const { module, cacheFile } = await importSteamSearchInTempRepo(t);
 
   const fetchMock = t.mock.method(globalThis, "fetch", async (url, init) => {
-    assert.equal(url.origin, "https://store.steampowered.com");
-    assert.equal(url.pathname, "/api/storesearch/");
-    assert.equal(url.searchParams.get("term"), "Half Life");
-    assert.equal(url.searchParams.get("l"), "english");
-    assert.equal(url.searchParams.get("cc"), "US");
-    assert.equal(init.headers.accept, "application/json");
+    const parsed = typeof url === "string" ? new URL(url) : url;
+    assert.equal(parsed.origin, "https://store.steampowered.com");
+    assert.equal(parsed.pathname, "/api/storesearch/");
+    assert.equal(parsed.searchParams.get("term"), "Half Life");
+    assert.equal(parsed.searchParams.get("l"), "english");
+    assert.equal(parsed.searchParams.get("cc"), "US");
+    assert.equal(init.headers.Accept ?? init.headers.accept, "application/json");
+    assert.equal(init.headers["User-Agent"], "renderpilot-libraries");
     assert.ok(init.signal instanceof AbortSignal);
 
     return jsonResponse({

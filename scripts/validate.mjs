@@ -8,16 +8,14 @@ import path from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import { repoRoot, schemaChecks } from "./catalog.mjs";
+import { errorMessage } from "./lib/common.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
 
 const STATUS = {
   check: "•",
-  pass: "✓",
-  fail: "✗",
+  pass: "OK",
+  fail: "FAIL",
 };
-
-function formatCaughtError(error) {
-  return error instanceof Error ? error.message : String(error);
-}
 
 function resolveRepoPath(relPath) {
   if (typeof relPath !== "string" || relPath.length === 0) {
@@ -48,7 +46,7 @@ async function loadJson(relPath) {
   try {
     return JSON.parse(text);
   } catch (error) {
-    throw new Error(`${relPath}: invalid JSON — ${formatCaughtError(error)}`);
+    throw new Error(`${relPath}: invalid JSON — ${errorMessage(error)}`);
   }
 }
 
@@ -154,7 +152,7 @@ async function main() {
       }
     } catch (error) {
       failures.push(check.file);
-      console.error(`  ${STATUS.fail} ${formatCaughtError(error)}`);
+      console.error(`  ${STATUS.fail} ${errorMessage(error)}`);
     }
   }
 
@@ -167,7 +165,7 @@ async function main() {
   console.log("\nAll JSON manifests passed schema validation.");
 }
 
-main().catch((error) => {
-  console.error(formatCaughtError(error));
-  process.exitCode = 1;
+runCliMain({
+  parse: () => ({}),
+  main,
 });

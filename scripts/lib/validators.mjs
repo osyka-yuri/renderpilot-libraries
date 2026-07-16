@@ -6,8 +6,8 @@
 // their own wire-shape assembly and stops the two copies from drifting.
 //
 // Tool-specific concerns stay in each catalogue: RenoDX slug/split/overlay
-// fields in `catalogs/addons/renodx/lib/`, Luma assets/guidance in
-// `build-manifest.mjs`, managed dependencies in `managed-dependency.mjs`.
+// fields in `catalogs/addons/renodx/lib/`, Luma assets/guidance/review in
+// `authoring-profile.mjs`, managed dependencies in `managed-dependency.mjs`.
 
 export const SEMVER_RE = /^\d+\.\d+\.\d+$/u;
 

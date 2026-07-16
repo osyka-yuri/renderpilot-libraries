@@ -2,6 +2,7 @@ import path from "node:path";
 
 import { normalizeMatchRules as normalizeLumaMatchRules } from "../../catalogs/addons/luma/lib/authoring-profile.mjs";
 import { collectOverlayAppids as collectRenoOverlayAppIds } from "../../catalogs/addons/renodx/lib/overlay.mjs";
+import { MATCH_TIERS } from "./build-manifest-shared.mjs";
 import { isMissingFileError } from "./common.mjs";
 import { readJsonFileAsync, writeFormattedJsonFile } from "./json.mjs";
 import { normalizeAppid } from "./overlay-shared.mjs";
@@ -115,7 +116,7 @@ export function createLumaStoreApi(profiles) {
     },
     applyMatch(gameId, appid) {
       const profile = requiredProfile(byId, gameId);
-      profile.match = [{ kind: "steam_appid", value: appid, tier: 100 }];
+      profile.match = [{ kind: "steam_appid", value: appid, tier: MATCH_TIERS.steamAppid }];
       delete profile.match_ignore;
     },
     applyDuplicateIgnore(gameId) {

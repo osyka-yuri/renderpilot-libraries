@@ -12,14 +12,16 @@ import {
   createRenodxStoreApi,
   validateMatchOverlay,
 } from "../lib/pending-match-stores.mjs";
+import { UsageError } from "../lib/common.mjs";
 import { filesForTool, parseToolArg } from "../match-pending.mjs";
 
 test("parseToolArg defaults to renodx and selects luma explicitly", () => {
-  assert.equal(parseToolArg([]), "renodx");
-  assert.equal(parseToolArg(["--tool=luma"]), "luma");
+  assert.deepEqual(parseToolArg([]), { help: false, tool: "renodx" });
+  assert.deepEqual(parseToolArg(["--tool=luma"]), { help: false, tool: "luma" });
+  assert.deepEqual(parseToolArg(["--help"]), { help: true, tool: "renodx" });
   assert.throws(() => parseToolArg(["--tool=unknown"]), /Unknown --tool/);
-  assert.throws(() => parseToolArg(["--wat"]), /Unknown argument/);
-  assert.throws(() => parseToolArg(["--tool=luma", "extra"]), /Unknown argument/);
+  assert.throws(() => parseToolArg(["--wat"]), UsageError);
+  assert.throws(() => parseToolArg(["--tool=luma", "extra"]), UsageError);
 });
 
 test("filesForTool resolves the requested tool's authoring files", () => {

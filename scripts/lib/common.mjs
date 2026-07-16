@@ -12,6 +12,19 @@ export function errorMessage(error) {
   return error instanceof Error ? error.message : String(error);
 }
 
+/** Promise that resolves after `ms` milliseconds. */
+export function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * True for aborts from `AbortController` (`AbortError`) and from
+ * `AbortSignal.timeout` (`TimeoutError` DOMException).
+ */
+export function isAbortOrTimeoutError(error) {
+  return error?.name === "AbortError" || error?.name === "TimeoutError";
+}
+
 /** True when `error` is (or wraps) a Node `ENOENT` missing-file error. */
 export function isMissingFileError(error) {
   return /\bENOENT\b/.test(errorMessage(error));
@@ -21,6 +34,11 @@ export function isMissingFileError(error) {
  * Thrown by shared CLI parsers for unknown flags / bad usage. Runners print
  * the message + help text (no stack) when they catch it, distinct from
  * unexpected runtime errors that dump the full error.
+ *
+ * Exit-code contract for repository CLIs:
+ *   0 — success / help
+ *   1 — operational failure
+ *   2 — usage / bad flags (`UsageError`)
  */
 export class UsageError extends Error {
   constructor(message) {
@@ -46,7 +64,7 @@ export function requiredNonEmptyString(value, context) {
 }
 
 export function hasOwn(value, key) {
-  return Object.prototype.hasOwnProperty.call(value, key);
+  return Object.hasOwn(value, key);
 }
 
 export function assertNonEmptyArray(value, context) {
@@ -90,7 +108,7 @@ export function addCaseInsensitiveUnique(out, value) {
 const SOURCE_DATE_EPOCH = "SOURCE_DATE_EPOCH";
 
 function parseSourceDateEpoch(env) {
-  if (!Object.prototype.hasOwnProperty.call(env, SOURCE_DATE_EPOCH)) {
+  if (!Object.hasOwn(env, SOURCE_DATE_EPOCH)) {
     return null;
   }
 

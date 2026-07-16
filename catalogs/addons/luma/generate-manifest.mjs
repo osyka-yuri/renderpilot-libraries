@@ -44,7 +44,7 @@ runGenerateManifestMain(() => ({
   }),
   printSummary: (stats) => {
     console.log(
-      `manifest: ${stats.titles} titles (${stats.engineProfiles} engine profiles, ${stats.blacklist} blacklist)`,
+      `manifest: ${stats.games} games (${stats.engineProfiles} engine profiles, ${stats.blacklist} blacklist)`,
     );
 
     console.log(`pending (no AppID/exe yet): ${stats.pending} -> pending_match.json`);

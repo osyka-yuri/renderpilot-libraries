@@ -14,8 +14,9 @@
 
 import { readFile } from "node:fs/promises";
 
-import { errorMessage, UsageError } from "./lib/common.mjs";
 import { publishedJsonDocuments, r2, repoRoot } from "./catalog.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
+import { DEFAULT_TIMEOUT_MS, fetchWithTimeout } from "./lib/http.mjs";
 import {
   parseCheckArgs,
   loadLocalJson,
@@ -27,7 +28,8 @@ import {
 } from "./lib/published-json-check.mjs";
 
 const BUF_READ_FILE = (absPath) => readFile(absPath);
-const REAL_FETCH = (url) => fetch(url);
+const REAL_FETCH = (url) =>
+  fetchWithTimeout(url, { method: "GET", timeoutMs: DEFAULT_TIMEOUT_MS });
 
 const HELP_TEXT = `Usage: node scripts/check-published-json.mjs [--verbose] [--dry-run]
 
@@ -41,14 +43,7 @@ response.  Exits non-zero when any local file differs from the published
 version or when R2 cannot provide a complete response — run this after
 "pnpm run publish:json" to confirm every byte landed in R2.`;
 
-async function main(argv = process.argv.slice(2)) {
-  const options = parseCheckArgs(argv);
-
-  if (options.help) {
-    console.log(HELP_TEXT);
-    return;
-  }
-
+async function main(options) {
   const locals = await Promise.all(
     publishedJsonDocuments.map((document) =>
       loadLocalJson(document, repoRoot, BUF_READ_FILE),
@@ -95,12 +90,8 @@ async function main(argv = process.argv.slice(2)) {
   }
 }
 
-main().catch((error) => {
-  if (error instanceof UsageError) {
-    console.error(`Usage error: ${error.message}`);
-    console.error("Run with --help for usage.");
-  } else {
-    console.error(errorMessage(error));
-  }
-  process.exitCode = 1;
+runCliMain({
+  parse: parseCheckArgs,
+  help: () => console.error(HELP_TEXT),
+  main,
 });

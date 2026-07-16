@@ -23,9 +23,11 @@
 //   node scripts/check-luma-assets.mjs
 
 import { addonCatalogs } from "./catalog.mjs";
-import { forEachConcurrent } from "./lib/common.mjs";
+import { errorMessage, forEachConcurrent } from "./lib/common.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
 import { readJsonFileAsync } from "./lib/json.mjs";
 import { printIssues } from "./lib/checks.mjs";
+import { DEFAULT_TIMEOUT_MS, UpstreamNetworkError, fetchWithTimeout } from "./lib/http.mjs";
 import {
   AssetUnavailableError,
   assertManifestShape,
@@ -37,28 +39,20 @@ const LATEST_DOWNLOAD_BASE = `${RELEASE_BASE}/latest/download`;
 const TAG_LOCATION_RE =
   /^https:\/\/github\.com\/Filoppi\/Luma-Framework\/releases\/download\/(latest-\d+)\/([^/?#]+)$/u;
 
-const REQUEST_TIMEOUT_MS = 15_000;
 const CONCURRENCY = 4;
 
-async function headWithTimeout(url) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  timeout.unref?.();
-
+async function headWithTimeout(url, { redirect = "manual" } = {}) {
   try {
-    return await fetch(url, {
+    return await fetchWithTimeout(url, {
       method: "HEAD",
-      redirect: "manual",
-      signal: controller.signal,
+      redirect,
+      timeoutMs: DEFAULT_TIMEOUT_MS,
     });
   } catch (error) {
-    if (error?.name === "AbortError") {
-      throw new AssetUnavailableError(`request timed out after ${REQUEST_TIMEOUT_MS}ms`);
+    if (error instanceof UpstreamNetworkError) {
+      throw new AssetUnavailableError(error.message, { cause: error });
     }
-
-    throw new AssetUnavailableError(error instanceof Error ? error.message : String(error));
-  } finally {
-    clearTimeout(timeout);
+    throw new AssetUnavailableError(errorMessage(error), { cause: error });
   }
 }
 
@@ -103,11 +97,7 @@ async function checkAsset(asset) {
     };
   }
 
-  const taggedResponse = await fetch(location, {
-    method: "HEAD",
-    redirect: "follow",
-    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-  });
+  const taggedResponse = await headWithTimeout(location, { redirect: "follow" });
 
   if (!taggedResponse.ok) {
     return {
@@ -151,7 +141,7 @@ async function main() {
 
   if (networkFailure && results.every((result) => result.networkIssue)) {
     console.warn(
-      `Skipping asset-availability check -- could not reach GitHub: ${networkFailure.message}`,
+      `SKIP asset-availability check — could not reach GitHub: ${errorMessage(networkFailure)}`,
     );
     return;
   }
@@ -174,7 +164,7 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
+runCliMain({
+  parse: () => ({}),
+  main,
 });

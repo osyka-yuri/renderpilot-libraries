@@ -8,10 +8,12 @@ Run:
 
 ```powershell
 pnpm run sync:luma-wiki:check
-pnpm run generate:luma
+pnpm run sync:luma-wiki
 pnpm run check:luma-assets
 pnpm run check:luma-payload-layout
 ```
+
+`sync:luma-wiki` updates curated status/features from the wiki (never raw notes) and regenerates `addons/v1/luma.json`.
 
 The generated contract is `addons/v1/luma.json`. `minimum_reshade_version` is the host compatibility floor, `package` identifies the exact release asset and root add-on, and public `profile` is the strict `"game" | "unreal" | "unity"` enum. Unreal requires `Luma-Unreal_Engine.zip` plus `features`; Unity requires the exact architecture-specific shared asset and forbids `features`; game profiles forbid all shared engine assets and `features`.
 

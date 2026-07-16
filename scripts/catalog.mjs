@@ -24,10 +24,8 @@ const SCHEMAS = Object.freeze({
   dlssPresetManifest: "schemas/dlss_preset_manifest.schema.json",
   dlssSettingsCatalog: "schemas/dlss_settings_catalog.schema.json",
   renodxManifestV1: "catalogs/addons/renodx/manifest-v1.schema.json",
-  renodxManifestV3: "catalogs/addons/renodx/manifest-v3.schema.json",
   lumaManifestV1: "catalogs/addons/luma/manifest-v1.schema.json",
-  reshadeManifestV1Current: "catalogs/addons/reshade/manifest-v1.schema.json",
-  reshadeLegacyManifestV1: "catalogs/addons/reshade/manifest-legacy-v1.schema.json",
+  reshadeManifestV1: "catalogs/addons/reshade/manifest-v1.schema.json",
 });
 
 const defineDocuments = (documents) =>
@@ -42,9 +40,7 @@ const defineDocuments = (documents) =>
  * `dlss_settings.json` is intentionally not published because it is bundled into
  * the app at compile time.
  *
- * Versioned v1 documents are consumed only by the current application. The two
- * root legacy documents are kept exclusively for pre-v1 clients until a
- * separately announced end of life.
+ * Current add-on catalogues are versioned under `addons/v1/`.
  */
 export const jsonDocuments = defineDocuments([
   {
@@ -83,12 +79,6 @@ export const jsonDocuments = defineDocuments([
     publishedToR2: true,
   },
   {
-    file: "renodx_manifest.json",
-    schema: SCHEMAS.renodxManifestV3,
-    r2Key: "renodx_manifest.json",
-    publishedToR2: true,
-  },
-  {
     file: "addons/v1/luma.json",
     schema: SCHEMAS.lumaManifestV1,
     r2Key: "addons/v1/luma.json",
@@ -96,14 +86,8 @@ export const jsonDocuments = defineDocuments([
   },
   {
     file: "addons/v1/reshade.json",
-    schema: SCHEMAS.reshadeManifestV1Current,
+    schema: SCHEMAS.reshadeManifestV1,
     r2Key: "addons/v1/reshade.json",
-    publishedToR2: true,
-  },
-  {
-    file: "reshade_manifest.json",
-    schema: SCHEMAS.reshadeLegacyManifestV1,
-    r2Key: "reshade_manifest.json",
     publishedToR2: true,
   },
 ]);
@@ -177,19 +161,9 @@ export const addonCatalogs = Object.freeze({
       pending: "pending_match.json",
       unmatched: "unmatched.json",
     },
-    {
-      manifest: "addons/v1/renodx.json",
-      legacy: "renodx_manifest.json",
-    },
+    { manifest: "addons/v1/renodx.json" },
   ),
-  reshade: addonCatalog(
-    "reshade",
-    {},
-    {
-      manifest: "addons/v1/reshade.json",
-      legacy: "reshade_manifest.json",
-    },
-  ),
+  reshade: addonCatalog("reshade", {}, { manifest: "addons/v1/reshade.json" }),
 });
 
 const DEFAULT_R2 = Object.freeze({

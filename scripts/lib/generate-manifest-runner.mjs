@@ -7,7 +7,7 @@
 //
 //   await runGenerateManifest({
 //     files: {
-//       outputs: { manifest, legacy?, pending? },
+//       outputs: { manifest, pending?, ... },
 //       exeCache?,
 //     },
 //     build: (inputs) => ({ outputs, stats? }),
@@ -22,7 +22,14 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
 
-import { errorMessage, generatedAtFromEnv, assertPlainObject } from "./common.mjs";
+import {
+  errorMessage,
+  generatedAtFromEnv,
+  assertPlainObject,
+  UsageError,
+} from "./common.mjs";
+import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
+import { applyExitCode } from "./cli-main.mjs";
 import {
   readJsonFile,
   readTextFile,
@@ -30,42 +37,23 @@ import {
   writeTextFileAtomic,
 } from "./json.mjs";
 
-const FLAGS = Object.freeze({
-  check: "--check",
-  help: "--help",
-  helpShort: "-h",
-});
-
-const KNOWN_FLAGS = new Set(Object.values(FLAGS));
-
 /**
  * Parses the shared `--check` / `-h` / `--help` flag set used by every
- * generator script. Returns `{ help, check, error }`; `error` is `null` on
- * success or a ready-to-print string on unknown flags. Help wins over an
- * invalid argument so callers can short-circuit to the usage banner.
+ * generator script. Returns `{ help, check }`. Unknown flags throw `UsageError`
+ * (via parseCliArgs). Help wins over other flags when present in argv.
  */
 export function parseCheckStyleArgs(argv) {
-  const help = argv.includes(FLAGS.help) || argv.includes(FLAGS.helpShort);
-
-  // Preserve common CLI behavior: help wins even if another argument is invalid.
-  if (help) {
-    return { help: true, check: false, error: null };
+  if (wantsHelp(argv)) {
+    return { help: true, check: false };
   }
 
-  const unknown = argv.filter((arg) => !KNOWN_FLAGS.has(arg));
-
-  if (unknown.length > 0) {
-    return {
-      help: false,
-      check: false,
-      error: `Unknown argument${unknown.length === 1 ? "" : "s"}: ${unknown.join(", ")}`,
-    };
-  }
-
+  const { values } = parseCliArgs(argv, {
+    check: { type: "boolean" },
+    help: { type: "boolean", short: "h" },
+  });
   return {
     help: false,
-    check: argv.includes(FLAGS.check),
-    error: null,
+    check: Boolean(values.check),
   };
 }
 
@@ -215,18 +203,22 @@ export async function runGenerateManifest({
   repoRoot,
   argv = process.argv.slice(2),
 }) {
-  const args = parseCheckStyleArgs(argv);
-
-  if (args.help) {
-    console.log(helpText);
-    return 0;
+  let args;
+  try {
+    args = parseCheckStyleArgs(argv);
+  } catch (error) {
+    if (error instanceof UsageError) {
+      console.error(error.message);
+      console.error("");
+      console.error(helpText);
+      return 2;
+    }
+    throw error;
   }
 
-  if (args.error) {
-    console.error(args.error);
-    console.error("");
-    console.log(helpText);
-    return 1;
+  if (args.help) {
+    console.error(helpText);
+    return 0;
   }
 
   const exeCache = readExeCache(files.exeCache);
@@ -246,19 +238,26 @@ export async function runGenerateManifest({
 }
 
 /**
- * Thin entry-point wrapper: invokes `factory()` to build the options object,
- * then runs `runGenerateManifest` and propagates the returned exit code to
- * `process.exitCode`. Mirrors `runEnrichExeMain` so both runners share the
- * same exit-code contract.
+ * Process entry-point: builds options via `factory()`, runs `runGenerateManifest`,
+ * and assigns `process.exitCode`. Generators intentionally use a return-code
+ * programmatic API (`runGenerateManifest`) so tests can assert 0/1/2 without
+ * mutating process state; this wrapper is the only place that sets exitCode.
  */
 export function runGenerateManifestMain(factory) {
-  runGenerateManifest(factory()).then(
-    (exitCode) => {
-      process.exitCode = exitCode;
-    },
+  let options;
+  try {
+    options = factory();
+  } catch (error) {
+    console.error(errorMessage(error));
+    applyExitCode(1);
+    return;
+  }
+
+  runGenerateManifest(options).then(
+    (exitCode) => applyExitCode(exitCode),
     (error) => {
       console.error(errorMessage(error));
-      process.exitCode = 1;
+      applyExitCode(1);
     },
   );
 }

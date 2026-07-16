@@ -1,4 +1,18 @@
-export const USER_AGENT = "renderpilot-libraries";
+// GitHub API helpers for RenoDX snapshot tooling and authenticated GETs.
+//
+// Prefer `http.fetchJsonWithTimeout` for generic JSON (HttpStatusError /
+// UpstreamNetworkError). `fetchJson` here always maps failures to
+// `SnapshotUnavailableError` (soft-skip policy) and returns `{ data, headers }`
+// for Link-header pagination.
+
+import { errorMessage } from "./common.mjs";
+import {
+  DEFAULT_TIMEOUT_MS,
+  USER_AGENT,
+  UpstreamNetworkError,
+  fetchWithTimeout,
+} from "./http.mjs";
+
 export const SNAPSHOT_API =
   "https://api.github.com/repos/clshortfuse/renodx/releases/tags/snapshot";
 
@@ -22,15 +36,24 @@ export function githubHeaders() {
   return headers;
 }
 
-export async function fetchJson(url) {
+/** GitHub JSON GET → `{ data, headers }`; failures become SnapshotUnavailableError. */
+export async function fetchJson(url, options = {}) {
+  const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   let res;
 
   try {
-    res = await fetch(url, { headers: githubHeaders() });
-  } catch (err) {
-    throw new SnapshotUnavailableError(`request failed: ${err.message}`, {
-      cause: err,
+    res = await fetchWithTimeout(url, {
+      fetchFn: options.fetchFn,
+      timeoutMs,
+      method: "GET",
+      headers: githubHeaders(),
     });
+  } catch (err) {
+    const message =
+      err instanceof UpstreamNetworkError
+        ? err.message
+        : `request failed: ${errorMessage(err)}`;
+    throw new SnapshotUnavailableError(message, { cause: err });
   }
 
   if (!res.ok) {
@@ -45,9 +68,10 @@ export async function fetchJson(url) {
       headers: res.headers,
     };
   } catch (err) {
-    throw new SnapshotUnavailableError(`GitHub API returned invalid JSON: ${err.message}`, {
-      cause: err,
-    });
+    throw new SnapshotUnavailableError(
+      `GitHub API returned invalid JSON: ${errorMessage(err)}`,
+      { cause: err },
+    );
   }
 }
 
@@ -76,12 +100,12 @@ export function getNextUrlFromLinkHeader(header) {
   return null;
 }
 
-export async function fetchAllPaginatedItems(initialUrl) {
+export async function fetchAllPaginatedItems(initialUrl, options = {}) {
   let allItems = [];
   let nextUrl = initialUrl;
 
   while (nextUrl) {
-    const { data, headers } = await fetchJson(nextUrl);
+    const { data, headers } = await fetchJson(nextUrl, options);
 
     if (Array.isArray(data)) {
       allItems = allItems.concat(data);
@@ -95,12 +119,38 @@ export async function fetchAllPaginatedItems(initialUrl) {
   return allItems;
 }
 
-export async function fetchSnapshotRelease() {
-  const { data: release } = await fetchJson(SNAPSHOT_API);
+export async function fetchSnapshotRelease(options = {}) {
+  const { data: release } = await fetchJson(SNAPSHOT_API, options);
 
   if (release.assets_url) {
-    release.assets = await fetchAllPaginatedItems(`${release.assets_url}?per_page=100`);
+    release.assets = await fetchAllPaginatedItems(
+      `${release.assets_url}?per_page=100`,
+      options,
+    );
   }
 
   return release;
+}
+
+/**
+ * Collects non-empty asset basenames from a GitHub release object
+ * (paginated assets already attached by `fetchSnapshotRelease`).
+ */
+export function snapshotAssetNames(release) {
+  if (!Array.isArray(release?.assets)) {
+    throw new SnapshotUnavailableError(
+      "GitHub API response did not contain an assets array",
+    );
+  }
+
+  return new Set(
+    release.assets
+      .map((asset) => asset?.name)
+      .filter((name) => typeof name === "string" && name.length > 0),
+  );
+}
+
+/** Fetches the RenoDX snapshot release and returns its asset basename set. */
+export async function fetchSnapshotAssetNames(options = {}) {
+  return snapshotAssetNames(await fetchSnapshotRelease(options));
 }

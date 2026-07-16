@@ -5,10 +5,11 @@
   "type": "module",
   "description": "Validation and Cloudflare R2 publishing tooling for the RenderPilot libraries catalog.",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "scripts": {
     "check": "pnpm run format:check && pnpm run validate && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts && pnpm run sync:renodx-wiki:check && pnpm run sync:luma-wiki:check && pnpm run check:slugs && pnpm run check:luma-assets && pnpm run check:luma-payload-layout",
+    "check:offline": "pnpm run format:check && pnpm run validate && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts",
     "validate": "node scripts/validate.mjs",
     "check:slugs": "node scripts/check-renodx-slugs.mjs",
     "check:luma-assets": "node scripts/check-luma-assets.mjs",

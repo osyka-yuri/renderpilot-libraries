@@ -7,10 +7,9 @@ import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
 import {
-  buildLegacyV1ReshadeManifest,
-  buildV1ReshadeManifest,
+  buildManifest,
   SCHEMA_VERSION,
-} from "../../catalogs/addons/reshade/build-manifest.mjs";
+} from "../../catalogs/addons/reshade/lib/build-manifest.mjs";
 import { RESHADE_STABLE, RESHADE_NIGHTLY } from "../lib/reshade-sources.mjs";
 import { publishedJsonDocuments } from "../catalog.mjs";
 
@@ -29,8 +28,8 @@ function compileCurrentSchema() {
   return ajv.compile(schema);
 }
 
-test("buildV1ReshadeManifest emits shared channels under schema v1", () => {
-  const manifest = buildV1ReshadeManifest({ generatedAt: "2026-07-05T00:00:00Z" });
+test("buildManifest emits shared channels under schema v1", () => {
+  const manifest = buildManifest({ generatedAt: "2026-07-05T00:00:00Z" });
 
   assert.equal(manifest.schema_version, SCHEMA_VERSION);
   assert.equal(manifest.generated_at, "2026-07-05T00:00:00Z");
@@ -38,13 +37,13 @@ test("buildV1ReshadeManifest emits shared channels under schema v1", () => {
   assert.deepEqual(manifest.channels.nightly, RESHADE_NIGHTLY);
 });
 
-test("buildV1ReshadeManifest defaults generated_at when omitted", () => {
-  const manifest = buildV1ReshadeManifest();
+test("buildManifest defaults generated_at when omitted", () => {
+  const manifest = buildManifest();
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
 });
 
 test("current ReShade schema permits a nightly-only catalogue", () => {
-  const manifest = buildV1ReshadeManifest({ generatedAt: "2026-07-05T00:00:00Z" });
+  const manifest = buildManifest({ generatedAt: "2026-07-05T00:00:00Z" });
   const nightlyOnly = {
     ...manifest,
     channels: { nightly: manifest.channels.nightly },
@@ -53,11 +52,10 @@ test("current ReShade schema permits a nightly-only catalogue", () => {
   assert.equal(validate(nightlyOnly), true, JSON.stringify(validate.errors));
 });
 
-test("current and legacy v1 projections are deterministic for a fixed generatedAt", () => {
-  const a = buildV1ReshadeManifest({ generatedAt: "2026-01-01T00:00:00Z" });
-  const b = buildV1ReshadeManifest({ generatedAt: "2026-01-01T00:00:00Z" });
+test("v1 projection is deterministic for a fixed generatedAt", () => {
+  const a = buildManifest({ generatedAt: "2026-01-01T00:00:00Z" });
+  const b = buildManifest({ generatedAt: "2026-01-01T00:00:00Z" });
   assert.deepEqual(a, b);
-  assert.equal(buildLegacyV1ReshadeManifest(a).schema_version, 1);
 });
 
 test("integrity - the committed ReShade v1 document matches the shared source constants", async () => {
@@ -70,17 +68,6 @@ test("integrity - the committed ReShade v1 document matches the shared source co
   assert.equal(manifest.schema_version, SCHEMA_VERSION);
   assert.deepEqual(manifest.channels.stable, RESHADE_STABLE);
   assert.deepEqual(manifest.channels.nightly, RESHADE_NIGHTLY);
-});
-
-test("integrity - legacy RenoDX v3 embeds the ReShade v1 projection", async () => {
-  const [reshade, renodx] = await Promise.all(
-    ["reshade_manifest.json", "renodx_manifest.json"].map(async (file) =>
-      JSON.parse(await fs.readFile(path.join(REPO_ROOT, file), "utf-8")),
-    ),
-  );
-
-  assert.deepEqual(renodx.reshade.nightly, reshade.nightly);
-  assert.deepEqual(renodx.reshade.stable, reshade.stable);
 });
 
 test("integrity - current tool-v1 catalogues contain no ReShade source block", async () => {
@@ -103,15 +90,11 @@ test("integrity - current tool-v1 catalogues contain no ReShade source block", a
   }
 });
 
-test("integrity - current ReShade and both legacy projections remain published", () => {
+test("integrity - current ReShade catalogue remains published under addons/v1", () => {
   const publishedFiles = publishedJsonDocuments.map(({ file }) => file);
-  for (const file of [
-    "addons/v1/reshade.json",
-    "reshade_manifest.json",
-    "renodx_manifest.json",
-  ]) {
-    assert.ok(publishedFiles.includes(file), `${file} remains in the R2 publication list`);
-  }
+  assert.ok(publishedFiles.includes("addons/v1/reshade.json"));
+  assert.ok(!publishedFiles.includes("reshade_manifest.json"));
+  assert.ok(!publishedFiles.includes("renodx_manifest.json"));
 });
 
 test("publication registry pins explicit R2 keys for every served JSON document", () => {
@@ -129,6 +112,4 @@ test("publication registry pins explicit R2 keys for every served JSON document"
   assert.equal(keys["addons/v1/luma.json"], "addons/v1/luma.json");
   assert.equal(keys["addons/v1/renodx.json"], "addons/v1/renodx.json");
   assert.equal(keys["addons/v1/reshade.json"], "addons/v1/reshade.json");
-  assert.equal(keys["renodx_manifest.json"], "renodx_manifest.json");
-  assert.equal(keys["reshade_manifest.json"], "reshade_manifest.json");
 });

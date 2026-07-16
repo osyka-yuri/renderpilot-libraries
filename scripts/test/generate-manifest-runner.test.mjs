@@ -20,7 +20,7 @@ test("runGenerateManifest writes and checks a single generated manifest output",
   await withTempDir(async (repoRoot) => {
     const files = {
       outputs: {
-        manifest: path.join(repoRoot, "reshade_manifest.json"),
+        manifest: path.join(repoRoot, "reshade.json"),
       },
     };
 
@@ -78,16 +78,14 @@ test("runGenerateManifest writes and checks manifest plus pending outputs", asyn
   });
 });
 
-test("runGenerateManifest writes and checks primary plus legacy projection", async () => {
+test("runGenerateManifest writes and checks primary plus secondary outputs", async () => {
   await withTempDir(async (repoRoot) => {
     const files = {
       outputs: {
-        manifest: path.join(repoRoot, "addons", "v1", "tool.json"),
-        legacy: path.join(repoRoot, "tool_legacy.json"),
+        manifest: path.join(repoRoot, "tool.json"),
+        secondary: path.join(repoRoot, "tool_secondary.json"),
       },
     };
-
-    await fs.mkdir(path.dirname(files.outputs.manifest), { recursive: true });
 
     const options = {
       files,
@@ -96,7 +94,7 @@ test("runGenerateManifest writes and checks primary plus legacy projection", asy
       build: ({ generatedAt }) => ({
         outputs: {
           manifest: { schema_version: 1, generated_at: generatedAt, games: [] },
-          legacy: { schema_version: 3, generated_at: generatedAt, titles: [] },
+          secondary: { schema_version: 1, generated_at: generatedAt, items: [] },
         },
       }),
       readInputs: ({ generatedAt }) => ({ generatedAt }),

@@ -3,8 +3,10 @@
 // the manifest. This reads only ZIP metadata through bounded HTTP ranges.
 
 import { addonCatalogs } from "./catalog.mjs";
-import { forEachConcurrent } from "./lib/common.mjs";
+import { errorMessage, forEachConcurrent } from "./lib/common.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
 import { printIssues } from "./lib/checks.mjs";
+import { PAYLOAD_TIMEOUT_MS, UpstreamNetworkError, fetchWithTimeout } from "./lib/http.mjs";
 import { readJsonFileAsync } from "./lib/json.mjs";
 import { AssetUnavailableError } from "./lib/luma-asset-checks.mjs";
 import {
@@ -17,7 +19,6 @@ import {
 
 const LATEST_DOWNLOAD_BASE =
   "https://github.com/Filoppi/Luma-Framework/releases/latest/download";
-const REQUEST_TIMEOUT_MS = 30_000;
 const MAX_CENTRAL_DIRECTORY_BYTES = 2 * 1024 * 1024;
 const CONCURRENCY = 4;
 
@@ -45,17 +46,23 @@ async function readBodyBounded(body, maxBytes) {
   );
 }
 
+function toAssetUnavailable(error) {
+  if (error instanceof UpstreamNetworkError) {
+    return new AssetUnavailableError(error.message, { cause: error });
+  }
+  return new AssetUnavailableError(errorMessage(error), {
+    cause: error,
+  });
+}
+
 async function resolveAsset(asset) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  timeout.unref?.();
   const url = `${LATEST_DOWNLOAD_BASE}/${encodeURIComponent(asset)}`;
 
   try {
-    const response = await fetch(url, {
+    const response = await fetchWithTimeout(url, {
       method: "HEAD",
       redirect: "follow",
-      signal: controller.signal,
+      timeoutMs: PAYLOAD_TIMEOUT_MS,
     });
     if (!response.ok)
       throw new PayloadLayoutError(`asset HEAD returned HTTP ${response.status}`);
@@ -66,24 +73,16 @@ async function resolveAsset(asset) {
     return { url: response.url, total };
   } catch (error) {
     if (error instanceof PayloadLayoutError) throw error;
-    if (error?.name === "AbortError") {
-      throw new AssetUnavailableError(`request timed out after ${REQUEST_TIMEOUT_MS}ms`);
-    }
-    throw new AssetUnavailableError(error instanceof Error ? error.message : String(error));
-  } finally {
-    clearTimeout(timeout);
+    throw toAssetUnavailable(error);
   }
 }
 
 async function requestRange(url, range, maxBytes) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  timeout.unref?.();
-
   try {
-    const response = await fetch(url, {
+    const response = await fetchWithTimeout(url, {
+      method: "GET",
+      timeoutMs: PAYLOAD_TIMEOUT_MS,
       headers: { Range: range },
-      signal: controller.signal,
     });
     return {
       status: response.status,
@@ -92,12 +91,7 @@ async function requestRange(url, range, maxBytes) {
     };
   } catch (error) {
     if (error instanceof PayloadLayoutError) throw error;
-    if (error?.name === "AbortError") {
-      throw new AssetUnavailableError(`request timed out after ${REQUEST_TIMEOUT_MS}ms`);
-    }
-    throw new AssetUnavailableError(error instanceof Error ? error.message : String(error));
-  } finally {
-    clearTimeout(timeout);
+    throw toAssetUnavailable(error);
   }
 }
 
@@ -154,7 +148,7 @@ async function checkPayload({ asset, addonFile }) {
     return {
       asset,
       ok: false,
-      reason: error instanceof Error ? error.message : String(error),
+      reason: errorMessage(error),
     };
   }
 }
@@ -189,7 +183,7 @@ async function main() {
 
   if (networkFailure && results.every((result) => result.networkIssue)) {
     console.warn(
-      `Skipping Luma payload-layout check -- could not reach GitHub: ${networkFailure.message}`,
+      `SKIP Luma payload-layout check — could not reach GitHub: ${errorMessage(networkFailure)}`,
     );
     return;
   }
@@ -207,7 +201,7 @@ async function main() {
   console.log(`OK all ${results.length} Luma assets match their root payload identity.`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
+runCliMain({
+  parse: () => ({}),
+  main,
 });

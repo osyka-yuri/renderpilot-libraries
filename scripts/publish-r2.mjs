@@ -12,34 +12,22 @@
 //
 // Credentials: R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (object-scoped R2 token).
 
-import { createHash } from "node:crypto";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
-import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { HeadObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 
-import { errorMessage, UsageError } from "./lib/common.mjs";
+import { errorMessage } from "./lib/common.mjs";
+import { parseCliArgs, wantsHelp } from "./lib/cli-args.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
+import { md5Hex, sha256Hex } from "./lib/hash.mjs";
+import { createR2Client } from "./lib/r2-client.mjs";
 import { publishedJsonDocuments, r2, repoRoot } from "./catalog.mjs";
 
 const CDN_DIR_NAME = "cdn";
 const BINARY_SUFFIX = ".dll.zst";
 const SINGLE_PART_MD5_ETAG = /^[0-9a-f]{32}$/;
 
-const KNOWN_FLAGS = new Map([
-  ["--json-only", "jsonOnly"],
-  ["--dry-run", "dryRun"],
-  ["--force", "force"],
-  ["--help", "help"],
-  ["-h", "help"],
-]);
-
-async function main(argv = process.argv.slice(2), env = process.env) {
-  const options = parseArgs(argv);
-
-  if (options.help) {
-    printHelp();
-    return;
-  }
-
+async function main(options, env = process.env) {
   const objects = await resolveObjects(options);
   assertUniqueKeys(objects);
 
@@ -70,35 +58,27 @@ async function main(argv = process.argv.slice(2), env = process.env) {
 }
 
 function parseArgs(argv) {
-  const options = {
-    jsonOnly: false,
-    dryRun: false,
-    force: false,
+  if (wantsHelp(argv)) {
+    return { jsonOnly: false, dryRun: false, force: false, help: true };
+  }
+
+  const { values } = parseCliArgs(argv, {
+    "json-only": { type: "boolean" },
+    "dry-run": { type: "boolean" },
+    force: { type: "boolean" },
+    help: { type: "boolean", short: "h" },
+  });
+
+  return {
+    jsonOnly: Boolean(values["json-only"]),
+    dryRun: Boolean(values["dry-run"]),
+    force: Boolean(values.force),
     help: false,
   };
-
-  const unknown = [];
-
-  for (const arg of argv) {
-    const optionName = KNOWN_FLAGS.get(arg);
-
-    if (!optionName) {
-      unknown.push(arg);
-      continue;
-    }
-
-    options[optionName] = true;
-  }
-
-  if (unknown.length > 0) {
-    throw new UsageError(`unknown option(s): ${unknown.join(", ")}`);
-  }
-
-  return options;
 }
 
-// Object keys retain the catalog-relative path.  Legacy compatibility files stay
-// at the bucket root; current documents are deliberately versioned under addons/v1.
+// Object keys retain the catalog-relative path. Add-on catalogues are versioned
+// under addons/v1/; library/DLSS documents remain at the bucket root.
 async function resolveObjects({ jsonOnly }) {
   const objects = publishedJsonDocuments.map(({ file, r2Key }) => ({
     key: r2Key,
@@ -157,32 +137,6 @@ function assertUniqueKeys(objects) {
     }
 
     seen.set(object.key, object);
-  }
-}
-
-function createR2Client(env) {
-  assertNonEmptyConfig("r2.bucket", r2.bucket);
-  assertNonEmptyConfig("r2.endpoint", r2.endpoint);
-
-  const accessKeyId = env.R2_ACCESS_KEY_ID?.trim();
-  const secretAccessKey = env.R2_SECRET_ACCESS_KEY?.trim();
-
-  if (!accessKeyId || !secretAccessKey) {
-    throw new Error(
-      "R2 credentials missing: set R2_ACCESS_KEY_ID and R2_SECRET_ACCESS_KEY.",
-    );
-  }
-
-  return new S3Client({
-    region: "auto",
-    endpoint: r2.endpoint,
-    credentials: { accessKeyId, secretAccessKey },
-  });
-}
-
-function assertNonEmptyConfig(name, value) {
-  if (typeof value !== "string" || value.trim() === "") {
-    throw new Error(`invalid ${name}: expected a non-empty string.`);
   }
 }
 
@@ -317,14 +271,6 @@ function isMissingObjectError(err) {
   );
 }
 
-function md5Hex(buf) {
-  return createHash("md5").update(buf).digest("hex");
-}
-
-function sha256Hex(buf) {
-  return createHash("sha256").update(buf).digest("hex");
-}
-
 function normalizeEtag(etag) {
   return String(etag ?? "")
     .replaceAll('"', "")
@@ -361,7 +307,7 @@ function printDryRun(objects, { jsonOnly }) {
 }
 
 function printHelp() {
-  console.log(`Usage: node scripts/publish-r2.mjs [--json-only] [--dry-run] [--force]
+  console.error(`Usage: node scripts/publish-r2.mjs [--json-only] [--dry-run] [--force]
 
   --json-only  Publish only the served JSON manifests (skip cdn/ binaries). CI uses this.
   --dry-run    List the objects that would be considered; no network, no credentials.
@@ -370,13 +316,8 @@ function printHelp() {
   Credentials: R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY (object-scoped R2 S3 token).`);
 }
 
-main().catch((err) => {
-  if (err instanceof UsageError) {
-    console.error(`Usage error: ${err.message}`);
-    console.error("Run with --help for usage.");
-  } else {
-    console.error(errorMessage(err));
-  }
-
-  process.exitCode = 1;
+runCliMain({
+  parse: parseArgs,
+  help: printHelp,
+  main,
 });

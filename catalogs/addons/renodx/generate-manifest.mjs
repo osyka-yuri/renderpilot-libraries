@@ -1,12 +1,11 @@
 #!/usr/bin/env node
-// Generate the RenoDX v1 manifest and its schema-v3 compatibility projection.
+// Generate the RenoDX v1 manifest (`addons/v1/renodx.json`).
 //
 // The app fetches RenoDX add-ons live from upstream, so this manifest carries no
 // artifacts or hashes. The authoring inputs stay in this folder; the served
-// documents are written under addons/v1/ and (for legacy clients) the repo root.
+// document is written under addons/v1/.
 
 import { buildManifest } from "./lib/build-manifest.mjs";
-import { buildLegacyV3Manifest } from "./lib/legacy-v3.mjs";
 import { readJsonFile } from "../../../scripts/lib/json.mjs";
 import { runGenerateManifestMain } from "../../../scripts/lib/generate-manifest-runner.mjs";
 import { addonCatalogs, repoRoot, sharedFiles } from "../../../scripts/catalog.mjs";
@@ -17,17 +16,16 @@ const FILES = Object.freeze({
   exeCache: sharedFiles.steamExeCache,
   outputs: {
     manifest: addonCatalogs.renodx.outputs.manifest.file,
-    legacy: addonCatalogs.renodx.outputs.legacy.file,
     pending: addonCatalogs.renodx.sources.pending,
   },
 });
 
 const HELP_TEXT = `Usage: node generate-manifest.mjs [--check]
 
-Generate the v1 RenoDX document and its schema-v3 compatibility projection from
-the curation inputs and optional steam-appid-exe.json cache.
+Generate the v1 RenoDX document from the curation inputs and optional
+steam-appid-exe.json cache.
 
-  --check   Do not write files; fail if generated outputs differ.
+  --check   Do not write files; fail if the generated output differs.
   -h, --help
             Show this help message.`;
 
@@ -40,7 +38,6 @@ runGenerateManifestMain(() => ({
     return {
       outputs: {
         manifest: result.manifest,
-        legacy: buildLegacyV3Manifest(result.manifest),
         pending: result.pending,
       },
       stats: result.stats,
@@ -54,9 +51,9 @@ runGenerateManifestMain(() => ({
   }),
   printSummary: (stats) => {
     console.log(
-      `manifest: ${stats.titles} titles (${stats.external} external, ` +
-        `${stats.native_hdr} native-hdr, ${stats.blacklist} blacklist), ` +
-        `${stats.generics} generics`,
+      `manifest: ${stats.games} games (${stats.external} external, ` +
+        `${stats.native_hdr} native-hdr, ${stats.blocked} blocked), ` +
+        `${stats.engineProfiles} engine profiles`,
     );
 
     if (stats.ambiguousDerivedExes > 0) {

@@ -5,7 +5,7 @@
 // manifest without curation.
 
 import { addonCatalogs } from "./catalog.mjs";
-import { UsageError, errorMessage } from "./lib/common.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
 import { readJsonFile, writeFormattedJsonFile } from "./lib/json.mjs";
 import { parseLumaWikiRows, reconcileLumaStatuses } from "./lib/luma-wiki.mjs";
 import { fetchWikiMarkdown, parseWikiSyncArgs } from "./lib/wiki-sync.mjs";
@@ -26,13 +26,7 @@ function printRows(header, rows, format) {
   if (rows.length > 10) console.log(`  ... and ${rows.length - 10} more`);
 }
 
-async function main() {
-  const args = parseWikiSyncArgs(process.argv.slice(2));
-  if (args.help) {
-    usage();
-    return;
-  }
-
+async function main(args) {
   const curatedPath = addonCatalogs.luma.sources.curatedGames;
   const curatedGames = readJsonFile(curatedPath, "curated_games.json");
 
@@ -107,12 +101,8 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  if (error instanceof UsageError) {
-    console.error(error.message);
-    usage();
-  } else {
-    console.error(errorMessage(error));
-  }
-  process.exitCode = 1;
+runCliMain({
+  parse: parseWikiSyncArgs,
+  help: usage,
+  main,
 });

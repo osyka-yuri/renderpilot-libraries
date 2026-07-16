@@ -6,20 +6,14 @@
 
 import { readFile } from "node:fs/promises";
 import { addonCatalogs } from "./catalog.mjs";
-import { UsageError, assertPlainObject, errorMessage } from "./lib/common.mjs";
-import { githubHeaders } from "./lib/github.mjs";
-import { writeJsonFileAtomic } from "./lib/json.mjs";
-import {
-  jsonChanged,
-  fetchJsonWithTimeout,
-  fetchWikiMarkdown,
-  parseWikiSyncArgs,
-} from "./lib/wiki-sync.mjs";
+import { assertPlainObject, errorMessage } from "./lib/common.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
+import { fetchSnapshotAssetNames } from "./lib/github.mjs";
+import { writeFormattedJsonFile } from "./lib/json.mjs";
+import { jsonChanged, fetchWikiMarkdown, parseWikiSyncArgs } from "./lib/wiki-sync.mjs";
 import { parseRenodxWikiRows, reconcileRenodxWiki } from "./lib/renodx-wiki.mjs";
 
 const WIKI_URL = "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md";
-const SNAPSHOT_API =
-  "https://api.github.com/repos/clshortfuse/renodx/releases/tags/snapshot";
 
 function usage() {
   console.error("Usage: node scripts/sync-renodx-wiki.mjs [--check]");
@@ -41,15 +35,7 @@ async function readJsonOrDefault(file, fallback) {
 
 async function fetchSnapshotAssets() {
   try {
-    const release = await fetchJsonWithTimeout(SNAPSHOT_API, { headers: githubHeaders() });
-    if (!Array.isArray(release?.assets)) {
-      throw new Error("snapshot release response does not contain an assets array");
-    }
-    return new Set(
-      release.assets
-        .map((asset) => asset?.name)
-        .filter((name) => typeof name === "string" && name.length > 0),
-    );
+    return await fetchSnapshotAssetNames();
   } catch (error) {
     console.warn(`Warning: could not fetch snapshot assets: ${errorMessage(error)}`);
     console.warn("Continuing with wiki-link based official detection only.");
@@ -57,13 +43,7 @@ async function fetchSnapshotAssets() {
   }
 }
 
-async function main() {
-  const args = parseWikiSyncArgs(process.argv.slice(2));
-  if (args.help) {
-    usage();
-    return;
-  }
-
+async function main(args) {
   const wikiPath = addonCatalogs.renodx.sources.wiki;
   const overlayPath = addonCatalogs.renodx.sources.overlay;
   const existingWiki = await readJsonOrDefault(wikiPath, []);
@@ -91,8 +71,8 @@ async function main() {
     return;
   }
 
-  await writeJsonFileAtomic(wikiPath, result.wikiGames);
-  await writeJsonFileAtomic(overlayPath, result.overlay);
+  await writeFormattedJsonFile(wikiPath, result.wikiGames);
+  await writeFormattedJsonFile(overlayPath, result.overlay);
   console.log(
     [
       `Synced ${result.wikiGames.length} games.`,
@@ -104,12 +84,8 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  if (error instanceof UsageError) {
-    console.error(error.message);
-    usage();
-  } else {
-    console.error(errorMessage(error));
-  }
-  process.exitCode = 1;
+runCliMain({
+  parse: parseWikiSyncArgs,
+  help: usage,
+  main,
 });

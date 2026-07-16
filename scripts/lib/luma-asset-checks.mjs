@@ -17,8 +17,8 @@ import { isPlainObject } from "./common.mjs";
  * `scripts/lib/github.mjs`.
  */
 export class AssetUnavailableError extends Error {
-  constructor(message) {
-    super(message);
+  constructor(message, options) {
+    super(message, options);
     this.name = "AssetUnavailableError";
   }
 }

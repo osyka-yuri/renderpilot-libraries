@@ -9,43 +9,29 @@
 // The CLI (`scripts/check-published-json.mjs`) injects real `node:fs/promises`
 // and the global `fetch`.  Tests inject mocks.
 
-import { createHash } from "node:crypto";
 import path from "node:path";
 
-import { errorMessage, UsageError } from "./common.mjs";
-
-const KNOWN_FLAGS = new Map([
-  ["--verbose", "verbose"],
-  ["-v", "verbose"],
-  ["--dry-run", "dryRun"],
-  ["--help", "help"],
-  ["-h", "help"],
-]);
+import { errorMessage } from "./common.mjs";
+import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
+import { DEFAULT_TIMEOUT_MS, fetchWithTimeout } from "./http.mjs";
+import { sha256Hex } from "./hash.mjs";
 
 export function parseCheckArgs(argv) {
-  const options = { verbose: false, dryRun: false, help: false };
-  const unknown = [];
-
-  for (const arg of argv) {
-    const name = KNOWN_FLAGS.get(arg);
-    if (!name) {
-      unknown.push(arg);
-      continue;
-    }
-    options[name] = true;
+  if (wantsHelp(argv)) {
+    return { verbose: false, dryRun: false, help: true };
   }
 
-  if (unknown.length > 0) {
-    throw new UsageError(`unknown option(s): ${unknown.join(", ")}`);
-  }
+  const { values } = parseCliArgs(argv, {
+    verbose: { type: "boolean", short: "v" },
+    "dry-run": { type: "boolean" },
+    help: { type: "boolean", short: "h" },
+  });
 
-  return options;
-}
-
-// ── hashing ──
-
-export function sha256Hex(buf) {
-  return createHash("sha256").update(buf).digest("hex");
+  return {
+    verbose: Boolean(values.verbose),
+    dryRun: Boolean(values["dry-run"]),
+    help: false,
+  };
 }
 
 // ── local loading ──
@@ -83,14 +69,19 @@ export async function loadLocalJson(document, repoRoot, readFile) {
  * SHA-256. Returns `{ status: "available", sha256, size }` on success or
  * `{ status: "unavailable", reason }` when R2 cannot provide the full body.
  *
- * `fetchFn` is `(url: string) => Promise<Response>`.
+ * `fetchFn` is injectable for tests (same shape as global `fetch`). When omitted,
+ * uses `fetchWithTimeout` (User-Agent + default timeout).
  */
 export async function fetchRemoteJson(key, publicHost, fetchFn) {
   const url = `https://${publicHost}/${key}`;
+  const doFetch =
+    typeof fetchFn === "function"
+      ? (u) => fetchFn(u)
+      : (u) => fetchWithTimeout(u, { method: "GET", timeoutMs: DEFAULT_TIMEOUT_MS });
 
   let response;
   try {
-    response = await fetchFn(url);
+    response = await doFetch(url);
   } catch (error) {
     return { status: "unavailable", reason: `network error: ${errorMessage(error)}` };
   }

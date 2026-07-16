@@ -1,9 +1,13 @@
 // Shared building blocks for the add-on manifest builders
 // (`catalogs/addons/renodx/lib/build-manifest.mjs` and
-// `catalogs/addons/luma/lib/build-manifest.mjs`). The pipelines emit different
-// public shapes, but the low-level machinery — match-rule uniqueness, the
-// exe-cache → derived-exe resolver, match-rule construction, id reservation,
-// and id reservation — is identical and lives here.
+// `catalogs/addons/luma/lib/build-manifest.mjs`).
+//
+// Used by both pipelines:
+//   - match-rule uniqueness (`assertUniqueMatchRules`)
+//   - status normalization, output id reservation
+//
+// RenoDX-only (Luma authors match rules fully in curated inputs):
+//   - exe-cache normalization, derived-exe resolver, `makeMatchRules`
 //
 // Tool-specific `buildManifest` / assemble / normalize / `buildStats` stay in
 // each catalogue's own `build-manifest.mjs`.
