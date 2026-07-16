@@ -1,0 +1,108 @@
+name: Upstream refresh
+
+# Detect a newer stable ReShade Addon installer. When available, rewrite the
+# SSoT pin, regenerate addons/v1/reshade.json, run an offline gate, and open a PR.
+# Never pushes directly to main — merge triggers publish.yml → R2.
+#
+# Note: PRs opened with GITHUB_TOKEN typically do not re-trigger pull_request
+# workflows, so required checks may not appear on the bot PR UI. Validation
+# already ran in this workflow; merge still hits publish.yml validate on main.
+
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: upstream-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  reshade-stable:
+    name: ReShade stable refresh
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          # pnpm 11.12.0 currently breaks action-setup's self-installer:
+          # https://github.com/pnpm/action-setup/issues/276
+          version: 11.11.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Detect ReShade stable update
+        id: detect
+        run: pnpm run refresh:reshade:check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # success() is required: a custom `if` replaces the default success gate,
+      # so a failed apply must not still open a bot PR.
+      - name: Apply pin bump and regenerate
+        if: success() && steps.detect.outputs.status == 'update_available'
+        run: pnpm exec node scripts/refresh-reshade-stable.mjs --write --version=${{ steps.detect.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Offline gate: format, schemas, generated outputs, unit tests.
+      # Live network suites are non-blocking below so transient upstream blips
+      # do not block an otherwise correct ReShade pin PR.
+      - name: Offline repository check
+        if: success() && steps.detect.outputs.status == 'update_available'
+        run: pnpm run check:offline
+
+      - name: Live upstream report (non-blocking)
+        if: success() && steps.detect.outputs.status == 'update_available'
+        continue-on-error: true
+        run: |
+          pnpm run check:slugs
+          pnpm run check:luma-assets
+          pnpm run check:luma-payload-layout
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Default GITHUB_TOKEN does not re-trigger pull_request workflows on the
+      # opened PR. Optional: set secrets.BOT_GITHUB_TOKEN (fine-grained PAT with
+      # contents+PRs) so required PR checks run on the bot PR. See README.
+      - name: Open pull request
+        if: success() && steps.detect.outputs.status == 'update_available'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: chore/reshade-stable-${{ steps.detect.outputs.version }}
+          delete-branch: true
+          commit-message: "chore(reshade): bump stable to ${{ steps.detect.outputs.version }}"
+          title: "chore(reshade): bump stable to ${{ steps.detect.outputs.version }}"
+          body: |
+            Automated ReShade stable pin refresh.
+
+            | Field | Value |
+            | --- | --- |
+            | Previous pin | `${{ steps.detect.outputs.current }}` |
+            | New version | `${{ steps.detect.outputs.version }}` |
+            | Addon URL | ${{ steps.detect.outputs.url }} |
+
+            Source of truth: `scripts/lib/reshade-sources.mjs`.
+
+            Regenerated files:
+            - `scripts/lib/reshade-sources.mjs`
+            - `addons/v1/reshade.json`
+
+            Luma `minimum_reshade_version` and RenoDX catalogues are **not** changed.
+
+            Validation already ran in the `upstream-refresh` workflow (`check:offline`
+            plus non-blocking live reports). With the default `GITHUB_TOKEN`, GitHub
+            may not attach `pull_request` CI checks to this PR; set `BOT_GITHUB_TOKEN`
+            if you need them. Merge to `main` still runs the full Publish workflow
+            before R2 upload.
+          add-paths: |
+            scripts/lib/reshade-sources.mjs
+            addons/v1/reshade.json

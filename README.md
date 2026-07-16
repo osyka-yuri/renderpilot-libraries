@@ -32,12 +32,16 @@ pnpm run generate:reshade
 pnpm run generate:renodx
 pnpm run generate:luma
 pnpm run check
+pnpm run refresh:reshade:check
+pnpm run check:upstream-health
 pnpm run publish:json:dry-run
 ```
 
 `pnpm run check` formats-checks, validates every public JSON file, verifies generated outputs, runs unit tests, checks RenoDX snapshot slugs, and checks Luma release assets/payload layout. CI runs that command for every pull request, then publishes JSON from `main`.
 
-`pnpm run check:offline` is the network-free subset (format + validate + generated + unit tests).
+`pnpm run check:offline` is the network-free subset (format + validate + generated + unit tests) used by the ReShade refresh bot before opening a PR.
+
+`pnpm run refresh:reshade:check` detects a newer stable ReShade Addon installer; `refresh:reshade:write` rewrites `scripts/lib/reshade-sources.mjs` and regenerates `addons/v1/reshade.json` only. Scheduled workflows open a PR when an update is live — they do not push to `main` or write R2. `pnpm run check:upstream-health` probes committed pins (ReShade channels and Luma managed-dependency archives); it is schedule-only and not part of default `pnpm check`.
 
 `scripts/catalog.mjs` is the repository and publication registry: generators, synchronizers, matchers, validators, and remote checks take add-on source/output paths, schemas, and explicit R2 keys from it. Versioned object paths are preserved during publication.
 
@@ -55,3 +59,9 @@ pnpm run publish:json:dry-run
 `pnpm run publish:json` uploads only JSON with R2 credentials. `pnpm run publish` also uploads local `cdn/*.dll.zst` payloads. The uploader verifies each object after upload. Use `pnpm run check:published-json` after a release when a byte-for-byte remote verification is needed.
 
 Root legacy keys (`renodx_manifest.json`, `reshade_manifest.json`) are no longer published. Publish does not delete objects — remove those keys from the R2 bucket yourself when clients no longer fetch them.
+
+### Bot PRs and required checks
+
+The ReShade refresh workflow opens PRs with the default `GITHUB_TOKEN`. GitHub does **not** re-run `pull_request` workflows for those events, so required status checks may not appear on the bot PR. Offline validation already ran in `upstream-refresh` before the PR was opened; merge to `main` still runs the full Publish workflow.
+
+If you need normal PR checks on bot PRs, store a fine-grained PAT (contents + pull requests) as `BOT_GITHUB_TOKEN`. The workflow already uses `secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN`.

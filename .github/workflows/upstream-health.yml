@@ -1,0 +1,43 @@
+name: Upstream health
+
+# Live-check version-pinned upstream archives (ReShade channels, Luma managed
+# dependency zips) plus the existing Luma asset and RenoDX snapshot guards.
+# Soft network failures do not fail the catalogue; hard 404 / contract breaks do.
+# Not part of the default PR `check` suite (keeps offline and rate-limited runs quiet).
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    name: Upstream health
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          # pnpm 11.12.0 currently breaks action-setup's self-installer:
+          # https://github.com/pnpm/action-setup/issues/276
+          version: 11.11.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: ReShade + pinned dependency health
+        run: pnpm run check:upstream-health
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Luma release assets
+        run: pnpm run check:luma-assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: RenoDX snapshot slugs
+        run: pnpm run check:slugs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
