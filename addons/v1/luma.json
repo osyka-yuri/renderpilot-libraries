@@ -356,6 +356,65 @@
       "profile": "unity"
     },
     {
+      "id": "prince-of-persia-the-lost-crown",
+      "name": "Prince of Persia: The Lost Crown",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2751000",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "TheLostCrown.exe",
+          "tier": 70
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "shadows-of-doubt",
+      "name": "Shadows of Doubt",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "986130",
+          "tier": 100
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
+      "id": "white-knuckle",
+      "name": "White Knuckle",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3195790",
+          "tier": 100
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Unity_Engine.zip",
+        "addon_file": "Luma-Unity Engine.addon"
+      },
+      "profile": "unity"
+    },
+    {
       "id": "inside",
       "name": "INSIDE",
       "architecture": "X64",

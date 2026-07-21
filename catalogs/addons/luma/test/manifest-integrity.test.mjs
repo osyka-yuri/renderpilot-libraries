@@ -24,7 +24,7 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
   assert.ok(Array.isArray(manifest.games), "Manifest should have a games array");
   assert.ok(manifest.games.length > 0, "Manifest should have at least one game");
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 180);
+  assert.equal(manifest.games.length, 183);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
   assert.match(manifest.minimum_reshade_version, /^\d+\.\d+\.\d+$/);
   assert.equal("host" in manifest, false);
