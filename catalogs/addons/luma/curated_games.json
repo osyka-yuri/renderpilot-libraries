@@ -47,11 +47,6 @@
         "id": "luma.cod-black-ops-3.warning",
         "kind": "warning",
         "fallback_text": "Avoid official public matchmaking while Luma is installed. This may result in a ban."
-      },
-      {
-        "id": "luma.cod-black-ops-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -140,13 +135,6 @@
     "addon_file": "Luma-Dishonored 2.addon",
     "arch": "X64",
     "status": "construction",
-    "guidance": [
-      {
-        "id": "luma.dishonored-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -209,13 +197,6 @@
     "addon_file": "Luma-Final Fantasy VII Remake.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.final-fantasy-7-remake.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -236,13 +217,6 @@
     "addon_file": "Luma-Granblue Fantasy Relink.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.granblue-fantasy-relink.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -268,11 +242,6 @@
         "id": "luma.greedfall.warning",
         "kind": "warning",
         "fallback_text": "DLSS only (no HDR atm)"
-      },
-      {
-        "id": "luma.greedfall.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -433,13 +402,6 @@
     "addon_file": "Luma-Just Cause 3.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.just-cause-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -536,13 +498,6 @@
     "addon_file": "Luma-Mafia III.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.mafia-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -661,13 +616,6 @@
     "addon_file": "Luma-Persona 5.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.persona-5-royal.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -693,11 +641,6 @@
         "id": "luma.prey-2017.prey_extra_data",
         "kind": "warning",
         "fallback_text": "Keep Prey's additional Luma data files together with the add-on."
-      },
-      {
-        "id": "luma.prey-2017.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "match": [
@@ -785,13 +728,6 @@
     "addon_file": "Luma-Watch Dogs 2.addon",
     "arch": "X64",
     "status": "construction",
-    "guidance": [
-      {
-        "id": "luma.watch-dogs-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -812,13 +748,6 @@
     "addon_file": "Luma-Quantum Break.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.quantum-break.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -844,11 +773,6 @@
         "id": "luma.mass-effect-andromeda.compatibility",
         "kind": "compatibility",
         "fallback_text": "Only DLAA / FSR 3 Native AA modes are available; this is not DLSS or FSR super-resolution."
-      },
-      {
-        "id": "luma.mass-effect-andromeda.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -887,11 +811,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
-      },
-      {
-        "id": "luma.abiotic-factor.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -928,13 +847,6 @@
       "dlss_fsr": "unsupported",
       "hdr": "supported"
     },
-    "guidance": [
-      {
-        "id": "luma.abzu.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -971,11 +883,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.ace-combat-7.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1012,13 +919,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.agony-unrated.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1044,13 +944,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.alchemy-garden.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1076,13 +969,6 @@
       "dlss_fsr": "supported",
       "hdr": "supported"
     },
-    "guidance": [
-      {
-        "id": "luma.aliens-fireteam-elite.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1108,13 +994,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.ancestors-the-humankind-odyssey.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1146,11 +1025,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.ancestors-legacy.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1187,13 +1061,6 @@
       "dlss_fsr": "supported",
       "hdr": "supported"
     },
-    "guidance": [
-      {
-        "id": "luma.ashen.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1219,13 +1086,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.bloodstained-ritual-of-the-night.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1256,11 +1116,6 @@
         "id": "luma.call-of-the-sea.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: Global quality \"Epic\"."
-      },
-      {
-        "id": "luma.call-of-the-sea.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1297,13 +1152,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.chess-ultra.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1340,11 +1188,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.circus-electrique.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1386,11 +1229,6 @@
         "id": "luma.code-vein.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA Highest."
-      },
-      {
-        "id": "luma.code-vein.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1427,13 +1265,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.coral-island.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1464,11 +1295,6 @@
         "id": "luma.crab-champions.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: High Anti-aliasing Type."
-      },
-      {
-        "id": "luma.crab-champions.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1510,11 +1336,6 @@
         "id": "luma.crash-bandicoot-4.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: at least Medium (2x) Antialiasing Quality."
-      },
-      {
-        "id": "luma.crash-bandicoot-4.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1551,11 +1372,6 @@
         "id": "luma.clash-artifacts-of-chaos.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA quality \"Very High\"."
-      },
-      {
-        "id": "luma.clash-artifacts-of-chaos.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1597,11 +1413,6 @@
         "id": "luma.close-to-the-sun.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA 4X."
-      },
-      {
-        "id": "luma.close-to-the-sun.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1644,11 +1455,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.cygni-all-guns-blazing.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1691,11 +1497,6 @@
         "id": "luma.darksiders-3.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA Epic."
-      },
-      {
-        "id": "luma.darksiders-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1737,11 +1538,6 @@
         "id": "luma.daymare-1998.compatibility",
         "kind": "compatibility",
         "fallback_text": "Luma works on its own but crashes when combined with OptiScaler or UUU."
-      },
-      {
-        "id": "luma.daymare-1998.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1785,11 +1581,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-dx11"
-      },
-      {
-        "id": "luma.dead-island-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1831,11 +1622,6 @@
         "id": "luma.deadline-delivery.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: \"Ultra\"."
-      },
-      {
-        "id": "luma.deadline-delivery.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1872,13 +1658,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.desolate.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1899,13 +1678,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.devils-hunt.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -1936,11 +1708,6 @@
         "id": "luma.die-young.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: TAA \"High\" or \"Epic\"."
-      },
-      {
-        "id": "luma.die-young.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -1993,11 +1760,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.dnf-duel.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2039,11 +1801,6 @@
         "id": "luma.dragon-ball-z-kakarot.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: TAA + use BDZKFix for the Legacy version/its updated fork for the HD version."
-      },
-      {
-        "id": "luma.dragon-ball-z-kakarot.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2086,11 +1843,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=6\nr.temporalaasamples=2"
-      },
-      {
-        "id": "luma.dragon-quest-11-s.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2127,13 +1879,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.eriksholm-the-stolen-dream.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2164,11 +1909,6 @@
         "id": "luma.filament.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA \"High\" or \"Very High\"."
-      },
-      {
-        "id": "luma.filament.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2205,13 +1945,6 @@
       "dlss_fsr": "unknown",
       "hdr": "supported"
     },
-    "guidance": [
-      {
-        "id": "luma.ghostrunner.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2242,11 +1975,6 @@
         "id": "luma.goat-simulator-3.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: High AA."
-      },
-      {
-        "id": "luma.goat-simulator-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2283,13 +2011,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.grounded.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2320,11 +2041,6 @@
         "id": "luma.guilty-gear-strive.warning",
         "kind": "warning",
         "fallback_text": "AA does not work in character selection screen. In-game: AA \"Temporal Anti Aliasing\" Modify Engine.ini [SystemSettings] r.DefaultFeature.AntiAliasing=2 r.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.guilty-gear-strive.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2368,11 +2084,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-dx11"
-      },
-      {
-        "id": "luma.gylt.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2416,11 +2127,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
-      },
-      {
-        "id": "luma.hellblade-senuas-sacrifice.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2462,11 +2168,6 @@
         "id": "luma.it-takes-two.warning",
         "kind": "warning",
         "fallback_text": "Only works on the title screen sequence"
-      },
-      {
-        "id": "luma.it-takes-two.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2509,11 +2210,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.just-die-already.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2555,11 +2251,6 @@
         "id": "luma.kao-the-kangaroo.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA \"High\"."
-      },
-      {
-        "id": "luma.kao-the-kangaroo.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2595,14 +2286,7 @@
     "features": {
       "dlss_fsr": "supported",
       "hdr": "unknown"
-    },
-    "guidance": [
-      {
-        "id": "luma.kid-a-mnesia-exhibition.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ]
+    }
   },
   {
     "id": "kingdom-hearts-3",
@@ -2628,11 +2312,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.AntiAliasingMethod=2"
-      },
-      {
-        "id": "luma.kingdom-hearts-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2672,13 +2351,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.layers-of-fear-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2704,13 +2376,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.life-is-strange-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2743,11 +2408,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-dx11"
-      },
-      {
-        "id": "luma.life-is-strange-true-colors.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2785,13 +2445,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.little-nightmares.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2817,13 +2470,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.maneater.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2855,11 +2501,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.mothergunship.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2896,13 +2537,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.mordhau.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -2933,11 +2567,6 @@
         "id": "luma.mutant-year-zero-road-to-eden.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA \"High\". Recommended to use r.motionblur.amount=0 via Engine.ini for motion clarity."
-      },
-      {
-        "id": "luma.mutant-year-zero-road-to-eden.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -2979,11 +2608,6 @@
         "id": "luma.orcs-must-die-3.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA quality \"High\"."
-      },
-      {
-        "id": "luma.orcs-must-die-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3031,11 +2655,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.project-wingman.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3082,11 +2701,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-dx11"
-      },
-      {
-        "id": "luma.psychonauts-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3124,13 +2738,6 @@
       "hdr": "unknown"
     },
     "wiki_aliases": ["Redeemer"],
-    "guidance": [
-      {
-        "id": "luma.redeemer-enhanced-edition.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3163,11 +2770,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
-      },
-      {
-        "id": "luma.redout.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3211,11 +2813,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
-      },
-      {
-        "id": "luma.redout-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3252,13 +2849,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.relicta.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3290,11 +2880,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.remnant-from-the-ashes.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3331,13 +2916,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.ruiner.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3368,11 +2946,6 @@
         "id": "luma.scarlet-nexus.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA \"TXAA\"."
-      },
-      {
-        "id": "luma.scarlet-nexus.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3414,11 +2987,6 @@
         "id": "luma.scorn.warning",
         "kind": "warning",
         "fallback_text": "Has native support of FSR 2.1, so DLSS or any other upscaler can be added via OptiScaler."
-      },
-      {
-        "id": "luma.scorn.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3455,13 +3023,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.selfloss.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3492,11 +3053,6 @@
         "id": "luma.shin-megami-tensei-5-vengeance.warning",
         "kind": "warning",
         "fallback_text": "Needs Lyall's Fix to force TAA."
-      },
-      {
-        "id": "luma.shin-megami-tensei-5-vengeance.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3534,13 +3090,6 @@
       "hdr": "unknown"
     },
     "wiki_aliases": ["Shenmue3"],
-    "guidance": [
-      {
-        "id": "luma.shenmue-3.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3566,13 +3115,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.snake-pass.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3603,11 +3145,6 @@
         "id": "luma.spirit-of-the-north.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: Graphics Quality \"Ultra\"."
-      },
-      {
-        "id": "luma.spirit-of-the-north.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3649,11 +3186,6 @@
         "id": "luma.spyro-reignited-trilogy.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: High TAA."
-      },
-      {
-        "id": "luma.spyro-reignited-trilogy.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3690,13 +3222,6 @@
       "dlss_fsr": "supported",
       "hdr": "supported"
     },
-    "guidance": [
-      {
-        "id": "luma.star-wars-jedi-fallen-order.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3718,13 +3243,6 @@
       "hdr": "unknown"
     },
     "wiki_aliases": ["State of Decay 2: Juggernaut Edition"],
-    "guidance": [
-      {
-        "id": "luma.state-of-decay-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3750,13 +3268,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.steel-rats.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3782,13 +3293,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.stray.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3820,11 +3324,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.styx-shards-of-darkness.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3866,11 +3365,6 @@
         "id": "luma.submerged-hidden-depths.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA \"High\"."
-      },
-      {
-        "id": "luma.submerged-hidden-depths.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3907,13 +3401,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.succubus.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -3944,11 +3431,6 @@
         "id": "luma.supraland.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA \"Temporal Anti Aliasing\"."
-      },
-      {
-        "id": "luma.supraland.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -3990,11 +3472,6 @@
         "id": "luma.tales-of-arise.warning",
         "kind": "warning",
         "fallback_text": "Requires Arise-SDK, UseUE4TAA = true"
-      },
-      {
-        "id": "luma.tales-of-arise.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4031,13 +3508,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.tandem-a-tale-of-shadows.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4075,11 +3545,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[/Script/Engine.RendererSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4\nr.TemporalAASamples=16"
-      },
-      {
-        "id": "luma.tekken-7.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4116,13 +3581,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.tell-me-why.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4159,11 +3617,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[/Script/Engine.RendererSettings]\nr.DefaultFeature.AntiAliasing=2\nr.TemporalAA.Upsampling=1"
-      },
-      {
-        "id": "luma.tetris-effect-connected.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4209,11 +3662,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
-      },
-      {
-        "id": "luma.the-ascent.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4250,13 +3698,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.the-awesome-adventures-of-captain-spirit.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4289,11 +3730,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-dx11"
-      },
-      {
-        "id": "luma.the-dark-pictures-man-of-medan.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4330,13 +3766,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.the-gunk.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4362,13 +3791,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.the-pathless.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4399,11 +3821,6 @@
         "id": "luma.the-sinking-city.warning",
         "kind": "warning",
         "fallback_text": "The original works. Remastered unknown."
-      },
-      {
-        "id": "luma.the-sinking-city.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4445,13 +3862,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.tiny-tinas-wonderlands.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4477,13 +3887,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.trek-to-yomi.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4515,11 +3918,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.tribes-of-midgard.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4556,13 +3954,6 @@
       "dlss_fsr": "supported",
       "hdr": "supported"
     },
-    "guidance": [
-      {
-        "id": "luma.tyrants-realm.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4593,11 +3984,6 @@
         "id": "luma.vampyr.game_setting",
         "kind": "game_setting",
         "fallback_text": "In the game settings, use: AA TXAA 6X."
-      },
-      {
-        "id": "luma.vampyr.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4640,11 +4026,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
-      },
-      {
-        "id": "luma.warhammer-40000-boltgun.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4681,13 +4062,6 @@
       "dlss_fsr": "supported",
       "hdr": "unknown"
     },
-    "guidance": [
-      {
-        "id": "luma.weird-west.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -4729,11 +4103,6 @@
         "kind": "engine_ini",
         "fallback_text": "Apply the following settings manually in Engine.ini.",
         "code": "[SystemSettings]\nr.TranslucencyLightingVolumeDim=64\nr.RefractionQuality=2\nr.SSR.Quality=4\nr.SceneColorFormat=3\nr.DetailMode=2\nr.TranslucencyVolumeBlur=1\nr.MaterialQualityLevel=1\nr.SSR.Temporal=0"
-      },
-      {
-        "id": "luma.what-remains-of-edith-finch.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4781,11 +4150,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
-      },
-      {
-        "id": "luma.witch-it.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4834,11 +4198,6 @@
         "id": "luma.sherlock-holmes-chapter-one.warning",
         "kind": "warning",
         "fallback_text": "-dx11 launch argument Issues Poor CPU performance in DX11 mode. DLAA with AutoExposure:On have jagged edges on grass."
-      },
-      {
-        "id": "luma.sherlock-holmes-chapter-one.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4886,11 +4245,6 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-oss=Steam -dx11"
-      },
-      {
-        "id": "luma.song-of-nunu.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -4957,11 +4311,6 @@
         "id": "luma.batman-arkham-knight.warning",
         "kind": "warning",
         "fallback_text": "DLSS only (no HDR atm)"
-      },
-      {
-        "id": "luma.batman-arkham-knight.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -5013,13 +4362,6 @@
     "addon_file": "Luma-Blue Reflection Second Light.addon",
     "arch": "X64",
     "status": "unknown",
-    "guidance": [
-      {
-        "id": "luma.blue-reflection-second-light.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -5137,11 +4479,6 @@
         "id": "luma.deus-ex-mankind-divided.warning",
         "kind": "warning",
         "fallback_text": "DLSS only (no HDR atm)"
-      },
-      {
-        "id": "luma.deus-ex-mankind-divided.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -5194,13 +4531,6 @@
     "addon_file": "Luma-Fallout 4.addon",
     "arch": "X64",
     "status": "unknown",
-    "guidance": [
-      {
-        "id": "luma.fallout-4.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -5236,11 +4566,11 @@
     "addon_file": "Luma-Heaven Burns Red.addon",
     "arch": "X64",
     "status": "unknown",
-    "guidance": [
+    "match": [
       {
-        "id": "luma.heaven-burns-red.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
+        "kind": "steam_appid",
+        "value": "1973710",
+        "tier": 100
       }
     ]
   },
@@ -5251,13 +4581,6 @@
     "addon_file": "Luma-Kingdom Come Deliverance.addon",
     "arch": "X64",
     "status": "construction",
-    "guidance": [
-      {
-        "id": "luma.kingdom-come-deliverance.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -5303,11 +4626,6 @@
         "id": "luma.metaphor-refantazio.compatibility",
         "kind": "compatibility",
         "fallback_text": "Only DLAA / FSR Native AA modes are available; this is not DLSS or FSR super-resolution."
-      },
-      {
-        "id": "luma.metaphor-refantazio.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
       }
     ],
     "wiki_note_reviews": [
@@ -5354,13 +4672,6 @@
     "addon_file": "Luma-Monster Hunter World.addon",
     "arch": "X64",
     "status": "unknown",
-    "guidance": [
-      {
-        "id": "luma.monster-hunter-world.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -5381,13 +4692,6 @@
     "addon_file": "Luma-Mortal Kombat 11.addon",
     "arch": "X64",
     "status": "unknown",
-    "guidance": [
-      {
-        "id": "luma.mortal-kombat-11.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -5463,13 +4767,6 @@
     "addon_file": "Luma-The Evil Within 2.addon",
     "arch": "X64",
     "status": "unknown",
-    "guidance": [
-      {
-        "id": "luma.the-evil-within-2.bundled_dlss",
-        "kind": "compatibility",
-        "fallback_text": "Luma reserves the game's bundled DLSS library and restores it when removed."
-      }
-    ],
     "match": [
       {
         "kind": "steam_appid",
@@ -5509,7 +4806,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "484900",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "biomutant",
@@ -5537,6 +4841,13 @@
         "fingerprint": "e01357ca505dcf7f57df8c6bc37abb20e7b1392cc3159644121818361b03b4d6",
         "disposition": "published",
         "guidance_ids": ["luma.biomutant.game_setting"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "597820",
+        "tier": 100
       }
     ]
   },
@@ -5567,6 +4878,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.blairwitch.game_setting"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1092660",
+        "tier": 100
+      }
     ]
   },
   {
@@ -5595,6 +4913,13 @@
         "fingerprint": "db92d62dae823df14a46b34105a90264f876f6b8dca2cc10ccd3fb70c686c1d7",
         "disposition": "published",
         "guidance_ids": ["luma.borderlands-3.warning"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "397540",
+        "tier": 100
       }
     ]
   },
@@ -5625,6 +4950,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.bramblethemountainking.warning"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1623940",
+        "tier": 100
+      }
     ]
   },
   {
@@ -5638,7 +4970,14 @@
     "features": {
       "dlss_fsr": "supported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "738520",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "bussimulator-21",
@@ -5651,7 +4990,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "976590",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "daemonxmachina",
@@ -5680,6 +5026,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.daemonxmachina.warning"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1167450",
+        "tier": 100
+      }
     ]
   },
   {
@@ -5693,7 +5046,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "230840",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "daysgone",
@@ -5706,7 +5066,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1259420",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "deceiveinc",
@@ -5735,6 +5102,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.deceiveinc.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "820520",
+        "tier": 100
+      }
     ]
   },
   {
@@ -5748,7 +5122,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1872550",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "dragonquestxiechoesofanelusiveage",
@@ -5778,7 +5159,9 @@
         "disposition": "published",
         "guidance_ids": ["luma.dragonquestxiechoesofanelusiveage.engine_ini"]
       }
-    ]
+    ],
+    "match_ignore": true,
+    "match": []
   },
   {
     "id": "echo",
@@ -5797,6 +5180,13 @@
         "id": "luma.echo.warning",
         "kind": "warning",
         "fallback_text": "DLAA stopped working after first level. While its working with AutoExposure: On light sources are strobing, with AutoExposure: Off antialiasing became much worse."
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "551770",
+        "tier": 100
       }
     ],
     "wiki_note_reviews": [
@@ -5820,7 +5210,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1546400",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "hellletloose",
@@ -5849,6 +5246,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.hellletloose.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "686810",
+        "tier": 100
+      }
     ]
   },
   {
@@ -5862,7 +5266,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "343710",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "littlenightmaresenhancededition",
@@ -5882,6 +5293,13 @@
         "kind": "launch_argument",
         "fallback_text": "Add this launch argument manually.",
         "code": "-DX11"
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "2149010",
+        "tier": 100
       }
     ],
     "wiki_note_reviews": [
@@ -5921,6 +5339,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.littlenightmaresiii.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1392860",
+        "tier": 100
+      }
     ]
   },
   {
@@ -5949,6 +5374,13 @@
         "fingerprint": "c36c62821efbb286373ec1d462cfd2b1011c043a6780cda3a7a3d64ec4c097cd",
         "disposition": "published",
         "guidance_ids": ["luma.masterdetectivearchivesraincodeplus.game_setting"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "2903950",
+        "tier": 100
       }
     ]
   },
@@ -5979,6 +5411,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.narutotoborutoshinobistriker.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "633230",
+        "tier": 100
+      }
     ]
   },
   {
@@ -6008,6 +5447,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.persona-3reload.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "2161700",
+        "tier": 100
+      }
     ]
   },
   {
@@ -6021,7 +5467,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1721470",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "predecessor",
@@ -6050,6 +5503,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.predecessor.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "961200",
+        "tier": 100
+      }
     ]
   },
   {
@@ -6063,7 +5523,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "supported"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "493200",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "roboquest",
@@ -6092,6 +5559,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.roboquest.game_setting"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "692890",
+        "tier": 100
+      }
     ]
   },
   {
@@ -6105,7 +5579,14 @@
     "features": {
       "dlss_fsr": "experimental",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1340180",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "sifu",
@@ -6118,7 +5599,14 @@
     "features": {
       "dlss_fsr": "unknown",
       "hdr": "unsupported"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "2138710",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "theouterworldsspacerschoiceedition",
@@ -6147,6 +5635,13 @@
         "disposition": "published",
         "guidance_ids": ["luma.theouterworldsspacerschoiceedition.compatibility"]
       }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1920490",
+        "tier": 100
+      }
     ]
   },
   {
@@ -6160,7 +5655,14 @@
     "features": {
       "dlss_fsr": "unsupported",
       "hdr": "unknown"
-    }
+    },
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "400430",
+        "tier": 100
+      }
+    ]
   },
   {
     "id": "vanquish",

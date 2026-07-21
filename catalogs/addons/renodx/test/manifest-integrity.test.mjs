@@ -22,7 +22,7 @@ test("manifest integrity - committed RenoDX v1 document is well-formed and inter
     "Manifest should have at least one engine profile",
   );
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 829);
+  assert.equal(manifest.games.length, 834);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
 
   const taintedGrail = manifest.games.find(

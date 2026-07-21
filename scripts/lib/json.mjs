@@ -64,7 +64,7 @@ function stringifyJson(value) {
 export async function stringifyFormattedJson(value, file) {
   const prettier = await loadPrettier(file);
   const config = await resolvePrettierConfig(prettier, file);
-  const json = stringifyJsonInternal(value, file, undefined);
+  const json = stringifyJsonInternal(value, file, JSON_INDENT);
 
   try {
     return ensureTrailingNewline(

@@ -2,12 +2,13 @@ import path from "node:path";
 
 import { errorMessage, isMissingFileError } from "./common.mjs";
 import { readJsonFileAsync, writeFormattedJsonFile } from "./json.mjs";
-import { normalize, searchSteamStore } from "./steam-search.mjs";
+import { resolveSteamStoreGame } from "./steam-search.mjs";
 
 const UNMATCHED_REASON = Object.freeze({
   apiFailed: "API Request Failed",
   noExactMatch: "No exact match found in Steam Store search",
 });
+const STEAM_SEARCH_FAILURE_MESSAGE = "Steam search returned null (all requests failed).";
 
 export async function runPendingMatching({ tool, files, createStore }) {
   console.log(`Resolving pending matches for: ${tool}`);
@@ -98,29 +99,32 @@ export function collectManifestSteamAppIds(manifest, filePath) {
 }
 
 async function findExactSteamApp(gameName) {
-  let items;
   try {
-    items = await searchSteamStore(gameName);
+    const resolution = await resolveSteamStoreGame(gameName);
+
+    if (resolution === null) {
+      return {
+        kind: "error",
+        error: new TypeError(STEAM_SEARCH_FAILURE_MESSAGE),
+      };
+    }
+
+    const { item, ambiguous, score, reason } = resolution;
+
+    if (item === null) {
+      return { kind: "not-found" };
+    }
+
+    if (ambiguous) {
+      console.warn(
+        `  -> Ambiguous match (score ${score}, reason: ${reason}). Using best candidate.`,
+      );
+    }
+
+    return { kind: "match", item };
   } catch (error) {
     return { kind: "error", error };
   }
-  if (!Array.isArray(items)) {
-    return {
-      kind: "error",
-      error: new TypeError("Steam search returned a non-array response."),
-    };
-  }
-
-  const normalizedTarget = normalize(gameName);
-  const item = items.find(
-    (candidate) =>
-      isRecord(candidate) &&
-      candidate.type === "app" &&
-      candidate.id != null &&
-      typeof candidate.name === "string" &&
-      normalize(candidate.name) === normalizedTarget,
-  );
-  return item ? { kind: "match", item } : { kind: "not-found" };
 }
 
 async function readRequiredJson(filePath, validate) {

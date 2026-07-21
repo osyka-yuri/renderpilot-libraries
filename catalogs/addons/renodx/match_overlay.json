@@ -1,9 +1,9 @@
 {
   "007-first-light": {
-    "appid": "3768760"
+    "appids": ["3768760"]
   },
   "1000xresist": {
-    "appid": "1675830"
+    "appids": ["1675830"]
   },
   "420blazeit2-game-of-the-year-dank-dreams-and-goated-memes-wow-11-like-and-subscribe-poggerz-edition": {
     "appids": ["2624280"]
@@ -18,19 +18,19 @@
     "appids": ["1402120"]
   },
   "a-plague-tale-innocence": {
-    "appid": "752590"
+    "appids": ["752590"]
   },
   "abiotic-factor": {
     "appids": ["427410"]
   },
   "absolum": {
-    "appid": "1904480"
+    "appids": ["1904480"]
   },
   "abzu": {
     "appids": ["384190"]
   },
   "ace-combat-7": {
-    "appid": "502500"
+    "appids": ["502500"]
   },
   "adorable-adventures": {
     "appids": ["3840230"]
@@ -45,8 +45,8 @@
     "appids": ["762220"]
   },
   "against-the-storm": {
-    "appid": "1336490",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+    "appids": ["1336490"]
   },
   "agatha-christie-death-on-the-nile": {
     "appids": ["287340"]
@@ -61,7 +61,7 @@
     "appids": ["2407270"]
   },
   "ai-the-somnium-files": {
-    "appid": "948740"
+    "appids": ["948740"]
   },
   "ak-xolotl-together": {
     "appids": ["1479140"]
@@ -70,10 +70,10 @@
     "appids": ["1236780"]
   },
   "alice-madness-returns": {
-    "appid": "19680"
+    "appids": ["19680"]
   },
   "alien-isolation": {
-    "appid": "214490"
+    "appids": ["214490"]
   },
   "aliens-dark-descent": {
     "appids": ["1150440"]
@@ -87,8 +87,14 @@
   "american-fugitive": {
     "appids": ["934780"]
   },
+  "amerzone-the-explorer-s-legacy-2025": {
+    "appids": ["2429190"]
+  },
   "amid-evil": {
     "appids": ["673130"]
+  },
+  "among-the-sleep-enhanced-edition": {
+    "appids": ["250620"]
   },
   "an-airport-for-aliens-currently-run-by-dogs": {
     "appids": ["1246250"]
@@ -97,7 +103,7 @@
     "appids": ["1978590"]
   },
   "animal-well": {
-    "appid": "813230"
+    "appids": ["813230"]
   },
   "anodyne-2-return-to-dust": {
     "appids": ["877810"]
@@ -118,7 +124,7 @@
     "appids": ["840210"]
   },
   "armored-core-vi-fires-of-rubicon": {
-    "appid": "1888160"
+    "appids": ["1888160"]
   },
   "art-of-rally": {
     "appids": ["550320"]
@@ -126,8 +132,12 @@
   "ashen": {
     "appids": ["649950"]
   },
+  "assassin-s-creed-black-flag-resynced": {
+    "slug": "asscreedblackflagresynced",
+    "appids": ["3751950"]
+  },
   "assassin-s-creed-director-s-cut-edition": {
-    "appid": "15100"
+    "appids": ["15100"]
   },
   "assassin-s-creed-ezio-trilogy-dgvoodoo": {
     "appids": ["33230", "48190", "201870"],
@@ -137,50 +147,50 @@
     }
   },
   "assassin-s-creed-iii-original": {
-    "appid": "208480",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreediii/mods/161",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["208480"]
   },
   "assassin-s-creed-iii-remastered": {
-    "appid": "911400",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreediiiremastered/mods/169",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["911400"]
   },
   "assassin-s-creed-syndicate": {
-    "appid": "368500",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["368500"]
   },
   "assassin-s-creed-unity": {
-    "appid": "289650",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["289650"]
   },
   "assassins-creed-iv-black-flag": {
-    "appid": "242050"
+    "appids": ["242050"]
   },
   "assassins-creed-mirage": {
-    "appid": "3035570"
+    "appids": ["3035570"]
   },
   "assassins-creed-odyssey": {
-    "appid": "812140"
+    "appids": ["812140"]
   },
   "assassins-creed-origins": {
-    "appid": "582160"
+    "appids": ["582160"]
   },
   "assassins-creed-shadows": {
-    "appid": "3159330"
+    "appids": ["3159330"]
   },
   "assassins-creed-valhalla": {
-    "appid": "2208920"
+    "appids": ["2208920"]
   },
   "assault-android-cactus": {
     "appids": ["250110"]
@@ -198,30 +208,30 @@
     "appids": ["3259600"]
   },
   "atelier-ryza-1": {
-    "appid": "1121560",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64",
+    "appids": ["1121560"]
   },
   "atelier-ryza-2": {
-    "appid": "3365040",
-    "download_url": "https://marat569.github.io/renodx/renodx-ryza2.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-ryza2.addon64",
+    "appids": ["3365040"]
   },
   "atelier-ryza-3": {
-    "appid": "3365050",
-    "download_url": "https://marat569.github.io/renodx/renodx-ryza3.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-ryza3.addon64",
+    "appids": ["3365050"]
   },
   "atelier-ryza-dx": {
-    "appid": "3365030"
+    "appids": ["3365030"]
   },
   "atelier-sophie-1-dx": {
-    "appid": "1502970",
-    "download_url": "https://marat569.github.io/renodx/renodx-sophie1.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-sophie1.addon64",
+    "appids": ["1502970"]
   },
   "atelier-yumia-the-alchemist-of-memories-the-envisioned-land": {
-    "appid": "3123410",
-    "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64",
+    "appids": ["3123410"]
   },
   "atlas-fallen": {
-    "appid": "1230530"
+    "appids": ["1230530"]
   },
   "atomic-heart": {
     "appids": ["668580"]
@@ -239,10 +249,13 @@
     "appids": ["1907720"]
   },
   "avatar-frontiers-of-pandora": {
-    "appid": "2840770"
+    "appids": ["2840770"]
   },
   "avowed": {
-    "appid": "2457220"
+    "appids": ["2457220"]
+  },
+  "awaken-astral-blade": {
+    "appids": ["1716310"]
   },
   "b-path-of-the-teal-lotus": {
     "appids": ["1614440"]
@@ -251,7 +264,7 @@
     "appids": ["688420"]
   },
   "baldur-s-gate-3": {
-    "appid": "1086940"
+    "appids": ["1086940"]
   },
   "ball-x-pit": {
     "appids": ["2062430"]
@@ -266,10 +279,13 @@
     "appids": ["837460"]
   },
   "batman-arkham-asylum": {
-    "appid": "35140"
+    "appids": ["35140"]
   },
   "batman-arkham-knight": {
-    "appid": "208650"
+    "appids": ["208650"]
+  },
+  "battlestar-galactica-deadlock": {
+    "appids": ["544610"]
   },
   "battletech": {
     "appids": ["637090"]
@@ -311,14 +327,14 @@
     "appids": ["622630"]
   },
   "berserk-and-the-band-of-the-hawk": {
-    "appid": "502280",
-    "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64",
+    "appids": ["502280"]
   },
   "beton-brutal": {
     "appids": ["2330500"]
   },
   "beyond-blue": {
-    "appid": "883360"
+    "appids": ["883360"]
   },
   "beyond-galaxyland": {
     "appids": ["1543710"]
@@ -330,18 +346,18 @@
     "appids": ["1928690"]
   },
   "bioshock-remastered": {
-    "appid": "409710",
-    "slug": "bioshock"
+    "slug": "bioshock",
+    "appids": ["409710"]
   },
   "biped": {
     "appids": ["1071870"]
   },
   "black-desert-online": {
-    "appid": "582660"
+    "appids": ["582660"]
   },
   "black-myth-wukong": {
-    "appid": "2358720",
-    "slug": "bmw"
+    "slug": "bmw",
+    "appids": ["2358720"]
   },
   "blacktail": {
     "appids": ["1532690"]
@@ -361,6 +377,9 @@
   "blue-prince": {
     "appids": ["1569580"]
   },
+  "boomeroad": {
+    "appids": ["2512820"]
+  },
   "borderlands-2-the-pre-sequel": {
     "appids": ["49520", "261640"]
   },
@@ -368,7 +387,10 @@
     "appids": ["397540"]
   },
   "borderlands-4": {
-    "appid": "1285190"
+    "appids": ["1285190"]
+  },
+  "borderlands-goty-enhanced": {
+    "appids": ["729040"]
   },
   "bounty-star": {
     "appids": ["1497430"]
@@ -395,19 +417,19 @@
     "appids": ["3237970"]
   },
   "bulletstorm-full-clip-edition": {
-    "appid": "501590"
+    "appids": ["501590"]
   },
   "cakey-s-twisted-bakery": {
     "appids": ["3028500"]
   },
   "call-of-juarez": {
-    "appid": "3020"
+    "appids": ["3020"]
   },
   "call-of-the-sea": {
     "appids": ["1042490"]
   },
   "castlevania-lords-of-shadow": {
-    "appid": "234080"
+    "appids": ["234080"]
   },
   "cat-quest-iii": {
     "appids": ["2305840"]
@@ -419,7 +441,7 @@
     "appids": ["1016800"]
   },
   "child-of-light": {
-    "appid": "256290"
+    "appids": ["256290"]
   },
   "children-of-morta": {
     "appids": ["330020"]
@@ -437,23 +459,26 @@
     "appids": ["1097130"]
   },
   "citizen-sleeper-2": {
-    "appid": "2442460"
+    "appids": ["2442460"]
   },
   "clair-obscur-expedition-33": {
-    "appid": "1903340"
+    "appids": ["1903340"]
   },
   "clash-artifacts-of-chaos": {
     "appids": ["1430680"]
   },
   "clive-barker-s-jericho": {
-    "appid": "11420"
+    "appids": ["11420"]
+  },
+  "cloudpunk": {
+    "appids": ["746850"]
   },
   "code-vein": {
     "appids": ["678960"]
   },
   "code-vein-ii": {
-    "appid": "2362060",
-    "download_url": "https://marat569.github.io/renodx/renodx-codevein2.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-codevein2.addon64",
+    "appids": ["2362060"]
   },
   "colony-ship-a-post-earth-role-playing-game": {
     "appids": ["648410"]
@@ -462,11 +487,11 @@
     "appids": ["2881650"]
   },
   "control-hdr-ultrawide-dlss-rt-patch": {
-    "appid": "870780",
     "external": {
       "url": "https://www.nexusmods.com/control/mods/90",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["870780"]
   },
   "convergence-a-league-of-legends-story": {
     "appids": ["1276800"]
@@ -484,20 +509,20 @@
     "appids": ["1378990"]
   },
   "crimson-desert": {
-    "appid": "3321460"
+    "appids": ["3321460"]
   },
   "crisis-core-ff7-reunion": {
     "appids": ["1608070"]
   },
   "cronos-the-new-dawn": {
-    "appid": "2101960"
+    "appids": ["2101960"]
   },
   "crysis-remastered": {
-    "appid": "1715130",
     "external": {
       "url": "https://discord.com/invite/renodx",
       "label_key": "renodx.external.discord"
-    }
+    },
+    "appids": ["1715130"]
   },
   "ctrl-alt-ego": {
     "appids": ["1571940"]
@@ -506,7 +531,7 @@
     "appids": ["1313140"]
   },
   "cyberpunk-2077": {
-    "appid": "1091500"
+    "appids": ["1091500"]
   },
   "daemon-x-machina": {
     "appids": ["1167450"]
@@ -515,25 +540,25 @@
     "appids": ["1548750"]
   },
   "dark-souls-2-ds2lightingengine-sotfs": {
-    "appid": "335300",
     "external": {
       "url": "https://www.nexusmods.com/darksouls2/mods/1146",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["335300"]
   },
   "dark-souls-3-ds3lightingengine-light": {
-    "appid": "374320",
     "external": {
       "url": "https://discord.gg/BCxEWGKJcD",
       "label_key": "renodx.external.discord"
-    }
+    },
+    "appids": ["374320"]
   },
   "dark-souls-remastered": {
-    "appid": "570940"
+    "appids": ["570940"]
   },
   "darkest-dungeon-2": {
-    "appid": "1940340",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+    "appids": ["1940340"]
   },
   "darksiders-3": {
     "appids": ["606280"]
@@ -542,7 +567,7 @@
     "appids": ["710920"]
   },
   "darksiders-warmastered-edition": {
-    "appid": "462780"
+    "appids": ["462780"]
   },
   "dave-the-diver": {
     "appids": ["1868140"]
@@ -553,11 +578,14 @@
   "daymare-1998": {
     "appids": ["842100"]
   },
+  "days-gone": {
+    "appids": ["1259420"]
+  },
   "dead-as-disco": {
     "appids": ["3404260"]
   },
   "dead-island-2": {
-    "appid": "934700"
+    "appids": ["934700"]
   },
   "dead-island-definitive-edition": {
     "appids": ["383150", "383180"],
@@ -573,13 +601,13 @@
     "appids": ["1676130"]
   },
   "death-s-door": {
-    "appid": "894020"
+    "appids": ["894020"]
   },
   "death-stranding-2": {
-    "appid": "3280350"
+    "appids": ["3280350"]
   },
   "death-stranding-director-s-cut": {
-    "appid": "1850570"
+    "appids": ["1850570"]
   },
   "deep-rock-galactic": {
     "appids": ["548430"]
@@ -590,38 +618,44 @@
   "deliver-at-all-costs": {
     "appids": ["1880610"]
   },
+  "demon-slayer-kny-hinokami-chronicles": {
+    "appids": ["1490890"]
+  },
   "descenders": {
-    "appid": "681280"
+    "appids": ["681280"]
   },
   "deus-ex-mankind-divided": {
-    "appid": "337000"
+    "appids": ["337000"]
   },
   "devil-may-cry-v": {
-    "appid": "601150"
+    "appids": ["601150"]
   },
   "digimon-story-time-stranger": {
-    "appid": "1984270"
+    "appids": ["1984270"]
   },
   "digimon-world-next-order": {
     "appids": ["1530160"]
+  },
+  "dino-topia": {
+    "appids": ["3336520"]
   },
   "diplomacy-is-not-an-option": {
     "appids": ["1272320"]
   },
   "dirt-4": {
-    "appid": "421020",
     "exe": "dirt4.exe",
     "external": {
       "url": "https://www.nexusmods.com/dirt4/mods/3",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["421020"]
   },
   "dirt-rally-2-0": {
-    "appid": "690790",
-    "slug": "dirtrally2"
+    "slug": "dirtrally2",
+    "appids": ["690790"]
   },
   "dishonored": {
-    "appid": "205100"
+    "appids": ["205100"]
   },
   "disney-epic-mickey-rebrushed": {
     "appids": ["1522160"]
@@ -633,19 +667,19 @@
     "appids": ["1216060"]
   },
   "doom-eternal": {
-    "appid": "782330"
+    "appids": ["782330"]
   },
   "doom-the-dark-ages": {
-    "appid": "3017860"
+    "appids": ["3017860"]
   },
   "dracomaton": {
     "appids": ["2457890"]
   },
   "dragon-age-inquisition": {
-    "appid": "1222690"
+    "appids": ["1222690"]
   },
   "dragon-ball-sparking-zero": {
-    "appid": "1790600"
+    "appids": ["1790600"]
   },
   "dragon-ball-z-kakarot": {
     "appids": ["851850"]
@@ -657,21 +691,24 @@
     "appids": ["2701660"]
   },
   "dragon-quest-vii-remake": {
-    "appid": "2499860",
-    "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
+    "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64",
+    "appids": ["2499860"]
   },
   "dragon-quest-xi": {
     "appids": ["742120", "1295510"],
     "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64"
   },
   "dragon-s-dogma-2": {
-    "appid": "2054970"
+    "appids": ["2054970"]
   },
   "dread-delusion": {
     "appids": ["1574240"]
   },
   "dread-templar": {
     "appids": ["1334730"]
+  },
+  "dreamfall-chapters-the-final-cut": {
+    "appids": ["237850"]
   },
   "dredge": {
     "appids": ["1562430"]
@@ -695,13 +732,13 @@
     "appids": ["721180"]
   },
   "dying-light": {
-    "appid": "239140"
+    "appids": ["239140"]
   },
   "dying-light-2": {
-    "appid": "534380"
+    "appids": ["534380"]
   },
   "dying-light-the-beast": {
-    "appid": "3008130"
+    "appids": ["3008130"]
   },
   "dystopika": {
     "appids": ["2379910"]
@@ -728,10 +765,10 @@
     "appids": ["1546310"]
   },
   "elden-ring": {
-    "appid": "1245620"
+    "appids": ["1245620"]
   },
   "elden-ring-nightreign": {
-    "appid": "2622380"
+    "appids": ["2622380"]
   },
   "elderborn": {
     "appids": ["727850"]
@@ -739,12 +776,15 @@
   "en-garde": {
     "appids": ["1654660"]
   },
+  "encased": {
+    "appids": ["921800"]
+  },
   "end-transmission": {
     "appids": ["3426490"]
   },
   "ender-magnolia-bloom-in-the-mist": {
-    "appid": "2725260",
-    "download_url": "https://marat569.github.io/renodx/renodx-endermagnolia.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-endermagnolia.addon64",
+    "appids": ["2725260"]
   },
   "enigma-of-fear": {
     "appids": ["1507580"]
@@ -754,6 +794,12 @@
   },
   "enter-the-gungeon": {
     "appids": ["311690"]
+  },
+  "epistory-typing-chronicles": {
+    "appids": ["398850"]
+  },
+  "ereban-shadow-legacy": {
+    "appids": ["1671360"]
   },
   "escape-academy": {
     "appids": ["1812090"]
@@ -789,36 +835,36 @@
     "appids": ["1411910"]
   },
   "fallout-4": {
-    "appid": "377160"
+    "appids": ["377160"]
   },
   "fallout-76": {
-    "appid": "1151340"
+    "appids": ["1151340"]
   },
   "fantasian-neo-dimension": {
-    "appid": "2844850",
-    "download_url": "https://marat569.github.io/renodx/renodx-fantasianneodimension.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-fantasianneodimension.addon64",
+    "appids": ["2844850"]
   },
   "fantasy-general-ii": {
     "appids": ["1025440"]
   },
   "far-cry-2": {
-    "appid": "19900"
+    "appids": ["19900"]
   },
   "far-cry-3": {
-    "appid": "220240"
+    "appids": ["220240"]
   },
   "far-cry-5": {
-    "appid": "552520"
+    "appids": ["552520"]
   },
   "far-cry-6": {
-    "appid": "2369390"
+    "appids": ["2369390"]
   },
   "far-cry-primal": {
-    "appid": "371660",
     "external": {
       "url": "https://www.nexusmods.com/farcryprimal/mods/28",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["371660"]
   },
   "far-lone-sails": {
     "appids": ["609320"]
@@ -827,8 +873,8 @@
     "appids": ["2916430"]
   },
   "fate-samurai-remnant": {
-    "appid": "1902690",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-fatesamurairemnant.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-fatesamurairemnant.addon64",
+    "appids": ["1902690"]
   },
   "fe": {
     "appids": ["1225580"]
@@ -843,19 +889,19 @@
     "appids": ["1085220"]
   },
   "final-fantasy-7-rebirth": {
-    "appid": "2909400"
+    "appids": ["2909400"]
   },
   "final-fantasy-7-remake": {
-    "appid": "1462040"
+    "appids": ["1462040"]
   },
   "final-fantasy-x": {
-    "appid": "359870"
+    "appids": ["359870"]
   },
   "final-fantasy-xiv": {
-    "appid": "39210"
+    "appids": ["39210"]
   },
   "final-fantasy-xv": {
-    "appid": "637650"
+    "appids": ["637650"]
   },
   "firewatch": {
     "appids": ["383870"]
@@ -885,8 +931,8 @@
     "appids": ["1931730"]
   },
   "forza-horizon-6": {
-    "appid": "2483190",
-    "download_url": "https://oopydoopy.github.io/renodx/renodx-forzahorizon6.addon64"
+    "download_url": "https://oopydoopy.github.io/renodx/renodx-forzahorizon6.addon64",
+    "appids": ["2483190"]
   },
   "front-mission-2-remake": {
     "appids": ["2865440"]
@@ -904,11 +950,11 @@
     "appids": ["417290"]
   },
   "ghost-recon-wildlands": {
-    "appid": "460930",
     "external": {
       "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["460930"]
   },
   "ghostrunner": {
     "appids": ["1139900"]
@@ -917,23 +963,23 @@
     "appids": ["2144740"]
   },
   "ghostwire-tokyo": {
-    "appid": "1475810"
+    "appids": ["1475810"]
   },
   "giggleland-terry-s-vegetable-patch": {
     "appids": ["3659070"]
   },
   "girls-frontline-2-exilium": {
-    "appid": "3347400",
-    "slug": "gfl2"
+    "slug": "gfl2",
+    "appids": ["3347400"]
   },
   "go-mecha-ball": {
-    "appid": "2008510"
+    "appids": ["2008510"]
   },
   "god-of-war": {
-    "appid": "1593500"
+    "appids": ["1593500"]
   },
   "god-of-war-ragnarok": {
-    "appid": "2322010"
+    "appids": ["2322010"]
   },
   "gods-trigger": {
     "appids": ["488730"]
@@ -948,7 +994,7 @@
     "appids": ["1297900"]
   },
   "granblue-fantasy-relink": {
-    "appid": "881020"
+    "appids": ["881020"]
   },
   "granblue-fantasy-versus": {
     "appids": ["1090630"]
@@ -957,20 +1003,20 @@
     "appids": ["1546970", "1546990", "1547000"]
   },
   "grand-theft-auto-v-enhanced": {
-    "appid": "3240220"
+    "appids": ["3240220"]
   },
   "great-god-grove": {
     "appids": ["2840190"]
   },
   "greedfall": {
-    "appid": "606880"
+    "appids": ["606880"]
   },
   "greedfall-the-dying-world": {
     "download_url": "https://github.com/RankFTW/renodx/releases/download/snapshot/renodx-greedfall2.addon64",
     "appids": ["1997660"]
   },
   "grim-dawn": {
-    "appid": "219990"
+    "appids": ["219990"]
   },
   "grime": {
     "appids": ["1123050"]
@@ -979,8 +1025,8 @@
     "appids": ["962130"]
   },
   "guild-wars-2": {
-    "appid": "1284210",
-    "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64"
+    "download_url": "https://notvoosh.github.io/renodx/renodx-guildwars2.addon64",
+    "appids": ["1284210"]
   },
   "guilty-gear-strive": {
     "appids": ["1384160"]
@@ -992,23 +1038,23 @@
     "appids": ["2543510"]
   },
   "hades": {
-    "appid": "1145360"
+    "appids": ["1145360"]
   },
   "hades-2": {
-    "appid": "1145350"
+    "appids": ["1145350"]
   },
   "halve-demo": {
     "appids": ["2391460"]
   },
   "hard-reset-redux": {
-    "appid": "407810"
+    "appids": ["407810"]
   },
   "hardspace-shipbreaker": {
-    "appid": "1161580",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+    "appids": ["1161580"]
   },
   "haste": {
-    "appid": "1796470"
+    "appids": ["1796470"]
   },
   "have-a-nice-death": {
     "appids": ["1740720"]
@@ -1017,8 +1063,8 @@
     "appids": ["2001070"]
   },
   "heaven-burns-red": {
-    "appid": "1973710",
-    "download_url": "https://pmnoxx.github.io/renodx/renodx-_hbr.addon64"
+    "download_url": "https://pmnoxx.github.io/renodx/renodx-_hbr.addon64",
+    "appids": ["1973710"]
   },
   "hell-clock": {
     "appids": ["1782460"]
@@ -1027,7 +1073,7 @@
     "appids": ["1620730"]
   },
   "helldivers-2": {
-    "appid": "553850"
+    "appids": ["553850"]
   },
   "herdling": {
     "appids": ["3047750"]
@@ -1042,16 +1088,19 @@
     "appids": ["1817230"]
   },
   "hitman-world-of-assassination": {
-    "appid": "1659040"
+    "appids": ["1659040"]
+  },
+  "hogwarts-legacy": {
+    "appids": ["990080"]
   },
   "hollow-cocoon": {
     "appids": ["2414630"]
   },
   "hollow-knight": {
-    "appid": "367520"
+    "appids": ["367520"]
   },
   "hollow-knight-silksong": {
-    "appid": "1030300"
+    "appids": ["1030300"]
   },
   "hollowbody": {
     "appids": ["2123640"]
@@ -1067,6 +1116,9 @@
   },
   "house-flipper-2": {
     "appids": ["1190970"]
+  },
+  "hover": {
+    "appids": ["280180"]
   },
   "human-fall-flat": {
     "appids": ["477160"]
@@ -1084,7 +1136,7 @@
     "appids": ["553640"]
   },
   "immortals-fenyx-rising": {
-    "appid": "2221920"
+    "appids": ["2221920"]
   },
   "in-sound-mind": {
     "appids": ["1119980"]
@@ -1093,7 +1145,7 @@
     "appids": ["1734680"]
   },
   "indiana-jones-and-the-great-circle": {
-    "appid": "2677660"
+    "appids": ["2677660"]
   },
   "indika": {
     "appids": ["1373960"]
@@ -1126,14 +1178,14 @@
     "appids": ["1132910"]
   },
   "ixion": {
-    "appid": "1113120",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+    "appids": ["1113120"]
   },
   "jaded": {
     "appids": ["1932570"]
   },
   "james-cameron-s-avatar-the-game": {
-    "appid": "33280"
+    "appids": ["33280"]
   },
   "jdm-japanese-drift-master": {
     "appids": ["1153410"]
@@ -1142,7 +1194,7 @@
     "appids": ["2820820"]
   },
   "journey": {
-    "appid": "638230"
+    "appids": ["638230"]
   },
   "journey-to-the-savage-planet": {
     "appids": ["973810"]
@@ -1151,13 +1203,13 @@
     "appids": ["1977170"]
   },
   "just-cause-4": {
-    "appid": "517630"
+    "appids": ["517630"]
   },
   "just-die-already": {
     "appids": ["979070"]
   },
   "karma-the-dark-world": {
-    "appid": "1376200"
+    "appids": ["1376200"]
   },
   "kaze-and-the-wild-masks": {
     "appids": ["829280"]
@@ -1169,8 +1221,8 @@
     "appids": ["1954200"]
   },
   "kerbal-space-program": {
-    "appid": "220200",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_ksp.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_ksp.addon64",
+    "appids": ["220200"]
   },
   "keywe": {
     "appids": ["1242980"]
@@ -1182,7 +1234,10 @@
     "appids": ["1903620"]
   },
   "kingdom-come-deliverance-ii": {
-    "appid": "1771300"
+    "appids": ["1771300"]
+  },
+  "kingdom-come-deliverance-luma-native-hdr-steam-only": {
+    "ignore": true
   },
   "kingdom-hearts-iii": {
     "appids": ["2552430"]
@@ -1191,7 +1246,7 @@
     "appids": ["569480"]
   },
   "kingdoms-of-amalur-re-reckoning": {
-    "appid": "1041720"
+    "appids": ["1041720"]
   },
   "kitten-burst": {
     "appids": ["1592360"]
@@ -1209,7 +1264,7 @@
     "appids": ["1229020"]
   },
   "l-a-noire": {
-    "appid": "110800"
+    "appids": ["110800"]
   },
   "lasers": {
     "appids": ["2675290"]
@@ -1227,11 +1282,11 @@
     "appids": ["1898290"]
   },
   "lego-harry-potter-collection": {
-    "appid": "2950340",
     "external": {
       "url": "https://www.nexusmods.com/legoharrypottercollection/mods/4",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["2950340"]
   },
   "lego-voyagers": {
     "appids": ["1538550"]
@@ -1246,25 +1301,28 @@
     "appids": ["1677110"]
   },
   "like-a-dragon-gaiden-the-man-who-erased-his-name": {
-    "appid": "2375550",
     "external": {
       "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["2375550"]
   },
   "like-a-dragon-infinite-wealth": {
-    "appid": "2072450",
     "external": {
       "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["2072450"]
   },
   "like-a-dragon-pirate-yakuza-in-hawaii": {
-    "appid": "3061810",
     "external": {
       "url": "https://www.nexusmods.com/likeadragonpirateyakuzainhawaii/mods/31",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["3061810"]
+  },
+  "little-big-adventure-twinsen-s-quest": {
+    "appids": ["2318070"]
   },
   "little-goody-two-shoes": {
     "appids": ["1812370"]
@@ -1274,6 +1332,9 @@
   },
   "little-nightmares": {
     "appids": ["424840"]
+  },
+  "little-nightmares-enhanced-edition": {
+    "appids": ["2149010"]
   },
   "little-nightmares-ii": {
     "appids": ["860510"]
@@ -1306,7 +1367,7 @@
     "appids": ["963710"]
   },
   "lost-planet": {
-    "appid": "6510"
+    "appids": ["6510"]
   },
   "lost-ruins": {
     "appids": ["1306630"]
@@ -1317,20 +1378,23 @@
   "lost-words-beyond-the-page": {
     "appids": ["599610"]
   },
+  "luma-framework": {
+    "ignore": true
+  },
   "lumines-arise": {
     "appids": ["2370000"]
   },
   "lunacid": {
-    "appid": "1745510"
+    "appids": ["1745510"]
   },
   "lysfanga-the-time-shift-warrior": {
     "appids": ["2161620"]
   },
   "mad-max": {
-    "appid": "234140"
+    "appids": ["234140"]
   },
   "mafia-definitive-edition": {
-    "appid": "1030840"
+    "appids": ["1030840"]
   },
   "mafia-the-old-country": {
     "appids": ["1941540"]
@@ -1350,6 +1414,12 @@
   "manor-lords": {
     "appids": ["1363080"]
   },
+  "mario-kart-8-deluxe": {
+    "external": {
+      "url": "https://www.nexusmods.com/mariokart8deluxe/mods/57",
+      "label_key": "renodx.external.nexus"
+    }
+  },
   "mars-attracts": {
     "appids": ["2760580"]
   },
@@ -1357,22 +1427,25 @@
     "appids": ["368260"]
   },
   "marvel-s-spider-man-2": {
-    "appid": "2651280"
+    "appids": ["2651280"]
   },
   "marvel-s-spider-man-miles-morales": {
-    "appid": "1817190"
+    "appids": ["1817190"]
   },
   "marvel-s-spider-man-remastered": {
-    "appid": "1817070"
+    "appids": ["1817070"]
+  },
+  "mass-effect-andromeda": {
+    "appids": ["1238000"]
   },
   "mass-effect-legendary-edition": {
-    "appid": "1328670"
+    "appids": ["1328670"]
   },
   "master-detective-archives-rain-code-plus": {
     "appids": ["2903950"]
   },
   "max-payne-3": {
-    "appid": "204100"
+    "appids": ["204100"]
   },
   "megabonk": {
     "appids": ["3405340"]
@@ -1381,17 +1454,17 @@
     "appids": ["990380"]
   },
   "metal-gear-solid-snake-eater": {
-    "appid": "2417610"
+    "appids": ["2417610"]
   },
   "metal-hellsinger": {
     "appids": ["1061910"]
   },
   "metaphor-refantazio": {
-    "appid": "2679460"
+    "appids": ["2679460"]
   },
   "metro-exodus-enhanced-edition": {
-    "appid": "412020",
-    "slug": "metro"
+    "slug": "metro",
+    "appids": ["412020"]
   },
   "metro-gravity": {
     "appids": ["2986450"]
@@ -1400,7 +1473,7 @@
     "appids": ["1649010"]
   },
   "middle-earth-shadow-of-war": {
-    "appid": "356190"
+    "appids": ["356190"]
   },
   "mind-over-magic": {
     "appids": ["1270580"]
@@ -1409,20 +1482,20 @@
     "appids": ["1610440"]
   },
   "mirror-s-edge": {
-    "appid": "17410",
     "external": {
       "url": "https://www.nexusmods.com/mirrorsedge/mods/24",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["17410"]
   },
   "monster-hunter-rise": {
-    "appid": "1446780"
+    "appids": ["1446780"]
   },
   "monster-hunter-wilds": {
-    "appid": "2246340"
+    "appids": ["2246340"]
   },
   "monster-hunter-world": {
-    "appid": "582010"
+    "appids": ["582010"]
   },
   "monster-train": {
     "appids": ["1102190"]
@@ -1438,6 +1511,9 @@
   },
   "moonlighter": {
     "appids": ["606150"]
+  },
+  "morbid-metal-demo": {
+    "appids": ["3762220"]
   },
   "motorslice": {
     "appids": ["2830030"]
@@ -1461,7 +1537,7 @@
     "appids": ["384490"]
   },
   "need-for-speed": {
-    "appid": "1262540"
+    "appids": ["1262540"]
   },
   "neon-abyss": {
     "appids": ["788100"]
@@ -1469,23 +1545,26 @@
   "neoverse": {
     "appids": ["994220"]
   },
+  "neverness-to-everness": {
+    "appids": ["4508340"]
+  },
   "new-super-lucky-s-tale": {
     "appids": ["1038300"]
   },
   "nier-replicant": {
-    "appid": "1113560",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-nierreplicant.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-nierreplicant.addon64",
+    "appids": ["1113560"]
   },
   "night-runners-prologue": {
     "appids": ["2707900"]
   },
   "nights-of-azure-1": {
-    "appid": "527280",
-    "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64",
+    "appids": ["527280"]
   },
   "nights-of-azure-2": {
-    "appid": "636570",
-    "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64",
+    "appids": ["636570"]
   },
   "nine-sols": {
     "appids": ["1809540"]
@@ -1494,33 +1573,39 @@
     "appids": ["3287520"]
   },
   "ninja-gaiden-4": {
-    "appid": "2627260"
+    "appids": ["2627260"]
   },
   "ninja-gaiden-sigma": {
-    "appid": "1580780"
+    "appids": ["1580780"]
   },
   "ninja-gaiden-sigma-2": {
-    "appid": "1580790"
+    "appids": ["1580790"]
   },
   "nioh-2": {
-    "appid": "1325200",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64",
+    "appids": ["1325200"]
   },
   "nioh-3": {
-    "appid": "3681010"
+    "appids": ["3681010"]
   },
   "no-man-s-sky": {
-    "appid": "275850",
     "external": {
       "url": "https://www.nexusmods.com/nomanssky/mods/4061",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["275850"]
   },
   "nobody-wants-to-die": {
     "appids": ["1939970"]
   },
   "nocturnal": {
     "appids": ["1634080"]
+  },
+  "node-the-last-favor-of-the-antarii": {
+    "appids": ["2757670"]
+  },
+  "nottolot": {
+    "appids": ["2512830"]
   },
   "nova-lands": {
     "appids": ["1501610"]
@@ -1550,19 +1635,22 @@
     "appids": ["1852650"]
   },
   "opus-echo-of-starsong-full-bloom-edition": {
-    "appid": "1504500"
+    "appids": ["1504500"]
   },
   "order-13": {
     "appids": ["2259310"]
   },
   "ori-and-the-blind-forest-definitive-edition": {
-    "appid": "387290"
+    "appids": ["387290"]
   },
   "ori-and-the-will-of-the-wisps": {
-    "appid": "1057090"
+    "appids": ["1057090"]
+  },
+  "osiris-new-dawn": {
+    "appids": ["402710"]
   },
   "outer-wilds": {
-    "appid": "753640"
+    "appids": ["753640"]
   },
   "outriders": {
     "appids": ["680420"]
@@ -1595,40 +1683,40 @@
     "appids": ["453090"]
   },
   "party-animals": {
-    "appid": "1260320"
+    "appids": ["1260320"]
   },
   "party-club": {
     "appids": ["2796010"]
   },
   "path-of-exile-2-dx11-only": {
-    "appid": "2694490",
-    "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64"
+    "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64",
+    "appids": ["2694490"]
   },
   "pathfinder-kingmaker": {
     "appids": ["640820"]
   },
   "pathfinder-wrath-of-the-righteous": {
-    "appid": "1184370",
-    "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64",
+    "appids": ["1184370"]
   },
   "penny-s-big-breakaway": {
-    "appid": "1955230"
+    "appids": ["1955230"]
   },
   "persona-3-reload": {
     "appids": ["2161700"]
   },
   "persona-4-golden": {
-    "appid": "1113000"
+    "appids": ["1113000"]
   },
   "persona-5-royal": {
-    "appid": "1687950"
+    "appids": ["1687950"]
   },
   "persona-5-royal-2": {
     "ignore": true
   },
   "persona-5-strikers": {
-    "appid": "1382330",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_p5s.addon64",
+    "appids": ["1382330"]
   },
   "phasmophobia": {
     "appids": ["739630"]
@@ -1673,17 +1761,17 @@
     "appids": ["494430"]
   },
   "pragmata": {
-    "appid": "3357650"
+    "appids": ["3357650"]
   },
   "prey-remastered-luma": {
-    "appid": "480490",
     "external": {
       "url": "https://www.nexusmods.com/prey2017/mods/149",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["480490"]
   },
   "prince-of-persia-the-lost-crown": {
-    "appid": "2751000"
+    "appids": ["2751000"]
   },
   "psychonauts-2": {
     "appids": ["607080"]
@@ -1691,12 +1779,15 @@
   "pummel-party": {
     "appids": ["880940"]
   },
+  "quern-undying-thoughts": {
+    "appids": ["512790"]
+  },
   "raft": {
     "appids": ["648800"]
   },
   "raidou-remastered-the-mystery-of-the-soulless-army": {
-    "appid": "2288350",
-    "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64",
+    "appids": ["2288350"]
   },
   "ready-or-not": {
     "appids": ["1144200"]
@@ -1708,15 +1799,15 @@
     "appids": ["537450"]
   },
   "red-dead-redemption": {
-    "appid": "2668510",
-    "slug": "rdr1"
+    "slug": "rdr1",
+    "appids": ["2668510"]
   },
   "red-dead-redemption-2-vulkan": {
-    "appid": "1174180",
     "external": {
       "url": "https://discord.com/invite/renodx",
       "label_key": "renodx.external.discord"
-    }
+    },
+    "appids": ["1174180"]
   },
   "redout-2": {
     "appids": ["1799930"]
@@ -1725,7 +1816,7 @@
     "appids": ["1737870"]
   },
   "remember-me": {
-    "appid": "228300"
+    "appids": ["228300"]
   },
   "remnant-2": {
     "appids": ["1282100"]
@@ -1737,23 +1828,23 @@
     "appids": ["317100"]
   },
   "resident-evil-2-remake": {
-    "appid": "883710"
+    "appids": ["883710"]
   },
   "resident-evil-3-remake": {
-    "appid": "952060"
+    "appids": ["952060"]
   },
   "resident-evil-4-remake": {
-    "appid": "2050650"
+    "appids": ["2050650"]
   },
   "resident-evil-7": {
-    "appid": "418370"
+    "appids": ["418370"]
   },
   "resident-evil-requiem": {
-    "appid": "3764200",
-    "slug": "re9requiem"
+    "slug": "re9requiem",
+    "appids": ["3764200"]
   },
   "resident-evil-village": {
-    "appid": "1196590"
+    "appids": ["1196590"]
   },
   "returnal": {
     "appids": ["1649240"]
@@ -1762,18 +1853,18 @@
     "appids": ["809060"]
   },
   "revenge-of-the-savage-planet": {
-    "appid": "2787320",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-rotsp.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-rotsp.addon64",
+    "appids": ["2787320"]
   },
   "rimworld": {
     "appids": ["294100"]
   },
   "rise-of-the-ronin": {
-    "appid": "1340990",
-    "download_url": "https://marat569.github.io/renodx/renodx-riseofronin.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-riseofronin.addon64",
+    "appids": ["1340990"]
   },
   "rise-of-the-tomb-raider": {
-    "appid": "391220"
+    "appids": ["391220"]
   },
   "risk-of-rain-2": {
     "appids": ["632360"]
@@ -1785,7 +1876,7 @@
     "appids": ["300380"]
   },
   "robocop-rogue-city": {
-    "appid": "1681430"
+    "appids": ["1681430"]
   },
   "roboquest": {
     "appids": ["692890"]
@@ -1794,7 +1885,7 @@
     "appids": ["606370"]
   },
   "routine": {
-    "appid": "606160"
+    "appids": ["606160"]
   },
   "ruined-king-a-league-of-legends-story": {
     "appids": ["1276790"]
@@ -1806,8 +1897,8 @@
     "appids": ["3949040"]
   },
   "s-t-a-l-k-e-r-2-heart-of-chornobyl": {
-    "appid": "1643320",
-    "slug": "stalker2"
+    "slug": "stalker2",
+    "appids": ["1643320"]
   },
   "sackboy-a-big-adventure": {
     "appids": ["1599660"]
@@ -1837,13 +1928,16 @@
     "appids": ["1225590"]
   },
   "sea-of-stars": {
-    "appid": "1244090"
+    "appids": ["1244090"]
   },
   "sea-of-thieves": {
-    "appid": "1172620"
+    "appids": ["1172620"]
   },
   "sekiro-shadows-die-twice": {
-    "appid": "814380"
+    "appids": ["814380"]
+  },
+  "sekirorendererupdate": {
+    "ignore": true
   },
   "sektori": {
     "appids": ["2105620"]
@@ -1855,8 +1949,8 @@
     "appids": ["1227690"]
   },
   "shadow-gambit-the-cursed-crew": {
-    "appid": "1545560",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-shadowgambit.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-shadowgambit.addon64",
+    "appids": ["1545560"]
   },
   "shadow-labyrinth": {
     "appids": ["1859430"]
@@ -1865,7 +1959,7 @@
     "appids": ["3783770"]
   },
   "shadow-of-the-tomb-raider": {
-    "appid": "750920"
+    "appids": ["750920"]
   },
   "shadow-warrior-middot-shadow-warrior-2": {
     "split": [
@@ -1897,20 +1991,20 @@
     "appids": ["2981650"]
   },
   "shin-megami-tensei-v": {
-    "appid": "1875830",
-    "download_url": "https://marat569.github.io/renodx/renodx-smt5.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-smt5.addon64",
+    "appids": ["1875830"]
   },
   "shinobi-art-of-vengeance": {
-    "appid": "2361770"
+    "appids": ["2361770"]
   },
   "sifu": {
     "appids": ["2138710"]
   },
   "silent-hill-2-remake": {
-    "appid": "2124490"
+    "appids": ["2124490"]
   },
   "silent-hill-f": {
-    "appid": "2947440"
+    "appids": ["2947440"]
   },
   "six-days-in-fallujah": {
     "appids": ["1548850"]
@@ -1922,7 +2016,7 @@
     "appids": ["1492070"]
   },
   "sniper-elite-4": {
-    "appid": "312660"
+    "appids": ["312660"]
   },
   "soda-crisis": {
     "appids": ["1592670"]
@@ -1940,7 +2034,7 @@
     "appids": ["2195410"]
   },
   "sonic-generations": {
-    "appid": "71340"
+    "appids": ["71340"]
   },
   "sonic-racing-crossworlds": {
     "appids": ["2486820"]
@@ -1950,8 +2044,8 @@
     "download_url": "https://akuru-q.github.io/renodx/renodx-sonicunleashedrecomp.addon64"
   },
   "sons-of-the-forest": {
-    "appid": "1326470",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-sonsoftheforest.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-sonsoftheforest.addon64",
+    "appids": ["1326470"]
   },
   "soulstice": {
     "appids": ["1602080"]
@@ -1962,14 +2056,17 @@
   "south-of-midnight": {
     "appids": ["1934570"]
   },
+  "space-crew": {
+    "appids": ["1176710"]
+  },
   "spacebase-startopia": {
     "appids": ["840390"]
   },
   "spark-the-electric-jester-3": {
-    "appid": "1629530"
+    "appids": ["1629530"]
   },
   "spec-ops-the-line": {
-    "appid": "50300"
+    "appids": ["50300"]
   },
   "speedrunners-2-king-of-speed-demo": {
     "appids": ["3730740"]
@@ -1981,7 +2078,7 @@
     "appids": ["1835240"]
   },
   "splinter-cell-blacklist": {
-    "appid": "235600"
+    "appids": ["235600"]
   },
   "split-fiction": {
     "appids": ["2001120"]
@@ -2002,13 +2099,13 @@
     "appids": ["2380050"]
   },
   "star-wars-jedi-survivor": {
-    "appid": "1774580"
+    "appids": ["1774580"]
   },
   "star-wars-outlaws": {
-    "appid": "2842040"
+    "appids": ["2842040"]
   },
   "starfield": {
-    "appid": "1716740"
+    "appids": ["1716740"]
   },
   "starfield-luma-native-hdr-and-more": {
     "ignore": true,
@@ -2021,32 +2118,32 @@
     "appids": ["2134770"]
   },
   "steel-seed": {
-    "appid": "458430",
-    "download_url": "https://github.com/TheEdmaster87/Steel-Seed-RenoDX-HDR/releases/download/v1.0.4/renodx-steelseed.addon64"
+    "download_url": "https://github.com/TheEdmaster87/Steel-Seed-RenoDX-HDR/releases/download/v1.0.4/renodx-steelseed.addon64",
+    "appids": ["458430"]
   },
   "steelrising": {
-    "appid": "1283400",
-    "download_url": "https://notvoosh.github.io/renodx/renodx-steelrising.addon64"
+    "download_url": "https://notvoosh.github.io/renodx/renodx-steelrising.addon64",
+    "appids": ["1283400"]
   },
   "steep": {
-    "appid": "460920",
     "external": {
       "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
       "label_key": "renodx.external.nexus"
-    }
+    },
+    "appids": ["460920"]
   },
   "stellar-blade": {
     "appids": ["3489700"]
   },
   "stranger-of-paradise-final-fantasy-origin": {
-    "appid": "1358700",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64",
+    "appids": ["1358700"]
   },
   "stray": {
     "appids": ["1332010"]
   },
   "street-fighter-6": {
-    "appid": "1364780"
+    "appids": ["1364780"]
   },
   "streets-of-rogue": {
     "appids": ["512900"]
@@ -2070,7 +2167,7 @@
     "appids": ["596970"]
   },
   "sunset-overdrive": {
-    "appid": "847370"
+    "appids": ["847370"]
   },
   "super-bunny-man": {
     "appids": ["673750"]
@@ -2094,17 +2191,23 @@
     "appids": ["1543030"]
   },
   "sword-art-online-alicization-lycoris": {
-    "appid": "1009290",
-    "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-sao-alicization.addon64"
+    "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-sao-alicization.addon64",
+    "appids": ["1009290"]
   },
   "sworn": {
     "appids": ["1763250"]
+  },
+  "syberia-remastered": {
+    "appids": ["3660220"]
+  },
+  "syberia-the-world-before": {
+    "appids": ["1410640"]
   },
   "system-shock-remake": {
     "appids": ["482400"]
   },
   "tactical-breach-wizards": {
-    "appid": "1043810"
+    "appids": ["1043810"]
   },
   "tainted-grail-conquest": {
     "appids": ["1199030"]
@@ -2119,7 +2222,7 @@
     "appids": ["2331020"]
   },
   "tales-of-graces-f-remastered": {
-    "appid": "2530980"
+    "appids": ["2530980"]
   },
   "tales-of-kenzera-zau": {
     "appids": ["2316580"]
@@ -2131,8 +2234,8 @@
     "appids": ["2246670"]
   },
   "teardown": {
-    "appid": "1167630",
-    "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64"
+    "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64",
+    "appids": ["1167630"]
   },
   "teenage-mutant-ninja-turtles-mutants-unleashed": {
     "appids": ["2460130"]
@@ -2141,7 +2244,7 @@
     "appids": ["389730"]
   },
   "tekken-8": {
-    "appid": "1778820"
+    "appids": ["1778820"]
   },
   "tell-me-why": {
     "appids": ["1180660"]
@@ -2150,7 +2253,7 @@
     "appids": ["954740"]
   },
   "terraria": {
-    "appid": "105600"
+    "appids": ["105600"]
   },
   "terratech": {
     "appids": ["285920"]
@@ -2171,21 +2274,21 @@
     "appids": ["970830"]
   },
   "the-elder-scrolls-iv-oblivion-remastered": {
-    "appid": "2623190"
+    "appids": ["2623190"]
   },
   "the-eternal-cylinder": {
     "appids": ["865680"]
   },
   "the-evil-within-2": {
-    "appid": "601430",
-    "download_url": "https://marat569.github.io/renodx/renodx-tew2.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-tew2.addon64",
+    "appids": ["601430"]
   },
   "the-expanse-a-telltale-series": {
     "appids": ["1708010"]
   },
   "the-first-berserker-khazan": {
-    "appid": "2680010",
-    "download_url": "https://marat569.github.io/renodx/renodx-bersekerKhazan.addon64"
+    "download_url": "https://marat569.github.io/renodx/renodx-bersekerKhazan.addon64",
+    "appids": ["2680010"]
   },
   "the-first-tree": {
     "appids": ["555150"]
@@ -2200,11 +2303,14 @@
     "appids": ["1087760"]
   },
   "the-hundred-line-last-defense-academy": {
-    "appid": "3014080"
+    "appids": ["3014080"]
+  },
+  "the-idolm-ster-starlit-season": {
+    "appids": ["1046480"]
   },
   "the-incredible-adventures-of-van-helsing-final-cut": {
-    "appid": "400170",
-    "download_url": "https://notvoosh.github.io/renodx/renodx-vanhelsingfinalcut.addon64"
+    "download_url": "https://notvoosh.github.io/renodx/renodx-vanhelsingfinalcut.addon64",
+    "appids": ["400170"]
   },
   "the-invincible": {
     "appids": ["731040"]
@@ -2217,6 +2323,18 @@
   },
   "the-last-stand-aftermath": {
     "appids": ["1266840"]
+  },
+  "the-legend-of-zelda-breath-of-the-wild": {
+    "external": {
+      "url": "https://www.nexusmods.com/legendofzeldabreathofthewild/mods/100",
+      "label_key": "renodx.external.nexus"
+    }
+  },
+  "the-legend-of-zelda-tears-of-the-kingdom": {
+    "external": {
+      "url": "https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/175",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "the-long-dark": {
     "appids": ["305620"]
@@ -2237,8 +2355,8 @@
     "appids": ["257120", "1692250"]
   },
   "the-outer-worlds-2": {
-    "appid": "1449110",
-    "slug": "outerworlds2"
+    "slug": "outerworlds2",
+    "appids": ["1449110"]
   },
   "the-outer-worlds-spacer-s-choice-edition": {
     "appids": ["1920490"]
@@ -2262,13 +2380,13 @@
     "appids": ["2705510"]
   },
   "the-surge": {
-    "appid": "378540"
+    "appids": ["378540"]
   },
   "the-thaumaturge": {
     "appids": ["1684350"]
   },
   "the-town-of-light": {
-    "appid": "433100"
+    "appids": ["433100"]
   },
   "the-turing-test": {
     "appids": ["499520"]
@@ -2280,10 +2398,10 @@
     "appids": ["1717770"]
   },
   "the-witcher-3": {
-    "appid": "292030"
+    "appids": ["292030"]
   },
   "the-witness": {
-    "appid": "210970"
+    "appids": ["210970"]
   },
   "this-war-of-mine": {
     "appids": ["282070"]
@@ -2307,16 +2425,19 @@
     "appids": ["1599020"]
   },
   "titan-quest-anniversary-edition": {
-    "appid": "475150"
+    "appids": ["475150"]
   },
   "tmodloader": {
-    "appid": "1281930"
+    "appids": ["1281930"]
   },
   "tokyo-xtreme-racer": {
     "appids": ["2634950"]
   },
   "tomb-raider": {
-    "appid": "203160"
+    "appids": ["203160"]
+  },
+  "tomb-raider-2013-definitive-edition": {
+    "ignore": true
   },
   "tormented-souls": {
     "appids": ["1367590"]
@@ -2328,12 +2449,12 @@
     "appids": ["3482880"]
   },
   "total-war-three-kingdoms": {
-    "appid": "779340",
-    "download_url": "https://sgtforgery.github.io/renodx/renodx-tw-3kingdoms.addon64"
+    "download_url": "https://sgtforgery.github.io/renodx/renodx-tw-3kingdoms.addon64",
+    "appids": ["779340"]
   },
   "total-war-warhammer-3": {
-    "appid": "1142710",
-    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64"
+    "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
+    "appids": ["1142710"]
   },
   "totally-accurate-battle-simulator": {
     "appids": ["508440"]
@@ -2341,18 +2462,24 @@
   "totally-reliable-delivery-service": {
     "appids": ["1011670"]
   },
+  "touhou-dystopian": {
+    "appids": ["3265060"]
+  },
   "towa-and-the-guardians-of-the-sacred-tree": {
     "appids": ["1910090"]
   },
+  "towaga-among-shadows": {
+    "appids": ["1177650"]
+  },
   "trackmania": {
-    "appid": "2225070"
+    "appids": ["2225070"]
   },
   "trailmakers": {
     "appids": ["585420"]
   },
   "trails-beyond-the-horizon": {
-    "appid": "3316940",
-    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64",
+    "appids": ["3316940"]
   },
   "trails-from-zero-to-azure": {
     "split": [
@@ -2370,8 +2497,8 @@
     "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
   },
   "trails-in-the-sky-1st-chapter": {
-    "appid": "3375780",
-    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64",
+    "appids": ["3375780"]
   },
   "trails-of-cold-steel": {
     "split": [
@@ -2418,14 +2545,17 @@
     "appids": ["1164940"]
   },
   "trine-2-complete-story": {
-    "appid": "35720",
-    "download_url": "https://github.com/chrisboyer2/renodx/releases/download/v2.0/renodx-trine2.addon64"
+    "download_url": "https://github.com/chrisboyer2/renodx/releases/download/v2.0/renodx-trine2.addon64",
+    "appids": ["35720"]
   },
   "try-again": {
     "appids": ["2088930"]
   },
+  "tunguska-the-visitation": {
+    "appids": ["1601970"]
+  },
   "tunic": {
-    "appid": "553420"
+    "appids": ["553420"]
   },
   "turbo-golf-racing": {
     "appids": ["1324350"]
@@ -2443,7 +2573,10 @@
     "appids": ["2386310"]
   },
   "uncharted-legacy-of-thieves-collection": {
-    "appid": "1659420"
+    "appids": ["1659420"]
+  },
+  "undying": {
+    "appids": ["638990"]
   },
   "unruly-heroes": {
     "appids": ["780350"]
@@ -2452,7 +2585,10 @@
     "appids": ["1604030"]
   },
   "valheim": {
-    "appid": "892970"
+    "appids": ["892970"]
+  },
+  "valley": {
+    "appids": ["378610"]
   },
   "vampire-the-masquerade-bloodlines-2": {
     "appids": ["532790"]
@@ -2475,9 +2611,12 @@
   "wanderstop": {
     "appids": ["1299460"]
   },
+  "war-for-the-overlord": {
+    "appids": ["230190"]
+  },
   "warframe": {
-    "appid": "230410",
-    "download_url": "https://hboyyt.github.io/renodx/renodx-warframe.addon64"
+    "download_url": "https://hboyyt.github.io/renodx/renodx-warframe.addon64",
+    "appids": ["230410"]
   },
   "warhammer-40-000-battlesector": {
     "appids": ["1295500"]
@@ -2486,8 +2625,8 @@
     "appids": ["2005010"]
   },
   "warhammer-40-000-darktide": {
-    "appid": "1361210",
-    "slug": "darktide"
+    "slug": "darktide",
+    "appids": ["1361210"]
   },
   "warhammer-40-000-mechanicus": {
     "appids": ["673880"]
@@ -2499,7 +2638,7 @@
     "appids": ["1324530"]
   },
   "warhammer-40-000-space-marine-2": {
-    "appid": "2183900"
+    "appids": ["2183900"]
   },
   "warpips": {
     "appids": ["1291010"]
@@ -2511,7 +2650,7 @@
     "appids": ["719040"]
   },
   "watch-dogs": {
-    "appid": "243470"
+    "appids": ["243470"]
   },
   "wavetale": {
     "appids": ["1823930"]
@@ -2546,40 +2685,49 @@
   "witchfire": {
     "appids": ["3156770"]
   },
+  "witchspring-r-the-story-of-pieberry": {
+    "appids": ["1958220"]
+  },
   "wizard-with-a-gun": {
     "appids": ["1150530"]
   },
   "wo-long-fallen-dynasty": {
-    "appid": "1448440",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64",
+    "appids": ["1448440"]
   },
   "wuchang-fallen-feathers": {
-    "appid": "2277560"
+    "appids": ["2277560"]
   },
   "wuthering-waves": {
-    "appid": "3513350"
+    "appids": ["3513350"]
   },
   "xcom-2": {
-    "appid": "268500",
-    "download_url": "https://sgtforgery.github.io/renodx/renodx-xcom2.addon64"
+    "download_url": "https://sgtforgery.github.io/renodx/renodx-xcom2.addon64",
+    "appids": ["268500"]
+  },
+  "xenoblade-chronicles-x-definitive-edition": {
+    "external": {
+      "url": "https://www.nexusmods.com/xenobladechroniclesx/mods/12",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "xf-extreme-formula": {
-    "appid": "2539910"
+    "appids": ["2539910"]
   },
   "yakuza-0": {
-    "appid": "2988580",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64",
+    "appids": ["2988580"]
   },
   "yakuza-kiwami-1": {
-    "appid": "834530",
-    "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64"
+    "download_url": "https://akuru-q.github.io/renodx/renodx-yakuza0.addon64",
+    "appids": ["834530"]
   },
   "yooka-replaylee": {
     "appids": ["2448020"]
   },
   "ys-ix-monstrum-nox": {
-    "appid": "1351630",
-    "download_url": "https://danaforever.github.io/renodx/renodx-ys9.addon64"
+    "download_url": "https://danaforever.github.io/renodx/renodx-ys9.addon64",
+    "appids": ["1351630"]
   },
   "ys-x-nordics": {
     "appids": ["2570810", "2731870"],
@@ -2593,140 +2741,7 @@
     "download_url": "https://github.com/Toru77/renodx/releases/download/snapshot/renodx-ys10pn.addon64"
   },
   "zenless-zone-zero": {
-    "appid": "4162040",
-    "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64"
-  },
-  "tomb-raider-2013-definitive-edition": {
-    "ignore": true
-  },
-  "syberia-remastered": {
-    "appids": ["3660220"]
-  },
-  "syberia-the-world-before": {
-    "appids": ["1410640"]
-  },
-  "neverness-to-everness": {
-    "appids": ["4508340"]
-  },
-  "among-the-sleep-enhanced-edition": {
-    "appids": ["250620"]
-  },
-  "awaken-astral-blade": {
-    "appids": ["1716310"]
-  },
-  "encased": {
-    "appids": ["921800"]
-  },
-  "ereban-shadow-legacy": {
-    "appids": ["1671360"]
-  },
-  "epistory-typing-chronicles": {
-    "appids": ["398850"]
-  },
-  "hover": {
-    "appids": ["280180"]
-  },
-  "quern-undying-thoughts": {
-    "appids": ["512790"]
-  },
-  "space-crew": {
-    "appids": ["1176710"]
-  },
-  "towaga-among-shadows": {
-    "appids": ["1177650"]
-  },
-  "tunguska-the-visitation": {
-    "appids": ["1601970"]
-  },
-  "undying": {
-    "appids": ["638990"]
-  },
-  "amerzone-the-explorer-s-legacy-2025": {
-    "appids": ["2429190"]
-  },
-  "little-big-adventure-twinsen-s-quest": {
-    "appids": ["2318070"]
-  },
-  "dreamfall-chapters-the-final-cut": {
-    "appids": ["237850"]
-  },
-  "demon-slayer-kny-hinokami-chronicles": {
-    "appids": ["1490890"]
-  },
-  "the-idolm-ster-starlit-season": {
-    "appids": ["1046480"]
-  },
-  "little-nightmares-enhanced-edition": {
-    "appids": ["2149010"]
-  },
-  "battlestar-galactica-deadlock": {
-    "appids": ["544610"]
-  },
-  "boomeroad": {
-    "appids": ["2512820"]
-  },
-  "dino-topia": {
-    "appids": ["3336520"]
-  },
-  "morbid-metal-demo": {
-    "appids": ["3762220"]
-  },
-  "node-the-last-favor-of-the-antarii": {
-    "appids": ["2757670"]
-  },
-  "nottolot": {
-    "appids": ["2512830"]
-  },
-  "osiris-new-dawn": {
-    "appids": ["402710"]
-  },
-  "touhou-dystopian": {
-    "appids": ["3265060"]
-  },
-  "valley": {
-    "appids": ["378610"]
-  },
-  "war-for-the-overlord": {
-    "appids": ["230190"]
-  },
-  "witchspring-r-the-story-of-pieberry": {
-    "appids": ["1958220"]
-  },
-  "sekirorendererupdate": {
-    "ignore": true
-  },
-  "kingdom-come-deliverance-luma-native-hdr-steam-only": {
-    "ignore": true
-  },
-  "luma-framework": {
-    "ignore": true
-  },
-  "mario-kart-8-deluxe": {
-    "external": {
-      "url": "https://www.nexusmods.com/mariokart8deluxe/mods/57",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "the-legend-of-zelda-breath-of-the-wild": {
-    "external": {
-      "url": "https://www.nexusmods.com/legendofzeldabreathofthewild/mods/100",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "the-legend-of-zelda-tears-of-the-kingdom": {
-    "external": {
-      "url": "https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/175",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "xenoblade-chronicles-x-definitive-edition": {
-    "external": {
-      "url": "https://www.nexusmods.com/xenobladechroniclesx/mods/12",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "assassin-s-creed-black-flag-resynced": {
-    "appid": "3751950",
-    "slug": "asscreedblackflagresynced"
+    "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64",
+    "appids": ["4162040"]
   }
 }

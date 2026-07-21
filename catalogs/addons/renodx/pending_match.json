@@ -6,23 +6,15 @@
     "arch": "X64"
   },
   {
-    "id": "borderlands-goty-enhanced",
-    "name": "Borderlands GOTY Enhanced",
-    "slug": "borderlandsgotyenhanced",
+    "id": "luigi-s-mansion-3",
+    "name": "Luigi's Mansion 3",
+    "slug": "lm3",
     "arch": "X64"
   },
-  { "id": "days-gone", "name": "Days Gone", "slug": "daysgone", "arch": "X64" },
-  { "id": "luigi-s-mansion-3", "name": "Luigi's Mansion 3", "slug": "lm3", "arch": "X64" },
   {
     "id": "mario-kart-8-deluxe",
     "name": "Mario Kart 8 Deluxe",
     "slug": "mario-kart-8-deluxe",
-    "arch": "X64"
-  },
-  {
-    "id": "mass-effect-andromeda",
-    "name": "Mass Effect: Andromeda",
-    "slug": "masseffectandromeda",
     "arch": "X64"
   },
   {
@@ -43,9 +35,24 @@
     "slug": "mhgu",
     "arch": "X64"
   },
-  { "id": "splatoon", "name": "Splatoon", "slug": "splatoon", "arch": "X64" },
-  { "id": "splatoon-2", "name": "Splatoon 2", "slug": "splatoon-2", "arch": "X64" },
-  { "id": "splatoon-3", "name": "Splatoon 3", "slug": "splatoon-3", "arch": "X64" },
+  {
+    "id": "splatoon",
+    "name": "Splatoon",
+    "slug": "splatoon",
+    "arch": "X64"
+  },
+  {
+    "id": "splatoon-2",
+    "name": "Splatoon 2",
+    "slug": "splatoon-2",
+    "arch": "X64"
+  },
+  {
+    "id": "splatoon-3",
+    "name": "Splatoon 3",
+    "slug": "splatoon-3",
+    "arch": "X64"
+  },
   {
     "id": "super-mario-3d-world",
     "name": "Super Mario 3D World",
@@ -68,12 +75,6 @@
     "id": "xenoblade-chronicles-x-definitive-edition",
     "name": "Xenoblade Chronicles X: Definitive Edition",
     "slug": "xenoblade-chronicles-x-definitive-edition",
-    "arch": "X64"
-  },
-  {
-    "id": "hogwarts-legacy",
-    "name": "Hogwarts Legacy",
-    "slug": "unrealengine",
     "arch": "X64"
   }
 ]
