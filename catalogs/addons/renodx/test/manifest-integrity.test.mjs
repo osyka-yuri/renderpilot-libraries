@@ -22,8 +22,20 @@ test("manifest integrity - committed RenoDX v1 document is well-formed and inter
     "Manifest should have at least one engine profile",
   );
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 834);
+  assert.equal(manifest.games.length, 835);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
+
+  const scorn = manifest.games.find((title) => title.id === "scorn");
+  assert.ok(scorn, "Scorn must be present in the generated manifest");
+  assert.equal(scorn.architecture, "X64");
+  assert.equal(scorn.status, "construction");
+  assert.equal(scorn.addon.slug, "unrealengine");
+  assert.ok(
+    scorn.match.some((rule) => rule.kind === "steam_appid" && rule.value === "698670"),
+  );
+  assert.ok(
+    scorn.match.some((rule) => rule.kind === "exe_name" && rule.value === "Scorn.exe"),
+  );
 
   const taintedGrail = manifest.games.find(
     (t) => t.id === "tainted-grail-the-fall-of-avalon",
