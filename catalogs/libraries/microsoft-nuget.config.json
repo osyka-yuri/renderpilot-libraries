@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "products": [
+    {
+      "key": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "expected_listed_stable_releases": 39,
+      "architectures": [
+        { "package_directory": "x64", "catalog_architecture": "X64", "required": true },
+        { "package_directory": "win32", "catalog_architecture": "X86", "required": true }
+      ],
+      "files": [{ "library_id": "d3d12_core", "file_name": "D3D12Core.dll" }],
+      "compatibility": "d3d12_sdk"
+    },
+    {
+      "key": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "expected_listed_stable_releases": 22,
+      "architectures": [
+        { "package_directory": "x64", "catalog_architecture": "X64", "required": true },
+        { "package_directory": "x86", "catalog_architecture": "X86", "required": false }
+      ],
+      "files": [
+        { "library_id": "dxcompiler", "file_name": "dxcompiler.dll" },
+        { "library_id": "dxil", "file_name": "dxil.dll" }
+      ],
+      "compatibility": null
+    },
+    {
+      "key": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "expected_listed_stable_releases": 10,
+      "architectures": [
+        { "package_directory": "x64", "catalog_architecture": "X64", "required": true }
+      ],
+      "files": [{ "library_id": "dstorage", "file_name": "dstorage.dll" }],
+      "compatibility": null
+    }
+  ]
+}

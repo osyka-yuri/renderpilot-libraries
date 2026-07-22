@@ -1,0 +1,4298 @@
+{
+  "schema_version": 2,
+  "releases": [
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.4.9",
+      "package_sha512": "37hQ83k/y2vu2TUhGSD0Uqlm1rvIHHxwSRVFsoM05WZ3G2Rh/JboSY1mi7op1sa6KyMXNjLpVN95y1yASJqGbg==",
+      "published_at": "2021-04-20T15:59:23.173Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.4.9",
+          "dll_sha256": "2ad0f827d9ecbf3b4cf7d2e0016c4dd2c5560496739f1daed4746261f876be2d",
+          "dll_size_bytes": 2989432,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
+            "signed_at": "2021-04-16T23:45:04.2410000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d29cbb1e4789da2d49d15f0625cb7a6445dc2cd171ffbbe3750242f5e41a6288.dll.zst",
+            "zst_sha256": "d29cbb1e4789da2d49d15f0625cb7a6445dc2cd171ffbbe3750242f5e41a6288",
+            "zst_size_bytes": 805820,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.4.9",
+          "dll_sha256": "0dd96cf17784df759232972c6424d86cd4dd61975bd08493d972970f08768d10",
+          "dll_size_bytes": 2173328,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
+            "signed_at": "2021-04-16T23:41:47.6710000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/97781a23dec9427ed46936a164f7930f2e61021d6f7d4087104c7cebbc58f9ee.dll.zst",
+            "zst_sha256": "97781a23dec9427ed46936a164f7930f2e61021d6f7d4087104c7cebbc58f9ee",
+            "zst_size_bytes": 675367,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.4.10",
+      "package_sha512": "Os//m30yikWUFCnL56NZDiqAz1FwQ9Ad1okk5viR5DBlMUyKJzAjJG8z50dRxNE5mnUwTlZJL2VHSQ91nd/yFA==",
+      "published_at": "2021-05-17T15:54:17.933Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.4.10",
+          "dll_sha256": "5cdfe7bb0fc0bfd7cfbfc5e31f88d279857ccf127188ae3882e34f42a211cdc7",
+          "dll_size_bytes": 2989448,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
+            "signed_at": "2021-05-14T00:25:54.9870000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/359f2169fc0d7d5f524ca4bd88ccd6987cdc1583629c09dca735d1e6bcd94336.dll.zst",
+            "zst_sha256": "359f2169fc0d7d5f524ca4bd88ccd6987cdc1583629c09dca735d1e6bcd94336",
+            "zst_size_bytes": 805768,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.4.10",
+          "dll_sha256": "31f4f346eaf7b7d9d8b48b81795bae652020b1ecc14b4111edea5550c5c20c37",
+          "dll_size_bytes": 2173320,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
+            "signed_at": "2021-05-14T00:23:56.5630000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c550d3f27148b2e0d5ec82677a575194bdf358714557829e84d2b14855728133.dll.zst",
+            "zst_sha256": "c550d3f27148b2e0d5ec82677a575194bdf358714557829e84d2b14855728133",
+            "zst_size_bytes": 675359,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.600.10",
+      "package_sha512": "oZi1aqoBv3f4cgSynqHsCMB8SCffJScuKzH5bsxbAuEXtIDMvfSDMiu46TexgQLly/8GAWqHFkkwYUFJxyYpXQ==",
+      "published_at": "2021-12-09T18:45:02.530Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.600.10",
+          "dll_sha256": "69d0495b926ac79c0a21e9b560a1add4d2a9942676929cac545bcdd9bb53c7f8",
+          "dll_size_bytes": 5191600,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2021-12-09T06:05:47.1550000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1058ccb0490529e6251ee64390ab23d466e01f6dca45b3a60b204b6e1cfd3e66.dll.zst",
+            "zst_sha256": "1058ccb0490529e6251ee64390ab23d466e01f6dca45b3a60b204b6e1cfd3e66",
+            "zst_size_bytes": 1179018,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.600.10",
+          "dll_sha256": "fe22ac0d59c3b1347fec18ccb2eba58e0ba451f695d11d6005f383ebfacf07eb",
+          "dll_size_bytes": 4249992,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2021-12-09T06:03:34.4640000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c12602184a190f58dd8af217df65d71a2e40e3ff72fce4d8e437bd313292e955.dll.zst",
+            "zst_sha256": "c12602184a190f58dd8af217df65d71a2e40e3ff72fce4d8e437bd313292e955",
+            "zst_size_bytes": 980452,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.602.0",
+      "package_sha512": "QrgraKnVycVEbPdY4Mifp5ItvxXxqizNhu7BEmjunR94CDqFdGbsKb/4APendexSXHMOlZHTA7zpD8dJu4RgGQ==",
+      "published_at": "2022-04-27T17:24:54.067Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.602",
+          "dll_sha256": "08b07b09a7f5d4b49ba4b6bd7675abdefe970032ca1779dc7a37b976c61387b0",
+          "dll_size_bytes": 5247408,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "BB983EC3E1F76DE6C1E8446C9976A82BD1798BB7",
+            "signed_at": "2022-04-20T20:13:38.1970000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/30f40994cb0fa4fc02a5968cbf37ea8fa0f40b2add6e00aa4950256434ca22b3.dll.zst",
+            "zst_sha256": "30f40994cb0fa4fc02a5968cbf37ea8fa0f40b2add6e00aa4950256434ca22b3",
+            "zst_size_bytes": 1187443,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.602",
+          "dll_sha256": "488e4423534ca377c2c7fac566999b103e138e6d3e0f6ee4acffb74774b7643c",
+          "dll_size_bytes": 4290456,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "BB983EC3E1F76DE6C1E8446C9976A82BD1798BB7",
+            "signed_at": "2022-04-20T20:11:57.8610000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9329c08d0daee957e5642d56fa710fcb85eb36fb2ee1e68c4f080a667793a523.dll.zst",
+            "zst_sha256": "9329c08d0daee957e5642d56fa710fcb85eb36fb2ee1e68c4f080a667793a523",
+            "zst_size_bytes": 987497,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.602.4",
+      "package_sha512": "sPfjX9uWeDFs+2OgfMVxBCSRNu1dhDGKG2OHuX58wA8QlntBlCg0nD51Nq1IB5MopfwZbSr3r9qSHw6vCFBEDg==",
+      "published_at": "2022-06-21T18:59:19.353Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.602.4",
+          "dll_sha256": "40c8ab6800e0d107b73564c3e7a53f0d307b601ad15055445a31ba0ff3a793a2",
+          "dll_size_bytes": 5247408,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2022-06-21T17:53:01.8490000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e386631bae142dd2a859c4954db324d92528dab03b7b9638c95c7479a9e138b4.dll.zst",
+            "zst_sha256": "e386631bae142dd2a859c4954db324d92528dab03b7b9638c95c7479a9e138b4",
+            "zst_size_bytes": 1187659,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.602.4",
+          "dll_sha256": "8f6fd3578bfcfd4a48fd0ae03f021c9aadc66ff5304871a14ec2d352d64f3224",
+          "dll_size_bytes": 4290480,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2022-06-21T17:51:35.3810000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8727004acee1f36eaaece96e6efed7e8ea07ea817c0a44c80e54ef6fde4cb801.dll.zst",
+            "zst_sha256": "8727004acee1f36eaaece96e6efed7e8ea07ea817c0a44c80e54ef6fde4cb801",
+            "zst_size_bytes": 987537,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.606.3",
+      "package_sha512": "TyZmqKEmGhhIoYaKmHoDQnfGhm8sQbMFs2L7xVsmDgkVybXiKJf0M1Y9QK8fM4zlG/Tke7Q5u32cHfQ0rEAajg==",
+      "published_at": "2022-07-14T19:03:28.100Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.606.3",
+          "dll_sha256": "5bd2f2b2f2543196293aa207e9ddf8b82ae644cb157d0e18b7fe796b5c83085f",
+          "dll_size_bytes": 5382544,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2022-07-14T18:27:56.4990000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2d53a2be68128c843ab71260a3c2ed82716ff88f486b07fa42a46f01e026d4af.dll.zst",
+            "zst_sha256": "2d53a2be68128c843ab71260a3c2ed82716ff88f486b07fa42a46f01e026d4af",
+            "zst_size_bytes": 1205330,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.606.3",
+          "dll_sha256": "1e62e93b5e470d407e0f8779a6bbfa702ae25107708ba39145058ba65ff23243",
+          "dll_size_bytes": 4430736,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2022-07-14T18:14:30.2640000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8473fa39126107123b6113469346753cd036cdcae11461777b1b9feefdf2ae12.dll.zst",
+            "zst_sha256": "8473fa39126107123b6113469346753cd036cdcae11461777b1b9feefdf2ae12",
+            "zst_size_bytes": 1002255,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.606.4",
+      "package_sha512": "IXm8ShJ97YmLtEU56hD7pXgEzC95r225eaXN3nABl15miWpHyuea4YrDke4uMqeN+C1pFg+WfGlHikx80eU3fg==",
+      "published_at": "2022-08-30T21:55:37.493Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.606.4",
+          "dll_sha256": "1a1327f343966ad72fcbe1d2873a7feb5fbdccd89e89f5ff2d39066e904238f2",
+          "dll_size_bytes": 5401504,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2022-08-29T22:09:55.5180000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c6a61a4359936b9fb8d8a01e1d8ac4032680dec6abe5302a3c88889072a67f94.dll.zst",
+            "zst_sha256": "c6a61a4359936b9fb8d8a01e1d8ac4032680dec6abe5302a3c88889072a67f94",
+            "zst_size_bytes": 1213580,
+            "compression_level": 19
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.606.4",
+          "dll_sha256": "423eff0bbe16432d7d78d227f4d6a1fa69005d51548e5e69cd937e792a13759b",
+          "dll_size_bytes": 4446128,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2022-08-29T22:07:15.5120000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e5c9f5adc6087b124fa092ee77488dec5edf46bb0c93db31ce1e85ab211eb73b.dll.zst",
+            "zst_sha256": "e5c9f5adc6087b124fa092ee77488dec5edf46bb0c93db31ce1e85ab211eb73b",
+            "zst_size_bytes": 1009699,
+            "compression_level": 19
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.608.0",
+      "package_sha512": "RQbQ3/Eu+AynIr2q41GrfgZCP6/XjamZtpUHNcXPhSP31PqbT2CaO/EFlQ201t0JOTD/Qh5gNMHB3J1pnPws/g==",
+      "published_at": "2022-11-19T02:20:10.440Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.608",
+          "dll_sha256": "011457401ea0d1d7892a2227d4fe953e293a25dbf09867f3279c836a8d85d7c4",
+          "dll_size_bytes": 5492128,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-11-19T00:41:50.1130000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/76cf3c0a622b2db04995d43b8e54eda1f7e73d7a40bdef61add5b174f3baa119.dll.zst",
+            "zst_sha256": "76cf3c0a622b2db04995d43b8e54eda1f7e73d7a40bdef61add5b174f3baa119",
+            "zst_size_bytes": 1401533,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.608",
+          "dll_sha256": "6b8f8c57c547c17334c9d6694744b8b3e7fd9a13503b21a213e8880b690679bd",
+          "dll_size_bytes": 4506512,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-11-19T00:37:16.0040000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/512825dd7b8ca183addbcc3281f9ee606c3b93d128a84149274c83744988cbe0.dll.zst",
+            "zst_sha256": "512825dd7b8ca183addbcc3281f9ee606c3b93d128a84149274c83744988cbe0",
+            "zst_size_bytes": 1136888,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.608.2",
+      "package_sha512": "EFbO0i1xMKrxJsGIsK9HXmD91BwTnwvzu8V+thodhjExwn0gQkGl6O4s6aLapyJ0pNPQG/j9Hh+3Tp5uC5lXPg==",
+      "published_at": "2023-01-03T18:43:30.860Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.608.2",
+          "dll_sha256": "90dcc42086b39cb24b5831387f9a273738ca08730fbe7ce27ea417dc4b27f663",
+          "dll_size_bytes": 5492160,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-12T21:44:08.4930000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/91e0f79b0f7ac98b63f24e48ce11b9330758d4b92ade0ccda82e6d1d8f46eba7.dll.zst",
+            "zst_sha256": "91e0f79b0f7ac98b63f24e48ce11b9330758d4b92ade0ccda82e6d1d8f46eba7",
+            "zst_size_bytes": 1401592,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.608.2",
+          "dll_sha256": "8940986fc2405468425d27af57fe904eeaeee9efab317851d11c769aaaf8a29f",
+          "dll_size_bytes": 4506528,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-12T21:44:57.8760000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e3459181e4542f896051bf020f46d5b4ceec2f8edc96dac9063888cc4e6d9cd1.dll.zst",
+            "zst_sha256": "e3459181e4542f896051bf020f46d5b4ceec2f8edc96dac9063888cc4e6d9cd1",
+            "zst_size_bytes": 1136853,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.608.3",
+      "package_sha512": "qF04MlOKvc6YIDAghQzQRYBQNpLeXXtyDuS8XO1wHV4RwbnAiRDsLb0nYrO4znltSmsz+fyQI8c2HgPEjqCcqA==",
+      "published_at": "2023-03-02T22:00:31.993Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.608.3",
+          "dll_sha256": "76d7f037d3e1473881ca52a3e4678b0ebe81e753e81512711f7d2a0e61d70683",
+          "dll_size_bytes": 5490112,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-02T20:57:50.2560000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/3e2b3257838fd2737381f8f3cfba9a37225281a4a63172c78b7734afae8570d7.dll.zst",
+            "zst_sha256": "3e2b3257838fd2737381f8f3cfba9a37225281a4a63172c78b7734afae8570d7",
+            "zst_size_bytes": 1400555,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.608.3",
+          "dll_sha256": "9c733fd76f39f2d56eae83e1c8aeb2c8f687e8da618d49e7b665b8ee3c77e309",
+          "dll_size_bytes": 4506048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-02T21:32:12.2950000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/425c984a7abd44f134c389b03d4be7f2015229e16c69c958adde9f1a07ed7001.dll.zst",
+            "zst_sha256": "425c984a7abd44f134c389b03d4be7f2015229e16c69c958adde9f1a07ed7001",
+            "zst_size_bytes": 1136648,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.610.0",
+      "package_sha512": "B57DPU+AXUvt2e8e4espnNyAks3B5Dr06XREoOvgbta9lPPW6VKB5AQLlKz5tXSRtC2hC8dVMO12ZroYe2OO0Q==",
+      "published_at": "2023-04-12T19:36:31.603Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610",
+          "dll_sha256": "ee09db098efde9e37322d07b6a47e0236fadb5f8ab9653530f7cf0e60c2c6dae",
+          "dll_size_bytes": 5617048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-04-10T22:33:15.1730000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7d7d9269842f990a65fab041814d15d2aea2b7d2bf9f8846351a706bbed04de4.dll.zst",
+            "zst_sha256": "7d7d9269842f990a65fab041814d15d2aea2b7d2bf9f8846351a706bbed04de4",
+            "zst_size_bytes": 1426503,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610",
+          "dll_sha256": "080bf5b5043dbbeaf100e33cc0334e76c38d8f440cb3a545960e7245695b2f73",
+          "dll_size_bytes": 4610496,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-04-10T22:30:14.2430000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9db600fbc2786723e1b380a5cbff32d2fc7bb7fd908899f4301dcf87e936a672.dll.zst",
+            "zst_sha256": "9db600fbc2786723e1b380a5cbff32d2fc7bb7fd908899f4301dcf87e936a672",
+            "zst_size_bytes": 1151262,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.610.1",
+      "package_sha512": "emUhIiCVEagbJEj+YYCWnOJiYvHrH8UgnraQgEAKGhN1RTdYQvv2OCfIwrN5NbfS3VNj6vb1IMgtyRNecqcIJg==",
+      "published_at": "2023-04-17T23:19:02.980Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.1",
+          "dll_sha256": "24cc3ffebbbac2ba612bd8d954951c7a37b4b635f4f3e954bb63a93cf574c9e8",
+          "dll_size_bytes": 5617560,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-04-17T21:40:45.3850000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bda80a7984b538dac12cda1610ff12b4ca02af435f878b94095d305d4caa671d.dll.zst",
+            "zst_sha256": "bda80a7984b538dac12cda1610ff12b4ca02af435f878b94095d305d4caa671d",
+            "zst_size_bytes": 1426596,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.1",
+          "dll_sha256": "78002cd4d13dfe2e4c2bc2b522cdef9ed9d8e2da46f1c5607577f66cbcb35d93",
+          "dll_size_bytes": 4611008,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-04-17T21:39:51.5030000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7d10d535ce5d0ef25f522fa4e519e9a1c515d3ff40c828d0f2a8d72b549e4c05.dll.zst",
+            "zst_sha256": "7d10d535ce5d0ef25f522fa4e519e9a1c515d3ff40c828d0f2a8d72b549e4c05",
+            "zst_size_bytes": 1151145,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.610.2",
+      "package_sha512": "hbCsMM/w9fZKgzpjDye5F1v/AF5sKovZTFuPdfbtHHtwptjDb7oj3DQjHqwCGOBjVfrmVjrgXMVvfG/BJfp0vw==",
+      "published_at": "2023-04-20T20:16:01.377Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.2",
+          "dll_sha256": "d203c1bb4c8529bade63696fdb02d03a78e8905e33a22339abbc482eed9d3222",
+          "dll_size_bytes": 5616520,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F372C27F6E052A6BE8BAB3112B465C692196CD6F",
+            "signed_at": "2023-04-20T19:14:18.7760000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/eddac13ac394c71fe6ea6f9d037cb89f2fa347bbfe6ee319e0a552b4775e8544.dll.zst",
+            "zst_sha256": "eddac13ac394c71fe6ea6f9d037cb89f2fa347bbfe6ee319e0a552b4775e8544",
+            "zst_size_bytes": 1426574,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.2",
+          "dll_sha256": "019f500dc5dc63676b6b22fcd6bf404329590402859febc487f55bc33872ef3f",
+          "dll_size_bytes": 4608408,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-04-20T19:54:31.1400000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1faa56eea069f2cca5719672cceb1cbe17e84415f2c04989a5750981c9f66f04.dll.zst",
+            "zst_sha256": "1faa56eea069f2cca5719672cceb1cbe17e84415f2c04989a5750981c9f66f04",
+            "zst_size_bytes": 1150959,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.610.3",
+      "package_sha512": "srGgnuR3ilFD16cmdD+LdHPwdmw5lExml+u14o3A7zAYh1AHBFgG14gBBBkC7lmBXO+ouU92R8tQq34OXwUwEA==",
+      "published_at": "2023-05-17T00:15:52.280Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.3",
+          "dll_sha256": "8710110eccf43a32e5e1a04552cb344832922a0cd23caeecb764e18bd5cdffa8",
+          "dll_size_bytes": 5617048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-05-16T23:34:44.3020000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8d1b12a157d2b702bfee66d5f0a9ce99dc5e4b57890b34968252d58d883021d3.dll.zst",
+            "zst_sha256": "8d1b12a157d2b702bfee66d5f0a9ce99dc5e4b57890b34968252d58d883021d3",
+            "zst_size_bytes": 1426744,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.3",
+          "dll_sha256": "19f17b4742c147a7bf44b99bfb102ac208768fb08796ce0741e3621a49e83b0f",
+          "dll_size_bytes": 4609416,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-05-16T23:21:08.8070000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ac10f0b183d859b84409c54b073c8dd83860c6398f3fc27fd2241fd41a81d2bb.dll.zst",
+            "zst_sha256": "ac10f0b183d859b84409c54b073c8dd83860c6398f3fc27fd2241fd41a81d2bb",
+            "zst_size_bytes": 1151668,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.610.4",
+      "package_sha512": "Twhtc77JSYGOc3aUfEgqP61u2DXClRFX+mOZ5KsbJDjnMJR9UWdt9ygnz7n9bQ7S/jwEuyy9x5imKZU2pY8iKw==",
+      "published_at": "2023-06-26T22:22:39.520Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.4",
+          "dll_sha256": "1acfe9305468bb2389e014319955cf45586f4207477bec25f8db813ba2a79fca",
+          "dll_size_bytes": 5614488,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-06-26T17:32:37.8880000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/db4e98f96f4940ec215b91ea7770c8681cdcb89d45431f70b59824abb8056aec.dll.zst",
+            "zst_sha256": "db4e98f96f4940ec215b91ea7770c8681cdcb89d45431f70b59824abb8056aec",
+            "zst_size_bytes": 1427972,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.4",
+          "dll_sha256": "959b29c8a4d631106ead1e3565eccef9cf5b022630b472a593170106df0c20f4",
+          "dll_size_bytes": 4609416,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-06-26T17:30:09.9430000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fc9a01d659052dfac580aa6fea0809ceb59b7bc80457ae4bbeb0bef52ecf064e.dll.zst",
+            "zst_sha256": "fc9a01d659052dfac580aa6fea0809ceb59b7bc80457ae4bbeb0bef52ecf064e",
+            "zst_size_bytes": 1152328,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.610.5",
+      "package_sha512": "d2P8zRlBQmIS1PK9nSsjDgISmJlGEWvt1iz7pT8mBStGeEmCQP19oCrRkfKB5W+rDp7cyDwA1I7WLyqZBBHRUw==",
+      "published_at": "2023-08-21T22:29:11.853Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.5",
+          "dll_sha256": "55f32e6e464cdb507059b052e2d0bf89caa0a6e6a522fff6a8e35babc7a43385",
+          "dll_size_bytes": 5618208,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-08-21T22:06:57.5410000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/cac32e00208df29407b8d4f5671aee8f2e5b1e25e17764c29e367b4458b05df4.dll.zst",
+            "zst_sha256": "cac32e00208df29407b8d4f5671aee8f2e5b1e25e17764c29e367b4458b05df4",
+            "zst_size_bytes": 1428830,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.610.5",
+          "dll_sha256": "fd908b7b0290b2ee4eb7bb98e0183c1b2b08cbfed0b3ba1607c16adc4b099250",
+          "dll_size_bytes": 4609984,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-08-21T21:59:22.2300000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/439ac77ba1ba95b86bce643803aa753c9cf536f66adc09629433d0e7c3a81438.dll.zst",
+            "zst_sha256": "439ac77ba1ba95b86bce643803aa753c9cf536f66adc09629433d0e7c3a81438",
+            "zst_size_bytes": 1153352,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.611.0",
+      "package_sha512": "l+PsX6KJe1EVbaa3gHfj9UUfY5QxF1/Q3U3rZoddlB91whs4JkrBXfLERr5eGcu3kzrkpN8gQvJWfXxrcFcspQ==",
+      "published_at": "2023-10-19T14:45:20.280Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.611",
+          "dll_sha256": "b5ba40b01c2aedfef2ec849d9810892e71e0a6be4b1d0d7b596eff02cbfcaaf4",
+          "dll_size_bytes": 5888560,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-10-04T14:44:42.3730000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8677761b1ae295d2eeee8d13ff7520aeb15894c927bfaa44cb64a1a6a5320607.dll.zst",
+            "zst_sha256": "8677761b1ae295d2eeee8d13ff7520aeb15894c927bfaa44cb64a1a6a5320607",
+            "zst_size_bytes": 1467147,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.611",
+          "dll_sha256": "4fc626a7849064627791685e38f8cadc8a6bb84a37eb82e2ec85d5262256edb0",
+          "dll_size_bytes": 4812320,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-10-04T14:07:49.7000000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/420db80d6c92b9b4296caebd5e22d0265ec91193957b5c82f441a2c3af4dc1e8.dll.zst",
+            "zst_sha256": "420db80d6c92b9b4296caebd5e22d0265ec91193957b5c82f441a2c3af4dc1e8",
+            "zst_size_bytes": 1179260,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.611.1",
+      "package_sha512": "oX35/iVZQnyIxDI55xnBliYHANSPUyqLtWlafBGoF24D27SKm8sfrLJwp/gt0+hNqkS8lCRjk72WyjL5ra54bQ==",
+      "published_at": "2023-11-01T18:53:28.730Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.611.1",
+          "dll_sha256": "458cae10d4787bbe1b71caa5c4e8982b28ac223b011f23bec9fd97ad3b27c69e",
+          "dll_size_bytes": 5889984,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-10-31T18:53:34.6240000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/52e7fdebb44b0b967a371fa7415f54f7f59fa07c92d30bfa69d65d100f24e265.dll.zst",
+            "zst_sha256": "52e7fdebb44b0b967a371fa7415f54f7f59fa07c92d30bfa69d65d100f24e265",
+            "zst_size_bytes": 1469307,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.611.1",
+          "dll_sha256": "d812c9d008865df3596d8fcb9785dbcf4ca221ab7d1371615333592a4b7bdf3b",
+          "dll_size_bytes": 4813856,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-10-31T18:50:48.2160000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/5aef2efbabf16f5237b950f849c63bf0ae255d57a410814b786e34dd2cc02376.dll.zst",
+            "zst_sha256": "5aef2efbabf16f5237b950f849c63bf0ae255d57a410814b786e34dd2cc02376",
+            "zst_size_bytes": 1179028,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.611.2",
+      "package_sha512": "Itumj1kRWIpiYf3AGS6Nylft0lvdO8crYQrUaKCm265R2xqc3q30tX9gFxNq94sH7xNXsdk77fTmkiB2vVfvtQ==",
+      "published_at": "2023-11-16T20:43:50.780Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.611.2",
+          "dll_sha256": "31f364f2b3aa1753e7ba9ff912d0721c8f424be5fa14503efddafbb30c635d3b",
+          "dll_size_bytes": 5908408,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-11-16T17:38:52.1780000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6137861958a40ef7761840f28a98154756b42eb2c1e8126b34a8f2b30c0f6d92.dll.zst",
+            "zst_sha256": "6137861958a40ef7761840f28a98154756b42eb2c1e8126b34a8f2b30c0f6d92",
+            "zst_size_bytes": 1465406,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.611.2",
+          "dll_sha256": "83df0486b775c7e9bb283b98601cdbcabbccef49e9703a06032c1e1b6ddfe582",
+          "dll_size_bytes": 4832800,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-11-16T17:38:01.7570000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/f9129a1eab18bd83893bc0b5ab5c3d68fd954d82b8bfa761474a4bb3a0060171.dll.zst",
+            "zst_sha256": "f9129a1eab18bd83893bc0b5ab5c3d68fd954d82b8bfa761474a4bb3a0060171",
+            "zst_size_bytes": 1180542,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.613.0",
+      "package_sha512": "lwNEW+sJgI8e3xMgYF2HD9+9dLcoIn3yycmaVgQAxlPziWC29U9F3Db8smCay0EtMDBzke4C31O8Y24sTInyLA==",
+      "published_at": "2024-03-07T18:07:29.743Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613",
+          "dll_sha256": "4e00c07c20dadefd4d537e592cc40654a0f0885f989e6c3b8d9f4142d0e44476",
+          "dll_size_bytes": 3341336,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-07T17:50:54.5400000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6184d6047328c0c1c2dae34efd2042cfb2247f814f7a5538998d826715832ab6.dll.zst",
+            "zst_sha256": "6184d6047328c0c1c2dae34efd2042cfb2247f814f7a5538998d826715832ab6",
+            "zst_size_bytes": 1049691,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613",
+          "dll_sha256": "3547c16c1e672426dbcea11a45bdfff30b71410b55f11df16de3cb1476826f73",
+          "dll_size_bytes": 2710448,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-07T17:50:06.5820000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e1330069507f7255b1e939dbd3fe424412c6b456ec13d3dc20bed82812601677.dll.zst",
+            "zst_sha256": "e1330069507f7255b1e939dbd3fe424412c6b456ec13d3dc20bed82812601677",
+            "zst_size_bytes": 918026,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.613.1",
+      "package_sha512": "N++omSTxCXDQL3y628g+jx4rz+Oxw+V+GGkzOHiGsMtXkNPPs4/VcmabqIA+R8HdX/X4SaLtabUVahwt0o/dkA==",
+      "published_at": "2024-03-19T17:09:57.617Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613.1",
+          "dll_sha256": "c32e8f3b83cefdecf0b8ef520276e8c9f1086c96a8fde34842c89c1c1359d8d9",
+          "dll_size_bytes": 3345456,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F9A7CF9FBE13BAC767F4781061332DA6E8B4E0EE",
+            "signed_at": "2024-03-19T16:17:35.0070000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/26c0fb90d0cf47da8c944696e9a3bf869e7fc1afd984d7d9c763ef9d1df9c1de.dll.zst",
+            "zst_sha256": "26c0fb90d0cf47da8c944696e9a3bf869e7fc1afd984d7d9c763ef9d1df9c1de",
+            "zst_size_bytes": 1052229,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613.1",
+          "dll_sha256": "f99a4d2a7b98d4770ca92db3a30ad93c6d7cb013bc81409dbbe85fa0a27c9f74",
+          "dll_size_bytes": 2713120,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-19T16:36:02.1510000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/98dd4894c88bce75dc7f897c7f8c21999404a447de61d37d9bf5512ca61a84c9.dll.zst",
+            "zst_sha256": "98dd4894c88bce75dc7f897c7f8c21999404a447de61d37d9bf5512ca61a84c9",
+            "zst_size_bytes": 919500,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.613.2",
+      "package_sha512": "C1kn/0Yi7fur0T2UitUnLq12mm3pM1wJspkIV/CyerYSKdxFHNhrmHYSGBOaco9uIGxlZMr8bAkaBASkmrZiDg==",
+      "published_at": "2024-03-29T23:12:30.780Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613.2",
+          "dll_sha256": "cea47ed3b581a3ea9ffc159db3175dc8602f0cbc07c6bff650d74012f1e22eec",
+          "dll_size_bytes": 3345952,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-29T22:36:10.0400000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/aa39d2b8372c032a5c42b29bce5c61f29253bd797404ac7e45fc869d3552b907.dll.zst",
+            "zst_sha256": "aa39d2b8372c032a5c42b29bce5c61f29253bd797404ac7e45fc869d3552b907",
+            "zst_size_bytes": 1051603,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613.2",
+          "dll_sha256": "8468428833a4395c578c491e4fb45d89341d977266b5e1075ea994bb6c0db8f4",
+          "dll_size_bytes": 2713632,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-29T22:36:19.4840000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2b60a84e8508937d1f8ae468280d27cb50b92f9c8801ffb4b8ad880a2ecd15a6.dll.zst",
+            "zst_sha256": "2b60a84e8508937d1f8ae468280d27cb50b92f9c8801ffb4b8ad880a2ecd15a6",
+            "zst_size_bytes": 918923,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.613.3",
+      "package_sha512": "OTLVTIXCSpOihw0f5smXTxSgtWQrt6m/BbcHOWocAv+/Rb/frX+dZgwWEAa+jvw0lsh+0yakPslxK0mlQbeq/w==",
+      "published_at": "2024-04-30T23:59:59.290Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613.3",
+          "dll_sha256": "25054b020e107b19bb8cceaa7d07f9f727e3c10d4b53ff992ff4e9591ba471f2",
+          "dll_size_bytes": 3349024,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-04-30T23:21:41.4110000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ce95055f4767a798efc262d2605693b45acc10e9002d9ad95cda02c611b6b390.dll.zst",
+            "zst_sha256": "ce95055f4767a798efc262d2605693b45acc10e9002d9ad95cda02c611b6b390",
+            "zst_size_bytes": 1052036,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.613.3",
+          "dll_sha256": "e95afd00268b5cce68b131cfaf0782f6df82855a3eb76bfe8f53c9b7b2886921",
+          "dll_size_bytes": 2716080,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-04-30T23:21:02.9950000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9838fc06f52967da4068fb942dd4cd30e673897bc808f05e3bc8e2dcc411dfc7.dll.zst",
+            "zst_sha256": "9838fc06f52967da4068fb942dd4cd30e673897bc808f05e3bc8e2dcc411dfc7",
+            "zst_size_bytes": 919809,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.614.0",
+      "package_sha512": "qreN46nbNbGxGywkmNLdGeZqcc3NHLQm8EadVR/NaRf02Ac0vottDAsg9/auS1uZNrCwrtsinqSSZZMrNq7hHg==",
+      "published_at": "2024-05-14T21:19:24.580Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.614",
+          "dll_sha256": "5528998b9b894f518c734fe22eff9f173ddba5f3110709050f0026b205eda3d0",
+          "dll_size_bytes": 3334176,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-13T23:18:04.2370000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6db902514b1a75e1910e8be18fb3143b710bf79cbc7c4d254669b8c87802ae98.dll.zst",
+            "zst_sha256": "6db902514b1a75e1910e8be18fb3143b710bf79cbc7c4d254669b8c87802ae98",
+            "zst_size_bytes": 1044194,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.614",
+          "dll_sha256": "c66947ce3246755673cf7aaeda06cc0dd4674294f827bb6d85e2457ad5438795",
+          "dll_size_bytes": 2677680,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-13T23:11:54.1340000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b0c1bcb82936f814f88a72cb3b0aa2e3e6efcfa6715d42bdcd294aa57a66de67.dll.zst",
+            "zst_sha256": "b0c1bcb82936f814f88a72cb3b0aa2e3e6efcfa6715d42bdcd294aa57a66de67",
+            "zst_size_bytes": 918597,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.614.1",
+      "package_sha512": "BbqlUjFoSrEKPpBcm4XOePBK3pNg996EoGu647/DEjvMyqVjZHol4VHMdZEGvBnjd0DveFY1ktKOOnI/10S0Lw==",
+      "published_at": "2024-07-17T06:01:14.303Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.614.1",
+          "dll_sha256": "8a23d826b25b4329522ff451cb52b7f2b34d7f2913cfeb878371ce8bd765fe2d",
+          "dll_size_bytes": 3328032,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-17T04:32:21.7750000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/3a719543e20d3f3b6976df8c1fe4897fd79c5c6f1f8738c86611ea8f48a3faf9.dll.zst",
+            "zst_sha256": "3a719543e20d3f3b6976df8c1fe4897fd79c5c6f1f8738c86611ea8f48a3faf9",
+            "zst_size_bytes": 1041909,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.614.1",
+          "dll_sha256": "b90dfac2e24806777ec724d0fc13cc76e9f517e5f28cd2773e06ef81c52fefa5",
+          "dll_size_bytes": 2676152,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-17T04:31:29.0480000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6535bca484dd82de17884963668ff750648b05c48116e76debcc484b291ddee1.dll.zst",
+            "zst_sha256": "6535bca484dd82de17884963668ff750648b05c48116e76debcc484b291ddee1",
+            "zst_size_bytes": 918154,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.615.0",
+      "package_sha512": "fPA96xXcr49+dhkTe3oqxXiBRgEu/UcrFl41RdnZiFH9cWnMOEszX0XkKT0ttjVemYqeHTnPk/iGOVR9L8G66w==",
+      "published_at": "2025-01-30T01:32:40.840Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.615",
+          "dll_sha256": "bcb57b06d4475f1716fc0788be1cbe1255d12ba2b687cb9f332a93e649d3dbb9",
+          "dll_size_bytes": 3351584,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-01-24T01:56:18.1700000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b0e7c948d9f079b59326d4485f213a2391c7ea664b15ca2e7afe292439b67832.dll.zst",
+            "zst_sha256": "b0e7c948d9f079b59326d4485f213a2391c7ea664b15ca2e7afe292439b67832",
+            "zst_size_bytes": 1051395,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.615",
+          "dll_sha256": "277e8c790e071567167d780edced69237e621d670f0ee7945fa7a1a1bc805a1b",
+          "dll_size_bytes": 2715704,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-01-24T01:56:56.1660000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/40d1dd180e0ec443f4fe477e250497b9ff32b73c67e4c557c4b3379af78fa56e.dll.zst",
+            "zst_sha256": "40d1dd180e0ec443f4fe477e250497b9ff32b73c67e4c557c4b3379af78fa56e",
+            "zst_size_bytes": 932614,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.615.1",
+      "package_sha512": "zuMlQOf/t9KRZZdOLa+bwGf/Il+iAfWKvUvYQaPWpbapDpjd3twnslYWiSe/s7Saenlj/Y4mzxNqJdv/sn4/JQ==",
+      "published_at": "2025-02-13T21:01:00.463Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.615.1",
+          "dll_sha256": "07d286c306f8117321422affd9e6388c12d0fb4be1c7fc689d9e899324feeb24",
+          "dll_size_bytes": 3351064,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-13T18:23:03.0480000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6bfb280092ccc3c32169b9c9a31ef74784f3ead354d3d36d3883569364a29998.dll.zst",
+            "zst_sha256": "6bfb280092ccc3c32169b9c9a31ef74784f3ead354d3d36d3883569364a29998",
+            "zst_size_bytes": 1051820,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.615.1",
+          "dll_sha256": "2722bad6c4080f4ed713be8c52404a58014f08bd49ef7dcbc1d19b8c19fadad8",
+          "dll_size_bytes": 2713144,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-13T18:24:19.7300000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9ada86561b7eb632bb621c0a4d06bea6128794409f8a19882b5a01b2fc2d0ee1.dll.zst",
+            "zst_sha256": "9ada86561b7eb632bb621c0a4d06bea6128794409f8a19882b5a01b2fc2d0ee1",
+            "zst_size_bytes": 931323,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.616.0",
+      "package_sha512": "hiBbw25hLHcShBfbtF243KhulaakiZgic7N2Tl9sMFCserrFscconKD+/6HiT7ePOVgJ9+MvjWwQdyEqbW13iQ==",
+      "published_at": "2025-05-28T16:36:48.507Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.616",
+          "dll_sha256": "83820d5eed8a35ad4ba1169d6b66545d3638225fc3f640702432360a38143bc5",
+          "dll_size_bytes": 4533320,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
+            "signed_at": "2025-05-23T00:23:19.4580000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/36c1cbf337519e012a0c0cedd24b67f1b0eb63c4e8444cb09a757bc8b2f26276.dll.zst",
+            "zst_sha256": "36c1cbf337519e012a0c0cedd24b67f1b0eb63c4e8444cb09a757bc8b2f26276",
+            "zst_size_bytes": 1628989,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.616",
+          "dll_sha256": "1a5780f0e8a6ab82453b2dea1042f4473ca1724979777ca7f32beb1d4f3319b5",
+          "dll_size_bytes": 3715144,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
+            "signed_at": "2025-05-23T00:23:45.5130000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/586c952cf3fc26fd1b922ea05e189b132adf1a19fc828a5b3e0c18d8aea8794d.dll.zst",
+            "zst_sha256": "586c952cf3fc26fd1b922ea05e189b132adf1a19fc828a5b3e0c18d8aea8794d",
+            "zst_size_bytes": 1426136,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.616.1",
+      "package_sha512": "/I3ypiVUCkU7QdVvOA8H1eqMEmEWm5sOXHhXXx4EF9rZRTRZi1FwH1kCYAcNSK1BTTAPhZ8yV/NuPOElZILHdA==",
+      "published_at": "2025-06-11T22:57:34.983Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.616.1",
+          "dll_sha256": "9e47f236fd3244ad88443a61f7d549eced052b42cb9bd78bbeb35a5918c25bb9",
+          "dll_size_bytes": 4533296,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
+            "signed_at": "2025-06-11T22:30:05.9200000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/dd5a781d39c87ecf1eb91420559a5bcc78d5706527148c76f7cd96b09f9bd7f8.dll.zst",
+            "zst_sha256": "dd5a781d39c87ecf1eb91420559a5bcc78d5706527148c76f7cd96b09f9bd7f8",
+            "zst_size_bytes": 1629569,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.616.1",
+          "dll_sha256": "b5569f2bac879003b3ce5377265e3765d270aa1da929037a8426850dbef4b360",
+          "dll_size_bytes": 3715120,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
+            "signed_at": "2025-06-11T22:30:13.1280000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7a313c5e95faeda464342bf93f2f5c87a90267b560f4c12f6840ebf3ec2bd69d.dll.zst",
+            "zst_sha256": "7a313c5e95faeda464342bf93f2f5c87a90267b560f4c12f6840ebf3ec2bd69d",
+            "zst_size_bytes": 1426148,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.618.1",
+      "package_sha512": "F+JaGE+IeL4FD7wUIPkUOXTRDDBd3OijLz7ciOkih5bfNRcBiwnhCpr6c+k/XS6vpLy4XK0tL+WQiROEYQNKtQ==",
+      "published_at": "2025-09-25T00:40:25.393Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.1",
+          "dll_sha256": "625bd40005b1c3708695d5256ecf230d278e6b8edba5a88af70f3d91324f3052",
+          "dll_size_bytes": 4725304,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-09-23T21:37:53.7770000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/26af1ab8866edf38be66ac98bc4081e3acc0cb6a45fd48e629ed0fa445ad609a.dll.zst",
+            "zst_sha256": "26af1ab8866edf38be66ac98bc4081e3acc0cb6a45fd48e629ed0fa445ad609a",
+            "zst_size_bytes": 1667951,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.1",
+          "dll_sha256": "25769a9847ca8d173c197b58126a554773dbbce9e16e797e82b132bfe748aee2",
+          "dll_size_bytes": 3887176,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2025-09-23T21:35:44.0280000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a72e814617a49753fb6481ef0b8f12ce9ad6d35d06dcca00e4293923d7fb9a52.dll.zst",
+            "zst_sha256": "a72e814617a49753fb6481ef0b8f12ce9ad6d35d06dcca00e4293923d7fb9a52",
+            "zst_size_bytes": 1476630,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.618.2",
+      "package_sha512": "FvVoMEg8Ppc7eA26yH1NUt29FOP9+ujGJB18CidauPezG1ZjsO4LHE6tiHYUYYms9JZGSGiS8g/YyBSa+nl+ZQ==",
+      "published_at": "2025-10-15T18:10:24.103Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.2",
+          "dll_sha256": "14f8c56ccde0a9bf82474ff20733bbc2c4bdee75dbc34abb6f2544637dfc1875",
+          "dll_size_bytes": 4821560,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-10-15T17:19:03.1650000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bf17fca23e9a1c2efc40c930a4eed6ef2b67a79380bf065070f15a78668fdd2e.dll.zst",
+            "zst_sha256": "bf17fca23e9a1c2efc40c930a4eed6ef2b67a79380bf065070f15a78668fdd2e",
+            "zst_size_bytes": 1701825,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.2",
+          "dll_sha256": "18f27c4d138ca5f6f0aee67d807339a58fb7f43922b12ead43c75f30d1f2096e",
+          "dll_size_bytes": 3968568,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-10-15T17:18:32.0330000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/0611558483141840168f5b8569c802681ffc7358b07ce65ce4531f168c1f7d18.dll.zst",
+            "zst_sha256": "0611558483141840168f5b8569c802681ffc7358b07ce65ce4531f168c1f7d18",
+            "zst_size_bytes": 1502738,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.618.3",
+      "package_sha512": "Dnb+jU51bf3ahuRY8PBUJXQTRMh9fau0Pt200R7Fwqsny1N30M9JBBSilhFQAAvXxUbvJ0ivcYMta4AL/od4sQ==",
+      "published_at": "2025-11-10T21:28:40.623Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.3",
+          "dll_sha256": "67ed09db4cdf4aa6e139d542209f53b7728d1cc282304c30859fb27be42c4543",
+          "dll_size_bytes": 4821536,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-11-10T20:30:59.7800000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8074b5c1f6cd9797ef1606870bdc8f6bf467c00bb303189c420733e0e1517737.dll.zst",
+            "zst_sha256": "8074b5c1f6cd9797ef1606870bdc8f6bf467c00bb303189c420733e0e1517737",
+            "zst_size_bytes": 1701231,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.3",
+          "dll_sha256": "e1df0a34a60fa6b07fff7682066d84eda417c6ff101420d42fd9ead64fa2115c",
+          "dll_size_bytes": 3968544,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-11-10T20:32:47.4070000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/acf6bafdf8b986c052935cf1988957526f6c8c79712c78b88000ddfe1ff41281.dll.zst",
+            "zst_sha256": "acf6bafdf8b986c052935cf1988957526f6c8c79712c78b88000ddfe1ff41281",
+            "zst_size_bytes": 1502744,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.618.4",
+      "package_sha512": "TcLIalakDKHpDlsHuIks0uSuWHYxv41vThtTnFjVEz1L/KhX9LrzkDsA45GEP2B8nYKoMFnOdEoTiW4Rk/4+pA==",
+      "published_at": "2025-11-26T01:18:44.663Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.4",
+          "dll_sha256": "daf509e6ca1bf90b8c798537114c8bdb32d5feb06d2236725291fde40f72284b",
+          "dll_size_bytes": 4821536,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-11-25T00:19:45.9430000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/49c51a38b98daaa126767343e84002c2ff16376fa7aad744c682263607dcf839.dll.zst",
+            "zst_sha256": "49c51a38b98daaa126767343e84002c2ff16376fa7aad744c682263607dcf839",
+            "zst_size_bytes": 1701940,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.4",
+          "dll_sha256": "1c8ef1c7ec711c28f3b72ad83439ed5f096ec60b3ee21856359fcb02ac84286e",
+          "dll_size_bytes": 3967520,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-11-25T00:18:47.0810000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/700d9f64cd65a8e3cce8404b370194fedc5eb12d302bb9f00efbacc394446707.dll.zst",
+            "zst_sha256": "700d9f64cd65a8e3cce8404b370194fedc5eb12d302bb9f00efbacc394446707",
+            "zst_size_bytes": 1503012,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.618.5",
+      "package_sha512": "rky7E0W27Ta+6n6W39uXi70BqYSvmyHivG2dvSf2V28GHVGJ2DlSQItjTLxvkIuzemRgC/ijSBisxoWoBwwIPw==",
+      "published_at": "2025-12-05T19:26:25.300Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.5",
+          "dll_sha256": "560f9574372a52ab66ad95ee1222f1eb4c9f6161d8f6b7b025d89f684b07246c",
+          "dll_size_bytes": 4821064,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2025-12-05T18:41:43.3920000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/dfdd47ec4b75ecec502d8847e1faeb04ee84173d456a9dd9ccb723a9a8d25233.dll.zst",
+            "zst_sha256": "dfdd47ec4b75ecec502d8847e1faeb04ee84173d456a9dd9ccb723a9a8d25233",
+            "zst_size_bytes": 1701667,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.618.5",
+          "dll_sha256": "dd8f285af122f161d53a24c640e237a50b7297d978ab3361c0dd18a1f263851f",
+          "dll_size_bytes": 3967520,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2025-12-05T18:41:14.4930000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/895542c90f7e51fee73e817a0e1b756f7aacbb659ba0840ce0f9a2f303d62571.dll.zst",
+            "zst_sha256": "895542c90f7e51fee73e817a0e1b756f7aacbb659ba0840ce0f9a2f303d62571",
+            "zst_size_bytes": 1503726,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.619.0",
+      "package_sha512": "qIvpi7BDUoxmAY6WCRWpVWfpnb3Qao/YgR1YwDAmMPj6qIH941+afqrEN8Qrk/EwABBU0rbldIj1nybw64MTJQ==",
+      "published_at": "2026-02-24T15:29:04.930Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619",
+          "dll_sha256": "1cabfee6593688772368b785f2755dcffa1e5b68280764ad1501d80d859c92db",
+          "dll_size_bytes": 5016096,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-02-24T01:45:25.4540000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fa3e6c274d89a5d6507a4d25d0c658e1d7b5f8ec3a38b24f1fc77828300cb0b3.dll.zst",
+            "zst_sha256": "fa3e6c274d89a5d6507a4d25d0c658e1d7b5f8ec3a38b24f1fc77828300cb0b3",
+            "zst_size_bytes": 1726785,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619",
+          "dll_sha256": "8ed54e4001122ba46ac2c9c5d0d2cbb498a320693749f212f35053f7488297e3",
+          "dll_size_bytes": 4125216,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-02-24T01:43:46.0560000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/703ad2472e1d27e938ce55dde402e9c8a1768b8637101bf24082f178eb251fa7.dll.zst",
+            "zst_sha256": "703ad2472e1d27e938ce55dde402e9c8a1768b8637101bf24082f178eb251fa7",
+            "zst_size_bytes": 1531443,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.619.1",
+      "package_sha512": "/W7VogDBWJ2RyFs1uwAYEXaVrCw4WOjdT7Mkfky6lLw8CTJcy/JGqsmjd1Twv5+2n5QZncmirULVNK1uLTZ3cA==",
+      "published_at": "2026-03-06T16:57:46.910Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.1",
+          "dll_sha256": "021b47ff5a0c33f03d84c51b1ce730c717798d3190658a27da92c637a1fe93b5",
+          "dll_size_bytes": 5015624,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-03-06T00:46:49.0320000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9c6d52fc8a66cf9675fca62e77bd688955f2bab208c909e1184f04c37d2bec0c.dll.zst",
+            "zst_sha256": "9c6d52fc8a66cf9675fca62e77bd688955f2bab208c909e1184f04c37d2bec0c",
+            "zst_size_bytes": 1727282,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.1",
+          "dll_sha256": "27a6e9b4850eb122710690d5c7493fd144d274aa7860708fe33d2230b7c19638",
+          "dll_size_bytes": 4125728,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-03-06T00:40:10.7840000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2550ed51eb0acdaacc56918c47104f330839db58a05c2ddcad3d5a4ba1b72411.dll.zst",
+            "zst_sha256": "2550ed51eb0acdaacc56918c47104f330839db58a05c2ddcad3d5a4ba1b72411",
+            "zst_size_bytes": 1532340,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.619.2",
+      "package_sha512": "5jc3+FkVVSqHld1Ejcz4e/gplt0DiRuzTsC31sRnwg8CW2xI05taX4sHL63O/GgERZBc4itBCCX6OrJBB3lB8A==",
+      "published_at": "2026-04-16T16:31:30.493Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.2",
+          "dll_sha256": "90770bc8028ebb9f78051f903343b0aabc12fe7a2b886e007278b5312ba6f101",
+          "dll_size_bytes": 5019680,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-04-16T04:13:36.1220000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/45974cb931126d1c8a85180e57e2c32e4f6b96431837dc0b664923670b4ebb28.dll.zst",
+            "zst_sha256": "45974cb931126d1c8a85180e57e2c32e4f6b96431837dc0b664923670b4ebb28",
+            "zst_size_bytes": 1730530,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.2",
+          "dll_sha256": "539f518cd99e92eb964c4f5ec885ff46a4e6acd757834727d6fc61b2559542e8",
+          "dll_size_bytes": 4131360,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-04-16T04:07:25.5820000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b1e308f2b390d28200059bfb1e46413b6f8dd4d82f64a455890d0ba461d3fdc1.dll.zst",
+            "zst_sha256": "b1e308f2b390d28200059bfb1e46413b6f8dd4d82f64a455890d0ba461d3fdc1",
+            "zst_size_bytes": 1533801,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.619.3",
+      "package_sha512": "jYUl6VNp42QSB2K5HR9tN3C6t4E1z/PdlYMJyLuaGb3xQVcNnZ5Qo29t5sxue+MKfjnPCveKxB6jE0tB3bBoPg==",
+      "published_at": "2026-05-19T14:10:12.393Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.3",
+          "dll_sha256": "4bfb82f456269e3ef45cca0f612ddbd3650c99160d285dae1febf7883468c64c",
+          "dll_size_bytes": 5024056,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-19T12:23:53.5070000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/f9bef9595c27b0d43bb06e1863f7b557fea55b0bfbe56b334c0dd3d5d8b48d97.dll.zst",
+            "zst_sha256": "f9bef9595c27b0d43bb06e1863f7b557fea55b0bfbe56b334c0dd3d5d8b48d97",
+            "zst_size_bytes": 1733568,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.3",
+          "dll_sha256": "b17cfd7ae6cd157307e9c3f16a4b0d902e2b9e486ad653948e20e50f28324b84",
+          "dll_size_bytes": 4134200,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-19T12:29:55.8350000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/eb0fd474e66f596d97909f33b39f88ba971f2298510b99d8e0bd29cf4450cddb.dll.zst",
+            "zst_sha256": "eb0fd474e66f596d97909f33b39f88ba971f2298510b99d8e0bd29cf4450cddb",
+            "zst_size_bytes": 1536371,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.619.4",
+      "package_sha512": "aidTgQJ+11hxTu3xzK7qRGsdmv7dwfa2u8PIWTnvn/0Ct/rngM1Q2mNbZrCfX86ZU1eIVRzWTjZjueWf5vfZ3g==",
+      "published_at": "2026-07-03T05:16:40.500Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.4",
+          "dll_sha256": "681c72042ed1691a326c2aadff47a1957ed998f649158312c155c1b2ab71f44c",
+          "dll_size_bytes": 5025592,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-07-02T23:41:28.3340000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e039c91964b95aa9007ec2ad4ad763e459b53c2024f3c0b41f92520de457852c.dll.zst",
+            "zst_sha256": "e039c91964b95aa9007ec2ad4ad763e459b53c2024f3c0b41f92520de457852c",
+            "zst_size_bytes": 1733534,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.619.4",
+          "dll_sha256": "56d1eef1def2b667af03f015409fddbbef01d58b04102ac63832f37c251532c1",
+          "dll_size_bytes": 4135776,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-07-02T23:41:25.6020000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/22d863182083407f5f0de18fb148c399bddd71e90328267bd8bb13346d9b5c95.dll.zst",
+            "zst_sha256": "22d863182083407f5f0de18fb148c399bddd71e90328267bd8bb13346d9b5c95",
+            "zst_size_bytes": 1536862,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.0.0",
+      "package_sha512": "NPJIQtUJzN3yyKBulKL2fAdG7YrLbZCriUU+1OybEjlwzx6AI3WvJ+bVvjyCIRgTAJ+PS4PyM85BmhRnuMEIRg==",
+      "published_at": "2022-03-14T16:56:26.873Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.0.2203.901",
+          "dll_sha256": "9bc09a0a76183c9470d86694a95224c16dfd94c637360ef948f7db291a6ee523",
+          "dll_size_bytes": 196488,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2021-09-02T18:32:59Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/332dcf68f737c4440af899dcd69ea135fa80d80e5862fd7da72a58ef170ee9e8.dll.zst",
+            "zst_sha256": "332dcf68f737c4440af899dcd69ea135fa80d80e5862fd7da72a58ef170ee9e8",
+            "zst_size_bytes": 104088,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.0.2",
+      "package_sha512": "QqjSGhvpmB1fyqoqqQ0eS/4glp7nlZgD9qy3awhG2R1JrYnOusBpRjcp0BNTJQjG++Qa86HpkYesE+hJ10fdfg==",
+      "published_at": "2022-05-24T18:06:11.127Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.0.2205.2402",
+          "dll_sha256": "30706ddcabc0f5f15f70fa41c153da6923d18551c8e560c3593dce63a017fc2b",
+          "dll_size_bytes": 198032,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2021-09-02T18:32:59Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/5f9f50ab6c5cae11d07840a295c1278a07c9f30c5bf9529655d1d3bb4883fa36.dll.zst",
+            "zst_sha256": "5f9f50ab6c5cae11d07840a295c1278a07c9f30c5bf9529655d1d3bb4883fa36",
+            "zst_size_bytes": 105503,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.1.0",
+      "package_sha512": "LCz2SGIg+Z50R8GkQGzqb8rqae3M95DfaIes/emmhOECVHAWra3RyiPxf48Cv705CViS7WP7o+gGv6RMqf4P5g==",
+      "published_at": "2022-11-07T18:43:42.893Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.1.2211.304",
+          "dll_sha256": "25979f0b9e1ed1d05d1021104692f9967f3540098117db1fb74485b1fbbead94",
+          "dll_size_bytes": 198536,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F372C27F6E052A6BE8BAB3112B465C692196CD6F",
+            "signed_at": "2022-05-12T20:45:59Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fe75d4b90db29451045b7dbef9d134e78e7eefeb5fd339b5fd2424af1161b523.dll.zst",
+            "zst_sha256": "fe75d4b90db29451045b7dbef9d134e78e7eefeb5fd339b5fd2424af1161b523",
+            "zst_size_bytes": 105679,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.1.1",
+      "package_sha512": "MEi0HceAyHgCDLa0PG3tiA2pMS0yNoJbPMaE5/DlXIaeyL4EX/ND43KxmUa7wQ0M4EzS+JTQ6E0r4vlY/Maofg==",
+      "published_at": "2022-12-07T16:26:19.687Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.1.2212.610",
+          "dll_sha256": "c7e9013c280e399181cde12a42339dfc24ec4fce623f6b114120c31f43a31b78",
+          "dll_size_bytes": 198544,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-05-12T20:46:01Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8d1b5f520e25c1f0d490723622aa1a28c709d0ba645a5746949353f47eb3ddbe.dll.zst",
+            "zst_sha256": "8d1b5f520e25c1f0d490723622aa1a28c709d0ba645a5746949353f47eb3ddbe",
+            "zst_size_bytes": 105705,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.2.0",
+      "package_sha512": "W+YhmIjInF9ZBwnRUos+aFTqvXtzOvXI9mWqnX6Yf6O6w0RyNi+EXrkCuI0tbor7vOrRXoktcmeIYaFLC8E8QQ==",
+      "published_at": "2023-04-18T20:57:28.067Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.2.2304.1701",
+          "dll_sha256": "cc61dacb8b5de98db8563d13d3d76585d7e87b3e0840e2e9212e89692d960ae3",
+          "dll_size_bytes": 198536,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F372C27F6E052A6BE8BAB3112B465C692196CD6F",
+            "signed_at": "2022-05-12T20:45:59Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/513a88cb1e946606c8164b2c0858e94d0391fc0adad7edaf8fff50100d3b6ea7.dll.zst",
+            "zst_sha256": "513a88cb1e946606c8164b2c0858e94d0391fc0adad7edaf8fff50100d3b6ea7",
+            "zst_size_bytes": 105732,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.2.1",
+      "package_sha512": "FW9eIk6MtJBpJvSkZlZ+av8fBymdcrFzboOUkn4v2m+h5mv9slyqiCcLCCaENtv9WEpBv7z/wiI7qJiORV+HHw==",
+      "published_at": "2023-05-16T16:35:41.353Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.2.2305.1502",
+          "dll_sha256": "1347296498710391508ef8c605298c73c1610c6610576819192959193d2bf036",
+          "dll_size_bytes": 198592,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-03-16T18:43:28Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d85354fe3763ca448a8319f28b3709f22f74cfedd7d36fd2707f2e9a6fbfeec3.dll.zst",
+            "zst_sha256": "d85354fe3763ca448a8319f28b3709f22f74cfedd7d36fd2707f2e9a6fbfeec3",
+            "zst_size_bytes": 105778,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.2.2",
+      "package_sha512": "8k9oHt8MXgR1c8aMqFq2Lg/++vh4Z9RSMdd56byOlSWJG1YxTMMOWOrvIBMjNfAR8yq6ImVNLnyvIzOK6ynGzg==",
+      "published_at": "2023-11-15T21:02:48.787Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.2.2311.1405",
+          "dll_sha256": "8a7f9809b4630d22796445ab9aa44181458d0f73f03705b1dfafd79410e07334",
+          "dll_size_bytes": 206880,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-03-16T18:43:29Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2ea462ce761c1b60f8589da304469437516891d18125aad3b25adef32b971205.dll.zst",
+            "zst_sha256": "2ea462ce761c1b60f8589da304469437516891d18125aad3b25adef32b971205",
+            "zst_size_bytes": 107721,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.2.3",
+      "package_sha512": "fUV/MU2Kthgy1g3IprG396t2qLqJzfWi+AzNNOxqK3kgWNHhcQKEYlxoA0MdWiILcv37hwRcvT0pOITYfWsoRg==",
+      "published_at": "2024-07-15T20:34:32.093Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.2.2407.1501",
+          "dll_sha256": "882d95c3012aa4e49bee48fe7e2305dbf3aa06df001e431a6606aec756feff6c",
+          "dll_size_bytes": 206880,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2023-11-16T19:09:00Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/3841ebae34b2fb9c308f4b81a20848cb681c1fa4cc7418891284a6f8e32f78b1.dll.zst",
+            "zst_sha256": "3841ebae34b2fb9c308f4b81a20848cb681c1fa4cc7418891284a6f8e32f78b1",
+            "zst_size_bytes": 107736,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.2.4",
+      "package_sha512": "C66ZKTP/bToE4a8oeslrxFFqqvfzbSEkmxq4FHzNWqkT9xUbNsYo3vWnM8JLfTWQBXToRSQ6TLTuZfcQ4Grp2g==",
+      "published_at": "2025-04-09T15:37:02.900Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.2.2504.401",
+          "dll_sha256": "66c5ffc2f525fb1ce33f9fec4eceda122545201a14c5397c42cd91fc956c7c6a",
+          "dll_size_bytes": 206888,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
+            "signed_at": "2024-09-12T20:11:13Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c971a882cdb1ec5feedc1c11f4f1a4259646f019be0335501ec9b7f21cd8f7f2.dll.zst",
+            "zst_sha256": "c971a882cdb1ec5feedc1c11f4f1a4259646f019be0335501ec9b7f21cd8f7f2",
+            "zst_size_bytes": 107740,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.3.0",
+      "package_sha512": "WJqDGU6eBWVFI7nKEEAZgtI126qZHIU1gH1bn4Udh3KBQX15oCEPd7RsD2URT4BfShLwS3vbPeigD+IMeN73kQ==",
+      "published_at": "2025-06-27T19:08:46.157Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.3.2506.2501",
+          "dll_sha256": "cae65787f61514bec6f012f44546e68b19e39d8854a9ab52af813370d44b272a",
+          "dll_size_bytes": 206904,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2024-09-12T20:11:14Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/09b835e75de664c28972371dd319e508e474a89e8bf0c25649f3e6aeb8272c0e.dll.zst",
+            "zst_sha256": "09b835e75de664c28972371dd319e508e474a89e8bf0c25649f3e6aeb8272c0e",
+            "zst_size_bytes": 107897,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2207.7",
+      "package_sha512": "2UslmZuuAx2q529MIVIzE5f2YvlHNkm/9Vf6b7E/fl6S+p2jebHYcqzV7zc4gjO+610Y8lHhX1UvvCIrLjCjFQ==",
+      "published_at": "2022-12-05T23:52:33.857Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2207.7",
+          "dll_sha256": "57cc088a6964aad1bcc53a67b909987c87b2dbdc0991cd83371861026b00ec31",
+          "dll_size_bytes": 17153472,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-05T22:59:07.8420000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/048db7dfee0473e57a591f1fdfaa1de439f1e32d968e3958ce9b2130fe6f3b1b.dll.zst",
+            "zst_sha256": "048db7dfee0473e57a591f1fdfaa1de439f1e32d968e3958ce9b2130fe6f3b1b",
+            "zst_size_bytes": 6447387,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2207.20",
+          "dll_sha256": "943b74249b5c0aee4665cceb10329b03c4f672b96492341fa3fe7e210e3e0be1",
+          "dll_size_bytes": 1360832,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-05T22:59:06.8390000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fcef0864a3177e37c071acc5e3978e3f5ad4295163a00059ebde579b1845c443.dll.zst",
+            "zst_sha256": "fcef0864a3177e37c071acc5e3978e3f5ad4295163a00059ebde579b1845c443",
+            "zst_size_bytes": 569980,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2207.8",
+      "package_sha512": "a+NoU5G2/veSZ9AC/wtEHh77RL1VapvLaflUSpwyg3OIUNDIWWa9Nx+3UkcQiD8muwK+MgggcHJv21m/ivIvVQ==",
+      "published_at": "2022-12-07T04:13:22.550Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2207.8",
+          "dll_sha256": "dc5dd0f20dfe64c2f07f7ecfe026a4b8562fc84c08b3a6b400133ff6d6ff240a",
+          "dll_size_bytes": 17153440,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-07T00:17:38.0350000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1a2928b5bd8287ca0bd453beff1f6aba1c72040d49eb146cd014ada2462d09c7.dll.zst",
+            "zst_sha256": "1a2928b5bd8287ca0bd453beff1f6aba1c72040d49eb146cd014ada2462d09c7",
+            "zst_size_bytes": 6446991,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2207.23",
+          "dll_sha256": "10e22b0817ce0718da69d094035e9bd6ed5e9a0667096f7a26f7c3aacabb9477",
+          "dll_size_bytes": 1360800,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-07T00:17:34.9630000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/cc51b68774e1aa5938ed7bec6b091a28c17c900bb3bf32c77efba65fac5f7a6b.dll.zst",
+            "zst_sha256": "cc51b68774e1aa5938ed7bec6b091a28c17c900bb3bf32c77efba65fac5f7a6b",
+            "zst_size_bytes": 569941,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2207.8",
+          "dll_sha256": "a76d74d76d9d2bdbac95a341ca42c9d9c3d6f0c6c1687265ded0a820b00fbebc",
+          "dll_size_bytes": 12133792,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-07T00:17:27.0709999Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/f003baaaad85661c9aeb5e529af8185a7f4301332a12b42c036ca6184bedf850.dll.zst",
+            "zst_sha256": "f003baaaad85661c9aeb5e529af8185a7f4301332a12b42c036ca6184bedf850",
+            "zst_size_bytes": 5272273,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2207.23",
+          "dll_sha256": "e177014398837603bfaaf47263a980c7c0bca4f1cdcb10717f1cb1a6292ab546",
+          "dll_size_bytes": 981408,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-07T00:17:27.3730000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/dfa35ce79f5e4b3b5abd67f4bafc50345bd9c6d3593ec77518a8735128bff6a2.dll.zst",
+            "zst_sha256": "dfa35ce79f5e4b3b5abd67f4bafc50345bd9c6d3593ec77518a8735128bff6a2",
+            "zst_size_bytes": 475622,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2207.26",
+      "package_sha512": "VVRCstXByABR5wMA1i3T/FMBQzFQVlKdGxkVO/KFyd9iSX3CarZRyjUM/z/n3OXtTQwLGsNrRWyZSeA54EvZZQ==",
+      "published_at": "2022-12-10T00:29:28.520Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2207.8",
+          "dll_sha256": "01eba52ffeb5730ba39bbec7d45d25c4db73484687783b7ac8ff34ae99c08fe7",
+          "dll_size_bytes": 17153472,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-09T22:40:35.3000000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/de75d00feacb46ff9ef0cba2e03786be9f1625caedfe4d6c0c73a51dab4385a1.dll.zst",
+            "zst_sha256": "de75d00feacb46ff9ef0cba2e03786be9f1625caedfe4d6c0c73a51dab4385a1",
+            "zst_size_bytes": 6447755,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2207.26",
+          "dll_sha256": "bdfb50ddd1488fabb2badf54250a73a77281c9cdc3d8e1daa7c8abc2ea561852",
+          "dll_size_bytes": 1360800,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-09T22:40:26.5200000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c7e82d564e9a420e4e351cd635859d677dfff5ecea0d328704c6d44cee78c2f4.dll.zst",
+            "zst_sha256": "c7e82d564e9a420e4e351cd635859d677dfff5ecea0d328704c6d44cee78c2f4",
+            "zst_size_bytes": 569963,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2207.8",
+          "dll_sha256": "e8bc18b2137fc24be008f50e53ce0212c3b93528902af6d303b7748be96f23cb",
+          "dll_size_bytes": 12133792,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-09T22:37:46.5830000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/f7d95697f11757b65380217a4bb485dd887e9df4d85b7a7a02af8278e17de096.dll.zst",
+            "zst_sha256": "f7d95697f11757b65380217a4bb485dd887e9df4d85b7a7a02af8278e17de096",
+            "zst_size_bytes": 5272274,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2207.26",
+          "dll_sha256": "b1d4dfc10b84b5922fc28714a66d57e9997b6d4d762d69b7212ba435d342c8af",
+          "dll_size_bytes": 981408,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-09T22:37:46.5830000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/133ea01c9a9760e83f2a11d65012e90d3c928e9aabd405de4f5269c30bac9d25.dll.zst",
+            "zst_sha256": "133ea01c9a9760e83f2a11d65012e90d3c928e9aabd405de4f5269c30bac9d25",
+            "zst_size_bytes": 475613,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2212.14",
+      "package_sha512": "xB/91fvldauHm1mR6IWScL5/XZSGCD0VoJE6EyuBNGcOWkmsq6IFyOaIKDojJrDLSFbP5bhXz4jD0hpjRdUwLg==",
+      "published_at": "2022-12-16T23:53:03.040Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.12",
+          "dll_sha256": "120fb99ac1be379741e550b7b14721518dfd3afeef8f4721e8446536b0e178c5",
+          "dll_size_bytes": 17104792,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-16T22:47:41.5700000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7c963525fd0006bfbf3988044b566401ba4d5e52c96b789aefe11c4352229093.dll.zst",
+            "zst_sha256": "7c963525fd0006bfbf3988044b566401ba4d5e52c96b789aefe11c4352229093",
+            "zst_size_bytes": 6472399,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.14",
+          "dll_sha256": "2c70d034d38b06c6a1161efb9246cce296be248ff52eff6c1b587ce150e5f36d",
+          "dll_size_bytes": 1370000,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-16T22:47:48.9220000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8e2e619624b581a47ad90fd91175debdfd9ea32dd085428efbe9e67478bd4498.dll.zst",
+            "zst_sha256": "8e2e619624b581a47ad90fd91175debdfd9ea32dd085428efbe9e67478bd4498",
+            "zst_size_bytes": 573994,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.12",
+          "dll_sha256": "c479ddf947a439a5b9f54d3653a04ac3702a5c6bbfbb9fd0187f595f948eb39f",
+          "dll_size_bytes": 12142480,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-16T22:44:24.8680000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/0659651b62355d8ba126820bc7f22b08dcca1c8adeff097d6403012caaa4502e.dll.zst",
+            "zst_sha256": "0659651b62355d8ba126820bc7f22b08dcca1c8adeff097d6403012caaa4502e",
+            "zst_size_bytes": 5285529,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.14",
+          "dll_sha256": "466b022eb22cc835c377b51cfa92cd593f9935ad66e6634411ebc5b8c8507e61",
+          "dll_size_bytes": 983952,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-16T22:44:23.6590000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/731e89a56fc3c311abba113e170693d73b23f1c96bda264c9d0e4abf9187585a.dll.zst",
+            "zst_sha256": "731e89a56fc3c311abba113e170693d73b23f1c96bda264c9d0e4abf9187585a",
+            "zst_size_bytes": 476725,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2212.16",
+      "package_sha512": "2ZIsN/FjKt0nG7uo44B6k79V7mpJlWxkg4mtb/pifPHmonNo1ICKoAAd9Z1pCrOx/W3+YrsWJjf6xCcnzurOJw==",
+      "published_at": "2022-12-28T03:08:24.313Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.12",
+          "dll_sha256": "e28793939d3ba1cf1aa9fe0647a4003da063e96a6bdeaa1d89521ef7563a4131",
+          "dll_size_bytes": 17104800,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T02:27:30.1790000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e68038d3e739ec98a1078ef64c4cfc23e8b544bb37083484f96670cc8e0707f9.dll.zst",
+            "zst_sha256": "e68038d3e739ec98a1078ef64c4cfc23e8b544bb37083484f96670cc8e0707f9",
+            "zst_size_bytes": 6472399,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.16",
+          "dll_sha256": "fbcefee52b154f793a515fe4305f2c03d613b8df6d357d1dd94fd53c18b9eb5c",
+          "dll_size_bytes": 1370008,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T02:27:26.5800000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/37f92727cd023bf568b8548c2d9fc259f16b5cf39f00ed478900b3d12e8f1e25.dll.zst",
+            "zst_sha256": "37f92727cd023bf568b8548c2d9fc259f16b5cf39f00ed478900b3d12e8f1e25",
+            "zst_size_bytes": 573962,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.12",
+          "dll_sha256": "d9ef0884ae5db9e1ddc8a4afd38f4670de223c63fffe01806a7a72c341d0fc40",
+          "dll_size_bytes": 12142528,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T02:22:28.4560000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6dd34e85de39af8ec2940cda21bf687137eaa2c77f4d30de32ebde8372f68ceb.dll.zst",
+            "zst_sha256": "6dd34e85de39af8ec2940cda21bf687137eaa2c77f4d30de32ebde8372f68ceb",
+            "zst_size_bytes": 5285563,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.16",
+          "dll_sha256": "1c4e61113d171ec1c32959bc5a365cc396a4cb84d4289256d746892894c3d632",
+          "dll_size_bytes": 984000,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T02:22:26.5240000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/93832275be96e84c54f89469d5760060b7ae8479b7529e860d2ad6940217a071.dll.zst",
+            "zst_sha256": "93832275be96e84c54f89469d5760060b7ae8479b7529e860d2ad6940217a071",
+            "zst_size_bytes": 476744,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2212.17",
+      "package_sha512": "YU5XilWjcdYeVU8EbnGfsCSL9mkzhv+hmzu/0nLmi7snXvjzEXGGcYJ5iMVV531m4nJAFLvLMp/296gIjm6lkA==",
+      "published_at": "2022-12-29T00:17:48.050Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.12",
+          "dll_sha256": "0edc852f408fbb26222f0effc13ad1f80441426d2c9ad83af63536c0a2998792",
+          "dll_size_bytes": 17104800,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T21:27:06.3520000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/abaa0729a1e5e9e73aab8133f4f4dd872648158a848a0731f8dbf88b51bbeba1.dll.zst",
+            "zst_sha256": "abaa0729a1e5e9e73aab8133f4f4dd872648158a848a0731f8dbf88b51bbeba1",
+            "zst_size_bytes": 6472281,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.17",
+          "dll_sha256": "9a79aa777788e32ab4f4f79eba249b6af92a80e9bf0e653a6f64c8559387b6a2",
+          "dll_size_bytes": 1370016,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T21:27:11.9810000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6577b9413bf5092fd343b43fcb2bbd5245cc27db5c1b93a4c2bc5477a037097f.dll.zst",
+            "zst_sha256": "6577b9413bf5092fd343b43fcb2bbd5245cc27db5c1b93a4c2bc5477a037097f",
+            "zst_size_bytes": 573976,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.12",
+          "dll_sha256": "07102010d1a838a91292a7816d992b4739666d226ac31eaf8020c23562f10c6e",
+          "dll_size_bytes": 12142496,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T21:26:11.0650000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fc16a275da95e55a3689d0c30fb22a0d9256875d2628989eab66073df84dcf1a.dll.zst",
+            "zst_sha256": "fc16a275da95e55a3689d0c30fb22a0d9256875d2628989eab66073df84dcf1a",
+            "zst_size_bytes": 5285561,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.17",
+          "dll_sha256": "a1aa3cbebd17b8837b603f8678642ecd32e475ca306508c2b2e2f013950fa5dd",
+          "dll_size_bytes": 983968,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2022-12-28T21:26:04.5140000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/eda3e826cae6d03bd886c305c3a1131f882e80231e2de454d6143950a34ec505.dll.zst",
+            "zst_sha256": "eda3e826cae6d03bd886c305c3a1131f882e80231e2de454d6143950a34ec505",
+            "zst_size_bytes": 476700,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2212.19",
+      "package_sha512": "HgGNEJmgAA1H40ptgYHLfLUFkSG/5j/cTSfwlMgoRA3r5YVdiZWhp1Gvt3xqBxbwfGXYOzsAiYRih4IOo/L2yA==",
+      "published_at": "2023-01-09T21:11:02.663Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.13",
+          "dll_sha256": "38f824f50e0f1b140285f845c6885ebcfb5eaba16eb4bcd1c87f26fbdf8ec590",
+          "dll_size_bytes": 17104824,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-09T19:40:03.2400000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c4cae58c3793de37fa9646b56852fb2ea6e67222a863fada94bf1f01d4b5e446.dll.zst",
+            "zst_sha256": "c4cae58c3793de37fa9646b56852fb2ea6e67222a863fada94bf1f01d4b5e446",
+            "zst_size_bytes": 6475681,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.19",
+          "dll_sha256": "66cfffa6a0f5dba4795395f7be1d8405050078fa35d8cfa77a7a72d21633bb15",
+          "dll_size_bytes": 1370016,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-09T19:40:00.8180000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b8eca624d80feebccb9a4a35da44e6ece95e5735f89c15d81c856d9aaa2ec60d.dll.zst",
+            "zst_sha256": "b8eca624d80feebccb9a4a35da44e6ece95e5735f89c15d81c856d9aaa2ec60d",
+            "zst_size_bytes": 573971,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.13",
+          "dll_sha256": "3a24ae30c8d54c4b3d414ec09255c25cf51e4edc4289f47cdde726a9ee48cfc0",
+          "dll_size_bytes": 12142480,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-09T19:41:14.1760000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/53c01a77518daf182762b7c94be47d0b0a3cfad92440197f92c58eed3a75f607.dll.zst",
+            "zst_sha256": "53c01a77518daf182762b7c94be47d0b0a3cfad92440197f92c58eed3a75f607",
+            "zst_size_bytes": 5287128,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.19",
+          "dll_sha256": "42ef5f13daad71c45256cb18a8f88d200abae1dde214d7bb595870ea0728a1ae",
+          "dll_size_bytes": 983952,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-09T19:41:10.2810000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/96ce7d535cbbe8ab31e83e4c77cf10311b7f69c3024b2d7d63c087ab2feb2cb6.dll.zst",
+            "zst_sha256": "96ce7d535cbbe8ab31e83e4c77cf10311b7f69c3024b2d7d63c087ab2feb2cb6",
+            "zst_size_bytes": 477472,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2212.23",
+      "package_sha512": "l0GLia/dCpB7UoMdu7MNe6VLmbLJsxD2aeB/0Wh5cGdCBsjJvBfkx8z01Z1WhSia4m6IjdH6TqHsXbEakrZH6g==",
+      "published_at": "2023-01-18T02:07:24.310Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.19",
+          "dll_sha256": "76c5d37df66c69b96b68b2575520ece4fb34bfa0930769449ca690ec76a7ae23",
+          "dll_size_bytes": 17105856,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-18T01:00:26.8190000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2266fe67e26fb65a6b4f8596a65d9162b9ab2810e87b597597acfb323ecf7e53.dll.zst",
+            "zst_sha256": "2266fe67e26fb65a6b4f8596a65d9162b9ab2810e87b597597acfb323ecf7e53",
+            "zst_size_bytes": 6473795,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.23",
+          "dll_sha256": "35531b6cc8cfcae76896b2d00d535e19eb3996230518ebac19a2edb27e064a96",
+          "dll_size_bytes": 1370048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-18T01:00:26.4710000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8c497eb111abfe001473db236d5a7f8f9aa83af94df79001c224235bddf9f859.dll.zst",
+            "zst_sha256": "8c497eb111abfe001473db236d5a7f8f9aa83af94df79001c224235bddf9f859",
+            "zst_size_bytes": 573985,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.19",
+          "dll_sha256": "8a94d2b3acc7b027ab9c2398473b8042ce8747a38883eb549d8f35a87c69a551",
+          "dll_size_bytes": 12142496,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-18T00:55:10.9220000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/237b0292f001acbcd5b63e36c3de8fe078fa0f295640789e4210be9bd5b2bc58.dll.zst",
+            "zst_sha256": "237b0292f001acbcd5b63e36c3de8fe078fa0f295640789e4210be9bd5b2bc58",
+            "zst_size_bytes": 5287782,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.23",
+          "dll_sha256": "0269615224b51f12f9fba945d825563a399c13dd4b7c2b4f31f0fb07404ba717",
+          "dll_size_bytes": 983968,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
+            "signed_at": "2023-01-18T00:55:10.3930000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/40e839f8d669b8f24387890d989250d761fbc1f78fc76e2e5e8246c385cce50d.dll.zst",
+            "zst_sha256": "40e839f8d669b8f24387890d989250d761fbc1f78fc76e2e5e8246c385cce50d",
+            "zst_size_bytes": 477433,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2212.36",
+      "package_sha512": "DTpqR//r48NGceHeez0g8CtvELth8bUW/cSWrWjVVzxSYSjOxXVpk/IhpYt/B6Ithbr5+61ltSDpLTurEbUa8A==",
+      "published_at": "2023-03-02T18:43:31.817Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.40",
+          "dll_sha256": "9ffdd0783576350b35141a0397ed9fbbae559a63b84440f897e7a82325c8703c",
+          "dll_size_bytes": 17107352,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-01T22:47:24.3770000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/604f7bf7d3a0278d094d75aa805ed7433d1dc3f5dabc451bcc324d079f91d97a.dll.zst",
+            "zst_sha256": "604f7bf7d3a0278d094d75aa805ed7433d1dc3f5dabc451bcc324d079f91d97a",
+            "zst_size_bytes": 6473101,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.36",
+          "dll_sha256": "969f358985f11af79402ac52d688319722aaaab3a92790a4cb2cda9e7730063d",
+          "dll_size_bytes": 1370048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-01T22:47:14.1040000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e572ee23cbb2c87f980a36de7d684888dd7a91653b15af5b2b561136e1823bf6.dll.zst",
+            "zst_sha256": "e572ee23cbb2c87f980a36de7d684888dd7a91653b15af5b2b561136e1823bf6",
+            "zst_size_bytes": 573953,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2212.40",
+          "dll_sha256": "b400b3b94217846de194be57275b39fcbaa0ef86069a855c284a0281ddfac8d3",
+          "dll_size_bytes": 12144536,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-01T22:47:05.6140000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7c1589bce9c878a46f499c61f18ad9fb94e8dbc240301e2495b247d9a6bd5289.dll.zst",
+            "zst_sha256": "7c1589bce9c878a46f499c61f18ad9fb94e8dbc240301e2495b247d9a6bd5289",
+            "zst_size_bytes": 5287985,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2212.36",
+          "dll_sha256": "60325253d6b9093be2294f6262cfa1a93658ffa3ddf721af94a5fff883f7d65b",
+          "dll_size_bytes": 983960,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-01T22:47:06.1120000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bdbc1ac48c933c603e5405377a147e9f53055e72c6fa42b7b3ac5a2ccffc1f41.dll.zst",
+            "zst_sha256": "bdbc1ac48c933c603e5405377a147e9f53055e72c6fa42b7b3ac5a2ccffc1f41",
+            "zst_size_bytes": 477500,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.7.2308.12",
+      "package_sha512": "SdjuDjWSgqC3myXfuHdgYN32oBK+w6FSvHycuyA7LtKNT4vsofgpVtxmzrGlKLIKC7LcQwO7eZfZeqFfUMwZAg==",
+      "published_at": "2023-08-14T20:00:49.930Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2308.7",
+          "dll_sha256": "570a1a7357893615417edf5ab356625b5b6b721a131bc7331bf17289d4928ed7",
+          "dll_size_bytes": 17367600,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
+            "signed_at": "2023-08-14T18:59:01.7920000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/137e2ca6ab63eeda90639cfc016d7e267822b92be2398c4deeb0a9c22c35551c.dll.zst",
+            "zst_sha256": "137e2ca6ab63eeda90639cfc016d7e267822b92be2398c4deeb0a9c22c35551c",
+            "zst_size_bytes": 6575175,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2308.12",
+          "dll_sha256": "9cccc7ef419da73fa314fdaecae831c6c20206ae70732c9093f95193378ced10",
+          "dll_size_bytes": 1421856,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-08-14T18:59:02.0250000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/14897e4c55d6bdbe539bb4ead3c6731c8a88a5d159201e281258262624d8e1d3.dll.zst",
+            "zst_sha256": "14897e4c55d6bdbe539bb4ead3c6731c8a88a5d159201e281258262624d8e1d3",
+            "zst_size_bytes": 596539,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.7.2308.7",
+          "dll_sha256": "4a87a59a4384b8850f9e2349433950da616d3c9e9df48a7ef0376d50428024c1",
+          "dll_size_bytes": 12333600,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-08-14T18:56:22.5190000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/338bba7c61742d337efc6b6b1a6abadeea06ef4d30d744ddc83fa8c8ef57a987.dll.zst",
+            "zst_sha256": "338bba7c61742d337efc6b6b1a6abadeea06ef4d30d744ddc83fa8c8ef57a987",
+            "zst_size_bytes": 5365558,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.7.2308.12",
+          "dll_sha256": "c38c257ee9d0a38f701b6d9372e874f50eb6ad8f8d758bf47b2a36d7e97d71c6",
+          "dll_size_bytes": 1023520,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-08-14T18:56:22.5050000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/61374394cb76e293e47387c9b102daac7a6769b9e495e163e0f98be23431b832.dll.zst",
+            "zst_sha256": "61374394cb76e293e47387c9b102daac7a6769b9e495e163e0f98be23431b832",
+            "zst_size_bytes": 493844,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2403.18",
+      "package_sha512": "pD2jJBuhy+iz3SAqojNzmJNWoIGUgYVBDuwJPsZtYAln4TirqzAf4vLOAGmc5inQX3anW1VoWbAZDK9tIywa8Q==",
+      "published_at": "2024-03-07T21:27:19.160Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2403.34",
+          "dll_sha256": "5de48b783260a1601f7dfcfe8ce2a189f6358de001b33f5207352d6385025f1e",
+          "dll_size_bytes": 17805344,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-07T19:41:47.2880000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/922c96fe2e0bb27a87900802e58d06e02e721b54c45b1dbe33c6aa25e005d52e.dll.zst",
+            "zst_sha256": "922c96fe2e0bb27a87900802e58d06e02e721b54c45b1dbe33c6aa25e005d52e",
+            "zst_size_bytes": 6694797,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2403.18",
+          "dll_sha256": "2cd75b85fc0f01f7707fe25d58cd910a1e582e96079a042dce3211680eeeb660",
+          "dll_size_bytes": 1464752,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-07T19:41:47.4420000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/33d3e870594b83eb3f7adcbc28a912f9dad072f782e5872493040d07fcf7f8d8.dll.zst",
+            "zst_sha256": "33d3e870594b83eb3f7adcbc28a912f9dad072f782e5872493040d07fcf7f8d8",
+            "zst_size_bytes": 612787,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2403.34",
+          "dll_sha256": "dd0083a711a2858b8755cd396e93eb3066afc98cfca87d2fc78584f191141c13",
+          "dll_size_bytes": 12666288,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-07T20:01:53.0590000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/92644bf0e13d74937b9181048cb5718b2e8d1d012c0b3c762fa27155d530b964.dll.zst",
+            "zst_sha256": "92644bf0e13d74937b9181048cb5718b2e8d1d012c0b3c762fa27155d530b964",
+            "zst_size_bytes": 5479305,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2403.18",
+          "dll_sha256": "b5648082c09dbf07587a8b6d1fcb6a1a97cd334406037d92311ca1d2a20b5b6d",
+          "dll_size_bytes": 1061400,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-07T20:01:48.2760000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/19ce857127f9385602a70a701e7885b26ef60383373ffef61c2d54ae67d8fbcc.dll.zst",
+            "zst_sha256": "19ce857127f9385602a70a701e7885b26ef60383373ffef61c2d54ae67d8fbcc",
+            "zst_size_bytes": 509746,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2403.21",
+      "package_sha512": "/Tl32HvECZYUhU6H5uecxCXxGAGu84cx+CkzREms5fcAhFJVaLp/PmhLn8Yl60H7fUKKvr4hZT3Als6qTfi7jg==",
+      "published_at": "2024-03-22T19:07:45.547Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2403.36",
+          "dll_sha256": "2cd630e3b1217c087fa99da4136fc7f632323d41153c4018f89461a729329119",
+          "dll_size_bytes": 17804320,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-22T01:37:47.4470000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/4f613201cdbb277586c029b1f7cf6f4b11de7a7b00b203e22a87cdaafd9555e2.dll.zst",
+            "zst_sha256": "4f613201cdbb277586c029b1f7cf6f4b11de7a7b00b203e22a87cdaafd9555e2",
+            "zst_size_bytes": 6693298,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2403.21",
+          "dll_sha256": "1213822f3ef21c6bc2fca7a82792e5d0e2e2c4fd6a3b4661eb2863b9b77f9441",
+          "dll_size_bytes": 1463216,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-22T01:37:49.1840000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/499ddb739e231926ff35018e83c34042d60ea659cf2ce362c2aa8b7722c762e3.dll.zst",
+            "zst_sha256": "499ddb739e231926ff35018e83c34042d60ea659cf2ce362c2aa8b7722c762e3",
+            "zst_size_bytes": 612525,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2403.36",
+          "dll_sha256": "966a6270620a0c141764f0ea7a103c4d2e9dc834d1ee5b938d86df473165a47e",
+          "dll_size_bytes": 12665776,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-22T01:37:57.9010000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/5c008e28023c4ce18b8972aa5bbd67cfee94dc8a9d1422aae13c25ad54f439d6.dll.zst",
+            "zst_sha256": "5c008e28023c4ce18b8972aa5bbd67cfee94dc8a9d1422aae13c25ad54f439d6",
+            "zst_size_bytes": 5480596,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2403.21",
+          "dll_sha256": "5804631bab89665cd868b9d6684bd813d42314d5e1e33ae18e4f06c8fa7a2378",
+          "dll_size_bytes": 1060784,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-22T01:38:08.5330000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e5bcd63abde921c6e0ff8a37ed0a2447a0857f20b30af0a9bbcb155af4880400.dll.zst",
+            "zst_sha256": "e5bcd63abde921c6e0ff8a37ed0a2447a0857f20b30af0a9bbcb155af4880400",
+            "zst_size_bytes": 509268,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2403.24",
+      "package_sha512": "KssHmBTZ0HhUy6WKtLqyb7AIf2oQJzvBd+MR08wBbVR4QZdcoQlzGi6TC0AiFmQQ7wW7juEKZ78Dj4XlKw2cdg==",
+      "published_at": "2024-03-30T02:05:27.390Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2403.37",
+          "dll_sha256": "eb0e6196eae92f69f7e3a8a0bf0e35f30d7c2adad475bebbde3a41015ca0b414",
+          "dll_size_bytes": 17802672,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-29T20:35:18.9700000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9ea2baa10aec50779aecf3234259f43d28bfbf38d711f3f5ecca5d6e958e9d1c.dll.zst",
+            "zst_sha256": "9ea2baa10aec50779aecf3234259f43d28bfbf38d711f3f5ecca5d6e958e9d1c",
+            "zst_size_bytes": 6694684,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2403.24",
+          "dll_sha256": "1f61b171315ecffabdf56d4216e77d56533e3113f8fe29c5ad34a45c52c91efa",
+          "dll_size_bytes": 1463736,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-29T20:35:18.0220000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/503da1673b190cafc52bb32c7061d19b85461c17a9fd6376c50f5da5a028d638.dll.zst",
+            "zst_sha256": "503da1673b190cafc52bb32c7061d19b85461c17a9fd6376c50f5da5a028d638",
+            "zst_size_bytes": 612440,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2403.37",
+          "dll_sha256": "9c49099600867dccd9031f10aa0b8f845e7537d9d3ef605d112b567a332f8742",
+          "dll_size_bytes": 12665264,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-29T20:30:33.9770000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b3ef71e48deb4ae03510005c25773afba77a2b72fd5056689cbd1aec17d2f130.dll.zst",
+            "zst_sha256": "b3ef71e48deb4ae03510005c25773afba77a2b72fd5056689cbd1aec17d2f130",
+            "zst_size_bytes": 5480587,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2403.24",
+          "dll_sha256": "5b70d1c18cd8ab69e3fccc29f84e98010896de5ae200b1fde9fdd9f40c0ba98b",
+          "dll_size_bytes": 1060792,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-03-29T20:30:33.5250000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8605cdd19f2583a2eca3db8032007bec77f7db995ed7f3406bc648f5f3eadf34.dll.zst",
+            "zst_sha256": "8605cdd19f2583a2eca3db8032007bec77f7db995ed7f3406bc648f5f3eadf34",
+            "zst_size_bytes": 509545,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2405.17",
+      "package_sha512": "Hbr4qaPKL7bg/jmZI8QOlXCQ5TFb3jKogvGpCDfLye93525sEcdFb7UlzFKjmstPQpcwnf1ON5NA/FcE8GDo5A==",
+      "published_at": "2024-05-28T18:07:13.397Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2405.15",
+          "dll_sha256": "1e8bdd9f7363ff7105bc702252d120d00b25ad92f74d33c93a4b775c0a8eab43",
+          "dll_size_bytes": 17924128,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-24T21:25:10.5220000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bbf51fc4288633419c3c66a74dbd85a1a9b7df2a9229905a0361943c29c25295.dll.zst",
+            "zst_sha256": "bbf51fc4288633419c3c66a74dbd85a1a9b7df2a9229905a0361943c29c25295",
+            "zst_size_bytes": 6726972,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2405.17",
+          "dll_sha256": "c9dc429a8c1cf61af962a4a33da437f5f3cd7e698fa868ebf0937c4c40abbf07",
+          "dll_size_bytes": 1464864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-24T21:25:10.5080000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/88702a2fb868ac1544a53554b58b04f2287a9262d974548085a7eca6e15ee0eb.dll.zst",
+            "zst_sha256": "88702a2fb868ac1544a53554b58b04f2287a9262d974548085a7eca6e15ee0eb",
+            "zst_size_bytes": 613165,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2405.15",
+          "dll_sha256": "4cb8be934dd6eaf16b7ccc70ded2e7b946dd8f86ae3bdbad4710079d22004817",
+          "dll_size_bytes": 12769720,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-24T21:25:44.0570000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e9bf08961674991198a1d5743ec45f77ff6e930b38bfa5b6e9b4b18d9d6f2591.dll.zst",
+            "zst_sha256": "e9bf08961674991198a1d5743ec45f77ff6e930b38bfa5b6e9b4b18d9d6f2591",
+            "zst_size_bytes": 5506565,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2405.17",
+          "dll_sha256": "a5058c2b79193665953520735e12165dc827fc3d5a524663cfa1377afa50de6c",
+          "dll_size_bytes": 1061808,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-24T21:25:41.5250000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ec4ac26f90f3b36300cb1273613d0298bef1ad59578c07442e3659726a87b124.dll.zst",
+            "zst_sha256": "ec4ac26f90f3b36300cb1273613d0298bef1ad59578c07442e3659726a87b124",
+            "zst_size_bytes": 510010,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2407.11",
+      "package_sha512": "sUCiJ/DBTK68xap2oqB0GZzDo+yQ/BldoV2PTB7xOgdShCyCfy8ICwnkdLokHewJr4OTqLokxl+U+PvJwN4qSA==",
+      "published_at": "2024-07-26T03:10:37.940Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2407.6",
+          "dll_sha256": "a30b80815885f7b2756dbfc6d03fd10a86ea94344347023129595fbe911a5501",
+          "dll_size_bytes": 20748320,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-26T01:47:44.1520000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/778caa60f2e64f691a73ddbe10ca93d842eeec76f295d845a062ef5a31406feb.dll.zst",
+            "zst_sha256": "778caa60f2e64f691a73ddbe10ca93d842eeec76f295d845a062ef5a31406feb",
+            "zst_size_bytes": 7094278,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2407.11",
+          "dll_sha256": "2ed0a878cfb203cf0e6e93939dbfcb30a76215d6ea978fbbf444530ee82a1998",
+          "dll_size_bytes": 1612320,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-26T01:47:37.1190000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ea34606285321405658ef64f0059053d791820f0dc3be53f4ae570fdca40bcfe.dll.zst",
+            "zst_sha256": "ea34606285321405658ef64f0059053d791820f0dc3be53f4ae570fdca40bcfe",
+            "zst_size_bytes": 622216,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2407.6",
+          "dll_sha256": "291af6fc0f267811c42fa7b1d05a9250b40dfa4a2b6d1919429aceb111cb03bc",
+          "dll_size_bytes": 17208864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-26T01:41:46.1490000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/39f631ef8e70edd83b287aacca7e1cab0c9bb7e54975d079f735597835ca2a85.dll.zst",
+            "zst_sha256": "39f631ef8e70edd83b287aacca7e1cab0c9bb7e54975d079f735597835ca2a85",
+            "zst_size_bytes": 6511632,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2407.11",
+          "dll_sha256": "a4f76c4412d0992d95d55576a2029165929667684a6e386270324f968e65a9e4",
+          "dll_size_bytes": 1314224,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-26T01:41:45.5030000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/10e63b23f237fe0acf6ec16b567b508580d02299f11e1a77eebb64aca8a12c2b.dll.zst",
+            "zst_sha256": "10e63b23f237fe0acf6ec16b567b508580d02299f11e1a77eebb64aca8a12c2b",
+            "zst_size_bytes": 578146,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2407.12",
+      "package_sha512": "zAioVmpnc/ksJLwu0YUUJj8kXSZyCmtToDGufEzNHuA0QY6EUHalaO2wnNUGyDimBjnVcccSxEqMYhayMAqcew==",
+      "published_at": "2024-07-31T13:43:03.777Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2407.7",
+          "dll_sha256": "66372fb859c902f23f6d8cfdefe52efc8c79a433d53c5aebca4ad542efee8279",
+          "dll_size_bytes": 20748208,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-31T04:44:39.6330000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e7d2506677ce50b0051e2302c6ebad2670ac73a01cf6d3dcc66c952106722ffc.dll.zst",
+            "zst_sha256": "e7d2506677ce50b0051e2302c6ebad2670ac73a01cf6d3dcc66c952106722ffc",
+            "zst_size_bytes": 7094830,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2407.12",
+          "dll_sha256": "783bc73ce44cd23d735751c39e9340eed50e267cc6738884a29ed284ab9400a6",
+          "dll_size_bytes": 1612216,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-31T04:44:35.2390000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/5e3de6410732072f066c50baa5ca486fc09c817ee56ad1152a108d547ceae936.dll.zst",
+            "zst_sha256": "5e3de6410732072f066c50baa5ca486fc09c817ee56ad1152a108d547ceae936",
+            "zst_size_bytes": 622099,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2407.7",
+          "dll_sha256": "0c126ff6a13bbca7837ab75b1164ad8bfa01f3e1c7a83976304665bdaa1b97b8",
+          "dll_size_bytes": 17208864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-31T04:38:42.5450000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7a7b0eec59eafd5766b2345fed0048b5b3a5d5bacd39c0a390d7c7076f3b4707.dll.zst",
+            "zst_sha256": "7a7b0eec59eafd5766b2345fed0048b5b3a5d5bacd39c0a390d7c7076f3b4707",
+            "zst_size_bytes": 6511695,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "101.8.2407.12",
+          "dll_sha256": "46e2136f3246035708f355564b5a4585d3c69ce65000caecb00b112969764313",
+          "dll_size_bytes": 1314336,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-31T04:38:39.2590000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/00f078034624c2975984ceeb069243e090d1164eeeae7088fac8c54c72ebca28.dll.zst",
+            "zst_sha256": "00f078034624c2975984ceeb069243e090d1164eeeae7088fac8c54c72ebca28",
+            "zst_size_bytes": 578269,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2502.7",
+      "package_sha512": "4mYvR2sXC/b6Ed5VrhRgmiaDYzzNy7xSn+WRhd1Unr95Eo7ADk8KZwvei/aY6G8x0R8zx13IRQMBnt5Xx2BupA==",
+      "published_at": "2025-02-12T19:11:50.233Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2502.7",
+          "dll_sha256": "b6f9b35941527a47e4a24dd08e08d74a2e2d1b59a9f0e9ab3026a7ef282e1c6c",
+          "dll_size_bytes": 17986616,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-12T01:20:13.7860000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1c910bb79f9cde04b49e82701ab6dfd99a8c4ed51d55f166e98aacd1b13b4f2f.dll.zst",
+            "zst_sha256": "1c910bb79f9cde04b49e82701ab6dfd99a8c4ed51d55f166e98aacd1b13b4f2f",
+            "zst_size_bytes": 6761335,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2502.7",
+          "dll_sha256": "54faacef4ff8821c4226c44fb5abd59c66f7dc0d659ca1996c7a97c8f74bff63",
+          "dll_size_bytes": 1508920,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-12T01:20:17.7860000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2e992a8f94020df0fb787ee1e7ad924436f73eba3d6327e6f30f2e3fc126be9b.dll.zst",
+            "zst_sha256": "2e992a8f94020df0fb787ee1e7ad924436f73eba3d6327e6f30f2e3fc126be9b",
+            "zst_size_bytes": 633123,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2502.7",
+          "dll_sha256": "8533f8d87e394143c7813b99ef116b1a030194490ed60fbf35073994633a06c2",
+          "dll_size_bytes": 12795960,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-12T01:15:49.1260000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a8c525238b1bd166f4e6dc02b5f084668f22d453042569409150bc2f3b24e533.dll.zst",
+            "zst_sha256": "a8c525238b1bd166f4e6dc02b5f084668f22d453042569409150bc2f3b24e533",
+            "zst_size_bytes": 5521928,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2502.7",
+          "dll_sha256": "cba5db50dc388f807d53783d2e04d9a9b960fd3d7f664ae6756034f22ecffa63",
+          "dll_size_bytes": 1092664,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-12T01:15:56.1710000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/06bfca5714468315360c9d531e32458f57ecf622ff00090248d4468700f88340.dll.zst",
+            "zst_sha256": "06bfca5714468315360c9d531e32458f57ecf622ff00090248d4468700f88340",
+            "zst_size_bytes": 526087,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2502.8",
+      "package_sha512": "Bo8uq40se8GfJ9DF0rBIlVmPiZjwNrAg7F5iCNbEBouAzPdAB4WygCH5hL7WYLNlNbw2qm/xGxW+JaGT47kHzA==",
+      "published_at": "2025-02-21T22:06:16.777Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2502.8",
+          "dll_sha256": "f79943b02f73b621421b58a569fd6ee120d0023fb6bfa23844ecad6b00d6a295",
+          "dll_size_bytes": 17986592,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-20T19:25:48.5450000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9d16a32bc8022f96c67ff34aa40738dc274517a5ec237e868d6bd7d5fe9a1a77.dll.zst",
+            "zst_sha256": "9d16a32bc8022f96c67ff34aa40738dc274517a5ec237e868d6bd7d5fe9a1a77",
+            "zst_size_bytes": 6761856,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2502.8",
+          "dll_sha256": "62736e99aa534a942873f92b881a71b2cb6ad62b8d7481ea7a8ad8e9888a8056",
+          "dll_size_bytes": 1508896,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-20T19:25:42.9670000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/390db662d6594b84bd63ca00b204c537dd8aacb15ebe9cd7f86c9069ade46a68.dll.zst",
+            "zst_sha256": "390db662d6594b84bd63ca00b204c537dd8aacb15ebe9cd7f86c9069ade46a68",
+            "zst_size_bytes": 633110,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2502.8",
+          "dll_sha256": "9d43bbc03c1de827c1a7ea3b914586542c1472350a88b8ec80c4136d61b8d1fb",
+          "dll_size_bytes": 12795936,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-20T19:21:43.7080000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/44f988ebe221f8175e259e6b0baa2e8055160b8b7188317ba0f314cd732d5dcc.dll.zst",
+            "zst_sha256": "44f988ebe221f8175e259e6b0baa2e8055160b8b7188317ba0f314cd732d5dcc",
+            "zst_size_bytes": 5519456,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2502.8",
+          "dll_sha256": "b8c61e429ed30233a7f6a92320eec75dbb398978001124cdfba80b76e9bdbb8f",
+          "dll_size_bytes": 1092640,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-20T19:21:47.4370000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c18056d5588c6912d332c6e3da16809ed1953a68ade27ee54b5bc880c0d7f18b.dll.zst",
+            "zst_sha256": "c18056d5588c6912d332c6e3da16809ed1953a68ade27ee54b5bc880c0d7f18b",
+            "zst_size_bytes": 526065,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2505.28",
+      "package_sha512": "ysnRyHVC5cniFMzyGm5mBYQAg4FOMmndeUfmpwCv9mmzMG82AUmQitVX+6GypD+Ar6C5V8SOMD+yiL7xQFLMsg==",
+      "published_at": "2025-05-28T17:38:54.443Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2505.28",
+          "dll_sha256": "75c019e3541980eea8ae661d81998d06f99627e3004c800532475a1c3551c6fb",
+          "dll_size_bytes": 18091048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
+            "signed_at": "2025-05-24T01:01:00.7750000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d1b1712df4481b6f1309c0bfed6d8a496fa4a2a10985c1b93abe4504fcbffdae.dll.zst",
+            "zst_sha256": "d1b1712df4481b6f1309c0bfed6d8a496fa4a2a10985c1b93abe4504fcbffdae",
+            "zst_size_bytes": 6777375,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2505.28",
+          "dll_sha256": "18fd73e06fc10e02a01885d8c282264c8f37bd2cf9a735d7700e231e94ea0376",
+          "dll_size_bytes": 1525280,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-05-24T01:00:56.3080000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/4eb03f481e5b4fa05dfd7d96c39f9baff3df0646a9270a204e507838b5070070.dll.zst",
+            "zst_sha256": "4eb03f481e5b4fa05dfd7d96c39f9baff3df0646a9270a204e507838b5070070",
+            "zst_size_bytes": 639670,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2505.28",
+          "dll_sha256": "18aac998e06460ece5b46efe3c0172766295ecd2186f81e8c3fa4bc929bc97ca",
+          "dll_size_bytes": 13002784,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-05-24T00:56:00.5290000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7fc843ab1b0bc909035544bcfdd0666a3901465169b75e3652991597fbb24844.dll.zst",
+            "zst_sha256": "7fc843ab1b0bc909035544bcfdd0666a3901465169b75e3652991597fbb24844",
+            "zst_size_bytes": 5571252,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2505.28",
+          "dll_sha256": "3713c42e7a9cd1c502f4a780a24a83b55cb85b0abea90293122b97b313d53e3c",
+          "dll_size_bytes": 1122848,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-05-24T00:55:58.1580000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/34d7f950fd63282a6cc0493a60ab1e9721bafc8100d8afed9327c064c30656e2.dll.zst",
+            "zst_sha256": "34d7f950fd63282a6cc0493a60ab1e9721bafc8100d8afed9327c064c30656e2",
+            "zst_size_bytes": 534189,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2505.32",
+      "package_sha512": "ZyfZEh1Bif2/MKPrmSqKbblyjCA8YBfvSYUYRpGjHNKLQufpYOrQFGS1ixLEvUkuu9AWs20KuovhGNSnLmVY/Q==",
+      "published_at": "2025-07-15T15:57:19.170Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2505.32",
+          "dll_sha256": "5888d3e590f5bfd8743484e7f31313996734adec5741506271a5c6368cbe8ba9",
+          "dll_size_bytes": 17837088,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-07-14T20:04:58.7920000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/24f6f71d047fcb105160ffce4746b308a99af33b5c694b7dc61b2cde3e683bca.dll.zst",
+            "zst_sha256": "24f6f71d047fcb105160ffce4746b308a99af33b5c694b7dc61b2cde3e683bca",
+            "zst_size_bytes": 6704809,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2505.32",
+          "dll_sha256": "0cf5fa4b90f74550166108b3870c883f4a85243976b246b1da3ea90ad5b92015",
+          "dll_size_bytes": 1494048,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-07-14T20:05:00.9250000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/dca77b712dde867b15960d1ac1334a9b1b58402dffd91b9cbb727630fe7a1fa4.dll.zst",
+            "zst_sha256": "dca77b712dde867b15960d1ac1334a9b1b58402dffd91b9cbb727630fe7a1fa4",
+            "zst_size_bytes": 630966,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2505.32",
+          "dll_sha256": "092915b9db67e7f57b8cac7c902e73744690b7a2ce6425f60f959e46eb4a7a65",
+          "dll_size_bytes": 13002296,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-07-14T20:01:19.1600000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/608f970fccf89aaf3c5a25ab40a8316d04d63aae409577348aa979e36932fb1c.dll.zst",
+            "zst_sha256": "608f970fccf89aaf3c5a25ab40a8316d04d63aae409577348aa979e36932fb1c",
+            "zst_size_bytes": 5570984,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.8.2505.32",
+          "dll_sha256": "05d75d025f9831a80441cf7b617a7fe8eb40cfdfe34b8f68e60375fe51aefdd7",
+          "dll_size_bytes": 1123384,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-07-14T20:01:17.1560000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e7e2a53f4ae5a5e8fbb6a6b6f62a7efdf484f1e5838d1f3827b4ada390337465.dll.zst",
+            "zst_sha256": "e7e2a53f4ae5a5e8fbb6a6b6f62a7efdf484f1e5838d1f3827b4ada390337465",
+            "zst_size_bytes": 534209,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.9.2602.17",
+      "package_sha512": "/veJx9+P/18CCCXIQ5979BUHUrZjP9+VyFVGYPsYwPBP+t0s7VJtt78nWJKFk5QqwVKf7RsZTAWYKJvCA5xCMA==",
+      "published_at": "2026-02-25T17:31:07.497Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.9.2602.17",
+          "dll_sha256": "b86a738ece4c05dbe2d9bbb29668a2ccb28a0740773c9b027cdc61e8d07b4d75",
+          "dll_size_bytes": 17951808,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-02-20T22:09:21.4620000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c63052cfe2559809edc9d89c5df50722fd014ad1ee2e73fcc83439d293483558.dll.zst",
+            "zst_sha256": "c63052cfe2559809edc9d89c5df50722fd014ad1ee2e73fcc83439d293483558",
+            "zst_size_bytes": 6808404,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.9.2602.17",
+          "dll_sha256": "058f2f52a680c38b223a5615b7df969def21f77e577562e5099d971dede992de",
+          "dll_size_bytes": 1503304,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-02-20T22:09:17.8680000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1ea4d1706b1de22cfc92692e004839f746badb635b41c692eb7996627b1bc962.dll.zst",
+            "zst_sha256": "1ea4d1706b1de22cfc92692e004839f746badb635b41c692eb7996627b1bc962",
+            "zst_size_bytes": 633112,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.9.2602.17",
+          "dll_sha256": "4b1ed5c02a6626ec6d506110d343e941993d53a76b0ea83f4afca709f5bc043a",
+          "dll_size_bytes": 13092896,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-02-20T22:06:00.3490000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b2de1e5d627d0c3483daa43fc90643d736bc07b532cca26a53e03dabce550831.dll.zst",
+            "zst_sha256": "b2de1e5d627d0c3483daa43fc90643d736bc07b532cca26a53e03dabce550831",
+            "zst_size_bytes": 5658129,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.9.2602.17",
+          "dll_sha256": "a6d8b310c49af6208f5537dd3d62d579cb54778325c75a394fa785d9cc25bb7b",
+          "dll_size_bytes": 1129504,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-02-20T22:05:56.5790000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7c9d49f95056eeedec5a72671eb6fda530b4bac7b220f292150b7fce723f33f1.dll.zst",
+            "zst_sha256": "7c9d49f95056eeedec5a72671eb6fda530b4bac7b220f292150b7fce723f33f1",
+            "zst_size_bytes": 536810,
+            "compression_level": 12
+          }
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.9.2602.24",
+      "package_sha512": "NUGCqlj1KNUTj/K/yX/UjNHP6ND8/xRoMNNddjDnPkux2zqjmw6Aff6QW/E9S5Yin5OFrBTVYoMdv90NKOr7BQ==",
+      "published_at": "2026-05-27T21:35:24.650Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.9.2602.24",
+          "dll_sha256": "9b5e10ed756c461b4ec2c83a99f1d6ace20e97826e9c0b0e966b7b1cd6f2aec6",
+          "dll_size_bytes": 17987384,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-27T00:12:51.2440000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/dec8243837a373ab1eae156b32fd127be21cb490c28f4c750acb2e32672650e2.dll.zst",
+            "zst_sha256": "dec8243837a373ab1eae156b32fd127be21cb490c28f4c750acb2e32672650e2",
+            "zst_size_bytes": 6817822,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.9.2602.24",
+          "dll_sha256": "cbcfe883a09fd0ca1f98abdf3a9553b560895e3283a136da82a8381253a169df",
+          "dll_size_bytes": 1503072,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-05-27T00:12:45.4970000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2b78bc66db32470710a83c499b67c311e5e106b13051dfe7b3dc7b3934a35081.dll.zst",
+            "zst_sha256": "2b78bc66db32470710a83c499b67c311e5e106b13051dfe7b3dc7b3934a35081",
+            "zst_size_bytes": 633059,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.9.2602.24",
+          "dll_sha256": "b283fbc1ea993cd003f13f925e8b5e33fb11c7e96d1e4e8fb4d66cbe368dd97e",
+          "dll_size_bytes": 13122912,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-05-26T23:58:05.9910000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/878010b2c3d1931deebada1564cc44591fb9f087f8593a2443d18497ded8dfc3.dll.zst",
+            "zst_sha256": "878010b2c3d1931deebada1564cc44591fb9f087f8593a2443d18497ded8dfc3",
+            "zst_size_bytes": 5671741,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.9.2602.24",
+          "dll_sha256": "1fde4b796ffafd42be7ef3e64f98de5bb61acf52a337b61f69bd990c87d9f606",
+          "dll_size_bytes": 1129784,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-26T23:58:00.0900000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6dae3933b9601fd43b995ff6a5ee8430c3aba635498477bf29f6ea0a78bb7634.dll.zst",
+            "zst_sha256": "6dae3933b9601fd43b995ff6a5ee8430c3aba635498477bf29f6ea0a78bb7634",
+            "zst_size_bytes": 536793,
+            "compression_level": 12
+          }
+        }
+      ]
+    }
+  ]
+}

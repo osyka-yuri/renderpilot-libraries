@@ -1,0 +1,522 @@
+#!/usr/bin/env node
+
+import { randomUUID } from "node:crypto";
+import { execFile } from "node:child_process";
+import {
+  link,
+  lstat,
+  mkdtemp,
+  mkdir,
+  open,
+  readFile,
+  rm,
+  writeFile,
+} from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { promisify } from "node:util";
+import { constants as zlibConstants, zstdCompress } from "node:zlib";
+
+import { microsoftLibraryVendor, repoRoot } from "./catalog.mjs";
+import { errorMessage } from "./lib/common.mjs";
+import { appendGithubOutput } from "./lib/github-actions.mjs";
+import { fetchWithTimeout } from "./lib/http.mjs";
+import { sha256Hex } from "./lib/hash.mjs";
+import { readJsonFileAsync, writeJsonFileAtomic } from "./lib/json.mjs";
+import {
+  assertLockBackfillsSignatures,
+  assertLockSemantics,
+  assertLockExtendsBaseline,
+  assertReleaseContentIdentity,
+  assertReleaseBackfillsSignatures,
+  contentAddressedObjectKey,
+  fetchPackageSha512,
+  listedStableReleases,
+  pathForPackageMember,
+  selectPackageFiles,
+  sortLock,
+  verifyPackageSha512,
+} from "./lib/microsoft-nuget.mjs";
+
+const execFileAsync = promisify(execFile);
+const zstdCompressAsync = promisify(zstdCompress);
+const CONFIG_FILE = path.join(repoRoot, microsoftLibraryVendor.configFile);
+const LOCK_FILE = path.join(repoRoot, microsoftLibraryVendor.lockFile);
+const CDN_DIR = path.join(repoRoot, "cdn");
+const INSPECT_SCRIPT = path.join(repoRoot, "scripts", "inspect-pe.ps1");
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  const [config, lock] = await Promise.all([
+    readJsonFileAsync(CONFIG_FILE),
+    readJsonFileAsync(LOCK_FILE),
+  ]);
+  assertLockSemantics(lock, config);
+  const immutableBaseline = structuredClone(lock);
+
+  const products = options.product
+    ? config.products.filter((product) => product.key === options.product)
+    : config.products;
+  if (products.length === 0)
+    throw new Error(`unknown Microsoft product ${options.product}`);
+
+  const missing = [];
+  const upstreamByPackage = new Map();
+  for (const product of products) {
+    const upstream = await listedStableReleases(product.package_id);
+    upstreamByPackage.set(product.package_id, upstream);
+    if (upstream.length < product.expected_listed_stable_releases) {
+      throw new Error(
+        `${product.package_id}: expected at least ${product.expected_listed_stable_releases} listed stable releases, got ${upstream.length}`,
+      );
+    }
+    const locked = new Set(
+      lock.releases
+        .filter((release) => release.package_id === product.package_id)
+        .map((release) => release.package_version),
+    );
+    for (const release of upstream) {
+      if (!locked.has(release.packageVersion)) missing.push({ product, release });
+    }
+    console.log(
+      `${product.package_id}: ${upstream.length} listed stable, ${upstream.length - missing.filter((item) => item.product === product).length} locked`,
+    );
+  }
+
+  await appendGithubOutput({
+    status: missing.length === 0 ? "current" : "update_available",
+    count: String(missing.length),
+  });
+  if (options.materializeLocked) {
+    await materializeLockedReleases(
+      products,
+      lock,
+      immutableBaseline,
+      upstreamByPackage,
+      config,
+    );
+    return;
+  }
+  if (options.backfillSignatures) {
+    if (missing.length > 0) {
+      throw new Error(
+        "signature backfill requires a current lock; import missing releases with --write first",
+      );
+    }
+    await backfillLockedSignatureMetadata(
+      products,
+      lock,
+      immutableBaseline,
+      upstreamByPackage,
+      config,
+    );
+    return;
+  }
+  if (missing.length === 0) {
+    console.log("Microsoft NuGet lock is current.");
+    return;
+  }
+  console.log(`Missing listed stable releases: ${missing.length}`);
+  if (!options.write) {
+    for (const { product, release } of missing) {
+      console.log(`  ${product.key}: ${release.packageVersion}`);
+    }
+    return;
+  }
+
+  await mkdir(CDN_DIR, { recursive: true });
+  let completed = 0;
+  const importedReleases = await mapConcurrent(missing, 4, async (item) => {
+    const imported = await importRelease(item);
+    completed += 1;
+    console.log(
+      `[${completed}/${missing.length}] ${item.product.package_id} ${item.release.packageVersion}`,
+    );
+    return imported;
+  });
+  lock.releases.push(...importedReleases);
+  sortLock(lock);
+  assertLockSemantics(lock, config);
+  assertLockExtendsBaseline(lock, immutableBaseline);
+  await writeJsonFileAtomic(LOCK_FILE, lock);
+
+  console.log(
+    `Updated ${path.relative(repoRoot, LOCK_FILE)} with ${missing.length} release(s).`,
+  );
+}
+
+async function importRelease(
+  { product, release },
+  { expectedRelease = null, mode = "new" } = {},
+) {
+  if (!new Set(["new", "rebuild-transport", "signature-backfill"]).has(mode)) {
+    throw new Error(`unsupported Microsoft import mode ${mode}`);
+  }
+  if ((mode === "new") !== (expectedRelease === null)) {
+    throw new Error(`${mode} import mode has inconsistent expected release state`);
+  }
+  const identity = `${release.packageId} ${release.packageVersion}`;
+  const expectedSha512 = await fetchPackageSha512(release.catalogEntry);
+  const response = await fetchWithTimeout(release.packageContent, {
+    timeoutMs: 120_000,
+  });
+  if (!response.ok)
+    throw new Error(`${identity}: nupkg download failed (${response.status})`);
+  const nupkg = Buffer.from(await response.arrayBuffer());
+  verifyPackageSha512(nupkg, expectedSha512, identity);
+
+  const temporary = await mkdtemp(path.join(tmpdir(), "renderpilot-nuget-"));
+  try {
+    const packageFile = path.join(temporary, "package.nupkg");
+    const extractRoot = path.join(temporary, "extract");
+    await mkdir(extractRoot);
+    await writeFile(packageFile, nupkg);
+    const { stdout } = await execFileAsync("tar", ["-tf", packageFile], {
+      maxBuffer: 16 * 1024 * 1024,
+    });
+    const selections = selectPackageFiles(stdout.split(/\r?\n/).filter(Boolean), product);
+    const selected = selections.flatMap(({ architecture, members }) =>
+      members.map((member) => ({ architecture, member })),
+    );
+    await execFileAsync("tar", [
+      "-xf",
+      packageFile,
+      "-C",
+      extractRoot,
+      "--",
+      ...selected.map(({ member }) => member.package_path),
+    ]);
+    const paths = selected.map(({ member }) =>
+      pathForPackageMember(extractRoot, member.package_path),
+    );
+    const extractedStats = await Promise.all(paths.map((filePath) => lstat(filePath)));
+    for (const [index, stats] of extractedStats.entries()) {
+      if (!stats.isFile() || stats.isSymbolicLink()) {
+        throw new Error(
+          `${identity}: selected package member is not a regular file: ${paths[index]}`,
+        );
+      }
+    }
+    const inspections = await inspectPeFiles(paths);
+    const artifacts = [];
+
+    for (const [index, selectedMember] of selected.entries()) {
+      const filePath = paths[index];
+      const inspection = inspections[index];
+      if (inspection.architecture !== selectedMember.architecture.catalog_architecture) {
+        throw new Error(
+          `${identity}: ${selectedMember.member.package_path} is ${inspection.architecture}, expected ${selectedMember.architecture.catalog_architecture}`,
+        );
+      }
+      const dll = await readFile(filePath);
+      const dllSha256 = sha256Hex(dll);
+      const artifact = {
+        architecture: inspection.architecture,
+        package_path: selectedMember.member.package_path,
+        library_id: selectedMember.member.library_id,
+        file_name: selectedMember.member.file_name,
+        pe_version: trimVersion(inspection.pe_version),
+        dll_sha256: dllSha256,
+        dll_size_bytes: dll.length,
+        signature: inspection.signature,
+        r2: null,
+      };
+      const expectedArtifact = expectedRelease?.artifacts.find(
+        (candidate) =>
+          candidate.architecture === artifact.architecture &&
+          candidate.library_id === artifact.library_id,
+      );
+      if (expectedRelease && !expectedArtifact) {
+        throw new Error(
+          `${identity}: locked artifact ${artifact.architecture}/${artifact.library_id} is missing`,
+        );
+      }
+
+      if (mode === "signature-backfill") {
+        artifact.r2 = structuredClone(expectedArtifact.r2);
+      } else {
+        artifact.r2 = await compressAndPersist(
+          release,
+          artifact,
+          dll,
+          expectedArtifact?.r2.compression_level ?? 12,
+        );
+      }
+
+      artifacts.push(artifact);
+    }
+
+    const imported = {
+      product: product.key,
+      package_id: release.packageId,
+      package_version: release.packageVersion,
+      package_sha512: expectedSha512,
+      published_at: release.publishedAt,
+      artifacts,
+    };
+    if (expectedRelease) {
+      if (mode === "signature-backfill") {
+        assertReleaseBackfillsSignatures(imported, expectedRelease);
+      } else assertReleaseContentIdentity(imported, expectedRelease);
+    }
+    return imported;
+  } finally {
+    await rm(temporary, { recursive: true, force: true });
+  }
+}
+
+async function backfillLockedSignatureMetadata(
+  products,
+  lock,
+  immutableBaseline,
+  upstreamByPackage,
+  config,
+) {
+  const productByKey = new Map(products.map((product) => [product.key, product]));
+  const targets = lock.releases.filter(
+    (release) =>
+      productByKey.has(release.product) &&
+      release.artifacts.some((artifact) => artifact.signature.signed_at === null),
+  );
+  if (targets.length === 0) {
+    console.log("Every selected Microsoft artifact already has signature metadata.");
+    return;
+  }
+
+  let completed = 0;
+  let persistChain = Promise.resolve();
+  await mapConcurrent(targets, 4, async (expectedRelease) => {
+    const product = productByKey.get(expectedRelease.product);
+    const release = upstreamByPackage
+      .get(expectedRelease.package_id)
+      ?.find((candidate) => candidate.packageVersion === expectedRelease.package_version);
+    if (!release) {
+      throw new Error(
+        `${expectedRelease.package_id} ${expectedRelease.package_version}: locked release is absent from Registration API`,
+      );
+    }
+
+    const enriched = await importRelease(
+      { product, release },
+      {
+        expectedRelease,
+        mode: "signature-backfill",
+      },
+    );
+    const index = lock.releases.indexOf(expectedRelease);
+    if (index < 0) {
+      throw new Error(
+        `${expectedRelease.package_id} ${expectedRelease.package_version}: concurrent lock update lost its target`,
+      );
+    }
+    lock.releases[index] = enriched;
+    sortLock(lock);
+    assertLockSemantics(lock, config);
+    assertLockBackfillsSignatures(lock, immutableBaseline);
+    persistChain = persistChain.then(() => writeJsonFileAtomic(LOCK_FILE, lock));
+    await persistChain;
+
+    completed += 1;
+    console.log(
+      `[${completed}/${targets.length}] verified signatures ${release.packageId} ${release.packageVersion}`,
+    );
+  });
+
+  const remaining = lock.releases
+    .filter((release) => productByKey.has(release.product))
+    .flatMap((release) => release.artifacts)
+    .filter((artifact) => artifact.signature.signed_at === null);
+  console.log(
+    `Verified signature metadata for ${targets.length} locked release(s); ${remaining.length} artifact timestamp(s) are genuinely absent.`,
+  );
+}
+
+async function compressAndPersist(release, artifact, dll, compressionLevel = 12) {
+  const compressed = await zstdCompressAsync(dll, {
+    params: {
+      [zlibConstants.ZSTD_c_compressionLevel]: compressionLevel,
+      [zlibConstants.ZSTD_c_checksumFlag]: 1,
+    },
+  });
+  const zstSha256 = sha256Hex(compressed);
+  const objectKey = contentAddressedObjectKey(zstSha256);
+  await writeImmutableObject(path.join(CDN_DIR, objectKey), compressed);
+  return {
+    object_key: objectKey,
+    zst_sha256: zstSha256,
+    zst_size_bytes: compressed.length,
+    compression_level: compressionLevel,
+  };
+}
+
+async function materializeLockedReleases(
+  products,
+  lock,
+  immutableBaseline,
+  upstreamByPackage,
+  config,
+) {
+  await mkdir(CDN_DIR, { recursive: true });
+  const productByKey = new Map(products.map((product) => [product.key, product]));
+  const targets = lock.releases.filter(
+    (release) => productByKey.has(release.product) && release.artifacts.length > 0,
+  );
+  let completed = 0;
+  const rebuiltByRelease = new Map();
+
+  await mapConcurrent(targets, 4, async (expectedRelease) => {
+    const product = productByKey.get(expectedRelease.product);
+    const release = upstreamByPackage
+      .get(expectedRelease.package_id)
+      ?.find((candidate) => candidate.packageVersion === expectedRelease.package_version);
+    if (!release) {
+      throw new Error(
+        `${expectedRelease.package_id} ${expectedRelease.package_version}: locked release is absent from Registration API`,
+      );
+    }
+    const rebuilt = await importRelease(
+      { product, release },
+      {
+        expectedRelease,
+        mode: "rebuild-transport",
+      },
+    );
+    rebuiltByRelease.set(expectedRelease, rebuilt);
+    completed += 1;
+    console.log(
+      `[${completed}/${targets.length}] materialized ${release.packageId} ${release.packageVersion}`,
+    );
+  });
+
+  for (const expectedRelease of targets) {
+    const index = lock.releases.indexOf(expectedRelease);
+    const rebuilt = rebuiltByRelease.get(expectedRelease);
+    if (index < 0 || !rebuilt) {
+      throw new Error(
+        `${expectedRelease.package_id} ${expectedRelease.package_version}: rebuilt release was lost`,
+      );
+    }
+    lock.releases[index] = rebuilt;
+  }
+  sortLock(lock);
+  assertLockSemantics(lock, config);
+  assertLockExtendsBaseline(lock, immutableBaseline);
+  await writeJsonFileAtomic(LOCK_FILE, lock);
+  console.log(
+    `Rebuilt ${targets.length} release(s) and updated their content-addressed transport metadata.`,
+  );
+}
+
+async function inspectPeFiles(paths) {
+  const { stdout } = await execFileAsync(
+    "pwsh",
+    ["-NoLogo", "-NoProfile", "-File", INSPECT_SCRIPT, ...paths],
+    { maxBuffer: 4 * 1024 * 1024 },
+  );
+  const parsed = JSON.parse(stdout);
+  const inspections = Array.isArray(parsed) ? parsed : [parsed];
+  if (inspections.length !== paths.length) {
+    throw new Error(
+      `PE inspector returned ${inspections.length} results for ${paths.length} files`,
+    );
+  }
+  return inspections;
+}
+
+async function writeImmutableObject(file, bytes) {
+  await mkdir(path.dirname(file), { recursive: true });
+  try {
+    const existing = await readFile(file);
+    if (!existing.equals(bytes))
+      throw new Error(`${file}: immutable object has other bytes`);
+    return;
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error;
+  }
+
+  // Publish a fully flushed inode with an exclusive hard-link. This keeps a
+  // crash from leaving a partial file at its immutable content-addressed name,
+  // while concurrent writers can only converge on identical bytes.
+  const temporary = `${file}.tmp-${process.pid}-${randomUUID()}`;
+  let handle;
+  try {
+    handle = await open(temporary, "wx");
+    await handle.writeFile(bytes);
+    await handle.sync();
+    await handle.close();
+    handle = undefined;
+    try {
+      await link(temporary, file);
+    } catch (error) {
+      if (error?.code !== "EEXIST") throw error;
+      const existing = await readFile(file);
+      if (!existing.equals(bytes)) {
+        throw new Error(`${file}: immutable object has other bytes`);
+      }
+    }
+  } finally {
+    await handle?.close().catch(() => undefined);
+    await rm(temporary, { force: true });
+  }
+}
+
+function parseArgs(argv) {
+  const options = {
+    write: false,
+    materializeLocked: false,
+    backfillSignatures: false,
+    product: null,
+  };
+  for (let index = 0; index < argv.length; index += 1) {
+    const argument = argv[index];
+    if (argument === "--write") options.write = true;
+    else if (argument === "--check") options.write = false;
+    else if (argument === "--materialize-locked") options.materializeLocked = true;
+    else if (argument === "--backfill-signatures") options.backfillSignatures = true;
+    else if (argument.startsWith("--product=")) {
+      const value = argument.slice(10);
+      if (!value.trim()) throw new Error("--product requires a non-empty product id");
+      options.product = value;
+    } else if (argument === "--product") {
+      const value = argv[++index];
+      if (!value || value.startsWith("--")) {
+        throw new Error("--product requires a non-empty product id");
+      }
+      options.product = value;
+    } else throw new Error(`unknown argument ${argument}`);
+  }
+  if (
+    [options.write, options.materializeLocked, options.backfillSignatures].filter(Boolean)
+      .length > 1
+  ) {
+    throw new Error(
+      "--write, --materialize-locked, and --backfill-signatures are mutually exclusive",
+    );
+  }
+  return options;
+}
+
+function trimVersion(version) {
+  const parts = version.split(".");
+  while (parts.length > 1 && parts.at(-1) === "0") parts.pop();
+  return parts.join(".");
+}
+
+async function mapConcurrent(values, concurrency, operation) {
+  let nextIndex = 0;
+  const results = new Array(values.length);
+  async function worker() {
+    while (nextIndex < values.length) {
+      const index = nextIndex;
+      nextIndex += 1;
+      results[index] = await operation(values[index]);
+    }
+  }
+  await Promise.all(Array.from({ length: concurrency }, () => worker()));
+  return results;
+}
+
+main().catch((error) => {
+  console.error(errorMessage(error));
+  process.exitCode = 1;
+});

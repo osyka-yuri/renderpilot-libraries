@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/microsoft_nuget_config.schema.json",
+  "title": "RenderPilot Microsoft NuGet product configuration",
+  "description": "Product, architecture, and runtime-file matrix used to import Microsoft runtimes from NuGet.",
+  "type": "object",
+  "required": ["schema_version", "products"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "products": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/product" }
+    }
+  },
+  "$defs": {
+    "product": {
+      "type": "object",
+      "required": [
+        "key",
+        "package_id",
+        "expected_listed_stable_releases",
+        "architectures",
+        "files",
+        "compatibility"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "enum": ["d3d12_agility", "dxc", "directstorage"]
+        },
+        "package_id": { "type": "string", "minLength": 1 },
+        "expected_listed_stable_releases": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "architectures": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/architecture" }
+        },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/runtimeFile" }
+        },
+        "compatibility": { "enum": ["d3d12_sdk", null] }
+      }
+    },
+    "architecture": {
+      "type": "object",
+      "required": ["package_directory", "catalog_architecture", "required"],
+      "additionalProperties": false,
+      "properties": {
+        "package_directory": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._-]+$"
+        },
+        "catalog_architecture": { "enum": ["X64", "X86"] },
+        "required": { "type": "boolean" }
+      }
+    },
+    "runtimeFile": {
+      "type": "object",
+      "required": ["library_id", "file_name"],
+      "additionalProperties": false,
+      "properties": {
+        "library_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "file_name": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._-]+\\.dll$"
+        }
+      }
+    }
+  }
+}

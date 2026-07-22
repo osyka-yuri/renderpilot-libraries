@@ -4,7 +4,7 @@
 // - which JSON file is published to R2;
 // - where the R2 bucket, endpoint, and public host live.
 //
-// Both validate.mjs and publish-r2.mjs should import from this module so
+// Both validation and publication scripts should import from this module so
 // validation and publishing rules cannot drift apart.
 
 import path from "node:path";
@@ -19,8 +19,57 @@ export const sharedFiles = Object.freeze({
   steamExeCache: resolveRepoPath("scripts", "steam-appid-exe.json"),
 });
 
+const defineLibraryVendors = (vendors) =>
+  Object.freeze(vendors.map((vendor) => Object.freeze({ ...vendor })));
+
+// Every library vendor and every repository path needed to build its public
+// snapshot. Microsoft is sourced from its NuGet config/lock instead of a
+// curated vendor document, but it follows the same explicit output contract.
+export const libraryVendors = defineLibraryVendors([
+  {
+    vendorId: "nvidia",
+    sourceKind: "curated",
+    sourceFile: "catalogs/libraries/nvidia.json",
+    outputFile: "libraries/v1/vendors/nvidia.json",
+  },
+  {
+    vendorId: "amd",
+    sourceKind: "curated",
+    sourceFile: "catalogs/libraries/amd.json",
+    outputFile: "libraries/v1/vendors/amd.json",
+  },
+  {
+    vendorId: "intel",
+    sourceKind: "curated",
+    sourceFile: "catalogs/libraries/intel.json",
+    outputFile: "libraries/v1/vendors/intel.json",
+  },
+  {
+    vendorId: "microsoft",
+    sourceKind: "microsoft-nuget",
+    configFile: "catalogs/libraries/microsoft-nuget.config.json",
+    lockFile: "catalogs/libraries/microsoft-nuget.lock.json",
+    outputFile: "libraries/v1/vendors/microsoft.json",
+  },
+]);
+
+export const curatedLibraryVendors = Object.freeze(
+  libraryVendors.filter(({ sourceKind }) => sourceKind === "curated"),
+);
+
+export const microsoftLibraryVendor = libraryVendors.find(
+  ({ sourceKind }) => sourceKind === "microsoft-nuget",
+);
+
+export const libraryIndexFile = "libraries/v1/index.json";
+
 const SCHEMAS = Object.freeze({
   libraryCatalog: "schemas/library_catalog.schema.json",
+  libraryIndexV1: "schemas/library_index_v1.schema.json",
+  libraryVendorV1: "schemas/library_vendor_v1.schema.json",
+  libraryVendorSource: "schemas/library_vendor_source.schema.json",
+  microsoftNuGetConfig: "schemas/microsoft_nuget_config.schema.json",
+  microsoftNuGetLock: "schemas/microsoft_nuget_lock.schema.json",
   dlssPresetManifest: "schemas/dlss_preset_manifest.schema.json",
   dlssSettingsCatalog: "schemas/dlss_settings_catalog.schema.json",
   renodxManifestV1: "catalogs/addons/renodx/manifest-v1.schema.json",
@@ -43,10 +92,35 @@ const defineDocuments = (documents) =>
  * Current add-on catalogues are versioned under `addons/v1/`.
  */
 export const jsonDocuments = defineDocuments([
+  ...curatedLibraryVendors.map(({ sourceFile }) => ({
+    file: sourceFile,
+    schema: SCHEMAS.libraryVendorSource,
+    publishedToR2: false,
+  })),
+  {
+    file: microsoftLibraryVendor.configFile,
+    schema: SCHEMAS.microsoftNuGetConfig,
+    publishedToR2: false,
+  },
+  {
+    file: microsoftLibraryVendor.lockFile,
+    schema: SCHEMAS.microsoftNuGetLock,
+    publishedToR2: false,
+  },
   {
     file: "manifest.json",
     schema: SCHEMAS.libraryCatalog,
-    r2Key: "manifest.json",
+    publishedToR2: false,
+  },
+  ...libraryVendors.map(({ outputFile }) => ({
+    file: outputFile,
+    schema: SCHEMAS.libraryVendorV1,
+    publishedToR2: false,
+  })),
+  {
+    file: libraryIndexFile,
+    schema: SCHEMAS.libraryIndexV1,
+    r2Key: "libraries/v1/index.json",
     publishedToR2: true,
   },
   {

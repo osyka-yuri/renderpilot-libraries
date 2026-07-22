@@ -1,8 +1,9 @@
 name: Publish
 
 # Validate every JSON manifest against its schema, then — only on main —
-# publish the app-fetched JSON to Cloudflare R2. Binaries (cdn/*.dll.zst) are
-# not in git; the owner uploads them locally via `pnpm run publish`.
+# publish the app-fetched JSON to Cloudflare R2. Binaries are uploaded and
+# HEAD-verified by the Microsoft refresh workflow before its catalog PR opens;
+# JSON-only publication refuses to commit the v1 index if any blob is missing.
 
 on:
   push:
@@ -20,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: pnpm/action-setup@v6
         with:
           # pnpm 11.12.0 currently breaks action-setup's self-installer:
@@ -31,9 +34,11 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm run check
+        env:
+          MICROSOFT_NUGET_BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'HEAD^' }}
 
   publish:
-    name: Publish JSON manifests to R2
+    name: Publish immutable snapshots and index to R2
     needs: validate
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest

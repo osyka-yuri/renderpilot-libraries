@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/library_index_v1.schema.json",
+  "title": "RenderPilot library index v1",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "vendors"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "vendors": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/vendor" }
+    }
+  },
+  "$defs": {
+    "vendor": {
+      "type": "object",
+      "required": [
+        "vendor_id",
+        "display_name",
+        "snapshot_key",
+        "snapshot_sha256",
+        "snapshot_size_bytes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "vendor_id": { "$ref": "#/$defs/id" },
+        "display_name": { "type": "string", "minLength": 1 },
+        "snapshot_key": {
+          "description": "Immutable R2 key for the exact vendor snapshot bytes represented by the local generated vendor file.",
+          "type": "string",
+          "pattern": "^libraries/v1/vendors/[a-z][a-z0-9._-]*/[0-9a-f]{64}\\.json$"
+        },
+        "snapshot_sha256": { "$ref": "#/$defs/sha256" },
+        "snapshot_size_bytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9._-]*$" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

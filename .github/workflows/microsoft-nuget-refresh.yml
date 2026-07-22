@@ -1,0 +1,98 @@
+name: Microsoft NuGet refresh
+
+on:
+  schedule:
+    - cron: "45 5 * * *"
+  workflow_dispatch:
+    inputs:
+      materialize_locked:
+        description: "Re-verify and recompress every selected locked payload"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: microsoft-nuget-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    name: Import listed stable Microsoft runtimes
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.11.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Detect every missing listed stable release
+        id: detect
+        run: pnpm run refresh:microsoft:check
+
+      - name: Verify Windows signature tooling
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        shell: pwsh
+        run: |
+          if (-not (Get-Command Get-AuthenticodeSignature -ErrorAction SilentlyContinue)) {
+            throw 'Get-AuthenticodeSignature is unavailable on this runner'
+          }
+          pnpm run test:authenticode
+
+      - name: Import, verify, and compress all missing releases
+        if: success() && steps.detect.outputs.status == 'update_available'
+        run: pnpm run refresh:microsoft:write
+
+      - name: Rebuild every locked payload (initial backfill / disaster recovery)
+        if: success() && inputs.materialize_locked
+        run: pnpm run materialize:microsoft
+
+      - name: Generate and validate the public catalog
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        run: |
+          pnpm run libraries:generate
+          pnpm run libraries:check
+          pnpm run validate
+          pnpm run validate:microsoft
+
+      # Immutable binaries are uploaded before the PR makes their metadata
+      # visible. A failed upload/HEAD verification stops the job here.
+      - name: Publish immutable binaries and verify R2 metadata
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        run: pnpm run publish:binaries
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+
+      - name: Open catalog pull request
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: chore/microsoft-nuget-${{ github.run_id }}
+          delete-branch: true
+          commit-message: "chore(microsoft): refresh NuGet runtime catalog"
+          title: "chore(microsoft): refresh NuGet runtime catalog"
+          body: |
+            Automated import of every missing listed, stable Microsoft runtime
+            release and/or rebuild of content-addressed ZST transport objects.
+
+            The Windows importer verified NuGet SHA-512 metadata, exact package
+            layout, PE architecture/FileVersion, Authenticode, immutable object
+            identity, and the generated vendor snapshot. Transport objects are addressed
+            by their compressed SHA-256; binary payloads were uploaded and
+            HEAD-verified in R2 before this PR was opened.
+
+            Package composition is explicit in the generated Microsoft snapshot.
+          add-paths: |
+            catalogs/libraries/microsoft-nuget.lock.json
+            libraries/v1/vendors/microsoft.json
+            libraries/v1/index.json

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/microsoft_nuget_lock.schema.json",
+  "title": "RenderPilot Microsoft NuGet lock",
+  "type": "object",
+  "required": ["schema_version", "releases"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 2 },
+    "releases": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/release" }
+    }
+  },
+  "$defs": {
+    "release": {
+      "type": "object",
+      "required": [
+        "product",
+        "package_id",
+        "package_version",
+        "package_sha512",
+        "published_at",
+        "artifacts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "product": {
+          "type": "string",
+          "enum": ["d3d12_agility", "dxc", "directstorage"]
+        },
+        "package_id": { "type": "string", "minLength": 1 },
+        "package_version": {
+          "type": "string",
+          "pattern": "^[0-9]+(\\.[0-9]+){0,3}$"
+        },
+        "package_sha512": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9+/]{86}==$"
+        },
+        "published_at": { "type": "string", "format": "date-time" },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/artifact" }
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "architecture",
+        "package_path",
+        "library_id",
+        "file_name",
+        "pe_version",
+        "dll_sha256",
+        "dll_size_bytes",
+        "signature",
+        "r2"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "architecture": { "type": "string", "enum": ["X64", "X86"] },
+        "package_path": { "type": "string", "minLength": 1 },
+        "library_id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "file_name": { "type": "string", "pattern": "^[A-Za-z0-9._]+\\.dll$" },
+        "pe_version": {
+          "type": "string",
+          "pattern": "^[0-9]+(\\.[0-9]+){0,3}$"
+        },
+        "dll_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "dll_size_bytes": { "type": "integer", "minimum": 1 },
+        "signature": {
+          "type": "object",
+          "required": ["status", "subject", "thumbprint", "signed_at"],
+          "additionalProperties": false,
+          "properties": {
+            "status": { "const": "signed" },
+            "subject": { "type": "string", "minLength": 1 },
+            "thumbprint": { "type": "string", "pattern": "^[A-F0-9]{40,64}$" },
+            "signed_at": { "type": ["string", "null"], "format": "date-time" }
+          }
+        },
+        "r2": {
+          "description": "Provider-specific metadata for the replaceable compressed representation stored in Cloudflare R2.",
+          "type": "object",
+          "required": ["object_key", "zst_sha256", "zst_size_bytes", "compression_level"],
+          "additionalProperties": false,
+          "properties": {
+            "object_key": {
+              "type": "string",
+              "pattern": "^libraries/blobs/sha256/[0-9a-f]{64}\\.dll\\.zst$"
+            },
+            "zst_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "zst_size_bytes": { "type": "integer", "minimum": 1 },
+            "compression_level": { "type": "integer", "minimum": 1, "maximum": 22 }
+          }
+        }
+      }
+    }
+  }
+}

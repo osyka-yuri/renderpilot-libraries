@@ -4,7 +4,14 @@ Source and publication tooling for RenderPilot's graphics-library catalogues and
 
 ## Layout
 
-- `manifest.json`, `dlss_*.json`, `schemas/` — binary-library and DLSS catalogues; their existing wire contracts are unchanged.
+- `catalogs/libraries/{nvidia,amd,intel}.json` — reviewed vendor sources with explicit installable packages and immutable DLL/transport identities.
+- `catalogs/libraries/microsoft-nuget.{lock,config}.json` — reproducible NuGet package, DLL, Authenticode, and transport lock with product configuration.
+- `libraries/v1/index.json` + `libraries/v1/vendors/*.json` — generated package-first public catalogue (schema v1). The root `manifest.json` is frozen for legacy clients and is not published by current tooling.
+- `schemas/` — JSON Schemas for every validated document, including the library index, vendor sources/snapshots, and Microsoft NuGet config/lock.
+- `scripts/generate-library-catalog.mjs` — deterministic generator: reads curated sources and NuGet lock, produces vendor snapshots and library index.
+- `scripts/libraries.mjs` — unified CLI for generate/validate/refresh/publish/audit-published commands.
+- `scripts/refresh-microsoft-nuget.mjs` — imports, verifies (NuGet SHA-512, PE, Authenticode), compresses, and persists Microsoft runtime releases.
+- `scripts/validate-microsoft-nuget.mjs` — validates NuGet lock semantics, baseline immutability, and published DirectStorage identities.
 - `catalogs/addons/luma` — curated Luma profiles, Wiki review data, schema, generator, and tests.
 - `catalogs/addons/renodx` — RenoDX Wiki snapshot, curated overrides, schemas, generator, and tests.
 - `catalogs/addons/reshade` — ReShade channel model (`lib/build-manifest.mjs`), schema, and generator inputs.
@@ -24,17 +31,25 @@ Current add-on manifests use structured localized text: an application resolves 
 
 ## Commands
 
-Requires **Node.js 24+** (current LTS; matches CI).
+Requires **Node.js 24+**. Microsoft refresh CI follows the latest patched Node 24
+release; compressed payload bytes are not tied to a particular Node or zstd patch.
 
 ```powershell
 pnpm install
 pnpm run generate:reshade
 pnpm run generate:renodx
 pnpm run generate:luma
+pnpm run libraries:generate
 pnpm run check
+pnpm run refresh:microsoft:check
+pnpm run refresh:microsoft:write
+pnpm run materialize:microsoft
+pnpm run backfill:microsoft-signatures
 pnpm run refresh:reshade:check
 pnpm run check:upstream-health
 pnpm run check:wiki-drift
+pnpm run check:published-json
+pnpm run publish:binaries
 pnpm run publish:json:dry-run
 ```
 
@@ -42,11 +57,19 @@ pnpm run publish:json:dry-run
 
 `pnpm run check:offline` is the network-free subset (format + validate + generated + unit tests) used by the ReShade refresh bot before opening a PR.
 
+`refresh:microsoft:check` reads NuGet V3 Registration and Catalog Details and considers only listed stable releases. `refresh:microsoft:write` runs on Windows and imports every missing D3D12 Agility, DXC, and DirectStorage release after NuGet SHA-512, package-layout, PE, and Authenticode checks. DXC x86 is optional per package but each architecture is always a complete `dxcompiler.dll` + `dxil.dll` pair. `materialize:microsoft` re-verifies and recompresses every selected locked package. Refresh commands update only the lock and transport blobs; run `pnpm run libraries:generate` explicitly before validation or publication. A compressed payload is replaceable transport, not library identity: blobs live under `libraries/blobs/sha256/`, while NuGet and decompressed DLL identities remain immutable. The internal NuGet lock calls its provider-specific compressed representation `r2`; generation projects that metadata into the provider-neutral public `transport` contract.
+
+The Windows Authenticode inspector verifies RFC 3161 tokens against the exact CMS signer (and validates legacy PKCS#9 countersignatures) before recording `signed_at`; an absent timestamp remains `null`, while malformed or unverifiable timestamp attributes fail the import. Microsoft imports therefore include the signer subject and certificate thumbprint. Older manually curated AMD, Intel, and NVIDIA records retain only historically captured signature metadata, so optional certificate fields can be absent without implying an unsigned binary. `backfill:microsoft-signatures` is the reproducible metadata-enrichment path for older Microsoft lock rows: it re-verifies NuGet SHA-512, DLL identity, and immutable ZST bytes and permits only `signed_at: null` to become a verified timestamp.
+
+`pnpm run test:authenticode` is Windows-specific and intentionally excluded from the portable `pnpm check` path. The Microsoft refresh workflow runs it before importing or materializing binaries; run it locally on Windows when changing the signature inspector or timestamp verifier.
+
+`pnpm run check:published-json` is an explicit post-publication check that fetches every served JSON from R2 and compares SHA-256 against local files to confirm byte-for-byte publication. `pnpm run validate:microsoft` asserts NuGet lock semantics, baseline immutability, and checks DirectStorage identities against a known map; it is included in the default `pnpm check` path.
+
 `pnpm run refresh:reshade:check` detects a newer stable ReShade Addon installer; `refresh:reshade:write` rewrites `scripts/lib/reshade-sources.mjs` and regenerates `addons/v1/reshade.json` only. Scheduled workflows open a PR when an update is live — they do not push to `main` or write R2. `pnpm run check:upstream-health` probes committed pins (ReShade channels and Luma managed-dependency archives); it is schedule-only and not part of default `pnpm check`.
 
 `pnpm run check:wiki-drift` runs RenoDX + Luma wiki `--check` (no writes). Like upstream-health it is schedule-only and not part of default `pnpm check` (PR CI already runs `sync:*-wiki:check`). The daily `wiki-drift` workflow uses `--notify` and upserts/closes GitHub Issues titled `wiki-drift: renodx` / `wiki-drift: luma` only when classifiers see **explicit catalogue drift markers** (not soft network skips or unclassified failures).
 
-`scripts/catalog.mjs` is the repository and publication registry: generators, synchronizers, matchers, validators, and remote checks take add-on source/output paths, schemas, and explicit R2 keys from it. Versioned object paths are preserved during publication.
+`scripts/catalog.mjs` is the repository and publication registry: generators, synchronizers, matchers, validators, and remote checks take add-on source/output paths, schemas, and explicit R2 keys from it. Generated vendor snapshots use stable local workspace names such as `libraries/v1/vendors/amd.json`; the index binds those exact bytes by SHA-256 and size to immutable, content-addressed R2 `snapshot_key` paths. Versioned object paths are preserved during publication.
 
 ## Curation rules
 
@@ -59,7 +82,9 @@ pnpm run publish:json:dry-run
 
 ## Publishing
 
-`pnpm run publish:json` uploads only JSON with R2 credentials. `pnpm run publish` also uploads local `cdn/*.dll.zst` payloads. The uploader verifies each object after upload. Use `pnpm run check:published-json` after a release when a byte-for-byte remote verification is needed.
+`pnpm run publish` validates every local compressed and decompressed hash before uploading blobs, immutable vendor snapshots, and finally `libraries/v1/index.json` as the sole commit point. `pnpm run publish:binaries` uploads only locally available content-addressed blobs, then HEAD-verifies every referenced blob. `pnpm run publish:json` uploads snapshots and the index only after every referenced blob is HEAD-verified by size and SHA-256 metadata. Recompression creates a new object; no published object is overwritten under another content identity. Use `pnpm run check:published-json` for byte-for-byte remote verification of the index and all referenced vendor snapshots.
+
+Before the first v1 index publication, run `pnpm run publish:binaries` from a workspace containing the migrated curated blobs. CI refresh jobs subsequently upload only the new blobs they materialize. Publication never mutates or deletes the frozen root `manifest.json` or its legacy R2 objects.
 
 Root legacy keys (`renodx_manifest.json`, `reshade_manifest.json`) are no longer published. Publish does not delete objects — remove those keys from the R2 bucket yourself when clients no longer fetch them.
 

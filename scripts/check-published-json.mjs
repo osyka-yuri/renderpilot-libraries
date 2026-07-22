@@ -13,10 +13,13 @@
 //   node scripts/check-published-json.mjs --help
 
 import { readFile } from "node:fs/promises";
+import path from "node:path";
 
-import { publishedJsonDocuments, r2, repoRoot } from "./catalog.mjs";
+import { libraryIndexFile, publishedJsonDocuments, r2, repoRoot } from "./catalog.mjs";
 import { runCliMain } from "./lib/cli-main.mjs";
 import { DEFAULT_TIMEOUT_MS, fetchWithTimeout } from "./lib/http.mjs";
+import { assertLibraryIndex } from "./lib/library-catalog.mjs";
+import { readJsonFileAsync } from "./lib/json.mjs";
 import {
   parseCheckArgs,
   loadLocalJson,
@@ -44,8 +47,14 @@ version or when R2 cannot provide a complete response — run this after
 "pnpm run publish:json" to confirm every byte landed in R2.`;
 
 async function main(options) {
+  const index = await readJsonFileAsync(path.join(repoRoot, libraryIndexFile));
+  assertLibraryIndex(index);
+  const vendorDocuments = index.vendors.map((vendor) => ({
+    file: `libraries/v1/vendors/${vendor.vendor_id}.json`,
+    r2Key: vendor.snapshot_key,
+  }));
   const locals = await Promise.all(
-    publishedJsonDocuments.map((document) =>
+    [...publishedJsonDocuments, ...vendorDocuments].map((document) =>
       loadLocalJson(document, repoRoot, BUF_READ_FILE),
     ),
   );

@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "vendor": {
+    "id": "intel",
+    "display_name": "Intel"
+  },
+  "generated_at": "2026-06-24T18:00:00Z",
+  "artifacts": [
+    {
+      "artifact_key": "libxess_1.0.0.59",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.0.0.59",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "0b423a2f733cbd25c62d15150c92fef361756183776e3d1a0ce9de569431b70b",
+        "size_bytes": 9271976
+      },
+      "transport": {
+        "sha256": "2b8f8a0bb8508ed3bcf42ffa63388e6fee8bdbfd31743c0eda322adf49e23c18",
+        "size_bytes": 1439809
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2021-03-31T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.0.1.12",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.0.1.12",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "4ae10f9bec7391343898da0e22f024c6dea0bd03d754901af2b8a1ed893d7706",
+        "size_bytes": 9272488
+      },
+      "transport": {
+        "sha256": "16f439b9494a5023a5167c30a0906c25f3f0940638e0812fac0a952449857e81",
+        "size_bytes": 1445123
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2021-03-31T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.1.0.18",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.1.0.18",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e8cfbeff0fa7d3c12aa83f18f294808f59f9cfedc91de605fc7958a9a916c2c3",
+        "size_bytes": 15275688
+      },
+      "transport": {
+        "sha256": "f50d236399583d68c47ee0440e0e662ea2acd32373e731ca53612c9fcbfca811",
+        "size_bytes": 3760770
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2021-03-31T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.1.0.21",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.1.0.21",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d393a7a224ed758959de58160f0f5bb58ef272c3aaff5bc76afda4ab0c16f3cf",
+        "size_bytes": 15275688
+      },
+      "transport": {
+        "sha256": "12ed48185a7a43562bf42fc38b949410ab4e1529bbbc8ee662721cbf0f588e7b",
+        "size_bytes": 3760706
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2021-03-31T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.2.0.10",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.2.0.10",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "0462045ab6d5ef1cc089fab72caa4aea8b5c385ac42f2e626fa55121b14102f3",
+        "size_bytes": 67777552
+      },
+      "transport": {
+        "sha256": "16c925119ed258f1f2eeb90e9feb64b1c630520e66bbb8c0b6896804a401f94c",
+        "size_bytes": 24038523
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2023-03-13T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.2.0.13",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.2.0.13",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "3170283f328923dcf74e5c86fb08cea88551b4404046ebfbe16d6d3ab56a7d6c",
+        "size_bytes": 67777552
+      },
+      "transport": {
+        "sha256": "2857e4ef1ee76f79392ca3753f4eb198ada78b649c1a02ebd54276e147e02b20",
+        "size_bytes": 24043444
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2023-03-13T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.3.0.28",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.3.0.28",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d7f0e1f0e6bccdd52b331d2d126abf1bfc30fce18a3f0255b876086eed70d4ca",
+        "size_bytes": 74108944
+      },
+      "transport": {
+        "sha256": "d8004707aa605cebb051a8f4022a96dbce7ec6974607837eaca8dfe758e529da",
+        "size_bytes": 26703255
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2023-03-13T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_1.3.1.32",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.3.1.32",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "703ab8debc05ae209f6e4622cc06edf9f95a241f7ce68ee75c8955564d36ad70",
+        "size_bytes": 67095056
+      },
+      "transport": {
+        "sha256": "f5e58813200c1c6aa8f774a27517d6f8170b142e27b5ddc071ba75036c55ddff",
+        "size_bytes": 26352490
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.0.18",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.0.18",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "208c63f138b456cc579a68bdeb710ea5247a7839c75fc200e0f322930e0d00ef",
+        "size_bytes": 120278928
+      },
+      "transport": {
+        "sha256": "16e350f7c7eddc54b7bd036cdc95ef9403760f7a96dab12e51295725b4329545",
+        "size_bytes": 45047182
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.1.29",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.29",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "1d2589e7e0c78888018cfeac8b889ca58b1f592deba0fcdea3d09d4fabd59448",
+        "size_bytes": 120956304
+      },
+      "transport": {
+        "sha256": "753c16df13b51f6a1283ed08cca2e4b694d760cf72ce05d6bf9bff807307a6df",
+        "size_bytes": 47483983
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.1.32",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.32",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "5950e6383ae18768bccd037de6804e43fdc946d1835064b59dc230bc14b5a464",
+        "size_bytes": 124195680
+      },
+      "transport": {
+        "sha256": "9f8748e86c7fcdc67744c941dcd3ff67ec7084edf78b273b72984a5854ff007f",
+        "size_bytes": 49887272
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.1.34",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.34",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "4b2d2e6a6c90e3f1b3f9897264facf06729206fdb3e10138157021784c49a24d",
+        "size_bytes": 124186512
+      },
+      "transport": {
+        "sha256": "0a125f21ee3a9434f8b1870342e516cc7d71d0044ce6f09585a16011819423b7",
+        "size_bytes": 49874078
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.1.41",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.41",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "23b3ebc802185f537423965c2ee9c8ad8adb5d137b004ce027a4088e629b5fd3",
+        "size_bytes": 77771112
+      },
+      "transport": {
+        "sha256": "a2b786e4ae620094c44cda874ac3fe77063fad61023256652b9d5011be2cea2d",
+        "size_bytes": 29095953
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.2.53",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.2.53",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "a49f487f15a815c1242b659182cc9365b6aff2d94051d25d5379316bdb11a2dd",
+        "size_bytes": 77788528
+      },
+      "transport": {
+        "sha256": "dcf5d89a194ac99e3b8dc458010c91d7a257aa4ea07960b54e4cee779022a4cc",
+        "size_bytes": 29083968
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_2.0.2.68",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.2.68",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
+        "size_bytes": 77795704
+      },
+      "transport": {
+        "sha256": "616ff672310c6f4d12a8ae6cfb7419cee213711b90c8f7ac9196fc70dfd6eeb7",
+        "size_bytes": 29085832
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_0.9.11.9",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "0.9.11.9",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "899bcf6c1168a47cc4c23dba3a06b314e5b3e70b9fe7f3550cb4f595867f6dc4",
+        "size_bytes": 63566736
+      },
+      "transport": {
+        "sha256": "e7760b21935d5e056a7e334797b5e113cec0eefcbf2af87f70390884f46ef052",
+        "size_bytes": 7353118
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.0.0.16",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.0.0.16",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "c7bccfdff498ad313e7780439d2036c5e34ec715ff3d90900de8870957d09ec0",
+        "size_bytes": 59355536
+      },
+      "transport": {
+        "sha256": "8801015d754ec80f225ea5c0f07dfdfd4a1b05ae84a327aab83783da04634c53",
+        "size_bytes": 6364153
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.0.1.26",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.0.1.26",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "784c391b00b08edfc9b3cd65fc007a9e150a434afdc360fd1500b6fc27c55c27",
+        "size_bytes": 60188048
+      },
+      "transport": {
+        "sha256": "3872653ea5b20e85a3089bc9c310b907d13b866d77f3a4fc5e185ce20365a783",
+        "size_bytes": 6961371
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.0.1.31",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.0.1.31",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "73262a05f073f5a2b7ba45033c99068ca2c594ee58cc7b1eb22a4867db5eba92",
+        "size_bytes": 60192144
+      },
+      "transport": {
+        "sha256": "a87bd7012a5bf0e04ae1b68584fbb28c7fd0a3185bf05f896210ef4f581d3383",
+        "size_bytes": 6974568
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.1.0.19",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.1.0.19",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d82d9adab239af4e49063d0c4d2e1134529f3963879998d7e0df43a32514ca84",
+        "size_bytes": 45557608
+      },
+      "transport": {
+        "sha256": "9101a56577bdfeae090b35af10d199c49b1e41a7336e933f43b81a41ec3ba5f5",
+        "size_bytes": 22433394
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.2.0.87",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.2.0.87",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "7fa2116e987a6fcc621e7be791461ca49988490ee3a4bc008ebb9796a057e1db",
+        "size_bytes": 45541752
+      },
+      "transport": {
+        "sha256": "fd4f296862c016d7439b3da2eaca2ba7144e197a37faeec80ae61171e7fcfb68",
+        "size_bytes": 22725690
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.2.2.118",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.2.2.118",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
+        "size_bytes": 47119216
+      },
+      "transport": {
+        "sha256": "131916a2dbe98bef3b0835518acd1039d20a5d8f8f5d3d47a24352fa65cbb4e1",
+        "size_bytes": 23492931
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.3.1.68",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.3.1.68",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "9d074c7cb931d450875373372da832304b82a2dcac51cb17df44b49f00e2961c",
+        "size_bytes": 22955384
+      },
+      "transport": {
+        "sha256": "fa04bd77031d867c4178ae7f0001a7fff4dfb1969bfc44fbbfb6a6aa314d70fc",
+        "size_bytes": 9774818
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_fg_1.3.1.78",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.3.1.78",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "ec5e0c65e075570c6ede72618bb666d0be0c2e10b2ea9762c0fe8cb8e375ab27",
+        "size_bytes": 22957432
+      },
+      "transport": {
+        "sha256": "1552afbe05585ead9fd2259e027a576817a115ad319893f2b7c4b7a2fe5305a3",
+        "size_bytes": 9729526
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxell_1.0.0.139",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.0.0.139",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "1ef92ada74933c6f6764af7b3dc19931b394599beca090962368dd459da20387",
+        "size_bytes": 237968
+      },
+      "transport": {
+        "sha256": "04e57f0841d0a5a25c7eb7c9c3acc227720cc7444588f0a041bce4b1590bdae5",
+        "size_bytes": 67524
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxell_1.0.1.6",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.0.1.6",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d025ed9eea2807c7aea8a99ec99c9adacd6f647a7313a51756930f37f5d3896d",
+        "size_bytes": 267152
+      },
+      "transport": {
+        "sha256": "80ed63aa2c88fa7a916e75bbca6e39e305d6d50a8f99e76e97291c7e85d79fd1",
+        "size_bytes": 76050
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2024-02-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxell_1.1.0.6",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.1.0.6",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "0b127d64483471795c02785e124746116b604c486a2c1cb3a10e0754792de018",
+        "size_bytes": 346984
+      },
+      "transport": {
+        "sha256": "97c12e3778baab69e8f62ab1a3674ae28b39e926901df7f513a5d66b699f0d51",
+        "size_bytes": 99320
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxell_1.2.0.9",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.2.0.9",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "5ce63652eee5720203e0e41cc97eb45ee541c499c8a51d4bdb1e8fe4eaef4890",
+        "size_bytes": 359792
+      },
+      "transport": {
+        "sha256": "ebba4f7a761f2db7b4eb2037852b5f2bffa1735d3b266d58950cda2740bf043c",
+        "size_bytes": 102107
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxell_1.2.1.13",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.2.1.13",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
+        "size_bytes": 360312
+      },
+      "transport": {
+        "sha256": "8ae8dd473edbd78a589840fac76a8a47f3fcdd7b98e9dae1658683d8b503ca3b",
+        "size_bytes": 102110
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxell_1.3.0.5",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.3.0.5",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "61aeeab7fdcfb6d1742f86c14c68c663d759607d01a6132645c857291eaebb86",
+        "size_bytes": 411504
+      },
+      "transport": {
+        "sha256": "28f70f633ffea8d0c8d42da0159c86502901a703ccd6b49cc9060fa2cb74cb76",
+        "size_bytes": 118791
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-01-27T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_dx11_2.0.1.41",
+      "library_id": "libxess_dx11",
+      "file_name": "libxess_dx11.dll",
+      "file_version": "2.0.1.41",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
+        "size_bytes": 147816
+      },
+      "transport": {
+        "sha256": "2108266b584bde427dd21b5d66bbf11a86a52f7b6f8e3bb84dfe7eb6b40f9b7e",
+        "size_bytes": 38529
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_dx11_2.0.2.53",
+      "library_id": "libxess_dx11",
+      "file_name": "libxess_dx11.dll",
+      "file_version": "2.0.2.53",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "249c87dea58aa9d6f6b5309d5acaf6b95e77bb8055735a3f162e3d24af086733",
+        "size_bytes": 156024
+      },
+      "transport": {
+        "sha256": "bbecae57a9f1d62018ff269534733882c3f4a37ed8820cbf252b14c34489ca7d",
+        "size_bytes": 39938
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "libxess_dx11_2.0.2.68",
+      "library_id": "libxess_dx11",
+      "file_name": "libxess_dx11.dll",
+      "file_version": "2.0.2.68",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "c7cfe86f0c9d94e4fb3696d3cd5035e2bbb6a8b1b0572f8b7395a4cdfd0c625e",
+        "size_bytes": 156016
+      },
+      "transport": {
+        "sha256": "d1ddeb0a2794ed7f2136f8cb929d22d4aa0ec514f879d3e75a24084ac2e6d50f",
+        "size_bytes": 39928
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2025-02-19T00:00:00Z"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "libxess_1.0.0.59",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.0.0.59",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.0.0.59",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.0.1.12",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.0.1.12",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.0.1.12",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.1.0.18",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.1.0.18",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.1.0.18",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.1.0.21",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.1.0.21",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.1.0.21",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.2.0.10",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.2.0.10",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.2.0.10",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.2.0.13",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.2.0.13",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.2.0.13",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.3.0.28",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.3.0.28",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.3.0.28",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.3.1.32",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "1.3.1.32",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_1.3.1.32",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.0.18",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.0.18",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.0.18",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.1.29",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.1.29",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.1.29",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.1.32",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.1.32",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.1.32",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.1.34",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.1.34",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.1.34",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.1.41",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.1.41",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.1.41",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.2.53",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.2.53",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.2.53",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_2.0.2.68",
+      "technology": "intel_xess",
+      "variant": "dx12_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.2.68",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_2.0.2.68",
+          "role": "primary",
+          "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_0.9.11.9",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "0.9.11.9",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_0.9.11.9",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.0.0.16",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.0.0.16",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.0.0.16",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.0.1.26",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.0.1.26",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.0.1.26",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.0.1.31",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.0.1.31",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.0.1.31",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.1.0.19",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.1.0.19",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.1.0.19",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.2.0.87",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.2.0.87",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.2.0.87",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.2.2.118",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.2.2.118",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.2.2.118",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.3.1.68",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.3.1.68",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.3.1.68",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_fg_1.3.1.78",
+      "technology": "intel_xefg",
+      "variant": "dx12_runtime",
+      "display_name": "Intel Xe Frame Generation",
+      "release": {
+        "version": "1.3.1.78",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_fg_1.3.1.78",
+          "role": "primary",
+          "install_as": "libxess_fg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.0.0.139",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.0.0.139",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxell_1.0.0.139",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.0.1.6",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.0.1.6",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxell_1.0.1.6",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.1.0.6",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.1.0.6",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxell_1.1.0.6",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.2.0.9",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.2.0.9",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxell_1.2.0.9",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.2.1.13",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.2.1.13",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxell_1.2.1.13",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.3.0.5",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.3.0.5",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxell_1.3.0.5",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_dx11_2.0.1.41",
+      "technology": "intel_xess",
+      "variant": "dx11_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.1.41",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_dx11_2.0.1.41",
+          "role": "primary",
+          "install_as": "libxess_dx11.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_dx11_2.0.2.53",
+      "technology": "intel_xess",
+      "variant": "dx11_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.2.53",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_dx11_2.0.2.53",
+          "role": "primary",
+          "install_as": "libxess_dx11.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_dx11_2.0.2.68",
+      "technology": "intel_xess",
+      "variant": "dx11_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.2.68",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "libxess_dx11_2.0.2.68",
+          "role": "primary",
+          "install_as": "libxess_dx11.dll"
+        }
+      ]
+    }
+  ]
+}

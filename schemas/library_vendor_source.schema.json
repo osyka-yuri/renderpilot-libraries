@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/library_vendor_source.schema.json",
+  "title": "RenderPilot curated library vendor source",
+  "type": "object",
+  "required": ["schema_version", "vendor", "generated_at", "artifacts", "packages"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "vendor": { "$ref": "#/$defs/vendor" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "artifacts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/artifact" }
+    },
+    "packages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/package" }
+    }
+  },
+  "$defs": {
+    "vendor": {
+      "type": "object",
+      "required": ["id", "display_name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "display_name": { "type": "string", "minLength": 1 }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "artifact_key",
+        "library_id",
+        "file_name",
+        "file_version",
+        "architecture",
+        "dll",
+        "transport",
+        "signature"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "artifact_key": { "$ref": "#/$defs/id" },
+        "library_id": { "$ref": "#/$defs/id" },
+        "file_name": { "$ref": "#/$defs/dllName" },
+        "file_version": { "$ref": "#/$defs/version" },
+        "architecture": { "$ref": "#/$defs/architecture" },
+        "dll": { "$ref": "#/$defs/content" },
+        "transport": { "$ref": "#/$defs/sourceTransport" },
+        "signature": { "$ref": "#/$defs/signature" },
+        "extensions": { "$ref": "#/$defs/extensions" }
+      }
+    },
+    "package": {
+      "type": "object",
+      "required": [
+        "package_id",
+        "technology",
+        "variant",
+        "display_name",
+        "release",
+        "target",
+        "members"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "package_id": { "$ref": "#/$defs/id" },
+        "technology": { "$ref": "#/$defs/id" },
+        "variant": { "$ref": "#/$defs/id" },
+        "display_name": { "type": "string", "minLength": 1 },
+        "release": { "$ref": "#/$defs/release" },
+        "target": { "$ref": "#/$defs/target" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "members": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/sourceMember" }
+        },
+        "extensions": { "$ref": "#/$defs/extensions" }
+      }
+    },
+    "sourceMember": {
+      "type": "object",
+      "required": ["artifact_key", "role", "install_as"],
+      "additionalProperties": false,
+      "properties": {
+        "artifact_key": { "$ref": "#/$defs/id" },
+        "role": { "$ref": "#/$defs/id" },
+        "install_as": { "$ref": "#/$defs/dllName" }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["sha256", "size_bytes"],
+      "additionalProperties": false,
+      "properties": {
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "size_bytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "sourceTransport": {
+      "description": "Provider-neutral compressed-payload identity projected into the public transport contract.",
+      "type": "object",
+      "required": ["sha256", "size_bytes"],
+      "additionalProperties": false,
+      "properties": {
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "size_bytes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "release": {
+      "type": "object",
+      "required": ["version", "channel", "label"],
+      "additionalProperties": false,
+      "properties": {
+        "version": { "$ref": "#/$defs/version" },
+        "channel": { "enum": ["stable", "beta", "debug"] },
+        "label": { "type": ["string", "null"] }
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": ["os", "architecture"],
+      "additionalProperties": false,
+      "properties": {
+        "os": { "const": "windows" },
+        "architecture": { "$ref": "#/$defs/architecture" },
+        "compatibility": { "$ref": "#/$defs/compatibility" }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "required": ["kind", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "const": "d3d12_sdk" },
+        "version": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["kind", "package_id", "version", "package_sha512"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "const": "nuget" },
+        "package_id": { "type": "string", "minLength": 1 },
+        "version": { "$ref": "#/$defs/version" },
+        "package_sha512": { "type": "string", "pattern": "^[A-Za-z0-9+/]{86}==$" }
+      }
+    },
+    "signature": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["status"],
+          "additionalProperties": false,
+          "properties": { "status": { "const": "unsigned" } }
+        },
+        {
+          "type": "object",
+          "required": ["status", "signed_at"],
+          "additionalProperties": false,
+          "properties": {
+            "status": { "const": "signed" },
+            "subject": {
+              "description": "Signer subject when certificate metadata was captured; older curated records may omit it.",
+              "type": "string",
+              "minLength": 1
+            },
+            "thumbprint": {
+              "description": "Signer certificate thumbprint when captured; older curated records may omit it.",
+              "type": "string",
+              "pattern": "^[A-F0-9]{40,64}$"
+            },
+            "signed_at": {
+              "description": "Verified or historically recorded signing time; null means no trustworthy timestamp was available.",
+              "type": ["string", "null"],
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "extensions": { "type": "object", "additionalProperties": true },
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9._-]*$" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "dllName": { "type": "string", "pattern": "^[A-Za-z0-9._-]+\\.dll$" },
+    "architecture": { "enum": ["X64", "X86"] },
+    "version": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9]\\d*)(?:\\.(?:0|[1-9]\\d*))*$"
+    }
+  }
+}

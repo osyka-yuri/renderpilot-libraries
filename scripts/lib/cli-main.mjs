@@ -47,7 +47,7 @@ export function runCliMain({
   } catch (error) {
     if (error instanceof UsageError) {
       console.error(error.message);
-      help?.(args ?? {});
+      help?.({ command: error.command });
       process.exitCode = usageExitCode;
       return;
     }

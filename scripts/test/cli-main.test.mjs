@@ -16,19 +16,25 @@ async function withCapturedExit(fn) {
 }
 
 test("runCliMain sets exitCode 2 on UsageError from parse", async () => {
+  let helpArgs;
   const code = await withCapturedExit(() => {
     runCliMain({
       argv: ["--bad"],
       parse: () => {
-        throw new UsageError("bad flag");
+        const error = new UsageError("bad flag");
+        error.command = "generate";
+        throw error;
       },
-      help: () => {},
+      help: (args) => {
+        helpArgs = args;
+      },
       main: async () => {
         throw new Error("should not run");
       },
     });
   });
   assert.equal(code, 2);
+  assert.deepEqual(helpArgs, { command: "generate" });
 });
 
 test("runCliMain short-circuits help without calling main", async () => {
