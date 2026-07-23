@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/openvr_github_lock.schema.json",
+  "title": "RenderPilot Valve OpenVR GitHub lock",
+  "type": "object",
+  "required": ["schema_version", "releases"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "releases": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/release" }
+    }
+  },
+  "$defs": {
+    "release": {
+      "type": "object",
+      "required": [
+        "release_id",
+        "tag",
+        "version",
+        "label",
+        "published_at",
+        "commit_sha",
+        "artifacts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "release_id": { "type": "integer", "minimum": 1 },
+        "tag": { "type": "string", "pattern": "^v?[0-9]+(?:\\.[0-9]+)+(?:b)?$" },
+        "version": { "$ref": "#/$defs/version" },
+        "label": { "enum": ["revision b", null] },
+        "published_at": { "type": "string", "format": "date-time" },
+        "commit_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "artifacts": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "$ref": "#/$defs/artifact" }
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "architecture",
+        "repository_path",
+        "git_blob_sha1",
+        "pe_version",
+        "pe_named_exports",
+        "dll_sha256",
+        "dll_size_bytes",
+        "signature",
+        "r2"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "architecture": { "enum": ["X64", "X86"] },
+        "repository_path": {
+          "enum": ["bin/win64/openvr_api.dll", "bin/win32/openvr_api.dll"]
+        },
+        "git_blob_sha1": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "pe_version": {
+          "anyOf": [{ "$ref": "#/$defs/version" }, { "type": "null" }]
+        },
+        "pe_named_exports": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16384,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256,
+            "pattern": "^[ -~]+$"
+          }
+        },
+        "dll_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "dll_size_bytes": { "type": "integer", "minimum": 1 },
+        "signature": { "$ref": "#/$defs/signature" },
+        "r2": {
+          "type": "object",
+          "required": ["object_key", "zst_sha256", "zst_size_bytes", "compression_level"],
+          "additionalProperties": false,
+          "properties": {
+            "object_key": {
+              "type": "string",
+              "pattern": "^libraries/blobs/sha256/[0-9a-f]{64}\\.dll\\.zst$"
+            },
+            "zst_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+            "zst_size_bytes": { "type": "integer", "minimum": 1 },
+            "compression_level": { "type": "integer", "minimum": 1, "maximum": 22 }
+          }
+        }
+      }
+    },
+    "signature": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["status"],
+          "additionalProperties": false,
+          "properties": { "status": { "const": "unsigned" } }
+        },
+        {
+          "type": "object",
+          "required": ["status", "subject", "thumbprint", "signed_at"],
+          "additionalProperties": false,
+          "properties": {
+            "status": { "const": "signed" },
+            "subject": { "type": "string", "minLength": 1 },
+            "thumbprint": { "type": "string", "pattern": "^[A-F0-9]{40,64}$" },
+            "signed_at": {
+              "type": ["string", "null"],
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9]\\d*)(?:\\.(?:0|[1-9]\\d*))*$"
+    }
+  }
+}

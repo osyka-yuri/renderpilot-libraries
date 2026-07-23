@@ -176,3 +176,15 @@ export async function forEachConcurrent(items, concurrency, worker) {
   const workerCount = Math.min(concurrency, items.length);
   await Promise.all(Array.from({ length: workerCount }, runWorker));
 }
+
+/**
+ * Concurrent equivalent of `Array.prototype.map`. Results retain input order
+ * even when workers complete out of order.
+ */
+export async function mapConcurrent(items, concurrency, mapper) {
+  const results = new Array(items.length);
+  await forEachConcurrent(items, concurrency, async (item, index) => {
+    results[index] = await mapper(item, index);
+  });
+  return results;
+}

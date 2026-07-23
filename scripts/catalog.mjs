@@ -23,8 +23,8 @@ const defineLibraryVendors = (vendors) =>
   Object.freeze(vendors.map((vendor) => Object.freeze({ ...vendor })));
 
 // Every library vendor and every repository path needed to build its public
-// snapshot. Microsoft is sourced from its NuGet config/lock instead of a
-// curated vendor document, but it follows the same explicit output contract.
+// snapshot. Generated providers use their own config/lock instead of a
+// curated vendor document, but follow the same explicit output contract.
 export const libraryVendors = defineLibraryVendors([
   {
     vendorId: "nvidia",
@@ -51,14 +51,29 @@ export const libraryVendors = defineLibraryVendors([
     lockFile: "catalogs/libraries/microsoft-nuget.lock.json",
     outputFile: "libraries/v1/vendors/microsoft.json",
   },
+  {
+    vendorId: "valve",
+    sourceKind: "openvr-github",
+    configFile: "catalogs/libraries/valve-openvr.config.json",
+    lockFile: "catalogs/libraries/valve-openvr.lock.json",
+    outputFile: "libraries/v1/vendors/valve.json",
+  },
 ]);
 
 export const curatedLibraryVendors = Object.freeze(
   libraryVendors.filter(({ sourceKind }) => sourceKind === "curated"),
 );
 
+export const generatedLibraryVendors = Object.freeze(
+  libraryVendors.filter(({ sourceKind }) => sourceKind !== "curated"),
+);
+
 export const microsoftLibraryVendor = libraryVendors.find(
   ({ sourceKind }) => sourceKind === "microsoft-nuget",
+);
+
+export const openVrLibraryVendor = libraryVendors.find(
+  ({ sourceKind }) => sourceKind === "openvr-github",
 );
 
 export const libraryIndexFile = "libraries/v1/index.json";
@@ -70,6 +85,8 @@ const SCHEMAS = Object.freeze({
   libraryVendorSource: "schemas/library_vendor_source.schema.json",
   microsoftNuGetConfig: "schemas/microsoft_nuget_config.schema.json",
   microsoftNuGetLock: "schemas/microsoft_nuget_lock.schema.json",
+  openVrGitHubConfig: "schemas/openvr_github_config.schema.json",
+  openVrGitHubLock: "schemas/openvr_github_lock.schema.json",
   dlssPresetManifest: "schemas/dlss_preset_manifest.schema.json",
   dlssSettingsCatalog: "schemas/dlss_settings_catalog.schema.json",
   renodxManifestV1: "catalogs/addons/renodx/manifest-v1.schema.json",
@@ -105,6 +122,16 @@ export const jsonDocuments = defineDocuments([
   {
     file: microsoftLibraryVendor.lockFile,
     schema: SCHEMAS.microsoftNuGetLock,
+    publishedToR2: false,
+  },
+  {
+    file: openVrLibraryVendor.configFile,
+    schema: SCHEMAS.openVrGitHubConfig,
+    publishedToR2: false,
+  },
+  {
+    file: openVrLibraryVendor.lockFile,
+    schema: SCHEMAS.openVrGitHubLock,
     publishedToR2: false,
   },
   {

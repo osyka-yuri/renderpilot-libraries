@@ -8,12 +8,12 @@ import {
   assertLockExtendsBaseline,
   assertLockSemantics,
   assertMicrosoftConfig,
-  compareNumericVersions,
   contentAddressedObjectKey,
   fetchPackageSha512,
   listedStableReleases,
   selectPackageFiles,
 } from "../lib/microsoft-nuget.mjs";
+import { compareNumericVersions } from "../lib/library-catalog.mjs";
 
 const validateMicrosoftConfigSchema = new Ajv2020({
   allErrors: true,
@@ -180,6 +180,25 @@ test("lock semantics reject artifacts outside the configured product matrix", ()
   lock.releases[0].artifacts.push(unexpected);
 
   assert.throws(() => assertLockSemantics(lock, config), /unexpected artifact/);
+});
+
+test("Microsoft policy requires signed artifacts but permits an absent timestamp", () => {
+  const { config, lock } = strictDxcLock();
+  assert.doesNotThrow(() => assertLockSemantics(lock, config));
+
+  const unsigned = structuredClone(lock);
+  unsigned.releases[0].artifacts[0].signature = { status: "unsigned" };
+  assert.throws(
+    () => assertLockSemantics(unsigned, config),
+    /strict signed Authenticode contract/,
+  );
+
+  const invalidTimestamp = structuredClone(lock);
+  invalidTimestamp.releases[0].artifacts[0].signature.signed_at = "not-a-date";
+  assert.throws(
+    () => assertLockSemantics(invalidTimestamp, config),
+    /strict signed Authenticode contract/,
+  );
 });
 
 test("Microsoft config enforces canonical product and runtime identities", () => {

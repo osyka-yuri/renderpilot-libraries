@@ -1,30 +1,27 @@
 #!/usr/bin/env node
 
-import { execFile } from "node:child_process";
 import path from "node:path";
-import { promisify } from "node:util";
 
 import { microsoftLibraryVendor, repoRoot } from "./catalog.mjs";
 import {
   assertLockSemantics,
   assertLockExtendsBaseline,
   buildMicrosoftVendorSource,
-  compareNumericVersions,
   releaseCounts,
 } from "./lib/microsoft-nuget.mjs";
-import { buildVendorSnapshot } from "./lib/library-catalog.mjs";
+import { buildVendorSnapshot, compareNumericVersions } from "./lib/library-catalog.mjs";
+import { readJsonAtGitRef } from "./lib/git-json.mjs";
 import { readJsonFileAsync } from "./lib/json.mjs";
 
-const execFileAsync = promisify(execFile);
 const LOCK_REPO_PATH = microsoftLibraryVendor.lockFile;
 
 const DIRECTSTORAGE_RELEASES = new Map([
-  ["9bc09a0a76183c9470d86694a95224c16dfd94c637360ef948f7db291a6ee523", "1.0.2203.00901"],
-  ["30706ddcabc0f5f15f70fa41c153da6923d18551c8e560c3593dce63a017fc2b", "1.0.2205.02402"],
-  ["25979f0b9e1ed1d05d1021104692f9967f3540098117db1fb74485b1fbbead94", "1.1.2211.00304"],
-  ["c7e9013c280e399181cde12a42339dfc24ec4fce623f6b114120c31f43a31b78", "1.1.2212.00610"],
-  ["cc61dacb8b5de98db8563d13d3d76585d7e87b3e0840e2e9212e89692d960ae3", "1.2.2304.01701"],
-  ["1347296498710391508ef8c605298c73c1610c6610576819192959193d2bf036", "1.2.2305.01502"],
+  ["9bc09a0a76183c9470d86694a95224c16dfd94c637360ef948f7db291a6ee523", "1.0.2203.901"],
+  ["30706ddcabc0f5f15f70fa41c153da6923d18551c8e560c3593dce63a017fc2b", "1.0.2205.2402"],
+  ["25979f0b9e1ed1d05d1021104692f9967f3540098117db1fb74485b1fbbead94", "1.1.2211.304"],
+  ["c7e9013c280e399181cde12a42339dfc24ec4fce623f6b114120c31f43a31b78", "1.1.2212.610"],
+  ["cc61dacb8b5de98db8563d13d3d76585d7e87b3e0840e2e9212e89692d960ae3", "1.2.2304.1701"],
+  ["1347296498710391508ef8c605298c73c1610c6610576819192959193d2bf036", "1.2.2305.1502"],
   ["8a7f9809b4630d22796445ab9aa44181458d0f73f03705b1dfafd79410e07334", "1.2.2311.1405"],
   ["882d95c3012aa4e49bee48fe7e2305dbf3aa06df001e431a6606aec756feff6c", "1.2.2407.1501"],
   ["66c5ffc2f525fb1ce33f9fec4eceda122545201a14c5397c42cd91fc956c7c6a", "1.2.2504.401"],
@@ -39,7 +36,10 @@ async function main() {
   ]);
   assertLockSemantics(lock, config);
   const baselineRef = process.env.MICROSOFT_NUGET_BASE_REF || "HEAD";
-  const baseline = await readBaselineLock(baselineRef);
+  const baseline = await readJsonAtGitRef(baselineRef, LOCK_REPO_PATH, {
+    cwd: repoRoot,
+    maxBuffer: 32 * 1024 * 1024,
+  });
   if (baseline) {
     assertLockSemantics(baseline, config);
     assertLockExtendsBaseline(lock, baseline);
@@ -109,20 +109,6 @@ async function main() {
   console.log(
     `Microsoft NuGet lock is valid: D3D12 ${counts.get("d3d12_agility")}, DXC ${counts.get("dxc")}, DirectStorage ${counts.get("directstorage")}.`,
   );
-}
-
-async function readBaselineLock(ref) {
-  const { stdout: names } = await execFileAsync(
-    "git",
-    ["ls-tree", "-r", "--name-only", ref, "--", LOCK_REPO_PATH],
-    { cwd: repoRoot },
-  );
-  if (!names.split(/\r?\n/).includes(LOCK_REPO_PATH)) return null;
-  const { stdout } = await execFileAsync("git", ["show", `${ref}:${LOCK_REPO_PATH}`], {
-    cwd: repoRoot,
-    maxBuffer: 32 * 1024 * 1024,
-  });
-  return JSON.parse(stdout);
 }
 
 main().catch((error) => {

@@ -46,12 +46,26 @@ test("library CLI validates refresh mode and preserves worker arguments", () => 
   assert.deepEqual(parseLibrariesArgs(["refresh", "microsoft", "--product=dxc"]), {
     help: false,
     command: "refresh",
+    refreshVendor: "microsoft",
     args: ["--product=dxc"],
   });
   assert.deepEqual(parseLibrariesArgs(["refresh", "microsoft", "--product", "dxc"]), {
     help: false,
     command: "refresh",
+    refreshVendor: "microsoft",
     args: ["--product", "dxc"],
+  });
+  assert.deepEqual(parseLibrariesArgs(["refresh", "openvr", "--write"]), {
+    help: false,
+    command: "refresh",
+    refreshVendor: "openvr",
+    args: ["--write"],
+  });
+  assert.deepEqual(parseLibrariesArgs(["refresh", "openvr", "--backfill-signatures"]), {
+    help: false,
+    command: "refresh",
+    refreshVendor: "openvr",
+    args: ["--backfill-signatures"],
   });
   assert.throws(
     () => parseLibrariesArgs(["refresh", "microsoft", "--check", "--write"]),
@@ -63,7 +77,15 @@ test("library CLI validates refresh mode and preserves worker arguments", () => 
   );
   assert.throws(
     () => parseLibrariesArgs(["refresh", "nvidia", "--check"]),
-    /explicit vendor 'microsoft'/,
+    /explicit vendor 'microsoft' or 'openvr'/,
+  );
+  assert.throws(
+    () => parseLibrariesArgs(["refresh", "--write"]),
+    /explicit vendor 'microsoft' or 'openvr'/,
+  );
+  assert.throws(
+    () => parseLibrariesArgs(["refresh", "openvr", "--product=dxc"]),
+    /only valid for Microsoft/,
   );
 });
 
@@ -99,10 +121,25 @@ test("library CLI dispatches each command to an explicit worker sequence", async
   assert.deepEqual(calls.splice(0), [
     ["validate.mjs", []],
     ["validate-microsoft-nuget.mjs", []],
+    ["validate-openvr-github.mjs", []],
   ]);
 
-  await dispatchLibrariesCommand({ command: "refresh", args: ["--write"] }, runScript);
+  await dispatchLibrariesCommand(
+    { command: "refresh", refreshVendor: "microsoft", args: ["--write"] },
+    runScript,
+  );
   assert.deepEqual(calls.splice(0), [["refresh-microsoft-nuget.mjs", ["--write"]]]);
+
+  await assert.rejects(
+    dispatchLibrariesCommand({ command: "refresh", args: ["--write"] }, runScript),
+    /explicit vendor 'microsoft' or 'openvr'/,
+  );
+
+  await dispatchLibrariesCommand(
+    { command: "refresh", refreshVendor: "openvr", args: ["--write"] },
+    runScript,
+  );
+  assert.deepEqual(calls.splice(0), [["refresh-openvr-github.mjs", ["--write"]]]);
 
   await dispatchLibrariesCommand({ command: "publish", args: ["--dry-run"] }, runScript);
   assert.deepEqual(calls.splice(0), [["publish-library-catalog.mjs", ["--dry-run"]]]);

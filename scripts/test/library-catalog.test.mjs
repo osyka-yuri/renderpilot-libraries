@@ -8,6 +8,7 @@ import {
   jsonDocuments,
   libraryVendors,
   microsoftLibraryVendor,
+  openVrLibraryVendor,
   publishedJsonDocuments,
   repoRoot,
 } from "../catalog.mjs";
@@ -203,6 +204,14 @@ test("library vendor registry matches source and snapshot identities", async () 
   assert.equal(
     documents.get(microsoftLibraryVendor.lockFile)?.schema,
     "schemas/microsoft_nuget_lock.schema.json",
+  );
+  assert.equal(
+    documents.get(openVrLibraryVendor.configFile)?.schema,
+    "schemas/openvr_github_config.schema.json",
+  );
+  assert.equal(
+    documents.get(openVrLibraryVendor.lockFile)?.schema,
+    "schemas/openvr_github_lock.schema.json",
   );
 });
 

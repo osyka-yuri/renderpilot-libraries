@@ -3,10 +3,17 @@ import path from "node:path";
 import { isDeepStrictEqual } from "node:util";
 
 import { fetchWithTimeout } from "./http.mjs";
-import { assertNumericVersion, blobObjectKey } from "./library-catalog.mjs";
+import {
+  assertNumericVersion,
+  blobObjectKey,
+  compareNumericVersions,
+} from "./library-catalog.mjs";
 
 const REGISTRATION_BASE = "https://api.nuget.org/v3/registration5-gz-semver2";
 const WINDOWS_ARCHITECTURES = new Set(["X64", "X86"]);
+const RFC3339_TIMESTAMP_PATTERN =
+  /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/u;
+const MICROSOFT_SIGNATURE_KEYS = new Set(["status", "subject", "thumbprint", "signed_at"]);
 const PRODUCT_CONTRACTS = Object.freeze({
   d3d12_agility: {
     packageId: "Microsoft.Direct3D.D3D12",
@@ -272,6 +279,7 @@ export function assertLockSemantics(lock, config) {
     const units = new Map();
     for (const artifact of release.artifacts) {
       assertNumericVersion(artifact.pe_version, `${releaseKey}: artifact pe_version`);
+      assertMicrosoftSignature(artifact.signature, `${releaseKey}: artifact signature`);
       const memberKey = `${artifact.architecture}/${artifact.library_id}`;
       if (units.has(memberKey)) {
         throw new Error(`${releaseKey}: duplicate artifact ${memberKey}`);
@@ -315,6 +323,25 @@ export function assertLockSemantics(lock, config) {
         }
       }
     }
+  }
+}
+
+function assertMicrosoftSignature(signature, context) {
+  const keys = Object.keys(signature ?? {});
+  if (
+    signature?.status !== "signed" ||
+    keys.length !== 4 ||
+    !keys.every((key) => MICROSOFT_SIGNATURE_KEYS.has(key)) ||
+    typeof signature.subject !== "string" ||
+    !signature.subject.trim() ||
+    typeof signature.thumbprint !== "string" ||
+    !/^[A-F0-9]{40,64}$/u.test(signature.thumbprint) ||
+    (signature.signed_at !== null &&
+      (typeof signature.signed_at !== "string" ||
+        !RFC3339_TIMESTAMP_PATTERN.test(signature.signed_at) ||
+        Number.isNaN(Date.parse(signature.signed_at))))
+  ) {
+    throw new Error(`${context} must use the strict signed Authenticode contract`);
   }
 }
 
@@ -558,19 +585,6 @@ export function sdkLineForPackageVersion(version) {
 
 export function contentAddressedObjectKey(zstSha256) {
   return blobObjectKey(zstSha256);
-}
-
-export function compareNumericVersions(left, right) {
-  const leftParts = numericVersionParts(left);
-  const rightParts = numericVersionParts(right);
-  const length = Math.max(leftParts.length, rightParts.length);
-  for (let index = 0; index < length; index += 1) {
-    const leftPart = leftParts[index] ?? 0n;
-    const rightPart = rightParts[index] ?? 0n;
-    if (leftPart < rightPart) return -1;
-    if (leftPart > rightPart) return 1;
-  }
-  return 0;
 }
 
 function numericVersionParts(version) {

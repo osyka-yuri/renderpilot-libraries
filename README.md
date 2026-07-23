@@ -6,12 +6,15 @@ Source and publication tooling for RenderPilot's graphics-library catalogues and
 
 - `catalogs/libraries/{nvidia,amd,intel}.json` — reviewed vendor sources with explicit installable packages and immutable DLL/transport identities.
 - `catalogs/libraries/microsoft-nuget.{lock,config}.json` — reproducible NuGet package, DLL, Authenticode, and transport lock with product configuration.
+- `catalogs/libraries/valve-openvr.{lock,config}.json` — reproducible Valve OpenVR GitHub-release lock, inclusive signature cutoff, PE metadata, and transport configuration.
 - `libraries/v1/index.json` + `libraries/v1/vendors/*.json` — generated package-first public catalogue (schema v1). The root `manifest.json` is frozen for legacy clients and is not published by current tooling.
-- `schemas/` — JSON Schemas for every validated document, including the library index, vendor sources/snapshots, and Microsoft NuGet config/lock.
-- `scripts/generate-library-catalog.mjs` — deterministic generator: reads curated sources and NuGet lock, produces vendor snapshots and library index.
+- `schemas/` — JSON Schemas for every validated document, including the library index, vendor sources/snapshots, and generated-provider config/locks.
+- `scripts/generate-library-catalog.mjs` — deterministic generator: reads curated sources and generated-provider locks, produces vendor snapshots and the library index.
 - `scripts/libraries.mjs` — unified CLI for generate/validate/refresh/publish/audit-published commands.
 - `scripts/refresh-microsoft-nuget.mjs` — imports, verifies (NuGet SHA-512, PE, Authenticode), compresses, and persists Microsoft runtime releases.
 - `scripts/validate-microsoft-nuget.mjs` — validates NuGet lock semantics, baseline immutability, and published DirectStorage identities.
+- `scripts/refresh-openvr-github.mjs` — discovers stable GitHub releases, imports both Windows architectures from exact tag commits, and updates the OpenVR lock.
+- `scripts/validate-openvr-github.mjs` — validates the full OpenVR lock/config contract and immutable Git baseline.
 - `catalogs/addons/luma` — curated Luma profiles, Wiki review data, schema, generator, and tests.
 - `catalogs/addons/renodx` — RenoDX Wiki snapshot, curated overrides, schemas, generator, and tests.
 - `catalogs/addons/reshade` — ReShade channel model (`lib/build-manifest.mjs`), schema, and generator inputs.
@@ -58,6 +61,10 @@ pnpm run refresh:microsoft:check
 pnpm run refresh:microsoft:write
 pnpm run materialize:microsoft
 pnpm run backfill:microsoft-signatures
+pnpm run refresh:openvr:check
+pnpm run refresh:openvr:write
+pnpm run materialize:openvr
+pnpm run backfill:openvr-signatures
 pnpm run refresh:reshade:check
 pnpm run check:upstream-health
 pnpm run check:wiki-drift
@@ -72,11 +79,15 @@ pnpm run publish:json:dry-run
 
 `refresh:microsoft:check` reads NuGet V3 Registration and Catalog Details and considers only listed stable releases. `refresh:microsoft:write` runs on Windows and imports every missing D3D12 Agility, DXC, and DirectStorage release after NuGet SHA-512, package-layout, PE, and Authenticode checks. DXC x86 is optional per package but each architecture is always a complete `dxcompiler.dll` + `dxil.dll` pair. `materialize:microsoft` re-verifies and recompresses every selected locked package. Refresh commands update only the lock and transport blobs; run `pnpm run libraries:generate` explicitly before validation or publication. A compressed payload is replaceable transport, not library identity: blobs live under `libraries/blobs/sha256/`, while NuGet and decompressed DLL identities remain immutable. The internal NuGet lock calls its provider-specific compressed representation `r2`; generation projects that metadata into the provider-neutral public `transport` contract.
 
-The Windows Authenticode inspector verifies RFC 3161 tokens against the exact CMS signer (and validates legacy PKCS#9 countersignatures) before recording `signed_at`; an absent timestamp remains `null`, while malformed or unverifiable timestamp attributes fail the import. Microsoft imports therefore include the signer subject and certificate thumbprint. Older manually curated AMD, Intel, and NVIDIA records retain only historically captured signature metadata, so optional certificate fields can be absent without implying an unsigned binary. `backfill:microsoft-signatures` is the reproducible metadata-enrichment path for older Microsoft lock rows: it re-verifies NuGet SHA-512, DLL identity, and immutable ZST bytes and permits only `signed_at: null` to become a verified timestamp.
+`refresh:openvr:check` discovers every non-draft, non-prerelease ValveSoftware/openvr GitHub release and resolves the exact tag commit. `refresh:openvr:write` downloads `bin/win64/openvr_api.dll` and `bin/win32/openvr_api.dll` from those immutable commits, verifies Git-blob and DLL identities, PE architecture and named exports, Authenticode policy, and compressed transport. Package provenance records the GitHub repository, exact tag, and commit SHA. Historical OpenVR DLLs can have no numeric PE `FileVersion`, so their public `file_version` is nullable; Microsoft-generated DLL metadata always requires a numeric `FileVersion`.
 
-`pnpm run test:authenticode` is Windows-specific and intentionally excluded from the portable `pnpm check` path. The Microsoft refresh workflow runs it before importing or materializing binaries; run it locally on Windows when changing the signature inspector or timestamp verifier.
+The Windows Authenticode inspector has explicit `Strict` and `OpenVr` modes. Both require Windows status `Valid` for signed files and apply the same strict timestamp verification: RFC 3161 is verified with `CryptVerifyTimeStampSignature`, and legacy PKCS#9 countersignatures are verified against the original `SignerInfo.encryptedDigest` with `CryptMsgVerifyCountersignatureEncodedEx`. `signed_at` is `null` only when no timestamp attribute exists; malformed CMS, signer mismatch, invalid crypto, unsupported timestamp structures, and conflicting verified times always fail.
 
-`pnpm run check:published-json` is an explicit post-publication check that fetches every served JSON from R2 and compares SHA-256 against local files to confirm byte-for-byte publication. `pnpm run validate:microsoft` asserts NuGet lock semantics, baseline immutability, and checks DirectStorage identities against a known map; it is included in the default `pnpm check` path.
+Microsoft uses `Strict`: every imported DLL must be signed and have a numeric `FileVersion`. OpenVR mode reports unsigned DLLs explicitly; provider policy permits them only for releases with `published_at` before the inclusive `require_signed_release_at_or_after` cutoff. `backfill:microsoft-signatures` and `backfill:openvr-signatures` are explicit metadata migrations that may only change `signed_at: null` into a verified timestamp. Older manually curated AMD, Intel, and NVIDIA records retain only historically captured signature metadata, so optional certificate fields can be absent without implying an unsigned binary.
+
+`pnpm run test:authenticode` is Windows-specific and intentionally excluded from the portable `pnpm check` path. The Microsoft and OpenVR refresh workflows run it before importing or materializing binaries; run it locally on Windows when changing the signature inspector, PE parser, or timestamp verifier.
+
+`pnpm run check:published-json` is an explicit post-publication check that fetches every served JSON from R2 and compares SHA-256 against local files to confirm byte-for-byte publication. `pnpm run validate:microsoft` asserts NuGet lock semantics, baseline immutability, and checks DirectStorage identities against a known map. `pnpm run validate:openvr` validates the complete OpenVR lock/config before projecting it into the public Valve snapshot. Both are included in the default `pnpm check` path.
 
 `pnpm run refresh:reshade:check` detects a newer stable ReShade Addon installer; `refresh:reshade:write` rewrites `scripts/lib/reshade-sources.mjs` and regenerates `addons/v1/reshade.json` only. Scheduled workflows open a PR when an update is live — they do not push to `main` or write R2. `pnpm run check:upstream-health` probes committed pins (ReShade channels and Luma managed-dependency archives); it is schedule-only and not part of default `pnpm check`.
 

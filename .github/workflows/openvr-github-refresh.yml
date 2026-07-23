@@ -1,0 +1,93 @@
+name: Valve OpenVR refresh
+
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+    inputs:
+      materialize_locked:
+        description: "Re-verify and recompress every locked OpenVR DLL"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: openvr-github-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    name: Import stable Valve OpenVR releases
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.11.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Verify Windows Authenticode and PE tooling
+        run: pnpm run test:authenticode
+
+      - name: Detect every missing stable release
+        id: detect
+        run: pnpm run refresh:openvr:check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Import, verify, and compress all missing releases
+        if: success() && steps.detect.outputs.status == 'update_available'
+        run: pnpm run refresh:openvr:write
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Rebuild every locked payload
+        if: success() && inputs.materialize_locked
+        run: pnpm run materialize:openvr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate and validate the public catalog
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        run: |
+          pnpm run libraries:generate
+          pnpm run libraries:check
+          pnpm run validate
+          pnpm run validate:openvr
+
+      - name: Publish immutable binaries and verify R2 metadata
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        run: pnpm run publish:binaries
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+
+      - name: Open catalog pull request
+        if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: chore/openvr-${{ github.run_id }}
+          delete-branch: true
+          commit-message: "chore(openvr): refresh SDK catalog"
+          title: "chore(openvr): refresh SDK catalog"
+          body: |
+            Automated import of every missing stable Valve OpenVR SDK release
+            and/or rebuild of immutable content-addressed transport objects.
+
+            The importer resolved exact release tags to commits, downloaded the
+            X86/X64 DLLs from those immutable trees, verified PE architecture,
+            named exports, Authenticode policy, raw and Git-blob hashes, and
+            uploaded and HEAD-verified every R2 object before opening this PR.
+          add-paths: |
+            catalogs/libraries/valve-openvr.lock.json
+            libraries/v1/vendors/valve.json
+            libraries/v1/index.json

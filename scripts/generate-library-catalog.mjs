@@ -5,8 +5,8 @@ import path from "node:path";
 
 import {
   curatedLibraryVendors,
+  generatedLibraryVendors,
   libraryIndexFile,
-  microsoftLibraryVendor,
   repoRoot,
 } from "./catalog.mjs";
 import {
@@ -14,29 +14,26 @@ import {
   buildVendorSnapshot,
   jsonDocument,
 } from "./lib/library-catalog.mjs";
-import { buildMicrosoftVendorSource } from "./lib/microsoft-nuget.mjs";
+import {
+  assertGeneratedLibraryVendorAdapters,
+  buildGeneratedLibraryVendorSource,
+} from "./lib/library-source-adapters.mjs";
 import { readJsonFileAsync, writeTextFileAtomic } from "./lib/json.mjs";
 
 async function main() {
   const check = process.argv.slice(2).includes("--check");
-  const [curatedSources, lock, config] = await Promise.all([
+  assertGeneratedLibraryVendorAdapters(generatedLibraryVendors);
+  const [curatedSources, generatedSources] = await Promise.all([
     Promise.all(
       curatedLibraryVendors.map(async (vendor) => ({
         vendor,
         source: await readJsonFileAsync(path.join(repoRoot, vendor.sourceFile)),
       })),
     ),
-    readJsonFileAsync(path.join(repoRoot, microsoftLibraryVendor.lockFile)),
-    readJsonFileAsync(path.join(repoRoot, microsoftLibraryVendor.configFile)),
+    Promise.all(generatedLibraryVendors.map(loadGeneratedVendorSource)),
   ]);
 
-  const registeredSources = [
-    ...curatedSources,
-    {
-      vendor: microsoftLibraryVendor,
-      source: buildMicrosoftVendorSource(lock, config),
-    },
-  ];
+  const registeredSources = [...curatedSources, ...generatedSources];
   const vendorDocuments = registeredSources.map(({ vendor, source }) => {
     if (source?.vendor?.id !== vendor.vendorId) {
       throw new Error(
@@ -79,6 +76,17 @@ async function main() {
     ),
   );
   console.log(`Generated ${vendorDocuments.length} vendor snapshots and library index v1.`);
+}
+
+async function loadGeneratedVendorSource(vendor) {
+  const [lock, config] = await Promise.all([
+    readJsonFileAsync(path.join(repoRoot, vendor.lockFile)),
+    readJsonFileAsync(path.join(repoRoot, vendor.configFile)),
+  ]);
+  return {
+    vendor,
+    source: buildGeneratedLibraryVendorSource(vendor, lock, config),
+  };
 }
 
 main().catch((error) => {

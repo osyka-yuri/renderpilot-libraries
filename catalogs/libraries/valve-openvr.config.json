@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "repository": "ValveSoftware/openvr",
+  "expected_stable_releases": 61,
+  "require_signed_release_at_or_after": "2026-07-23T00:00:00.000Z",
+  "architectures": [
+    {
+      "catalog_architecture": "X64",
+      "repository_path": "bin/win64/openvr_api.dll"
+    },
+    {
+      "catalog_architecture": "X86",
+      "repository_path": "bin/win32/openvr_api.dll"
+    }
+  ]
+}

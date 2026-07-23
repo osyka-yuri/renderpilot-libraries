@@ -47,6 +47,7 @@ export function buildVendorSnapshot(source) {
       file_name: artifact.file_name,
       file_version: artifact.file_version,
       architecture: artifact.architecture,
+      pe_named_exports: artifact.pe_named_exports,
       dll: artifact.dll,
       transport: {
         compression: "zstd",
@@ -223,6 +224,7 @@ export function assertVendorSource(source) {
     assertPackageCommon(packageValue, context);
 
     const installTargets = new Set();
+    const resolvedArtifacts = [];
     let primaryCount = 0;
     for (const [memberIndex, member] of packageValue.members.entries()) {
       if (!artifactKeys.has(member.artifact_key)) {
@@ -241,6 +243,7 @@ export function assertVendorSource(source) {
       }
       referencedArtifactKeys.add(member.artifact_key);
       const artifact = artifactsByKey.get(member.artifact_key);
+      resolvedArtifacts.push(artifact);
       if (artifact.architecture !== packageValue.target.architecture) {
         throw new Error(`${context}: member architecture differs from package target`);
       }
@@ -248,6 +251,7 @@ export function assertVendorSource(source) {
     if (primaryCount !== 1) {
       throw new Error(`${context}: package must contain exactly one primary member`);
     }
+    assertOpenVrPackage(packageValue, resolvedArtifacts, context);
   }
   for (const artifactKey of artifactKeys) {
     if (!referencedArtifactKeys.has(artifactKey)) {
@@ -304,10 +308,12 @@ export function assertVendorSnapshot(snapshot) {
     }
 
     const installTargets = new Set();
+    const resolvedArtifacts = [];
     let primaryCount = 0;
     for (const [memberIndex, member] of packageValue.members.entries()) {
       const artifact = artifacts.get(member.artifact_id);
       if (!artifact) throw new Error(`${context}: unknown artifact ${member.artifact_id}`);
+      resolvedArtifacts.push(artifact);
       assertSafeId(member.role, `${context}: member role`);
       assertFileName(member.install_as, `${context}: install_as`);
       const target = member.install_as.toLowerCase();
@@ -327,6 +333,7 @@ export function assertVendorSnapshot(snapshot) {
     if (primaryCount !== 1) {
       throw new Error(`${context}: package must contain exactly one primary member`);
     }
+    assertOpenVrPackage(packageValue, resolvedArtifacts, context);
   }
   for (const artifactId of artifacts.keys()) {
     if (!referencedArtifactIds.has(artifactId)) {
@@ -338,7 +345,9 @@ export function assertVendorSnapshot(snapshot) {
 function assertArtifactCommon(artifact, context) {
   assertSafeId(artifact.library_id, `${context}: library_id`);
   assertFileName(artifact.file_name, `${context}: file_name`);
-  assertNumericVersion(artifact.file_version, `${context}: file_version`);
+  if (artifact.file_version !== null) {
+    assertNumericVersion(artifact.file_version, `${context}: file_version`);
+  }
   if (!ARCHITECTURES.has(artifact.architecture)) {
     throw new Error(`${context}: unsupported architecture ${artifact.architecture}`);
   }
@@ -354,6 +363,9 @@ function assertArtifactCommon(artifact, context) {
   }
   if (artifact.signature.signed_at != null) {
     assertTimestamp(artifact.signature.signed_at, `${context}: signed_at`);
+  }
+  if (artifact.pe_named_exports !== undefined) {
+    assertPeNamedExports(artifact.pe_named_exports, `${context}: pe_named_exports`);
   }
   assertExtensions(artifact.extensions, `${context}: extensions`);
 }
@@ -423,21 +435,33 @@ function assertPackageCommon(packageValue, context) {
     throw new Error(`${context}: package must contain members`);
   }
   if (packageValue.provenance !== undefined) {
-    if (packageValue.provenance.kind !== "nuget") {
+    if (packageValue.provenance.kind === "nuget") {
+      if (
+        typeof packageValue.provenance.package_id !== "string" ||
+        !packageValue.provenance.package_id.trim()
+      ) {
+        throw new Error(`${context}: NuGet package id is required`);
+      }
+      assertNumericVersion(packageValue.provenance.version, `${context}: NuGet version`);
+      if (packageValue.provenance.version !== packageValue.release.version) {
+        throw new Error(`${context}: NuGet version must match the package release`);
+      }
+      if (!SHA512_BASE64_PATTERN.test(packageValue.provenance.package_sha512)) {
+        throw new Error(`${context}: NuGet package SHA-512 is invalid`);
+      }
+    } else if (packageValue.provenance.kind === "github_release") {
+      if (
+        typeof packageValue.provenance.repository !== "string" ||
+        !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/u.test(packageValue.provenance.repository) ||
+        typeof packageValue.provenance.tag !== "string" ||
+        !packageValue.provenance.tag.trim() ||
+        typeof packageValue.provenance.commit_sha !== "string" ||
+        !/^[0-9a-f]{40}$/u.test(packageValue.provenance.commit_sha)
+      ) {
+        throw new Error(`${context}: GitHub release provenance is invalid`);
+      }
+    } else {
       throw new Error(`${context}: unsupported package provenance`);
-    }
-    if (
-      typeof packageValue.provenance.package_id !== "string" ||
-      !packageValue.provenance.package_id.trim()
-    ) {
-      throw new Error(`${context}: NuGet package id is required`);
-    }
-    assertNumericVersion(packageValue.provenance.version, `${context}: NuGet version`);
-    if (packageValue.provenance.version !== packageValue.release.version) {
-      throw new Error(`${context}: NuGet version must match the package release`);
-    }
-    if (!SHA512_BASE64_PATTERN.test(packageValue.provenance.package_sha512)) {
-      throw new Error(`${context}: NuGet package SHA-512 is invalid`);
     }
   }
   const expectedPackageId = MICROSOFT_PACKAGE_IDS[packageValue.technology];
@@ -449,6 +473,55 @@ function assertPackageCommon(packageValue, context) {
     throw new Error(`${context}: Microsoft runtime provenance is missing or inconsistent`);
   }
   assertExtensions(packageValue.extensions, `${context}: extensions`);
+}
+
+function assertOpenVrPackage(packageValue, artifacts, context) {
+  if (packageValue.technology !== "openvr") return;
+  if (
+    packageValue.provenance?.kind !== "github_release" ||
+    packageValue.provenance.repository !== "ValveSoftware/openvr"
+  ) {
+    throw new Error(`${context}: OpenVR requires official GitHub release provenance`);
+  }
+  if (
+    packageValue.members.length !== 1 ||
+    packageValue.members[0].install_as.toLowerCase() !== "openvr_api.dll"
+  ) {
+    throw new Error(`${context}: OpenVR must contain exactly one openvr_api.dll`);
+  }
+  const artifact = artifacts[0];
+  if (
+    artifact?.library_id !== "openvr_api" ||
+    artifact.file_name.toLowerCase() !== "openvr_api.dll" ||
+    artifact.architecture !== packageValue.target.architecture
+  ) {
+    throw new Error(`${context}: OpenVR artifact contract is inconsistent`);
+  }
+  assertPeNamedExports(artifact.pe_named_exports, `${context}: OpenVR exports`);
+}
+
+export function assertPeNamedExports(value, label) {
+  if (!Array.isArray(value) || value.length === 0 || value.length > 16_384) {
+    throw new Error(`${label} must contain 1..16384 names`);
+  }
+  const seen = new Set();
+  let previous = null;
+  for (const name of value) {
+    if (
+      typeof name !== "string" ||
+      name.length === 0 ||
+      Buffer.byteLength(name, "ascii") > 256 ||
+      !/^[\x20-\x7e]+$/u.test(name)
+    ) {
+      throw new Error(`${label} contains an invalid ASCII export name`);
+    }
+    if (seen.has(name)) throw new Error(`${label} contains duplicate ${name}`);
+    if (previous !== null && previous >= name) {
+      throw new Error(`${label} must be sorted and unique`);
+    }
+    seen.add(name);
+    previous = name;
+  }
 }
 
 function assertExtensions(value, label) {
@@ -499,6 +572,21 @@ export function assertNumericVersion(value, label) {
   ) {
     throw new Error(`${label} must be a dotted numeric version`);
   }
+}
+
+export function compareNumericVersions(left, right) {
+  assertNumericVersion(left, "left version");
+  assertNumericVersion(right, "right version");
+  const leftParts = left.split(".").map(BigInt);
+  const rightParts = right.split(".").map(BigInt);
+  const length = Math.max(leftParts.length, rightParts.length);
+  for (let index = 0; index < length; index += 1) {
+    const leftPart = leftParts[index] ?? 0n;
+    const rightPart = rightParts[index] ?? 0n;
+    if (leftPart < rightPart) return -1;
+    if (leftPart > rightPart) return 1;
+  }
+  return 0;
 }
 
 function releaseIdentity(release) {

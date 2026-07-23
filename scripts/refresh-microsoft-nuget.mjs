@@ -1,35 +1,28 @@
 #!/usr/bin/env node
 
-import { randomUUID } from "node:crypto";
 import { execFile } from "node:child_process";
-import {
-  link,
-  lstat,
-  mkdtemp,
-  mkdir,
-  open,
-  readFile,
-  rm,
-  writeFile,
-} from "node:fs/promises";
+import { lstat, mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
-import { constants as zlibConstants, zstdCompress } from "node:zlib";
 
 import { microsoftLibraryVendor, repoRoot } from "./catalog.mjs";
-import { errorMessage } from "./lib/common.mjs";
+import { errorMessage, mapConcurrent } from "./lib/common.mjs";
 import { appendGithubOutput } from "./lib/github-actions.mjs";
 import { fetchWithTimeout } from "./lib/http.mjs";
 import { sha256Hex } from "./lib/hash.mjs";
 import { readJsonFileAsync, writeJsonFileAtomic } from "./lib/json.mjs";
+import {
+  canonicalPeVersion,
+  inspectPeFiles,
+  persistCompressedDll,
+} from "./lib/library-artifact-io.mjs";
 import {
   assertLockBackfillsSignatures,
   assertLockSemantics,
   assertLockExtendsBaseline,
   assertReleaseContentIdentity,
   assertReleaseBackfillsSignatures,
-  contentAddressedObjectKey,
   fetchPackageSha512,
   listedStableReleases,
   pathForPackageMember,
@@ -39,11 +32,9 @@ import {
 } from "./lib/microsoft-nuget.mjs";
 
 const execFileAsync = promisify(execFile);
-const zstdCompressAsync = promisify(zstdCompress);
 const CONFIG_FILE = path.join(repoRoot, microsoftLibraryVendor.configFile);
 const LOCK_FILE = path.join(repoRoot, microsoftLibraryVendor.lockFile);
 const CDN_DIR = path.join(repoRoot, "cdn");
-const INSPECT_SCRIPT = path.join(repoRoot, "scripts", "inspect-pe.ps1");
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
@@ -215,7 +206,7 @@ async function importRelease(
         package_path: selectedMember.member.package_path,
         library_id: selectedMember.member.library_id,
         file_name: selectedMember.member.file_name,
-        pe_version: trimVersion(inspection.pe_version),
+        pe_version: canonicalPeVersion(inspection.pe_version),
         dll_sha256: dllSha256,
         dll_size_bytes: dll.length,
         signature: inspection.signature,
@@ -235,12 +226,10 @@ async function importRelease(
       if (mode === "signature-backfill") {
         artifact.r2 = structuredClone(expectedArtifact.r2);
       } else {
-        artifact.r2 = await compressAndPersist(
-          release,
-          artifact,
-          dll,
-          expectedArtifact?.r2.compression_level ?? 12,
-        );
+        artifact.r2 = await persistCompressedDll(dll, {
+          cdnDirectory: CDN_DIR,
+          compressionLevel: expectedArtifact?.r2.compression_level ?? 12,
+        });
       }
 
       artifacts.push(artifact);
@@ -331,24 +320,6 @@ async function backfillLockedSignatureMetadata(
   );
 }
 
-async function compressAndPersist(release, artifact, dll, compressionLevel = 12) {
-  const compressed = await zstdCompressAsync(dll, {
-    params: {
-      [zlibConstants.ZSTD_c_compressionLevel]: compressionLevel,
-      [zlibConstants.ZSTD_c_checksumFlag]: 1,
-    },
-  });
-  const zstSha256 = sha256Hex(compressed);
-  const objectKey = contentAddressedObjectKey(zstSha256);
-  await writeImmutableObject(path.join(CDN_DIR, objectKey), compressed);
-  return {
-    object_key: objectKey,
-    zst_sha256: zstSha256,
-    zst_size_bytes: compressed.length,
-    compression_level: compressionLevel,
-  };
-}
-
 async function materializeLockedReleases(
   products,
   lock,
@@ -407,59 +378,6 @@ async function materializeLockedReleases(
   );
 }
 
-async function inspectPeFiles(paths) {
-  const { stdout } = await execFileAsync(
-    "pwsh",
-    ["-NoLogo", "-NoProfile", "-File", INSPECT_SCRIPT, ...paths],
-    { maxBuffer: 4 * 1024 * 1024 },
-  );
-  const parsed = JSON.parse(stdout);
-  const inspections = Array.isArray(parsed) ? parsed : [parsed];
-  if (inspections.length !== paths.length) {
-    throw new Error(
-      `PE inspector returned ${inspections.length} results for ${paths.length} files`,
-    );
-  }
-  return inspections;
-}
-
-async function writeImmutableObject(file, bytes) {
-  await mkdir(path.dirname(file), { recursive: true });
-  try {
-    const existing = await readFile(file);
-    if (!existing.equals(bytes))
-      throw new Error(`${file}: immutable object has other bytes`);
-    return;
-  } catch (error) {
-    if (error?.code !== "ENOENT") throw error;
-  }
-
-  // Publish a fully flushed inode with an exclusive hard-link. This keeps a
-  // crash from leaving a partial file at its immutable content-addressed name,
-  // while concurrent writers can only converge on identical bytes.
-  const temporary = `${file}.tmp-${process.pid}-${randomUUID()}`;
-  let handle;
-  try {
-    handle = await open(temporary, "wx");
-    await handle.writeFile(bytes);
-    await handle.sync();
-    await handle.close();
-    handle = undefined;
-    try {
-      await link(temporary, file);
-    } catch (error) {
-      if (error?.code !== "EEXIST") throw error;
-      const existing = await readFile(file);
-      if (!existing.equals(bytes)) {
-        throw new Error(`${file}: immutable object has other bytes`);
-      }
-    }
-  } finally {
-    await handle?.close().catch(() => undefined);
-    await rm(temporary, { force: true });
-  }
-}
-
 function parseArgs(argv) {
   const options = {
     write: false,
@@ -494,26 +412,6 @@ function parseArgs(argv) {
     );
   }
   return options;
-}
-
-function trimVersion(version) {
-  const parts = version.split(".");
-  while (parts.length > 1 && parts.at(-1) === "0") parts.pop();
-  return parts.join(".");
-}
-
-async function mapConcurrent(values, concurrency, operation) {
-  let nextIndex = 0;
-  const results = new Array(values.length);
-  async function worker() {
-    while (nextIndex < values.length) {
-      const index = nextIndex;
-      nextIndex += 1;
-      results[index] = await operation(values[index]);
-    }
-  }
-  await Promise.all(Array.from({ length: concurrency }, () => worker()));
-  return results;
 }
 
 main().catch((error) => {

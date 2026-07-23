@@ -45,8 +45,11 @@
         "artifact_id": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
         "library_id": { "$ref": "#/$defs/id" },
         "file_name": { "$ref": "#/$defs/dllName" },
-        "file_version": { "$ref": "#/$defs/version" },
+        "file_version": {
+          "anyOf": [{ "$ref": "#/$defs/version" }, { "type": "null" }]
+        },
         "architecture": { "$ref": "#/$defs/architecture" },
+        "pe_named_exports": { "$ref": "#/$defs/peNamedExports" },
         "dll": { "$ref": "#/$defs/content" },
         "transport": { "$ref": "#/$defs/transport" },
         "signature": { "$ref": "#/$defs/signature" },
@@ -161,14 +164,47 @@
       }
     },
     "provenance": {
-      "type": "object",
-      "required": ["kind", "package_id", "version", "package_sha512"],
-      "additionalProperties": false,
-      "properties": {
-        "kind": { "const": "nuget" },
-        "package_id": { "type": "string", "minLength": 1 },
-        "version": { "$ref": "#/$defs/version" },
-        "package_sha512": { "type": "string", "pattern": "^[A-Za-z0-9+/]{86}==$" }
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["kind", "package_id", "version", "package_sha512"],
+          "additionalProperties": false,
+          "properties": {
+            "kind": { "const": "nuget" },
+            "package_id": { "type": "string", "minLength": 1 },
+            "version": { "$ref": "#/$defs/version" },
+            "package_sha512": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9+/]{86}==$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["kind", "repository", "tag", "commit_sha"],
+          "additionalProperties": false,
+          "properties": {
+            "kind": { "const": "github_release" },
+            "repository": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+            },
+            "tag": { "type": "string", "minLength": 1 },
+            "commit_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+          }
+        }
+      ]
+    },
+    "peNamedExports": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16384,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256,
+        "pattern": "^[ -~]+$"
       }
     },
     "signature": {
@@ -196,7 +232,7 @@
               "pattern": "^[A-F0-9]{40,64}$"
             },
             "signed_at": {
-              "description": "Verified or historically recorded signing time; null means no trustworthy timestamp was available.",
+              "description": "Verified or historically recorded signing time. Generated providers use null only when no timestamp attribute exists; older curated records can be incomplete.",
               "type": ["string", "null"],
               "format": "date-time"
             }

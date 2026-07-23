@@ -1,7 +1,23 @@
+import { generatedLibraryVendors } from "../catalog.mjs";
 import { UsageError } from "./common.mjs";
 import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
+import { generatedLibraryValidatorScripts } from "./library-source-adapters.mjs";
 
 const COMMANDS = new Set(["generate", "validate", "refresh", "publish", "audit-published"]);
+const REFRESH_PROVIDERS = Object.freeze({
+  microsoft: Object.freeze({
+    script: "refresh-microsoft-nuget.mjs",
+    allowBackfillSignatures: true,
+    allowProduct: true,
+  }),
+  openvr: Object.freeze({
+    script: "refresh-openvr-github.mjs",
+    allowBackfillSignatures: true,
+    allowProduct: false,
+  }),
+});
+const GENERATED_VALIDATOR_SCRIPTS =
+  generatedLibraryValidatorScripts(generatedLibraryVendors);
 
 const HELP = Object.freeze({
   all: `Usage: node scripts/libraries.mjs <command> [options]
@@ -9,20 +25,20 @@ const HELP = Object.freeze({
 Commands:
   generate [--check]
   validate
-  refresh microsoft [--check|--write|--materialize-locked|--backfill-signatures]
+  refresh <microsoft|openvr> [--check|--write|--materialize-locked|--backfill-signatures]
   publish [--json-only|--binary-only] [--dry-run] [--force]
   audit-published [--verbose] [--dry-run]`,
   generate: `Usage: node scripts/libraries.mjs generate [--check]
 
   --check       Verify generated snapshots without writing files.`,
   validate: `Usage: node scripts/libraries.mjs validate`,
-  refresh: `Usage: node scripts/libraries.mjs refresh microsoft [options]
+  refresh: `Usage: node scripts/libraries.mjs refresh <microsoft|openvr> [options]
 
   --check                    Detect missing listed stable releases.
   --write                    Import missing releases and persist the lock.
   --materialize-locked      Re-verify and recompress locked releases.
-  --backfill-signatures      Re-verify missing Authenticode timestamps.
-  --product=<id>             Limit the operation to one configured product.`,
+  --backfill-signatures      Re-verify and backfill missing signed_at values.
+  --product=<id>             Microsoft only: limit to one configured product.`,
   publish: `Usage: node scripts/libraries.mjs publish [options]
 
   --json-only    Publish JSON snapshots and index; verify every referenced blob.
@@ -77,8 +93,9 @@ export function parseLibrariesArgs(argv) {
   return {
     help: false,
     command,
-    // The outer CLI consumes the vendor positional argument; the legacy
-    // refresh worker receives only its option flags.
+    ...(command === "refresh" ? { refreshVendor: args[0] } : {}),
+    // The outer CLI consumes the provider positional argument; refresh
+    // workers receive only their option flags.
     args: command === "refresh" ? args.slice(1) : args,
   };
 }
@@ -91,15 +108,28 @@ export function helpTextForLibrariesCommand(command = null) {
   return HELP[command] ?? HELP.all;
 }
 
-export async function dispatchLibrariesCommand({ command, args }, runScript) {
+export async function dispatchLibrariesCommand(
+  { command, args, refreshVendor },
+  runScript,
+) {
   switch (command) {
     case "generate":
       return runScript("generate-library-catalog.mjs", args);
     case "validate":
       await runScript("validate.mjs", []);
-      return runScript("validate-microsoft-nuget.mjs", []);
-    case "refresh":
-      return runScript("refresh-microsoft-nuget.mjs", args);
+      for (const script of GENERATED_VALIDATOR_SCRIPTS) {
+        await runScript(script, []);
+      }
+      return;
+    case "refresh": {
+      const provider = REFRESH_PROVIDERS[refreshVendor];
+      if (!provider) {
+        throw new UsageError(
+          "refresh requires the explicit vendor 'microsoft' or 'openvr'",
+        );
+      }
+      return runScript(provider.script, args);
+    }
     case "publish":
       return runScript("publish-library-catalog.mjs", args);
     case "audit-published":
@@ -111,8 +141,9 @@ export async function dispatchLibrariesCommand({ command, args }, runScript) {
 
 function validateRefreshArgs(args) {
   const [vendor, ...flags] = args;
-  if (vendor !== "microsoft") {
-    throw new UsageError("refresh currently requires the explicit vendor 'microsoft'");
+  const provider = REFRESH_PROVIDERS[vendor];
+  if (!provider) {
+    throw new UsageError("refresh requires the explicit vendor 'microsoft' or 'openvr'");
   }
 
   const { values } = parseCliArgs(flags, {
@@ -135,6 +166,12 @@ function validateRefreshArgs(args) {
   }
   if (values.product !== undefined && values.product.trim() === "") {
     throw new UsageError("--product requires a non-empty product id");
+  }
+  if (!provider.allowBackfillSignatures && values["backfill-signatures"]) {
+    throw new UsageError("--backfill-signatures is not valid for this provider");
+  }
+  if (!provider.allowProduct && values.product !== undefined) {
+    throw new UsageError("--product is only valid for Microsoft");
   }
 }
 
