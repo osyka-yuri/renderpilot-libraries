@@ -4012,7 +4012,7 @@
   "packages": [
     {
       "package_id": "d3d12_agility.1.4.9.x64",
-      "revision_sha256": "ca20e059dea9bf2390bc840a5e893cf0c1664478217a03cb9e6d6aabc80539da",
+      "revision_sha256": "419f94933726423b0a2e0ca5c3ddfd64930fe3d461c382df6e41b90810423b67",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4045,7 +4045,7 @@
     },
     {
       "package_id": "d3d12_agility.1.4.9.x86",
-      "revision_sha256": "1038e6c4ffca84b5b3c0eaa5cd58defeae45ef1553ef869c0715d2d6acfb892b",
+      "revision_sha256": "87b4a4dd08119b046db4bfbd13185246ce41b7a85858ff2c5337d325a7c341f0",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4078,7 +4078,7 @@
     },
     {
       "package_id": "d3d12_agility.1.4.10.x64",
-      "revision_sha256": "811c1df5768256bf2be1f12d17a0d999a96ef173eb0a8f5db6c6dfd82640b309",
+      "revision_sha256": "5bb685d23c27c57b1e00ef5e453bb9fd563b355e34627e8e99bd42811ee6ee9d",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4111,7 +4111,7 @@
     },
     {
       "package_id": "d3d12_agility.1.4.10.x86",
-      "revision_sha256": "79fbacc7f2ad81996fdf75071d064de1aa47239b415ecb1c8e3c6ef1c18dc91f",
+      "revision_sha256": "54c436f954891608bc4c8bb94f4f259b8777d76543c831f693bf1e6acbd380af",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4144,7 +4144,7 @@
     },
     {
       "package_id": "d3d12_agility.1.600.10.x64",
-      "revision_sha256": "b27d58d097129a34a9de8977b78645c3aefcf4b86f9c00c37cef14794abdb22a",
+      "revision_sha256": "e7b6ab9e7469d1cc9d1fade9591f918f56a0782d83540ef6e2784fabefd6da30",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4177,7 +4177,7 @@
     },
     {
       "package_id": "d3d12_agility.1.600.10.x86",
-      "revision_sha256": "d3330524639bb378617308334a4d145749206ff0da8ef845926e7f6620a4d916",
+      "revision_sha256": "2eff656d29f3045f717199802ce9019a12bc5e70bb90fd20a946c5a382537a9c",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4210,7 +4210,7 @@
     },
     {
       "package_id": "d3d12_agility.1.602.0.x64",
-      "revision_sha256": "e1d1a195197508957e4272caf5b9d87a27113d0edda787e18c4169e21119ec9b",
+      "revision_sha256": "ae80d1c324b0d14ed46e55f934e8cf6c6b78e48d87c92dd3bc3ee9a475574f0c",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4243,7 +4243,7 @@
     },
     {
       "package_id": "d3d12_agility.1.602.0.x86",
-      "revision_sha256": "14da44fcdeb6c36b32f09077672c465044f3e8048a80440d44390f5060e9188f",
+      "revision_sha256": "c410f8bc051777a8b85178332a8abdbfb4db6c6a8588848e02f3d355ed877e7b",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4276,7 +4276,7 @@
     },
     {
       "package_id": "d3d12_agility.1.602.4.x64",
-      "revision_sha256": "28ff24ca2fac6ddbe1dcf5ae49cb2c153e8f49175be4f827034ab442f92a4633",
+      "revision_sha256": "1a3d68e2fc279882dd08f6cd753f0395ebca96cbc5bb6869fd8d52e39736e46f",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4309,7 +4309,7 @@
     },
     {
       "package_id": "d3d12_agility.1.602.4.x86",
-      "revision_sha256": "d6934a5cdd15d65914c43d0fd88e82ded3a87c0e23aa7e47e377e86a0012d007",
+      "revision_sha256": "0ee4e36dd76719807c3ca2609e6a2c571106feecb8898878438cd3e07288e77e",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4342,7 +4342,7 @@
     },
     {
       "package_id": "d3d12_agility.1.606.3.x64",
-      "revision_sha256": "3bff37c0aca364ad59b435ea789db6cadc10569b12ed2ae029d5f4d3c47f68d6",
+      "revision_sha256": "d02ae4b9f577a646724e982b213ffb1b50fd03adb8f1546c164317fe6cdb1dbd",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4375,7 +4375,7 @@
     },
     {
       "package_id": "d3d12_agility.1.606.3.x86",
-      "revision_sha256": "a084822fca46a40009b1d80f75871559418d170fd478ea2ebc736e07e7bd6e57",
+      "revision_sha256": "a0cef0c74eefbde0c3cc2d3ff5e30ffdd098fca542bbd15c7dc547bcb8569ee6",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4408,7 +4408,7 @@
     },
     {
       "package_id": "d3d12_agility.1.606.4.x64",
-      "revision_sha256": "79193a524acb3b48f6ba116ea212e7974d6b1ac880b86720d9bcbefc5753b270",
+      "revision_sha256": "c105e6c8156088797c3c2be460468fc77d145ef9b721dcd1a38fd31aeb8349b3",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4441,7 +4441,7 @@
     },
     {
       "package_id": "d3d12_agility.1.606.4.x86",
-      "revision_sha256": "93cb2552329beceab79229532e205f016fe1a205385d289ad6f1c73414f08bc0",
+      "revision_sha256": "ad58ac61492178da1008ae0fd09b60d093bb0967e0463a1a05b33a2117c5b887",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4474,7 +4474,7 @@
     },
     {
       "package_id": "d3d12_agility.1.608.0.x64",
-      "revision_sha256": "b857fd370dcd7d970402232aef60029fb0c67e1cbb31216a9c3d48fddff8d24f",
+      "revision_sha256": "16883a1315751111883fb40bfd41fdcc45afb554140639b279bd2961c000d0f3",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4507,7 +4507,7 @@
     },
     {
       "package_id": "d3d12_agility.1.608.0.x86",
-      "revision_sha256": "1f188870a0802fc54b12a5a6a150550522a6e2c446ce56e1005da8cbdea255d6",
+      "revision_sha256": "fd7d920413c9680d5ad62b3179b5fcbc379f3c976393049c61220f2c8d2f9fca",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4540,7 +4540,7 @@
     },
     {
       "package_id": "d3d12_agility.1.608.2.x64",
-      "revision_sha256": "0ca789a721990fbba773570df3bfbd83a48bea363956d723c24252c52d4f21c7",
+      "revision_sha256": "7fc09036e773b110b9d4e3776da0b3b50782947b165ccc23fde325a1e29ed4f4",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4573,7 +4573,7 @@
     },
     {
       "package_id": "d3d12_agility.1.608.2.x86",
-      "revision_sha256": "6c33e5e9638d023e9318739764e0319f2da4fbca0b4ef2f77df4ac65bd2fee9b",
+      "revision_sha256": "5114ad76bd01a8e03dab7379e193e732e9b1c3bf61f5e9c3335009607ff0e94c",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4606,7 +4606,7 @@
     },
     {
       "package_id": "d3d12_agility.1.608.3.x64",
-      "revision_sha256": "4964b5df1bd25b572ba4142797c750a20b1a50341c5a392a41283557395b90e2",
+      "revision_sha256": "d41c3bef828c9a95f207ecb846a57643876686016ecc3d943aa31a0a5425d9d0",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4639,7 +4639,7 @@
     },
     {
       "package_id": "d3d12_agility.1.608.3.x86",
-      "revision_sha256": "6079eb1c1ca80cf402e1031126ce0297f3483c1c02c7b21d60b459bbf7fb98d8",
+      "revision_sha256": "0ee51676548c6fdde45aaad1ddea1b5ebf84a400c102253d2c6faf1c297e9d3a",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4672,7 +4672,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.0.x64",
-      "revision_sha256": "a21199b1c461a15f42e00bbe41bfdfb9bf5cf97db38accc723d4d2ef106afe61",
+      "revision_sha256": "a73505b064c44eef19036e98ac33757cada609f91450ebfdbf39dedcc8b7a7ef",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4705,7 +4705,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.0.x86",
-      "revision_sha256": "0fb35fd0a1f1c53ac05f71a9c9fc087c47af2f929a1a6d12731c5ad712b4b64f",
+      "revision_sha256": "040d03e41471281b15bd2473807c1a834c14db4bb29af525d59873b0e122c264",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4738,7 +4738,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.1.x64",
-      "revision_sha256": "1a1bb0c14e5ca98a9b636e71615915399bcffe7a2d6f9d26bb35ba7f15a15fe5",
+      "revision_sha256": "4f0fc04c6b5a7679a3d856c92894e739bb6ee40ecbfd69007c11ff190fc88fa3",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4771,7 +4771,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.1.x86",
-      "revision_sha256": "7d2620a2722cad14e1b4ac9571beffced34bd10461577f73e7ed732af5a9310d",
+      "revision_sha256": "cbc4a2426f49dd107e9477beccfb6d6f062afcb9558e611b67c69b39d0d76bc9",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4804,7 +4804,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.2.x64",
-      "revision_sha256": "faa6638b8db3b89bdb9c0c5c61c4134a3dd0b3277ec3280d3f50409964385c31",
+      "revision_sha256": "2142ea4d1f3ef463de65103bea659693e83f0968103dafd60de7bd6441af4982",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4837,7 +4837,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.2.x86",
-      "revision_sha256": "b9ef0bece0fb1c07470ae1589b1f130ecd121dbcbe885e4e1b249a9cbe4cbef0",
+      "revision_sha256": "738dc5292d0be16f27544667ede50a2a463dd301029b223330ea97f1353a9dfd",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4870,7 +4870,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.3.x64",
-      "revision_sha256": "fd5032c228b13bf43fa8ff9c99940902577b23eb94440437a9cd6339c0415498",
+      "revision_sha256": "84c025d957c55ac54c9638bc5d629a501c5032270da4a8d43771b8f2c1274eb4",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4903,7 +4903,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.3.x86",
-      "revision_sha256": "82876062371879c3dd65c47bb59240334e04a763ca3e08c8112f46d8d10896b1",
+      "revision_sha256": "8f57cf707b9b354e8556419565c7fbf9fe210d1e845dd6b62c5e5037869a42d1",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4936,7 +4936,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.4.x64",
-      "revision_sha256": "909be2ec6d0ae8ea3c2bb4ed93e5a4972510bc26b3101df970190248bebd7a27",
+      "revision_sha256": "fed3d49d3fb9177db19f8a349984321c2ef8c6d7a3d9ef6c0b972135bb4eb45d",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -4969,7 +4969,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.4.x86",
-      "revision_sha256": "2e8dd5568d084bdf31b3613787f6a412d896b1daecf8fc0ebe9989e3298150c7",
+      "revision_sha256": "c9b4980603f8f8da4d0045d44e074e6cc41c060c16ad8913967d50900fa2c93b",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5002,7 +5002,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.5.x64",
-      "revision_sha256": "3c2413785d8de0115dddd6ec62b5ef6f8aa2348d3725bffe088a3aa0a485265d",
+      "revision_sha256": "0e1ed7ae3ab68955d671c713e3d2d87fdf40e3ed5b72baa114f0e416d752e2b9",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5035,7 +5035,7 @@
     },
     {
       "package_id": "d3d12_agility.1.610.5.x86",
-      "revision_sha256": "0358c164d3b2f7147c235c3cd614436a2b89021d84e41edd3faee87844b06a68",
+      "revision_sha256": "eb652522f02740b778e17eb7e54a00c504144c31397406b332b081af44134c01",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5068,7 +5068,7 @@
     },
     {
       "package_id": "d3d12_agility.1.611.0.x64",
-      "revision_sha256": "ce79ed827b67481a87683e104c67ac6a652a60ac6c52c7c691cf7fc03efbd845",
+      "revision_sha256": "9edad6745553e3618749cdaf38368bf0279ecc0c03eb46c988aa2fdf9e564838",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5101,7 +5101,7 @@
     },
     {
       "package_id": "d3d12_agility.1.611.0.x86",
-      "revision_sha256": "9495e6f1bd9fc98806745f43845b5fd55b51be5efd8a7b6fbe4f8eed3b71434c",
+      "revision_sha256": "edd754bea6c491623395344cf0013de33b6aa4f87d51c81e1fe97027b850b501",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5134,7 +5134,7 @@
     },
     {
       "package_id": "d3d12_agility.1.611.1.x64",
-      "revision_sha256": "49be07d701a427ab477fc09a53615ed3f4363f275fb5144dc41eeb77a2470d42",
+      "revision_sha256": "92aa35e6a1b378136dad434809a3692f9355e22013801af72cc4e0920da6f284",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5167,7 +5167,7 @@
     },
     {
       "package_id": "d3d12_agility.1.611.1.x86",
-      "revision_sha256": "82d6ccd32a8425f996308df733256de8a4c8971ae9375502238ec3fcdcfce230",
+      "revision_sha256": "2cb54361f48f0eb890e589970626b4698d8a39de21322874f8c3f25e7a02b02d",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5200,7 +5200,7 @@
     },
     {
       "package_id": "d3d12_agility.1.611.2.x64",
-      "revision_sha256": "51fc192869ec33777f52f19bac7ce0b5c61c3641dbd98635322d353c55562765",
+      "revision_sha256": "0d69aeb8e3f6c13daee63013e8ac1a15dc5e10feb5ebe32f8cc97e5bc389ee93",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5233,7 +5233,7 @@
     },
     {
       "package_id": "d3d12_agility.1.611.2.x86",
-      "revision_sha256": "160426ad29edd14ef84cccdda1b4813e60a510897d3513e6806c641af931c129",
+      "revision_sha256": "774e3c539dd74f48f8cd4ebd1934dc5eb63e59be1d2a8e6e7708fdd736409eb1",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5266,7 +5266,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.0.x64",
-      "revision_sha256": "3133d4cbe9032d7e174edb0cbbb39467aa285ec94b490035abfeee7d8704ab71",
+      "revision_sha256": "3f659a27a1eea6d02d0277245c946455194902fc43e2cd1912ac4747e261cc8d",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5299,7 +5299,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.0.x86",
-      "revision_sha256": "aa5c488c866e3980f41f6838775c1455a519f937520fd858403f9a19ee7e425f",
+      "revision_sha256": "00cc8112b231e55f7879914f3edddc7b65701f9abde91263675154e0e1496176",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5332,7 +5332,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.1.x64",
-      "revision_sha256": "4f553cc1488857fa323605b27b5d96007b591fa1669a4e59b80e9f70501031b3",
+      "revision_sha256": "00f4fe38aebb238ea8221fdfc0c815aaa1ee5116339ffc40fef7261d694cdaa3",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5365,7 +5365,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.1.x86",
-      "revision_sha256": "8ffce13ac8e0d90b3d25f917ba329753059365d568d79bce65ba3060b4cc3ee4",
+      "revision_sha256": "6f22d3847763c9f4224935dc2beaa30bbd8040545f7c54d349efdfafb338b13f",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5398,7 +5398,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.2.x64",
-      "revision_sha256": "f937b0d4553d79f28df690cdb04feab1ba0b83fcacd368cec091612a4d07d412",
+      "revision_sha256": "45c2479348e02695a9c83b28decb3629f5e4fc348915384131471022a8bce1ca",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5431,7 +5431,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.2.x86",
-      "revision_sha256": "04c2df5528b1521edeea6bc4bc56ceb124b8f29de0a0be1413dd303a871dd428",
+      "revision_sha256": "f4f764372637d1ec4adfc0f9383df4a4ab2b81fd2eb3b7d8842b295ffae53338",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5464,7 +5464,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.3.x64",
-      "revision_sha256": "22840b5c083db5d37165232c2f19d5ea5d2b02989803bdb6e8af73adf8b7ff1d",
+      "revision_sha256": "79259c658784c4abef862303529cabc031d45b05628e71e4b2bce99b35628fae",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5497,7 +5497,7 @@
     },
     {
       "package_id": "d3d12_agility.1.613.3.x86",
-      "revision_sha256": "2bda2f2d4f256391560e39dc99e7b3b24d1c29a9bdc87d106ca2b7829030cdb1",
+      "revision_sha256": "855bac64606d6eb324a17b76aa7c61a5ca17baf200bc8a4d816e798b7a81cb3b",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5530,7 +5530,7 @@
     },
     {
       "package_id": "d3d12_agility.1.614.0.x64",
-      "revision_sha256": "f00f169b37858c23b8a84433e7114f9af7c684e51c01baef24a170a15128b34d",
+      "revision_sha256": "67c7934dd33a64f8072e25287de7726875e91090cd5a620e7c5c49cbed1a94a7",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5563,7 +5563,7 @@
     },
     {
       "package_id": "d3d12_agility.1.614.0.x86",
-      "revision_sha256": "0c81427bc5c0a257a5c6e935c88e62124fd086b9af24a6f1d1e01db5bb6fca73",
+      "revision_sha256": "2da058ff53c3fad67a6ff1cf937204e130a0124178a54089dccc9bbbcff4d835",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5596,7 +5596,7 @@
     },
     {
       "package_id": "d3d12_agility.1.614.1.x64",
-      "revision_sha256": "e5c99c52af40affa0027cb7de09adc14906456b06974104ce460aa5e7e3d8a65",
+      "revision_sha256": "01b20484770604b324fe6696b4b56be9e4e2ea0dbd2316ce3edc9bdf51469c53",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5629,7 +5629,7 @@
     },
     {
       "package_id": "d3d12_agility.1.614.1.x86",
-      "revision_sha256": "ec38ab4fdefe843a75b2a6646ce02d0e78079a5335a684813fe472fa463aaff2",
+      "revision_sha256": "723775416fa1bc450709ad88e8b19cd8f1a315c313e1a69ba22459c6798a635a",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5662,7 +5662,7 @@
     },
     {
       "package_id": "d3d12_agility.1.615.0.x64",
-      "revision_sha256": "332e9bc161647c82d34db9ec2f3956bdf9c6e64c2d327ee5ad4eccd240fc31e1",
+      "revision_sha256": "e47a11b8055bda1556a0429eefcf638979578cb97a45ddde9ff1c46c0673cb6f",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5695,7 +5695,7 @@
     },
     {
       "package_id": "d3d12_agility.1.615.0.x86",
-      "revision_sha256": "dac72ef6454f651a728dbcd310ce5634e3c9bd86b8039cb8082f2489ca3393e8",
+      "revision_sha256": "f07def39611b046f30495cf14cddf46d28bc4884372bbb4eb511bd0d311d6cf6",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5728,7 +5728,7 @@
     },
     {
       "package_id": "d3d12_agility.1.615.1.x64",
-      "revision_sha256": "d2d0f333bfeb3b39c01951ea9a311fd1d5806d7cca5793d60134d58215237b3f",
+      "revision_sha256": "01b690d9857171845011fcd2bb5e516a52255068c5bfb03d6a867b57f65ad561",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5761,7 +5761,7 @@
     },
     {
       "package_id": "d3d12_agility.1.615.1.x86",
-      "revision_sha256": "5fb98acc5e06cad1c42002daa846905a459c92af55d88bad098ff1003a759389",
+      "revision_sha256": "854d4cd0d2da4f945138b0ed46b83acb2b8348bd035788f0bb20a3afedae9c04",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5794,7 +5794,7 @@
     },
     {
       "package_id": "d3d12_agility.1.616.0.x64",
-      "revision_sha256": "254cd1782455d3265027fb440f86051ed29340fb0dca7b50ae4e4567573cf863",
+      "revision_sha256": "4d00e84dcae09c5c74c2a6bb319b8dd7fc52c8c3943b2434b6c2580a6544863a",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5827,7 +5827,7 @@
     },
     {
       "package_id": "d3d12_agility.1.616.0.x86",
-      "revision_sha256": "a817f00ab8f844c8688932ecd84865ee072a1bca0a13d4985f166f4748336ad5",
+      "revision_sha256": "9d1c584b1ceeda987b1b0a4cfffd82214b1c536f0e47c4a11025a14725e81df3",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5860,7 +5860,7 @@
     },
     {
       "package_id": "d3d12_agility.1.616.1.x64",
-      "revision_sha256": "786bb0db82d0aa1b76d1c96390539e13e9ab38532c00ebc3a2c33190439b354a",
+      "revision_sha256": "518f940b4de579c491a89edf13937fda82e5d755793a88f2ded44bdc43330ea5",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5893,7 +5893,7 @@
     },
     {
       "package_id": "d3d12_agility.1.616.1.x86",
-      "revision_sha256": "ee91b31ca67ece6e5bf997a329384d0e0925bb61484cecb53a50c665ef8d52ea",
+      "revision_sha256": "f58537c7eaeaccc2cb09b476a82089dd4d5949d199d2233b8ad006f2bcaafda4",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5926,7 +5926,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.1.x64",
-      "revision_sha256": "c43ad90de4ecc347f0a8bf5a93fe61649736cb75d6365e678aa1cb291aabfa78",
+      "revision_sha256": "25a1b42158e4d528ace0b9c15084d4e3dce85ae621580e9c185306e267c454e5",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5959,7 +5959,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.1.x86",
-      "revision_sha256": "0624f96c7f2ed7ac2074e4a638951c370e1c669d0eb35d7abe84acdc278801f9",
+      "revision_sha256": "5dbd6e7b9f3a5afc0060893c0793364a9601a2fa25773bf190be9d85f0b6db86",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -5992,7 +5992,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.2.x64",
-      "revision_sha256": "cba38dcfc1ef1cd0a33a1f45031aa0a8ef87f151c324b33ac683d8c01bb753b9",
+      "revision_sha256": "5f82f7e817ddd3d3c812b22820b29dfd935c537a4e3a1dc7e73a9006e8ed8063",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6025,7 +6025,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.2.x86",
-      "revision_sha256": "3b154006bbdaa595571dee140b1d0e30eca43474abaad53895358a1908d261b8",
+      "revision_sha256": "b2ade8df2751b0af48da23e53a26f6fb5f95ca0491f8264fc58ffbdb738dcf39",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6058,7 +6058,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.3.x64",
-      "revision_sha256": "235f4b2e7e72fe7cf9a73cf1073e6c4ee48b435ec3a1d60ef68d138e3ac4f7ce",
+      "revision_sha256": "a74b81715abc88944ef97c3fcf5d93220bcac20f97ecd895110b982bdb1f0051",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6091,7 +6091,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.3.x86",
-      "revision_sha256": "29bc994adcedd22883f464bafadb44b094baaa1adc699528415633740eb9a6a1",
+      "revision_sha256": "154ec7755e9acdb65659b066b0d993be8efc220fedba04c197549e2a88dfda28",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6124,7 +6124,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.4.x64",
-      "revision_sha256": "1e3312c7b79db60cbea34c05cf3f444cfe7d66cc6834a8c84ab595d4b3864c47",
+      "revision_sha256": "579e578cc24c84f494450dc02ec1196b504c76a8ed8510b7ce9c092be04596e3",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6157,7 +6157,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.4.x86",
-      "revision_sha256": "f4a199fb0213500fb6dd3bb48dbc9b38dace3705a72c5ba56dab3b4d3a49a25f",
+      "revision_sha256": "7cc146126fb56511eff20bcb7445da68fa0545fc8735898ffd09b8bc0574eb95",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6190,7 +6190,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.5.x64",
-      "revision_sha256": "1c57dff470ede20ff184bfb588dfa8859595d20832200a9de58d3ddafdb28b25",
+      "revision_sha256": "6254a2f831b0fc280faafd7d93a90f4d208606da962ad355421a28e15a20d50d",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6223,7 +6223,7 @@
     },
     {
       "package_id": "d3d12_agility.1.618.5.x86",
-      "revision_sha256": "b889dc31d648068fc520ec244a2fe5a00775b0e1d7c867e6ea6b2c559ba9eee3",
+      "revision_sha256": "840b4518d15dd834e11bb85680dd1d2f926a982b0635b6d397d6c3cac70eae8e",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6256,7 +6256,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.0.x64",
-      "revision_sha256": "9bfa396f6d2f084a756afb06860d1cabf9448730a703891cd1ac8bc6b30ffa41",
+      "revision_sha256": "0f791b10335ab994b650a120eca5c92a27c6174f4ee5ef86025b20f4aa42b530",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6289,7 +6289,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.0.x86",
-      "revision_sha256": "6984e5f205cf3dfc5e9e29922dd29f43ca18e75a05d7e280665206cf7aef2175",
+      "revision_sha256": "8551a88dec50f3c0df1ef12efecd0b7a2021dca3f89f3dad9eb04f78f9ed7100",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6322,7 +6322,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.1.x64",
-      "revision_sha256": "3007587cc4a0484dcc3842c1ecf43d954aef1e8a6743823c14c00bf5f7bd5b16",
+      "revision_sha256": "6659a214c8cb4414d9a29dff58678452b6af7b369c4f7155421a09e2f89cce80",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6355,7 +6355,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.1.x86",
-      "revision_sha256": "5436b4c328324b2355ca870a556540021da24efa8f6c27e0b11b3852506e7dfe",
+      "revision_sha256": "2d9e2449558061c67f750b95129e9986ed87d588cccd1bb5b9231922f67b39b1",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6388,7 +6388,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.2.x64",
-      "revision_sha256": "1fb0b4e325e7af3b06e5a534df3ac17edd4ef1edf4491c1861eb26ac263febcc",
+      "revision_sha256": "02e8d82a0b1db1bd6532527c3d7fba0932cb03cdf5417ab57bb884e7c13f7fe4",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6421,7 +6421,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.2.x86",
-      "revision_sha256": "e890eb48eedce9557e7b3a22b1ec3a2f808921e656d63b299591683af48c111f",
+      "revision_sha256": "105b8dcf17a70e989d1c5cfca50ef48f051bac7116c2083c91f8ffbd917b087b",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6454,7 +6454,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.3.x64",
-      "revision_sha256": "4ea22deae7d824496ff28c16aa6aeb1041d5b908a5a52ceab046c743cb49efa3",
+      "revision_sha256": "3a26c33e16fa13ce03f55f99885a4b24d08891055dfac23973b3719f97f0192b",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6487,7 +6487,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.3.x86",
-      "revision_sha256": "6ecd1054a1f13c476f9126013fd6c53955a9995fa2b3730c5cc3995eca4fa724",
+      "revision_sha256": "442b183886fd895f9ddc379acab65b8ce5869bbcb451a875615ae359dc1acf22",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6520,7 +6520,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.4.x64",
-      "revision_sha256": "8efaf3702722adf77e2494ad078f2ac9f9ead6a4e5f3ecaa2f1d0d78095ee94b",
+      "revision_sha256": "4d294f4cfa86b32010647e552a90b6d200bdb940e2cde4ab5b0e211a05d277ef",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6553,7 +6553,7 @@
     },
     {
       "package_id": "d3d12_agility.1.619.4.x86",
-      "revision_sha256": "456715f91fb7bc8250363221ccf28d3f9a09982b5227665e6a00eb64251667cc",
+      "revision_sha256": "6d647a040c836ef6be5b0131678d657f2f813c51ce24785e7aff43767cce0dc9",
       "technology": "d3d12_agility",
       "variant": "runtime",
       "display_name": "Microsoft D3D12 Agility SDK",
@@ -6586,7 +6586,7 @@
     },
     {
       "package_id": "directstorage.1.0.0.x64",
-      "revision_sha256": "ea5daeb4640224f4fe1db4773aafa86f5813d157ed551514a4c80ac8cb4462de",
+      "revision_sha256": "9900b9e873a8d0ac6778d040e86aaac963e3eee5f228175d3c8e6ce2f6999158",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6615,7 +6615,7 @@
     },
     {
       "package_id": "directstorage.1.0.2.x64",
-      "revision_sha256": "fa9789b45c70c26a5022b83e510023e7345c1fa96c2cfe2d72e153d1137c1c24",
+      "revision_sha256": "95d8ea8b22b6952139a5104039f17cab7e7bff2adbb1af52ebd9770c879e0aa4",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6644,7 +6644,7 @@
     },
     {
       "package_id": "directstorage.1.1.0.x64",
-      "revision_sha256": "c8ec39bd4712dd9d9d5e0bb66b33283c4f8c4b7ebbc64dfa3ae7fda33d80f2af",
+      "revision_sha256": "4a39e49ef2d614ab074b2566eace6ff5f068114b494b6c3ebdb48af6ebeedda9",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6673,7 +6673,7 @@
     },
     {
       "package_id": "directstorage.1.1.1.x64",
-      "revision_sha256": "20f26aa6a657914396733140db666826fe4689f48d9663bac974dddd83cd34f4",
+      "revision_sha256": "60d9f4d3b9840504b4d13a787ce306c4cf688366ea4f3455a9eb736068490dd0",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6702,7 +6702,7 @@
     },
     {
       "package_id": "directstorage.1.2.0.x64",
-      "revision_sha256": "195d074b445e80a4a90eac6e2212de8c375ca3f1e24bb5ffc4b8315c301ee41e",
+      "revision_sha256": "2a50b6428efdd07907827272af160367e35905b71b86670facc3a3cf32c1771b",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6731,7 +6731,7 @@
     },
     {
       "package_id": "directstorage.1.2.1.x64",
-      "revision_sha256": "cde1e38297f93fa3700174b13097f798fba769066e781596af446992aa010e8f",
+      "revision_sha256": "c0dbf0f40f333e4751337eda81bacd047dee0b3ff26f6cf187aa99f897411969",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6760,7 +6760,7 @@
     },
     {
       "package_id": "directstorage.1.2.2.x64",
-      "revision_sha256": "ed5088ea7289af5dfc3c8a93cd95767f51cadb4bfda5d349fe397560912eda77",
+      "revision_sha256": "b543c416d4a4205e52adb33fd984602d35aeb80f228a39b70ccc241107b87039",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6789,7 +6789,7 @@
     },
     {
       "package_id": "directstorage.1.2.3.x64",
-      "revision_sha256": "b4886283c8c35350e30159ff5c37b63baa6b0cfef43c283ac2f58cc800b9d698",
+      "revision_sha256": "462c07ca57685c9f2eb7a0cfc4cee9d33f0c32bb9ee547a1822b038e5050e0d7",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6818,7 +6818,7 @@
     },
     {
       "package_id": "directstorage.1.2.4.x64",
-      "revision_sha256": "12df1611e635a4aa6837efe7b38c522c520fee35ad9a8648f5317f64d121e849",
+      "revision_sha256": "61c899afc0ef3bcf802afc4865fbb5451c216546d1cb021cd848395ccedffffd",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6847,7 +6847,7 @@
     },
     {
       "package_id": "directstorage.1.3.0.x64",
-      "revision_sha256": "09d3bdf9a30338fffcf517289a25ebedb53d8236bb7c915aae55e04494226902",
+      "revision_sha256": "114aa364e22b92797e1ed01b73d01855ae61bfc861a16acb86bd288dbc37142e",
       "technology": "direct_storage",
       "variant": "runtime",
       "display_name": "Microsoft DirectStorage",
@@ -6876,7 +6876,7 @@
     },
     {
       "package_id": "dxc.1.7.2207.7.x64",
-      "revision_sha256": "19d2539b50f878aca0a3c604331e1bb003a5be65b6ab32e9293b739d6c4001d5",
+      "revision_sha256": "2356a3a18506374ab8d3cbc661b81f5947b64b56ca78a226bfcf53f5230862fb",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -6910,7 +6910,7 @@
     },
     {
       "package_id": "dxc.1.7.2207.8.x64",
-      "revision_sha256": "7748ba2b677577b538b1778cc437890473cf2938c943548dda80038869342f65",
+      "revision_sha256": "a70397c703924a3953c9cd617c8d5352da4e3fec99f4e4a431822e8f96de2069",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -6944,7 +6944,7 @@
     },
     {
       "package_id": "dxc.1.7.2207.8.x86",
-      "revision_sha256": "f2d7c1176f1352b7fc94daec8f8e446baffa703ca0ff8a68cd9621967003baca",
+      "revision_sha256": "1e93890d0d8de60a9de18509d2c4bd981f090df3652c0c94c43faf4ffb8cffb7",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -6978,7 +6978,7 @@
     },
     {
       "package_id": "dxc.1.7.2207.26.x64",
-      "revision_sha256": "6cd57305c5922e0e339b3d90da8f6450c70ef0d3230afc375102e1d7f4246e71",
+      "revision_sha256": "fda0eb5eb144763b5a443b7f38062d29da13b7a283f61b7698640b83742c0964",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7012,7 +7012,7 @@
     },
     {
       "package_id": "dxc.1.7.2207.26.x86",
-      "revision_sha256": "829d2bffe56542439f381bb1eb205d4b07cc17a94138fbd21c7e9018bb3dae86",
+      "revision_sha256": "666bd20c57b13bcacda6db014dc9e065a03fe71babe728da57b753e82d7333f3",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7046,7 +7046,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.14.x64",
-      "revision_sha256": "9cc75c97dad9273c19e558cbdd7f4f094b209117de69591ff09e499524ab7015",
+      "revision_sha256": "5f3a591aedffad20a33dadad8d428fe456c369b2701a3750f5f74c6734684049",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7080,7 +7080,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.14.x86",
-      "revision_sha256": "4cef7f761810be866838f82d5b16ccbc6c6fd6b3c4109b86727d1a02dac9317d",
+      "revision_sha256": "879eccc09cf7d6e00d8e544c2b6a441999c6fe0e31a89f3ce4a96fdbb687546e",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7114,7 +7114,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.16.x64",
-      "revision_sha256": "b4b7c69c2cd0780770460e1bf839e1c7df5dbfaedaba88297721af37ab941e7d",
+      "revision_sha256": "51aedf9fac21bc304f2fdc337d8e5c52f4de6548dce799a1d1e5ba31b9209c1d",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7148,7 +7148,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.16.x86",
-      "revision_sha256": "6bff7a1b97911f49023e801722a39b86a1873a93f757398de922814eb69e5c5e",
+      "revision_sha256": "f9c9eb5b2e0ac5f3bfaa0a754fb0962d4b554ad998af3404c0131d16f61ba961",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7182,7 +7182,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.17.x64",
-      "revision_sha256": "f4998d0cacba3621966d3b5db08159f00833f1dca7be052e8adf8211110f11b9",
+      "revision_sha256": "75a094325ed93be529822bba05f98805a4ca188160443afedd1b25a88020bfda",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7216,7 +7216,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.17.x86",
-      "revision_sha256": "8d4e090af299553b8ded64b88a5b43bcf94d3212f3c847d72749536c537aaf10",
+      "revision_sha256": "8802bbdc7749e5dcf173575a2b5d31163e36bde24689c5d332729f2df53eefb3",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7250,7 +7250,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.19.x64",
-      "revision_sha256": "91cb7e9b0a2dac3acf5c0b963ba4f34987a32cf561b75fcdc707bdd7d1a853c2",
+      "revision_sha256": "2354a9c9ea556812a269e8228bcaa55c1c47e74ddd9b8dfcb4aa33a7dd6bfd05",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7284,7 +7284,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.19.x86",
-      "revision_sha256": "42d79e8e9311b47d90d3b678f472aae41cf01386304be935ef3826a2ba9a40e5",
+      "revision_sha256": "98aa6ec0f4ee93f8164350cf0e8abb4d3042299d27ea7b7ff86ff8d422863f6e",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7318,7 +7318,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.23.x64",
-      "revision_sha256": "f166e4843b81de894fed242def85a2165204a6c5503cf76ecc76fe1c47d98172",
+      "revision_sha256": "83f0c37d1ed87c18ce29451fa65bd6a015e1bbb503cdd3fd2ba9be6c1dd444bc",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7352,7 +7352,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.23.x86",
-      "revision_sha256": "50a22921029077c4a5bba1ca7c803e226912ae59fab5cec43fc141308993aa7d",
+      "revision_sha256": "69a8ae385b3a8a00370bcc35e38c60cae06a40eb36b01afbc348fbd46fff198b",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7386,7 +7386,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.36.x64",
-      "revision_sha256": "5e4a4482471998c979a5318e45b6d556f35f29c9d787bfba27e52cf25aec3a12",
+      "revision_sha256": "7e5e496468e277db5983b220837225a2d9933e290f9ea0bb6a9569470ff056e1",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7420,7 +7420,7 @@
     },
     {
       "package_id": "dxc.1.7.2212.36.x86",
-      "revision_sha256": "2b282a53fa6044120c8c1b08a7f8f5cefc2c87660b11d420d0924b8c452e19b0",
+      "revision_sha256": "7364a24b27af5f70d776fba0517b6cbe94d284e7d7e21af89d167837cd34605e",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7454,7 +7454,7 @@
     },
     {
       "package_id": "dxc.1.7.2308.12.x64",
-      "revision_sha256": "8ed811552ccd8606dfae974c333366c013e1a0e727fc0ee3806c516ca6225e8c",
+      "revision_sha256": "e887b372d76155a94713a68ec928660cb5cd4716682f6e78dc8b6bf108b45e9b",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7488,7 +7488,7 @@
     },
     {
       "package_id": "dxc.1.7.2308.12.x86",
-      "revision_sha256": "4e8fe2af50237a69be2dc4177ef42ee2b6873dc70657988952407e0c7897613c",
+      "revision_sha256": "500542de1e6085bd6abda97ab1443e567f5eda227b039f4224a5bce3c13c1839",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7522,7 +7522,7 @@
     },
     {
       "package_id": "dxc.1.8.2403.18.x64",
-      "revision_sha256": "01751e72f2f3987e7951462a43e687c9a9d2aa486c4a45cfcb7328ad0ab567d1",
+      "revision_sha256": "c86ac3ecbf1ce0c1aa803967cb3f498a885bc4043513b43711fdbed737d5577c",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7556,7 +7556,7 @@
     },
     {
       "package_id": "dxc.1.8.2403.18.x86",
-      "revision_sha256": "ea4a842e262ac4c4c5dcd866f2c953d05377ce637a5a9af49c15969a99650ed1",
+      "revision_sha256": "6f23d1bf122ba541335b3b232381a796cf5f8a0a1c456fd8534789fc86ba6208",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7590,7 +7590,7 @@
     },
     {
       "package_id": "dxc.1.8.2403.21.x64",
-      "revision_sha256": "88c204da25b8fd33f87ce63be331c76b2956f0f83f1ae5ebe606971b9253bd7c",
+      "revision_sha256": "cba02b5b02cac667b4208cce50e6e8feb789d8d7467f3986e283fb73730f56c6",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7624,7 +7624,7 @@
     },
     {
       "package_id": "dxc.1.8.2403.21.x86",
-      "revision_sha256": "3bbc39836064f338b279eef10a2e564d2f1e6ed6b7a1727bb5a364dc6f86365e",
+      "revision_sha256": "774749a26348e2377a454b80feb71588bef8a7894466acb0d71dee37c80129da",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7658,7 +7658,7 @@
     },
     {
       "package_id": "dxc.1.8.2403.24.x64",
-      "revision_sha256": "31635a8fd632c103df834efa0c74116e39e708daebdfd2595f6cf06856595ed4",
+      "revision_sha256": "f1c734deb3211d49b927e7fab16608879d4a77a0fb7f626740c4147bf089adb5",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7692,7 +7692,7 @@
     },
     {
       "package_id": "dxc.1.8.2403.24.x86",
-      "revision_sha256": "8a924067ca56940b459727545a69b2915c5f25fceafdfcde6f5dc0a0ba6f0f45",
+      "revision_sha256": "6a25daf75d22650cb5d3416f5ce5141db8997fb375fd59f0625904ebf6e5293c",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7726,7 +7726,7 @@
     },
     {
       "package_id": "dxc.1.8.2405.17.x64",
-      "revision_sha256": "dcefd46803b75f0c0c1eb4cf9bb36add5f688477857670bfd66df250ffb57924",
+      "revision_sha256": "c5ef4fa059eee88ad207f0d35a47fa70000eea125bff2d90925fc9e0d68e7af0",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7760,7 +7760,7 @@
     },
     {
       "package_id": "dxc.1.8.2405.17.x86",
-      "revision_sha256": "b59ee9388a263a15824022ae2e18546f2c507ff73ad9281a3700e581b236b74a",
+      "revision_sha256": "ef805784bb7a812a747419e82525166774f691f619a921c92eb7bf6b276a9504",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7794,7 +7794,7 @@
     },
     {
       "package_id": "dxc.1.8.2407.11.x64",
-      "revision_sha256": "8f946d49fafa922304615554c3efe933120f3653d0ef03ee51fcb440e46a5337",
+      "revision_sha256": "ea91fb133b176acd499ae59ced15d8da18543b5fef7e3f0484cce3d6f98a5779",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7828,7 +7828,7 @@
     },
     {
       "package_id": "dxc.1.8.2407.11.x86",
-      "revision_sha256": "5d4a92ed2a1d97f46a6c919c1d3d927e7fc7d99a81a93d7fb125e9a80770d21e",
+      "revision_sha256": "f888026544b2cef3de54a79132975c7b185b93332e16b5ae521f208f5cdbb9a3",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7862,7 +7862,7 @@
     },
     {
       "package_id": "dxc.1.8.2407.12.x64",
-      "revision_sha256": "358ab8450f158b9da09a0a43ad891dfee5b13371b853f41ced0080cc8780d96a",
+      "revision_sha256": "a4be6fabc0dfb992dd6c1c8b0f64b66562a52e066d339a1b125c5ac393005d5f",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7896,7 +7896,7 @@
     },
     {
       "package_id": "dxc.1.8.2407.12.x86",
-      "revision_sha256": "ab3d1da83270d6c682444cfe0254e445087089e508db96cb9ecf8582f43ab8c5",
+      "revision_sha256": "f35730a5b9dd072e97240f19adac654895efe5b5696f25e3542e764ba812e58a",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7930,7 +7930,7 @@
     },
     {
       "package_id": "dxc.1.8.2502.7.x64",
-      "revision_sha256": "31612238b012945387cb8333b41d68a9ab49ac31d167598bcc3c5f508ff9e54f",
+      "revision_sha256": "5f3dd68302f50cd1f890c8d83e87651fa8561638aa49457e6c8e8c99d640a209",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7964,7 +7964,7 @@
     },
     {
       "package_id": "dxc.1.8.2502.7.x86",
-      "revision_sha256": "997642e3a9347b6b22b5bcf178b7bbd8ac31ced447bd84207fd3fbf5abbad0fe",
+      "revision_sha256": "93aa7faa66003a05d5cc4ff3c66cf2bb132b396d5768545860c87309a70b0697",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -7998,7 +7998,7 @@
     },
     {
       "package_id": "dxc.1.8.2502.8.x64",
-      "revision_sha256": "01d4a13ef8bab6365ddcbe81edb420af8b651ea233a09e3c8329df0fbc8df205",
+      "revision_sha256": "debed18aca387d848e158649b3915c6bb7145d4810001d88e7fc4f80bbfbe1e4",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8032,7 +8032,7 @@
     },
     {
       "package_id": "dxc.1.8.2502.8.x86",
-      "revision_sha256": "85dd9b1a93c9b0c347a9599befd800ef1f0e7557e92dc07eea51893838df4c0a",
+      "revision_sha256": "b73d766ef07ab5bb41a77d539eea40ebb7dfb01c4c1380cce4f7767c07b671aa",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8066,7 +8066,7 @@
     },
     {
       "package_id": "dxc.1.8.2505.28.x64",
-      "revision_sha256": "030e7e4c69f5dc5242142e817e727e6e925e9fdf9865204b7e3808ae781dcbf4",
+      "revision_sha256": "8cc90ad2dca41be7784e702336d79f1019bf890192cad10eda7be41d0ee6b71e",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8100,7 +8100,7 @@
     },
     {
       "package_id": "dxc.1.8.2505.28.x86",
-      "revision_sha256": "39659a283447e1658b06577d245ed88faaf7789b0453dd5950e3cbf42ce4f36c",
+      "revision_sha256": "2e7175424015700e034eb17aa1c122f6cdec83d67b1a7fd0ce1070863a2386e9",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8134,7 +8134,7 @@
     },
     {
       "package_id": "dxc.1.8.2505.32.x64",
-      "revision_sha256": "826d1309fb256a30414bc180ac564ce6a21ba44982d040d68bc0a05022238fff",
+      "revision_sha256": "62d4eb79c85557e2206daedbad4d44b772d44be1ca20aace988dc96842bf2b16",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8168,7 +8168,7 @@
     },
     {
       "package_id": "dxc.1.8.2505.32.x86",
-      "revision_sha256": "ca26d29a15390b489a89b2c730e5126d191b8a23f929a1e1b0fb69554cc30f02",
+      "revision_sha256": "275df7b6bab60e0ac5823d1e9ccbd48653538d8af10891c127a336337d4896ea",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8202,7 +8202,7 @@
     },
     {
       "package_id": "dxc.1.9.2602.17.x64",
-      "revision_sha256": "e0b8ea9b4ff53cac120de4ed850778b35c2200ea3a1db578a95583c8e859c0c4",
+      "revision_sha256": "994360fe8ece0086eef7c2a7b75919d782e3745357fe1bd17c708ffa4353d9a5",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8236,7 +8236,7 @@
     },
     {
       "package_id": "dxc.1.9.2602.17.x86",
-      "revision_sha256": "ea739944c532e71b6e61dac8b1b905359de2437284e9a30d8fb558dfb111139c",
+      "revision_sha256": "f4c3e4366b4b30354c5706a6302d74c5f307d02e28ea83bac87809e153f38707",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8270,7 +8270,7 @@
     },
     {
       "package_id": "dxc.1.9.2602.24.x64",
-      "revision_sha256": "bd6240a8ac2847f7ad22ec75d9cab660f013aebc6f578e2f37c62f0e35907f6e",
+      "revision_sha256": "65d3f9b691eefcf6cef2e67e83e661a5ca1e3682b43da74426d87eae58e80e88",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",
@@ -8304,7 +8304,7 @@
     },
     {
       "package_id": "dxc.1.9.2602.24.x86",
-      "revision_sha256": "1b6f652adde0259c976f2e9c5ec08ee75c799ddc7559947bba8da2a6a36bde96",
+      "revision_sha256": "8f4eb0e99f4a0b8fd60d1b83baafd52657cf7f22f6c3014604d9cf6dbc0f076b",
       "technology": "microsoft_dxc",
       "variant": "runtime_bundle",
       "display_name": "Microsoft DirectX Shader Compiler",

@@ -69,7 +69,11 @@
         "package_id": { "$ref": "#/$defs/id" },
         "technology": { "$ref": "#/$defs/id" },
         "variant": { "$ref": "#/$defs/id" },
-        "display_name": { "type": "string", "minLength": 1 },
+        "display_name": {
+          "description": "User-facing package name. Presentation-only metadata excluded from package revision identity.",
+          "type": "string",
+          "minLength": 1
+        },
         "release": { "$ref": "#/$defs/release" },
         "target": { "$ref": "#/$defs/target" },
         "provenance": { "$ref": "#/$defs/provenance" },
@@ -115,9 +119,19 @@
       "required": ["version", "channel", "label"],
       "additionalProperties": false,
       "properties": {
-        "version": { "$ref": "#/$defs/version" },
-        "channel": { "enum": ["stable", "beta", "debug"] },
-        "label": { "type": ["string", "null"] }
+        "version": {
+          "description": "Canonical package version used for presentation, ordering, and candidate selection.",
+          "$ref": "#/$defs/version"
+        },
+        "channel": {
+          "description": "Behaviorally significant release stability channel.",
+          "enum": ["stable", "beta", "debug"]
+        },
+        "label": {
+          "description": "Optional concise annotation appended verbatim to the package version. It must contain only supplemental information and must not repeat the package version or display name.",
+          "type": ["string", "null"],
+          "minLength": 1
+        }
       }
     },
     "target": {

@@ -1,33 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-03T05:16:40.500Z",
+  "generated_at": "2026-07-23T06:15:06.000Z",
   "vendors": [
     {
       "vendor_id": "amd",
       "display_name": "AMD",
-      "snapshot_key": "libraries/v1/vendors/amd/e8ccf94ee3e2da2ffd3c648d8bef178ee88914fee0adda3256aa0320b9511f00.json",
-      "snapshot_sha256": "e8ccf94ee3e2da2ffd3c648d8bef178ee88914fee0adda3256aa0320b9511f00",
-      "snapshot_size_bytes": 56942
+      "snapshot_key": "libraries/v1/vendors/amd/0bef36321b2d91af5c52481300953f786ef4f62aaf1c9915e42f5a6e8987f406.json",
+      "snapshot_sha256": "0bef36321b2d91af5c52481300953f786ef4f62aaf1c9915e42f5a6e8987f406",
+      "snapshot_size_bytes": 56660
     },
     {
       "vendor_id": "intel",
       "display_name": "Intel",
-      "snapshot_key": "libraries/v1/vendors/intel/c603bd3dbc02809d12c30bd49841d0bd7ff8f411bb2f5a678e326ee0b0804a00.json",
-      "snapshot_sha256": "c603bd3dbc02809d12c30bd49841d0bd7ff8f411bb2f5a678e326ee0b0804a00",
+      "snapshot_key": "libraries/v1/vendors/intel/d70641d8d4b718e55f58659c01ecfbea263a728221ddd9ee4e162f4b3dbe9626.json",
+      "snapshot_sha256": "d70641d8d4b718e55f58659c01ecfbea263a728221ddd9ee4e162f4b3dbe9626",
       "snapshot_size_bytes": 47741
     },
     {
       "vendor_id": "microsoft",
       "display_name": "Microsoft",
-      "snapshot_key": "libraries/v1/vendors/microsoft/1733dd3fc018f52717a4f748e2dba5cc459a0f42216dd49b38dcd1ea637e39a8.json",
-      "snapshot_sha256": "1733dd3fc018f52717a4f748e2dba5cc459a0f42216dd49b38dcd1ea637e39a8",
+      "snapshot_key": "libraries/v1/vendors/microsoft/f0451bae25c9b60f3112dcd7f57742405dc9d6c5e119f532ddb2355d95352c94.json",
+      "snapshot_sha256": "f0451bae25c9b60f3112dcd7f57742405dc9d6c5e119f532ddb2355d95352c94",
       "snapshot_size_bytes": 304447
     },
     {
       "vendor_id": "nvidia",
       "display_name": "NVIDIA",
-      "snapshot_key": "libraries/v1/vendors/nvidia/293f1aa7d7f6d89d83cac8b39c2f58b0533db0287399121ec47edaf18e07ec55.json",
-      "snapshot_sha256": "293f1aa7d7f6d89d83cac8b39c2f58b0533db0287399121ec47edaf18e07ec55",
+      "snapshot_key": "libraries/v1/vendors/nvidia/f2c5bff33336969788560da3760843b30b95670f52524ad3aa9390defd6f1a11.json",
+      "snapshot_sha256": "f2c5bff33336969788560da3760843b30b95670f52524ad3aa9390defd6f1a11",
       "snapshot_size_bytes": 302195
     }
   ]

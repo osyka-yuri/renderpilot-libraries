@@ -49,6 +49,48 @@ test("package revision is stable across transport recompression", () => {
   );
 });
 
+test("package revision ignores presentation metadata but binds release behavior", () => {
+  const first = source();
+  first.packages[0].display_name = "Original runtime";
+  first.packages[0].release.label = "Original annotation";
+  const second = structuredClone(first);
+  second.packages[0].display_name = "Renamed runtime";
+  second.packages[0].release.label = "Updated annotation";
+
+  const left = buildVendorSnapshot(first);
+  const right = buildVendorSnapshot(second);
+  assert.equal(left.packages[0].revision_sha256, right.packages[0].revision_sha256);
+
+  second.packages[0].release.channel = "beta";
+  const behaviorChange = buildVendorSnapshot(second);
+  assert.notEqual(
+    left.packages[0].revision_sha256,
+    behaviorChange.packages[0].revision_sha256,
+  );
+});
+
+test("release labels contain supplemental information only", () => {
+  const redundant = source();
+  redundant.packages[0].release.version = "4.1.1.2740";
+  redundant.packages[0].release.label = "FSR 4.1.1";
+  assert.throws(
+    () => assertVendorSource(redundant),
+    /release label repeats the package version/,
+  );
+
+  const supplemental = source();
+  supplemental.packages[0].release.version = "0.9.0.2740";
+  supplemental.packages[0].release.label = "preview";
+  assert.doesNotThrow(() => assertVendorSource(supplemental));
+
+  const repeatedName = source();
+  repeatedName.packages[0].release.label = repeatedName.packages[0].display_name;
+  assert.throws(
+    () => assertVendorSource(repeatedName),
+    /release label repeats the package display name/,
+  );
+});
+
 test("source rejects case-insensitive install target collisions", () => {
   const value = source();
   value.artifacts.push({

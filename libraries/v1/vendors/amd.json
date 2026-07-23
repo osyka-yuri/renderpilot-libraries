@@ -4,7 +4,7 @@
     "id": "amd",
     "display_name": "AMD"
   },
-  "generated_at": "2026-06-24T18:00:00Z",
+  "generated_at": "2026-07-23T06:15:06Z",
   "artifacts": [
     {
       "artifact_id": "sha256:602d24510583b74e6a660241009ebe702f0578ada8e8cc76243b3b2d6cb51b79",
@@ -724,7 +724,7 @@
   "packages": [
     {
       "package_id": "amd_fidelityfx_dx12_1.0.0.36208",
-      "revision_sha256": "f71bfe6285393fc58dc75fb20e96a6a0dab624651bed1ec11e0719f41e28b597",
+      "revision_sha256": "448c967868c2a24ea56bef3d89da9eb43cb819a120deb7d57e71338320a5fd61",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -747,7 +747,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.0.36604",
-      "revision_sha256": "2005777c5cb446f8dac7568626dd2d5cbdab81a17d3708d2799e923a89503bd8",
+      "revision_sha256": "0ffb12093d2071435ef3a729d514a43aba64180a5338f9085fff38bf17662728",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -770,7 +770,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.0.36752",
-      "revision_sha256": "25e36a655eccb6272ea01e857f165a845dc26157e2c21c675042f6fbfe9af7b8",
+      "revision_sha256": "1cd2ef39d62bd386f74e1d28e288b1e1657df40475f55f78b22bff0540fb761b",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -793,7 +793,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.1.37507",
-      "revision_sha256": "65ca48190b9391a243040d086efaed187340b25777bb958b14ef642dfb118ab0",
+      "revision_sha256": "4628b8015f21f79678848f60b4b6d8f34c7c78c4798b163923220baf5ce5f8c1",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -816,7 +816,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.1.38338",
-      "revision_sha256": "3ac0bfd1a9973f8a74c430d0d883d2abdbe5fc9759bdd08486c7699184ca946e",
+      "revision_sha256": "fd3aff5ec6e82973c3c3da08f238a9908d2f85025b1f87f6460a451609069438",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -839,7 +839,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.1.39157",
-      "revision_sha256": "b518750a9ca7f953de7ba3814e07624611b6f25762dbbc89a08884b8b760fff3",
+      "revision_sha256": "0eddbbdf3f52c6f8fb4645968bd4c9177ab8de7d55e1f0a149d48869c5082a32",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -862,7 +862,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.1.40157",
-      "revision_sha256": "5ff0cd7783c4d2b3d92f518b1f0d6f7a3504d6ad072347fc16db536cef7c3d1b",
+      "revision_sha256": "11de0f8fff4e10cf5a305a9de9357448046579f34294a01b17d275b8932404b2",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -885,7 +885,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.1.41314",
-      "revision_sha256": "c301ef7da7cd9c2bce1c36dcbb511e87be26a8937c9381a287fd050c9e968931",
+      "revision_sha256": "f587c3ce862588d8068dc8205063df42d41c7cf10037562ff8f5fcfa20fe9e1d",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -908,7 +908,7 @@
     },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.2.38022",
-      "revision_sha256": "22a6c2f40364c2844881c4742692df4fb8320445b7a1445dd6189348d700900c",
+      "revision_sha256": "1e896d16470f403a1dfadcf3b71021f5435afd100f2dd52fb058fb3ddfdbbec4",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -931,7 +931,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.0.36604",
-      "revision_sha256": "91f7e95ccef598b8a6cb226b5b8887ad4c4d6158e803a2d3b13c36ebc6b7a3f5",
+      "revision_sha256": "0cdc0fe725b71250bf7894d830d423adb7c090efc53e3b99959f5712fc3dae75",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -954,7 +954,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.1.37507",
-      "revision_sha256": "9ebb86883d55b1ef2f2b2d0b27f41778492da3a70755a853498a44c1c28b284e",
+      "revision_sha256": "57a41f59b3b0a8cfbc301b42cf4e2eb5fdf3be0138a733cc2e17c1c9aa6903fb",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -977,7 +977,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.1.38338",
-      "revision_sha256": "e5bb8020648a14ae58b65560b899109cdca56a2d344eda1f1932de71f8e0b28e",
+      "revision_sha256": "18e627bbde988945833509ff4d5b70282b6ee1b8d5de5310a7e35f0879f2db1c",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -1000,7 +1000,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.1.39157",
-      "revision_sha256": "94cedec96ad9429b51b393fc31381dd34b612bce8640ac37cbd99e82d49677df",
+      "revision_sha256": "743377386c7d003134ef9aec19490ffc8673e967f085acdfd9b69055c6fc3dca",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -1023,7 +1023,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.1.39321",
-      "revision_sha256": "78ae470a6292ea2b8e08d69414c8d72b48e378229f5e95d5da9ac3ea0d45e3db",
+      "revision_sha256": "64f57a5a2397807661f747c1c1afc7fede6509f4855a8f54fd143196d3988eaf",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -1046,7 +1046,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.1.41314",
-      "revision_sha256": "4ece3df24ae97514147e79f22729fb6e6e7169a5b248b8d4fac5abdf14ea9261",
+      "revision_sha256": "916c1c1e964de925783e7f600e5631bf6e18631a3d0995e19353990dd487c591",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -1069,7 +1069,7 @@
     },
     {
       "package_id": "amd_fidelityfx_vk_1.0.1.42386",
-      "revision_sha256": "44d8bc94a3a4efcd9c36791a657a25a8f4cd5d9d851be6eb9cea44bb264e6174",
+      "revision_sha256": "ce7b56b07b73034c96cb8717578174c7eb14f4d6c4982841c6f0355e819f5dfc",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
@@ -1092,7 +1092,7 @@
     },
     {
       "package_id": "amd_fidelityfx_loader_dx12_1.0.2.44888",
-      "revision_sha256": "c4415e69384239157ce70c1f47fd12d9cf4870288df84a4efc1ca8d9f3304e24",
+      "revision_sha256": "2d4b81d85e0ae473fe677de30b1a590ecb9b34b2c3f9f32a6911d7911d6ca265",
       "technology": "amd_fsr_loader",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Loader",
@@ -1115,14 +1115,14 @@
     },
     {
       "package_id": "amd_fidelityfx_loader_dx12_2.1.0.604",
-      "revision_sha256": "6cf5f2f26c9361622a24f2d38f285cb479b4f03ce2b8580b8bc5f97bea7b54ce",
+      "revision_sha256": "6edd7a2468f7cd639b5fbe7915fd3f22d526e31403d569f7f0368ae1ac986844",
       "technology": "amd_fsr_loader",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Loader",
       "release": {
         "version": "2.1.0.604",
         "channel": "stable",
-        "label": "FidelityFX SDK 2.1.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1138,14 +1138,14 @@
     },
     {
       "package_id": "amd_fidelityfx_loader_dx12_2.2.0.0",
-      "revision_sha256": "1b01f57dd1101b701a2421f6f7504d055318d9afe76fc8f65737d1242ec66517",
+      "revision_sha256": "302aea0c79c82cc1e9a2521a6f1aba82c1a3449ed03492e61a5d78c4ed8b780c",
       "technology": "amd_fsr_loader",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Loader",
       "release": {
         "version": "2.2.0.0",
         "channel": "stable",
-        "label": "FidelityFX SDK 2.2.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1161,14 +1161,14 @@
     },
     {
       "package_id": "amd_fidelityfx_loader_dx12_2.3.0.2740",
-      "revision_sha256": "877961f2c55347ba6f10fcb45bfd26ee346f4f5bc646f2ec5bd3a946e4977182",
+      "revision_sha256": "6590b2ed63531ead7aaaad797cbedabe1d34133eb94dde608e605bb9187b8eba",
       "technology": "amd_fsr_loader",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Loader",
       "release": {
         "version": "2.3.0.2740",
         "channel": "stable",
-        "label": "FidelityFX SDK 2.3.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1184,14 +1184,14 @@
     },
     {
       "package_id": "amd_fidelityfx_upscaler_dx12_4.0.2.44888",
-      "revision_sha256": "6a54b68fa57b5faa88e71de42b4b5cc23b8629b861e94468a709256306cb3552",
+      "revision_sha256": "c6aed9ab55f67df9b5a3096a3ab980f3eadace0fa6d8daea0fcc56883c03b12d",
       "technology": "amd_fsr_upscaler",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Upscaler",
       "release": {
         "version": "4.0.2.44888",
         "channel": "stable",
-        "label": "FSR 4.0.2"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1207,14 +1207,14 @@
     },
     {
       "package_id": "amd_fidelityfx_upscaler_dx12_4.0.3.604",
-      "revision_sha256": "da85129d6adbc7bab0124f35c3b6c730503fe1b45243d6d47c912bd75e1e38c8",
+      "revision_sha256": "d08120e1a3ed4f450d8357c8eb9b3e0ec04d59f8efc7a7b301909d7777cdba68",
       "technology": "amd_fsr_upscaler",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Upscaler",
       "release": {
         "version": "4.0.3.604",
         "channel": "stable",
-        "label": "FSR 4.0.3"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1230,14 +1230,14 @@
     },
     {
       "package_id": "amd_fidelityfx_upscaler_dx12_4.1.0.0",
-      "revision_sha256": "ec4a87e7c2bdfec8cdeaf2cd706bcc7537b2f19a638c581e880ba68b6d9d50f2",
+      "revision_sha256": "8dc9d0b58a87513820cbb07b4366f71f4a0146fd983c5cd176b31baa88eb0cff",
       "technology": "amd_fsr_upscaler",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Upscaler",
       "release": {
         "version": "4.1.0.0",
         "channel": "stable",
-        "label": "FSR 4.1.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1253,14 +1253,14 @@
     },
     {
       "package_id": "amd_fidelityfx_upscaler_dx12_4.1.1.2740",
-      "revision_sha256": "7213c971c4b1b75eeeea3cb1bb75ed3b1c59883e04f6afde58dfe816d1700878",
+      "revision_sha256": "01011f53cb5686f75d66fe84e6597d42758acef9c242a5c0221871ae828f5afa",
       "technology": "amd_fsr_upscaler",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Upscaler",
       "release": {
         "version": "4.1.1.2740",
         "channel": "stable",
-        "label": "FSR 4.1.1"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1276,14 +1276,14 @@
     },
     {
       "package_id": "amd_fidelityfx_framegeneration_dx12_3.1.5.44888",
-      "revision_sha256": "7809316b73dc86da5ea22b652f7a75eca4d4ae4176d47c41301bc99edc31bb8d",
+      "revision_sha256": "d5c0a6f5a7c92938c07e8aa5da5147347ef55236f53eafe7651fce1993da5fbf",
       "technology": "amd_fsr_frame_generation",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Frame Generation",
       "release": {
         "version": "3.1.5.44888",
         "channel": "stable",
-        "label": "FSR FG 3.1.5"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1299,14 +1299,14 @@
     },
     {
       "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.0.0",
-      "revision_sha256": "ddd6801630f44ed9d64133b6dd650b449e3e19f1cff373742ea23df0a1717baa",
+      "revision_sha256": "caa3f58e8ef341202c1cf06bbeaa98d9710d7e5c509a97fa7397edb3182f99f7",
       "technology": "amd_fsr_frame_generation",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Frame Generation",
       "release": {
         "version": "4.0.0.0",
         "channel": "stable",
-        "label": "FSR FG 4.0.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1322,14 +1322,14 @@
     },
     {
       "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.0.604",
-      "revision_sha256": "91d193025987f09725bff9a5364702629ff5bfd9db26cb0f33bc4cc996a76617",
+      "revision_sha256": "0dd79672d17e6916a8fcbc441f9160f7f007188cf7648c2b2a1e2cbaea122bf5",
       "technology": "amd_fsr_frame_generation",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Frame Generation",
       "release": {
         "version": "4.0.0.604",
         "channel": "stable",
-        "label": "FSR FG 4.0.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1345,14 +1345,14 @@
     },
     {
       "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.1.2740",
-      "revision_sha256": "debcc2513d11985a5dfd6e9f3b0bb50efa63dd32fb0b42af10a02a4def6b01f1",
+      "revision_sha256": "da0a708526c31d21751e740dbb0c1535d40bc331d146eb4fab25243bbe5474de",
       "technology": "amd_fsr_frame_generation",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Frame Generation",
       "release": {
         "version": "4.0.1.2740",
         "channel": "stable",
-        "label": "FSR FG 4.0.1"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1368,14 +1368,14 @@
     },
     {
       "package_id": "amd_fidelityfx_denoiser_dx12_1.0.0.604",
-      "revision_sha256": "c6abbf5eb8198a10eebfd29086d20d0f5a1e2ce30c24c346cdd39981c163ca17",
+      "revision_sha256": "f7f7d672e0c4d27f8346bd2ac3c91741099b986f7dd18d165c729606d9a22183",
       "technology": "amd_fsr_ray_regeneration",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Ray Regeneration",
       "release": {
         "version": "1.0.0.604",
         "channel": "stable",
-        "label": "FSR Ray Regen 1.0.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1391,14 +1391,14 @@
     },
     {
       "package_id": "amd_fidelityfx_denoiser_dx12_1.1.0.0",
-      "revision_sha256": "63ee7e85a7339328d5795ed2297bebe4a0a90066734a4ca4579d5002ce0e46df",
+      "revision_sha256": "aa503ba2c66220b899167e08ffdb1cab6a671874c410aebab3fe10d34ba1f463",
       "technology": "amd_fsr_ray_regeneration",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Ray Regeneration",
       "release": {
         "version": "1.1.0.0",
         "channel": "stable",
-        "label": "FSR Ray Regen 1.1.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1414,14 +1414,14 @@
     },
     {
       "package_id": "amd_fidelityfx_denoiser_dx12_1.2.0.2740",
-      "revision_sha256": "7111eab7f87235df8d5419281912eac3c5d62f084cfe687aeac98600232519cf",
+      "revision_sha256": "4a21c813a11385538c3714de246b0d6e4ebb2c178983bb13d17210749b812387",
       "technology": "amd_fsr_ray_regeneration",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Ray Regeneration",
       "release": {
         "version": "1.2.0.2740",
         "channel": "stable",
-        "label": "FSR Ray Regen 1.2.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1437,14 +1437,14 @@
     },
     {
       "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.0",
-      "revision_sha256": "cb24489ad60b7cee9e4a0f6d2894cf982cfffb0c951ace98ab6c1c2cab185ce4",
+      "revision_sha256": "f837147a0b8b707286e69d3317ecb776008a0bd419df63f5d3f63651670d817f",
       "technology": "amd_fsr_radiance_cache",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Radiance Cache",
       "release": {
         "version": "0.9.0.0",
         "channel": "stable",
-        "label": "FSR Radiance Cache 0.9.0 (preview)"
+        "label": "preview"
       },
       "target": {
         "os": "windows",
@@ -1460,14 +1460,14 @@
     },
     {
       "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.604",
-      "revision_sha256": "56878d2240f59e39c7a4d3f281af08f08efaac94e2479178d682ba6daa344008",
+      "revision_sha256": "a3666af3b4c9ee7cc9c68945cc4c09fdec67d8b1cbbc5456c605faad0d49f660",
       "technology": "amd_fsr_radiance_cache",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Radiance Cache",
       "release": {
         "version": "0.9.0.604",
         "channel": "stable",
-        "label": "FSR Radiance Cache 0.9.0 (preview)"
+        "label": "preview"
       },
       "target": {
         "os": "windows",
@@ -1483,14 +1483,14 @@
     },
     {
       "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.2740",
-      "revision_sha256": "08dde5dbcd301e984999c02c8db475f343ee172988b6b38f0960dda97f8895a9",
+      "revision_sha256": "19273881bf68943d198459e35cb4e9f736f0473b42ebcb809c0e6c07c0681ef5",
       "technology": "amd_fsr_radiance_cache",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Radiance Cache",
       "release": {
         "version": "0.9.0.2740",
         "channel": "stable",
-        "label": "FSR Radiance Cache 0.9.0 (preview)"
+        "label": "preview"
       },
       "target": {
         "os": "windows",
@@ -1506,14 +1506,14 @@
     },
     {
       "package_id": "fsr_dx12_sdk.4.0.2.44888",
-      "revision_sha256": "a0d8d4cfbf81bc93daa501185a165a18cb3d11305293fdd0df44870ab077f58c",
+      "revision_sha256": "5890358696f6c521683b314c55c7d1def2539bf877ff845eee16e134c611cd8f",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
       "release": {
         "version": "4.0.2.44888",
         "channel": "stable",
-        "label": "FSR 4.0.2"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1539,14 +1539,14 @@
     },
     {
       "package_id": "fsr_dx12_sdk.4.0.3.604",
-      "revision_sha256": "cff33680aa7c19fcb01ea0e13e830575a6203776effa4396384ec0b83bccbb77",
+      "revision_sha256": "5146d10e64540b2b7e6ccaad4403370fdf787024ca18ea7d3539cbac71a12224",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
       "release": {
         "version": "4.0.3.604",
         "channel": "stable",
-        "label": "FSR 4.0.3"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1572,14 +1572,14 @@
     },
     {
       "package_id": "fsr_dx12_sdk.4.1.0.0",
-      "revision_sha256": "5fcef8ee9d534d28ec6339653fa7a09e6e4cc2bcb616f31580df01f6a3519682",
+      "revision_sha256": "1d70dab67c0e2ac3c6d079315fa37a413eb38a53e5f1148eda9dd84c96f6e7aa",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
       "release": {
         "version": "4.1.0.0",
         "channel": "stable",
-        "label": "FSR 4.1.0"
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1605,14 +1605,14 @@
     },
     {
       "package_id": "fsr_dx12_sdk.4.1.1.2740",
-      "revision_sha256": "9e4fe1e0b5c85feb2b310206471c7eb27875d0b7154f5f0f6916cf1f94e913f8",
+      "revision_sha256": "f3c59c0cb4e45654f599113eef0eb6bc78ab2fd1be6f18149235dea26eed19cb",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
       "release": {
         "version": "4.1.1.2740",
         "channel": "stable",
-        "label": "FSR 4.1.1"
+        "label": null
       },
       "target": {
         "os": "windows",

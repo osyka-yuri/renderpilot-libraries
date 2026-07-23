@@ -4,9 +4,11 @@ const SHA256_PATTERN = /^[0-9a-f]{64}$/;
 const SAFE_ID_PATTERN = /^[a-z][a-z0-9._-]*$/;
 const SAFE_FILE_NAME_PATTERN = /^[A-Za-z0-9._-]+\.dll$/i;
 const NUMERIC_VERSION_PATTERN = /^(?:0|[1-9]\d*)(?:\.(?:0|[1-9]\d*))*$/;
+const LABEL_VERSION_PATTERN = /\d+(?:\.\d+)+/gu;
 const MAX_U64 = 18_446_744_073_709_551_615n;
 const SHA512_BASE64_PATTERN = /^[A-Za-z0-9+/]{86}==$/;
 const ARCHITECTURES = new Set(["X64", "X86"]);
+const PACKAGE_REVISION_SCHEMA_VERSION = 1;
 const MICROSOFT_PACKAGE_IDS = Object.freeze({
   d3d12_agility: "Microsoft.Direct3D.D3D12",
   direct_storage: "Microsoft.Direct3D.DirectStorage",
@@ -71,15 +73,7 @@ export function buildVendorSnapshot(source) {
         install_as: member.install_as,
       };
     });
-    const revisionInput = compactObject({
-      package_id: sourcePackage.package_id,
-      technology: sourcePackage.technology,
-      variant: sourcePackage.variant,
-      release: sourcePackage.release,
-      target: sourcePackage.target,
-      provenance: sourcePackage.provenance,
-      members,
-    });
+    const revisionInput = packageRevisionInput(sourcePackage, members);
 
     return compactObject({
       package_id: sourcePackage.package_id,
@@ -304,15 +298,7 @@ export function assertVendorSnapshot(snapshot) {
     }
     packageIds.add(packageValue.package_id);
     assertPackageCommon(packageValue, context);
-    const revisionInput = compactObject({
-      package_id: packageValue.package_id,
-      technology: packageValue.technology,
-      variant: packageValue.variant,
-      release: packageValue.release,
-      target: packageValue.target,
-      provenance: packageValue.provenance,
-      members: packageValue.members,
-    });
+    const revisionInput = packageRevisionInput(packageValue, packageValue.members);
     if (packageValue.revision_sha256 !== sha256Hex(canonicalJson(revisionInput))) {
       throw new Error(`${context}: revision_sha256 does not match package contract`);
     }
@@ -375,8 +361,12 @@ function assertArtifactCommon(artifact, context) {
 function assertPackageCommon(packageValue, context) {
   assertSafeId(packageValue.technology, `${context}: technology`);
   assertSafeId(packageValue.variant, `${context}: variant`);
-  if (typeof packageValue.display_name !== "string" || !packageValue.display_name.trim()) {
-    throw new Error(`${context}: display_name is required`);
+  if (
+    typeof packageValue.display_name !== "string" ||
+    !packageValue.display_name ||
+    packageValue.display_name !== packageValue.display_name.trim()
+  ) {
+    throw new Error(`${context}: display_name must be a non-blank trimmed string`);
   }
   assertNumericVersion(packageValue.release?.version, `${context}: release version`);
   if (!new Set(["stable", "beta", "debug"]).has(packageValue.release.channel)) {
@@ -388,6 +378,27 @@ function assertPackageCommon(packageValue, context) {
     typeof packageValue.release.label !== "string"
   ) {
     throw new Error(`${context}: release label must be a string or null`);
+  }
+  if (typeof packageValue.release.label === "string") {
+    const label = packageValue.release.label;
+    if (!label || label !== label.trim()) {
+      throw new Error(`${context}: release label must be a non-blank trimmed annotation`);
+    }
+    if (
+      normalizePresentationText(label) ===
+      normalizePresentationText(packageValue.display_name)
+    ) {
+      throw new Error(`${context}: release label repeats the package display name`);
+    }
+    if (
+      (label.match(LABEL_VERSION_PATTERN) ?? []).some((candidate) =>
+        isVersionPrefix(candidate, packageValue.release.version),
+      )
+    ) {
+      throw new Error(
+        `${context}: release label repeats the package version; keep only supplemental information`,
+      );
+    }
   }
   if (packageValue.target?.os !== "windows") {
     throw new Error(`${context}: only Windows packages are supported in schema v1`);
@@ -488,6 +499,41 @@ export function assertNumericVersion(value, label) {
   ) {
     throw new Error(`${label} must be a dotted numeric version`);
   }
+}
+
+function releaseIdentity(release) {
+  return {
+    version: release.version,
+    channel: release.channel,
+  };
+}
+
+function packageRevisionInput(packageValue, members) {
+  return compactObject({
+    schema_version: PACKAGE_REVISION_SCHEMA_VERSION,
+    package_id: packageValue.package_id,
+    technology: packageValue.technology,
+    variant: packageValue.variant,
+    release: releaseIdentity(packageValue.release),
+    target: packageValue.target,
+    provenance: packageValue.provenance,
+    members,
+  });
+}
+
+function isVersionPrefix(candidate, version) {
+  const candidateSegments = candidate.split(".");
+  const versionSegments = version.split(".");
+  return (
+    candidateSegments.length <= versionSegments.length &&
+    candidateSegments.every(
+      (segment, index) => BigInt(segment) === BigInt(versionSegments[index]),
+    )
+  );
+}
+
+function normalizePresentationText(value) {
+  return value.replace(/\s+/gu, " ").toLowerCase();
 }
 
 function assertTimestamp(value, label) {
