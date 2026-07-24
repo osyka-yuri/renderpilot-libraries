@@ -16,6 +16,7 @@ test("library CLI parses command-specific help", () => {
   });
   assert.match(helpTextForLibrariesCommand("publish"), /publish \[options\]/);
   assert.match(helpTextForLibrariesCommand("refresh"), /--materialize-locked/);
+  assert.match(helpTextForLibrariesCommand("refresh"), /--migrate-transport/);
 });
 
 test("library CLI accepts only documented generate and validate flags", () => {

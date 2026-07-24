@@ -5,6 +5,7 @@ const REFRESH_MODES = Object.freeze([
   "check",
   "write",
   "materialize-locked",
+  "migrate-transport",
   "backfill-signatures",
 ]);
 
@@ -53,7 +54,7 @@ export function parseRefreshArgs(
   const explicitModes = REFRESH_MODES.filter((name) => values[name] === true);
   if (explicitModes.length > 1) {
     throw new UsageError(
-      "refresh modes --check, --write, --materialize-locked, and --backfill-signatures are mutually exclusive",
+      `refresh modes ${REFRESH_MODES.map((name) => `--${name}`).join(", ")} are mutually exclusive`,
     );
   }
   const mode = explicitModes[0] ?? "check";

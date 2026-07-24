@@ -19,8 +19,8 @@
     {
       "vendor_id": "microsoft",
       "display_name": "Microsoft",
-      "snapshot_key": "libraries/v1/vendors/microsoft/0baef5cee6bf19d9192b10a8b7e982ca56c4ef96b11f84cd28962f8e202d7263.json",
-      "snapshot_sha256": "0baef5cee6bf19d9192b10a8b7e982ca56c4ef96b11f84cd28962f8e202d7263",
+      "snapshot_key": "libraries/v1/vendors/microsoft/448d52c650f30d8189340c25eeb8839ba2509eb99cb05fdcc6d98438ca7158b2.json",
+      "snapshot_sha256": "448d52c650f30d8189340c25eeb8839ba2509eb99cb05fdcc6d98438ca7158b2",
       "snapshot_size_bytes": 321878
     },
     {

@@ -7,12 +7,25 @@ import { promisify } from "node:util";
 import { zstdDecompress } from "node:zlib";
 
 import {
+  CANONICAL_ZSTD_CHECKSUM_FLAG,
+  CANONICAL_ZSTD_VERSION,
+  assertCanonicalZstdRuntime,
   canonicalPeVersion,
   persistCompressedDll,
   reconcileLockedAuthenticodeSignature,
 } from "../lib/library-artifact-io.mjs";
 
 const zstdDecompressAsync = promisify(zstdDecompress);
+
+test("DLL compression requires the reviewed Zstandard runtime", () => {
+  assert.equal(CANONICAL_ZSTD_VERSION, "1.5.7");
+  assert.equal(CANONICAL_ZSTD_CHECKSUM_FLAG, 1);
+  assert.doesNotThrow(() => assertCanonicalZstdRuntime());
+  assert.throws(
+    () => assertCanonicalZstdRuntime("1.5.8"),
+    /unsupported Zstandard runtime "1\.5\.8"; expected 1\.5\.7/u,
+  );
+});
 
 test("nullable PE versions remain nullable and numeric versions canonicalize", () => {
   assert.throws(() => canonicalPeVersion(null), /required/);
@@ -79,13 +92,28 @@ test("locked DLL transport can be recovered deterministically without mutable wr
     const repeated = await persistCompressedDll(dll, {
       cdnDirectory: directory,
       compressionLevel: 12,
+      expectedTransport: first,
     });
     assert.deepEqual(repeated, first);
 
     await unlink(objectPath);
+    await assert.rejects(
+      persistCompressedDll(dll, {
+        cdnDirectory: directory,
+        compressionLevel: 12,
+        expectedTransport: {
+          ...first,
+          zst_size_bytes: first.zst_size_bytes + 1,
+        },
+      }),
+      /does not match locked identity/u,
+    );
+    await assert.rejects(readFile(objectPath), { code: "ENOENT" });
+
     const recovered = await persistCompressedDll(dll, {
       cdnDirectory: directory,
       compressionLevel: 12,
+      expectedTransport: first,
     });
     assert.deepEqual(recovered, first);
     assert.deepEqual(await zstdDecompressAsync(await readFile(objectPath)), dll);

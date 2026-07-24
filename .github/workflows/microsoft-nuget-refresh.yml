@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       materialize_locked:
-        description: "Re-verify and recompress every selected locked payload"
+        description: "Re-verify and restore every selected locked payload"
         required: false
         type: boolean
         default: false
@@ -30,7 +30,7 @@ jobs:
           version: 11.11.0
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version-file: .node-version
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
@@ -51,7 +51,7 @@ jobs:
         if: success() && steps.detect.outputs.status == 'update_available'
         run: pnpm run refresh:microsoft:write
 
-      - name: Rebuild every locked payload (initial backfill / disaster recovery)
+      - name: Restore every locked payload (initial backfill / disaster recovery)
         if: success() && inputs.materialize_locked
         run: pnpm run materialize:microsoft
 

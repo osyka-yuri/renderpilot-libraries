@@ -59,8 +59,9 @@ Current add-on manifests use structured localized text: an application resolves 
 
 ## Commands
 
-Requires **Node.js 24+**. Microsoft refresh CI follows the latest patched Node 24
-release; compressed payload bytes are not tied to a particular Node or zstd patch.
+Requires **Node.js 24.18.0+**. CI uses the exact version in `.node-version`.
+DLL transport generation additionally requires the reviewed Zstandard 1.5.7 runtime;
+an encoder upgrade is an explicit catalog migration rather than an incidental rebuild.
 
 ```powershell
 pnpm install
@@ -72,6 +73,7 @@ pnpm run check
 pnpm run refresh:microsoft:check
 pnpm run refresh:microsoft:write
 pnpm run materialize:microsoft
+pnpm run migrate:microsoft-transport
 pnpm run backfill:microsoft-signatures
 pnpm run refresh:github:check
 pnpm run refresh:github:write
@@ -99,7 +101,7 @@ pnpm run publish:json:dry-run
 
 `pnpm run check:offline` is the network-free subset (format + validate + generated + unit tests) used by the ReShade refresh bot before opening a PR.
 
-`refresh:microsoft:check` reads NuGet V3 Registration and Catalog Details and considers only listed stable releases. `refresh:microsoft:write` runs on Windows and imports every missing D3D12 Agility, DXC, and DirectStorage release after NuGet SHA-512, exact package-layout, legal-document, PE, and Authenticode checks. DXC x86 is optional per package but each architecture is always a complete `dxcompiler.dll` + `dxil.dll` pair. `materialize:microsoft` re-verifies and recompresses every selected locked package.
+`refresh:microsoft:check` reads NuGet V3 Registration and Catalog Details and considers only listed stable releases. `refresh:microsoft:write` runs on Windows and imports every missing D3D12 Agility, DXC, and DirectStorage release after NuGet SHA-512, exact package-layout, legal-document, PE, and Authenticode checks. DXC x86 is optional per package but each architecture is always a complete `dxcompiler.dll` + `dxil.dll` pair. `materialize:microsoft` re-verifies every selected locked package and restores only the exact locked transport identity; any encoder drift fails before persistence. `migrate:microsoft-transport` is the explicit operator action for an intentional content-addressed transport replacement.
 
 The `amd`, `intel`, and `openvr` refresh commands use one provider-neutral GitHub release-tree engine. It discovers every stable non-draft/non-prerelease release with pagination, retains both annotated/lightweight tag-ref and exact commit identities, and imports only paths declared by the selected reviewed profile. Every DLL and legal document is checked against the commit tree's Git-blob SHA-1 and its own SHA-256 before atomic local persistence. A changed known release/tag/commit/payload or an unknown stable tag/layout fails closed. Package provenance records the official repository, exact tag, and commit SHA.
 

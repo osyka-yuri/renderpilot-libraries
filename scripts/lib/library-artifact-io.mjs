@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { execFile } from "node:child_process";
 import { link, mkdir, open, readFile, rm } from "node:fs/promises";
 import path from "node:path";
-import { promisify } from "node:util";
+import { isDeepStrictEqual, promisify } from "node:util";
 import { constants as zlibConstants, zstdCompress } from "node:zlib";
 
 import { resolveRepoPath } from "../catalog.mjs";
@@ -18,6 +18,16 @@ const zstdCompressAsync = promisify(zstdCompress);
 const INSPECT_SCRIPT = resolveRepoPath("scripts", "inspect-pe.ps1");
 const AUTHENTICODE_MODES = new Set(["RequireSigned", "AllowUnsigned"]);
 const MAX_LOCKED_TIMESTAMP_ROUNDING_DRIFT_MS = 1;
+export const CANONICAL_ZSTD_VERSION = "1.5.7";
+export const CANONICAL_ZSTD_CHECKSUM_FLAG = 1;
+
+export function assertCanonicalZstdRuntime(version = process.versions.zstd) {
+  if (version !== CANONICAL_ZSTD_VERSION) {
+    throw new Error(
+      `unsupported Zstandard runtime ${JSON.stringify(version)}; expected ${CANONICAL_ZSTD_VERSION}`,
+    );
+  }
+}
 
 export async function inspectPeFiles(paths, { authenticodeMode = "RequireSigned" } = {}) {
   if (!Array.isArray(paths) || paths.length === 0) {
@@ -51,7 +61,11 @@ export async function inspectPeFiles(paths, { authenticodeMode = "RequireSigned"
 
 export async function persistCompressedDll(
   dll,
-  { cdnDirectory = resolveRepoPath("cdn"), compressionLevel = 12 } = {},
+  {
+    cdnDirectory = resolveRepoPath("cdn"),
+    compressionLevel = 12,
+    expectedTransport = null,
+  } = {},
 ) {
   if (!Buffer.isBuffer(dll) || dll.length === 0) {
     throw new Error("DLL payload must be a non-empty Buffer");
@@ -63,21 +77,30 @@ export async function persistCompressedDll(
   ) {
     throw new Error(`invalid Zstandard compression level ${compressionLevel}`);
   }
+  assertCanonicalZstdRuntime();
   const compressed = await zstdCompressAsync(dll, {
     params: {
       [zlibConstants.ZSTD_c_compressionLevel]: compressionLevel,
-      [zlibConstants.ZSTD_c_checksumFlag]: 1,
+      [zlibConstants.ZSTD_c_checksumFlag]: CANONICAL_ZSTD_CHECKSUM_FLAG,
     },
   });
   const sha256 = sha256Hex(compressed);
   const objectKey = blobObjectKey(sha256);
-  await writeImmutableObject(path.join(cdnDirectory, objectKey), compressed);
-  return {
+  const transport = {
     object_key: objectKey,
     zst_sha256: sha256,
     zst_size_bytes: compressed.length,
     compression_level: compressionLevel,
   };
+  if (expectedTransport !== null && !isDeepStrictEqual(transport, expectedTransport)) {
+    throw new Error(
+      `reconstructed Zstandard transport does not match locked identity ` +
+        `(expected ${expectedTransport?.zst_sha256 ?? "<invalid>"}, got ${sha256}); ` +
+        `use the explicit transport-migration mode for an intentional replacement`,
+    );
+  }
+  await writeImmutableObject(path.join(cdnDirectory, objectKey), compressed);
+  return transport;
 }
 
 export async function persistLegalDocument(

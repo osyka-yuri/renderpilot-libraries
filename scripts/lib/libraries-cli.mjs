@@ -30,7 +30,7 @@ const HELP = Object.freeze({
 Commands:
   generate [--check]
   validate
-  refresh <${REFRESH_VENDOR_LIST}> [--check|--write|--materialize-locked|--backfill-signatures]
+  refresh <${REFRESH_VENDOR_LIST}> [--check|--write|--materialize-locked|--migrate-transport|--backfill-signatures]
   publish [--json-only|--assets-only] [--dry-run] [--force]
   audit-published [--verbose] [--dry-run]`,
   generate: `Usage: node scripts/libraries.mjs generate [--check]
@@ -41,7 +41,8 @@ Commands:
 
   --check                    Detect missing listed stable releases.
   --write                    Import missing releases and persist the lock.
-  --materialize-locked      Re-verify and recompress locked releases.
+  --materialize-locked      Re-verify and restore the exact locked transport identity.
+  --migrate-transport       Intentionally replace locked transport identities.
   --backfill-signatures      Re-verify and backfill missing signed_at values.
   --product=<id>             Microsoft only: limit to one configured product.`,
   publish: `Usage: node scripts/libraries.mjs publish [options]

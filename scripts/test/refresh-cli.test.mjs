@@ -7,7 +7,13 @@ import { repoRoot } from "../catalog.mjs";
 import { UsageError } from "../lib/common.mjs";
 import { parseRefreshArgs } from "../lib/refresh-cli.mjs";
 
-const MODES = ["check", "write", "materialize-locked", "backfill-signatures"];
+const MODES = [
+  "check",
+  "write",
+  "materialize-locked",
+  "migrate-transport",
+  "backfill-signatures",
+];
 
 test("refresh parser defaults to check and accepts every single mode", () => {
   assert.deepEqual(parseRefreshArgs([]), { mode: "check" });

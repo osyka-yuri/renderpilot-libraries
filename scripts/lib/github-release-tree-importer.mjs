@@ -26,7 +26,7 @@ export async function constructGitHubReleaseTreeRelease(
   release,
   config,
   expectedRelease = null,
-  { allowTimestampBackfill = false, fetchFn = fetch } = {},
+  { allowTimestampBackfill = false, migrateTransport = false, fetchFn = fetch } = {},
 ) {
   const profile = githubReleaseTreeProfile(config.profile);
   const plan = profile.releasePlan(release);
@@ -127,6 +127,8 @@ export async function constructGitHubReleaseTreeRelease(
       });
       const r2 = await persistCompressedDll(unit.bytes, {
         compressionLevel: expectedArtifact?.r2.compression_level ?? 12,
+        expectedTransport:
+          expectedArtifact && !migrateTransport ? expectedArtifact.r2 : null,
       });
       artifacts.push({ ...observed, r2 });
     }

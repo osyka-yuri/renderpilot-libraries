@@ -420,6 +420,10 @@ test("scheduled GitHub refresh produces one registry-wide catalog update and PR"
     "node scripts/libraries.mjs refresh github --materialize-locked",
   );
   assert.equal(
+    packageJson.scripts["migrate:github-transport"],
+    "node scripts/libraries.mjs refresh github --migrate-transport",
+  );
+  assert.equal(
     packageJson.scripts["backfill:github-signatures"],
     "node scripts/libraries.mjs refresh github --backfill-signatures",
   );

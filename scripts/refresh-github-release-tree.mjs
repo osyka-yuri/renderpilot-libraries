@@ -2,7 +2,7 @@
 
 import { execFile } from "node:child_process";
 import path from "node:path";
-import { promisify } from "node:util";
+import { isDeepStrictEqual, promisify } from "node:util";
 
 import { githubReleaseTreeVendors, repoRoot } from "./catalog.mjs";
 import { runCliMain } from "./lib/cli-main.mjs";
@@ -80,9 +80,14 @@ async function prepareVendor(discovery, options) {
   const { vendor, config, lock, lockFile, upstream, missing, immutableBaseline } =
     discovery;
 
-  if (options.mode === "materialize-locked" || options.mode === "backfill-signatures") {
+  if (
+    options.mode === "materialize-locked" ||
+    options.mode === "migrate-transport" ||
+    options.mode === "backfill-signatures"
+  ) {
     await materializeLocked(vendor, config, lock, upstream, immutableBaseline, {
       allowTimestampBackfill: options.mode === "backfill-signatures",
+      migrateTransport: options.mode === "migrate-transport",
     });
     return {
       vendor,
@@ -90,7 +95,7 @@ async function prepareVendor(discovery, options) {
       lockFile,
       lock,
       missingCount: missing.length,
-      changed: true,
+      changed: !isDeepStrictEqual(lock, immutableBaseline),
     };
   }
   if (missing.length === 0) {
@@ -162,7 +167,7 @@ async function materializeLocked(
   lock,
   upstream,
   immutableBaseline,
-  { allowTimestampBackfill },
+  { allowTimestampBackfill, migrateTransport },
 ) {
   const upstreamByTag = new Map(upstream.map((release) => [release.tag, release]));
   let completed = 0;
@@ -174,6 +179,7 @@ async function materializeLocked(
       if (!release) throw new Error(`${expected.tag}: release disappeared upstream`);
       const result = await constructGitHubReleaseTreeRelease(release, config, expected, {
         allowTimestampBackfill,
+        migrateTransport,
       });
       completed += 1;
       console.log(`[${completed}/${lock.releases.length}] materialized ${expected.tag}`);
@@ -189,7 +195,9 @@ async function materializeLocked(
   console.log(
     allowTimestampBackfill
       ? `Re-verified ${rebuilt.length} releases and backfilled available signature timestamps.`
-      : `Materialized ${rebuilt.length} locked ${vendor.vendorId} releases.`,
+      : migrateTransport
+        ? `Migrated transport identities for ${rebuilt.length} locked ${vendor.vendorId} releases.`
+        : `Materialized ${rebuilt.length} locked ${vendor.vendorId} releases without changing their transport identities.`,
   );
 }
 

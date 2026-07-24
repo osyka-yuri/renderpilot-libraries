@@ -4,7 +4,7 @@ import { execFile } from "node:child_process";
 import { lstat, mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { promisify } from "node:util";
+import { isDeepStrictEqual, promisify } from "node:util";
 
 import { microsoftLibraryVendor, repoRoot } from "./catalog.mjs";
 import { runCliMain } from "./lib/cli-main.mjs";
@@ -86,13 +86,14 @@ async function main(options) {
     status: missing.length === 0 ? "current" : "update_available",
     count: String(missing.length),
   });
-  if (options.mode === "materialize-locked") {
-    await materializeLockedReleases(
+  if (options.mode === "materialize-locked" || options.mode === "migrate-transport") {
+    await rebuildLockedReleases(
       products,
       lock,
       immutableBaseline,
       upstreamByPackage,
       config,
+      { migrateTransport: options.mode === "migrate-transport" },
     );
     return;
   }
@@ -148,7 +149,11 @@ async function importRelease(
   { product, release },
   { expectedRelease = null, mode = "new" } = {},
 ) {
-  if (!new Set(["new", "rebuild-transport", "signature-backfill"]).has(mode)) {
+  if (
+    !new Set(["new", "materialize-locked", "migrate-transport", "signature-backfill"]).has(
+      mode,
+    )
+  ) {
     throw new Error(`unsupported Microsoft import mode ${mode}`);
   }
   if ((mode === "new") !== (expectedRelease === null)) {
@@ -254,6 +259,7 @@ async function importRelease(
         artifact.r2 = await persistCompressedDll(dll, {
           cdnDirectory: CDN_DIR,
           compressionLevel: expectedArtifact?.r2.compression_level ?? 12,
+          expectedTransport: mode === "materialize-locked" ? expectedArtifact?.r2 : null,
         });
       }
 
@@ -425,12 +431,13 @@ async function backfillLockedSignatureMetadata(
   );
 }
 
-async function materializeLockedReleases(
+async function rebuildLockedReleases(
   products,
   lock,
   immutableBaseline,
   upstreamByPackage,
   config,
+  { migrateTransport },
 ) {
   await mkdir(CDN_DIR, { recursive: true });
   const productByKey = new Map(products.map((product) => [product.key, product]));
@@ -454,7 +461,7 @@ async function materializeLockedReleases(
       { product, release },
       {
         expectedRelease,
-        mode: "rebuild-transport",
+        mode: migrateTransport ? "migrate-transport" : "materialize-locked",
       },
     );
     rebuiltByRelease.set(expectedRelease, rebuilt);
@@ -477,10 +484,21 @@ async function materializeLockedReleases(
   sortLock(lock);
   assertLockSemantics(lock, config);
   assertLockExtendsBaseline(lock, immutableBaseline);
-  await writeJsonFileAtomic(LOCK_FILE, lock);
-  console.log(
-    `Rebuilt ${targets.length} release(s) and updated their content-addressed transport metadata.`,
-  );
+  const changed = !isDeepStrictEqual(lock, immutableBaseline);
+  if (changed) await writeJsonFileAtomic(LOCK_FILE, lock);
+  if (migrateTransport) {
+    console.log(
+      `Migrated transport metadata for ${targets.length} release(s)` +
+        (changed ? "." : "; every identity was already canonical."),
+    );
+  } else {
+    if (changed) {
+      throw new Error("locked materialization unexpectedly changed the lock");
+    }
+    console.log(
+      `Materialized ${targets.length} release(s) without changing locked transport identity.`,
+    );
+  }
 }
 
 function parseArgs(argv) {
