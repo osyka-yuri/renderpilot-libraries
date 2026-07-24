@@ -1,4 +1,4 @@
-name: Valve OpenVR refresh
+name: GitHub library releases refresh
 
 on:
   schedule:
@@ -6,13 +6,13 @@ on:
   workflow_dispatch:
     inputs:
       materialize_locked:
-        description: "Re-verify and recompress every locked OpenVR DLL"
+        description: "Re-verify and rematerialize every locked release"
         required: false
         type: boolean
         default: false
 
 concurrency:
-  group: openvr-github-refresh
+  group: github-release-tree-refresh
   cancel-in-progress: false
 
 permissions:
@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   refresh:
-    name: Import stable Valve OpenVR releases
+    name: Import stable GitHub SDK releases
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v7
@@ -37,21 +37,21 @@ jobs:
       - name: Verify Windows Authenticode and PE tooling
         run: pnpm run test:authenticode
 
-      - name: Detect every missing stable release
+      - name: Detect every missing stable release across registered GitHub sources
         id: detect
-        run: pnpm run refresh:openvr:check
+        run: pnpm run refresh:github:check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Import, verify, and compress all missing releases
+      - name: Import, verify, and compress all missing releases as one catalog update
         if: success() && steps.detect.outputs.status == 'update_available'
-        run: pnpm run refresh:openvr:write
+        run: pnpm run refresh:github:write
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rebuild every locked payload
         if: success() && inputs.materialize_locked
-        run: pnpm run materialize:openvr
+        run: pnpm run materialize:github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -61,11 +61,11 @@ jobs:
           pnpm run libraries:generate
           pnpm run libraries:check
           pnpm run validate
-          pnpm run validate:openvr
+          pnpm run validate:github
 
-      - name: Publish immutable binaries and verify R2 metadata
+      - name: Publish immutable assets and verify R2 metadata
         if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
-        run: pnpm run publish:binaries
+        run: pnpm run publish:assets
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -75,19 +75,21 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          branch: chore/openvr-${{ github.run_id }}
+          branch: chore/github-libraries-${{ github.run_id }}
           delete-branch: true
-          commit-message: "chore(openvr): refresh SDK catalog"
-          title: "chore(openvr): refresh SDK catalog"
+          commit-message: "chore(libraries): refresh GitHub SDK catalogs"
+          title: "chore(libraries): refresh GitHub SDK catalogs"
           body: |
-            Automated import of every missing stable Valve OpenVR SDK release
-            and/or rebuild of immutable content-addressed transport objects.
+            Automated import of every missing stable release across the registered
+            AMD, Intel, and Valve GitHub sources and/or rebuild of immutable
+            content-addressed assets.
 
             The importer resolved exact release tags to commits, downloaded the
-            X86/X64 DLLs from those immutable trees, verified PE architecture,
-            named exports, Authenticode policy, raw and Git-blob hashes, and
-            uploaded and HEAD-verified every R2 object before opening this PR.
+            reviewed DLL and legal-document paths from those immutable trees,
+            verified PE architecture, Authenticode signer policy, raw and
+            Git-blob hashes, and uploaded and HEAD-verified every referenced R2
+            asset before opening this PR.
           add-paths: |
-            catalogs/libraries/valve-openvr.lock.json
-            libraries/v1/vendors/valve.json
+            catalogs/libraries/*.lock.json
+            libraries/v1/vendors/*.json
             libraries/v1/index.json

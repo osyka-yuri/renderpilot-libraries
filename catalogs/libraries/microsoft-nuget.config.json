@@ -1,5 +1,8 @@
 {
   "schema_version": 1,
+  "trusted_signer_subjects": [
+    "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+  ],
   "products": [
     {
       "key": "d3d12_agility",
@@ -10,6 +13,15 @@
         { "package_directory": "win32", "catalog_architecture": "X86", "required": true }
       ],
       "files": [{ "library_id": "d3d12_core", "file_name": "D3D12Core.dll" }],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt"
+        }
+      ],
       "compatibility": "d3d12_sdk"
     },
     {
@@ -24,6 +36,15 @@
         { "library_id": "dxcompiler", "file_name": "dxcompiler.dll" },
         { "library_id": "dxil", "file_name": "dxil.dll" }
       ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt"
+        }
+      ],
       "compatibility": null
     },
     {
@@ -34,6 +55,15 @@
         { "package_directory": "x64", "catalog_architecture": "X64", "required": true }
       ],
       "files": [{ "library_id": "dstorage", "file_name": "dstorage.dll" }],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt"
+        }
+      ],
       "compatibility": null
     }
   ]

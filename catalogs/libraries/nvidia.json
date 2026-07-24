@@ -5,6 +5,7 @@
     "display_name": "NVIDIA"
   },
   "generated_at": "2026-06-24T18:00:00Z",
+  "legal_documents": [],
   "artifacts": [
     {
       "artifact_key": "nvngx_dlss_1.0.0.0",

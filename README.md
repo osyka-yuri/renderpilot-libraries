@@ -4,17 +4,18 @@ Source and publication tooling for RenderPilot's graphics-library catalogues and
 
 ## Layout
 
-- `catalogs/libraries/{nvidia,amd,intel}.json` — reviewed vendor sources with explicit installable packages and immutable DLL/transport identities.
-- `catalogs/libraries/microsoft-nuget.{lock,config}.json` — reproducible NuGet package, DLL, Authenticode, and transport lock with product configuration.
-- `catalogs/libraries/valve-openvr.{lock,config}.json` — reproducible Valve OpenVR GitHub-release lock, inclusive signature cutoff, PE metadata, and transport configuration.
+- `catalogs/libraries/nvidia.json` — reviewed NVIDIA source with explicit installable packages and immutable DLL/transport identities.
+- `catalogs/libraries/{amd-fidelityfx,intel-xess,valve-openvr}.{config,lock}.json` — reproducible GitHub release-tree sources pinned to release, tag-ref, commit, Git-blob, DLL, Authenticode, legal-document, and transport identities.
+- `catalogs/libraries/{amd,intel}.overlays.json` — reviewed historical packages that have no verified official GitHub-release identity; overlays cannot replace or impersonate official imports.
+- `catalogs/libraries/microsoft-nuget.{config,lock}.json` — reproducible NuGet package, DLL, Authenticode, legal-document, and transport lock with product configuration.
 - `libraries/v1/index.json` + `libraries/v1/vendors/*.json` — generated package-first public catalogue (schema v1). The root `manifest.json` is frozen for legacy clients and is not published by current tooling.
 - `schemas/` — JSON Schemas for every validated document, including the library index, vendor sources/snapshots, and generated-provider config/locks.
 - `scripts/generate-library-catalog.mjs` — deterministic generator: reads curated sources and generated-provider locks, produces vendor snapshots and the library index.
 - `scripts/libraries.mjs` — unified CLI for generate/validate/refresh/publish/audit-published commands.
 - `scripts/refresh-microsoft-nuget.mjs` — imports, verifies (NuGet SHA-512, PE, Authenticode), compresses, and persists Microsoft runtime releases.
 - `scripts/validate-microsoft-nuget.mjs` — validates NuGet lock semantics, baseline immutability, and published DirectStorage identities.
-- `scripts/refresh-openvr-github.mjs` — discovers stable GitHub releases, imports both Windows architectures from exact tag commits, and updates the OpenVR lock.
-- `scripts/validate-openvr-github.mjs` — validates the full OpenVR lock/config contract and immutable Git baseline.
+- `scripts/refresh-github-release-tree.mjs` — shared AMD, Intel, and Valve importer; thin reviewed profiles define tag syntax, exact commit-tree paths, package projection, and signature policy.
+- `scripts/validate-github-release-tree.mjs` — validates every GitHub lock/config/overlay, immutable Git baseline, and deterministic public projection.
 - `catalogs/addons/luma` — curated Luma profiles, Wiki review data, schema, generator, and tests.
 - `catalogs/addons/renodx` — RenoDX Wiki snapshot, curated overrides, schemas, generator, and tests.
 - `catalogs/addons/reshade` — ReShade channel model (`lib/build-manifest.mjs`), schema, and generator inputs.
@@ -31,9 +32,20 @@ of `release.version`.
 
 The versioned package-revision contract binds install-relevant identity: package id,
 technology, variant, release version and channel, runtime target, provenance, and ordered members.
-Presentation-only `display_name`, `release.label`, and extensions do not change the
-revision. Physical DLL and compressed transport identities remain independently
-content-addressed.
+Presentation-only `display_name`, `release.label`, legal-document references, and
+extensions do not change the revision. Physical DLLs, compressed transport, and raw
+legal documents remain independently content-addressed.
+
+Each vendor snapshot contains a deduplicated `legal_documents` table. Packages refer
+to applicable entries through sorted `legal_document_ids`; clients display the
+document title and kind (`license` or `notice`) and download the exact raw text/PDF
+from its immutable `object_key`. A notice records attribution or third-party terms
+that accompany a package; it is not presented as the package's primary license.
+Every document id is exactly `<kind>.<content-sha256>`, its file name must agree with
+its declared format, and raw content is bounded to 16 MiB consistently across
+provider locks, public snapshots, publication, and the application consumer.
+Import and publication also inspect the payload itself: text must be valid UTF-8
+without NUL bytes, and PDF content must carry a canonical PDF version header.
 
 ## Published add-on contracts
 
@@ -61,6 +73,16 @@ pnpm run refresh:microsoft:check
 pnpm run refresh:microsoft:write
 pnpm run materialize:microsoft
 pnpm run backfill:microsoft-signatures
+pnpm run refresh:github:check
+pnpm run refresh:github:write
+pnpm run materialize:github
+pnpm run backfill:github-signatures
+pnpm run refresh:amd:check
+pnpm run refresh:amd:write
+pnpm run materialize:amd
+pnpm run refresh:intel:check
+pnpm run refresh:intel:write
+pnpm run materialize:intel
 pnpm run refresh:openvr:check
 pnpm run refresh:openvr:write
 pnpm run materialize:openvr
@@ -69,7 +91,7 @@ pnpm run refresh:reshade:check
 pnpm run check:upstream-health
 pnpm run check:wiki-drift
 pnpm run check:published-json
-pnpm run publish:binaries
+pnpm run publish:assets
 pnpm run publish:json:dry-run
 ```
 
@@ -77,17 +99,26 @@ pnpm run publish:json:dry-run
 
 `pnpm run check:offline` is the network-free subset (format + validate + generated + unit tests) used by the ReShade refresh bot before opening a PR.
 
-`refresh:microsoft:check` reads NuGet V3 Registration and Catalog Details and considers only listed stable releases. `refresh:microsoft:write` runs on Windows and imports every missing D3D12 Agility, DXC, and DirectStorage release after NuGet SHA-512, package-layout, PE, and Authenticode checks. DXC x86 is optional per package but each architecture is always a complete `dxcompiler.dll` + `dxil.dll` pair. `materialize:microsoft` re-verifies and recompresses every selected locked package. Refresh commands update only the lock and transport blobs; run `pnpm run libraries:generate` explicitly before validation or publication. A compressed payload is replaceable transport, not library identity: blobs live under `libraries/blobs/sha256/`, while NuGet and decompressed DLL identities remain immutable. The internal NuGet lock calls its provider-specific compressed representation `r2`; generation projects that metadata into the provider-neutral public `transport` contract.
+`refresh:microsoft:check` reads NuGet V3 Registration and Catalog Details and considers only listed stable releases. `refresh:microsoft:write` runs on Windows and imports every missing D3D12 Agility, DXC, and DirectStorage release after NuGet SHA-512, exact package-layout, legal-document, PE, and Authenticode checks. DXC x86 is optional per package but each architecture is always a complete `dxcompiler.dll` + `dxil.dll` pair. `materialize:microsoft` re-verifies and recompresses every selected locked package.
 
-`refresh:openvr:check` discovers every non-draft, non-prerelease ValveSoftware/openvr GitHub release and resolves the exact tag commit. `refresh:openvr:write` downloads `bin/win64/openvr_api.dll` and `bin/win32/openvr_api.dll` from those immutable commits, verifies Git-blob and DLL identities, PE architecture and named exports, Authenticode policy, and compressed transport. Package provenance records the GitHub repository, exact tag, and commit SHA. Historical OpenVR DLLs can have no numeric PE `FileVersion`, so their public `file_version` is nullable; Microsoft-generated DLL metadata always requires a numeric `FileVersion`.
+The `amd`, `intel`, and `openvr` refresh commands use one provider-neutral GitHub release-tree engine. It discovers every stable non-draft/non-prerelease release with pagination, retains both annotated/lightweight tag-ref and exact commit identities, and imports only paths declared by the selected reviewed profile. Every DLL and legal document is checked against the commit tree's Git-blob SHA-1 and its own SHA-256 before atomic local persistence. A changed known release/tag/commit/payload or an unknown stable tag/layout fails closed. Package provenance records the official repository, exact tag, and commit SHA.
 
-The Windows Authenticode inspector has explicit `Strict` and `OpenVr` modes. Both require Windows status `Valid` for signed files and apply the same strict timestamp verification: RFC 3161 is verified with `CryptVerifyTimeStampSignature`, and legacy PKCS#9 countersignatures are verified against the original `SignerInfo.encryptedDigest` with `CryptMsgVerifyCountersignatureEncodedEx`. `signed_at` is `null` only when no timestamp attribute exists; malformed CMS, signer mismatch, invalid crypto, unsupported timestamp structures, and conflicting verified times always fail.
+The scheduled GitHub workflow refreshes every registered release-tree source as
+one catalog update. It completes discovery and import for all providers before
+writing locks, generates the shared index once, uploads immutable assets, and
+opens one PR, avoiding competing provider PRs for the same index commit point.
 
-Microsoft uses `Strict`: every imported DLL must be signed and have a numeric `FileVersion`. OpenVR mode reports unsigned DLLs explicitly; provider policy permits them only for releases with `published_at` before the inclusive `require_signed_release_at_or_after` cutoff. `backfill:microsoft-signatures` and `backfill:openvr-signatures` are explicit metadata migrations that may only change `signed_at: null` into a verified timestamp. Older manually curated AMD, Intel, and NVIDIA records retain only historically captured signature metadata, so optional certificate fields can be absent without implying an unsigned binary.
+AMD imports the official FidelityFX SDK release layouts; Intel imports all reviewed official XeSS SDK release layouts; OpenVR imports `bin/win64/openvr_api.dll` and `bin/win32/openvr_api.dll`. AMD and Intel packages deduplicate identical projected payloads, while OpenVR preserves every official release package even when two releases share the same physical DLL. OpenVR additionally publishes sorted named exports for the application's export-surface compatibility guard. Historical OpenVR DLLs can have no numeric PE `FileVersion`, so public `file_version` is nullable; Microsoft, AMD, and Intel package projection requires a numeric version where their profiles use it as the release identity.
 
-`pnpm run test:authenticode` is Windows-specific and intentionally excluded from the portable `pnpm check` path. The Microsoft and OpenVR refresh workflows run it before importing or materializing binaries; run it locally on Windows when changing the signature inspector, PE parser, or timestamp verifier.
+Refresh commands update only provider locks and local content-addressed assets; run `pnpm run libraries:generate` explicitly before validation or publication. A compressed payload is replaceable transport rather than DLL identity: DLL blobs live under `libraries/blobs/sha256/`, legal documents under `libraries/legal/sha256/`, and generated public snapshots project both through provider-neutral contracts.
 
-`pnpm run check:published-json` is an explicit post-publication check that fetches every served JSON from R2 and compares SHA-256 against local files to confirm byte-for-byte publication. `pnpm run validate:microsoft` asserts NuGet lock semantics, baseline immutability, and checks DirectStorage identities against a known map. `pnpm run validate:openvr` validates the complete OpenVR lock/config before projecting it into the public Valve snapshot. Both are included in the default `pnpm check` path.
+The Windows Authenticode inspector has provider-neutral `RequireSigned` and `AllowUnsigned` modes. Both require Windows status `Valid` for signed files and apply the same strict timestamp verification: RFC 3161 is verified with `CryptVerifyTimeStampSignature`, and legacy PKCS#9 countersignatures are verified against the original `SignerInfo.encryptedDigest` with `CryptMsgVerifyCountersignatureEncodedEx`. `signed_at` is `null` only when no timestamp attribute exists; malformed CMS, signer mismatch, invalid crypto, unsupported timestamp structures, and conflicting verified times always fail.
+
+Microsoft, AMD, and Intel use `RequireSigned`: every imported DLL must have a valid signature from the provider allowlist. Microsoft additionally requires a numeric `FileVersion`. OpenVR uses `AllowUnsigned` only to report the unsigned state; its provider policy permits that state only for releases with `published_at` strictly before the inclusive `require_valid_signature_at_or_after` cutoff. `backfill:microsoft-signatures` and `backfill:openvr-signatures` are explicit metadata migrations that may only change `signed_at: null` into a verified timestamp. Reviewed AMD/Intel overlays and curated NVIDIA records retain historically captured signature metadata outside the official GitHub importer.
+
+`pnpm run test:authenticode` is Windows-specific and intentionally excluded from the portable `pnpm check` path. The Microsoft and shared GitHub refresh workflows run it before importing or materializing binaries; run it locally on Windows when changing the signature inspector, PE parser, or timestamp verifier.
+
+`pnpm run check:published-json` is an explicit post-publication check that fetches every served JSON from R2 and compares SHA-256 against local files to confirm byte-for-byte publication. `pnpm run validate:microsoft` asserts NuGet lock semantics, baseline immutability, and known DirectStorage identities. `pnpm run validate:github` validates all AMD, Intel, and Valve locks, overlays, and deterministic projections. Both are included in the default `pnpm check` path.
 
 `pnpm run refresh:reshade:check` detects a newer stable ReShade Addon installer; `refresh:reshade:write` rewrites `scripts/lib/reshade-sources.mjs` and regenerates `addons/v1/reshade.json` only. Scheduled workflows open a PR when an update is live — they do not push to `main` or write R2. `pnpm run check:upstream-health` probes committed pins (ReShade channels and Luma managed-dependency archives); it is schedule-only and not part of default `pnpm check`.
 
@@ -106,9 +137,9 @@ Microsoft uses `Strict`: every imported DLL must be signed and have a numeric `F
 
 ## Publishing
 
-`pnpm run publish` validates every local compressed and decompressed hash before uploading blobs, immutable vendor snapshots, and finally `libraries/v1/index.json` as the sole commit point. `pnpm run publish:binaries` uploads only locally available content-addressed blobs, then HEAD-verifies every referenced blob. `pnpm run publish:json` uploads snapshots and the index only after every referenced blob is HEAD-verified by size and SHA-256 metadata. Recompression creates a new object; no published object is overwritten under another content identity. Use `pnpm run check:published-json` for byte-for-byte remote verification of the index and all referenced vendor snapshots.
+`pnpm run publish` validates every local compressed DLL and raw legal-document identity before uploading immutable assets, immutable vendor snapshots, and finally `libraries/v1/index.json` as the sole commit point. `pnpm run publish:assets` uploads only locally available content-addressed DLL and legal assets. `pnpm run publish:json` uploads snapshots and the index only after every referenced asset is HEAD-verified by size and SHA-256 metadata. Recompression creates a new object; no published object is overwritten under another content identity. Use `pnpm run check:published-json` for byte-for-byte remote verification of the index and all referenced vendor snapshots.
 
-Before the first v1 index publication, run `pnpm run publish:binaries` from a workspace containing the migrated curated blobs. CI refresh jobs subsequently upload only the new blobs they materialize. Publication never mutates or deletes the frozen root `manifest.json` or its legacy R2 objects.
+Before the first v1 index publication, run `pnpm run publish:assets` from a workspace containing the complete migrated asset set. CI refresh jobs subsequently upload only new assets they materialize. Publication never mutates or deletes the frozen root `manifest.json` or its legacy R2 objects.
 
 Root legacy keys (`renodx_manifest.json`, `reshade_manifest.json`) are no longer published. Publish does not delete objects — remove those keys from the R2 bucket yourself when clients no longer fetch them.
 

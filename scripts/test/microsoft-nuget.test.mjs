@@ -8,12 +8,11 @@ import {
   assertLockExtendsBaseline,
   assertLockSemantics,
   assertMicrosoftConfig,
-  contentAddressedObjectKey,
   fetchPackageSha512,
   listedStableReleases,
   selectPackageFiles,
 } from "../lib/microsoft-nuget.mjs";
-import { compareNumericVersions } from "../lib/library-catalog.mjs";
+import { blobObjectKey, compareNumericVersions } from "../lib/library-catalog.mjs";
 
 const validateMicrosoftConfigSchema = new Ajv2020({
   allErrors: true,
@@ -176,7 +175,7 @@ test("lock semantics reject artifacts outside the configured product matrix", ()
   unexpected.library_id = "unexpected_runtime";
   unexpected.file_name = "unexpected.dll";
   unexpected.package_path = "build/native/bin/x64/unexpected.dll";
-  unexpected.r2.object_key = contentAddressedObjectKey(unexpected.r2.zst_sha256);
+  unexpected.r2.object_key = blobObjectKey(unexpected.r2.zst_sha256);
   lock.releases[0].artifacts.push(unexpected);
 
   assert.throws(() => assertLockSemantics(lock, config), /unexpected artifact/);
@@ -280,7 +279,7 @@ test("immutable baseline rejects changed and removed package versions", () => {
     () =>
       assertLockExtendsBaseline(
         {
-          schema_version: 2,
+          schema_version: 3,
           releases: [],
         },
         baseline,
@@ -296,7 +295,7 @@ test("immutable baseline permits content-addressed transport replacement", () =>
   artifact.r2.zst_sha256 = "c".repeat(64);
   artifact.r2.zst_size_bytes = 42;
   artifact.r2.compression_level = 19;
-  artifact.r2.object_key = contentAddressedObjectKey(artifact.r2.zst_sha256);
+  artifact.r2.object_key = blobObjectKey(artifact.r2.zst_sha256);
 
   assert.doesNotThrow(() => assertLockExtendsBaseline(recompressed, baseline));
 });
@@ -353,6 +352,15 @@ function strictDxcLock() {
       { library_id: "dxcompiler", file_name: "dxcompiler.dll" },
       { library_id: "dxil", file_name: "dxil.dll" },
     ],
+    legal_documents: [
+      {
+        kind: "license",
+        title: "Microsoft DirectX Shader Compiler License",
+        format: "text",
+        file_name: "LICENSE-LLVM.txt",
+        package_path: "LICENSE-LLVM.txt",
+      },
+    ],
     compatibility: null,
   };
   const artifact = (libraryId, fileName, hash) => ({
@@ -370,16 +378,20 @@ function strictDxcLock() {
       signed_at: null,
     },
     r2: {
-      object_key: contentAddressedObjectKey(hash.repeat(64)),
+      object_key: blobObjectKey(hash.repeat(64)),
       zst_sha256: hash.repeat(64),
       zst_size_bytes: 50,
       compression_level: 12,
     },
   });
   return {
-    config: { schema_version: 1, products: [product] },
+    config: {
+      schema_version: 1,
+      trusted_signer_subjects: ["CN=Microsoft Corporation"],
+      products: [product],
+    },
     lock: {
-      schema_version: 2,
+      schema_version: 3,
       releases: [
         {
           product: "dxc",
@@ -390,6 +402,18 @@ function strictDxcLock() {
           artifacts: [
             artifact("dxcompiler", "dxcompiler.dll", "a"),
             artifact("dxil", "dxil.dll", "b"),
+          ],
+          legal_documents: [
+            {
+              kind: "license",
+              title: "Microsoft DirectX Shader Compiler License",
+              format: "text",
+              file_name: "LICENSE-LLVM.txt",
+              package_path: "LICENSE-LLVM.txt",
+              sha256: "c".repeat(64),
+              size_bytes: 123,
+              object_key: `libraries/legal/sha256/${"c".repeat(64)}.txt`,
+            },
           ],
         },
       ],

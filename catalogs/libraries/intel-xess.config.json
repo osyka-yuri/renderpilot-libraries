@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "profile": "intel_xess",
+  "repository": "intel/xess",
+  "expected_stable_releases": 11,
+  "trusted_signer_subjects": [
+    "CN=Intel Corporation, O=Intel Corporation, L=Santa Clara, S=California, C=US",
+    "CN=Intel Corporation, O=Intel Corporation, S=California, C=US"
+  ]
+}

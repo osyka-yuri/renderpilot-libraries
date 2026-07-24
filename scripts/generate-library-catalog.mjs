@@ -79,13 +79,16 @@ async function main() {
 }
 
 async function loadGeneratedVendorSource(vendor) {
-  const [lock, config] = await Promise.all([
+  const [lock, config, overlay] = await Promise.all([
     readJsonFileAsync(path.join(repoRoot, vendor.lockFile)),
     readJsonFileAsync(path.join(repoRoot, vendor.configFile)),
+    vendor.overlayFile
+      ? readJsonFileAsync(path.join(repoRoot, vendor.overlayFile))
+      : Promise.resolve(null),
   ]);
   return {
     vendor,
-    source: buildGeneratedLibraryVendorSource(vendor, lock, config),
+    source: buildGeneratedLibraryVendorSource(vendor, { lock, config, overlay }),
   };
 }
 

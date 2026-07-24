@@ -4,10 +4,16 @@
   "title": "RenderPilot Microsoft NuGet product configuration",
   "description": "Product, architecture, and runtime-file matrix used to import Microsoft runtimes from NuGet.",
   "type": "object",
-  "required": ["schema_version", "products"],
+  "required": ["schema_version", "trusted_signer_subjects", "products"],
   "additionalProperties": false,
   "properties": {
     "schema_version": { "type": "integer", "const": 1 },
+    "trusted_signer_subjects": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
     "products": {
       "type": "array",
       "minItems": 1,
@@ -25,6 +31,7 @@
         "expected_listed_stable_releases",
         "architectures",
         "files",
+        "legal_documents",
         "compatibility"
       ],
       "additionalProperties": false,
@@ -48,6 +55,12 @@
           "minItems": 1,
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/runtimeFile" }
+        },
+        "legal_documents": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/legalDocument" }
         },
         "compatibility": { "enum": ["d3d12_sdk", null] }
       }
@@ -77,6 +90,25 @@
         "file_name": {
           "type": "string",
           "pattern": "^[A-Za-z0-9._-]+\\.dll$"
+        }
+      }
+    },
+    "legalDocument": {
+      "type": "object",
+      "required": ["kind", "title", "format", "file_name", "package_path"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["license", "notice"] },
+        "title": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "format": { "enum": ["text", "pdf"] },
+        "file_name": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9._-]+\\.(?:md|pdf|txt)$"
+        },
+        "package_path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
         }
       }
     }

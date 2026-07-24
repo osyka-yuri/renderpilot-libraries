@@ -55,10 +55,66 @@ export class HttpStatusError extends Error {
  */
 export function cancelResponseBody(response) {
   try {
-    response?.body?.cancel?.();
+    const cancellation = response?.body?.cancel?.();
+    cancellation?.catch?.(() => {});
   } catch {
     // ignore cancel failures
   }
+}
+
+function declaredContentLength(response) {
+  const value = response?.headers?.get?.("content-length");
+  if (typeof value !== "string" || !/^(?:0|[1-9]\d*)$/u.test(value)) return null;
+  const length = Number(value);
+  return Number.isSafeInteger(length) ? length : null;
+}
+
+/**
+ * Reads an HTTP response body without ever retaining more than `maximumSize`
+ * bytes. Content-Length is only an early-rejection hint: the streamed byte
+ * count remains authoritative when the header is missing, malformed, or false.
+ */
+export async function readResponseBufferBounded(
+  response,
+  { maximumSize, context = "response body" },
+) {
+  if (!Number.isSafeInteger(maximumSize) || maximumSize < 0) {
+    throw new Error("maximumSize must be a non-negative safe integer");
+  }
+
+  const declaredLength = declaredContentLength(response);
+  if (declaredLength !== null && declaredLength > maximumSize) {
+    cancelResponseBody(response);
+    throw new Error(`${context}: payload exceeds ${maximumSize} bytes`);
+  }
+
+  if (!response?.body) return Buffer.alloc(0);
+  if (typeof response.body.getReader !== "function") {
+    throw new Error(`${context}: response body is not a readable stream`);
+  }
+
+  const reader = response.body.getReader();
+  const chunks = [];
+  let total = 0;
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (!(value instanceof Uint8Array)) {
+        throw new Error(`${context}: response body yielded a non-byte chunk`);
+      }
+      total += value.byteLength;
+      if (total > maximumSize) {
+        await Promise.resolve(reader.cancel()).catch(() => {});
+        throw new Error(`${context}: payload exceeds ${maximumSize} bytes`);
+      }
+      chunks.push(value);
+    }
+  } finally {
+    reader.releaseLock?.();
+  }
+
+  return Buffer.concat(chunks, total);
 }
 
 /**

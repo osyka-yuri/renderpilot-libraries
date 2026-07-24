@@ -35,6 +35,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm run check
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MICROSOFT_NUGET_BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'HEAD^' }}
 
   publish:

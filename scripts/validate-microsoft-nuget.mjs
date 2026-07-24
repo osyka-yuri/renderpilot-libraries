@@ -40,9 +40,13 @@ async function main() {
     cwd: repoRoot,
     maxBuffer: 32 * 1024 * 1024,
   });
-  if (baseline) {
+  if (baseline?.schema_version === lock.schema_version) {
     assertLockSemantics(baseline, config);
     assertLockExtendsBaseline(lock, baseline);
+  } else if (baseline) {
+    console.log(
+      "Microsoft NuGet lock starts a new append-only baseline after a reviewed contract migration.",
+    );
   } else {
     console.log(`Microsoft NuGet lock has no baseline at ${baselineRef} (initial import).`);
   }

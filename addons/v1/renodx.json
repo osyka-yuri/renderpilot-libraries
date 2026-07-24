@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T00:00:00Z",
+  "generated_at": "2026-07-24T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -13459,6 +13459,27 @@
           "kind": "steam_appid",
           "value": "1835240",
           "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "spooky-s-jump-scare-mansion-hd-renovation",
+      "name": "Spooky's Jump Scare Mansion: HD Renovation",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "577690",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "SpookyUnity.exe",
+          "tier": 70
         }
       ],
       "addon": {

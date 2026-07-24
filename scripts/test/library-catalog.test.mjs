@@ -5,16 +5,17 @@ import test from "node:test";
 
 import {
   curatedLibraryVendors,
+  githubReleaseTreeVendors,
   jsonDocuments,
   libraryVendors,
   microsoftLibraryVendor,
-  openVrLibraryVendor,
   publishedJsonDocuments,
   repoRoot,
 } from "../catalog.mjs";
 import {
-  assertNumericVersion,
+  assertLegalDocumentPayload,
   assertLibraryIndex,
+  assertNumericVersion,
   assertVendorSource,
   buildLibraryIndex,
   buildVendorSnapshot,
@@ -33,6 +34,27 @@ test("catalog versions accept canonical u64 segments and reject overflow", () =>
   assert.throws(
     () => assertNumericVersion("1.0001", "release version"),
     /dotted numeric version/,
+  );
+});
+
+test("legal document payloads bind their declared byte representation", () => {
+  assert.doesNotThrow(() =>
+    assertLegalDocumentPayload(Buffer.from("License text\n", "utf8"), "text", "license"),
+  );
+  assert.throws(
+    () => assertLegalDocumentPayload(Buffer.from([0xff, 0xfe]), "text", "license"),
+    /valid UTF-8/,
+  );
+  assert.throws(
+    () => assertLegalDocumentPayload(Buffer.from("text\0binary"), "text", "license"),
+    /NUL byte/,
+  );
+  assert.doesNotThrow(() =>
+    assertLegalDocumentPayload(Buffer.from("%PDF-1.7\nfixture", "ascii"), "pdf", "license"),
+  );
+  assert.throws(
+    () => assertLegalDocumentPayload(Buffer.from("not a PDF"), "pdf", "license"),
+    /canonical PDF header/,
   );
 });
 
@@ -68,6 +90,63 @@ test("package revision ignores presentation metadata but binds release behavior"
     left.packages[0].revision_sha256,
     behaviorChange.packages[0].revision_sha256,
   );
+});
+
+test("legal references are presentation metadata and remain strictly relational", () => {
+  const first = sourceWithLegalDocument();
+  const second = structuredClone(first);
+  second.legal_documents[0].title = "Updated license title";
+
+  const left = buildVendorSnapshot(first);
+  const right = buildVendorSnapshot(second);
+  assert.equal(left.packages[0].revision_sha256, right.packages[0].revision_sha256);
+  assert.match(
+    left.legal_documents[0].object_key,
+    /^libraries\/legal\/sha256\/[0-9a-f]{64}\.txt$/u,
+  );
+
+  const unknown = structuredClone(first);
+  unknown.packages[0].legal_document_ids = ["license.unknown"];
+  assert.throws(() => assertVendorSource(unknown), /unknown legal document/);
+
+  const orphan = structuredClone(first);
+  delete orphan.packages[0].legal_document_ids;
+  assert.throws(() => assertVendorSource(orphan), /unreferenced legal document/);
+
+  const unsorted = structuredClone(first);
+  unsorted.legal_documents.push({
+    ...structuredClone(unsorted.legal_documents[0]),
+    legal_document_id: `license.${"f".repeat(64)}`,
+    content: { sha256: "f".repeat(64), size_bytes: 8 },
+  });
+  unsorted.legal_documents.reverse();
+  unsorted.packages[0].legal_document_ids = unsorted.legal_documents
+    .map((document) => document.legal_document_id)
+    .sort();
+  assert.throws(() => assertVendorSource(unsorted), /legal documents must be sorted by id/);
+});
+
+test("legal document metadata has one bounded content-addressed contract", () => {
+  const wrongIdentity = sourceWithLegalDocument();
+  const wrongId = `license.${"d".repeat(64)}`;
+  wrongIdentity.legal_documents[0].legal_document_id = wrongId;
+  wrongIdentity.packages[0].legal_document_ids = [wrongId];
+  assert.throws(() => assertVendorSource(wrongIdentity), /id is not content-addressed/);
+
+  const mismatchedFormat = sourceWithLegalDocument();
+  mismatchedFormat.legal_documents[0].format = "pdf";
+  assert.throws(
+    () => assertVendorSource(mismatchedFormat),
+    /file name extension does not match document format/,
+  );
+
+  const oversized = sourceWithLegalDocument();
+  oversized.legal_documents[0].content.size_bytes = 16 * 1024 * 1024 + 1;
+  assert.throws(() => assertVendorSource(oversized), /content exceeds/);
+
+  const unsafeTitle = sourceWithLegalDocument();
+  unsafeTitle.legal_documents[0].title = "Example\nLicense";
+  assert.throws(() => assertVendorSource(unsafeTitle), /concise, printable, and trimmed/);
 });
 
 test("release labels contain supplemental information only", () => {
@@ -205,14 +284,22 @@ test("library vendor registry matches source and snapshot identities", async () 
     documents.get(microsoftLibraryVendor.lockFile)?.schema,
     "schemas/microsoft_nuget_lock.schema.json",
   );
-  assert.equal(
-    documents.get(openVrLibraryVendor.configFile)?.schema,
-    "schemas/openvr_github_config.schema.json",
-  );
-  assert.equal(
-    documents.get(openVrLibraryVendor.lockFile)?.schema,
-    "schemas/openvr_github_lock.schema.json",
-  );
+  for (const vendor of githubReleaseTreeVendors) {
+    assert.equal(
+      documents.get(vendor.configFile)?.schema,
+      "schemas/github_release_tree_config.schema.json",
+    );
+    assert.equal(
+      documents.get(vendor.lockFile)?.schema,
+      "schemas/github_release_tree_lock.schema.json",
+    );
+    if (vendor.overlayFile) {
+      assert.equal(
+        documents.get(vendor.overlayFile)?.schema,
+        "schemas/library_vendor_source.schema.json",
+      );
+    }
+  }
 });
 
 test("source binds compatibility and provenance to Microsoft runtime semantics", () => {
@@ -375,6 +462,7 @@ function source() {
     schema_version: 1,
     vendor: { id: "example", display_name: "Example" },
     generated_at: "2026-07-22T00:00:00.000Z",
+    legal_documents: [],
     artifacts: [
       {
         artifact_key: "runtime",
@@ -399,6 +487,23 @@ function source() {
       },
     ],
   };
+}
+
+function sourceWithLegalDocument() {
+  const value = source();
+  const legalDocumentId = `license.${"c".repeat(64)}`;
+  value.legal_documents = [
+    {
+      legal_document_id: legalDocumentId,
+      kind: "license",
+      title: "Example License",
+      format: "text",
+      file_name: "LICENSE.txt",
+      content: { sha256: "c".repeat(64), size_bytes: 7 },
+    },
+  ];
+  value.packages[0].legal_document_ids = [legalDocumentId];
+  return value;
 }
 
 function normalizeNumericVersion(value) {

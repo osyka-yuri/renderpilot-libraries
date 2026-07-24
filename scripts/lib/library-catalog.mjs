@@ -1,14 +1,24 @@
+import { TextDecoder, isDeepStrictEqual } from "node:util";
+
 import { sha256Hex } from "./hash.mjs";
+import {
+  compareDottedNumericVersions,
+  dottedNumericVersionParts,
+  latestRfc3339Timestamp,
+  normalizeRfc3339Timestamp,
+} from "./library-values.mjs";
 
 const SHA256_PATTERN = /^[0-9a-f]{64}$/;
 const SAFE_ID_PATTERN = /^[a-z][a-z0-9._-]*$/;
 const SAFE_FILE_NAME_PATTERN = /^[A-Za-z0-9._-]+\.dll$/i;
-const NUMERIC_VERSION_PATTERN = /^(?:0|[1-9]\d*)(?:\.(?:0|[1-9]\d*))*$/;
 const LABEL_VERSION_PATTERN = /\d+(?:\.\d+)+/gu;
-const MAX_U64 = 18_446_744_073_709_551_615n;
 const SHA512_BASE64_PATTERN = /^[A-Za-z0-9+/]{86}==$/;
 const ARCHITECTURES = new Set(["X64", "X86"]);
 const PACKAGE_REVISION_SCHEMA_VERSION = 1;
+export const MAX_LEGAL_DOCUMENT_SIZE = 16 * 1024 * 1024;
+const MAX_LEGAL_DOCUMENT_TITLE_LENGTH = 256;
+const MAX_LEGAL_DOCUMENT_FILE_NAME_LENGTH = 128;
+const FATAL_UTF8_DECODER = new TextDecoder("utf-8", { fatal: true });
 const MICROSOFT_PACKAGE_IDS = Object.freeze({
   d3d12_agility: "Microsoft.Direct3D.D3D12",
   direct_storage: "Microsoft.Direct3D.DirectStorage",
@@ -17,6 +27,7 @@ const MICROSOFT_PACKAGE_IDS = Object.freeze({
 
 export const LIBRARY_INDEX_KEY = "libraries/v1/index.json";
 export const LIBRARY_BLOB_PREFIX = "libraries/blobs/sha256";
+export const LIBRARY_LEGAL_PREFIX = "libraries/legal/sha256";
 export const LIBRARY_VENDOR_PREFIX = "libraries/v1/vendors";
 
 export function jsonDocument(value) {
@@ -28,6 +39,100 @@ export function blobObjectKey(transportSha256) {
   return `${LIBRARY_BLOB_PREFIX}/${transportSha256}.dll.zst`;
 }
 
+export function recordImmutableObjectIdentity(objects, objectKey, identity, context) {
+  const previous = objects.get(objectKey);
+  if (previous && !isDeepStrictEqual(previous, identity)) {
+    throw new Error(`${context}: shared asset object has inconsistent metadata`);
+  }
+  objects.set(objectKey, identity);
+}
+
+export function legalDocumentObjectKey(contentSha256, format) {
+  assertSha256(contentSha256, "legal document SHA-256");
+  if (!new Set(["text", "pdf"]).has(format)) {
+    throw new Error(`unsupported legal document format ${JSON.stringify(format)}`);
+  }
+  return `${LIBRARY_LEGAL_PREFIX}/${contentSha256}.${format === "pdf" ? "pdf" : "txt"}`;
+}
+
+export function assertLegalDocumentDescriptor(document, context) {
+  if (!new Set(["license", "notice"]).has(document?.kind)) {
+    throw new Error(`${context}: unsupported legal document kind`);
+  }
+  if (
+    typeof document.title !== "string" ||
+    !document.title.trim() ||
+    document.title !== document.title.trim() ||
+    [...document.title].length > MAX_LEGAL_DOCUMENT_TITLE_LENGTH ||
+    /[\u0000-\u001f\u007f]/u.test(document.title)
+  ) {
+    throw new Error(`${context}: title must be concise, printable, and trimmed`);
+  }
+  if (!new Set(["text", "pdf"]).has(document.format)) {
+    throw new Error(`${context}: unsupported legal document format`);
+  }
+  if (
+    typeof document.file_name !== "string" ||
+    document.file_name.length > MAX_LEGAL_DOCUMENT_FILE_NAME_LENGTH ||
+    !/^[A-Za-z0-9._-]+\.(?:md|pdf|txt)$/iu.test(document.file_name)
+  ) {
+    throw new Error(`${context}: unsafe legal document file name`);
+  }
+  const lowerFileName = document.file_name.toLowerCase();
+  if (
+    (document.format === "pdf" && !lowerFileName.endsWith(".pdf")) ||
+    (document.format === "text" &&
+      !lowerFileName.endsWith(".md") &&
+      !lowerFileName.endsWith(".txt"))
+  ) {
+    throw new Error(`${context}: file name extension does not match document format`);
+  }
+}
+
+export function assertLegalDocumentContentIdentity(document, context) {
+  assertSha256(document?.sha256, `${context}: content SHA-256`);
+  assertPositiveInteger(document?.size_bytes, `${context}: content size`);
+  if (document.size_bytes > MAX_LEGAL_DOCUMENT_SIZE) {
+    throw new Error(`${context}: content exceeds ${MAX_LEGAL_DOCUMENT_SIZE} bytes`);
+  }
+  if (
+    document.object_key !== undefined &&
+    document.object_key !== legalDocumentObjectKey(document.sha256, document.format)
+  ) {
+    throw new Error(`${context}: object key is not content-addressed`);
+  }
+}
+
+export function assertLegalDocumentPayload(bytes, format, context) {
+  if (
+    !Buffer.isBuffer(bytes) ||
+    bytes.length === 0 ||
+    bytes.length > MAX_LEGAL_DOCUMENT_SIZE
+  ) {
+    throw new Error(`${context}: payload must contain 1..${MAX_LEGAL_DOCUMENT_SIZE} bytes`);
+  }
+  if (format === "text") {
+    let text;
+    try {
+      text = FATAL_UTF8_DECODER.decode(bytes);
+    } catch {
+      throw new Error(`${context}: text payload is not valid UTF-8`);
+    }
+    if (text.includes("\0")) {
+      throw new Error(`${context}: text payload contains a NUL byte`);
+    }
+    return;
+  }
+  if (format === "pdf") {
+    const header = bytes.subarray(0, 8).toString("ascii");
+    if (!/^%PDF-(?:1\.\d|2\.0)$/u.test(header)) {
+      throw new Error(`${context}: PDF payload has no canonical PDF header`);
+    }
+    return;
+  }
+  throw new Error(`${context}: unsupported legal document format`);
+}
+
 export function vendorSnapshotObjectKey(vendorId, snapshotSha256) {
   assertSafeId(vendorId, "vendor id");
   assertSha256(snapshotSha256, "vendor snapshot SHA-256");
@@ -37,6 +142,15 @@ export function vendorSnapshotObjectKey(vendorId, snapshotSha256) {
 export function buildVendorSnapshot(source) {
   assertVendorSource(source);
 
+  const legalDocuments = source.legal_documents.map((document) => ({
+    legal_document_id: document.legal_document_id,
+    kind: document.kind,
+    title: document.title,
+    format: document.format,
+    file_name: document.file_name,
+    content: document.content,
+    object_key: legalDocumentObjectKey(document.content.sha256, document.format),
+  }));
   const artifactsByKey = new Map();
   const artifacts = source.artifacts.map((artifact) => {
     const artifactId = `sha256:${artifact.dll.sha256}`;
@@ -85,6 +199,7 @@ export function buildVendorSnapshot(source) {
       release: sourcePackage.release,
       target: sourcePackage.target,
       provenance: sourcePackage.provenance,
+      legal_document_ids: sourcePackage.legal_document_ids,
       members,
       extensions: sourcePackage.extensions,
     });
@@ -94,6 +209,7 @@ export function buildVendorSnapshot(source) {
     schema_version: 1,
     vendor: source.vendor,
     generated_at: source.generated_at,
+    legal_documents: legalDocuments,
     artifacts,
     packages,
   };
@@ -187,9 +303,16 @@ export function assertVendorSource(source) {
   }
   assertVendor(source.vendor);
   assertTimestamp(source.generated_at, `${source.vendor.id}: generated_at`);
-  if (!Array.isArray(source.artifacts) || !Array.isArray(source.packages)) {
-    throw new Error(`${source.vendor.id}: artifacts and packages must be arrays`);
+  if (
+    !Array.isArray(source.legal_documents) ||
+    !Array.isArray(source.artifacts) ||
+    !Array.isArray(source.packages)
+  ) {
+    throw new Error(
+      `${source.vendor.id}: legal_documents, artifacts, and packages must be arrays`,
+    );
   }
+  const legalDocumentIds = assertLegalDocuments(source.legal_documents, source.vendor.id);
 
   const artifactKeys = new Set();
   const artifactsByKey = new Map();
@@ -212,6 +335,7 @@ export function assertVendorSource(source) {
 
   const packageIds = new Set();
   const referencedArtifactKeys = new Set();
+  const referencedLegalDocumentIds = new Set();
   for (const packageValue of source.packages) {
     const context = `${source.vendor.id}/${packageValue.package_id}`;
     assertSafeId(packageValue.package_id, `${source.vendor.id}: package_id`);
@@ -222,6 +346,10 @@ export function assertVendorSource(source) {
     }
     packageIds.add(packageValue.package_id);
     assertPackageCommon(packageValue, context);
+    assertPackageLegalReferences(packageValue, legalDocumentIds, context);
+    for (const id of packageValue.legal_document_ids ?? []) {
+      referencedLegalDocumentIds.add(id);
+    }
 
     const installTargets = new Set();
     const resolvedArtifacts = [];
@@ -258,6 +386,13 @@ export function assertVendorSource(source) {
       throw new Error(`${source.vendor.id}: unreferenced artifact ${artifactKey}`);
     }
   }
+  for (const legalDocumentId of legalDocumentIds) {
+    if (!referencedLegalDocumentIds.has(legalDocumentId)) {
+      throw new Error(
+        `${source.vendor.id}: unreferenced legal document ${legalDocumentId}`,
+      );
+    }
+  }
 }
 
 export function assertVendorSnapshot(snapshot) {
@@ -266,9 +401,19 @@ export function assertVendorSnapshot(snapshot) {
   }
   assertVendor(snapshot.vendor);
   assertTimestamp(snapshot.generated_at, `${snapshot.vendor.id}: generated_at`);
-  if (!Array.isArray(snapshot.artifacts) || !Array.isArray(snapshot.packages)) {
-    throw new Error(`${snapshot.vendor.id}: artifacts and packages must be arrays`);
+  if (
+    !Array.isArray(snapshot.legal_documents) ||
+    !Array.isArray(snapshot.artifacts) ||
+    !Array.isArray(snapshot.packages)
+  ) {
+    throw new Error(
+      `${snapshot.vendor.id}: legal_documents, artifacts, and packages must be arrays`,
+    );
   }
+  const legalDocumentIds = assertLegalDocuments(
+    snapshot.legal_documents,
+    snapshot.vendor.id,
+  );
 
   const artifacts = new Map();
   for (const artifact of snapshot.artifacts) {
@@ -291,6 +436,7 @@ export function assertVendorSnapshot(snapshot) {
 
   const packageIds = new Set();
   const referencedArtifactIds = new Set();
+  const referencedLegalDocumentIds = new Set();
   for (const packageValue of snapshot.packages) {
     const context = `${snapshot.vendor.id}/${packageValue.package_id}`;
     assertSafeId(packageValue.package_id, `${snapshot.vendor.id}: package_id`);
@@ -301,6 +447,10 @@ export function assertVendorSnapshot(snapshot) {
       );
     }
     packageIds.add(packageValue.package_id);
+    assertPackageLegalReferences(packageValue, legalDocumentIds, context);
+    for (const id of packageValue.legal_document_ids ?? []) {
+      referencedLegalDocumentIds.add(id);
+    }
     assertPackageCommon(packageValue, context);
     const revisionInput = packageRevisionInput(packageValue, packageValue.members);
     if (packageValue.revision_sha256 !== sha256Hex(canonicalJson(revisionInput))) {
@@ -338,6 +488,13 @@ export function assertVendorSnapshot(snapshot) {
   for (const artifactId of artifacts.keys()) {
     if (!referencedArtifactIds.has(artifactId)) {
       throw new Error(`${snapshot.vendor.id}: unreferenced artifact ${artifactId}`);
+    }
+  }
+  for (const legalDocumentId of legalDocumentIds) {
+    if (!referencedLegalDocumentIds.has(legalDocumentId)) {
+      throw new Error(
+        `${snapshot.vendor.id}: unreferenced legal document ${legalDocumentId}`,
+      );
     }
   }
 }
@@ -475,6 +632,72 @@ function assertPackageCommon(packageValue, context) {
   assertExtensions(packageValue.extensions, `${context}: extensions`);
 }
 
+function assertLegalDocuments(documents, vendorId) {
+  const ids = new Set();
+  const identities = new Set();
+  for (const document of documents) {
+    const context = `${vendorId}/${document?.legal_document_id ?? "<unknown legal document>"}`;
+    assertSafeId(document?.legal_document_id, `${context}: legal_document_id`);
+    if (ids.has(document.legal_document_id)) {
+      throw new Error(
+        `${vendorId}: duplicate legal document ${document.legal_document_id}`,
+      );
+    }
+    ids.add(document.legal_document_id);
+    assertLegalDocumentDescriptor(document, context);
+    assertLegalDocumentContentIdentity(
+      {
+        ...document.content,
+        format: document.format,
+        object_key: document.object_key,
+      },
+      context,
+    );
+    const expectedDocumentId = `${document.kind}.${document.content.sha256}`;
+    if (document.legal_document_id !== expectedDocumentId) {
+      throw new Error(`${context}: legal document id is not content-addressed`);
+    }
+    if (
+      document.object_key !== undefined &&
+      document.object_key !==
+        legalDocumentObjectKey(document.content.sha256, document.format)
+    ) {
+      throw new Error(`${context}: object key is not content-addressed`);
+    }
+    const identity = `${document.kind}\0${document.content.sha256}`;
+    if (identities.has(identity)) {
+      throw new Error(`${vendorId}: duplicate legal document content identity`);
+    }
+    identities.add(identity);
+  }
+  const sorted = [...ids].sort();
+  if (sorted.some((id, index) => id !== documents[index]?.legal_document_id)) {
+    throw new Error(`${vendorId}: legal documents must be sorted by id`);
+  }
+  return ids;
+}
+
+function assertPackageLegalReferences(packageValue, legalDocumentIds, context) {
+  if (packageValue.legal_document_ids === undefined) return;
+  if (
+    !Array.isArray(packageValue.legal_document_ids) ||
+    packageValue.legal_document_ids.length === 0
+  ) {
+    throw new Error(`${context}: legal_document_ids must be a non-empty array`);
+  }
+  let previous = null;
+  for (const id of packageValue.legal_document_ids) {
+    assertSafeId(id, `${context}: legal document id`);
+    if (!legalDocumentIds.has(id)) {
+      throw new Error(`${context}: unknown legal document ${id}`);
+    }
+    if (previous !== null && previous >= id) {
+      throw new Error(`${context}: legal document ids must be sorted and unique`);
+    }
+    previous = id;
+  }
+}
+
 function assertOpenVrPackage(packageValue, artifacts, context) {
   if (packageValue.technology !== "openvr") return;
   if (
@@ -565,28 +788,11 @@ function assertPositiveInteger(value, label) {
 }
 
 export function assertNumericVersion(value, label) {
-  if (
-    typeof value !== "string" ||
-    !NUMERIC_VERSION_PATTERN.test(value) ||
-    value.split(".").some((segment) => BigInt(segment) > MAX_U64)
-  ) {
-    throw new Error(`${label} must be a dotted numeric version`);
-  }
+  dottedNumericVersionParts(value, label);
 }
 
 export function compareNumericVersions(left, right) {
-  assertNumericVersion(left, "left version");
-  assertNumericVersion(right, "right version");
-  const leftParts = left.split(".").map(BigInt);
-  const rightParts = right.split(".").map(BigInt);
-  const length = Math.max(leftParts.length, rightParts.length);
-  for (let index = 0; index < length; index += 1) {
-    const leftPart = leftParts[index] ?? 0n;
-    const rightPart = rightParts[index] ?? 0n;
-    if (leftPart < rightPart) return -1;
-    if (leftPart > rightPart) return 1;
-  }
-  return 0;
+  return compareDottedNumericVersions(left, right);
 }
 
 function releaseIdentity(release) {
@@ -625,17 +831,11 @@ function normalizePresentationText(value) {
 }
 
 function assertTimestamp(value, label) {
-  if (typeof value !== "string" || Number.isNaN(Date.parse(value))) {
-    throw new Error(`${label} is not an RFC 3339 timestamp`);
-  }
+  normalizeRfc3339Timestamp(value, label);
 }
 
 function latestTimestamp(values) {
-  const timestamps = values.map((value) => {
-    assertTimestamp(value, "catalog timestamp");
-    return Date.parse(value);
-  });
-  return new Date(Math.max(...timestamps)).toISOString();
+  return latestRfc3339Timestamp(values, "catalog timestamp");
 }
 
 function firstDuplicate(values) {

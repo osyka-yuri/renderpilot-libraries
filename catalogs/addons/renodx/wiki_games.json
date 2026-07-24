@@ -5236,6 +5236,13 @@
     "id": "spiritfall"
   },
   {
+    "name": "Spooky's Jump Scare Mansion: HD Renovation",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "spooky-s-jump-scare-mansion-hd-renovation"
+  },
+  {
     "name": "STAR OCEAN THE SECOND STORY R",
     "slug": "unityengine",
     "arch": "X64",

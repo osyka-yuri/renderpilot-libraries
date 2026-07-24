@@ -1,0 +1,1224 @@
+{
+  "schema_version": 1,
+  "profile": "amd_fidelityfx",
+  "releases": [
+    {
+      "release_id": 111811873,
+      "tag": "v1.0.0",
+      "version": "1.0.0",
+      "label": null,
+      "published_at": "2023-07-11T15:09:39.000Z",
+      "tag_ref_sha": "d7531ae47d8b36a5d4025663e731a47a38be882f",
+      "commit_sha": "d7531ae47d8b36a5d4025663e731a47a38be882f",
+      "disposition": "excluded",
+      "exclusion_reason": "release commit does not contain distributable FidelityFX runtime DLLs"
+    },
+    {
+      "release_id": 164609877,
+      "tag": "v1.1.0",
+      "version": "1.1.0",
+      "label": null,
+      "published_at": "2024-07-09T13:07:32.000Z",
+      "tag_ref_sha": "1bbe66e7ea0d358e84af4471a90aa9c35b583de0",
+      "commit_sha": "1bbe66e7ea0d358e84af4471a90aa9c35b583de0",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_dx12",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_dx12.dll",
+          "git_blob_sha1": "ddbef168a44d65f4f83e85fd2d79d929dc192d4d",
+          "pe_version": "1.0.0.36604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "77809405a0ff464b63654f1264f0ec0fcf8f243dac7c15b5f5c032615520d143",
+          "dll_size_bytes": 6475480,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-07-03T21:10:26.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/178fc260976659e6f6573e7dcab8e2cca4257b960fa0b034ed554518d75d9b97.dll.zst",
+            "zst_sha256": "178fc260976659e6f6573e7dcab8e2cca4257b960fa0b034ed554518d75d9b97",
+            "zst_size_bytes": 1194831,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_vk",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_vk.dll",
+          "git_blob_sha1": "715abb0aac7c4bcc5bea28ec9aa41777c6ebd0d9",
+          "pe_version": "1.0.0.36604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "3cceed45fd9fc47c98eb6d205fbd8aad198afef945c39f621a6e21dfb2bd97bf",
+          "dll_size_bytes": 9200344,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-07-03T21:10:47.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/3326f18b54e48e060b27e40ff857f8b511eab6928cbb444db14e6bed922ff195.dll.zst",
+            "zst_sha256": "3326f18b54e48e060b27e40ff857f8b511eab6928cbb444db14e6bed922ff195",
+            "zst_size_bytes": 959768,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "docs/license.md",
+          "git_blob_sha1": "16f0f4d865a7c931b2f74f91a11a2cbd2641f6b5",
+          "sha256": "1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728",
+          "size_bytes": 1119,
+          "object_key": "libraries/legal/sha256/1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 177592663,
+      "tag": "v1.1.1",
+      "version": "1.1.1",
+      "label": null,
+      "published_at": "2024-10-01T16:16:54.000Z",
+      "tag_ref_sha": "be99c36a76fb6a09999dd6150f1fedc14d755182",
+      "commit_sha": "be99c36a76fb6a09999dd6150f1fedc14d755182",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_dx12",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_dx12.dll",
+          "git_blob_sha1": "f65e274bb53deb45a487f93e21df779948725eaa",
+          "pe_version": "1.0.1.37507",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "9c2ba6727683804242980bcddc5c1ee4e16357b4bd17c8a93ce94614ed149780",
+          "dll_size_bytes": 6609624,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-09-12T10:56:27.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/cffa2bb33ea998fbaef8df189d55ca89bb39b10a22187ef341d085d52e957bce.dll.zst",
+            "zst_sha256": "cffa2bb33ea998fbaef8df189d55ca89bb39b10a22187ef341d085d52e957bce",
+            "zst_size_bytes": 1317350,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_vk",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_vk.dll",
+          "git_blob_sha1": "cafe118f81a9b69e60c56470779dbc5fc7b87df8",
+          "pe_version": "1.0.1.37507",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "6c6bfdaa15e5827a1274d41e5dea5bdb5852816fc462502caf4a32982aabea70",
+          "dll_size_bytes": 9262808,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-09-12T10:57:18.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/015d7668208c13d0d958cf59d8a863bf27d1a663cce72ba0269793963330922c.dll.zst",
+            "zst_sha256": "015d7668208c13d0d958cf59d8a863bf27d1a663cce72ba0269793963330922c",
+            "zst_size_bytes": 1075603,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "docs/license.md",
+          "git_blob_sha1": "16f0f4d865a7c931b2f74f91a11a2cbd2641f6b5",
+          "sha256": "1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728",
+          "size_bytes": 1119,
+          "object_key": "libraries/legal/sha256/1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 182297446,
+      "tag": "v1.1.2",
+      "version": "1.1.2",
+      "label": null,
+      "published_at": "2024-10-30T15:48:45.000Z",
+      "tag_ref_sha": "c16b1d286b5b438b75da159ab51ff426bacea3d1",
+      "commit_sha": "c16b1d286b5b438b75da159ab51ff426bacea3d1",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_dx12",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_dx12.dll",
+          "git_blob_sha1": "437c1abf90838022329eb906055b6dd7245b3db5",
+          "pe_version": "1.0.1.38338",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "270b6298bfb87098cbe679c8f4535e17fd8954a1313292b1564e982b1e679a0d",
+          "dll_size_bytes": 6634192,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-10-24T09:03:57.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d2f29ed881072377b18007ad485379728bc109b43511631ee8175b9303cc1299.dll.zst",
+            "zst_sha256": "d2f29ed881072377b18007ad485379728bc109b43511631ee8175b9303cc1299",
+            "zst_size_bytes": 1321828,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_vk",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_vk.dll",
+          "git_blob_sha1": "78554668506347b5d76f493b239afb47c2ba4bf7",
+          "pe_version": "1.0.1.38338",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "239792f0653ea3ccf13d384cc462def4108a47e14d7bf72a41b778b8bc2da8f9",
+          "dll_size_bytes": 9277136,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-10-24T09:04:16.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/5d1b09641c303a8b3e62e26efe3402049222766c2b942322244e7d94e1912975.dll.zst",
+            "zst_sha256": "5d1b09641c303a8b3e62e26efe3402049222766c2b942322244e7d94e1912975",
+            "zst_size_bytes": 1076485,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "docs/license.md",
+          "git_blob_sha1": "16f0f4d865a7c931b2f74f91a11a2cbd2641f6b5",
+          "sha256": "1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728",
+          "size_bytes": 1119,
+          "object_key": "libraries/legal/sha256/1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 190442021,
+      "tag": "v1.1.3",
+      "version": "1.1.3",
+      "label": null,
+      "published_at": "2024-12-12T16:12:16.000Z",
+      "tag_ref_sha": "54fbaafdc34716811751bea5032700e78f5a0f33",
+      "commit_sha": "54fbaafdc34716811751bea5032700e78f5a0f33",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_dx12",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_dx12.dll",
+          "git_blob_sha1": "5e381643e6cc04a1329d907133f87bd61e7491cf",
+          "pe_version": "1.0.1.39157",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "5672ee4202aa5417e23369d548a140652367494299a7678b42aa5b3395f76ad7",
+          "dll_size_bytes": 6647504,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-12-09T11:23:09.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d1247ef99a2b3aaa503ad2645d46235d8c10afd4a9caeba74d36598ab70efc3d.dll.zst",
+            "zst_sha256": "d1247ef99a2b3aaa503ad2645d46235d8c10afd4a9caeba74d36598ab70efc3d",
+            "zst_size_bytes": 1324676,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_vk",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_vk.dll",
+          "git_blob_sha1": "f25dad87623af3d3b9718df42d0129562e42673e",
+          "pe_version": "1.0.1.39157",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "04a455bb7c01af1adc630f3be41bd85689b6a8565199e25b09696240750f6d1e",
+          "dll_size_bytes": 9284304,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2024-12-09T11:23:42.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d516acbf76868ed2383195e9a01f9d1307bc28feb4a57d070b2d9838503ebb9a.dll.zst",
+            "zst_sha256": "d516acbf76868ed2383195e9a01f9d1307bc28feb4a57d070b2d9838503ebb9a",
+            "zst_size_bytes": 1080516,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "docs/license.md",
+          "git_blob_sha1": "fe052b85e6434ea6ba57d80ce9d8efbd0b3637d1",
+          "sha256": "24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc",
+          "size_bytes": 1119,
+          "object_key": "libraries/legal/sha256/24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 217334109,
+      "tag": "v1.1.4",
+      "version": "1.1.4",
+      "label": null,
+      "published_at": "2025-05-08T14:18:31.000Z",
+      "tag_ref_sha": "c6efa6bf7f2027b3ec94f28578bb5965eabb9e55",
+      "commit_sha": "c6efa6bf7f2027b3ec94f28578bb5965eabb9e55",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_dx12",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_dx12.dll",
+          "git_blob_sha1": "9bd0fbbf687888cceafd8ffb4ec3c91d66939a26",
+          "pe_version": "1.0.1.41314",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6",
+          "dll_size_bytes": 6675664,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-05-07T13:17:26.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e8bdd23e1d04131efb41ff0e3a88c59adc6f1f45bb1c342cf9d1117f0b84a5c6.dll.zst",
+            "zst_sha256": "e8bdd23e1d04131efb41ff0e3a88c59adc6f1f45bb1c342cf9d1117f0b84a5c6",
+            "zst_size_bytes": 1327601,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_vk",
+          "architecture": "X64",
+          "repository_path": "PrebuiltSignedDLL/amd_fidelityfx_vk.dll",
+          "git_blob_sha1": "6efacc57a9ec40aa49067535df402e371730e996",
+          "pe_version": "1.0.1.41314",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "a1624cc4238fef046f30c4d80ce3f47be63fc5f5373f49e3ee9edb9960f54c78",
+          "dll_size_bytes": 9332432,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-05-07T13:17:37.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/4eeeaaa3a60ca35cc70876a347bb57429065fbb90050785a40f7641743031c61.dll.zst",
+            "zst_sha256": "4eeeaaa3a60ca35cc70876a347bb57429065fbb90050785a40f7641743031c61",
+            "zst_size_bytes": 1085444,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "docs/license.md",
+          "git_blob_sha1": "fe052b85e6434ea6ba57d80ce9d8efbd0b3637d1",
+          "sha256": "24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc",
+          "size_bytes": 1119,
+          "object_key": "libraries/legal/sha256/24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 241278149,
+      "tag": "v2.0.0",
+      "version": "2.0.0",
+      "label": null,
+      "published_at": "2025-08-20T17:10:30.000Z",
+      "tag_ref_sha": "f4c1da8e92f3fe563b5c28c44e6267ce6b6b8eb2",
+      "commit_sha": "f4c1da8e92f3fe563b5c28c44e6267ce6b6b8eb2",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_framegeneration_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_framegeneration_dx12.dll",
+          "git_blob_sha1": "c1375d709c3ae0ef0962488591ddda3c6c97f7b0",
+          "pe_version": "3.1.5.44888",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
+          "dll_size_bytes": 1090832,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-08-07T13:39:20.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/01951b75a3562dac01f51172b1195669782e3bab8b2c15481450576ff6274f51.dll.zst",
+            "zst_sha256": "01951b75a3562dac01f51172b1195669782e3bab8b2c15481450576ff6274f51",
+            "zst_size_bytes": 276565,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_loader_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_loader_dx12.dll",
+          "git_blob_sha1": "c8328190d8cfe8e26c5affc8fe93a5e49847821e",
+          "pe_version": "1.0.2.44888",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
+          "dll_size_bytes": 24840,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-08-07T13:37:36.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/cd28d5a68ed96aa7a96754904575d3e7ebbc3fe89b57f9abe97fefe70b3d1da2.dll.zst",
+            "zst_sha256": "cd28d5a68ed96aa7a96754904575d3e7ebbc3fe89b57f9abe97fefe70b3d1da2",
+            "zst_size_bytes": 15326,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_upscaler_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_upscaler_dx12.dll",
+          "git_blob_sha1": "4bd446fd7b91f9f6072555b1907c7c49991c4160",
+          "pe_version": "4.0.2.44888",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
+          "dll_size_bytes": 13138192,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-08-07T13:36:08.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/691d3275c96aa48c7935e9db7f6d25dc2961204c427224827912d71c7ca04cd0.dll.zst",
+            "zst_sha256": "691d3275c96aa48c7935e9db7f6d25dc2961204c427224827912d71c7ca04cd0",
+            "zst_size_bytes": 2690165,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "docs/license.md",
+          "git_blob_sha1": "03d3b5379ef7361fcb49b799919846730e49a4a2",
+          "sha256": "be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b",
+          "size_bytes": 1119,
+          "object_key": "libraries/legal/sha256/be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 269132294,
+      "tag": "v2.1.0",
+      "version": "2.1.0",
+      "label": null,
+      "published_at": "2025-12-10T13:59:22.000Z",
+      "tag_ref_sha": "0836aa7f24058b3f8d035a88c0774457d78fc98e",
+      "commit_sha": "0836aa7f24058b3f8d035a88c0774457d78fc98e",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_denoiser_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_denoiser_dx12.dll",
+          "git_blob_sha1": "6ba6d0596c1b61e55543b2312ad62e9b4249e849",
+          "pe_version": "1.0.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
+          "dll_size_bytes": 3699472,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:36:53.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/60b60f8314ea657e1a1452bcc9f49d03f96ceea9e3bfb59dd6625d7cdb45c78a.dll.zst",
+            "zst_sha256": "60b60f8314ea657e1a1452bcc9f49d03f96ceea9e3bfb59dd6625d7cdb45c78a",
+            "zst_size_bytes": 1275637,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_framegeneration_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_framegeneration_dx12.dll",
+          "git_blob_sha1": "9251300bdaafc18cda88ffdcb2095490c0b80259",
+          "pe_version": "4.0.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
+          "dll_size_bytes": 38245640,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:36:32.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8513d9884756a7312fcf81f88089d937ede5801511d1093de9c622d527eccecd.dll.zst",
+            "zst_sha256": "8513d9884756a7312fcf81f88089d937ede5801511d1093de9c622d527eccecd",
+            "zst_size_bytes": 23029914,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_loader_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_loader_dx12.dll",
+          "git_blob_sha1": "650499e7ac4c33cc80642783ec8202406f1fe690",
+          "pe_version": "2.1.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
+          "dll_size_bytes": 25864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:35:49.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2a59b642fe8065de7d1e2547caf963899aa0493934e3d919c3c1ed104f04c8d1.dll.zst",
+            "zst_sha256": "2a59b642fe8065de7d1e2547caf963899aa0493934e3d919c3c1ed104f04c8d1",
+            "zst_size_bytes": 15503,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_radiancecache_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_radiancecache_dx12.dll",
+          "git_blob_sha1": "ea687ad4711bbc82dcf3114020366a1abcc6b729",
+          "pe_version": "0.9.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
+          "dll_size_bytes": 795920,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:35:42.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6eb5d7296096fe3c7661c85aca41bd0da77edd2f3f8848d1696da65607caa10e.dll.zst",
+            "zst_sha256": "6eb5d7296096fe3c7661c85aca41bd0da77edd2f3f8848d1696da65607caa10e",
+            "zst_size_bytes": 427522,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_upscaler_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_upscaler_dx12.dll",
+          "git_blob_sha1": "f8c7c6e854d754195c4f86b4c6007ef9a822fa76",
+          "pe_version": "4.0.3.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
+          "dll_size_bytes": 22348552,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:34:59.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/adfa847aa06a20c4d8372b63b9f427ce46a2d8698e598c197bb0f59fad94eb54.dll.zst",
+            "zst_sha256": "adfa847aa06a20c4d8372b63b9f427ce46a2d8698e598c197bb0f59fad94eb54",
+            "zst_size_bytes": 3647505,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "Kits/FidelityFX/docs/license.md",
+          "git_blob_sha1": "5ff58e4fbdef830ce27cde3f9235bab04b7fc70e",
+          "sha256": "b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966",
+          "size_bytes": 61309,
+          "object_key": "libraries/legal/sha256/b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 288213112,
+      "tag": "v2.1.1",
+      "version": "2.1.1",
+      "label": null,
+      "published_at": "2026-02-23T12:51:48.000Z",
+      "tag_ref_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0",
+      "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_denoiser_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_denoiser_dx12.dll",
+          "git_blob_sha1": "6ba6d0596c1b61e55543b2312ad62e9b4249e849",
+          "pe_version": "1.0.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
+          "dll_size_bytes": 3699472,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:36:53.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/60b60f8314ea657e1a1452bcc9f49d03f96ceea9e3bfb59dd6625d7cdb45c78a.dll.zst",
+            "zst_sha256": "60b60f8314ea657e1a1452bcc9f49d03f96ceea9e3bfb59dd6625d7cdb45c78a",
+            "zst_size_bytes": 1275637,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_framegeneration_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_framegeneration_dx12.dll",
+          "git_blob_sha1": "9251300bdaafc18cda88ffdcb2095490c0b80259",
+          "pe_version": "4.0.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
+          "dll_size_bytes": 38245640,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:36:32.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8513d9884756a7312fcf81f88089d937ede5801511d1093de9c622d527eccecd.dll.zst",
+            "zst_sha256": "8513d9884756a7312fcf81f88089d937ede5801511d1093de9c622d527eccecd",
+            "zst_size_bytes": 23029914,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_loader_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_loader_dx12.dll",
+          "git_blob_sha1": "650499e7ac4c33cc80642783ec8202406f1fe690",
+          "pe_version": "2.1.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
+          "dll_size_bytes": 25864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:35:49.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2a59b642fe8065de7d1e2547caf963899aa0493934e3d919c3c1ed104f04c8d1.dll.zst",
+            "zst_sha256": "2a59b642fe8065de7d1e2547caf963899aa0493934e3d919c3c1ed104f04c8d1",
+            "zst_size_bytes": 15503,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_radiancecache_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_radiancecache_dx12.dll",
+          "git_blob_sha1": "ea687ad4711bbc82dcf3114020366a1abcc6b729",
+          "pe_version": "0.9.0.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
+          "dll_size_bytes": 795920,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:35:42.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6eb5d7296096fe3c7661c85aca41bd0da77edd2f3f8848d1696da65607caa10e.dll.zst",
+            "zst_sha256": "6eb5d7296096fe3c7661c85aca41bd0da77edd2f3f8848d1696da65607caa10e",
+            "zst_size_bytes": 427522,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_upscaler_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_upscaler_dx12.dll",
+          "git_blob_sha1": "f8c7c6e854d754195c4f86b4c6007ef9a822fa76",
+          "pe_version": "4.0.3.604",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
+          "dll_size_bytes": 22348552,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2025-12-09T10:34:59.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/adfa847aa06a20c4d8372b63b9f427ce46a2d8698e598c197bb0f59fad94eb54.dll.zst",
+            "zst_sha256": "adfa847aa06a20c4d8372b63b9f427ce46a2d8698e598c197bb0f59fad94eb54",
+            "zst_size_bytes": 3647505,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "Kits/FidelityFX/docs/license.md",
+          "git_blob_sha1": "5ff58e4fbdef830ce27cde3f9235bab04b7fc70e",
+          "sha256": "b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966",
+          "size_bytes": 61309,
+          "object_key": "libraries/legal/sha256/b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 299372412,
+      "tag": "v2.2.0",
+      "version": "2.2.0",
+      "label": null,
+      "published_at": "2026-03-23T13:15:10.000Z",
+      "tag_ref_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a",
+      "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_denoiser_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_denoiser_dx12.dll",
+          "git_blob_sha1": "2899b8f79f61bc98dad5107ed5b80c9b1ad561fa",
+          "pe_version": "1.1",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
+          "dll_size_bytes": 3633936,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-03-20T16:18:41.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e2abac75b5ea520405cca3bdfaf8e4f79765a2b54db268a88a5cf9ebc23ca4e6.dll.zst",
+            "zst_sha256": "e2abac75b5ea520405cca3bdfaf8e4f79765a2b54db268a88a5cf9ebc23ca4e6",
+            "zst_size_bytes": 1365621,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_framegeneration_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_framegeneration_dx12.dll",
+          "git_blob_sha1": "9af16737a5eb54a2e81de16514709d2b3824eab2",
+          "pe_version": "4",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
+          "dll_size_bytes": 38246160,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-03-20T16:18:43.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6c0c5f385c88114846a143572f22bdab007e9adf94b27957495ebdb998879c28.dll.zst",
+            "zst_sha256": "6c0c5f385c88114846a143572f22bdab007e9adf94b27957495ebdb998879c28",
+            "zst_size_bytes": 23031751,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_loader_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_loader_dx12.dll",
+          "git_blob_sha1": "62fc4835552c15089424cb63db0384d2a75c8e77",
+          "pe_version": "2.2",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
+          "dll_size_bytes": 25864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-03-20T16:18:46.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/56c5ffcf85ae7d9cbdba819404d1530e235cb9c84a7b24cdeff56b15fb89e35f.dll.zst",
+            "zst_sha256": "56c5ffcf85ae7d9cbdba819404d1530e235cb9c84a7b24cdeff56b15fb89e35f",
+            "zst_size_bytes": 15532,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_radiancecache_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_radiancecache_dx12.dll",
+          "git_blob_sha1": "666169fa28ff5b2c423985605b1b59f2b2b60129",
+          "pe_version": "0.9",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
+          "dll_size_bytes": 795912,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-03-20T16:18:48.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/e28ddf9bc857ff72f6d46e308a22d95080e16f3164519e15abca859a52fb2ac9.dll.zst",
+            "zst_sha256": "e28ddf9bc857ff72f6d46e308a22d95080e16f3164519e15abca859a52fb2ac9",
+            "zst_size_bytes": 427360,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_upscaler_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_upscaler_dx12.dll",
+          "git_blob_sha1": "b513cb19666d496bd5f82ead01646cd461f2d69f",
+          "pe_version": "4.1",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+          "dll_size_bytes": 15605520,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-03-20T16:18:50.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/82c4aef71c6499a9967cd92752ade78bf3475b15ea01509ea52eb67e8d399cf7.dll.zst",
+            "zst_sha256": "82c4aef71c6499a9967cd92752ade78bf3475b15ea01509ea52eb67e8d399cf7",
+            "zst_size_bytes": 2702832,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "Kits/FidelityFX/docs/license.md",
+          "git_blob_sha1": "ec8415fff429ca4282ef142f1d9d3513565b817a",
+          "sha256": "d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d",
+          "size_bytes": 60975,
+          "object_key": "libraries/legal/sha256/d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 342927928,
+      "tag": "v2.3.0",
+      "version": "2.3.0",
+      "label": null,
+      "published_at": "2026-06-24T13:00:13.000Z",
+      "tag_ref_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3",
+      "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3",
+      "disposition": "imported",
+      "artifacts": [
+        {
+          "component": "amd_fidelityfx_denoiser_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_denoiser_dx12.dll",
+          "git_blob_sha1": "40aabaae229139298d1858b4310bae9b22f36d94",
+          "pe_version": "1.2.0.2740",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
+          "dll_size_bytes": 13782280,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-06-11T13:24:02.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/548029be760d1802845a801bcfe6e530515668ba2b79c1f40b08f5651203eeb3.dll.zst",
+            "zst_sha256": "548029be760d1802845a801bcfe6e530515668ba2b79c1f40b08f5651203eeb3",
+            "zst_size_bytes": 2841188,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_framegeneration_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_framegeneration_dx12.dll",
+          "git_blob_sha1": "1a06b72761086cb5561f8984ce0dc6a24a370e9e",
+          "pe_version": "4.0.1.2740",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
+          "dll_size_bytes": 40085776,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-06-11T13:24:06.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/3cdf5971b1f2e53df9daac6a69b1aff4bb32dcfae1efeeeb289dd11a4f9c6140.dll.zst",
+            "zst_sha256": "3cdf5971b1f2e53df9daac6a69b1aff4bb32dcfae1efeeeb289dd11a4f9c6140",
+            "zst_size_bytes": 24873427,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_loader_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_loader_dx12.dll",
+          "git_blob_sha1": "144916ba922c2a66149ad5cb1037a4f86d2b6491",
+          "pe_version": "2.3.0.2740",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
+          "dll_size_bytes": 26376,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-06-11T13:24:11.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9094d129b4fffcbb5d0b9270935343da85a94f48c47e1956e4b83e0362c1326b.dll.zst",
+            "zst_sha256": "9094d129b4fffcbb5d0b9270935343da85a94f48c47e1956e4b83e0362c1326b",
+            "zst_size_bytes": 15659,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_radiancecache_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_radiancecache_dx12.dll",
+          "git_blob_sha1": "16286736ffe8500550f28d1944b29bf08e50e12d",
+          "pe_version": "0.9.0.2740",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
+          "dll_size_bytes": 798992,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-06-11T13:24:16.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2681ac9d5e41b9d73896a73fe1ef1f0bccb0a03e11a2fdd36d026a163564f774.dll.zst",
+            "zst_sha256": "2681ac9d5e41b9d73896a73fe1ef1f0bccb0a03e11a2fdd36d026a163564f774",
+            "zst_size_bytes": 428919,
+            "compression_level": 12
+          }
+        },
+        {
+          "component": "amd_fidelityfx_upscaler_dx12",
+          "architecture": "X64",
+          "repository_path": "Kits/FidelityFX/signedbin/amd_fidelityfx_upscaler_dx12.dll",
+          "git_blob_sha1": "199de3a500a1d153b7e73fa5ca0adbd2a4ac1229",
+          "pe_version": "4.1.1.2740",
+          "pe_named_exports": [
+            "ffxConfigure",
+            "ffxCreateContext",
+            "ffxDestroyContext",
+            "ffxDispatch",
+            "ffxQuery"
+          ],
+          "dll_sha256": "d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
+          "dll_size_bytes": 28761864,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+            "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+            "signed_at": "2026-06-11T13:24:22.000Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fce41c3905fa874233cdd4c868a432d96af15cabf14ccd425d35ba2cb4463ad5.dll.zst",
+            "zst_sha256": "fce41c3905fa874233cdd4c868a432d96af15cabf14ccd425d35ba2cb4463ad5",
+            "zst_size_bytes": 4341247,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "notice",
+          "title": "AMD FidelityFX SDK Third-Party Notices",
+          "format": "text",
+          "file_name": "THIRD-PARTY-NOTICES.md",
+          "repository_path": "3rdpartynotice.md",
+          "git_blob_sha1": "2c2061077425a8590b8c066ae6c6addf27d4e172",
+          "sha256": "94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27",
+          "size_bytes": 2441,
+          "object_key": "libraries/legal/sha256/94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27.txt"
+        },
+        {
+          "kind": "license",
+          "title": "AMD FidelityFX SDK License",
+          "format": "text",
+          "file_name": "LICENSE.md",
+          "repository_path": "Kits/FidelityFX/docs/license.md",
+          "git_blob_sha1": "a80304f4edb2a86ae349e39872ea9c87a39c6f97",
+          "sha256": "6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+          "size_bytes": 60891,
+          "object_key": "libraries/legal/sha256/6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963.txt"
+        }
+      ]
+    },
+    {
+      "release_id": 133929343,
+      "tag": "fsr3-v3.0.3",
+      "version": "3.0.3",
+      "label": null,
+      "published_at": "2023-12-14T13:46:55.000Z",
+      "tag_ref_sha": "a0632abf1350bb64c098573d84c42f053f053a6e",
+      "commit_sha": "a0632abf1350bb64c098573d84c42f053f053a6e",
+      "disposition": "excluded",
+      "exclusion_reason": "release commit does not contain distributable FidelityFX runtime DLLs"
+    },
+    {
+      "release_id": 146802889,
+      "tag": "fsr3-v3.0.4",
+      "version": "3.0.4",
+      "label": null,
+      "published_at": "2024-03-15T15:33:07.000Z",
+      "tag_ref_sha": "55ff22bb6981a9b9c087b9465101769fc0acd447",
+      "commit_sha": "55ff22bb6981a9b9c087b9465101769fc0acd447",
+      "disposition": "excluded",
+      "exclusion_reason": "release commit does not contain distributable FidelityFX runtime DLLs"
+    }
+  ]
+}

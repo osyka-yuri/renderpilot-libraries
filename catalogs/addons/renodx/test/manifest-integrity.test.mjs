@@ -22,8 +22,24 @@ test("manifest integrity - committed RenoDX v1 document is well-formed and inter
     "Manifest should have at least one engine profile",
   );
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 835);
+  assert.equal(manifest.games.length, 836);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
+
+  const spooky = manifest.games.find(
+    (title) => title.id === "spooky-s-jump-scare-mansion-hd-renovation",
+  );
+  assert.ok(spooky, "Spooky's HD Renovation must be present in the manifest");
+  assert.equal(spooky.architecture, "X64");
+  assert.equal(spooky.status, "working");
+  assert.equal(spooky.addon.slug, "unityengine");
+  assert.ok(
+    spooky.match.some((rule) => rule.kind === "steam_appid" && rule.value === "577690"),
+  );
+  assert.ok(
+    spooky.match.some(
+      (rule) => rule.kind === "exe_name" && rule.value === "SpookyUnity.exe",
+    ),
+  );
 
   const scorn = manifest.games.find((title) => title.id === "scorn");
   assert.ok(scorn, "Scorn must be present in the generated manifest");

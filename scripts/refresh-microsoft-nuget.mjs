@@ -7,15 +7,21 @@ import path from "node:path";
 import { promisify } from "node:util";
 
 import { microsoftLibraryVendor, repoRoot } from "./catalog.mjs";
-import { errorMessage, mapConcurrent } from "./lib/common.mjs";
+import { runCliMain } from "./lib/cli-main.mjs";
+import { UsageError, mapConcurrent } from "./lib/common.mjs";
 import { appendGithubOutput } from "./lib/github-actions.mjs";
 import { fetchWithTimeout } from "./lib/http.mjs";
 import { sha256Hex } from "./lib/hash.mjs";
 import { readJsonFileAsync, writeJsonFileAtomic } from "./lib/json.mjs";
+import { assertLegalDocumentPayload } from "./lib/library-catalog.mjs";
 import {
+  canonicalAuthenticodeSignature,
   canonicalPeVersion,
   inspectPeFiles,
   persistCompressedDll,
+  persistLegalDocument,
+  reconcileLockedAuthenticodeSignature,
+  writeImmutableObject,
 } from "./lib/library-artifact-io.mjs";
 import {
   assertLockBackfillsSignatures,
@@ -30,14 +36,15 @@ import {
   sortLock,
   verifyPackageSha512,
 } from "./lib/microsoft-nuget.mjs";
+import { parseRefreshArgs } from "./lib/refresh-cli.mjs";
 
 const execFileAsync = promisify(execFile);
 const CONFIG_FILE = path.join(repoRoot, microsoftLibraryVendor.configFile);
 const LOCK_FILE = path.join(repoRoot, microsoftLibraryVendor.lockFile);
 const CDN_DIR = path.join(repoRoot, "cdn");
+const PACKAGE_CACHE_DIR = path.join(repoRoot, "scripts", ".cache", "nuget");
 
-async function main() {
-  const options = parseArgs(process.argv.slice(2));
+async function main(options) {
   const [config, lock] = await Promise.all([
     readJsonFileAsync(CONFIG_FILE),
     readJsonFileAsync(LOCK_FILE),
@@ -48,8 +55,9 @@ async function main() {
   const products = options.product
     ? config.products.filter((product) => product.key === options.product)
     : config.products;
-  if (products.length === 0)
-    throw new Error(`unknown Microsoft product ${options.product}`);
+  if (products.length === 0) {
+    throw new UsageError(`unknown Microsoft product ${options.product}`);
+  }
 
   const missing = [];
   const upstreamByPackage = new Map();
@@ -78,7 +86,7 @@ async function main() {
     status: missing.length === 0 ? "current" : "update_available",
     count: String(missing.length),
   });
-  if (options.materializeLocked) {
+  if (options.mode === "materialize-locked") {
     await materializeLockedReleases(
       products,
       lock,
@@ -88,7 +96,7 @@ async function main() {
     );
     return;
   }
-  if (options.backfillSignatures) {
+  if (options.mode === "backfill-signatures") {
     if (missing.length > 0) {
       throw new Error(
         "signature backfill requires a current lock; import missing releases with --write first",
@@ -108,7 +116,7 @@ async function main() {
     return;
   }
   console.log(`Missing listed stable releases: ${missing.length}`);
-  if (!options.write) {
+  if (options.mode !== "write") {
     for (const { product, release } of missing) {
       console.log(`  ${product.key}: ${release.packageVersion}`);
     }
@@ -148,13 +156,11 @@ async function importRelease(
   }
   const identity = `${release.packageId} ${release.packageVersion}`;
   const expectedSha512 = await fetchPackageSha512(release.catalogEntry);
-  const response = await fetchWithTimeout(release.packageContent, {
-    timeoutMs: 120_000,
-  });
-  if (!response.ok)
-    throw new Error(`${identity}: nupkg download failed (${response.status})`);
-  const nupkg = Buffer.from(await response.arrayBuffer());
-  verifyPackageSha512(nupkg, expectedSha512, identity);
+  const nupkg = await readOrDownloadPackage(
+    release.packageContent,
+    expectedSha512,
+    identity,
+  );
 
   const temporary = await mkdtemp(path.join(tmpdir(), "renderpilot-nuget-"));
   try {
@@ -165,10 +171,12 @@ async function importRelease(
     const { stdout } = await execFileAsync("tar", ["-tf", packageFile], {
       maxBuffer: 16 * 1024 * 1024,
     });
-    const selections = selectPackageFiles(stdout.split(/\r?\n/).filter(Boolean), product);
+    const packagePaths = stdout.split(/\r?\n/).filter(Boolean);
+    const selections = selectPackageFiles(packagePaths, product);
     const selected = selections.flatMap(({ architecture, members }) =>
       members.map((member) => ({ architecture, member })),
     );
+    const legalSelections = selectLegalDocuments(packagePaths, product, identity);
     await execFileAsync("tar", [
       "-xf",
       packageFile,
@@ -176,15 +184,22 @@ async function importRelease(
       extractRoot,
       "--",
       ...selected.map(({ member }) => member.package_path),
+      ...legalSelections.map(({ package_path }) => package_path),
     ]);
     const paths = selected.map(({ member }) =>
       pathForPackageMember(extractRoot, member.package_path),
     );
-    const extractedStats = await Promise.all(paths.map((filePath) => lstat(filePath)));
+    const legalPaths = legalSelections.map(({ package_path }) =>
+      pathForPackageMember(extractRoot, package_path),
+    );
+    const extractedPaths = [...paths, ...legalPaths];
+    const extractedStats = await Promise.all(
+      extractedPaths.map((filePath) => lstat(filePath)),
+    );
     for (const [index, stats] of extractedStats.entries()) {
       if (!stats.isFile() || stats.isSymbolicLink()) {
         throw new Error(
-          `${identity}: selected package member is not a regular file: ${paths[index]}`,
+          `${identity}: selected package member is not a regular file: ${extractedPaths[index]}`,
         );
       }
     }
@@ -209,7 +224,7 @@ async function importRelease(
         pe_version: canonicalPeVersion(inspection.pe_version),
         dll_sha256: dllSha256,
         dll_size_bytes: dll.length,
-        signature: inspection.signature,
+        signature: canonicalAuthenticodeSignature(inspection.signature),
         r2: null,
       };
       const expectedArtifact = expectedRelease?.artifacts.find(
@@ -220,6 +235,16 @@ async function importRelease(
       if (expectedRelease && !expectedArtifact) {
         throw new Error(
           `${identity}: locked artifact ${artifact.architecture}/${artifact.library_id} is missing`,
+        );
+      }
+      if (expectedArtifact) {
+        artifact.signature = reconcileLockedAuthenticodeSignature(
+          artifact.signature,
+          expectedArtifact.signature,
+          {
+            allowTimestampBackfill: mode === "signature-backfill",
+            context: `${identity}/${artifact.architecture}/${artifact.library_id}`,
+          },
         );
       }
 
@@ -235,6 +260,44 @@ async function importRelease(
       artifacts.push(artifact);
     }
 
+    const legalDocuments = [];
+    for (const [index, configured] of legalSelections.entries()) {
+      const bytes = await readFile(legalPaths[index]);
+      assertLegalDocumentPayload(
+        bytes,
+        configured.format,
+        `${identity}/${configured.package_path}`,
+      );
+      const sha256 = sha256Hex(bytes);
+      const expectedDocument = expectedRelease?.legal_documents?.find(
+        (document) => document.package_path === configured.package_path,
+      );
+      if (
+        expectedDocument &&
+        (expectedDocument.sha256 !== sha256 || expectedDocument.size_bytes !== bytes.length)
+      ) {
+        throw new Error(
+          `${identity}: immutable legal document ${configured.package_path} changed`,
+        );
+      }
+      const persisted =
+        mode === "signature-backfill" && expectedDocument
+          ? {
+              object_key: expectedDocument.object_key,
+              sha256: expectedDocument.sha256,
+              size_bytes: expectedDocument.size_bytes,
+            }
+          : await persistLegalDocument(bytes, configured.format, {
+              cdnDirectory: CDN_DIR,
+            });
+      legalDocuments.push({
+        ...configured,
+        sha256: persisted.sha256,
+        size_bytes: persisted.size_bytes,
+        object_key: persisted.object_key,
+      });
+    }
+
     const imported = {
       product: product.key,
       package_id: release.packageId,
@@ -242,6 +305,7 @@ async function importRelease(
       package_sha512: expectedSha512,
       published_at: release.publishedAt,
       artifacts,
+      legal_documents: legalDocuments,
     };
     if (expectedRelease) {
       if (mode === "signature-backfill") {
@@ -252,6 +316,43 @@ async function importRelease(
   } finally {
     await rm(temporary, { recursive: true, force: true });
   }
+}
+
+async function readOrDownloadPackage(url, expectedSha512, identity) {
+  const cacheKey = sha256Hex(Buffer.from(expectedSha512, "utf8"));
+  const cacheFile = path.join(PACKAGE_CACHE_DIR, `${cacheKey}.nupkg`);
+  try {
+    const cached = await readFile(cacheFile);
+    verifyPackageSha512(cached, expectedSha512, `${identity} cached nupkg`);
+    return cached;
+  } catch (error) {
+    if (error?.code !== "ENOENT") throw error;
+  }
+  const response = await fetchWithTimeout(url, { timeoutMs: 10 * 60_000 });
+  if (!response.ok) {
+    throw new Error(`${identity}: nupkg download failed (${response.status})`);
+  }
+  const nupkg = Buffer.from(await response.arrayBuffer());
+  verifyPackageSha512(nupkg, expectedSha512, identity);
+  await writeImmutableObject(cacheFile, nupkg);
+  return nupkg;
+}
+
+function selectLegalDocuments(packagePaths, product, identity) {
+  const normalized = packagePaths.map((value) =>
+    value.replaceAll("\\", "/").replace(/^\.\//u, ""),
+  );
+  return product.legal_documents.map((document) => {
+    const matches = normalized.filter(
+      (candidate) => candidate.toLowerCase() === document.package_path.toLowerCase(),
+    );
+    if (matches.length !== 1 || matches[0] !== document.package_path) {
+      throw new Error(
+        `${identity}: expected exact legal document path ${document.package_path}`,
+      );
+    }
+    return { ...document };
+  });
 }
 
 async function backfillLockedSignatureMetadata(
@@ -273,7 +374,7 @@ async function backfillLockedSignatureMetadata(
   }
 
   let completed = 0;
-  let persistChain = Promise.resolve();
+  const rebuiltByRelease = new Map();
   await mapConcurrent(targets, 4, async (expectedRelease) => {
     const product = productByKey.get(expectedRelease.product);
     const release = upstreamByPackage
@@ -292,24 +393,28 @@ async function backfillLockedSignatureMetadata(
         mode: "signature-backfill",
       },
     );
-    const index = lock.releases.indexOf(expectedRelease);
-    if (index < 0) {
-      throw new Error(
-        `${expectedRelease.package_id} ${expectedRelease.package_version}: concurrent lock update lost its target`,
-      );
-    }
-    lock.releases[index] = enriched;
-    sortLock(lock);
-    assertLockSemantics(lock, config);
-    assertLockBackfillsSignatures(lock, immutableBaseline);
-    persistChain = persistChain.then(() => writeJsonFileAtomic(LOCK_FILE, lock));
-    await persistChain;
+    rebuiltByRelease.set(expectedRelease, enriched);
 
     completed += 1;
     console.log(
       `[${completed}/${targets.length}] verified signatures ${release.packageId} ${release.packageVersion}`,
     );
   });
+
+  for (const expectedRelease of targets) {
+    const index = lock.releases.indexOf(expectedRelease);
+    const enriched = rebuiltByRelease.get(expectedRelease);
+    if (index < 0 || !enriched) {
+      throw new Error(
+        `${expectedRelease.package_id} ${expectedRelease.package_version}: rebuilt signature metadata was lost`,
+      );
+    }
+    lock.releases[index] = enriched;
+  }
+  sortLock(lock);
+  assertLockSemantics(lock, config);
+  assertLockBackfillsSignatures(lock, immutableBaseline);
+  await writeJsonFileAtomic(LOCK_FILE, lock);
 
   const remaining = lock.releases
     .filter((release) => productByKey.has(release.product))
@@ -379,42 +484,10 @@ async function materializeLockedReleases(
 }
 
 function parseArgs(argv) {
-  const options = {
-    write: false,
-    materializeLocked: false,
-    backfillSignatures: false,
-    product: null,
-  };
-  for (let index = 0; index < argv.length; index += 1) {
-    const argument = argv[index];
-    if (argument === "--write") options.write = true;
-    else if (argument === "--check") options.write = false;
-    else if (argument === "--materialize-locked") options.materializeLocked = true;
-    else if (argument === "--backfill-signatures") options.backfillSignatures = true;
-    else if (argument.startsWith("--product=")) {
-      const value = argument.slice(10);
-      if (!value.trim()) throw new Error("--product requires a non-empty product id");
-      options.product = value;
-    } else if (argument === "--product") {
-      const value = argv[++index];
-      if (!value || value.startsWith("--")) {
-        throw new Error("--product requires a non-empty product id");
-      }
-      options.product = value;
-    } else throw new Error(`unknown argument ${argument}`);
-  }
-  if (
-    [options.write, options.materializeLocked, options.backfillSignatures].filter(Boolean)
-      .length > 1
-  ) {
-    throw new Error(
-      "--write, --materialize-locked, and --backfill-signatures are mutually exclusive",
-    );
-  }
-  return options;
+  return parseRefreshArgs(argv, {
+    allowBackfillSignatures: true,
+    allowProduct: true,
+  });
 }
 
-main().catch((error) => {
-  console.error(errorMessage(error));
-  process.exitCode = 1;
-});
+runCliMain({ parse: parseArgs, main });

@@ -6,7 +6,7 @@
   "required": ["schema_version", "releases"],
   "additionalProperties": false,
   "properties": {
-    "schema_version": { "type": "integer", "const": 2 },
+    "schema_version": { "type": "integer", "const": 3 },
     "releases": {
       "type": "array",
       "items": { "$ref": "#/$defs/release" }
@@ -21,7 +21,8 @@
         "package_version",
         "package_sha512",
         "published_at",
-        "artifacts"
+        "artifacts",
+        "legal_documents"
       ],
       "additionalProperties": false,
       "properties": {
@@ -43,6 +44,42 @@
           "type": "array",
           "minItems": 1,
           "items": { "$ref": "#/$defs/artifact" }
+        },
+        "legal_documents": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/legalDocument" }
+        }
+      }
+    },
+    "legalDocument": {
+      "type": "object",
+      "required": [
+        "kind",
+        "title",
+        "format",
+        "file_name",
+        "package_path",
+        "sha256",
+        "size_bytes",
+        "object_key"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "enum": ["license", "notice"] },
+        "title": { "type": "string", "minLength": 1, "maxLength": 256 },
+        "format": { "enum": ["text", "pdf"] },
+        "file_name": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9._-]+\\.(?:md|pdf|txt)$"
+        },
+        "package_path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "size_bytes": { "type": "integer", "minimum": 1, "maximum": 16777216 },
+        "object_key": {
+          "type": "string",
+          "pattern": "^libraries/legal/sha256/[0-9a-f]{64}\\.(?:pdf|txt)$"
         }
       }
     },

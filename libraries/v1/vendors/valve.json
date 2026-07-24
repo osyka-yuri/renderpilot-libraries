@@ -5,6 +5,20 @@
     "display_name": "Valve"
   },
   "generated_at": "2026-03-27T22:11:11.000Z",
+  "legal_documents": [
+    {
+      "legal_document_id": "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad",
+      "kind": "license",
+      "title": "OpenVR SDK License",
+      "format": "text",
+      "file_name": "LICENSE.txt",
+      "content": {
+        "sha256": "f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad",
+        "size_bytes": 1488
+      },
+      "object_key": "libraries/legal/sha256/f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad.txt"
+    }
+  ],
   "artifacts": [
     {
       "artifact_id": "sha256:0207fc8cec590486f7b9f7f50d42479ffd834f360bf7eab535476ba9f675f8ac",
@@ -51,7 +65,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-03-27T23:19:02.0000000Z"
+        "signed_at": "2019-03-27T23:19:02.000Z"
       }
     },
     {
@@ -98,7 +112,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-07-27T01:32:40.0000000Z"
+        "signed_at": "2018-07-27T01:32:40.000Z"
       }
     },
     {
@@ -145,7 +159,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2018-10-15T21:07:38.0000000Z"
+        "signed_at": "2018-10-15T21:07:38.000Z"
       }
     },
     {
@@ -468,7 +482,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2022-08-19T19:04:21.0000000Z"
+        "signed_at": "2022-08-19T19:04:21.000Z"
       }
     },
     {
@@ -507,7 +521,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-03-09T04:03:56.0000000Z"
+        "signed_at": "2016-03-09T04:03:56.000Z"
       }
     },
     {
@@ -546,7 +560,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-03-03T21:15:40.0000000Z"
+        "signed_at": "2016-03-03T21:15:40.000Z"
       }
     },
     {
@@ -777,7 +791,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-12-05T03:40:29.0000000Z"
+        "signed_at": "2017-12-05T03:40:29.000Z"
       }
     },
     {
@@ -821,7 +835,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-06-13T01:03:36.0000000Z"
+        "signed_at": "2017-06-13T01:03:36.000Z"
       }
     },
     {
@@ -864,7 +878,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-10-04T23:33:14.0000000Z"
+        "signed_at": "2016-10-04T23:33:14.000Z"
       }
     },
     {
@@ -913,7 +927,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-06-28T23:46:25.0000000Z"
+        "signed_at": "2019-06-28T23:46:25.000Z"
       }
     },
     {
@@ -952,7 +966,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-04-21T17:07:32.0000000Z"
+        "signed_at": "2016-04-21T17:07:32.000Z"
       }
     },
     {
@@ -1557,7 +1571,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-06-08T23:56:03.0000000Z"
+        "signed_at": "2016-06-08T23:56:03.000Z"
       }
     },
     {
@@ -1605,7 +1619,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-01-30T19:47:55.0000000Z"
+        "signed_at": "2019-01-30T19:47:55.000Z"
       }
     },
     {
@@ -1653,7 +1667,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-01-09T00:55:35.0000000Z"
+        "signed_at": "2018-01-09T00:55:35.000Z"
       }
     },
     {
@@ -1890,7 +1904,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-09-11T22:17:41.0000000Z"
+        "signed_at": "2019-09-11T22:17:41.000Z"
       }
     },
     {
@@ -1938,7 +1952,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-04-22T18:14:30.0000000Z"
+        "signed_at": "2020-04-22T18:14:30.000Z"
       }
     },
     {
@@ -1986,7 +2000,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2018-11-23T18:59:12.0000000Z"
+        "signed_at": "2018-11-23T18:59:12.000Z"
       }
     },
     {
@@ -2305,7 +2319,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-04-21T17:07:42.0000000Z"
+        "signed_at": "2016-04-21T17:07:42.000Z"
       }
     },
     {
@@ -2348,7 +2362,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2021-02-23T01:11:45.0000000Z"
+        "signed_at": "2021-02-23T01:11:45.000Z"
       }
     },
     {
@@ -2397,7 +2411,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-12-22T04:40:47.0000000Z"
+        "signed_at": "2019-12-22T04:40:47.000Z"
       }
     },
     {
@@ -2943,7 +2957,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2024-03-25T19:46:19.0000000Z"
+        "signed_at": "2024-03-25T19:46:19.000Z"
       }
     },
     {
@@ -2987,7 +3001,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-04-20T21:56:36.0000000Z"
+        "signed_at": "2017-04-20T21:56:36.000Z"
       }
     },
     {
@@ -3302,7 +3316,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-07-29T22:11:56.0000000Z"
+        "signed_at": "2019-07-29T22:11:56.000Z"
       }
     },
     {
@@ -3351,7 +3365,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-09-11T22:17:44.0000000Z"
+        "signed_at": "2019-09-11T22:17:44.000Z"
       }
     },
     {
@@ -3394,7 +3408,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2023-07-27T20:28:45.0000000Z"
+        "signed_at": "2023-07-27T20:28:45.000Z"
       }
     },
     {
@@ -3602,7 +3616,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2023-12-21T01:48:04.0000000Z"
+        "signed_at": "2023-12-21T01:48:04.000Z"
       }
     },
     {
@@ -3650,7 +3664,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-02-15T01:51:49.0000000Z"
+        "signed_at": "2018-02-15T01:51:49.000Z"
       }
     },
     {
@@ -3693,7 +3707,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-01-25T03:28:44.0000000Z"
+        "signed_at": "2017-01-25T03:28:44.000Z"
       }
     },
     {
@@ -3970,7 +3984,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-02-27T02:30:42.0000000Z"
+        "signed_at": "2016-02-27T02:30:42.000Z"
       }
     },
     {
@@ -4019,7 +4033,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-06-28T23:47:20.0000000Z"
+        "signed_at": "2019-06-28T23:47:20.000Z"
       }
     },
     {
@@ -4062,7 +4076,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2024-03-25T19:46:16.0000000Z"
+        "signed_at": "2024-03-25T19:46:16.000Z"
       }
     },
     {
@@ -4109,7 +4123,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-07-27T01:32:33.0000000Z"
+        "signed_at": "2018-07-27T01:32:33.000Z"
       }
     },
     {
@@ -4157,7 +4171,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-09-16T21:57:42.0000000Z"
+        "signed_at": "2020-09-16T21:57:42.000Z"
       }
     },
     {
@@ -4200,7 +4214,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-10-04T23:33:09.0000000Z"
+        "signed_at": "2016-10-04T23:33:09.000Z"
       }
     },
     {
@@ -4249,7 +4263,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-05-22T22:24:00.0000000Z"
+        "signed_at": "2019-05-22T22:24:00.000Z"
       }
     },
     {
@@ -4534,7 +4548,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-01-25T03:28:42.0000000Z"
+        "signed_at": "2017-01-25T03:28:42.000Z"
       }
     },
     {
@@ -4573,7 +4587,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-07-04T21:17:16.0000000Z"
+        "signed_at": "2016-07-04T21:17:16.000Z"
       }
     },
     {
@@ -4621,7 +4635,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-05-29T00:03:02.0000000Z"
+        "signed_at": "2020-05-29T00:03:02.000Z"
       }
     },
     {
@@ -5045,7 +5059,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-09-01T01:28:29.0000000Z"
+        "signed_at": "2017-09-01T01:28:29.000Z"
       }
     },
     {
@@ -5088,7 +5102,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-11-14T22:37:37.0000000Z"
+        "signed_at": "2016-11-14T22:37:37.000Z"
       }
     },
     {
@@ -5456,7 +5470,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-03-15T01:53:46.0000000Z"
+        "signed_at": "2020-03-15T01:53:46.000Z"
       }
     },
     {
@@ -5501,7 +5515,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-09-01T01:29:34.0000000Z"
+        "signed_at": "2017-09-01T01:29:34.000Z"
       }
     },
     {
@@ -5545,7 +5559,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-07-18T20:39:10.0000000Z"
+        "signed_at": "2017-07-18T20:39:10.000Z"
       }
     },
     {
@@ -5593,7 +5607,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-09-16T21:57:31.0000000Z"
+        "signed_at": "2020-09-16T21:57:31.000Z"
       }
     },
     {
@@ -5847,7 +5861,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-12-05T03:43:14.0000000Z"
+        "signed_at": "2017-12-05T03:43:14.000Z"
       }
     },
     {
@@ -5895,7 +5909,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-02-15T01:51:45.0000000Z"
+        "signed_at": "2018-02-15T01:51:45.000Z"
       }
     },
     {
@@ -5943,7 +5957,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2018-11-23T18:59:34.0000000Z"
+        "signed_at": "2018-11-23T18:59:34.000Z"
       }
     },
     {
@@ -6335,7 +6349,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2023-11-02T17:47:16.0000000Z"
+        "signed_at": "2023-11-02T17:47:16.000Z"
       }
     },
     {
@@ -6383,7 +6397,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-03-27T23:18:34.0000000Z"
+        "signed_at": "2019-03-27T23:18:34.000Z"
       }
     },
     {
@@ -6701,7 +6715,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "ECFF2F423B725E9F2C3BAEAAB28A13BE6A2FBCBF",
-        "signed_at": "2026-03-27T21:20:18.0000000Z"
+        "signed_at": "2026-03-27T21:20:18.000Z"
       }
     },
     {
@@ -6740,7 +6754,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-06-08T23:56:06.0000000Z"
+        "signed_at": "2016-06-08T23:56:06.000Z"
       }
     },
     {
@@ -7263,7 +7277,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-03-15T01:53:31.0000000Z"
+        "signed_at": "2020-03-15T01:53:31.000Z"
       }
     },
     {
@@ -7312,7 +7326,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-05-22T22:24:18.0000000Z"
+        "signed_at": "2019-05-22T22:24:18.000Z"
       }
     },
     {
@@ -7468,7 +7482,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2023-11-02T17:46:56.0000000Z"
+        "signed_at": "2023-11-02T17:46:56.000Z"
       }
     },
     {
@@ -7739,7 +7753,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "ECFF2F423B725E9F2C3BAEAAB28A13BE6A2FBCBF",
-        "signed_at": "2026-03-27T21:20:36.0000000Z"
+        "signed_at": "2026-03-27T21:20:36.000Z"
       }
     },
     {
@@ -8081,7 +8095,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-04-05T21:56:21.0000000Z"
+        "signed_at": "2018-04-05T21:56:21.000Z"
       }
     },
     {
@@ -8125,7 +8139,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-06-13T01:03:39.0000000Z"
+        "signed_at": "2017-06-13T01:03:39.000Z"
       }
     },
     {
@@ -8169,7 +8183,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-07-18T20:38:42.0000000Z"
+        "signed_at": "2017-07-18T20:38:42.000Z"
       }
     },
     {
@@ -8400,7 +8414,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2021-02-23T01:12:00.0000000Z"
+        "signed_at": "2021-02-23T01:12:00.000Z"
       }
     },
     {
@@ -8443,7 +8457,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-11-14T22:38:15.0000000Z"
+        "signed_at": "2016-11-14T22:38:15.000Z"
       }
     },
     {
@@ -8482,7 +8496,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-03-03T21:15:44.0000000Z"
+        "signed_at": "2016-03-03T21:15:44.000Z"
       }
     },
     {
@@ -8530,7 +8544,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-01-30T19:47:35.0000000Z"
+        "signed_at": "2019-01-30T19:47:35.000Z"
       }
     },
     {
@@ -8569,7 +8583,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-05-20T21:58:35.0000000Z"
+        "signed_at": "2016-05-20T21:58:35.000Z"
       }
     },
     {
@@ -8859,7 +8873,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-04-05T21:56:33.0000000Z"
+        "signed_at": "2018-04-05T21:56:33.000Z"
       }
     },
     {
@@ -8902,7 +8916,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-12-12T19:28:12.0000000Z"
+        "signed_at": "2016-12-12T19:28:12.000Z"
       }
     },
     {
@@ -8950,7 +8964,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-01-09T00:55:37.0000000Z"
+        "signed_at": "2018-01-09T00:55:37.000Z"
       }
     },
     {
@@ -8993,7 +9007,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2023-07-27T20:26:35.0000000Z"
+        "signed_at": "2023-07-27T20:26:35.000Z"
       }
     },
     {
@@ -9042,7 +9056,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-12-22T04:40:57.0000000Z"
+        "signed_at": "2019-12-22T04:40:57.000Z"
       }
     },
     {
@@ -9091,7 +9105,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-11-06T02:51:51.0000000Z"
+        "signed_at": "2019-11-06T02:51:51.000Z"
       }
     },
     {
@@ -9549,7 +9563,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-02-27T02:30:47.0000000Z"
+        "signed_at": "2016-02-27T02:30:47.000Z"
       }
     },
     {
@@ -9588,7 +9602,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-07-04T21:17:14.0000000Z"
+        "signed_at": "2016-07-04T21:17:14.000Z"
       }
     },
     {
@@ -9637,7 +9651,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-11-06T02:52:08.0000000Z"
+        "signed_at": "2019-11-06T02:52:08.000Z"
       }
     },
     {
@@ -9680,7 +9694,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-12-12T19:28:09.0000000Z"
+        "signed_at": "2016-12-12T19:28:09.000Z"
       }
     },
     {
@@ -9723,7 +9737,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2022-08-19T18:59:06.0000000Z"
+        "signed_at": "2022-08-19T18:59:06.000Z"
       }
     },
     {
@@ -9770,7 +9784,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-05-08T17:00:02.0000000Z"
+        "signed_at": "2018-05-08T17:00:02.000Z"
       }
     },
     {
@@ -9817,7 +9831,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2018-05-08T16:59:56.0000000Z"
+        "signed_at": "2018-05-08T16:59:56.000Z"
       }
     },
     {
@@ -10140,7 +10154,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-05-29T00:03:14.0000000Z"
+        "signed_at": "2020-05-29T00:03:14.000Z"
       }
     },
     {
@@ -10360,7 +10374,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-03-09T04:03:57.0000000Z"
+        "signed_at": "2016-03-09T04:03:57.000Z"
       }
     },
     {
@@ -10584,7 +10598,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "935767D66FAD4AD2D1F03A095C49370DC74DF607",
-        "signed_at": "2023-12-21T01:54:38.0000000Z"
+        "signed_at": "2023-12-21T01:54:38.000Z"
       }
     },
     {
@@ -10627,7 +10641,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "ECFF2F423B725E9F2C3BAEAAB28A13BE6A2FBCBF",
-        "signed_at": "2025-08-15T19:35:33.0000000Z"
+        "signed_at": "2025-08-15T19:35:33.000Z"
       }
     },
     {
@@ -10674,7 +10688,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2018-10-15T21:10:38.0000000Z"
+        "signed_at": "2018-10-15T21:10:38.000Z"
       }
     },
     {
@@ -11110,7 +11124,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2020-04-22T18:14:16.0000000Z"
+        "signed_at": "2020-04-22T18:14:16.000Z"
       }
     },
     {
@@ -11159,7 +11173,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "F1565504FAFD15D14355A5D8D52C2BFF53ED15B3",
-        "signed_at": "2019-07-29T22:12:05.0000000Z"
+        "signed_at": "2019-07-29T22:12:05.000Z"
       }
     },
     {
@@ -11203,7 +11217,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2017-04-20T21:56:41.0000000Z"
+        "signed_at": "2017-04-20T21:56:41.000Z"
       }
     },
     {
@@ -11242,7 +11256,7 @@
         "status": "signed",
         "subject": "CN=Valve, O=Valve, L=Bellevue, S=WA, C=US",
         "thumbprint": "FA71189A8BD9FDF62DE757A3FC2978B24A0275DD",
-        "signed_at": "2016-05-20T22:09:56.0000000Z"
+        "signed_at": "2016-05-20T22:09:56.000Z"
       }
     },
     {
@@ -11285,7 +11299,7 @@
         "status": "signed",
         "subject": "CN=Valve Corp., O=Valve Corp., L=Bellevue, S=Washington, C=US",
         "thumbprint": "ECFF2F423B725E9F2C3BAEAAB28A13BE6A2FBCBF",
-        "signed_at": "2025-08-15T19:30:45.0000000Z"
+        "signed_at": "2025-08-15T19:30:45.000Z"
       }
     }
   ],
@@ -11311,6 +11325,9 @@
         "tag": "0.9.0",
         "commit_sha": "4a434b1da6f22d77435776d6e580eb6bbfeb7797"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:b623905f40fc0afb8f89ead39e79045506ff1488768e432e47e0c6210a1d4f9e",
@@ -11340,6 +11357,9 @@
         "tag": "0.9.0",
         "commit_sha": "4a434b1da6f22d77435776d6e580eb6bbfeb7797"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:84338ecd378ef36d296b421a0baf6f5207f1ae908b0c1276da868672c668b0c1",
@@ -11369,6 +11389,9 @@
         "tag": "0.9.1",
         "commit_sha": "e85221e560b70f253042366fb5fb5a89c5978a34"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:8b9b97dc938a68b30280c1e01dd8ea58f154450d6219172cac44db1a87ddaf50",
@@ -11398,6 +11421,9 @@
         "tag": "0.9.1",
         "commit_sha": "e85221e560b70f253042366fb5fb5a89c5978a34"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:eb55cb81577bc108490c4f37a259cf3e3a464caf5116c77434ed151c5a3f509d",
@@ -11427,6 +11453,9 @@
         "tag": "v0.9.10",
         "commit_sha": "9a27011472d69271cd3924efa1a31d72435ac248"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:7377ffbfe50afb1c55dfba9d98572629e0987dceb4a82feef5f5e74d16d8ffbc",
@@ -11456,6 +11485,9 @@
         "tag": "v0.9.10",
         "commit_sha": "9a27011472d69271cd3924efa1a31d72435ac248"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:cb200692b14faea15f9743886037eeb7b4e73e21143c7834d953f1042ec05fbb",
@@ -11485,6 +11517,9 @@
         "tag": "v0.9.11",
         "commit_sha": "061cf411ee1125fe4b7cdf3837451a1c6a32a3c8"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:801da91f16ee3c5f478effac879b2f618640ec3cc66400667b9610f83cef7277",
@@ -11514,6 +11549,9 @@
         "tag": "v0.9.11",
         "commit_sha": "061cf411ee1125fe4b7cdf3837451a1c6a32a3c8"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:584d98757e2845999d3df500ac43dc76331688b5e98c641c3e20365a3a9d74c8",
@@ -11543,6 +11581,9 @@
         "tag": "v0.9.12",
         "commit_sha": "b4bf24578bec10d5dc6eb14f91b98e71d5f7ee1b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:51fd601ca62cb40b55d73ec9436fc9bcf36d5c48f1d4fb65581b45a8c2ac6614",
@@ -11572,6 +11613,9 @@
         "tag": "v0.9.12",
         "commit_sha": "b4bf24578bec10d5dc6eb14f91b98e71d5f7ee1b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ea60bfad2547b9a24fc1cfa58966c8541dab68000a93540929d2c94567d56d67",
@@ -11601,6 +11645,9 @@
         "tag": "0.9.13",
         "commit_sha": "5b1187b83fb1dadfb2ab84abaf428176a66bd5ad"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:bc960887f7d0dbeacb63d3fbd822b1d98f555981d3b8a919a0ec03ce0c07a138",
@@ -11630,6 +11677,9 @@
         "tag": "0.9.13",
         "commit_sha": "5b1187b83fb1dadfb2ab84abaf428176a66bd5ad"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ad43e7ad6c074a06ae78a18d35505f1dfc3ce95f26e1bf83ee83a7f84cb34015",
@@ -11659,6 +11709,9 @@
         "tag": "v0.9.14",
         "commit_sha": "80f2e46c95e3ddfa7d480940007385f9b96be5a4"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a93152596abde54b2d788463fdc44847c11aaf25590c21702d9fcf86ff38e250",
@@ -11688,6 +11741,9 @@
         "tag": "v0.9.14",
         "commit_sha": "80f2e46c95e3ddfa7d480940007385f9b96be5a4"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:da42423fe372bba9c6246889375b7eb150dc4baf952f3718d0fcce6cf75d86fe",
@@ -11717,6 +11773,9 @@
         "tag": "v0.9.15",
         "commit_sha": "c95571027b79644643bca044538144c96194c4f2"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:3da7fa0163cc7e2818af310cf56ac53e4ea524e49069e185c39b66208bc68d39",
@@ -11746,6 +11805,9 @@
         "tag": "v0.9.15",
         "commit_sha": "c95571027b79644643bca044538144c96194c4f2"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:0b325a28e42d98449acbd2d2408e2d564bf3df0d50d261e45488a43e20a72ca2",
@@ -11775,6 +11837,9 @@
         "tag": "v0.9.16",
         "commit_sha": "c174bafe1e3d150ff44d23209f89e312bda93189"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:24c6d5d666e156bcfbe7316777d1a2a2a38505a2cd8c2e38270333a50f12e9a9",
@@ -11804,6 +11869,9 @@
         "tag": "v0.9.16",
         "commit_sha": "c174bafe1e3d150ff44d23209f89e312bda93189"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:28a71e7fc55fb13781cd2c1dce6b5ef71d1671728605525e143955a95ad82c31",
@@ -11833,6 +11901,9 @@
         "tag": "v0.9.17",
         "commit_sha": "6f671fc80947dbccc4a9d27bd1b89d6038d94637"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6b861de60b98a2fc0d4d9287636a1766c405f2b113fe813ba76eddba1670f866",
@@ -11862,6 +11933,9 @@
         "tag": "v0.9.17",
         "commit_sha": "6f671fc80947dbccc4a9d27bd1b89d6038d94637"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d659fb89974ea9ccc9034c6b95bb767676c7933ffb95e19759102cf988ba01f6",
@@ -11891,6 +11965,9 @@
         "tag": "v0.9.18",
         "commit_sha": "217ae22879404b61fd8fcbca0109286c6b273537"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:103f7759a07fe95ef9d0456f39081e303983ab714b4ab9eecf048967f082aa79",
@@ -11920,6 +11997,9 @@
         "tag": "v0.9.18",
         "commit_sha": "217ae22879404b61fd8fcbca0109286c6b273537"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:c550454b69ac762e2363bfe58abe6ca73da4f3b196802b007dfc5dc5cfea22db",
@@ -11949,6 +12029,9 @@
         "tag": "v0.9.19",
         "commit_sha": "f1ffbf4e92f383bdb453d58f9583c51a5ec350d9"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:0ea5be6651bb42e74a2869636685a4b990452c30e05290ffcd96bdb6ed0b42ff",
@@ -11978,6 +12061,9 @@
         "tag": "v0.9.19",
         "commit_sha": "f1ffbf4e92f383bdb453d58f9583c51a5ec350d9"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:e248f66af9abbc83632b972ad84b40312d0cd06a0ba9bf6f7a2111b7a6ab3877",
@@ -12007,6 +12093,9 @@
         "tag": "0.9.2",
         "commit_sha": "6e1abf5eaa45f8c09d739d1a60561b1809b0bc88"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a34e5cd164d4d6c7165ecdd0d5be997ffe7fce5fdddd2426fa282576b00b49c9",
@@ -12036,6 +12125,9 @@
         "tag": "0.9.2",
         "commit_sha": "6e1abf5eaa45f8c09d739d1a60561b1809b0bc88"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:61d5da2ee5d6cc48d8d897386edd2f02a749c72ad8f6b41474a71462cee2efbb",
@@ -12065,6 +12157,9 @@
         "tag": "v0.9.20",
         "commit_sha": "d645dba541b2e0d6f5186e22fc85ce225f2c9f17"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:243a818d88e6251f70cf5a8a90c47a2775cae493ff9c45241ad7832b90010d18",
@@ -12094,6 +12189,9 @@
         "tag": "v0.9.20",
         "commit_sha": "d645dba541b2e0d6f5186e22fc85ce225f2c9f17"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:40a0e9d6e365eb5977ae751c519834572198266a9474fe58e73319b9af1aecdc",
@@ -12123,6 +12221,9 @@
         "tag": "0.9.3",
         "commit_sha": "687645d23cb46c63bad79846a9b58a35326d0a2d"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ad6c39fba670d8315c4bca6a325725946cb4bf9a56d88044c6113d264a4647c8",
@@ -12152,6 +12253,9 @@
         "tag": "0.9.3",
         "commit_sha": "687645d23cb46c63bad79846a9b58a35326d0a2d"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:dde4f1b850090597ac873736a868bcdcecece165a8ee279d4b39131daeed6125",
@@ -12181,6 +12285,9 @@
         "tag": "v0.9.4",
         "commit_sha": "d4849a0f950e3c16f77916a6ba6fc4c144ed65d4"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:e293ad5cceeb90a38c1d0af6069a4840b97cc74865f96f12ae7b5d0795005795",
@@ -12210,6 +12317,9 @@
         "tag": "v0.9.4",
         "commit_sha": "d4849a0f950e3c16f77916a6ba6fc4c144ed65d4"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d5a8161ba2fd610418f717873c32ed08aa09df60120baa32bfc3f64909582faf",
@@ -12239,6 +12349,9 @@
         "tag": "v0.9.5",
         "commit_sha": "1daef6027f37a8ecb6b86439f66e04e74970b2b9"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a32167de402517bd5803c92bd9a48f18ab4a3057a25fa657e79ef8d9022a9d52",
@@ -12268,6 +12381,9 @@
         "tag": "v0.9.5",
         "commit_sha": "1daef6027f37a8ecb6b86439f66e04e74970b2b9"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:121a72180c328f2333c550f24aaa6aa808521f1b139e2d13cb31f526d6098dd0",
@@ -12297,6 +12413,9 @@
         "tag": "v0.9.6",
         "commit_sha": "59db93350b00b026670fed70c659bdb04f7c52e2"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a32167de402517bd5803c92bd9a48f18ab4a3057a25fa657e79ef8d9022a9d52",
@@ -12326,6 +12445,9 @@
         "tag": "v0.9.6",
         "commit_sha": "59db93350b00b026670fed70c659bdb04f7c52e2"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:121a72180c328f2333c550f24aaa6aa808521f1b139e2d13cb31f526d6098dd0",
@@ -12355,6 +12477,9 @@
         "tag": "v0.9.7",
         "commit_sha": "088a60b823f89670f811391136c1a70c9de64d97"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:32f0e3ba2d56dea63b08957f565f8a4a338ebfcc7dcaf9ebf9f040e57ccaccd7",
@@ -12384,6 +12509,9 @@
         "tag": "v0.9.7",
         "commit_sha": "088a60b823f89670f811391136c1a70c9de64d97"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:c23529c74ef578149152bdf06c8478e55344ac16048788d92e5566bb02c64343",
@@ -12413,6 +12541,9 @@
         "tag": "v0.9.8",
         "commit_sha": "49228302370647aece9a87b36d3a979c511f3433"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:8979e2f5b4e6ecf605eb742c4572ff83a1adf457fd7b0f9fb7c1c63564f0f926",
@@ -12442,6 +12573,9 @@
         "tag": "v0.9.8",
         "commit_sha": "49228302370647aece9a87b36d3a979c511f3433"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:96a5aaad38b7938f3da39874fd5dc51039b8303c4a0c108071660b6cf85313ca",
@@ -12471,6 +12605,9 @@
         "tag": "v0.9.9",
         "commit_sha": "d37025704a429762f7aecfa062b6fe5cae671ec5"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:491e9a3601188855b3e7183c45da868e13fc806c9e057fb9bea3f8c84244968e",
@@ -12500,6 +12637,9 @@
         "tag": "v0.9.9",
         "commit_sha": "d37025704a429762f7aecfa062b6fe5cae671ec5"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:b93f43843f3642f05e415bb93297078395d4b2a16325201c7e44cf41507c36a6",
@@ -12529,6 +12669,9 @@
         "tag": "v1.0.0",
         "commit_sha": "063f93e587e80a204233fa088a52ecb493365273"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:c9e3b4ff72c3bc7ad8a755592ff9836e743f9b5d477c3ffd9bea4d5b99fb32f8",
@@ -12558,6 +12701,9 @@
         "tag": "v1.0.0",
         "commit_sha": "063f93e587e80a204233fa088a52ecb493365273"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:fb41a4b88a51a8f8e68ae2da97ce19f3705010d446cde4e2f5483607d4f27116",
@@ -12587,6 +12733,9 @@
         "tag": "v1.0.1",
         "commit_sha": "e1507a27547d22a680153862865d40b90fad8c75"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:2af591775f72ac04150e4aaab7941d5cf8263c8e0d5ff0118975ed4969cc717e",
@@ -12616,6 +12765,9 @@
         "tag": "v1.0.1",
         "commit_sha": "e1507a27547d22a680153862865d40b90fad8c75"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ac279553f4e6830e9a712f4866bad8a61eb1c9ca388cc1020113861d31f67461",
@@ -12645,6 +12797,9 @@
         "tag": "v1.0.10",
         "commit_sha": "ebdea152f8aac77e9a6db29682b81d762159df7e"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:8768bb31597f7d10af8b2a68fe543ac111032e8d91c46e57dd90bd5c7bfe12de",
@@ -12674,6 +12829,9 @@
         "tag": "v1.0.10",
         "commit_sha": "ebdea152f8aac77e9a6db29682b81d762159df7e"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:9520d2b88a97f6390fb2d0447019fa0e85344fb1c4ae1aaa3f9d78fed0c8eda3",
@@ -12703,6 +12861,9 @@
         "tag": "v1.0.11",
         "commit_sha": "167e26e4b9b352614c5f3a83a8434b185f63ed0f"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:96db3e007b1ebc737de74530f747203bce71322a995347c7874efbc9013d9c8a",
@@ -12732,6 +12893,9 @@
         "tag": "v1.0.11",
         "commit_sha": "167e26e4b9b352614c5f3a83a8434b185f63ed0f"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:128b39ecbfcc4c824899594a97c8c861a8659682b578e84ab2bbf5fc04d67248",
@@ -12761,6 +12925,9 @@
         "tag": "v1.0.12",
         "commit_sha": "53c417bb16cee003cd949254a2aa00714046efbd"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d079238dae5a1cbfbcba014b644ad550a5c8c088007097a463a94b6ad6f7e184",
@@ -12790,6 +12957,9 @@
         "tag": "v1.0.12",
         "commit_sha": "53c417bb16cee003cd949254a2aa00714046efbd"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:32e6c4bf242acf5150ee576e7ae910fc3dd9c5fe81b529e711a495648cd74cde",
@@ -12819,6 +12989,9 @@
         "tag": "v1.0.13",
         "commit_sha": "d35c04ca3d7ddb762afa4a1c6c4a9d5de992cda7"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6a8fa74092c6f1653aa93a705ebb26ec8849ca3fb49f40e02ef0a57392cbc203",
@@ -12848,6 +13021,9 @@
         "tag": "v1.0.13",
         "commit_sha": "d35c04ca3d7ddb762afa4a1c6c4a9d5de992cda7"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:9c7ab063987ea24abe6e9f15cfc77ee996e055c1d56cc9b1822b361f86864c9a",
@@ -12877,6 +13053,9 @@
         "tag": "v1.0.14",
         "commit_sha": "7027f517983ccaae7d972b7735891bb8244e59fb"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:bd7a7958bdb647096e5e22cb4d020dd99720983f3af1cd500e8b570cfa9f017b",
@@ -12906,6 +13085,9 @@
         "tag": "v1.0.14",
         "commit_sha": "7027f517983ccaae7d972b7735891bb8244e59fb"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ccbebc28819787794d8b5d5a1752f91e065a1d0b4c97f5b34c96ebddf983da8c",
@@ -12935,6 +13117,9 @@
         "tag": "v1.0.15",
         "commit_sha": "60eb187801956ad277f1cae6680e3a410ee0873b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d9de20b9bc43434c88c854a908c5bcb79c6eac3309df89e6ee91d8103bb24bdd",
@@ -12964,6 +13149,9 @@
         "tag": "v1.0.15",
         "commit_sha": "60eb187801956ad277f1cae6680e3a410ee0873b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d9e523c1898eecef77f8ddd337cdce324588deb1a6798f572096768f650a674e",
@@ -12993,6 +13181,9 @@
         "tag": "v1.0.16",
         "commit_sha": "6aacebd1246592d9911439d5abd0c657b8948ab0"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:040cdd453d8794e1b8b7ee33909b81d9995e8a3ddb82878c0f0c2d3a1daae160",
@@ -13022,6 +13213,9 @@
         "tag": "v1.0.16",
         "commit_sha": "6aacebd1246592d9911439d5abd0c657b8948ab0"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:70e9f8d0f0d074c489a7ac999546eaa9999153cf2696b9270402bb3abc5258f3",
@@ -13051,6 +13245,9 @@
         "tag": "v1.0.17",
         "commit_sha": "1fb1030f2ac238456dca7615a4408fb2bb42afb6"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:e62eaba60d3318d7eb9aea9cec50f47dc9e6c1bc3e9704f57e2533ed04c63fd3",
@@ -13080,6 +13277,9 @@
         "tag": "v1.0.17",
         "commit_sha": "1fb1030f2ac238456dca7615a4408fb2bb42afb6"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:060686672d5abe2d591cae84eb42484fbd2cdce663df430b9ff0992f7bb86cd1",
@@ -13109,6 +13309,9 @@
         "tag": "v1.0.2",
         "commit_sha": "b20b25705d8dd82be221fe68a61db36ae7e2608e"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d793e2a76a61296dc5bce5e6b8dc32f4f3096743aba10c5bac2eb465e635850c",
@@ -13138,6 +13341,9 @@
         "tag": "v1.0.2",
         "commit_sha": "b20b25705d8dd82be221fe68a61db36ae7e2608e"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:7b83ed968423ed724a8668c4126d81faf099a5fb5e457f806b3256b1caf9b596",
@@ -13167,6 +13373,9 @@
         "tag": "v1.0.3",
         "commit_sha": "5bc41e4b55d11dfc8fb4b958a6600aa7f8cee051"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:71f9cce93034c886a6047d00b805dca5769132427fc46f7492531dd7f5d6e79e",
@@ -13196,6 +13405,9 @@
         "tag": "v1.0.3",
         "commit_sha": "5bc41e4b55d11dfc8fb4b958a6600aa7f8cee051"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:20735794914feec0d8cdb3a62752e612ddb2bb9e9c4724bbc596b2d8dd4f09af",
@@ -13225,6 +13437,9 @@
         "tag": "v1.0.4",
         "commit_sha": "84e877f1e099173378759189609b90870f422130"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:877b038c01486f6014b7711f3d5d9f8c59d976d032edc8915261d2b5656d5098",
@@ -13254,6 +13469,9 @@
         "tag": "v1.0.4",
         "commit_sha": "84e877f1e099173378759189609b90870f422130"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:c4ddd7ea3fe7bfffa07867c07a7651b2a141e0d61aefe24b1d7dea7f832eafc2",
@@ -13283,6 +13501,9 @@
         "tag": "v1.0.5",
         "commit_sha": "9d48ccf90d709382a137de9bc429aab5f7cea5de"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d826d38a2969c3303a4312e76dfaa93b1cf604ec0dc52d9756d871ca534189cb",
@@ -13312,6 +13533,9 @@
         "tag": "v1.0.5",
         "commit_sha": "9d48ccf90d709382a137de9bc429aab5f7cea5de"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ce904d1b47baf33ded81f1927cdb663405ee08d5bb957f5b6b787593d72d0fc8",
@@ -13341,6 +13565,9 @@
         "tag": "v1.0.6",
         "commit_sha": "7fa6470f2972970859f2395f1390f6d87d4b0fc3"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:74eeb0c989d10e8aaf20da5ae2bc1fa7dd34e74fd3c54f9cce40544878e4e157",
@@ -13370,6 +13597,9 @@
         "tag": "v1.0.6",
         "commit_sha": "7fa6470f2972970859f2395f1390f6d87d4b0fc3"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6b5065d2c6c08aeddbbc6ac8d67880f7450fed344906ee3ea44b022aeb034c37",
@@ -13399,6 +13629,9 @@
         "tag": "v1.0.7",
         "commit_sha": "b6539291b88eaa65c58c076cafe4eacd0ae2e062"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:5575dddd47a57485aaa6e2d3de9f2edde700a846963424cb2a055997ca397d21",
@@ -13428,6 +13661,9 @@
         "tag": "v1.0.7",
         "commit_sha": "b6539291b88eaa65c58c076cafe4eacd0ae2e062"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:faaff8b88e0b92646683916dbe3a03f94c698a370784bad4fe1ce20624af875d",
@@ -13457,6 +13693,9 @@
         "tag": "v1.0.8",
         "commit_sha": "bcac1bfbe2be3c1ff37e4f62b8e412fcdf29248e"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:1c94d3297f6011f8e6925fa9f9cbff9abc32e394e469ea2738fe06d7762368c7",
@@ -13486,6 +13725,9 @@
         "tag": "v1.0.8",
         "commit_sha": "bcac1bfbe2be3c1ff37e4f62b8e412fcdf29248e"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:bf11935fa46b761cdbbea5308da6484b4af024c69d597ae203b60c0ecbbf4570",
@@ -13515,6 +13757,9 @@
         "tag": "v1.0.9",
         "commit_sha": "5d0574bf6473130d25dd296ad30206ccd148590b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:bfd1b259b439719805d882debea69d895b3f38a0f6afbb93f7675e07e17fb856",
@@ -13544,6 +13789,9 @@
         "tag": "v1.0.9",
         "commit_sha": "5d0574bf6473130d25dd296ad30206ccd148590b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:9522b9c57b071325c85b3c264bec6af07d060d7f963a3209813fe0eceb5dcab3",
@@ -13573,6 +13821,9 @@
         "tag": "v1.1.3b",
         "commit_sha": "64fc05966a109543a1e191a45e1ab3a25a651211"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:9cbfdacfddf28e7403e2951ce244ec3e8d3791dd9f259f96259d5d3ebd86cbe7",
@@ -13602,6 +13853,9 @@
         "tag": "v1.1.3b",
         "commit_sha": "64fc05966a109543a1e191a45e1ab3a25a651211"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:39d15fad1178fd92459458642b448a4e33fd0f06b04855cc9bb4ba8a45fc0f27",
@@ -13631,6 +13885,9 @@
         "tag": "v1.10.30",
         "commit_sha": "26fa19eb86ab3c589af2bdbc77449d61a8ff799b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:8f40e7c8e60df141f383fe7fa98dbc740e8cf6dd7a6dbf84cf9297817196c0aa",
@@ -13660,6 +13917,9 @@
         "tag": "v1.10.30",
         "commit_sha": "26fa19eb86ab3c589af2bdbc77449d61a8ff799b"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:aded1a685497df660f379f643734df62f1ec78b694fde7517ded18ebdf19f7f8",
@@ -13689,6 +13949,9 @@
         "tag": "v1.11.11",
         "commit_sha": "ace70602054a550951a83648e29aef70b53a2891"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:39674977618a4711dfb8c6d7fd4cf512d234a6f6fb5223c60c138595cd78cfd6",
@@ -13718,6 +13981,9 @@
         "tag": "v1.11.11",
         "commit_sha": "ace70602054a550951a83648e29aef70b53a2891"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:eee89a8a005a73ef0ebb57052324e142d6132720effa9cead8a07e3edd999021",
@@ -13747,6 +14013,9 @@
         "tag": "v1.12.5",
         "commit_sha": "3a010f0f668d8de59fcba75b14e08a6a08ec68a0"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:dbc05e13b77d34deeaa44b5a7ee425d5def3e86f7c3f81d391bbbc379a4ebefa",
@@ -13776,6 +14045,9 @@
         "tag": "v1.12.5",
         "commit_sha": "3a010f0f668d8de59fcba75b14e08a6a08ec68a0"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:7d68d43563615590c9e860a25d369a12b8c2fc6ca50ce91576378af9a94b8fad",
@@ -13805,6 +14077,9 @@
         "tag": "v1.14.15",
         "commit_sha": "0eb70325a4ea3edca2a0ff8aefa631f2529e6eb7"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:71db78e77e577db6d0666c25437695d42ceafb9c7f8da94fbe765525b8e2f5f2",
@@ -13834,6 +14109,9 @@
         "tag": "v1.14.15",
         "commit_sha": "0eb70325a4ea3edca2a0ff8aefa631f2529e6eb7"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:965d24d2b097880475fb825d7675c819e42dc392209c742dd0fbf23ad322e005",
@@ -13863,6 +14141,9 @@
         "tag": "v1.16.8",
         "commit_sha": "4c85abcb7f7f1f02adaf3812018c99fc593bc341"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:c3314d8822729fb7550d070f75c3efdd2d099965e53416b2901996fc6cee744f",
@@ -13892,6 +14173,9 @@
         "tag": "v1.16.8",
         "commit_sha": "4c85abcb7f7f1f02adaf3812018c99fc593bc341"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:43343fe983119505d33826a72cbd2c491dfcda03f74f06e73e7a040f35bd38ed",
@@ -13921,6 +14205,9 @@
         "tag": "v1.2.10",
         "commit_sha": "823135df1783009cb468d0fc4190816254f7687d"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:2ec24b0118667a52196b069b12e7248011362b223e8ed044a567c3a7a875f5df",
@@ -13950,6 +14237,9 @@
         "tag": "v1.2.10",
         "commit_sha": "823135df1783009cb468d0fc4190816254f7687d"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:c71221b5263ddfa3fd6e6a62ec53eaeeab76cfb45b5e765c476546ba8eb8a81a",
@@ -13979,6 +14269,9 @@
         "tag": "v1.23.7",
         "commit_sha": "08de3821dfd3aa46f778376680c68f33b9fdcb6c"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:0ba4d3049449403e1966cf8922ac5c2e6130fabe72c0cc6b3218da82f9110ac9",
@@ -14008,6 +14301,9 @@
         "tag": "v1.23.7",
         "commit_sha": "08de3821dfd3aa46f778376680c68f33b9fdcb6c"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d958b1c862a9579bc46840f8aa32eee1b6fb3daf2dea2f46e800c2d5c0d8ae4b",
@@ -14037,6 +14333,9 @@
         "tag": "v1.26.7",
         "commit_sha": "751538d6cbde9d060e5906c1d45c8cedeaf0ee18"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:5e591aa3f4a991edcc8910921833edafa67a1b117849bbb4e235df9833bed7a3",
@@ -14066,6 +14365,9 @@
         "tag": "v1.26.7",
         "commit_sha": "751538d6cbde9d060e5906c1d45c8cedeaf0ee18"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d27d9aa2459e7533c3a6cf18a8cc2ff1d5cb2249115f42ba9a3ce1fe2bc4662b",
@@ -14095,6 +14397,9 @@
         "tag": "v1.3.22",
         "commit_sha": "b72abcebff7e6c6c70ce8ac8f6a09b70d44397e2"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:0207fc8cec590486f7b9f7f50d42479ffd834f360bf7eab535476ba9f675f8ac",
@@ -14124,6 +14429,9 @@
         "tag": "v1.3.22",
         "commit_sha": "b72abcebff7e6c6c70ce8ac8f6a09b70d44397e2"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a712c296b7a92fe17d7fc8119116b385de5e7fa93fff9e6b34212c24d93c6fc5",
@@ -14153,6 +14461,9 @@
         "tag": "v1.4.18",
         "commit_sha": "02bc73b9bcfe9cc2d2802bd5fdc91f724de8ef10"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:b066af6748930343dc6f9ccd831f0fd0cd6bbba1d3541a7867c41f9bd8b3e734",
@@ -14182,6 +14493,9 @@
         "tag": "v1.4.18",
         "commit_sha": "02bc73b9bcfe9cc2d2802bd5fdc91f724de8ef10"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:7312f4426c0a764d47175aa6446c3920c792030c0ba92b75ae89628e72552445",
@@ -14211,6 +14525,9 @@
         "tag": "v1.5.17",
         "commit_sha": "cdaf2b330c8df58986391b253cd8f04328139823"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6c5e18a3c12ddb9618c1edb36cd4834115735c1f3096bd4cb2022c3593af28b8",
@@ -14240,6 +14557,9 @@
         "tag": "v1.5.17",
         "commit_sha": "cdaf2b330c8df58986391b253cd8f04328139823"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:2428f92356b3889ad6f3f37d86a40e8cd6972ac5377e59c9189da91f694cf6ec",
@@ -14269,6 +14589,9 @@
         "tag": "v1.6.10b",
         "commit_sha": "52065df3d6f3af96300dac98cdf7397f26abfcd7"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:f8dd871beb832b50cbc63ed9e86b0359cd46564a2a61e9faa0a49a452c36adfd",
@@ -14298,6 +14621,9 @@
         "tag": "v1.6.10b",
         "commit_sha": "52065df3d6f3af96300dac98cdf7397f26abfcd7"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:5bcb02e79218d06c33eddd117a3ebdf1ef58623b3098914d60ebb9af32baf852",
@@ -14327,6 +14653,9 @@
         "tag": "v1.7.15",
         "commit_sha": "5aa6c5f0f6520c59c4dce124541ecc62604fd7a5"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:357e23582bb0ffffe7b7c029c61a42311b4000e9ea8eb00220b5d43d195cf87b",
@@ -14356,6 +14685,9 @@
         "tag": "v1.7.15",
         "commit_sha": "5aa6c5f0f6520c59c4dce124541ecc62604fd7a5"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:5d09677de6fdf55eb2fb339a26ac30bfc6e80185c0808d47bdb36187ea21198d",
@@ -14385,6 +14717,9 @@
         "tag": "v1.8.19",
         "commit_sha": "176b58f6ccaaae3e9d14efaf612c50b72ec5da76"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d7d4b39c9f8d18f230eb12d4794c692381f9e79209b5e5d32ad3c67ae46e29d9",
@@ -14414,6 +14749,9 @@
         "tag": "v1.8.19",
         "commit_sha": "176b58f6ccaaae3e9d14efaf612c50b72ec5da76"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d44dc39c74b144d1ed84d6dcae2e4ae1aaa045652d0ec839543f2888018c0cbd",
@@ -14443,6 +14781,9 @@
         "tag": "v1.9.15",
         "commit_sha": "59fe862d5a3a4348be4f277a554004d5edfb86ed"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d421bbaf847361e4129e25f20f9e8575e72e404cbca73405b5569a8db4807658",
@@ -14472,6 +14813,9 @@
         "tag": "v1.9.15",
         "commit_sha": "59fe862d5a3a4348be4f277a554004d5edfb86ed"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:49197856f32c0d90c86d772713d10c220c89320afa0d44f88a0718ac3a424b2b",
@@ -14501,6 +14845,9 @@
         "tag": "v1.9.16",
         "commit_sha": "39205f6b281a6131d1373d0217c1ab9ed19735ea"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d421bbaf847361e4129e25f20f9e8575e72e404cbca73405b5569a8db4807658",
@@ -14530,6 +14877,9 @@
         "tag": "v1.9.16",
         "commit_sha": "39205f6b281a6131d1373d0217c1ab9ed19735ea"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:49197856f32c0d90c86d772713d10c220c89320afa0d44f88a0718ac3a424b2b",
@@ -14559,6 +14909,9 @@
         "tag": "v2.0.10",
         "commit_sha": "15f0838a0487feb7da60acd39aab8099b994234c"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a4abe2e3298dec191f87e3a51770243637504cb1d8b31f0a1263fe33bf3a6dd1",
@@ -14588,6 +14941,9 @@
         "tag": "v2.0.10",
         "commit_sha": "15f0838a0487feb7da60acd39aab8099b994234c"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:b699648b2de76d90ca1015e8e80bbb8783d6f7c6c721c2ece0d61a5b2c2995fc",
@@ -14617,6 +14973,9 @@
         "tag": "v2.12.14",
         "commit_sha": "91825305130f446f82054c1ec3d416321ace0072"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:e61701f75930b4c47615d17f5901ca62edf1a948f5ea804d4cbbdc94ad2e6e2e",
@@ -14646,6 +15005,9 @@
         "tag": "v2.12.14",
         "commit_sha": "91825305130f446f82054c1ec3d416321ace0072"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:fd100f4f6730b5fb01d644edca96c7280a09481f044f61695908feba2d9663c6",
@@ -14675,6 +15037,9 @@
         "tag": "v2.15.6",
         "commit_sha": "0924064316de3effbcd1acf1e309182a2deb1c05"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:bab8ac6ef64e68a9ca53315b0014d131088584b2efdfa6db511d67ec03cfcb4a",
@@ -14704,6 +15069,9 @@
         "tag": "v2.15.6",
         "commit_sha": "0924064316de3effbcd1acf1e309182a2deb1c05"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ab696e4f218a95b3e396bc310f9fe6485df48c99c0969762083212b1e1f025a6",
@@ -14733,6 +15101,9 @@
         "tag": "v2.2.3",
         "commit_sha": "f51d87ecf8f7903e859b0aa4d617ff1e5f33db5a"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:e5ca2fd8fb753d7bf69d920e72dc7a120b2416b04def194345c3cb01134021bb",
@@ -14762,6 +15133,9 @@
         "tag": "v2.2.3",
         "commit_sha": "f51d87ecf8f7903e859b0aa4d617ff1e5f33db5a"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6654420118ee78799985ed4b3961975d40b8482c85c4db1d28faab43416f33ba",
@@ -14791,6 +15165,9 @@
         "tag": "v2.5.1",
         "commit_sha": "ae46a8dd0172580648c8922658a100439115d3eb"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:54ad7fe4cdb4d88fa818dbf8eb3d1f8ca2ae3b34d2ff115f87191d7d88e0a009",
@@ -14820,6 +15197,9 @@
         "tag": "v2.5.1",
         "commit_sha": "ae46a8dd0172580648c8922658a100439115d3eb"
       },
+      "legal_document_ids": [
+        "license.f56ff606104d4ef18e617921a75c73ad73b5a1a1d70c69590c29de16919e04ad"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6fed734924b4b38faa6417a6c711e3a78d1b162b1fd3042b7d9908ec8d41d2b5",

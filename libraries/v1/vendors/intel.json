@@ -4,512 +4,94 @@
     "id": "intel",
     "display_name": "Intel"
   },
-  "generated_at": "2026-06-24T18:00:00Z",
+  "generated_at": "2026-06-24T18:00:00.000Z",
+  "legal_documents": [
+    {
+      "legal_document_id": "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+      "kind": "license",
+      "title": "Intel XeSS SDK License",
+      "format": "pdf",
+      "file_name": "LICENSE.pdf",
+      "content": {
+        "sha256": "078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "size_bytes": 76867
+      },
+      "object_key": "libraries/legal/sha256/078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836.pdf"
+    },
+    {
+      "legal_document_id": "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+      "kind": "license",
+      "title": "Intel XeSS SDK License",
+      "format": "text",
+      "file_name": "LICENSE.txt",
+      "content": {
+        "sha256": "784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "size_bytes": 4194
+      },
+      "object_key": "libraries/legal/sha256/784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df.txt"
+    },
+    {
+      "legal_document_id": "license.e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d",
+      "kind": "license",
+      "title": "Intel XeSS SDK License",
+      "format": "text",
+      "file_name": "LICENSE.txt",
+      "content": {
+        "sha256": "e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d",
+        "size_bytes": 4167
+      },
+      "object_key": "libraries/legal/sha256/e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d.txt"
+    },
+    {
+      "legal_document_id": "notice.7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504",
+      "kind": "notice",
+      "title": "Intel XeSS SDK Third-Party Programs",
+      "format": "text",
+      "file_name": "THIRD-PARTY-PROGRAMS.txt",
+      "content": {
+        "sha256": "7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504",
+        "size_bytes": 32529
+      },
+      "object_key": "libraries/legal/sha256/7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504.txt"
+    },
+    {
+      "legal_document_id": "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1",
+      "kind": "notice",
+      "title": "Intel XeSS SDK Third-Party Programs",
+      "format": "text",
+      "file_name": "THIRD-PARTY-PROGRAMS.txt",
+      "content": {
+        "sha256": "8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1",
+        "size_bytes": 23775
+      },
+      "object_key": "libraries/legal/sha256/8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1.txt"
+    },
+    {
+      "legal_document_id": "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31",
+      "kind": "notice",
+      "title": "Intel XeSS SDK Third-Party Programs",
+      "format": "text",
+      "file_name": "THIRD-PARTY-PROGRAMS.txt",
+      "content": {
+        "sha256": "9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31",
+        "size_bytes": 34228
+      },
+      "object_key": "libraries/legal/sha256/9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31.txt"
+    },
+    {
+      "legal_document_id": "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c",
+      "kind": "notice",
+      "title": "Intel XeSS SDK Third-Party Programs",
+      "format": "text",
+      "file_name": "THIRD-PARTY-PROGRAMS.txt",
+      "content": {
+        "sha256": "e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c",
+        "size_bytes": 35788
+      },
+      "object_key": "libraries/legal/sha256/e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c.txt"
+    }
+  ],
   "artifacts": [
-    {
-      "artifact_id": "sha256:0b423a2f733cbd25c62d15150c92fef361756183776e3d1a0ce9de569431b70b",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.0.0.59",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "0b423a2f733cbd25c62d15150c92fef361756183776e3d1a0ce9de569431b70b",
-        "size_bytes": 9271976
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/2b8f8a0bb8508ed3bcf42ffa63388e6fee8bdbfd31743c0eda322adf49e23c18.dll.zst",
-        "sha256": "2b8f8a0bb8508ed3bcf42ffa63388e6fee8bdbfd31743c0eda322adf49e23c18",
-        "size_bytes": 1439809
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2021-03-31T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:4ae10f9bec7391343898da0e22f024c6dea0bd03d754901af2b8a1ed893d7706",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.0.1.12",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "4ae10f9bec7391343898da0e22f024c6dea0bd03d754901af2b8a1ed893d7706",
-        "size_bytes": 9272488
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/16f439b9494a5023a5167c30a0906c25f3f0940638e0812fac0a952449857e81.dll.zst",
-        "sha256": "16f439b9494a5023a5167c30a0906c25f3f0940638e0812fac0a952449857e81",
-        "size_bytes": 1445123
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2021-03-31T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:e8cfbeff0fa7d3c12aa83f18f294808f59f9cfedc91de605fc7958a9a916c2c3",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.1.0.18",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "e8cfbeff0fa7d3c12aa83f18f294808f59f9cfedc91de605fc7958a9a916c2c3",
-        "size_bytes": 15275688
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/f50d236399583d68c47ee0440e0e662ea2acd32373e731ca53612c9fcbfca811.dll.zst",
-        "sha256": "f50d236399583d68c47ee0440e0e662ea2acd32373e731ca53612c9fcbfca811",
-        "size_bytes": 3760770
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2021-03-31T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:d393a7a224ed758959de58160f0f5bb58ef272c3aaff5bc76afda4ab0c16f3cf",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.1.0.21",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "d393a7a224ed758959de58160f0f5bb58ef272c3aaff5bc76afda4ab0c16f3cf",
-        "size_bytes": 15275688
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/12ed48185a7a43562bf42fc38b949410ab4e1529bbbc8ee662721cbf0f588e7b.dll.zst",
-        "sha256": "12ed48185a7a43562bf42fc38b949410ab4e1529bbbc8ee662721cbf0f588e7b",
-        "size_bytes": 3760706
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2021-03-31T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:0462045ab6d5ef1cc089fab72caa4aea8b5c385ac42f2e626fa55121b14102f3",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.2.0.10",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "0462045ab6d5ef1cc089fab72caa4aea8b5c385ac42f2e626fa55121b14102f3",
-        "size_bytes": 67777552
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/16c925119ed258f1f2eeb90e9feb64b1c630520e66bbb8c0b6896804a401f94c.dll.zst",
-        "sha256": "16c925119ed258f1f2eeb90e9feb64b1c630520e66bbb8c0b6896804a401f94c",
-        "size_bytes": 24038523
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2023-03-13T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:3170283f328923dcf74e5c86fb08cea88551b4404046ebfbe16d6d3ab56a7d6c",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.2.0.13",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "3170283f328923dcf74e5c86fb08cea88551b4404046ebfbe16d6d3ab56a7d6c",
-        "size_bytes": 67777552
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/2857e4ef1ee76f79392ca3753f4eb198ada78b649c1a02ebd54276e147e02b20.dll.zst",
-        "sha256": "2857e4ef1ee76f79392ca3753f4eb198ada78b649c1a02ebd54276e147e02b20",
-        "size_bytes": 24043444
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2023-03-13T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:d7f0e1f0e6bccdd52b331d2d126abf1bfc30fce18a3f0255b876086eed70d4ca",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.3.0.28",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "d7f0e1f0e6bccdd52b331d2d126abf1bfc30fce18a3f0255b876086eed70d4ca",
-        "size_bytes": 74108944
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/d8004707aa605cebb051a8f4022a96dbce7ec6974607837eaca8dfe758e529da.dll.zst",
-        "sha256": "d8004707aa605cebb051a8f4022a96dbce7ec6974607837eaca8dfe758e529da",
-        "size_bytes": 26703255
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2023-03-13T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:703ab8debc05ae209f6e4622cc06edf9f95a241f7ce68ee75c8955564d36ad70",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "1.3.1.32",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "703ab8debc05ae209f6e4622cc06edf9f95a241f7ce68ee75c8955564d36ad70",
-        "size_bytes": 67095056
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/f5e58813200c1c6aa8f774a27517d6f8170b142e27b5ddc071ba75036c55ddff.dll.zst",
-        "sha256": "f5e58813200c1c6aa8f774a27517d6f8170b142e27b5ddc071ba75036c55ddff",
-        "size_bytes": 26352490
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:208c63f138b456cc579a68bdeb710ea5247a7839c75fc200e0f322930e0d00ef",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.0.18",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "208c63f138b456cc579a68bdeb710ea5247a7839c75fc200e0f322930e0d00ef",
-        "size_bytes": 120278928
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/16e350f7c7eddc54b7bd036cdc95ef9403760f7a96dab12e51295725b4329545.dll.zst",
-        "sha256": "16e350f7c7eddc54b7bd036cdc95ef9403760f7a96dab12e51295725b4329545",
-        "size_bytes": 45047182
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:1d2589e7e0c78888018cfeac8b889ca58b1f592deba0fcdea3d09d4fabd59448",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.1.29",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "1d2589e7e0c78888018cfeac8b889ca58b1f592deba0fcdea3d09d4fabd59448",
-        "size_bytes": 120956304
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/753c16df13b51f6a1283ed08cca2e4b694d760cf72ce05d6bf9bff807307a6df.dll.zst",
-        "sha256": "753c16df13b51f6a1283ed08cca2e4b694d760cf72ce05d6bf9bff807307a6df",
-        "size_bytes": 47483983
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:5950e6383ae18768bccd037de6804e43fdc946d1835064b59dc230bc14b5a464",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.1.32",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "5950e6383ae18768bccd037de6804e43fdc946d1835064b59dc230bc14b5a464",
-        "size_bytes": 124195680
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/9f8748e86c7fcdc67744c941dcd3ff67ec7084edf78b273b72984a5854ff007f.dll.zst",
-        "sha256": "9f8748e86c7fcdc67744c941dcd3ff67ec7084edf78b273b72984a5854ff007f",
-        "size_bytes": 49887272
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:4b2d2e6a6c90e3f1b3f9897264facf06729206fdb3e10138157021784c49a24d",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.1.34",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "4b2d2e6a6c90e3f1b3f9897264facf06729206fdb3e10138157021784c49a24d",
-        "size_bytes": 124186512
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/0a125f21ee3a9434f8b1870342e516cc7d71d0044ce6f09585a16011819423b7.dll.zst",
-        "sha256": "0a125f21ee3a9434f8b1870342e516cc7d71d0044ce6f09585a16011819423b7",
-        "size_bytes": 49874078
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:23b3ebc802185f537423965c2ee9c8ad8adb5d137b004ce027a4088e629b5fd3",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.1.41",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "23b3ebc802185f537423965c2ee9c8ad8adb5d137b004ce027a4088e629b5fd3",
-        "size_bytes": 77771112
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/a2b786e4ae620094c44cda874ac3fe77063fad61023256652b9d5011be2cea2d.dll.zst",
-        "sha256": "a2b786e4ae620094c44cda874ac3fe77063fad61023256652b9d5011be2cea2d",
-        "size_bytes": 29095953
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:a49f487f15a815c1242b659182cc9365b6aff2d94051d25d5379316bdb11a2dd",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.2.53",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "a49f487f15a815c1242b659182cc9365b6aff2d94051d25d5379316bdb11a2dd",
-        "size_bytes": 77788528
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/dcf5d89a194ac99e3b8dc458010c91d7a257aa4ea07960b54e4cee779022a4cc.dll.zst",
-        "sha256": "dcf5d89a194ac99e3b8dc458010c91d7a257aa4ea07960b54e4cee779022a4cc",
-        "size_bytes": 29083968
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
-      "library_id": "libxess",
-      "file_name": "libxess.dll",
-      "file_version": "2.0.2.68",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
-        "size_bytes": 77795704
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/616ff672310c6f4d12a8ae6cfb7419cee213711b90c8f7ac9196fc70dfd6eeb7.dll.zst",
-        "sha256": "616ff672310c6f4d12a8ae6cfb7419cee213711b90c8f7ac9196fc70dfd6eeb7",
-        "size_bytes": 29085832
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:899bcf6c1168a47cc4c23dba3a06b314e5b3e70b9fe7f3550cb4f595867f6dc4",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "0.9.11.9",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "899bcf6c1168a47cc4c23dba3a06b314e5b3e70b9fe7f3550cb4f595867f6dc4",
-        "size_bytes": 63566736
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/e7760b21935d5e056a7e334797b5e113cec0eefcbf2af87f70390884f46ef052.dll.zst",
-        "sha256": "e7760b21935d5e056a7e334797b5e113cec0eefcbf2af87f70390884f46ef052",
-        "size_bytes": 7353118
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:c7bccfdff498ad313e7780439d2036c5e34ec715ff3d90900de8870957d09ec0",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.0.0.16",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "c7bccfdff498ad313e7780439d2036c5e34ec715ff3d90900de8870957d09ec0",
-        "size_bytes": 59355536
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/8801015d754ec80f225ea5c0f07dfdfd4a1b05ae84a327aab83783da04634c53.dll.zst",
-        "sha256": "8801015d754ec80f225ea5c0f07dfdfd4a1b05ae84a327aab83783da04634c53",
-        "size_bytes": 6364153
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:784c391b00b08edfc9b3cd65fc007a9e150a434afdc360fd1500b6fc27c55c27",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.0.1.26",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "784c391b00b08edfc9b3cd65fc007a9e150a434afdc360fd1500b6fc27c55c27",
-        "size_bytes": 60188048
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/3872653ea5b20e85a3089bc9c310b907d13b866d77f3a4fc5e185ce20365a783.dll.zst",
-        "sha256": "3872653ea5b20e85a3089bc9c310b907d13b866d77f3a4fc5e185ce20365a783",
-        "size_bytes": 6961371
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:73262a05f073f5a2b7ba45033c99068ca2c594ee58cc7b1eb22a4867db5eba92",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.0.1.31",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "73262a05f073f5a2b7ba45033c99068ca2c594ee58cc7b1eb22a4867db5eba92",
-        "size_bytes": 60192144
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/a87bd7012a5bf0e04ae1b68584fbb28c7fd0a3185bf05f896210ef4f581d3383.dll.zst",
-        "sha256": "a87bd7012a5bf0e04ae1b68584fbb28c7fd0a3185bf05f896210ef4f581d3383",
-        "size_bytes": 6974568
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:d82d9adab239af4e49063d0c4d2e1134529f3963879998d7e0df43a32514ca84",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.1.0.19",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "d82d9adab239af4e49063d0c4d2e1134529f3963879998d7e0df43a32514ca84",
-        "size_bytes": 45557608
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/9101a56577bdfeae090b35af10d199c49b1e41a7336e933f43b81a41ec3ba5f5.dll.zst",
-        "sha256": "9101a56577bdfeae090b35af10d199c49b1e41a7336e933f43b81a41ec3ba5f5",
-        "size_bytes": 22433394
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:7fa2116e987a6fcc621e7be791461ca49988490ee3a4bc008ebb9796a057e1db",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.2.0.87",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "7fa2116e987a6fcc621e7be791461ca49988490ee3a4bc008ebb9796a057e1db",
-        "size_bytes": 45541752
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/fd4f296862c016d7439b3da2eaca2ba7144e197a37faeec80ae61171e7fcfb68.dll.zst",
-        "sha256": "fd4f296862c016d7439b3da2eaca2ba7144e197a37faeec80ae61171e7fcfb68",
-        "size_bytes": 22725690
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.2.2.118",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
-        "size_bytes": 47119216
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/131916a2dbe98bef3b0835518acd1039d20a5d8f8f5d3d47a24352fa65cbb4e1.dll.zst",
-        "sha256": "131916a2dbe98bef3b0835518acd1039d20a5d8f8f5d3d47a24352fa65cbb4e1",
-        "size_bytes": 23492931
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:9d074c7cb931d450875373372da832304b82a2dcac51cb17df44b49f00e2961c",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.3.1.68",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "9d074c7cb931d450875373372da832304b82a2dcac51cb17df44b49f00e2961c",
-        "size_bytes": 22955384
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/fa04bd77031d867c4178ae7f0001a7fff4dfb1969bfc44fbbfb6a6aa314d70fc.dll.zst",
-        "sha256": "fa04bd77031d867c4178ae7f0001a7fff4dfb1969bfc44fbbfb6a6aa314d70fc",
-        "size_bytes": 9774818
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2026-01-27T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:ec5e0c65e075570c6ede72618bb666d0be0c2e10b2ea9762c0fe8cb8e375ab27",
-      "library_id": "libxess_fg",
-      "file_name": "libxess_fg.dll",
-      "file_version": "1.3.1.78",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "ec5e0c65e075570c6ede72618bb666d0be0c2e10b2ea9762c0fe8cb8e375ab27",
-        "size_bytes": 22957432
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/1552afbe05585ead9fd2259e027a576817a115ad319893f2b7c4b7a2fe5305a3.dll.zst",
-        "sha256": "1552afbe05585ead9fd2259e027a576817a115ad319893f2b7c4b7a2fe5305a3",
-        "size_bytes": 9729526
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2026-01-27T00:00:00Z"
-      }
-    },
     {
       "artifact_id": "sha256:1ef92ada74933c6f6764af7b3dc19931b394599beca090962368dd459da20387",
       "library_id": "libxell",
@@ -528,7 +110,9 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2024-11-19T14:10:38.000Z"
       }
     },
     {
@@ -549,7 +133,9 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-02-27T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2025-02-04T17:33:12.000Z"
       }
     },
     {
@@ -564,13 +150,15 @@
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/97c12e3778baab69e8f62ab1a3674ae28b39e926901df7f513a5d66b699f0d51.dll.zst",
-        "sha256": "97c12e3778baab69e8f62ab1a3674ae28b39e926901df7f513a5d66b699f0d51",
-        "size_bytes": 99320
+        "object_key": "libraries/blobs/sha256/057111ad03b519151ae40602be3d2defaacdc37be24559b4c8802906a6a2c13b.dll.zst",
+        "sha256": "057111ad03b519151ae40602be3d2defaacdc37be24559b4c8802906a6a2c13b",
+        "size_bytes": 109334
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-03-12T15:40:23.000Z"
       }
     },
     {
@@ -585,34 +173,15 @@
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/ebba4f7a761f2db7b4eb2037852b5f2bffa1735d3b266d58950cda2740bf043c.dll.zst",
-        "sha256": "ebba4f7a761f2db7b4eb2037852b5f2bffa1735d3b266d58950cda2740bf043c",
-        "size_bytes": 102107
+        "object_key": "libraries/blobs/sha256/b5e0ee9726e4e69a92ab1fc03918c4c3d65878e4277c2f4a2a94b1dab5682e6f.dll.zst",
+        "sha256": "b5e0ee9726e4e69a92ab1fc03918c4c3d65878e4277c2f4a2a94b1dab5682e6f",
+        "size_bytes": 112541
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
-      "library_id": "libxell",
-      "file_name": "libxell.dll",
-      "file_version": "1.2.1.13",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
-        "size_bytes": 360312
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/8ae8dd473edbd78a589840fac76a8a47f3fcdd7b98e9dae1658683d8b503ca3b.dll.zst",
-        "sha256": "8ae8dd473edbd78a589840fac76a8a47f3fcdd7b98e9dae1658683d8b503ca3b",
-        "size_bytes": 102110
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-07-17T21:30:25.000Z"
       }
     },
     {
@@ -627,34 +196,176 @@
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/28f70f633ffea8d0c8d42da0159c86502901a703ccd6b49cc9060fa2cb74cb76.dll.zst",
-        "sha256": "28f70f633ffea8d0c8d42da0159c86502901a703ccd6b49cc9060fa2cb74cb76",
-        "size_bytes": 118791
+        "object_key": "libraries/blobs/sha256/282768e2857a8604a82ebd4d8f000400696ef7b753a92750d2dd7d1965cc5a73.dll.zst",
+        "sha256": "282768e2857a8604a82ebd4d8f000400696ef7b753a92750d2dd7d1965cc5a73",
+        "size_bytes": 130464
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2026-01-27T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "B9DB0C4AC026EED174330D824A05EA655322F4D2",
+        "signed_at": "2026-03-03T11:31:50.000Z"
       }
     },
     {
-      "artifact_id": "sha256:9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
-      "library_id": "libxess_dx11",
-      "file_name": "libxess_dx11.dll",
-      "file_version": "2.0.1.41",
+      "artifact_id": "sha256:7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.2.1.13",
       "architecture": "X64",
       "dll": {
-        "sha256": "9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
-        "size_bytes": 147816
+        "sha256": "7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
+        "size_bytes": 360312
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/2108266b584bde427dd21b5d66bbf11a86a52f7b6f8e3bb84dfe7eb6b40f9b7e.dll.zst",
-        "sha256": "2108266b584bde427dd21b5d66bbf11a86a52f7b6f8e3bb84dfe7eb6b40f9b7e",
-        "size_bytes": 38529
+        "object_key": "libraries/blobs/sha256/bf0d5b17142d0f2917cdc2b22d20f06f5bf103cb17ab00f628044e9e0b0a0f82.dll.zst",
+        "sha256": "bf0d5b17142d0f2917cdc2b22d20f06f5bf103cb17ab00f628044e9e0b0a0f82",
+        "size_bytes": 112641
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-10-13T11:35:04.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:e8cfbeff0fa7d3c12aa83f18f294808f59f9cfedc91de605fc7958a9a916c2c3",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.1.0.18",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e8cfbeff0fa7d3c12aa83f18f294808f59f9cfedc91de605fc7958a9a916c2c3",
+        "size_bytes": 15275688
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/f50d236399583d68c47ee0440e0e662ea2acd32373e731ca53612c9fcbfca811.dll.zst",
+        "sha256": "f50d236399583d68c47ee0440e0e662ea2acd32373e731ca53612c9fcbfca811",
+        "size_bytes": 3760770
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, L=Santa Clara, S=California, C=US",
+        "thumbprint": "83F0620291E0CC9CD9DD678E9F9844DB87CE1FFA",
+        "signed_at": "2023-02-17T17:33:41.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:0462045ab6d5ef1cc089fab72caa4aea8b5c385ac42f2e626fa55121b14102f3",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.2.0.10",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "0462045ab6d5ef1cc089fab72caa4aea8b5c385ac42f2e626fa55121b14102f3",
+        "size_bytes": 67777552
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/16c925119ed258f1f2eeb90e9feb64b1c630520e66bbb8c0b6896804a401f94c.dll.zst",
+        "sha256": "16c925119ed258f1f2eeb90e9feb64b1c630520e66bbb8c0b6896804a401f94c",
+        "size_bytes": 24038523
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2F395649AEAD9175BBF761901050546E7A10AA0C",
+        "signed_at": "2023-07-12T16:42:24.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:208c63f138b456cc579a68bdeb710ea5247a7839c75fc200e0f322930e0d00ef",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.0.18",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "208c63f138b456cc579a68bdeb710ea5247a7839c75fc200e0f322930e0d00ef",
+        "size_bytes": 120278928
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/16e350f7c7eddc54b7bd036cdc95ef9403760f7a96dab12e51295725b4329545.dll.zst",
+        "sha256": "16e350f7c7eddc54b7bd036cdc95ef9403760f7a96dab12e51295725b4329545",
+        "size_bytes": 45047182
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2024-11-19T21:52:24.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:1d2589e7e0c78888018cfeac8b889ca58b1f592deba0fcdea3d09d4fabd59448",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.29",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "1d2589e7e0c78888018cfeac8b889ca58b1f592deba0fcdea3d09d4fabd59448",
+        "size_bytes": 120956304
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/753c16df13b51f6a1283ed08cca2e4b694d760cf72ce05d6bf9bff807307a6df.dll.zst",
+        "sha256": "753c16df13b51f6a1283ed08cca2e4b694d760cf72ce05d6bf9bff807307a6df",
+        "size_bytes": 47483983
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2025-01-10T21:34:34.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:5950e6383ae18768bccd037de6804e43fdc946d1835064b59dc230bc14b5a464",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.32",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "5950e6383ae18768bccd037de6804e43fdc946d1835064b59dc230bc14b5a464",
+        "size_bytes": 124195680
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/9f8748e86c7fcdc67744c941dcd3ff67ec7084edf78b273b72984a5854ff007f.dll.zst",
+        "sha256": "9f8748e86c7fcdc67744c941dcd3ff67ec7084edf78b273b72984a5854ff007f",
+        "size_bytes": 49887272
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2025-01-22T03:02:22.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:4b2d2e6a6c90e3f1b3f9897264facf06729206fdb3e10138157021784c49a24d",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.34",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "4b2d2e6a6c90e3f1b3f9897264facf06729206fdb3e10138157021784c49a24d",
+        "size_bytes": 124186512
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/0a125f21ee3a9434f8b1870342e516cc7d71d0044ce6f09585a16011819423b7.dll.zst",
+        "sha256": "0a125f21ee3a9434f8b1870342e516cc7d71d0044ce6f09585a16011819423b7",
+        "size_bytes": 49874078
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2025-02-04T21:51:57.000Z"
       }
     },
     {
@@ -669,13 +380,38 @@
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/bbecae57a9f1d62018ff269534733882c3f4a37ed8820cbf252b14c34489ca7d.dll.zst",
-        "sha256": "bbecae57a9f1d62018ff269534733882c3f4a37ed8820cbf252b14c34489ca7d",
-        "size_bytes": 39938
+        "object_key": "libraries/blobs/sha256/d5eaeea65527cc38ffdbc4107a882399e3636b916c06ee6424ff04ba4ca775ad.dll.zst",
+        "sha256": "d5eaeea65527cc38ffdbc4107a882399e3636b916c06ee6424ff04ba4ca775ad",
+        "size_bytes": 43670
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-07-03T08:08:13.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
+      "library_id": "libxess_dx11",
+      "file_name": "libxess_dx11.dll",
+      "file_version": "2.0.1.41",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
+        "size_bytes": 147816
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/c6ef5b39e0a1fcf859692b2f06ec7df19f1fc4ae9d1d2a9f94b610660555f60b.dll.zst",
+        "sha256": "c6ef5b39e0a1fcf859692b2f06ec7df19f1fc4ae9d1d2a9f94b610660555f60b",
+        "size_bytes": 42352
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-03-12T17:49:26.000Z"
       }
     },
     {
@@ -690,20 +426,614 @@
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/d1ddeb0a2794ed7f2136f8cb929d22d4aa0ec514f879d3e75a24084ac2e6d50f.dll.zst",
-        "sha256": "d1ddeb0a2794ed7f2136f8cb929d22d4aa0ec514f879d3e75a24084ac2e6d50f",
-        "size_bytes": 39928
+        "object_key": "libraries/blobs/sha256/75521fc6af619b9848061daa7a6eb525689fd472a08ee94ba1c414d158534f1d.dll.zst",
+        "sha256": "75521fc6af619b9848061daa7a6eb525689fd472a08ee94ba1c414d158534f1d",
+        "size_bytes": 43666
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2025-02-19T00:00:00Z"
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-10-17T14:23:44.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:899bcf6c1168a47cc4c23dba3a06b314e5b3e70b9fe7f3550cb4f595867f6dc4",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "0.9.11.9",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "899bcf6c1168a47cc4c23dba3a06b314e5b3e70b9fe7f3550cb4f595867f6dc4",
+        "size_bytes": 63566736
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/e7760b21935d5e056a7e334797b5e113cec0eefcbf2af87f70390884f46ef052.dll.zst",
+        "sha256": "e7760b21935d5e056a7e334797b5e113cec0eefcbf2af87f70390884f46ef052",
+        "size_bytes": 7353118
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2024-10-16T07:41:43.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:c7bccfdff498ad313e7780439d2036c5e34ec715ff3d90900de8870957d09ec0",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.0.0.16",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "c7bccfdff498ad313e7780439d2036c5e34ec715ff3d90900de8870957d09ec0",
+        "size_bytes": 59355536
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/8801015d754ec80f225ea5c0f07dfdfd4a1b05ae84a327aab83783da04634c53.dll.zst",
+        "sha256": "8801015d754ec80f225ea5c0f07dfdfd4a1b05ae84a327aab83783da04634c53",
+        "size_bytes": 6364153
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2024-11-20T16:48:11.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:784c391b00b08edfc9b3cd65fc007a9e150a434afdc360fd1500b6fc27c55c27",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.0.1.26",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "784c391b00b08edfc9b3cd65fc007a9e150a434afdc360fd1500b6fc27c55c27",
+        "size_bytes": 60188048
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/3872653ea5b20e85a3089bc9c310b907d13b866d77f3a4fc5e185ce20365a783.dll.zst",
+        "sha256": "3872653ea5b20e85a3089bc9c310b907d13b866d77f3a4fc5e185ce20365a783",
+        "size_bytes": 6961371
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2025-01-16T16:48:31.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:73262a05f073f5a2b7ba45033c99068ca2c594ee58cc7b1eb22a4867db5eba92",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.0.1.31",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "73262a05f073f5a2b7ba45033c99068ca2c594ee58cc7b1eb22a4867db5eba92",
+        "size_bytes": 60192144
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/a87bd7012a5bf0e04ae1b68584fbb28c7fd0a3185bf05f896210ef4f581d3383.dll.zst",
+        "sha256": "a87bd7012a5bf0e04ae1b68584fbb28c7fd0a3185bf05f896210ef4f581d3383",
+        "size_bytes": 6974568
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2025-02-04T14:46:44.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:7fa2116e987a6fcc621e7be791461ca49988490ee3a4bc008ebb9796a057e1db",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.2.0.87",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "7fa2116e987a6fcc621e7be791461ca49988490ee3a4bc008ebb9796a057e1db",
+        "size_bytes": 45541752
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/4204ab0db128e5bc8f853d97f2515ddf1e3bee6427afce2745255da182778d5e.dll.zst",
+        "sha256": "4204ab0db128e5bc8f853d97f2515ddf1e3bee6427afce2745255da182778d5e",
+        "size_bytes": 23039393
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-07-19T00:01:34.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:9d074c7cb931d450875373372da832304b82a2dcac51cb17df44b49f00e2961c",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.3.1.68",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "9d074c7cb931d450875373372da832304b82a2dcac51cb17df44b49f00e2961c",
+        "size_bytes": 22955384
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/2231d5c0d24238db10b040af45eb7ff398bc9de9ac71da8656997ca5f495ad44.dll.zst",
+        "sha256": "2231d5c0d24238db10b040af45eb7ff398bc9de9ac71da8656997ca5f495ad44",
+        "size_bytes": 12200721
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "B9DB0C4AC026EED174330D824A05EA655322F4D2",
+        "signed_at": "2026-03-03T16:13:54.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:d82d9adab239af4e49063d0c4d2e1134529f3963879998d7e0df43a32514ca84",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.1.0.19",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d82d9adab239af4e49063d0c4d2e1134529f3963879998d7e0df43a32514ca84",
+        "size_bytes": 45557608
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/841511e08aa60f3354683b2863036b0faa6ebb31efb638931ee809f863bcf5d3.dll.zst",
+        "sha256": "841511e08aa60f3354683b2863036b0faa6ebb31efb638931ee809f863bcf5d3",
+        "size_bytes": 23108329
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-03-13T13:01:34.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.2.2.118",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
+        "size_bytes": 47119216
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/86b76a84748d25b118c0f0db42a152db448d2e03238e03a22cdf8aff9e9b23a4.dll.zst",
+        "sha256": "86b76a84748d25b118c0f0db42a152db448d2e03238e03a22cdf8aff9e9b23a4",
+        "size_bytes": 24052719
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-10-21T22:14:42.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:ec5e0c65e075570c6ede72618bb666d0be0c2e10b2ea9762c0fe8cb8e375ab27",
+      "library_id": "libxess_fg",
+      "file_name": "libxess_fg.dll",
+      "file_version": "1.3.1.78",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "ec5e0c65e075570c6ede72618bb666d0be0c2e10b2ea9762c0fe8cb8e375ab27",
+        "size_bytes": 22957432
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/b5b11cd3f0fd22407c19384bb1ba5b5e7ab1f784445882441cb268370f083628.dll.zst",
+        "sha256": "b5b11cd3f0fd22407c19384bb1ba5b5e7ab1f784445882441cb268370f083628",
+        "size_bytes": 12136419
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "B9DB0C4AC026EED174330D824A05EA655322F4D2",
+        "signed_at": "2026-03-31T00:05:48.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:0b423a2f733cbd25c62d15150c92fef361756183776e3d1a0ce9de569431b70b",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.0.0.59",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "0b423a2f733cbd25c62d15150c92fef361756183776e3d1a0ce9de569431b70b",
+        "size_bytes": 9271976
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/b033c3db5cebcbec4f2787e0d02b1e3e75a6b8fc65daaa9928e08a00f273dfbe.dll.zst",
+        "sha256": "b033c3db5cebcbec4f2787e0d02b1e3e75a6b8fc65daaa9928e08a00f273dfbe",
+        "size_bytes": 2090167
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, L=Santa Clara, S=California, C=US",
+        "thumbprint": "83F0620291E0CC9CD9DD678E9F9844DB87CE1FFA",
+        "signed_at": "2022-09-26T09:48:09.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:23b3ebc802185f537423965c2ee9c8ad8adb5d137b004ce027a4088e629b5fd3",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.1.41",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "23b3ebc802185f537423965c2ee9c8ad8adb5d137b004ce027a4088e629b5fd3",
+        "size_bytes": 77771112
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/f5b7de73c20031dd0c8ebf95116049dcd5d7f5248149cc61917bbdb46a4a63f5.dll.zst",
+        "sha256": "f5b7de73c20031dd0c8ebf95116049dcd5d7f5248149cc61917bbdb46a4a63f5",
+        "size_bytes": 35383853
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-03-12T17:49:25.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.2.68",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
+        "size_bytes": 77795704
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/bb1535fe9389e0067e8fb2944b83da1ff0c25d5503f070e811446c128ffdedfb.dll.zst",
+        "sha256": "bb1535fe9389e0067e8fb2944b83da1ff0c25d5503f070e811446c128ffdedfb",
+        "size_bytes": 35371038
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-10-17T14:23:43.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:3170283f328923dcf74e5c86fb08cea88551b4404046ebfbe16d6d3ab56a7d6c",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.2.0.13",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "3170283f328923dcf74e5c86fb08cea88551b4404046ebfbe16d6d3ab56a7d6c",
+        "size_bytes": 67777552
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/200e0fa43560acbac3cd9d98974a464a910c16bf6b8a4917a0f867dfd5d41888.dll.zst",
+        "sha256": "200e0fa43560acbac3cd9d98974a464a910c16bf6b8a4917a0f867dfd5d41888",
+        "size_bytes": 29246818
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2F395649AEAD9175BBF761901050546E7A10AA0C",
+        "signed_at": "2023-07-27T11:36:40.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:4ae10f9bec7391343898da0e22f024c6dea0bd03d754901af2b8a1ed893d7706",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.0.1.12",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "4ae10f9bec7391343898da0e22f024c6dea0bd03d754901af2b8a1ed893d7706",
+        "size_bytes": 9272488
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/ab7507f4a17c7a7665edb6e9d1198c8c68276980c03ae82717552b9ba5ee96a6.dll.zst",
+        "sha256": "ab7507f4a17c7a7665edb6e9d1198c8c68276980c03ae82717552b9ba5ee96a6",
+        "size_bytes": 2090999
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, L=Santa Clara, S=California, C=US",
+        "thumbprint": "83F0620291E0CC9CD9DD678E9F9844DB87CE1FFA",
+        "signed_at": "2022-10-12T10:43:33.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:703ab8debc05ae209f6e4622cc06edf9f95a241f7ce68ee75c8955564d36ad70",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.3.1.32",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "703ab8debc05ae209f6e4622cc06edf9f95a241f7ce68ee75c8955564d36ad70",
+        "size_bytes": 67095056
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/4f6cf2359fffb0139dd26a85636c07348aaa72611a9a55bf691c6ef4d4ee24b7.dll.zst",
+        "sha256": "4f6cf2359fffb0139dd26a85636c07348aaa72611a9a55bf691c6ef4d4ee24b7",
+        "size_bytes": 32275241
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "9E8931A2F040B8A56C589E9D0850021DB3CCE39A",
+        "signed_at": "2024-06-27T14:30:04.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:a49f487f15a815c1242b659182cc9365b6aff2d94051d25d5379316bdb11a2dd",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "2.0.2.53",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "a49f487f15a815c1242b659182cc9365b6aff2d94051d25d5379316bdb11a2dd",
+        "size_bytes": 77788528
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/6f20905f1a8f815c3308cc5ba39370c4c30beff4eea549bd7ce15e03b8bb1ed0.dll.zst",
+        "sha256": "6f20905f1a8f815c3308cc5ba39370c4c30beff4eea549bd7ce15e03b8bb1ed0",
+        "size_bytes": 35384430
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
+        "signed_at": "2025-07-03T08:08:12.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:d393a7a224ed758959de58160f0f5bb58ef272c3aaff5bc76afda4ab0c16f3cf",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.1.0.21",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d393a7a224ed758959de58160f0f5bb58ef272c3aaff5bc76afda4ab0c16f3cf",
+        "size_bytes": 15275688
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/951f3243c7a08ebbfbdc7f53b36747f378c934d049326865f3a45b72152df056.dll.zst",
+        "sha256": "951f3243c7a08ebbfbdc7f53b36747f378c934d049326865f3a45b72152df056",
+        "size_bytes": 4500545
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, L=Santa Clara, S=California, C=US",
+        "thumbprint": "83F0620291E0CC9CD9DD678E9F9844DB87CE1FFA",
+        "signed_at": "2023-03-08T19:20:21.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:d7f0e1f0e6bccdd52b331d2d126abf1bfc30fce18a3f0255b876086eed70d4ca",
+      "library_id": "libxess",
+      "file_name": "libxess.dll",
+      "file_version": "1.3.0.28",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d7f0e1f0e6bccdd52b331d2d126abf1bfc30fce18a3f0255b876086eed70d4ca",
+        "size_bytes": 74108944
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/b6103ab77e28fd6f3dc73722646afedb9a1d70210cb35137898e69e2e6545296.dll.zst",
+        "sha256": "b6103ab77e28fd6f3dc73722646afedb9a1d70210cb35137898e69e2e6545296",
+        "size_bytes": 33421319
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "2F395649AEAD9175BBF761901050546E7A10AA0C",
+        "signed_at": "2024-03-11T16:59:09.000Z"
       }
     }
   ],
   "packages": [
     {
-      "package_id": "libxess_1.0.0.59",
-      "revision_sha256": "8760f5aaa65858680c0888dd0b6694b1e1c28b7607957f96b9cab1ebfe29e161",
+      "package_id": "libxell_1.0.0.139",
+      "revision_sha256": "741886781a3cb41e6ddd6aa6b1250c0c9923f2dba25ee6e572393cd9006ab076",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.0.0.139",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_id": "sha256:1ef92ada74933c6f6764af7b3dc19931b394599beca090962368dd459da20387",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.0.1.6",
+      "revision_sha256": "51739a2f9c8888b39f2d9f889192d66094ac1493ca0556cfa351e91baa3e6df8",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.0.1.6",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_id": "sha256:d025ed9eea2807c7aea8a99ec99c9adacd6f647a7313a51756930f37f5d3896d",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.1.0.6.f460bd1c33a7844902f5b6d3151fc92d94dd4568a485c8043cf06bd14f806515",
+      "revision_sha256": "dbd2108b0548fb6af98750b6058eca7b8f785f5e39feb49d927d776b3b55b5c4",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.1.0.6",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.0.1",
+        "commit_sha": "f03bde3a73b22a85b39d9bc90ccbfcec2b97d611"
+      },
+      "legal_document_ids": [
+        "license.e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d",
+        "notice.7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:0b127d64483471795c02785e124746116b604c486a2c1cb3a10e0754792de018",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.2.0.9.c7922b252490f3fc1748bdbe45faf7638a1e5e43d8347822f23e3517936014ac",
+      "revision_sha256": "4314cdf5e61b366b79c7049408eb91e02164e84f0abab2b1937ce9e16445b8b9",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.2.0.9",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.1.0",
+        "commit_sha": "c159ef43919fdfc7e2470cb4953f8e21fa5814cd"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:5ce63652eee5720203e0e41cc97eb45ee541c499c8a51d4bdb1e8fe4eaef4890",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.2.1.13.14946e89a8dd0ecf11808650962b701e1aa5747df7e7a7016a326a48d6983b1d",
+      "revision_sha256": "6fac5d766c5123337acfd689f035a52d0c93d89b877e19611d9fb331c93889eb",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.2.1.13",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.1.1",
+        "commit_sha": "b2e8f705ca9a36586010fe7615a470fcf0608c35"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxell_1.3.0.5.dfd9befa19b12478b2b3361023921d82e1859e6d8b3c4d58cab7b7a589c87438",
+      "revision_sha256": "b49dbae8ef0d7958be2cd64b9436b5779f6020a3c067611bb5aed97e07f28011",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.3.0.5",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v3.0.1",
+        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:61aeeab7fdcfb6d1742f86c14c68c663d759607d01a6132645c857291eaebb86",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_1.0.0.59.ba63d405d2bda4b8f86bd481ca3f366689fdb3ba22517e01f80264bcc1b0c974",
+      "revision_sha256": "355bf8d6dae551849033ff7bed0df412db15e00b60d62e3a5d3e4c2ec26c057c",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -716,6 +1046,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v1.0.0",
+        "commit_sha": "0d32d340598c87bba6f632127231a47e9412157d"
+      },
+      "legal_document_ids": [
+        "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1"
+      ],
       "members": [
         {
           "artifact_id": "sha256:0b423a2f733cbd25c62d15150c92fef361756183776e3d1a0ce9de569431b70b",
@@ -725,8 +1065,8 @@
       ]
     },
     {
-      "package_id": "libxess_1.0.1.12",
-      "revision_sha256": "f600b7989ab904b1de284ebeea63dd5b7dc3790845251a239b5fd59b486aae14",
+      "package_id": "libxess_1.0.1.12.5745a63e5a9b9362683124c485b4764afa9387001d3f3f7b537a3dc500125d6b",
+      "revision_sha256": "9063695a2202fa261c2781db524f1ef8056d30e2e87b6a6b40658a0c80f23135",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -739,6 +1079,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v1.0.1",
+        "commit_sha": "b47d53524c6242decc88de2cb66769d72f7f6ff1"
+      },
+      "legal_document_ids": [
+        "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1"
+      ],
       "members": [
         {
           "artifact_id": "sha256:4ae10f9bec7391343898da0e22f024c6dea0bd03d754901af2b8a1ed893d7706",
@@ -771,8 +1121,8 @@
       ]
     },
     {
-      "package_id": "libxess_1.1.0.21",
-      "revision_sha256": "f147ff02e018695b8d56d39823bd9b04decd7f9d5255dd92c84880735163e38a",
+      "package_id": "libxess_1.1.0.21.0aaec73d2686bc101ec8ad3d019e6a21eb8bfd88ae5c91270c2fb182c83d1119",
+      "revision_sha256": "a2aee3ab6632e30baa617964bbd499f37bed7c38dc896138f0d8d3b65da667cf",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -785,6 +1135,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v1.1.0",
+        "commit_sha": "e9e59f03f14c5c98e6188eb91d0a28f554322cc0"
+      },
+      "legal_document_ids": [
+        "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d393a7a224ed758959de58160f0f5bb58ef272c3aaff5bc76afda4ab0c16f3cf",
@@ -817,8 +1177,8 @@
       ]
     },
     {
-      "package_id": "libxess_1.2.0.13",
-      "revision_sha256": "f6c68e586804e2c0b89315992f5e4b48b9555b515250acd935cb5b38b6557621",
+      "package_id": "libxess_1.2.0.13.1fb7df9789348fed17ac36eb5a8b5edee26dfbb267ed7c1015e4f1cb89bd967f",
+      "revision_sha256": "bd4ebc65cdd5c59a66ad9e38b59f2a8b2ce3752581ce36b83e92b29713bac163",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -831,6 +1191,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v1.2.0",
+        "commit_sha": "1582812f099fc6c85bee1fb49a05a50a699d289f"
+      },
+      "legal_document_ids": [
+        "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1"
+      ],
       "members": [
         {
           "artifact_id": "sha256:3170283f328923dcf74e5c86fb08cea88551b4404046ebfbe16d6d3ab56a7d6c",
@@ -840,8 +1210,8 @@
       ]
     },
     {
-      "package_id": "libxess_1.3.0.28",
-      "revision_sha256": "9e4ca2cb29ea4cc9b88d44ef744c7cbd9f136a824836fcb6c1f8d65595b553a3",
+      "package_id": "libxess_1.3.0.28.c2fc28d8541e4e19285eec05e9d3a8024eee2395d8034428cd5f1a4af83541fa",
+      "revision_sha256": "78607fc6d10969db81c83dc5ed7d38f1d1e94b863b037bae7c6156bd4c69d3a6",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -854,6 +1224,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v1.3.0",
+        "commit_sha": "420343044ea2f586373a5aeda428d883a649cbcc"
+      },
+      "legal_document_ids": [
+        "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d7f0e1f0e6bccdd52b331d2d126abf1bfc30fce18a3f0255b876086eed70d4ca",
@@ -863,8 +1243,8 @@
       ]
     },
     {
-      "package_id": "libxess_1.3.1.32",
-      "revision_sha256": "a2c356b02565089b614cdfc34c93f17d9518e54c72c03fcf94f0ae3a8fdb423e",
+      "package_id": "libxess_1.3.1.32.4181be3c612b2bc82b98f5c9d62ee2b7c54419de6df3117680b26119a0d942c7",
+      "revision_sha256": "d3dcea2e04676d16f9c7acae025df4043edd14363af6a392242d54aaf56b7030",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -877,6 +1257,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v1.3.1",
+        "commit_sha": "1d593fd8a2634a06d0d812bd574aa3031313ded0"
+      },
+      "legal_document_ids": [
+        "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
+        "notice.8de594be72b2e0082f692e99bc0258e9ea9e22d51abcef31ad5106830c035dd1"
+      ],
       "members": [
         {
           "artifact_id": "sha256:703ab8debc05ae209f6e4622cc06edf9f95a241f7ce68ee75c8955564d36ad70",
@@ -978,8 +1368,8 @@
       ]
     },
     {
-      "package_id": "libxess_2.0.1.41",
-      "revision_sha256": "002fb874747f84d4fb5fb7fc8fc8a03607063d53c010af6e6ae2e2898712d6be",
+      "package_id": "libxess_2.0.1.41.2177498b8727e2f50c5a6a961cac24226e7e873dd542b1c111813115d66d4e38",
+      "revision_sha256": "fa8354b65ec9fc27ad8dd62e7ef98d4201debbd7b3e779fcfda7c4af435bfbb6",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -992,6 +1382,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.0.1",
+        "commit_sha": "f03bde3a73b22a85b39d9bc90ccbfcec2b97d611"
+      },
+      "legal_document_ids": [
+        "license.e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d",
+        "notice.7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504"
+      ],
       "members": [
         {
           "artifact_id": "sha256:23b3ebc802185f537423965c2ee9c8ad8adb5d137b004ce027a4088e629b5fd3",
@@ -1001,8 +1401,8 @@
       ]
     },
     {
-      "package_id": "libxess_2.0.2.53",
-      "revision_sha256": "f255216db8dc4713c076b0f88ade6e312d41f2ae9badd35043e72e4317fddc1f",
+      "package_id": "libxess_2.0.2.53.9555755e1933f5e2e56957e4320372c661b26bf701e8415b4986cdeafe7fc454",
+      "revision_sha256": "6878676fe1c923949e085aa3b3422847af8df4aecd3fcb181e68632d276a57b5",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -1015,6 +1415,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.1.0",
+        "commit_sha": "c159ef43919fdfc7e2470cb4953f8e21fa5814cd"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a49f487f15a815c1242b659182cc9365b6aff2d94051d25d5379316bdb11a2dd",
@@ -1024,8 +1434,8 @@
       ]
     },
     {
-      "package_id": "libxess_2.0.2.68",
-      "revision_sha256": "0ff6ac94a182de2d82aacb2b821c80fb26ea57b9a623f3df0e8042779d3540bf",
+      "package_id": "libxess_2.0.2.68.4d158e81064de91d6b4cae706b1fc688eab3914c73eb998458edff46e70b4f7c",
+      "revision_sha256": "e72468f3505f5c47039c54e851b4ed1383e6165bfc00baf531bf8e30e407ec4f",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -1038,11 +1448,120 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v3.0.1",
+        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c"
+      ],
       "members": [
         {
           "artifact_id": "sha256:251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
           "role": "primary",
           "install_as": "libxess.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_dx11_2.0.1.41.64533ea42f18437180a939557e7865c22c1a979ee96dd6b60663777e450c8f6d",
+      "revision_sha256": "ffde4177032a7ca638ae72c7be1dc54f1b415fdebb86f3bdac54a4f1a7585390",
+      "technology": "intel_xess",
+      "variant": "dx11_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.1.41",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.0.1",
+        "commit_sha": "f03bde3a73b22a85b39d9bc90ccbfcec2b97d611"
+      },
+      "legal_document_ids": [
+        "license.e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d",
+        "notice.7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
+          "role": "primary",
+          "install_as": "libxess_dx11.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_dx11_2.0.2.53.4512ac8267b300506c5db4c80197839da04b20a64832431849812981c64d81c0",
+      "revision_sha256": "f705e0becbe79459f1a8f6e41e17a84f3f4038f41d323a1804513f634e014a59",
+      "technology": "intel_xess",
+      "variant": "dx11_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.2.53",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.1.0",
+        "commit_sha": "c159ef43919fdfc7e2470cb4953f8e21fa5814cd"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:249c87dea58aa9d6f6b5309d5acaf6b95e77bb8055735a3f162e3d24af086733",
+          "role": "primary",
+          "install_as": "libxess_dx11.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "libxess_dx11_2.0.2.68.72ebaa675098beb58e4a344a703162a9e3a553e1be8bc2fe6ede90a67cceaea3",
+      "revision_sha256": "3e0ccc5b274c4756f41f0c175c59c12ba30c97e0c49bf707dd99a037d1f9cdc0",
+      "technology": "intel_xess",
+      "variant": "dx11_runtime",
+      "display_name": "Intel XeSS",
+      "release": {
+        "version": "2.0.2.68",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v3.0.1",
+        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:c7cfe86f0c9d94e4fb3696d3cd5035e2bbb6a8b1b0572f8b7395a4cdfd0c625e",
+          "role": "primary",
+          "install_as": "libxess_dx11.dll"
         }
       ]
     },
@@ -1139,8 +1658,8 @@
       ]
     },
     {
-      "package_id": "libxess_fg_1.1.0.19",
-      "revision_sha256": "bbb16b30aa1da9c6630d404e27e91a79d533e39e71318b1f13ae77453b876276",
+      "package_id": "libxess_fg_1.1.0.19.10bfa9b88350c5610d217c71cc6c70f1d5fdbf2116035fa471652ddd3217b88f",
+      "revision_sha256": "db8857744af8190afd292a4d42996c423515bc6d355ddd1e693bc256385d45ab",
       "technology": "intel_xefg",
       "variant": "dx12_runtime",
       "display_name": "Intel Xe Frame Generation",
@@ -1153,6 +1672,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.0.1",
+        "commit_sha": "f03bde3a73b22a85b39d9bc90ccbfcec2b97d611"
+      },
+      "legal_document_ids": [
+        "license.e15ca2a10f34d836cfff59922c35dd9277ae8068353abb588c851f9d16d4737d",
+        "notice.7a945790caf39b88ecd5e1e4f6c4a45794c2ff8e463c098c7aff5e9615962504"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d82d9adab239af4e49063d0c4d2e1134529f3963879998d7e0df43a32514ca84",
@@ -1162,8 +1691,8 @@
       ]
     },
     {
-      "package_id": "libxess_fg_1.2.0.87",
-      "revision_sha256": "654de2252e737a2444e3dd090635281a1bec2cafd7f739a594cc0f93efece0bf",
+      "package_id": "libxess_fg_1.2.0.87.caec382a52d94f3f1e79305c19f6519fcab00761fd015cdf8b604d30bffb9e1f",
+      "revision_sha256": "18ea7008c7862bbdd884a4642bdd60279e6dc6be4c0d91c244c4ea6de3d639bf",
       "technology": "intel_xefg",
       "variant": "dx12_runtime",
       "display_name": "Intel Xe Frame Generation",
@@ -1176,6 +1705,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.1.0",
+        "commit_sha": "c159ef43919fdfc7e2470cb4953f8e21fa5814cd"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31"
+      ],
       "members": [
         {
           "artifact_id": "sha256:7fa2116e987a6fcc621e7be791461ca49988490ee3a4bc008ebb9796a057e1db",
@@ -1185,8 +1724,8 @@
       ]
     },
     {
-      "package_id": "libxess_fg_1.2.2.118",
-      "revision_sha256": "0708bf31cd9096c463984bc33433ae621cb9d32904610516aeddb08ff62cd936",
+      "package_id": "libxess_fg_1.2.2.118.2bb6091d09f156d6f4fbdc6d01b85e5421ec04643e2586fcae470ffee51984aa",
+      "revision_sha256": "f18b20e57233dc0283a2bfa567a7502c744c7794617292f00ae23975cafdd00b",
       "technology": "intel_xefg",
       "variant": "dx12_runtime",
       "display_name": "Intel Xe Frame Generation",
@@ -1199,6 +1738,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v2.1.1",
+        "commit_sha": "b2e8f705ca9a36586010fe7615a470fcf0608c35"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.9320812cefc577e7a5b24e9bbaba6fd581bed9a097f83f430d5cdd1f9c447b31"
+      ],
       "members": [
         {
           "artifact_id": "sha256:e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
@@ -1208,8 +1757,8 @@
       ]
     },
     {
-      "package_id": "libxess_fg_1.3.1.68",
-      "revision_sha256": "cc005cd51e5ff18736d451337f801419ff56221d964d45772b7475ad62021fd4",
+      "package_id": "libxess_fg_1.3.1.68.25c6fdb1b7edd707cd8e7df2d563d52f51b61ff93f98a25071d280a905324552",
+      "revision_sha256": "37e9ea849a1bd451a04061d4f95eebc93823a8789bbcbdf7e66fdd1bb9e72ab8",
       "technology": "intel_xefg",
       "variant": "dx12_runtime",
       "display_name": "Intel Xe Frame Generation",
@@ -1222,6 +1771,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v3.0.0",
+        "commit_sha": "07945aeb5c689a4a51bf940bacead20a42f67e37"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c"
+      ],
       "members": [
         {
           "artifact_id": "sha256:9d074c7cb931d450875373372da832304b82a2dcac51cb17df44b49f00e2961c",
@@ -1231,8 +1790,8 @@
       ]
     },
     {
-      "package_id": "libxess_fg_1.3.1.78",
-      "revision_sha256": "f2ee0db16210e91883e8050673511da4cd4cd3a9275ba3f081d16f5684d86e25",
+      "package_id": "libxess_fg_1.3.1.78.912c58016785c7ddeac7ae8837da48950691b3279ea7f91b2728cee5cbc9dce3",
+      "revision_sha256": "266a430b5c24a4059a953ca58c7ae95b544f5865278bbd4356afc9ce83284119",
       "technology": "intel_xefg",
       "variant": "dx12_runtime",
       "display_name": "Intel Xe Frame Generation",
@@ -1245,218 +1804,21 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v3.0.1",
+        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c"
+      ],
       "members": [
         {
           "artifact_id": "sha256:ec5e0c65e075570c6ede72618bb666d0be0c2e10b2ea9762c0fe8cb8e375ab27",
           "role": "primary",
           "install_as": "libxess_fg.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxell_1.0.0.139",
-      "revision_sha256": "741886781a3cb41e6ddd6aa6b1250c0c9923f2dba25ee6e572393cd9006ab076",
-      "technology": "intel_xell",
-      "variant": "runtime",
-      "display_name": "Intel Xe Low Latency",
-      "release": {
-        "version": "1.0.0.139",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:1ef92ada74933c6f6764af7b3dc19931b394599beca090962368dd459da20387",
-          "role": "primary",
-          "install_as": "libxell.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxell_1.0.1.6",
-      "revision_sha256": "51739a2f9c8888b39f2d9f889192d66094ac1493ca0556cfa351e91baa3e6df8",
-      "technology": "intel_xell",
-      "variant": "runtime",
-      "display_name": "Intel Xe Low Latency",
-      "release": {
-        "version": "1.0.1.6",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:d025ed9eea2807c7aea8a99ec99c9adacd6f647a7313a51756930f37f5d3896d",
-          "role": "primary",
-          "install_as": "libxell.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxell_1.1.0.6",
-      "revision_sha256": "30152768951a385c796aa316c97b5d25e2125caf43c33b5f29883c25c4fd5fce",
-      "technology": "intel_xell",
-      "variant": "runtime",
-      "display_name": "Intel Xe Low Latency",
-      "release": {
-        "version": "1.1.0.6",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:0b127d64483471795c02785e124746116b604c486a2c1cb3a10e0754792de018",
-          "role": "primary",
-          "install_as": "libxell.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxell_1.2.0.9",
-      "revision_sha256": "38d9a15cab785036e4561d2c8b6bdc40013f1b4c9e7a99f511e39b22803c0bac",
-      "technology": "intel_xell",
-      "variant": "runtime",
-      "display_name": "Intel Xe Low Latency",
-      "release": {
-        "version": "1.2.0.9",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:5ce63652eee5720203e0e41cc97eb45ee541c499c8a51d4bdb1e8fe4eaef4890",
-          "role": "primary",
-          "install_as": "libxell.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxell_1.2.1.13",
-      "revision_sha256": "61441b73b5a86e6bea0e556a441bae249833e25ac3476c542ab0b93b4784285e",
-      "technology": "intel_xell",
-      "variant": "runtime",
-      "display_name": "Intel Xe Low Latency",
-      "release": {
-        "version": "1.2.1.13",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
-          "role": "primary",
-          "install_as": "libxell.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxell_1.3.0.5",
-      "revision_sha256": "7d97b688c3bb34882580f0b0222add03c53df581832273c38d9b0a22cc65bf19",
-      "technology": "intel_xell",
-      "variant": "runtime",
-      "display_name": "Intel Xe Low Latency",
-      "release": {
-        "version": "1.3.0.5",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:61aeeab7fdcfb6d1742f86c14c68c663d759607d01a6132645c857291eaebb86",
-          "role": "primary",
-          "install_as": "libxell.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxess_dx11_2.0.1.41",
-      "revision_sha256": "5e8eaf50f93a4bc5ddcf10f4bab29f863351bc0535d524bc5e7aab5a12a262b8",
-      "technology": "intel_xess",
-      "variant": "dx11_runtime",
-      "display_name": "Intel XeSS",
-      "release": {
-        "version": "2.0.1.41",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:9e0bb17d627306d7df07e16c0e08deef226332c6746631b7ad8095ac6f463d79",
-          "role": "primary",
-          "install_as": "libxess_dx11.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxess_dx11_2.0.2.53",
-      "revision_sha256": "2e4414155723b80a2304a6977c53efc42ac2f3c93ba9bf9e6deb74872ffdb2ae",
-      "technology": "intel_xess",
-      "variant": "dx11_runtime",
-      "display_name": "Intel XeSS",
-      "release": {
-        "version": "2.0.2.53",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:249c87dea58aa9d6f6b5309d5acaf6b95e77bb8055735a3f162e3d24af086733",
-          "role": "primary",
-          "install_as": "libxess_dx11.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "libxess_dx11_2.0.2.68",
-      "revision_sha256": "2a653d7b1236a311fd83844331fd6e957b1b7defb33eb51d3fba190179259a48",
-      "technology": "intel_xess",
-      "variant": "dx11_runtime",
-      "display_name": "Intel XeSS",
-      "release": {
-        "version": "2.0.2.68",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:c7cfe86f0c9d94e4fb3696d3cd5035e2bbb6a8b1b0572f8b7395a4cdfd0c625e",
-          "role": "primary",
-          "install_as": "libxess_dx11.dll"
         }
       ]
     }

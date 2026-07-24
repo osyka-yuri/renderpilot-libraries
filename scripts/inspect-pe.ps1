@@ -1,6 +1,6 @@
 param(
-    [ValidateSet('Strict', 'OpenVr')]
-    [string] $SignaturePolicy = 'Strict',
+    [ValidateSet('RequireSigned', 'AllowUnsigned')]
+    [string] $AuthenticodeMode = 'RequireSigned',
 
     [Parameter(Mandatory = $true, Position = 0, ValueFromRemainingArguments = $true)]
     [ValidateNotNullOrEmpty()]
@@ -22,7 +22,7 @@ $results = foreach ($filePath in $Paths) {
     $metadata = Get-PeMetadata -Path $resolved
     $signature = Get-AuthenticodeMetadata `
         -Path $resolved `
-        -Policy $SignaturePolicy
+        -Mode $AuthenticodeMode
 
     [ordered]@{
         path = $resolved

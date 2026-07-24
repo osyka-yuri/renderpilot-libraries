@@ -6,7 +6,11 @@ import test from "node:test";
 import { promisify } from "node:util";
 import { zstdDecompress } from "node:zlib";
 
-import { canonicalPeVersion, persistCompressedDll } from "../lib/library-artifact-io.mjs";
+import {
+  canonicalPeVersion,
+  persistCompressedDll,
+  reconcileLockedAuthenticodeSignature,
+} from "../lib/library-artifact-io.mjs";
 
 const zstdDecompressAsync = promisify(zstdDecompress);
 
@@ -16,6 +20,49 @@ test("nullable PE versions remain nullable and numeric versions canonicalize", (
   assert.equal(canonicalPeVersion("1.2.0.0"), "1.2");
   assert.equal(canonicalPeVersion("0.0.0.0"), "0");
   assert.throws(() => canonicalPeVersion("1.2-preview"), /invalid PE version/);
+});
+
+test("locked Authenticode metadata tolerates only adjacent timestamp rounding", () => {
+  const locked = {
+    status: "signed",
+    subject: "CN=Example",
+    thumbprint: "A".repeat(40),
+    signed_at: "2021-05-14T00:23:56.563Z",
+  };
+  const adjacent = {
+    ...locked,
+    signed_at: "2021-05-14T00:23:56.562Z",
+  };
+  assert.deepEqual(reconcileLockedAuthenticodeSignature(adjacent, locked), locked);
+
+  assert.throws(
+    () =>
+      reconcileLockedAuthenticodeSignature(
+        { ...locked, signed_at: "2021-05-14T00:23:56.561Z" },
+        locked,
+      ),
+    /verified timestamp 2021-05-14T00:23:56\.561Z differs from locked 2021-05-14T00:23:56\.563Z/u,
+  );
+  assert.throws(
+    () =>
+      reconcileLockedAuthenticodeSignature(
+        { ...locked, thumbprint: "B".repeat(40) },
+        locked,
+      ),
+    /signer differs/,
+  );
+
+  const undated = { ...locked, signed_at: null };
+  assert.throws(
+    () => reconcileLockedAuthenticodeSignature(locked, undated),
+    /timestamp presence differs/,
+  );
+  assert.deepEqual(
+    reconcileLockedAuthenticodeSignature(locked, undated, {
+      allowTimestampBackfill: true,
+    }),
+    locked,
+  );
 });
 
 test("locked DLL transport can be recovered deterministically without mutable writes", async () => {

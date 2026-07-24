@@ -5,6 +5,7 @@ import path from "node:path";
 
 import { repoRoot } from "./catalog.mjs";
 import { runCliMain } from "./lib/cli-main.mjs";
+import { UsageError } from "./lib/common.mjs";
 import {
   dispatchLibrariesCommand,
   parseLibrariesArgs,
@@ -23,6 +24,8 @@ function runScript(file, args) {
     child.once("exit", (code, signal) => {
       if (signal) reject(new Error(`${file} terminated by ${signal}`));
       else if (code === 0) resolve();
+      else if (code === 2)
+        reject(new UsageError(`${file} rejected command-line arguments`));
       else reject(new Error(`${file} exited with status ${code}`));
     });
   });

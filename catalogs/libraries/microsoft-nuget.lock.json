@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "releases": [
     {
       "product": "d3d12_agility",
@@ -20,7 +20,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
-            "signed_at": "2021-04-16T23:45:04.2410000Z"
+            "signed_at": "2021-04-16T23:45:04.241Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/d29cbb1e4789da2d49d15f0625cb7a6445dc2cd171ffbbe3750242f5e41a6288.dll.zst",
@@ -41,7 +41,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
-            "signed_at": "2021-04-16T23:41:47.6710000Z"
+            "signed_at": "2021-04-16T23:41:47.671Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/97781a23dec9427ed46936a164f7930f2e61021d6f7d4087104c7cebbc58f9ee.dll.zst",
@@ -49,6 +49,18 @@
             "zst_size_bytes": 675367,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -71,7 +83,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
-            "signed_at": "2021-05-14T00:25:54.9870000Z"
+            "signed_at": "2021-05-14T00:25:54.987Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/359f2169fc0d7d5f524ca4bd88ccd6987cdc1583629c09dca735d1e6bcd94336.dll.zst",
@@ -92,7 +104,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "ABDCA79AF9DD48A0EA702AD45260B3C03093FB4B",
-            "signed_at": "2021-05-14T00:23:56.5630000Z"
+            "signed_at": "2021-05-14T00:23:56.563Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c550d3f27148b2e0d5ec82677a575194bdf358714557829e84d2b14855728133.dll.zst",
@@ -100,6 +112,18 @@
             "zst_size_bytes": 675359,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -122,7 +146,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2021-12-09T06:05:47.1550000Z"
+            "signed_at": "2021-12-09T06:05:47.155Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/1058ccb0490529e6251ee64390ab23d466e01f6dca45b3a60b204b6e1cfd3e66.dll.zst",
@@ -143,7 +167,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2021-12-09T06:03:34.4640000Z"
+            "signed_at": "2021-12-09T06:03:34.464Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c12602184a190f58dd8af217df65d71a2e40e3ff72fce4d8e437bd313292e955.dll.zst",
@@ -151,6 +175,18 @@
             "zst_size_bytes": 980452,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -173,7 +209,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "BB983EC3E1F76DE6C1E8446C9976A82BD1798BB7",
-            "signed_at": "2022-04-20T20:13:38.1970000Z"
+            "signed_at": "2022-04-20T20:13:38.197Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/30f40994cb0fa4fc02a5968cbf37ea8fa0f40b2add6e00aa4950256434ca22b3.dll.zst",
@@ -194,7 +230,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "BB983EC3E1F76DE6C1E8446C9976A82BD1798BB7",
-            "signed_at": "2022-04-20T20:11:57.8610000Z"
+            "signed_at": "2022-04-20T20:11:57.861Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9329c08d0daee957e5642d56fa710fcb85eb36fb2ee1e68c4f080a667793a523.dll.zst",
@@ -202,6 +238,18 @@
             "zst_size_bytes": 987497,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -224,7 +272,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2022-06-21T17:53:01.8490000Z"
+            "signed_at": "2022-06-21T17:53:01.849Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e386631bae142dd2a859c4954db324d92528dab03b7b9638c95c7479a9e138b4.dll.zst",
@@ -245,7 +293,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2022-06-21T17:51:35.3810000Z"
+            "signed_at": "2022-06-21T17:51:35.381Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8727004acee1f36eaaece96e6efed7e8ea07ea817c0a44c80e54ef6fde4cb801.dll.zst",
@@ -253,6 +301,18 @@
             "zst_size_bytes": 987537,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -275,7 +335,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2022-07-14T18:27:56.4990000Z"
+            "signed_at": "2022-07-14T18:27:56.499Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2d53a2be68128c843ab71260a3c2ed82716ff88f486b07fa42a46f01e026d4af.dll.zst",
@@ -296,7 +356,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2022-07-14T18:14:30.2640000Z"
+            "signed_at": "2022-07-14T18:14:30.264Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8473fa39126107123b6113469346753cd036cdcae11461777b1b9feefdf2ae12.dll.zst",
@@ -304,6 +364,18 @@
             "zst_size_bytes": 1002255,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -326,7 +398,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2022-08-29T22:09:55.5180000Z"
+            "signed_at": "2022-08-29T22:09:55.518Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c6a61a4359936b9fb8d8a01e1d8ac4032680dec6abe5302a3c88889072a67f94.dll.zst",
@@ -347,7 +419,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2022-08-29T22:07:15.5120000Z"
+            "signed_at": "2022-08-29T22:07:15.512Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e5c9f5adc6087b124fa092ee77488dec5edf46bb0c93db31ce1e85ab211eb73b.dll.zst",
@@ -355,6 +427,18 @@
             "zst_size_bytes": 1009699,
             "compression_level": 19
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -377,7 +461,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-11-19T00:41:50.1130000Z"
+            "signed_at": "2022-11-19T00:41:50.113Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/76cf3c0a622b2db04995d43b8e54eda1f7e73d7a40bdef61add5b174f3baa119.dll.zst",
@@ -398,7 +482,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-11-19T00:37:16.0040000Z"
+            "signed_at": "2022-11-19T00:37:16.004Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/512825dd7b8ca183addbcc3281f9ee606c3b93d128a84149274c83744988cbe0.dll.zst",
@@ -406,6 +490,18 @@
             "zst_size_bytes": 1136888,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -428,7 +524,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-12T21:44:08.4930000Z"
+            "signed_at": "2022-12-12T21:44:08.493Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/91e0f79b0f7ac98b63f24e48ce11b9330758d4b92ade0ccda82e6d1d8f46eba7.dll.zst",
@@ -449,7 +545,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-12T21:44:57.8760000Z"
+            "signed_at": "2022-12-12T21:44:57.876Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e3459181e4542f896051bf020f46d5b4ceec2f8edc96dac9063888cc4e6d9cd1.dll.zst",
@@ -457,6 +553,18 @@
             "zst_size_bytes": 1136853,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -479,7 +587,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-03-02T20:57:50.2560000Z"
+            "signed_at": "2023-03-02T20:57:50.256Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/3e2b3257838fd2737381f8f3cfba9a37225281a4a63172c78b7734afae8570d7.dll.zst",
@@ -500,7 +608,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-03-02T21:32:12.2950000Z"
+            "signed_at": "2023-03-02T21:32:12.295Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/425c984a7abd44f134c389b03d4be7f2015229e16c69c958adde9f1a07ed7001.dll.zst",
@@ -508,6 +616,18 @@
             "zst_size_bytes": 1136648,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -530,7 +650,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-04-10T22:33:15.1730000Z"
+            "signed_at": "2023-04-10T22:33:15.173Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7d7d9269842f990a65fab041814d15d2aea2b7d2bf9f8846351a706bbed04de4.dll.zst",
@@ -551,7 +671,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-04-10T22:30:14.2430000Z"
+            "signed_at": "2023-04-10T22:30:14.243Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9db600fbc2786723e1b380a5cbff32d2fc7bb7fd908899f4301dcf87e936a672.dll.zst",
@@ -559,6 +679,18 @@
             "zst_size_bytes": 1151262,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -581,7 +713,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-04-17T21:40:45.3850000Z"
+            "signed_at": "2023-04-17T21:40:45.385Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/bda80a7984b538dac12cda1610ff12b4ca02af435f878b94095d305d4caa671d.dll.zst",
@@ -602,7 +734,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-04-17T21:39:51.5030000Z"
+            "signed_at": "2023-04-17T21:39:51.503Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7d10d535ce5d0ef25f522fa4e519e9a1c515d3ff40c828d0f2a8d72b549e4c05.dll.zst",
@@ -610,6 +742,18 @@
             "zst_size_bytes": 1151145,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -632,7 +776,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F372C27F6E052A6BE8BAB3112B465C692196CD6F",
-            "signed_at": "2023-04-20T19:14:18.7760000Z"
+            "signed_at": "2023-04-20T19:14:18.776Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/eddac13ac394c71fe6ea6f9d037cb89f2fa347bbfe6ee319e0a552b4775e8544.dll.zst",
@@ -653,7 +797,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-04-20T19:54:31.1400000Z"
+            "signed_at": "2023-04-20T19:54:31.140Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/1faa56eea069f2cca5719672cceb1cbe17e84415f2c04989a5750981c9f66f04.dll.zst",
@@ -661,6 +805,18 @@
             "zst_size_bytes": 1150959,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -683,7 +839,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-05-16T23:34:44.3020000Z"
+            "signed_at": "2023-05-16T23:34:44.302Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8d1b12a157d2b702bfee66d5f0a9ce99dc5e4b57890b34968252d58d883021d3.dll.zst",
@@ -704,7 +860,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-05-16T23:21:08.8070000Z"
+            "signed_at": "2023-05-16T23:21:08.807Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/ac10f0b183d859b84409c54b073c8dd83860c6398f3fc27fd2241fd41a81d2bb.dll.zst",
@@ -712,6 +868,18 @@
             "zst_size_bytes": 1151668,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -734,7 +902,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-06-26T17:32:37.8880000Z"
+            "signed_at": "2023-06-26T17:32:37.888Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/db4e98f96f4940ec215b91ea7770c8681cdcb89d45431f70b59824abb8056aec.dll.zst",
@@ -755,7 +923,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-06-26T17:30:09.9430000Z"
+            "signed_at": "2023-06-26T17:30:09.943Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/fc9a01d659052dfac580aa6fea0809ceb59b7bc80457ae4bbeb0bef52ecf064e.dll.zst",
@@ -763,6 +931,18 @@
             "zst_size_bytes": 1152328,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -785,7 +965,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-08-21T22:06:57.5410000Z"
+            "signed_at": "2023-08-21T22:06:57.541Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/cac32e00208df29407b8d4f5671aee8f2e5b1e25e17764c29e367b4458b05df4.dll.zst",
@@ -806,7 +986,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-08-21T21:59:22.2300000Z"
+            "signed_at": "2023-08-21T21:59:22.230Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/439ac77ba1ba95b86bce643803aa753c9cf536f66adc09629433d0e7c3a81438.dll.zst",
@@ -814,6 +994,18 @@
             "zst_size_bytes": 1153352,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -836,7 +1028,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-10-04T14:44:42.3730000Z"
+            "signed_at": "2023-10-04T14:44:42.373Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8677761b1ae295d2eeee8d13ff7520aeb15894c927bfaa44cb64a1a6a5320607.dll.zst",
@@ -857,7 +1049,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-10-04T14:07:49.7000000Z"
+            "signed_at": "2023-10-04T14:07:49.700Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/420db80d6c92b9b4296caebd5e22d0265ec91193957b5c82f441a2c3af4dc1e8.dll.zst",
@@ -865,6 +1057,18 @@
             "zst_size_bytes": 1179260,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -887,7 +1091,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-10-31T18:53:34.6240000Z"
+            "signed_at": "2023-10-31T18:53:34.624Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/52e7fdebb44b0b967a371fa7415f54f7f59fa07c92d30bfa69d65d100f24e265.dll.zst",
@@ -908,7 +1112,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-10-31T18:50:48.2160000Z"
+            "signed_at": "2023-10-31T18:50:48.216Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/5aef2efbabf16f5237b950f849c63bf0ae255d57a410814b786e34dd2cc02376.dll.zst",
@@ -916,6 +1120,18 @@
             "zst_size_bytes": 1179028,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -938,7 +1154,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-11-16T17:38:52.1780000Z"
+            "signed_at": "2023-11-16T17:38:52.178Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6137861958a40ef7761840f28a98154756b42eb2c1e8126b34a8f2b30c0f6d92.dll.zst",
@@ -959,7 +1175,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-11-16T17:38:01.7570000Z"
+            "signed_at": "2023-11-16T17:38:01.757Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/f9129a1eab18bd83893bc0b5ab5c3d68fd954d82b8bfa761474a4bb3a0060171.dll.zst",
@@ -967,6 +1183,18 @@
             "zst_size_bytes": 1180542,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -989,7 +1217,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-07T17:50:54.5400000Z"
+            "signed_at": "2024-03-07T17:50:54.540Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6184d6047328c0c1c2dae34efd2042cfb2247f814f7a5538998d826715832ab6.dll.zst",
@@ -1010,7 +1238,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-07T17:50:06.5820000Z"
+            "signed_at": "2024-03-07T17:50:06.582Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e1330069507f7255b1e939dbd3fe424412c6b456ec13d3dc20bed82812601677.dll.zst",
@@ -1018,6 +1246,18 @@
             "zst_size_bytes": 918026,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1040,7 +1280,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F9A7CF9FBE13BAC767F4781061332DA6E8B4E0EE",
-            "signed_at": "2024-03-19T16:17:35.0070000Z"
+            "signed_at": "2024-03-19T16:17:35.007Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/26c0fb90d0cf47da8c944696e9a3bf869e7fc1afd984d7d9c763ef9d1df9c1de.dll.zst",
@@ -1061,7 +1301,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-19T16:36:02.1510000Z"
+            "signed_at": "2024-03-19T16:36:02.151Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/98dd4894c88bce75dc7f897c7f8c21999404a447de61d37d9bf5512ca61a84c9.dll.zst",
@@ -1069,6 +1309,18 @@
             "zst_size_bytes": 919500,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1091,7 +1343,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-29T22:36:10.0400000Z"
+            "signed_at": "2024-03-29T22:36:10.040Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/aa39d2b8372c032a5c42b29bce5c61f29253bd797404ac7e45fc869d3552b907.dll.zst",
@@ -1112,7 +1364,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-29T22:36:19.4840000Z"
+            "signed_at": "2024-03-29T22:36:19.484Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2b60a84e8508937d1f8ae468280d27cb50b92f9c8801ffb4b8ad880a2ecd15a6.dll.zst",
@@ -1120,6 +1372,18 @@
             "zst_size_bytes": 918923,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1142,7 +1406,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-04-30T23:21:41.4110000Z"
+            "signed_at": "2024-04-30T23:21:41.411Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/ce95055f4767a798efc262d2605693b45acc10e9002d9ad95cda02c611b6b390.dll.zst",
@@ -1163,7 +1427,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-04-30T23:21:02.9950000Z"
+            "signed_at": "2024-04-30T23:21:02.995Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9838fc06f52967da4068fb942dd4cd30e673897bc808f05e3bc8e2dcc411dfc7.dll.zst",
@@ -1171,6 +1435,18 @@
             "zst_size_bytes": 919809,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1193,7 +1469,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-05-13T23:18:04.2370000Z"
+            "signed_at": "2024-05-13T23:18:04.237Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6db902514b1a75e1910e8be18fb3143b710bf79cbc7c4d254669b8c87802ae98.dll.zst",
@@ -1214,7 +1490,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-05-13T23:11:54.1340000Z"
+            "signed_at": "2024-05-13T23:11:54.134Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/b0c1bcb82936f814f88a72cb3b0aa2e3e6efcfa6715d42bdcd294aa57a66de67.dll.zst",
@@ -1222,6 +1498,18 @@
             "zst_size_bytes": 918597,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1244,7 +1532,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-17T04:32:21.7750000Z"
+            "signed_at": "2024-07-17T04:32:21.775Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/3a719543e20d3f3b6976df8c1fe4897fd79c5c6f1f8738c86611ea8f48a3faf9.dll.zst",
@@ -1265,7 +1553,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-17T04:31:29.0480000Z"
+            "signed_at": "2024-07-17T04:31:29.048Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6535bca484dd82de17884963668ff750648b05c48116e76debcc484b291ddee1.dll.zst",
@@ -1273,6 +1561,18 @@
             "zst_size_bytes": 918154,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1295,7 +1595,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-01-24T01:56:18.1700000Z"
+            "signed_at": "2025-01-24T01:56:18.170Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/b0e7c948d9f079b59326d4485f213a2391c7ea664b15ca2e7afe292439b67832.dll.zst",
@@ -1316,7 +1616,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-01-24T01:56:56.1660000Z"
+            "signed_at": "2025-01-24T01:56:56.166Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/40d1dd180e0ec443f4fe477e250497b9ff32b73c67e4c557c4b3379af78fa56e.dll.zst",
@@ -1324,6 +1624,18 @@
             "zst_size_bytes": 932614,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1346,7 +1658,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-13T18:23:03.0480000Z"
+            "signed_at": "2025-02-13T18:23:03.048Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6bfb280092ccc3c32169b9c9a31ef74784f3ead354d3d36d3883569364a29998.dll.zst",
@@ -1367,7 +1679,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-13T18:24:19.7300000Z"
+            "signed_at": "2025-02-13T18:24:19.730Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9ada86561b7eb632bb621c0a4d06bea6128794409f8a19882b5a01b2fc2d0ee1.dll.zst",
@@ -1375,6 +1687,18 @@
             "zst_size_bytes": 931323,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1397,7 +1721,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
-            "signed_at": "2025-05-23T00:23:19.4580000Z"
+            "signed_at": "2025-05-23T00:23:19.458Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/36c1cbf337519e012a0c0cedd24b67f1b0eb63c4e8444cb09a757bc8b2f26276.dll.zst",
@@ -1418,7 +1742,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
-            "signed_at": "2025-05-23T00:23:45.5130000Z"
+            "signed_at": "2025-05-23T00:23:45.513Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/586c952cf3fc26fd1b922ea05e189b132adf1a19fc828a5b3e0c18d8aea8794d.dll.zst",
@@ -1426,6 +1750,18 @@
             "zst_size_bytes": 1426136,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1448,7 +1784,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
-            "signed_at": "2025-06-11T22:30:05.9200000Z"
+            "signed_at": "2025-06-11T22:30:05.920Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/dd5a781d39c87ecf1eb91420559a5bcc78d5706527148c76f7cd96b09f9bd7f8.dll.zst",
@@ -1469,7 +1805,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
-            "signed_at": "2025-06-11T22:30:13.1280000Z"
+            "signed_at": "2025-06-11T22:30:13.128Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7a313c5e95faeda464342bf93f2f5c87a90267b560f4c12f6840ebf3ec2bd69d.dll.zst",
@@ -1477,6 +1813,18 @@
             "zst_size_bytes": 1426148,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1499,7 +1847,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-09-23T21:37:53.7770000Z"
+            "signed_at": "2025-09-23T21:37:53.777Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/26af1ab8866edf38be66ac98bc4081e3acc0cb6a45fd48e629ed0fa445ad609a.dll.zst",
@@ -1520,7 +1868,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
-            "signed_at": "2025-09-23T21:35:44.0280000Z"
+            "signed_at": "2025-09-23T21:35:44.028Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/a72e814617a49753fb6481ef0b8f12ce9ad6d35d06dcca00e4293923d7fb9a52.dll.zst",
@@ -1528,6 +1876,18 @@
             "zst_size_bytes": 1476630,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1550,7 +1910,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-10-15T17:19:03.1650000Z"
+            "signed_at": "2025-10-15T17:19:03.165Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/bf17fca23e9a1c2efc40c930a4eed6ef2b67a79380bf065070f15a78668fdd2e.dll.zst",
@@ -1571,7 +1931,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-10-15T17:18:32.0330000Z"
+            "signed_at": "2025-10-15T17:18:32.033Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/0611558483141840168f5b8569c802681ffc7358b07ce65ce4531f168c1f7d18.dll.zst",
@@ -1579,6 +1939,18 @@
             "zst_size_bytes": 1502738,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1601,7 +1973,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-11-10T20:30:59.7800000Z"
+            "signed_at": "2025-11-10T20:30:59.780Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8074b5c1f6cd9797ef1606870bdc8f6bf467c00bb303189c420733e0e1517737.dll.zst",
@@ -1622,7 +1994,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-11-10T20:32:47.4070000Z"
+            "signed_at": "2025-11-10T20:32:47.407Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/acf6bafdf8b986c052935cf1988957526f6c8c79712c78b88000ddfe1ff41281.dll.zst",
@@ -1630,6 +2002,18 @@
             "zst_size_bytes": 1502744,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1652,7 +2036,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-11-25T00:19:45.9430000Z"
+            "signed_at": "2025-11-25T00:19:45.943Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/49c51a38b98daaa126767343e84002c2ff16376fa7aad744c682263607dcf839.dll.zst",
@@ -1673,7 +2057,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-11-25T00:18:47.0810000Z"
+            "signed_at": "2025-11-25T00:18:47.081Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/700d9f64cd65a8e3cce8404b370194fedc5eb12d302bb9f00efbacc394446707.dll.zst",
@@ -1681,6 +2065,18 @@
             "zst_size_bytes": 1503012,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1703,7 +2099,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
-            "signed_at": "2025-12-05T18:41:43.3920000Z"
+            "signed_at": "2025-12-05T18:41:43.392Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/dfdd47ec4b75ecec502d8847e1faeb04ee84173d456a9dd9ccb723a9a8d25233.dll.zst",
@@ -1724,7 +2120,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2025-12-05T18:41:14.4930000Z"
+            "signed_at": "2025-12-05T18:41:14.493Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/895542c90f7e51fee73e817a0e1b756f7aacbb659ba0840ce0f9a2f303d62571.dll.zst",
@@ -1732,6 +2128,18 @@
             "zst_size_bytes": 1503726,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1754,7 +2162,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-02-24T01:45:25.4540000Z"
+            "signed_at": "2026-02-24T01:45:25.454Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/fa3e6c274d89a5d6507a4d25d0c658e1d7b5f8ec3a38b24f1fc77828300cb0b3.dll.zst",
@@ -1775,7 +2183,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-02-24T01:43:46.0560000Z"
+            "signed_at": "2026-02-24T01:43:46.056Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/703ad2472e1d27e938ce55dde402e9c8a1768b8637101bf24082f178eb251fa7.dll.zst",
@@ -1783,6 +2191,18 @@
             "zst_size_bytes": 1531443,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1805,7 +2225,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
-            "signed_at": "2026-03-06T00:46:49.0320000Z"
+            "signed_at": "2026-03-06T00:46:49.032Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9c6d52fc8a66cf9675fca62e77bd688955f2bab208c909e1184f04c37d2bec0c.dll.zst",
@@ -1826,7 +2246,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-03-06T00:40:10.7840000Z"
+            "signed_at": "2026-03-06T00:40:10.784Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2550ed51eb0acdaacc56918c47104f330839db58a05c2ddcad3d5a4ba1b72411.dll.zst",
@@ -1834,6 +2254,18 @@
             "zst_size_bytes": 1532340,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1856,7 +2288,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-04-16T04:13:36.1220000Z"
+            "signed_at": "2026-04-16T04:13:36.122Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/45974cb931126d1c8a85180e57e2c32e4f6b96431837dc0b664923670b4ebb28.dll.zst",
@@ -1877,7 +2309,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-04-16T04:07:25.5820000Z"
+            "signed_at": "2026-04-16T04:07:25.582Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/b1e308f2b390d28200059bfb1e46413b6f8dd4d82f64a455890d0ba461d3fdc1.dll.zst",
@@ -1885,6 +2317,18 @@
             "zst_size_bytes": 1533801,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1907,7 +2351,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
-            "signed_at": "2026-05-19T12:23:53.5070000Z"
+            "signed_at": "2026-05-19T12:23:53.507Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/f9bef9595c27b0d43bb06e1863f7b557fea55b0bfbe56b334c0dd3d5d8b48d97.dll.zst",
@@ -1928,7 +2372,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
-            "signed_at": "2026-05-19T12:29:55.8350000Z"
+            "signed_at": "2026-05-19T12:29:55.835Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/eb0fd474e66f596d97909f33b39f88ba971f2298510b99d8e0bd29cf4450cddb.dll.zst",
@@ -1936,6 +2380,18 @@
             "zst_size_bytes": 1536371,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -1958,7 +2414,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
-            "signed_at": "2026-07-02T23:41:28.3340000Z"
+            "signed_at": "2026-07-02T23:41:28.334Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e039c91964b95aa9007ec2ad4ad763e459b53c2024f3c0b41f92520de457852c.dll.zst",
@@ -1979,7 +2435,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
-            "signed_at": "2026-07-02T23:41:25.6020000Z"
+            "signed_at": "2026-07-02T23:41:25.602Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/22d863182083407f5f0de18fb148c399bddd71e90328267bd8bb13346d9b5c95.dll.zst",
@@ -1987,6 +2443,18 @@
             "zst_size_bytes": 1536862,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
+          "size_bytes": 13147,
+          "object_key": "libraries/legal/sha256/5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd.txt"
         }
       ]
     },
@@ -2009,7 +2477,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2021-09-02T18:32:59Z"
+            "signed_at": "2022-03-10T00:48:08.098Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/332dcf68f737c4440af899dcd69ea135fa80d80e5862fd7da72a58ef170ee9e8.dll.zst",
@@ -2017,6 +2485,18 @@
             "zst_size_bytes": 104088,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "7c054787aedd488665a258d33e0f1330ece8e670d5f1cd85598e0257af6687f1",
+          "size_bytes": 12434,
+          "object_key": "libraries/legal/sha256/7c054787aedd488665a258d33e0f1330ece8e670d5f1cd85598e0257af6687f1.txt"
         }
       ]
     },
@@ -2039,7 +2519,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
-            "signed_at": "2021-09-02T18:32:59Z"
+            "signed_at": "2022-05-24T17:44:17.849Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/5f9f50ab6c5cae11d07840a295c1278a07c9f30c5bf9529655d1d3bb4883fa36.dll.zst",
@@ -2047,6 +2527,18 @@
             "zst_size_bytes": 105503,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2069,7 +2561,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F372C27F6E052A6BE8BAB3112B465C692196CD6F",
-            "signed_at": "2022-05-12T20:45:59Z"
+            "signed_at": "2022-11-03T18:08:43.362Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/fe75d4b90db29451045b7dbef9d134e78e7eefeb5fd339b5fd2424af1161b523.dll.zst",
@@ -2077,6 +2569,18 @@
             "zst_size_bytes": 105679,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2099,7 +2603,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-05-12T20:46:01Z"
+            "signed_at": "2022-12-06T22:58:36.828Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8d1b5f520e25c1f0d490723622aa1a28c709d0ba645a5746949353f47eb3ddbe.dll.zst",
@@ -2107,6 +2611,18 @@
             "zst_size_bytes": 105705,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2129,7 +2645,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F372C27F6E052A6BE8BAB3112B465C692196CD6F",
-            "signed_at": "2022-05-12T20:45:59Z"
+            "signed_at": "2023-04-17T18:42:14.734Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/513a88cb1e946606c8164b2c0858e94d0391fc0adad7edaf8fff50100d3b6ea7.dll.zst",
@@ -2137,6 +2653,18 @@
             "zst_size_bytes": 105732,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2159,7 +2687,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-03-16T18:43:28Z"
+            "signed_at": "2023-05-15T21:04:55.864Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/d85354fe3763ca448a8319f28b3709f22f74cfedd7d36fd2707f2e9a6fbfeec3.dll.zst",
@@ -2167,6 +2695,18 @@
             "zst_size_bytes": 105778,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2189,7 +2729,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-03-16T18:43:29Z"
+            "signed_at": "2023-11-14T21:57:41.824Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2ea462ce761c1b60f8589da304469437516891d18125aad3b25adef32b971205.dll.zst",
@@ -2197,6 +2737,18 @@
             "zst_size_bytes": 107721,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2219,7 +2771,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2023-11-16T19:09:00Z"
+            "signed_at": "2024-07-15T16:15:05.251Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/3841ebae34b2fb9c308f4b81a20848cb681c1fa4cc7418891284a6f8e32f78b1.dll.zst",
@@ -2227,6 +2779,18 @@
             "zst_size_bytes": 107736,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2249,7 +2813,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
-            "signed_at": "2024-09-12T20:11:13Z"
+            "signed_at": "2025-04-04T17:37:17.505Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c971a882cdb1ec5feedc1c11f4f1a4259646f019be0335501ec9b7f21cd8f7f2.dll.zst",
@@ -2257,6 +2821,18 @@
             "zst_size_bytes": 107740,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2279,7 +2855,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2024-09-12T20:11:14Z"
+            "signed_at": "2025-06-25T20:13:58.587Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/09b835e75de664c28972371dd319e508e474a89e8bf0c25649f3e6aeb8272c0e.dll.zst",
@@ -2287,6 +2863,18 @@
             "zst_size_bytes": 107897,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
+          "size_bytes": 13369,
+          "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
         }
       ]
     },
@@ -2309,7 +2897,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-05T22:59:07.8420000Z"
+            "signed_at": "2022-12-05T22:59:07.842Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/048db7dfee0473e57a591f1fdfaa1de439f1e32d968e3958ce9b2130fe6f3b1b.dll.zst",
@@ -2330,7 +2918,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-05T22:59:06.8390000Z"
+            "signed_at": "2022-12-05T22:59:06.839Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/fcef0864a3177e37c071acc5e3978e3f5ad4295163a00059ebde579b1845c443.dll.zst",
@@ -2338,6 +2926,18 @@
             "zst_size_bytes": 569980,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2360,7 +2960,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-07T00:17:38.0350000Z"
+            "signed_at": "2022-12-07T00:17:38.035Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/1a2928b5bd8287ca0bd453beff1f6aba1c72040d49eb146cd014ada2462d09c7.dll.zst",
@@ -2381,7 +2981,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-07T00:17:34.9630000Z"
+            "signed_at": "2022-12-07T00:17:34.963Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/cc51b68774e1aa5938ed7bec6b091a28c17c900bb3bf32c77efba65fac5f7a6b.dll.zst",
@@ -2402,7 +3002,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-07T00:17:27.0709999Z"
+            "signed_at": "2022-12-07T00:17:27.070Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/f003baaaad85661c9aeb5e529af8185a7f4301332a12b42c036ca6184bedf850.dll.zst",
@@ -2423,7 +3023,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-07T00:17:27.3730000Z"
+            "signed_at": "2022-12-07T00:17:27.373Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/dfa35ce79f5e4b3b5abd67f4bafc50345bd9c6d3593ec77518a8735128bff6a2.dll.zst",
@@ -2431,6 +3031,18 @@
             "zst_size_bytes": 475622,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2453,7 +3065,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-09T22:40:35.3000000Z"
+            "signed_at": "2022-12-09T22:40:35.300Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/de75d00feacb46ff9ef0cba2e03786be9f1625caedfe4d6c0c73a51dab4385a1.dll.zst",
@@ -2474,7 +3086,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-09T22:40:26.5200000Z"
+            "signed_at": "2022-12-09T22:40:26.520Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c7e82d564e9a420e4e351cd635859d677dfff5ecea0d328704c6d44cee78c2f4.dll.zst",
@@ -2495,7 +3107,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-09T22:37:46.5830000Z"
+            "signed_at": "2022-12-09T22:37:46.583Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/f7d95697f11757b65380217a4bb485dd887e9df4d85b7a7a02af8278e17de096.dll.zst",
@@ -2516,7 +3128,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-09T22:37:46.5830000Z"
+            "signed_at": "2022-12-09T22:37:46.583Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/133ea01c9a9760e83f2a11d65012e90d3c928e9aabd405de4f5269c30bac9d25.dll.zst",
@@ -2524,6 +3136,18 @@
             "zst_size_bytes": 475613,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2546,7 +3170,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-16T22:47:41.5700000Z"
+            "signed_at": "2022-12-16T22:47:41.570Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7c963525fd0006bfbf3988044b566401ba4d5e52c96b789aefe11c4352229093.dll.zst",
@@ -2567,7 +3191,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-16T22:47:48.9220000Z"
+            "signed_at": "2022-12-16T22:47:48.922Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8e2e619624b581a47ad90fd91175debdfd9ea32dd085428efbe9e67478bd4498.dll.zst",
@@ -2588,7 +3212,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-16T22:44:24.8680000Z"
+            "signed_at": "2022-12-16T22:44:24.868Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/0659651b62355d8ba126820bc7f22b08dcca1c8adeff097d6403012caaa4502e.dll.zst",
@@ -2609,7 +3233,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-16T22:44:23.6590000Z"
+            "signed_at": "2022-12-16T22:44:23.659Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/731e89a56fc3c311abba113e170693d73b23f1c96bda264c9d0e4abf9187585a.dll.zst",
@@ -2617,6 +3241,18 @@
             "zst_size_bytes": 476725,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2639,7 +3275,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T02:27:30.1790000Z"
+            "signed_at": "2022-12-28T02:27:30.179Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e68038d3e739ec98a1078ef64c4cfc23e8b544bb37083484f96670cc8e0707f9.dll.zst",
@@ -2660,7 +3296,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T02:27:26.5800000Z"
+            "signed_at": "2022-12-28T02:27:26.580Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/37f92727cd023bf568b8548c2d9fc259f16b5cf39f00ed478900b3d12e8f1e25.dll.zst",
@@ -2681,7 +3317,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T02:22:28.4560000Z"
+            "signed_at": "2022-12-28T02:22:28.456Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6dd34e85de39af8ec2940cda21bf687137eaa2c77f4d30de32ebde8372f68ceb.dll.zst",
@@ -2702,7 +3338,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T02:22:26.5240000Z"
+            "signed_at": "2022-12-28T02:22:26.524Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/93832275be96e84c54f89469d5760060b7ae8479b7529e860d2ad6940217a071.dll.zst",
@@ -2710,6 +3346,18 @@
             "zst_size_bytes": 476744,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2732,7 +3380,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T21:27:06.3520000Z"
+            "signed_at": "2022-12-28T21:27:06.352Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/abaa0729a1e5e9e73aab8133f4f4dd872648158a848a0731f8dbf88b51bbeba1.dll.zst",
@@ -2753,7 +3401,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T21:27:11.9810000Z"
+            "signed_at": "2022-12-28T21:27:11.981Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6577b9413bf5092fd343b43fcb2bbd5245cc27db5c1b93a4c2bc5477a037097f.dll.zst",
@@ -2774,7 +3422,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T21:26:11.0650000Z"
+            "signed_at": "2022-12-28T21:26:11.065Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/fc16a275da95e55a3689d0c30fb22a0d9256875d2628989eab66073df84dcf1a.dll.zst",
@@ -2795,7 +3443,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2022-12-28T21:26:04.5140000Z"
+            "signed_at": "2022-12-28T21:26:04.514Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/eda3e826cae6d03bd886c305c3a1131f882e80231e2de454d6143950a34ec505.dll.zst",
@@ -2803,6 +3451,18 @@
             "zst_size_bytes": 476700,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2825,7 +3485,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-09T19:40:03.2400000Z"
+            "signed_at": "2023-01-09T19:40:03.240Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c4cae58c3793de37fa9646b56852fb2ea6e67222a863fada94bf1f01d4b5e446.dll.zst",
@@ -2846,7 +3506,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-09T19:40:00.8180000Z"
+            "signed_at": "2023-01-09T19:40:00.818Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/b8eca624d80feebccb9a4a35da44e6ece95e5735f89c15d81c856d9aaa2ec60d.dll.zst",
@@ -2867,7 +3527,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-09T19:41:14.1760000Z"
+            "signed_at": "2023-01-09T19:41:14.176Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/53c01a77518daf182762b7c94be47d0b0a3cfad92440197f92c58eed3a75f607.dll.zst",
@@ -2888,7 +3548,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-09T19:41:10.2810000Z"
+            "signed_at": "2023-01-09T19:41:10.281Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/96ce7d535cbbe8ab31e83e4c77cf10311b7f69c3024b2d7d63c087ab2feb2cb6.dll.zst",
@@ -2896,6 +3556,18 @@
             "zst_size_bytes": 477472,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -2918,7 +3590,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-18T01:00:26.8190000Z"
+            "signed_at": "2023-01-18T01:00:26.819Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2266fe67e26fb65a6b4f8596a65d9162b9ab2810e87b597597acfb323ecf7e53.dll.zst",
@@ -2939,7 +3611,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-18T01:00:26.4710000Z"
+            "signed_at": "2023-01-18T01:00:26.471Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8c497eb111abfe001473db236d5a7f8f9aa83af94df79001c224235bddf9f859.dll.zst",
@@ -2960,7 +3632,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-18T00:55:10.9220000Z"
+            "signed_at": "2023-01-18T00:55:10.922Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/237b0292f001acbcd5b63e36c3de8fe078fa0f295640789e4210be9bd5b2bc58.dll.zst",
@@ -2981,7 +3653,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AFBF0B8B6A18F7E23CCA1DDCD0AC1A55B4035173",
-            "signed_at": "2023-01-18T00:55:10.3930000Z"
+            "signed_at": "2023-01-18T00:55:10.393Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/40e839f8d669b8f24387890d989250d761fbc1f78fc76e2e5e8246c385cce50d.dll.zst",
@@ -2989,6 +3661,18 @@
             "zst_size_bytes": 477433,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3011,7 +3695,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-03-01T22:47:24.3770000Z"
+            "signed_at": "2023-03-01T22:47:24.377Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/604f7bf7d3a0278d094d75aa805ed7433d1dc3f5dabc451bcc324d079f91d97a.dll.zst",
@@ -3032,7 +3716,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-03-01T22:47:14.1040000Z"
+            "signed_at": "2023-03-01T22:47:14.104Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e572ee23cbb2c87f980a36de7d684888dd7a91653b15af5b2b561136e1823bf6.dll.zst",
@@ -3053,7 +3737,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-03-01T22:47:05.6140000Z"
+            "signed_at": "2023-03-01T22:47:05.614Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7c1589bce9c878a46f499c61f18ad9fb94e8dbc240301e2495b247d9a6bd5289.dll.zst",
@@ -3074,7 +3758,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
-            "signed_at": "2023-03-01T22:47:06.1120000Z"
+            "signed_at": "2023-03-01T22:47:06.112Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/bdbc1ac48c933c603e5405377a147e9f53055e72c6fa42b7b3ac5a2ccffc1f41.dll.zst",
@@ -3082,6 +3766,18 @@
             "zst_size_bytes": 477500,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3104,7 +3800,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "6E78B3DCE2998F6C2457C3E54DA90A01034916AE",
-            "signed_at": "2023-08-14T18:59:01.7920000Z"
+            "signed_at": "2023-08-14T18:59:01.792Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/137e2ca6ab63eeda90639cfc016d7e267822b92be2398c4deeb0a9c22c35551c.dll.zst",
@@ -3125,7 +3821,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-08-14T18:59:02.0250000Z"
+            "signed_at": "2023-08-14T18:59:02.025Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/14897e4c55d6bdbe539bb4ead3c6731c8a88a5d159201e281258262624d8e1d3.dll.zst",
@@ -3146,7 +3842,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-08-14T18:56:22.5190000Z"
+            "signed_at": "2023-08-14T18:56:22.519Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/338bba7c61742d337efc6b6b1a6abadeea06ef4d30d744ddc83fa8c8ef57a987.dll.zst",
@@ -3167,7 +3863,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
-            "signed_at": "2023-08-14T18:56:22.5050000Z"
+            "signed_at": "2023-08-14T18:56:22.505Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/61374394cb76e293e47387c9b102daac7a6769b9e495e163e0f98be23431b832.dll.zst",
@@ -3175,6 +3871,18 @@
             "zst_size_bytes": 493844,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3197,7 +3905,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-07T19:41:47.2880000Z"
+            "signed_at": "2024-03-07T19:41:47.288Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/922c96fe2e0bb27a87900802e58d06e02e721b54c45b1dbe33c6aa25e005d52e.dll.zst",
@@ -3218,7 +3926,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-07T19:41:47.4420000Z"
+            "signed_at": "2024-03-07T19:41:47.442Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/33d3e870594b83eb3f7adcbc28a912f9dad072f782e5872493040d07fcf7f8d8.dll.zst",
@@ -3239,7 +3947,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-07T20:01:53.0590000Z"
+            "signed_at": "2024-03-07T20:01:53.059Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/92644bf0e13d74937b9181048cb5718b2e8d1d012c0b3c762fa27155d530b964.dll.zst",
@@ -3260,7 +3968,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-07T20:01:48.2760000Z"
+            "signed_at": "2024-03-07T20:01:48.276Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/19ce857127f9385602a70a701e7885b26ef60383373ffef61c2d54ae67d8fbcc.dll.zst",
@@ -3268,6 +3976,18 @@
             "zst_size_bytes": 509746,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3290,7 +4010,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-22T01:37:47.4470000Z"
+            "signed_at": "2024-03-22T01:37:47.447Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/4f613201cdbb277586c029b1f7cf6f4b11de7a7b00b203e22a87cdaafd9555e2.dll.zst",
@@ -3311,7 +4031,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-22T01:37:49.1840000Z"
+            "signed_at": "2024-03-22T01:37:49.184Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/499ddb739e231926ff35018e83c34042d60ea659cf2ce362c2aa8b7722c762e3.dll.zst",
@@ -3332,7 +4052,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-22T01:37:57.9010000Z"
+            "signed_at": "2024-03-22T01:37:57.901Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/5c008e28023c4ce18b8972aa5bbd67cfee94dc8a9d1422aae13c25ad54f439d6.dll.zst",
@@ -3353,7 +4073,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-22T01:38:08.5330000Z"
+            "signed_at": "2024-03-22T01:38:08.533Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e5bcd63abde921c6e0ff8a37ed0a2447a0857f20b30af0a9bbcb155af4880400.dll.zst",
@@ -3361,6 +4081,18 @@
             "zst_size_bytes": 509268,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3383,7 +4115,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-29T20:35:18.9700000Z"
+            "signed_at": "2024-03-29T20:35:18.970Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9ea2baa10aec50779aecf3234259f43d28bfbf38d711f3f5ecca5d6e958e9d1c.dll.zst",
@@ -3404,7 +4136,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-29T20:35:18.0220000Z"
+            "signed_at": "2024-03-29T20:35:18.022Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/503da1673b190cafc52bb32c7061d19b85461c17a9fd6376c50f5da5a028d638.dll.zst",
@@ -3425,7 +4157,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-29T20:30:33.9770000Z"
+            "signed_at": "2024-03-29T20:30:33.977Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/b3ef71e48deb4ae03510005c25773afba77a2b72fd5056689cbd1aec17d2f130.dll.zst",
@@ -3446,7 +4178,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-03-29T20:30:33.5250000Z"
+            "signed_at": "2024-03-29T20:30:33.525Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/8605cdd19f2583a2eca3db8032007bec77f7db995ed7f3406bc648f5f3eadf34.dll.zst",
@@ -3454,6 +4186,18 @@
             "zst_size_bytes": 509545,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3476,7 +4220,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-05-24T21:25:10.5220000Z"
+            "signed_at": "2024-05-24T21:25:10.522Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/bbf51fc4288633419c3c66a74dbd85a1a9b7df2a9229905a0361943c29c25295.dll.zst",
@@ -3497,7 +4241,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-05-24T21:25:10.5080000Z"
+            "signed_at": "2024-05-24T21:25:10.508Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/88702a2fb868ac1544a53554b58b04f2287a9262d974548085a7eca6e15ee0eb.dll.zst",
@@ -3518,7 +4262,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-05-24T21:25:44.0570000Z"
+            "signed_at": "2024-05-24T21:25:44.057Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e9bf08961674991198a1d5743ec45f77ff6e930b38bfa5b6e9b4b18d9d6f2591.dll.zst",
@@ -3539,7 +4283,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-05-24T21:25:41.5250000Z"
+            "signed_at": "2024-05-24T21:25:41.525Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/ec4ac26f90f3b36300cb1273613d0298bef1ad59578c07442e3659726a87b124.dll.zst",
@@ -3547,6 +4291,18 @@
             "zst_size_bytes": 510010,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3569,7 +4325,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-26T01:47:44.1520000Z"
+            "signed_at": "2024-07-26T01:47:44.152Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/778caa60f2e64f691a73ddbe10ca93d842eeec76f295d845a062ef5a31406feb.dll.zst",
@@ -3590,7 +4346,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-26T01:47:37.1190000Z"
+            "signed_at": "2024-07-26T01:47:37.119Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/ea34606285321405658ef64f0059053d791820f0dc3be53f4ae570fdca40bcfe.dll.zst",
@@ -3611,7 +4367,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-26T01:41:46.1490000Z"
+            "signed_at": "2024-07-26T01:41:46.149Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/39f631ef8e70edd83b287aacca7e1cab0c9bb7e54975d079f735597835ca2a85.dll.zst",
@@ -3632,7 +4388,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-26T01:41:45.5030000Z"
+            "signed_at": "2024-07-26T01:41:45.503Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/10e63b23f237fe0acf6ec16b567b508580d02299f11e1a77eebb64aca8a12c2b.dll.zst",
@@ -3640,6 +4396,18 @@
             "zst_size_bytes": 578146,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3662,7 +4430,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-31T04:44:39.6330000Z"
+            "signed_at": "2024-07-31T04:44:39.633Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e7d2506677ce50b0051e2302c6ebad2670ac73a01cf6d3dcc66c952106722ffc.dll.zst",
@@ -3683,7 +4451,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-31T04:44:35.2390000Z"
+            "signed_at": "2024-07-31T04:44:35.239Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/5e3de6410732072f066c50baa5ca486fc09c817ee56ad1152a108d547ceae936.dll.zst",
@@ -3704,7 +4472,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-31T04:38:42.5450000Z"
+            "signed_at": "2024-07-31T04:38:42.545Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7a7b0eec59eafd5766b2345fed0048b5b3a5d5bacd39c0a390d7c7076f3b4707.dll.zst",
@@ -3725,7 +4493,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
-            "signed_at": "2024-07-31T04:38:39.2590000Z"
+            "signed_at": "2024-07-31T04:38:39.259Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/00f078034624c2975984ceeb069243e090d1164eeeae7088fac8c54c72ebca28.dll.zst",
@@ -3733,6 +4501,18 @@
             "zst_size_bytes": 578269,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3755,7 +4535,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-12T01:20:13.7860000Z"
+            "signed_at": "2025-02-12T01:20:13.786Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/1c910bb79f9cde04b49e82701ab6dfd99a8c4ed51d55f166e98aacd1b13b4f2f.dll.zst",
@@ -3776,7 +4556,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-12T01:20:17.7860000Z"
+            "signed_at": "2025-02-12T01:20:17.786Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2e992a8f94020df0fb787ee1e7ad924436f73eba3d6327e6f30f2e3fc126be9b.dll.zst",
@@ -3797,7 +4577,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-12T01:15:49.1260000Z"
+            "signed_at": "2025-02-12T01:15:49.126Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/a8c525238b1bd166f4e6dc02b5f084668f22d453042569409150bc2f3b24e533.dll.zst",
@@ -3818,7 +4598,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-12T01:15:56.1710000Z"
+            "signed_at": "2025-02-12T01:15:56.171Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/06bfca5714468315360c9d531e32458f57ecf622ff00090248d4468700f88340.dll.zst",
@@ -3826,6 +4606,18 @@
             "zst_size_bytes": 526087,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3848,7 +4640,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-20T19:25:48.5450000Z"
+            "signed_at": "2025-02-20T19:25:48.545Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/9d16a32bc8022f96c67ff34aa40738dc274517a5ec237e868d6bd7d5fe9a1a77.dll.zst",
@@ -3869,7 +4661,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-20T19:25:42.9670000Z"
+            "signed_at": "2025-02-20T19:25:42.967Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/390db662d6594b84bd63ca00b204c537dd8aacb15ebe9cd7f86c9069ade46a68.dll.zst",
@@ -3890,7 +4682,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-20T19:21:43.7080000Z"
+            "signed_at": "2025-02-20T19:21:43.708Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/44f988ebe221f8175e259e6b0baa2e8055160b8b7188317ba0f314cd732d5dcc.dll.zst",
@@ -3911,7 +4703,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-02-20T19:21:47.4370000Z"
+            "signed_at": "2025-02-20T19:21:47.437Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c18056d5588c6912d332c6e3da16809ed1953a68ade27ee54b5bc880c0d7f18b.dll.zst",
@@ -3919,6 +4711,18 @@
             "zst_size_bytes": 526065,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -3941,7 +4745,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "245D262748012A4FE6CE8BA6C951A4C4AFBC3E5D",
-            "signed_at": "2025-05-24T01:01:00.7750000Z"
+            "signed_at": "2025-05-24T01:01:00.775Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/d1b1712df4481b6f1309c0bfed6d8a496fa4a2a10985c1b93abe4504fcbffdae.dll.zst",
@@ -3962,7 +4766,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-05-24T01:00:56.3080000Z"
+            "signed_at": "2025-05-24T01:00:56.308Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/4eb03f481e5b4fa05dfd7d96c39f9baff3df0646a9270a204e507838b5070070.dll.zst",
@@ -3983,7 +4787,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-05-24T00:56:00.5290000Z"
+            "signed_at": "2025-05-24T00:56:00.529Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7fc843ab1b0bc909035544bcfdd0666a3901465169b75e3652991597fbb24844.dll.zst",
@@ -4004,7 +4808,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-05-24T00:55:58.1580000Z"
+            "signed_at": "2025-05-24T00:55:58.158Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/34d7f950fd63282a6cc0493a60ab1e9721bafc8100d8afed9327c064c30656e2.dll.zst",
@@ -4012,6 +4816,18 @@
             "zst_size_bytes": 534189,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -4034,7 +4850,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-07-14T20:04:58.7920000Z"
+            "signed_at": "2025-07-14T20:04:58.792Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/24f6f71d047fcb105160ffce4746b308a99af33b5c694b7dc61b2cde3e683bca.dll.zst",
@@ -4055,7 +4871,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-07-14T20:05:00.9250000Z"
+            "signed_at": "2025-07-14T20:05:00.925Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/dca77b712dde867b15960d1ac1334a9b1b58402dffd91b9cbb727630fe7a1fa4.dll.zst",
@@ -4076,7 +4892,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-07-14T20:01:19.1600000Z"
+            "signed_at": "2025-07-14T20:01:19.160Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/608f970fccf89aaf3c5a25ab40a8316d04d63aae409577348aa979e36932fb1c.dll.zst",
@@ -4097,7 +4913,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
-            "signed_at": "2025-07-14T20:01:17.1560000Z"
+            "signed_at": "2025-07-14T20:01:17.156Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/e7e2a53f4ae5a5e8fbb6a6b6f62a7efdf484f1e5838d1f3827b4ada390337465.dll.zst",
@@ -4105,6 +4921,18 @@
             "zst_size_bytes": 534209,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -4127,7 +4955,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
-            "signed_at": "2026-02-20T22:09:21.4620000Z"
+            "signed_at": "2026-02-20T22:09:21.462Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/c63052cfe2559809edc9d89c5df50722fd014ad1ee2e73fcc83439d293483558.dll.zst",
@@ -4148,7 +4976,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
-            "signed_at": "2026-02-20T22:09:17.8680000Z"
+            "signed_at": "2026-02-20T22:09:17.868Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/1ea4d1706b1de22cfc92692e004839f746badb635b41c692eb7996627b1bc962.dll.zst",
@@ -4169,7 +4997,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-02-20T22:06:00.3490000Z"
+            "signed_at": "2026-02-20T22:06:00.349Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/b2de1e5d627d0c3483daa43fc90643d736bc07b532cca26a53e03dabce550831.dll.zst",
@@ -4190,7 +5018,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
-            "signed_at": "2026-02-20T22:05:56.5790000Z"
+            "signed_at": "2026-02-20T22:05:56.579Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/7c9d49f95056eeedec5a72671eb6fda530b4bac7b220f292150b7fce723f33f1.dll.zst",
@@ -4198,6 +5026,18 @@
             "zst_size_bytes": 536810,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     },
@@ -4220,7 +5060,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
-            "signed_at": "2026-05-27T00:12:51.2440000Z"
+            "signed_at": "2026-05-27T00:12:51.244Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/dec8243837a373ab1eae156b32fd127be21cb490c28f4c750acb2e32672650e2.dll.zst",
@@ -4241,7 +5081,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
-            "signed_at": "2026-05-27T00:12:45.4970000Z"
+            "signed_at": "2026-05-27T00:12:45.497Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/2b78bc66db32470710a83c499b67c311e5e106b13051dfe7b3dc7b3934a35081.dll.zst",
@@ -4262,7 +5102,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
-            "signed_at": "2026-05-26T23:58:05.9910000Z"
+            "signed_at": "2026-05-26T23:58:05.991Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/878010b2c3d1931deebada1564cc44591fb9f087f8593a2443d18497ded8dfc3.dll.zst",
@@ -4283,7 +5123,7 @@
             "status": "signed",
             "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
             "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
-            "signed_at": "2026-05-26T23:58:00.0900000Z"
+            "signed_at": "2026-05-26T23:58:00.090Z"
           },
           "r2": {
             "object_key": "libraries/blobs/sha256/6dae3933b9601fd43b995ff6a5ee8430c3aba635498477bf29f6ea0a78bb7634.dll.zst",
@@ -4291,6 +5131,18 @@
             "zst_size_bytes": 536793,
             "compression_level": 12
           }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
     }

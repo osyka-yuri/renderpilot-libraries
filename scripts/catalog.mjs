@@ -9,6 +9,9 @@
 
 import path from "node:path";
 
+import { assertLibraryVendorRegistry } from "./lib/library-source-adapters.mjs";
+import { generatedLibrarySourceKind } from "./lib/library-source-kinds.mjs";
+
 const moduleDir = import.meta.dirname;
 
 export const repoRoot = path.resolve(moduleDir, "..");
@@ -19,8 +22,10 @@ export const sharedFiles = Object.freeze({
   steamExeCache: resolveRepoPath("scripts", "steam-appid-exe.json"),
 });
 
-const defineLibraryVendors = (vendors) =>
-  Object.freeze(vendors.map((vendor) => Object.freeze({ ...vendor })));
+const defineLibraryVendors = (vendors) => {
+  assertLibraryVendorRegistry(vendors);
+  return Object.freeze(vendors.map((vendor) => Object.freeze({ ...vendor })));
+};
 
 // Every library vendor and every repository path needed to build its public
 // snapshot. Generated providers use their own config/lock instead of a
@@ -34,29 +39,43 @@ export const libraryVendors = defineLibraryVendors([
   },
   {
     vendorId: "amd",
-    sourceKind: "curated",
-    sourceFile: "catalogs/libraries/amd.json",
+    sourceKind: "github-release-tree",
+    profile: "amd_fidelityfx",
+    refreshName: "amd",
+    configFile: "catalogs/libraries/amd-fidelityfx.config.json",
+    lockFile: "catalogs/libraries/amd-fidelityfx.lock.json",
+    overlayFile: "catalogs/libraries/amd.overlays.json",
     outputFile: "libraries/v1/vendors/amd.json",
+    refreshConcurrency: 2,
   },
   {
     vendorId: "intel",
-    sourceKind: "curated",
-    sourceFile: "catalogs/libraries/intel.json",
+    sourceKind: "github-release-tree",
+    profile: "intel_xess",
+    refreshName: "intel",
+    configFile: "catalogs/libraries/intel-xess.config.json",
+    lockFile: "catalogs/libraries/intel-xess.lock.json",
+    overlayFile: "catalogs/libraries/intel.overlays.json",
     outputFile: "libraries/v1/vendors/intel.json",
+    refreshConcurrency: 1,
   },
   {
     vendorId: "microsoft",
-    sourceKind: "microsoft-nuget",
+    sourceKind: "nuget",
+    refreshName: "microsoft",
     configFile: "catalogs/libraries/microsoft-nuget.config.json",
     lockFile: "catalogs/libraries/microsoft-nuget.lock.json",
     outputFile: "libraries/v1/vendors/microsoft.json",
   },
   {
     vendorId: "valve",
-    sourceKind: "openvr-github",
+    sourceKind: "github-release-tree",
+    profile: "openvr",
+    refreshName: "openvr",
     configFile: "catalogs/libraries/valve-openvr.config.json",
     lockFile: "catalogs/libraries/valve-openvr.lock.json",
     outputFile: "libraries/v1/vendors/valve.json",
+    refreshConcurrency: 4,
   },
 ]);
 
@@ -68,12 +87,12 @@ export const generatedLibraryVendors = Object.freeze(
   libraryVendors.filter(({ sourceKind }) => sourceKind !== "curated"),
 );
 
-export const microsoftLibraryVendor = libraryVendors.find(
-  ({ sourceKind }) => sourceKind === "microsoft-nuget",
+export const githubReleaseTreeVendors = Object.freeze(
+  libraryVendors.filter(({ sourceKind }) => sourceKind === "github-release-tree"),
 );
 
-export const openVrLibraryVendor = libraryVendors.find(
-  ({ sourceKind }) => sourceKind === "openvr-github",
+export const microsoftLibraryVendor = libraryVendors.find(
+  ({ sourceKind }) => sourceKind === "nuget",
 );
 
 export const libraryIndexFile = "libraries/v1/index.json";
@@ -83,10 +102,6 @@ const SCHEMAS = Object.freeze({
   libraryIndexV1: "schemas/library_index_v1.schema.json",
   libraryVendorV1: "schemas/library_vendor_v1.schema.json",
   libraryVendorSource: "schemas/library_vendor_source.schema.json",
-  microsoftNuGetConfig: "schemas/microsoft_nuget_config.schema.json",
-  microsoftNuGetLock: "schemas/microsoft_nuget_lock.schema.json",
-  openVrGitHubConfig: "schemas/openvr_github_config.schema.json",
-  openVrGitHubLock: "schemas/openvr_github_lock.schema.json",
   dlssPresetManifest: "schemas/dlss_preset_manifest.schema.json",
   dlssSettingsCatalog: "schemas/dlss_settings_catalog.schema.json",
   renodxManifestV1: "catalogs/addons/renodx/manifest-v1.schema.json",
@@ -114,26 +129,27 @@ export const jsonDocuments = defineDocuments([
     schema: SCHEMAS.libraryVendorSource,
     publishedToR2: false,
   })),
-  {
-    file: microsoftLibraryVendor.configFile,
-    schema: SCHEMAS.microsoftNuGetConfig,
-    publishedToR2: false,
-  },
-  {
-    file: microsoftLibraryVendor.lockFile,
-    schema: SCHEMAS.microsoftNuGetLock,
-    publishedToR2: false,
-  },
-  {
-    file: openVrLibraryVendor.configFile,
-    schema: SCHEMAS.openVrGitHubConfig,
-    publishedToR2: false,
-  },
-  {
-    file: openVrLibraryVendor.lockFile,
-    schema: SCHEMAS.openVrGitHubLock,
-    publishedToR2: false,
-  },
+  ...generatedLibraryVendors.flatMap((vendor) => [
+    {
+      file: vendor.configFile,
+      schema: generatedLibrarySourceKind(vendor.sourceKind).configSchema,
+      publishedToR2: false,
+    },
+    {
+      file: vendor.lockFile,
+      schema: generatedLibrarySourceKind(vendor.sourceKind).lockSchema,
+      publishedToR2: false,
+    },
+    ...(vendor.overlayFile
+      ? [
+          {
+            file: vendor.overlayFile,
+            schema: SCHEMAS.libraryVendorSource,
+            publishedToR2: false,
+          },
+        ]
+      : []),
+  ]),
   {
     file: "manifest.json",
     schema: SCHEMAS.libraryCatalog,

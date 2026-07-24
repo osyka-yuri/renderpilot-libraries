@@ -37,9 +37,10 @@ async function fetchSnapshotAssets() {
   try {
     return await fetchSnapshotAssetNames();
   } catch (error) {
-    console.warn(`Warning: could not fetch snapshot assets: ${errorMessage(error)}`);
-    console.warn("Continuing with wiki-link based official detection only.");
-    return new Set();
+    throw new Error(
+      `Could not fetch complete RenoDX snapshot assets: ${errorMessage(error)}`,
+      { cause: error },
+    );
   }
 }
 
@@ -54,7 +55,9 @@ async function main(args) {
   const rows = parseRenodxWikiRows(await fetchWikiMarkdown(WIKI_URL));
   console.log("Fetching official snapshot assets...");
   const officialAssets = await fetchSnapshotAssets();
-  if (officialAssets.size === 0) console.warn("Warning: no snapshot assets available.");
+  if (officialAssets.size === 0) {
+    throw new Error("RenoDX snapshot contains no assets; refusing an incomplete sync");
+  }
 
   const result = reconcileRenodxWiki({ rows, existingWiki, overlay, officialAssets });
   for (const warning of result.warnings) console.warn(warning);

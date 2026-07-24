@@ -1,6 +1,7 @@
 import { readFile, rename, rm, writeFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { randomUUID } from "node:crypto";
 
 import { assertPlainObject, errorMessage } from "./common.mjs";
 
@@ -135,6 +136,143 @@ export async function writeTextFileAtomic(file, text, context = file) {
 
 export async function writeJsonFileAtomic(file, value) {
   await writeTextFileAtomic(file, stringifyJson(value));
+}
+
+async function cleanupBatchTemporaryFiles(prepared, operations) {
+  const temporaryFiles = prepared.flatMap((entry) => [entry.stage, entry.rollback]);
+  const results = await Promise.allSettled(
+    temporaryFiles.map((file) =>
+      Promise.resolve().then(() => operations.rm(file, { force: true })),
+    ),
+  );
+  return results.flatMap((result, index) =>
+    result.status === "rejected"
+      ? [`${temporaryFiles[index]}: ${errorMessage(result.reason)}`]
+      : [],
+  );
+}
+
+/**
+ * Stages every JSON document before replacing any target. Each rename is
+ * atomic on its own; if a later rename fails, already replaced targets are
+ * restored from their exact original bytes. This is deliberately not exposed
+ * as a cross-file atomic transaction.
+ */
+export async function writeJsonFilesBatchWithRollback(
+  entries,
+  { validate = async () => {}, operations = { readFile, rename, rm, writeFile } } = {},
+) {
+  if (!Array.isArray(entries) || entries.length === 0) {
+    throw new Error("batch JSON write entries must be a non-empty array");
+  }
+
+  const prepared = [];
+  const targets = new Set();
+  for (const [index, entry] of entries.entries()) {
+    if (typeof entry?.file !== "string" || entry.file.trim() === "") {
+      throw new Error(`batch JSON write entry ${index} has no target file`);
+    }
+    const resolved = path.resolve(entry.file);
+    if (targets.has(resolved)) {
+      throw new Error(`batch JSON write has duplicate target ${entry.file}`);
+    }
+    targets.add(resolved);
+    await validate(entry.value, entry.file, index);
+    prepared.push({
+      file: entry.file,
+      text: stringifyJson(entry.value),
+      stage: path.join(
+        path.dirname(entry.file),
+        `.${path.basename(entry.file)}.${process.pid}.${randomUUID()}.stage.tmp`,
+      ),
+      rollback: path.join(
+        path.dirname(entry.file),
+        `.${path.basename(entry.file)}.${process.pid}.${randomUUID()}.rollback.tmp`,
+      ),
+      original: null,
+      existed: true,
+    });
+  }
+
+  for (const entry of prepared) {
+    try {
+      entry.original = await operations.readFile(entry.file);
+    } catch (error) {
+      if (error?.code !== "ENOENT") throw error;
+      entry.existed = false;
+    }
+  }
+
+  const stagingResults = await Promise.allSettled(
+    prepared.map((entry) =>
+      Promise.resolve().then(() => operations.writeFile(entry.stage, entry.text, UTF8)),
+    ),
+  );
+  const stagingErrors = stagingResults.flatMap((result, index) =>
+    result.status === "rejected"
+      ? [`${prepared[index].stage}: ${errorMessage(result.reason)}`]
+      : [],
+  );
+  if (stagingErrors.length > 0) {
+    const cleanupErrors = await cleanupBatchTemporaryFiles(prepared, operations);
+    throw new Error(
+      [
+        `batch JSON staging failed: ${stagingErrors.join("; ")}`,
+        ...(cleanupErrors.length > 0
+          ? [`temporary cleanup also failed: ${cleanupErrors.join("; ")}`]
+          : []),
+      ].join("; "),
+      {
+        cause: stagingResults.find((result) => result.status === "rejected")?.reason,
+      },
+    );
+  }
+
+  const replaced = [];
+  try {
+    for (const entry of prepared) {
+      await operations.rename(entry.stage, entry.file);
+      replaced.push(entry);
+    }
+  } catch (writeError) {
+    const rollbackErrors = [];
+    for (const entry of replaced.reverse()) {
+      try {
+        if (entry.existed) {
+          await operations.writeFile(entry.rollback, entry.original);
+          await operations.rename(entry.rollback, entry.file);
+        } else {
+          await operations.rm(entry.file, { force: true });
+        }
+      } catch (rollbackError) {
+        rollbackErrors.push(`${entry.file}: ${errorMessage(rollbackError)}`);
+      }
+    }
+    const cleanupErrors = await cleanupBatchTemporaryFiles(prepared, operations);
+    if (rollbackErrors.length > 0) {
+      throw new Error(
+        [
+          `batch JSON write failed: ${errorMessage(writeError)}`,
+          `rollback also failed: ${rollbackErrors.join("; ")}`,
+          ...(cleanupErrors.length > 0
+            ? [`temporary cleanup also failed: ${cleanupErrors.join("; ")}`]
+            : []),
+        ].join("; "),
+        { cause: writeError },
+      );
+    }
+    throw new Error(
+      [
+        `batch JSON write failed and was rolled back: ${errorMessage(writeError)}`,
+        ...(cleanupErrors.length > 0
+          ? [`temporary cleanup also failed: ${cleanupErrors.join("; ")}`]
+          : []),
+      ].join("; "),
+      {
+        cause: writeError,
+      },
+    );
+  }
 }
 
 export async function writeFormattedJsonFile(file, value) {

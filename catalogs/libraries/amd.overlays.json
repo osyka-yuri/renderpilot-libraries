@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "vendor": {
+    "id": "amd",
+    "display_name": "AMD"
+  },
+  "generated_at": "2026-07-23T06:15:06Z",
+  "legal_documents": [],
+  "artifacts": [
+    {
+      "artifact_key": "amd_fidelityfx_dx12_1.0.0.36208",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.0.36208",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "602d24510583b74e6a660241009ebe702f0578ada8e8cc76243b3b2d6cb51b79",
+        "size_bytes": 6470360
+      },
+      "transport": {
+        "sha256": "9ff39e8b2180a6f995da72ae6039937eee30439ff2a9ea6df2a8475eb0cd0d8b",
+        "size_bytes": 1095834
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-06-07T13:56:11.000Z"
+      }
+    },
+    {
+      "artifact_key": "amd_fidelityfx_dx12_1.0.0.36752",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.0.36752",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "f94622aaf38f30faca1ebb79cf238d86420b214f944bf8d4b073757005ce168a",
+        "size_bytes": 6475992
+      },
+      "transport": {
+        "sha256": "12ff838e5ab17db74b9e28c0b7e0d64c293c2a3f210e2c7075ed472e3edaf946",
+        "size_bytes": 1095061
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-07-23T11:25:53.000Z"
+      }
+    },
+    {
+      "artifact_key": "amd_fidelityfx_dx12_1.0.1.40157",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.1.40157",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "ad203ed7852933e3d2d5af3356019cce69fd99664e59e68614846ad4d89f6b76",
+        "size_bytes": 6647504
+      },
+      "transport": {
+        "sha256": "3211ebe68bc5bcc529d78e63d351cefce86d7c933f93650cc691168e6d68cd82",
+        "size_bytes": 1218949
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-02-27T11:30:58.000Z"
+      }
+    },
+    {
+      "artifact_key": "amd_fidelityfx_dx12_1.0.2.38022",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.2.38022",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e27a4b58960d4fa008795a95b205dcd547af7dd0562e05c9ea9364cbaff3094a",
+        "size_bytes": 6621392
+      },
+      "transport": {
+        "sha256": "f6193c94cc1896ea2f9fe43be4ad70ad6fd7fb8ae7b4c72f1b76c9411280cf27",
+        "size_bytes": 1213788
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-10-10T09:40:39.000Z"
+      }
+    },
+    {
+      "artifact_key": "amd_fidelityfx_vk_1.0.1.39321",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.1.39321",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "268b29f3234fe5aaa6bc0344121980af5dd0cebe09e5b466da4eb64a2b20a04b",
+        "size_bytes": 9294408
+      },
+      "transport": {
+        "sha256": "3de6a682e411336db5443fc96b0d5f3b32346bd24de0a4c7dc8d15a87653a4e4",
+        "size_bytes": 817571
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-12-16T11:05:45.000Z"
+      }
+    },
+    {
+      "artifact_key": "amd_fidelityfx_vk_1.0.1.42386",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.1.42386",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e0dee6262d100c3833b4e0b7dd488e5c4a6af05b43a9d505f9f0ac7e35daf8cb",
+        "size_bytes": 9342112
+      },
+      "transport": {
+        "sha256": "b73493979ed7580609788f0464fa6091a8a481e4a23b2eb8f2be6eb4bf7d40d2",
+        "size_bytes": 825059
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-06-09T11:45:17.000Z"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "amd_fidelityfx_dx12_1.0.0.36208",
+      "technology": "amd_fsr",
+      "variant": "dx12_runtime",
+      "display_name": "AMD FidelityFX Super Resolution",
+      "release": {
+        "version": "1.0.0.36208",
+        "channel": "beta",
+        "label": "FSR 3.1.0"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "amd_fidelityfx_dx12_1.0.0.36208",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_dx12_1.0.0.36752",
+      "technology": "amd_fsr",
+      "variant": "dx12_runtime",
+      "display_name": "AMD FidelityFX Super Resolution",
+      "release": {
+        "version": "1.0.0.36752",
+        "channel": "beta",
+        "label": "FSR 3.1.0"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "amd_fidelityfx_dx12_1.0.0.36752",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_dx12_1.0.1.40157",
+      "technology": "amd_fsr",
+      "variant": "dx12_runtime",
+      "display_name": "AMD FidelityFX Super Resolution",
+      "release": {
+        "version": "1.0.1.40157",
+        "channel": "stable",
+        "label": "FSR 3.1.3"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "amd_fidelityfx_dx12_1.0.1.40157",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_dx12_1.0.2.38022",
+      "technology": "amd_fsr",
+      "variant": "dx12_runtime",
+      "display_name": "AMD FidelityFX Super Resolution",
+      "release": {
+        "version": "1.0.2.38022",
+        "channel": "beta",
+        "label": "FSR 3.1.2"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "amd_fidelityfx_dx12_1.0.2.38022",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_vk_1.0.1.39321",
+      "technology": "amd_fsr",
+      "variant": "vulkan_runtime",
+      "display_name": "AMD FidelityFX Super Resolution",
+      "release": {
+        "version": "1.0.1.39321",
+        "channel": "beta",
+        "label": "FSR 3.1.3"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "amd_fidelityfx_vk_1.0.1.39321",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_vk.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_vk_1.0.1.42386",
+      "technology": "amd_fsr",
+      "variant": "vulkan_runtime",
+      "display_name": "AMD FidelityFX Super Resolution",
+      "release": {
+        "version": "1.0.1.42386",
+        "channel": "stable",
+        "label": "FSR 3.1.4"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "amd_fidelityfx_vk_1.0.1.42386",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_vk.dll"
+        }
+      ]
+    }
+  ]
+}

@@ -4,15 +4,23 @@ import { isDeepStrictEqual } from "node:util";
 
 import { fetchWithTimeout } from "./http.mjs";
 import {
+  assertLegalDocumentContentIdentity,
+  assertLegalDocumentDescriptor,
   assertNumericVersion,
   blobObjectKey,
   compareNumericVersions,
+  legalDocumentObjectKey,
+  recordImmutableObjectIdentity,
 } from "./library-catalog.mjs";
+import {
+  dottedNumericVersionParts,
+  latestRfc3339Timestamp,
+  normalizeDottedNumericVersion,
+  normalizeRfc3339Timestamp,
+} from "./library-values.mjs";
 
 const REGISTRATION_BASE = "https://api.nuget.org/v3/registration5-gz-semver2";
 const WINDOWS_ARCHITECTURES = new Set(["X64", "X86"]);
-const RFC3339_TIMESTAMP_PATTERN =
-  /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/u;
 const MICROSOFT_SIGNATURE_KEYS = new Set(["status", "subject", "thumbprint", "signed_at"]);
 const PRODUCT_CONTRACTS = Object.freeze({
   d3d12_agility: {
@@ -167,10 +175,32 @@ export function buildMicrosoftVendorSource(lock, config) {
   const products = new Map(config.products.map((product) => [product.key, product]));
   const artifacts = [];
   const packages = [];
+  const legalDocuments = new Map();
 
   for (const release of lock.releases) {
     const product = products.get(release.product);
     const artifactsByArchitecture = new Map();
+    const legalDocumentIds = release.legal_documents
+      .map((document) => {
+        const legal_document_id = `${document.kind}.${document.sha256}`;
+        const value = {
+          legal_document_id,
+          kind: document.kind,
+          title: document.title,
+          format: document.format,
+          file_name: document.file_name,
+          content: { sha256: document.sha256, size_bytes: document.size_bytes },
+        };
+        const previous = legalDocuments.get(legal_document_id);
+        if (previous && !isDeepStrictEqual(previous, value)) {
+          throw new Error(
+            `${release.package_id}@${release.package_version}: duplicate legal document is inconsistent`,
+          );
+        }
+        legalDocuments.set(legal_document_id, value);
+        return legal_document_id;
+      })
+      .sort();
 
     for (const artifact of release.artifacts) {
       const artifactKey = microsoftArtifactKey(release, artifact);
@@ -231,6 +261,7 @@ export function buildMicrosoftVendorSource(lock, config) {
           version: release.package_version,
           package_sha512: release.package_sha512,
         },
+        legal_document_ids: legalDocumentIds,
         members: ordered.map(({ artifact, artifactKey }, index) => ({
           artifact_key: artifactKey,
           role: index === 0 ? "primary" : artifact.library_id,
@@ -244,20 +275,23 @@ export function buildMicrosoftVendorSource(lock, config) {
     schema_version: 1,
     vendor: { id: "microsoft", display_name: "Microsoft" },
     generated_at: latestTimestamp(lock.releases.map((release) => release.published_at)),
+    legal_documents: [...legalDocuments.values()].sort((left, right) =>
+      left.legal_document_id.localeCompare(right.legal_document_id),
+    ),
     artifacts,
     packages,
   };
 }
 
 export function assertLockSemantics(lock, config) {
-  if (lock.schema_version !== 2 || !Array.isArray(lock.releases)) {
-    throw new Error("Microsoft NuGet lock must use schema_version 2 and a releases array");
+  if (lock?.schema_version !== 3 || !Array.isArray(lock.releases)) {
+    throw new Error("Microsoft NuGet lock must use schema_version 3 and a releases array");
   }
 
   if (config) assertMicrosoftConfig(config);
 
   const releaseKeys = new Set();
-  const objectOwners = new Map();
+  const assetObjects = new Map();
   const products = config
     ? new Map(config.products.map((product) => [product.key, product]))
     : null;
@@ -279,7 +313,11 @@ export function assertLockSemantics(lock, config) {
     const units = new Map();
     for (const artifact of release.artifacts) {
       assertNumericVersion(artifact.pe_version, `${releaseKey}: artifact pe_version`);
-      assertMicrosoftSignature(artifact.signature, `${releaseKey}: artifact signature`);
+      assertMicrosoftSignature(
+        artifact.signature,
+        `${releaseKey}: artifact signature`,
+        config,
+      );
       const memberKey = `${artifact.architecture}/${artifact.library_id}`;
       if (units.has(memberKey)) {
         throw new Error(`${releaseKey}: duplicate artifact ${memberKey}`);
@@ -294,20 +332,64 @@ export function assertLockSemantics(lock, config) {
         assertArtifactMatchesProduct(release, artifact, expected, product);
       }
 
-      const objectOwner = objectOwners.get(artifact.r2.object_key);
-      if (objectOwner && objectOwner !== `${releaseKey}/${memberKey}`) {
-        throw new Error(`R2 object ${artifact.r2.object_key} is reused by two artifacts`);
-      }
-      objectOwners.set(artifact.r2.object_key, `${releaseKey}/${memberKey}`);
       if (!Number.isInteger(artifact.r2.compression_level)) {
         throw new Error(`${releaseKey}/${memberKey}: compression level is not locked`);
       }
-      const expectedObjectKey = contentAddressedObjectKey(artifact.r2.zst_sha256);
+      const expectedObjectKey = blobObjectKey(artifact.r2.zst_sha256);
       if (artifact.r2.object_key !== expectedObjectKey) {
         throw new Error(
           `${releaseKey}/${memberKey}: R2 key does not match compressed content identity`,
         );
       }
+      recordImmutableObjectIdentity(
+        assetObjects,
+        artifact.r2.object_key,
+        {
+          kind: "dll",
+          dll_sha256: artifact.dll_sha256,
+          dll_size_bytes: artifact.dll_size_bytes,
+          zst_sha256: artifact.r2.zst_sha256,
+          zst_size_bytes: artifact.r2.zst_size_bytes,
+          compression_level: artifact.r2.compression_level,
+        },
+        `${releaseKey}/${memberKey}`,
+      );
+    }
+
+    if (
+      !Array.isArray(release.legal_documents) ||
+      release.legal_documents.length !== product.legal_documents.length
+    ) {
+      throw new Error(`${releaseKey}: legal document set is incomplete`);
+    }
+    const configuredDocuments = new Map(
+      product.legal_documents.map((document) => [document.package_path, document]),
+    );
+    for (const document of release.legal_documents) {
+      const documentContext = `${releaseKey}/${document?.package_path ?? "<unknown document>"}`;
+      assertLegalDocumentDescriptor(document, documentContext);
+      assertLegalDocumentContentIdentity(document, documentContext);
+      const configured = configuredDocuments.get(document?.package_path);
+      if (
+        !configured ||
+        document.kind !== configured.kind ||
+        document.title !== configured.title ||
+        document.format !== configured.format ||
+        document.file_name !== configured.file_name
+      ) {
+        throw new Error(`${releaseKey}: legal document contract is invalid`);
+      }
+      recordImmutableObjectIdentity(
+        assetObjects,
+        document.object_key,
+        {
+          kind: "legal",
+          sha256: document.sha256,
+          size_bytes: document.size_bytes,
+          format: document.format,
+        },
+        `${releaseKey}/${document.package_path}`,
+      );
     }
 
     if (product) {
@@ -326,20 +408,16 @@ export function assertLockSemantics(lock, config) {
   }
 }
 
-function assertMicrosoftSignature(signature, context) {
+function assertMicrosoftSignature(signature, context, config) {
   const keys = Object.keys(signature ?? {});
   if (
     signature?.status !== "signed" ||
     keys.length !== 4 ||
     !keys.every((key) => MICROSOFT_SIGNATURE_KEYS.has(key)) ||
-    typeof signature.subject !== "string" ||
-    !signature.subject.trim() ||
+    !config.trusted_signer_subjects.includes(signature.subject) ||
     typeof signature.thumbprint !== "string" ||
     !/^[A-F0-9]{40,64}$/u.test(signature.thumbprint) ||
-    (signature.signed_at !== null &&
-      (typeof signature.signed_at !== "string" ||
-        !RFC3339_TIMESTAMP_PATTERN.test(signature.signed_at) ||
-        Number.isNaN(Date.parse(signature.signed_at))))
+    (signature.signed_at !== null && !isNormalizedTimestamp(signature.signed_at))
   ) {
     throw new Error(`${context} must use the strict signed Authenticode contract`);
   }
@@ -348,12 +426,33 @@ function assertMicrosoftSignature(signature, context) {
 export function assertMicrosoftConfig(config) {
   if (
     config?.schema_version !== 1 ||
+    !Array.isArray(config.trusted_signer_subjects) ||
+    config.trusted_signer_subjects.length === 0 ||
     !Array.isArray(config.products) ||
     config.products.length === 0
   ) {
     throw new Error(
       "Microsoft NuGet config must use schema_version 1 and a products array",
     );
+  }
+  const signerSubjects = new Set();
+  for (const subject of config.trusted_signer_subjects) {
+    if (
+      typeof subject !== "string" ||
+      !subject.trim() ||
+      subject !== subject.trim() ||
+      signerSubjects.has(subject)
+    ) {
+      throw new Error("Microsoft trusted signer subjects are invalid");
+    }
+    signerSubjects.add(subject);
+  }
+  if (
+    [...signerSubjects]
+      .sort()
+      .some((subject, index) => subject !== config.trusted_signer_subjects[index])
+  ) {
+    throw new Error("Microsoft trusted signer subjects must be sorted");
   }
   const products = new Set();
   for (const product of config.products) {
@@ -414,6 +513,18 @@ export function assertMicrosoftConfig(config) {
       libraryIds.add(file.library_id);
       fileNames.add(file.file_name.toLowerCase());
     }
+    if (!Array.isArray(product.legal_documents) || product.legal_documents.length === 0) {
+      throw new Error(`${product.key}: at least one legal document is required`);
+    }
+    const legalPaths = new Set();
+    for (const document of product.legal_documents) {
+      normalizedPackagePath(document?.package_path ?? "", product.key);
+      assertLegalDocumentDescriptor(document, `${product.key}/${document.package_path}`);
+      if (legalPaths.has(document.package_path)) {
+        throw new Error(`${product.key}: invalid or duplicate legal document`);
+      }
+      legalPaths.add(document.package_path);
+    }
   }
 }
 
@@ -434,8 +545,13 @@ export function assertLockExtendsBaseline(lock, baseline) {
 }
 
 export function assertReleaseContentIdentity(release, baseline) {
-  if (!isDeepStrictEqual(withoutTransport(release), withoutTransport(baseline))) {
-    throw new Error(`${releaseIdentity(baseline)}: immutable release content changed`);
+  const comparable = withoutTransport(release);
+  const previous = withoutTransport(baseline);
+  if (!isDeepStrictEqual(comparable, previous)) {
+    const difference = firstDifference(comparable, previous);
+    throw new Error(
+      `${releaseIdentity(baseline)}: immutable release content changed at ${difference.path} (${JSON.stringify(difference.left)} != ${JSON.stringify(difference.right)})`,
+    );
   }
 }
 
@@ -487,6 +603,32 @@ export function assertReleaseBackfillsSignatures(release, baseline) {
 
 function artifactIdentity(artifact) {
   return `${artifact.architecture}/${artifact.library_id}`;
+}
+
+function firstDifference(left, right, current = "$") {
+  if (isDeepStrictEqual(left, right)) return { path: current, left, right };
+  if (
+    left === null ||
+    right === null ||
+    typeof left !== "object" ||
+    typeof right !== "object"
+  ) {
+    return { path: current, left, right };
+  }
+  const keys = new Set([...Object.keys(left), ...Object.keys(right)]);
+  for (const key of [...keys].sort()) {
+    if (!Object.hasOwn(left, key) || !Object.hasOwn(right, key)) {
+      return {
+        path: `${current}.${key}`,
+        left: left[key],
+        right: right[key],
+      };
+    }
+    if (!isDeepStrictEqual(left[key], right[key])) {
+      return firstDifference(left[key], right[key], `${current}.${key}`);
+    }
+  }
+  return { path: current, left, right };
 }
 
 function releaseIdentity(release) {
@@ -571,34 +713,23 @@ export function sortLock(lock) {
         left.architecture.localeCompare(right.architecture) ||
         left.library_id.localeCompare(right.library_id),
     );
+    release.legal_documents.sort((left, right) =>
+      left.package_path.localeCompare(right.package_path),
+    );
   }
   return lock;
 }
 
 export function sdkLineForPackageVersion(version) {
-  const parts = numericVersionParts(version);
+  const parts = dottedNumericVersionParts(version, "D3D12 package version");
   if (parts.length < 2 || parts[1] > BigInt(Number.MAX_SAFE_INTEGER)) {
     throw new Error(`D3D12 package version has no SDK line: ${version}`);
   }
   return Number(parts[1]);
 }
 
-export function contentAddressedObjectKey(zstSha256) {
-  return blobObjectKey(zstSha256);
-}
-
-function numericVersionParts(version) {
-  const parts = version.split(".");
-  if (parts.length === 0 || parts.some((part) => !/^\d+$/.test(part))) {
-    throw new Error(`unsupported numeric version ${version}`);
-  }
-  return parts.map(BigInt);
-}
-
 function normalizedNumericVersion(version) {
-  const parts = numericVersionParts(version);
-  while (parts.length > 1 && parts.at(-1) === 0n) parts.pop();
-  return parts.join(".");
+  return normalizeDottedNumericVersion(version);
 }
 
 function isStableNuGetVersion(version) {
@@ -606,13 +737,15 @@ function isStableNuGetVersion(version) {
 }
 
 function latestTimestamp(values) {
-  const timestamps = values
-    .filter(Boolean)
-    .map((value) => new Date(value))
-    .filter((value) => !Number.isNaN(value.valueOf()))
-    .sort((left, right) => right - left);
-  if (timestamps.length === 0) return "1970-01-01T00:00:00.000Z";
-  return timestamps[0].toISOString();
+  return latestRfc3339Timestamp(values);
+}
+
+function isNormalizedTimestamp(value) {
+  try {
+    return normalizeRfc3339Timestamp(value, "signature timestamp") === value;
+  } catch {
+    return false;
+  }
 }
 
 async function fetchJson(url, fetchImpl) {

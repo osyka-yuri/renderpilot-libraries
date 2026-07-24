@@ -51,6 +51,7 @@ export const WIKI_DRIFT_MARKERS = Object.freeze([
  */
 export const WIKI_SOFT_FAILURE_PATTERNS = Object.freeze([
   /could not fetch wiki/i,
+  /could not fetch complete .*snapshot assets/i,
   /request timed out/i,
   /request failed/i,
   /ECONNRESET/i,

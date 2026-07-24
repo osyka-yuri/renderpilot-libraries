@@ -63,11 +63,11 @@ jobs:
           pnpm run validate
           pnpm run validate:microsoft
 
-      # Immutable binaries are uploaded before the PR makes their metadata
-      # visible. A failed upload/HEAD verification stops the job here.
-      - name: Publish immutable binaries and verify R2 metadata
+      # Immutable DLL and legal-document assets are uploaded before the PR makes
+      # their metadata visible. A failed upload/HEAD verification stops here.
+      - name: Publish immutable assets and verify R2 metadata
         if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
-        run: pnpm run publish:binaries
+        run: pnpm run publish:assets
         env:
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -86,10 +86,10 @@ jobs:
             release and/or rebuild of content-addressed ZST transport objects.
 
             The Windows importer verified NuGet SHA-512 metadata, exact package
-            layout, PE architecture/FileVersion, Authenticode, immutable object
-            identity, and the generated vendor snapshot. Transport objects are addressed
-            by their compressed SHA-256; binary payloads were uploaded and
-            HEAD-verified in R2 before this PR was opened.
+            layout, package-scoped legal documents, PE architecture/FileVersion,
+            Authenticode, immutable object identity, and the generated vendor
+            snapshot. Every DLL and legal asset was uploaded and HEAD-verified
+            in R2 before this PR was opened.
 
             Package composition is explicit in the generated Microsoft snapshot.
           add-paths: |

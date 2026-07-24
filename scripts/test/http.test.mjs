@@ -13,6 +13,7 @@ import {
   fetchJsonWithTimeout,
   fetchWithTimeout,
   probeUrl,
+  readResponseBufferBounded,
 } from "../lib/http.mjs";
 
 test("fetchWithTimeout sets User-Agent and forwards method", async () => {
@@ -128,6 +129,95 @@ test("probeUrl cancels response body", async () => {
 test("cancelResponseBody ignores missing body", () => {
   assert.doesNotThrow(() => cancelResponseBody(null));
   assert.doesNotThrow(() => cancelResponseBody({}));
+});
+
+function chunkedResponse(chunks, headers = {}) {
+  let cancelled = false;
+  const body = new ReadableStream({
+    pull(controller) {
+      const chunk = chunks.shift();
+      if (chunk === undefined) controller.close();
+      else controller.enqueue(Uint8Array.from(chunk));
+    },
+    cancel() {
+      cancelled = true;
+    },
+  });
+  return {
+    response: new Response(body, { headers }),
+    wasCancelled: () => cancelled,
+  };
+}
+
+test("bounded response reader accepts an exact-limit multi-chunk body", async () => {
+  const { response } = chunkedResponse(
+    [
+      [1, 2],
+      [3, 4],
+    ],
+    {
+      "Content-Length": "4",
+    },
+  );
+  assert.deepEqual(
+    await readResponseBufferBounded(response, {
+      maximumSize: 4,
+      context: "fixture",
+    }),
+    Buffer.from([1, 2, 3, 4]),
+  );
+});
+
+test("bounded response reader cancels after one- and multi-chunk overflow", async () => {
+  for (const chunks of [[[1, 2, 3]], [[1, 2], [3]]]) {
+    const fixture = chunkedResponse(chunks);
+    await assert.rejects(
+      () =>
+        readResponseBufferBounded(fixture.response, {
+          maximumSize: 2,
+          context: "fixture",
+        }),
+      /payload exceeds 2 bytes/,
+    );
+    assert.equal(fixture.wasCancelled(), true);
+  }
+});
+
+test("bounded response reader does not trust missing, false, or invalid length", async () => {
+  const absent = chunkedResponse([[1], [2]]);
+  assert.equal(
+    (
+      await readResponseBufferBounded(absent.response, {
+        maximumSize: 2,
+      })
+    ).length,
+    2,
+  );
+
+  for (const value of ["1", "not-a-number", "-1"]) {
+    const fixture = chunkedResponse([[1, 2], [3]], { "Content-Length": value });
+    await assert.rejects(
+      () => readResponseBufferBounded(fixture.response, { maximumSize: 2 }),
+      /payload exceeds 2 bytes/,
+    );
+    assert.equal(fixture.wasCancelled(), true);
+  }
+});
+
+test("bounded response reader rejects an oversized declared length before reading", async () => {
+  const fixture = chunkedResponse([[1]], { "Content-Length": "3" });
+  await assert.rejects(
+    () => readResponseBufferBounded(fixture.response, { maximumSize: 2 }),
+    /payload exceeds 2 bytes/,
+  );
+  assert.equal(fixture.wasCancelled(), true);
+});
+
+test("bounded response reader permits an empty body", async () => {
+  const bytes = await readResponseBufferBounded(new Response(null), {
+    maximumSize: 0,
+  });
+  assert.deepEqual(bytes, Buffer.alloc(0));
 });
 
 test("timeout constants are positive and ordered", () => {

@@ -435,15 +435,15 @@ try {
     Add-Type `
         -TypeDefinition 'public static class RenderPilotUnsignedFixture { public static int Value => 1; }' `
         -OutputAssembly $unsignedPath
-    $unsigned = Get-AuthenticodeMetadata -Path $unsignedPath -Policy OpenVr
+    $unsigned = Get-AuthenticodeMetadata -Path $unsignedPath -Mode AllowUnsigned
     if ($unsigned.status -ne 'unsigned' -or $unsigned.Count -ne 1) {
-        throw 'OpenVr policy did not return the canonical unsigned result'
+        throw 'AllowUnsigned mode did not return the canonical unsigned result'
     }
     Assert-AuthenticodeError `
         -Code UnsignedNotAllowed `
-        -Description 'Strict policy rejects unsigned files' `
+        -Description 'RequireSigned mode rejects unsigned files' `
         -Action {
-            Get-AuthenticodeMetadata -Path $unsignedPath -Policy Strict
+            Get-AuthenticodeMetadata -Path $unsignedPath -Mode RequireSigned
         }
 }
 finally {
@@ -453,7 +453,7 @@ finally {
 $pwshPath = (Get-Command pwsh -ErrorAction Stop).Source
 $inspectorPath = Join-Path $PSScriptRoot '../inspect-pe.ps1'
 $inspectionJson = & pwsh -NoLogo -NoProfile -File $inspectorPath `
-    -SignaturePolicy Strict `
+    -AuthenticodeMode RequireSigned `
     $pwshPath
 if ($LASTEXITCODE -ne 0) {
     throw "PE inspector failed for $pwshPath"

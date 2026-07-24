@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "profile": "amd_fidelityfx",
+  "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+  "expected_stable_releases": 13,
+  "trusted_signer_subjects": [
+    "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US"
+  ]
+}

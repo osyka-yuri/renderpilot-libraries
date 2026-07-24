@@ -453,19 +453,19 @@ function Get-AuthenticodeMetadata {
         [string] $Path,
 
         [Parameter(Mandatory = $true)]
-        [ValidateSet('Strict', 'OpenVr')]
-        [string] $Policy
+        [ValidateSet('RequireSigned', 'AllowUnsigned')]
+        [string] $Mode
     )
 
     $resolved = (Resolve-Path -LiteralPath $Path).Path
     $signature = Get-AuthenticodeSignature -LiteralPath $resolved
     if ($signature.Status -eq [Management.Automation.SignatureStatus]::NotSigned) {
-        if ($Policy -eq 'OpenVr') {
+        if ($Mode -eq 'AllowUnsigned') {
             return [ordered]@{ status = 'unsigned' }
         }
         throw (New-AuthenticodeInspectionException `
             -Code UnsignedNotAllowed `
-            -Message "Unsigned PE is forbidden by the Strict policy: $resolved")
+            -Message "Unsigned PE is forbidden when a signature is required: $resolved")
     }
     if ($signature.Status -ne [Management.Automation.SignatureStatus]::Valid) {
         throw (New-AuthenticodeInspectionException `

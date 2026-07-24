@@ -10,8 +10,10 @@ import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
 import { md5Hex, sha256Hex } from "./hash.mjs";
 import {
   LIBRARY_INDEX_KEY,
+  assertLegalDocumentPayload,
   assertLibraryIndex,
   assertVendorSnapshot,
+  legalDocumentObjectKey,
 } from "./library-catalog.mjs";
 
 const CDN_DIR = path.join(repoRoot, "cdn");
@@ -22,23 +24,23 @@ const zstdDecompressAsync = promisify(zstdDecompress);
 
 export function parsePublicationArgs(argv) {
   if (wantsHelp(argv)) {
-    return { jsonOnly: false, binaryOnly: false, dryRun: false, force: false, help: true };
+    return { jsonOnly: false, assetsOnly: false, dryRun: false, force: false, help: true };
   }
   const { values } = parseCliArgs(argv, {
     "json-only": { type: "boolean" },
-    "binary-only": { type: "boolean" },
+    "assets-only": { type: "boolean" },
     "dry-run": { type: "boolean" },
     force: { type: "boolean" },
     help: { type: "boolean", short: "h" },
   });
   const jsonOnly = Boolean(values["json-only"]);
-  const binaryOnly = Boolean(values["binary-only"]);
-  if (jsonOnly && binaryOnly) {
-    throw new UsageError("--json-only and --binary-only are mutually exclusive");
+  const assetsOnly = Boolean(values["assets-only"]);
+  if (jsonOnly && assetsOnly) {
+    throw new UsageError("--json-only and --assets-only are mutually exclusive");
   }
   return {
     jsonOnly,
-    binaryOnly,
+    assetsOnly,
     dryRun: Boolean(values["dry-run"]),
     force: Boolean(values.force),
     help: false,
@@ -51,7 +53,7 @@ export async function publishCatalog(s3, options) {
 
 export async function publishResolvedCatalog(s3, options, phases) {
   assertUniqueKeys([
-    ...phases.blobs,
+    ...phases.assets,
     ...phases.jsonBeforeIndex,
     ...phases.vendorSnapshots,
     ...phases.index,
@@ -63,8 +65,14 @@ export async function publishResolvedCatalog(s3, options, phases) {
 
   const summary = { uploaded: 0, skipped: 0 };
   printHeader(phases, options);
-  await preflightBlobObjects(phases.blobs);
-  await publishPhase(s3, "Content-addressed library blobs", phases.blobs, options, summary);
+  await preflightAssetObjects(phases.assets);
+  await publishPhase(
+    s3,
+    "Content-addressed library assets",
+    phases.assets,
+    options,
+    summary,
+  );
   await publishPhase(s3, "Independent JSON", phases.jsonBeforeIndex, options, summary);
   await publishPhase(
     s3,
@@ -73,12 +81,12 @@ export async function publishResolvedCatalog(s3, options, phases) {
     options,
     summary,
   );
-  await verifyRequiredObjects(s3, phases.requiredBlobs, "library blob");
+  await verifyRequiredObjects(s3, phases.requiredAssets, "library asset");
   await publishPhase(s3, "Library index (commit point)", phases.index, options, summary);
   console.log(`\nDone: ${summary.uploaded} uploaded, ${summary.skipped} already current.`);
 }
 
-export async function resolvePublicationPhases({ jsonOnly, binaryOnly }) {
+export async function resolvePublicationPhases({ jsonOnly, assetsOnly }) {
   const indexSnapshot = await readJsonSnapshot(INDEX_FILE);
   assertLibraryIndex(indexSnapshot.value);
   const vendorSnapshots = await Promise.all(
@@ -106,17 +114,17 @@ export async function resolvePublicationPhases({ jsonOnly, binaryOnly }) {
     }),
   );
 
-  const expectedBlobs = collectBlobExpectations(vendorSnapshots);
-  const requiredBlobs = [...expectedBlobs.values()].map((blob) => ({
-    key: blob.key,
-    size: blob.compressedSize,
-    sha256: blob.transportSha256,
+  const expectedAssets = collectAssetExpectations(vendorSnapshots);
+  const requiredAssets = [...expectedAssets.values()].map((asset) => ({
+    key: asset.key,
+    size: asset.storedSize,
+    sha256: asset.storedSha256,
   }));
-  let blobExpectations = jsonOnly ? [] : [...expectedBlobs.values()];
-  if (binaryOnly) {
-    blobExpectations = (
+  let assetExpectations = jsonOnly ? [] : [...expectedAssets.values()];
+  if (assetsOnly) {
+    assetExpectations = (
       await Promise.all(
-        blobExpectations.map(async (expected) =>
+        assetExpectations.map(async (expected) =>
           (await fileExists(path.join(CDN_DIR, ...expected.key.split("/"))))
             ? expected
             : null,
@@ -124,21 +132,23 @@ export async function resolvePublicationPhases({ jsonOnly, binaryOnly }) {
       )
     ).filter(Boolean);
   }
-  const blobs = blobExpectations.map((expected) => ({
+  const assets = assetExpectations.map((expected) => ({
     key: expected.key,
     abs: path.join(CDN_DIR, ...expected.key.split("/")),
-    requiredChecksum: expected.transportSha256,
+    requiredChecksum: expected.storedSha256,
     checksumLabel: "vendor snapshot",
-    expectedBinary: expected,
+    expectedBinary: expected.kind === "dll" ? expected : undefined,
+    expectedLegal: expected.kind === "legal" ? expected : undefined,
+    expectedSize: expected.storedSize,
   }));
 
-  if (binaryOnly) {
+  if (assetsOnly) {
     return {
-      blobs,
+      assets,
       jsonBeforeIndex: [],
       vendorSnapshots: [],
       index: [],
-      requiredBlobs,
+      requiredAssets,
     };
   }
 
@@ -159,28 +169,43 @@ export async function resolvePublicationPhases({ jsonOnly, binaryOnly }) {
   if (index.length !== 1) throw new Error("library index must be the single commit point");
 
   return {
-    blobs,
+    assets,
     jsonBeforeIndex: staticJson.filter((object) => object.key !== LIBRARY_INDEX_KEY),
     vendorSnapshots: vendorSnapshots.map(({ snapshot: _snapshot, ...object }) => object),
     index,
-    requiredBlobs,
+    requiredAssets,
   };
 }
 
-function collectBlobExpectations(vendorSnapshots) {
+function collectAssetExpectations(vendorSnapshots) {
   const expectations = new Map();
   for (const { snapshot } of vendorSnapshots) {
     for (const artifact of snapshot.artifacts) {
       const value = {
+        kind: "dll",
         key: artifact.transport.object_key,
-        compressedSize: artifact.transport.size_bytes,
-        transportSha256: artifact.transport.sha256,
+        storedSize: artifact.transport.size_bytes,
+        storedSha256: artifact.transport.sha256,
         dllSize: artifact.dll.size_bytes,
         dllSha256: artifact.dll.sha256,
       };
       const existing = expectations.get(value.key);
       if (existing && JSON.stringify(existing) !== JSON.stringify(value)) {
         throw new Error(`${value.key}: conflicting artifact transport identities`);
+      }
+      expectations.set(value.key, value);
+    }
+    for (const document of snapshot.legal_documents) {
+      const value = {
+        kind: "legal",
+        key: document.object_key,
+        storedSize: document.content.size_bytes,
+        storedSha256: document.content.sha256,
+        format: document.format,
+      };
+      const existing = expectations.get(value.key);
+      if (existing && JSON.stringify(existing) !== JSON.stringify(value)) {
+        throw new Error(`${value.key}: conflicting legal document identities`);
       }
       expectations.set(value.key, value);
     }
@@ -193,11 +218,11 @@ async function readJsonSnapshot(file) {
   return { body, value: JSON.parse(body.toString("utf8")) };
 }
 
-async function preflightBlobObjects(objects) {
+async function preflightAssetObjects(objects) {
   if (objects.length === 0) return;
-  console.log(`\nPreflight: validating ${objects.length} local library blob(s)`);
+  console.log(`\nPreflight: validating ${objects.length} local library asset(s)`);
   for (const object of objects) await readLocalObject(object);
-  console.log("  OK every local blob matches its transport and DLL identities");
+  console.log("  OK every local asset matches its content identity");
 }
 
 async function publishPhase(s3, label, objects, options, summary) {
@@ -261,14 +286,32 @@ async function readLocalObject(object) {
       `${object.key}: local bytes do not match ${object.checksumLabel ?? "required"} SHA-256`,
     );
   }
+  if (object.expectedSize !== undefined && object.expectedSize !== local.size) {
+    throw new Error(
+      `${object.key}: local size mismatch (expected ${object.expectedSize}, got ${local.size})`,
+    );
+  }
   if (object.expectedBinary) await validateBinaryPayload(local, object.expectedBinary);
+  if (object.expectedLegal) {
+    if (
+      object.expectedLegal.storedSha256 &&
+      object.key !==
+        legalDocumentObjectKey(
+          object.expectedLegal.storedSha256,
+          object.expectedLegal.format,
+        )
+    ) {
+      throw new Error(`${object.key}: legal object key does not match content identity`);
+    }
+    assertLegalDocumentPayload(local.body, object.expectedLegal.format, object.key);
+  }
   return local;
 }
 
 async function validateBinaryPayload(local, expected) {
-  if (local.size !== expected.compressedSize) {
+  if (local.size !== expected.storedSize) {
     throw new Error(
-      `${local.key}: compressed size mismatch (expected ${expected.compressedSize}, got ${local.size})`,
+      `${local.key}: compressed size mismatch (expected ${expected.storedSize}, got ${local.size})`,
     );
   }
   let dll;
@@ -399,26 +442,28 @@ async function fileExists(file) {
 function contentTypeForKey(key) {
   if (key.endsWith(".json")) return "application/json";
   if (key.endsWith(".zst")) return "application/zstd";
+  if (key.endsWith(".pdf")) return "application/pdf";
+  if (key.endsWith(".txt")) return "text/plain; charset=utf-8";
   return "application/octet-stream";
 }
 
 function printHeader(phases, options) {
   const count =
-    phases.blobs.length +
+    phases.assets.length +
     phases.jsonBeforeIndex.length +
     phases.vendorSnapshots.length +
     phases.index.length;
   console.log(`Bucket   : ${r2.bucket}`);
   console.log(`Endpoint : ${r2.endpoint}`);
   console.log(
-    `Objects  : ${count}${options.jsonOnly ? " (JSON only)" : options.binaryOnly ? " (blobs only)" : ""}`,
+    `Objects  : ${count}${options.jsonOnly ? " (JSON only)" : options.assetsOnly ? " (assets only)" : ""}`,
   );
 }
 
 function printDryRun(phases, options) {
   printHeader(phases, options);
   for (const [label, objects] of [
-    ["1. content-addressed blobs", phases.blobs],
+    ["1. content-addressed assets", phases.assets],
     ["2. independent JSON", phases.jsonBeforeIndex],
     ["3. immutable vendor snapshots", phases.vendorSnapshots],
     ["4. index commit point", phases.index],
@@ -426,14 +471,16 @@ function printDryRun(phases, options) {
     console.log(`${label}: ${objects.length}`);
     for (const object of objects) console.log(`  ${object.key}`);
   }
-  console.log(`HEAD-verified catalog blobs: ${phases.requiredBlobs.length}`);
+  console.log(
+    `Catalog asset prerequisites to HEAD-verify during publication: ${phases.requiredAssets.length}`,
+  );
 }
 
 export function printPublicationHelp() {
-  console.error(`Usage: node scripts/publish-library-catalog.mjs [--json-only | --binary-only] [--dry-run] [--force]
+  console.error(`Usage: node scripts/publish-library-catalog.mjs [--json-only | --assets-only] [--dry-run] [--force]
 
-  --json-only    Publish JSON snapshots and index; verify every referenced blob.
-  --binary-only  Publish locally available blobs, then verify every catalog blob.
+  --json-only    Publish JSON snapshots and index; verify every referenced asset.
+  --assets-only  Publish locally available immutable DLL and legal-document assets.
   --dry-run      Print ordered publication phases without network access.
   --force        Re-upload objects even when the remote copy matches.`);
 }

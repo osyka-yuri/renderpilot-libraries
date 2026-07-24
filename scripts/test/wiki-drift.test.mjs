@@ -103,6 +103,13 @@ test("classifyWikiCheckResult maps fetch failures to soft", () => {
     }),
     WIKI_DRIFT_STATUS.soft,
   );
+  assert.equal(
+    classifyWikiCheckResult({
+      exitCode: 1,
+      log: "Could not fetch complete RenoDX snapshot assets: GitHub API returned 403",
+    }),
+    WIKI_DRIFT_STATUS.soft,
+  );
   assert.ok(looksLikeSoftWikiFailure("ENOTFOUND raw.githubusercontent.com"));
 });
 

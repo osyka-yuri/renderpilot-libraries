@@ -4,8 +4,163 @@
     "id": "amd",
     "display_name": "AMD"
   },
-  "generated_at": "2026-07-23T06:15:06Z",
+  "generated_at": "2026-07-23T06:15:06.000Z",
+  "legal_documents": [
+    {
+      "legal_document_id": "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728",
+      "kind": "license",
+      "title": "AMD FidelityFX SDK License",
+      "format": "text",
+      "file_name": "LICENSE.md",
+      "content": {
+        "sha256": "1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728",
+        "size_bytes": 1119
+      },
+      "object_key": "libraries/legal/sha256/1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728.txt"
+    },
+    {
+      "legal_document_id": "license.24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc",
+      "kind": "license",
+      "title": "AMD FidelityFX SDK License",
+      "format": "text",
+      "file_name": "LICENSE.md",
+      "content": {
+        "sha256": "24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc",
+        "size_bytes": 1119
+      },
+      "object_key": "libraries/legal/sha256/24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc.txt"
+    },
+    {
+      "legal_document_id": "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+      "kind": "license",
+      "title": "AMD FidelityFX SDK License",
+      "format": "text",
+      "file_name": "LICENSE.md",
+      "content": {
+        "sha256": "6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "size_bytes": 60891
+      },
+      "object_key": "libraries/legal/sha256/6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963.txt"
+    },
+    {
+      "legal_document_id": "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966",
+      "kind": "license",
+      "title": "AMD FidelityFX SDK License",
+      "format": "text",
+      "file_name": "LICENSE.md",
+      "content": {
+        "sha256": "b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966",
+        "size_bytes": 61309
+      },
+      "object_key": "libraries/legal/sha256/b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966.txt"
+    },
+    {
+      "legal_document_id": "license.be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b",
+      "kind": "license",
+      "title": "AMD FidelityFX SDK License",
+      "format": "text",
+      "file_name": "LICENSE.md",
+      "content": {
+        "sha256": "be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b",
+        "size_bytes": 1119
+      },
+      "object_key": "libraries/legal/sha256/be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b.txt"
+    },
+    {
+      "legal_document_id": "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d",
+      "kind": "license",
+      "title": "AMD FidelityFX SDK License",
+      "format": "text",
+      "file_name": "LICENSE.md",
+      "content": {
+        "sha256": "d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d",
+        "size_bytes": 60975
+      },
+      "object_key": "libraries/legal/sha256/d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d.txt"
+    },
+    {
+      "legal_document_id": "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27",
+      "kind": "notice",
+      "title": "AMD FidelityFX SDK Third-Party Notices",
+      "format": "text",
+      "file_name": "THIRD-PARTY-NOTICES.md",
+      "content": {
+        "sha256": "94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27",
+        "size_bytes": 2441
+      },
+      "object_key": "libraries/legal/sha256/94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27.txt"
+    }
+  ],
   "artifacts": [
+    {
+      "artifact_id": "sha256:48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
+      "library_id": "amd_fidelityfx_denoiser_dx12",
+      "file_name": "amd_fidelityfx_denoiser_dx12.dll",
+      "file_version": "1.2.0.2740",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
+        "size_bytes": 13782280
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/548029be760d1802845a801bcfe6e530515668ba2b79c1f40b08f5651203eeb3.dll.zst",
+        "sha256": "548029be760d1802845a801bcfe6e530515668ba2b79c1f40b08f5651203eeb3",
+        "size_bytes": 2841188
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-06-11T13:24:02.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
+      "library_id": "amd_fidelityfx_denoiser_dx12",
+      "file_name": "amd_fidelityfx_denoiser_dx12.dll",
+      "file_version": "1.0.0.604",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
+        "size_bytes": 3699472
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/60b60f8314ea657e1a1452bcc9f49d03f96ceea9e3bfb59dd6625d7cdb45c78a.dll.zst",
+        "sha256": "60b60f8314ea657e1a1452bcc9f49d03f96ceea9e3bfb59dd6625d7cdb45c78a",
+        "size_bytes": 1275637
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-12-09T10:36:53.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
+      "library_id": "amd_fidelityfx_denoiser_dx12",
+      "file_name": "amd_fidelityfx_denoiser_dx12.dll",
+      "file_version": "1.1",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
+        "size_bytes": 3633936
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/e2abac75b5ea520405cca3bdfaf8e4f79765a2b54db268a88a5cf9ebc23ca4e6.dll.zst",
+        "sha256": "e2abac75b5ea520405cca3bdfaf8e4f79765a2b54db268a88a5cf9ebc23ca4e6",
+        "size_bytes": 1365621
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-03-20T16:18:41.000Z"
+      }
+    },
     {
       "artifact_id": "sha256:602d24510583b74e6a660241009ebe702f0578ada8e8cc76243b3b2d6cb51b79",
       "library_id": "amd_fidelityfx_dx12",
@@ -24,28 +179,9 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:77809405a0ff464b63654f1264f0ec0fcf8f243dac7c15b5f5c032615520d143",
-      "library_id": "amd_fidelityfx_dx12",
-      "file_name": "amd_fidelityfx_dx12.dll",
-      "file_version": "1.0.0.36604",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "77809405a0ff464b63654f1264f0ec0fcf8f243dac7c15b5f5c032615520d143",
-        "size_bytes": 6475480
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/09e613934dd3856a9e9ccc7386235a9d70a75e6047593e355af0624fdeba9dde.dll.zst",
-        "sha256": "09e613934dd3856a9e9ccc7386235a9d70a75e6047593e355af0624fdeba9dde",
-        "size_bytes": 1095812
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-06-07T13:56:11.000Z"
       }
     },
     {
@@ -66,70 +202,9 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:9c2ba6727683804242980bcddc5c1ee4e16357b4bd17c8a93ce94614ed149780",
-      "library_id": "amd_fidelityfx_dx12",
-      "file_name": "amd_fidelityfx_dx12.dll",
-      "file_version": "1.0.1.37507",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "9c2ba6727683804242980bcddc5c1ee4e16357b4bd17c8a93ce94614ed149780",
-        "size_bytes": 6609624
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/5eb59bcb65b66c3c051e5a839962ac864ae78c48fe46bfcac980c658f2417284.dll.zst",
-        "sha256": "5eb59bcb65b66c3c051e5a839962ac864ae78c48fe46bfcac980c658f2417284",
-        "size_bytes": 1211523
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:270b6298bfb87098cbe679c8f4535e17fd8954a1313292b1564e982b1e679a0d",
-      "library_id": "amd_fidelityfx_dx12",
-      "file_name": "amd_fidelityfx_dx12.dll",
-      "file_version": "1.0.1.38338",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "270b6298bfb87098cbe679c8f4535e17fd8954a1313292b1564e982b1e679a0d",
-        "size_bytes": 6634192
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/83875f775e14a51babe95feaaafe467bfb371fdb9e69385e5994f26e0837fb0d.dll.zst",
-        "sha256": "83875f775e14a51babe95feaaafe467bfb371fdb9e69385e5994f26e0837fb0d",
-        "size_bytes": 1215663
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:5672ee4202aa5417e23369d548a140652367494299a7678b42aa5b3395f76ad7",
-      "library_id": "amd_fidelityfx_dx12",
-      "file_name": "amd_fidelityfx_dx12.dll",
-      "file_version": "1.0.1.39157",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "5672ee4202aa5417e23369d548a140652367494299a7678b42aa5b3395f76ad7",
-        "size_bytes": 6647504
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/a47c3ca5046895595b2c9b6d68018d03637ecf61326534a6fb640ea291d50939.dll.zst",
-        "sha256": "a47c3ca5046895595b2c9b6d68018d03637ecf61326534a6fb640ea291d50939",
-        "size_bytes": 1218363
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-07-23T11:25:53.000Z"
       }
     },
     {
@@ -150,28 +225,9 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6",
-      "library_id": "amd_fidelityfx_dx12",
-      "file_name": "amd_fidelityfx_dx12.dll",
-      "file_version": "1.0.1.41314",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6",
-        "size_bytes": 6675664
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/9021cc3884a7d03e4e4b78ba2f0a7767c674a4de8ba81910c4471e9be7b58e5c.dll.zst",
-        "sha256": "9021cc3884a7d03e4e4b78ba2f0a7767c674a4de8ba81910c4471e9be7b58e5c",
-        "size_bytes": 1221097
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-02-27T11:30:58.000Z"
       }
     },
     {
@@ -192,91 +248,469 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-10-10T09:40:39.000Z"
       }
     },
     {
-      "artifact_id": "sha256:3cceed45fd9fc47c98eb6d205fbd8aad198afef945c39f621a6e21dfb2bd97bf",
-      "library_id": "amd_fidelityfx_vk",
-      "file_name": "amd_fidelityfx_vk.dll",
-      "file_version": "1.0.0.36604",
+      "artifact_id": "sha256:12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.1.41314",
       "architecture": "X64",
       "dll": {
-        "sha256": "3cceed45fd9fc47c98eb6d205fbd8aad198afef945c39f621a6e21dfb2bd97bf",
-        "size_bytes": 9200344
+        "sha256": "12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6",
+        "size_bytes": 6675664
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/43b524c98489f78f5a98c9ffa7dc26c2f09b04a87b39486d218277f17b5dd7ca.dll.zst",
-        "sha256": "43b524c98489f78f5a98c9ffa7dc26c2f09b04a87b39486d218277f17b5dd7ca",
-        "size_bytes": 720158
+        "object_key": "libraries/blobs/sha256/e8bdd23e1d04131efb41ff0e3a88c59adc6f1f45bb1c342cf9d1117f0b84a5c6.dll.zst",
+        "sha256": "e8bdd23e1d04131efb41ff0e3a88c59adc6f1f45bb1c342cf9d1117f0b84a5c6",
+        "size_bytes": 1327601
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-05-07T13:17:26.000Z"
       }
     },
     {
-      "artifact_id": "sha256:6c6bfdaa15e5827a1274d41e5dea5bdb5852816fc462502caf4a32982aabea70",
-      "library_id": "amd_fidelityfx_vk",
-      "file_name": "amd_fidelityfx_vk.dll",
-      "file_version": "1.0.1.37507",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "6c6bfdaa15e5827a1274d41e5dea5bdb5852816fc462502caf4a32982aabea70",
-        "size_bytes": 9262808
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/7ef414162cf1cf37bc38b87e3a5c4fd4aaa2b565b2bc34811c0deeb99b5ffac2.dll.zst",
-        "sha256": "7ef414162cf1cf37bc38b87e3a5c4fd4aaa2b565b2bc34811c0deeb99b5ffac2",
-        "size_bytes": 810103
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:239792f0653ea3ccf13d384cc462def4108a47e14d7bf72a41b778b8bc2da8f9",
-      "library_id": "amd_fidelityfx_vk",
-      "file_name": "amd_fidelityfx_vk.dll",
+      "artifact_id": "sha256:270b6298bfb87098cbe679c8f4535e17fd8954a1313292b1564e982b1e679a0d",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
       "file_version": "1.0.1.38338",
       "architecture": "X64",
       "dll": {
-        "sha256": "239792f0653ea3ccf13d384cc462def4108a47e14d7bf72a41b778b8bc2da8f9",
-        "size_bytes": 9277136
+        "sha256": "270b6298bfb87098cbe679c8f4535e17fd8954a1313292b1564e982b1e679a0d",
+        "size_bytes": 6634192
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/913c9445a932084b429438444c68f83a4e1a72b9eeda750fca42d73cbeaef5ed.dll.zst",
-        "sha256": "913c9445a932084b429438444c68f83a4e1a72b9eeda750fca42d73cbeaef5ed",
-        "size_bytes": 810273
+        "object_key": "libraries/blobs/sha256/d2f29ed881072377b18007ad485379728bc109b43511631ee8175b9303cc1299.dll.zst",
+        "sha256": "d2f29ed881072377b18007ad485379728bc109b43511631ee8175b9303cc1299",
+        "size_bytes": 1321828
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-10-24T09:03:57.000Z"
       }
     },
     {
-      "artifact_id": "sha256:04a455bb7c01af1adc630f3be41bd85689b6a8565199e25b09696240750f6d1e",
-      "library_id": "amd_fidelityfx_vk",
-      "file_name": "amd_fidelityfx_vk.dll",
+      "artifact_id": "sha256:5672ee4202aa5417e23369d548a140652367494299a7678b42aa5b3395f76ad7",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
       "file_version": "1.0.1.39157",
       "architecture": "X64",
       "dll": {
-        "sha256": "04a455bb7c01af1adc630f3be41bd85689b6a8565199e25b09696240750f6d1e",
-        "size_bytes": 9284304
+        "sha256": "5672ee4202aa5417e23369d548a140652367494299a7678b42aa5b3395f76ad7",
+        "size_bytes": 6647504
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/f7fa54ca6930e334df4b9486736661bda8da71589e4830f8cc5a070e34104085.dll.zst",
-        "sha256": "f7fa54ca6930e334df4b9486736661bda8da71589e4830f8cc5a070e34104085",
-        "size_bytes": 813862
+        "object_key": "libraries/blobs/sha256/d1247ef99a2b3aaa503ad2645d46235d8c10afd4a9caeba74d36598ab70efc3d.dll.zst",
+        "sha256": "d1247ef99a2b3aaa503ad2645d46235d8c10afd4a9caeba74d36598ab70efc3d",
+        "size_bytes": 1324676
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-12-09T11:23:09.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:77809405a0ff464b63654f1264f0ec0fcf8f243dac7c15b5f5c032615520d143",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.0.36604",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "77809405a0ff464b63654f1264f0ec0fcf8f243dac7c15b5f5c032615520d143",
+        "size_bytes": 6475480
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/178fc260976659e6f6573e7dcab8e2cca4257b960fa0b034ed554518d75d9b97.dll.zst",
+        "sha256": "178fc260976659e6f6573e7dcab8e2cca4257b960fa0b034ed554518d75d9b97",
+        "size_bytes": 1194831
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-07-03T21:10:26.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:9c2ba6727683804242980bcddc5c1ee4e16357b4bd17c8a93ce94614ed149780",
+      "library_id": "amd_fidelityfx_dx12",
+      "file_name": "amd_fidelityfx_dx12.dll",
+      "file_version": "1.0.1.37507",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "9c2ba6727683804242980bcddc5c1ee4e16357b4bd17c8a93ce94614ed149780",
+        "size_bytes": 6609624
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/cffa2bb33ea998fbaef8df189d55ca89bb39b10a22187ef341d085d52e957bce.dll.zst",
+        "sha256": "cffa2bb33ea998fbaef8df189d55ca89bb39b10a22187ef341d085d52e957bce",
+        "size_bytes": 1317350
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-09-12T10:56:27.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
+      "library_id": "amd_fidelityfx_framegeneration_dx12",
+      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
+      "file_version": "4.0.1.2740",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
+        "size_bytes": 40085776
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/3cdf5971b1f2e53df9daac6a69b1aff4bb32dcfae1efeeeb289dd11a4f9c6140.dll.zst",
+        "sha256": "3cdf5971b1f2e53df9daac6a69b1aff4bb32dcfae1efeeeb289dd11a4f9c6140",
+        "size_bytes": 24873427
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-06-11T13:24:06.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
+      "library_id": "amd_fidelityfx_framegeneration_dx12",
+      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
+      "file_version": "3.1.5.44888",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
+        "size_bytes": 1090832
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/01951b75a3562dac01f51172b1195669782e3bab8b2c15481450576ff6274f51.dll.zst",
+        "sha256": "01951b75a3562dac01f51172b1195669782e3bab8b2c15481450576ff6274f51",
+        "size_bytes": 276565
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-08-07T13:39:20.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
+      "library_id": "amd_fidelityfx_framegeneration_dx12",
+      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
+      "file_version": "4.0.0.604",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
+        "size_bytes": 38245640
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/8513d9884756a7312fcf81f88089d937ede5801511d1093de9c622d527eccecd.dll.zst",
+        "sha256": "8513d9884756a7312fcf81f88089d937ede5801511d1093de9c622d527eccecd",
+        "size_bytes": 23029914
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-12-09T10:36:32.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
+      "library_id": "amd_fidelityfx_framegeneration_dx12",
+      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
+      "file_version": "4",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
+        "size_bytes": 38246160
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/6c0c5f385c88114846a143572f22bdab007e9adf94b27957495ebdb998879c28.dll.zst",
+        "sha256": "6c0c5f385c88114846a143572f22bdab007e9adf94b27957495ebdb998879c28",
+        "size_bytes": 23031751
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-03-20T16:18:43.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
+      "library_id": "amd_fidelityfx_loader_dx12",
+      "file_name": "amd_fidelityfx_loader_dx12.dll",
+      "file_version": "1.0.2.44888",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
+        "size_bytes": 24840
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/cd28d5a68ed96aa7a96754904575d3e7ebbc3fe89b57f9abe97fefe70b3d1da2.dll.zst",
+        "sha256": "cd28d5a68ed96aa7a96754904575d3e7ebbc3fe89b57f9abe97fefe70b3d1da2",
+        "size_bytes": 15326
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-08-07T13:37:36.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
+      "library_id": "amd_fidelityfx_loader_dx12",
+      "file_name": "amd_fidelityfx_loader_dx12.dll",
+      "file_version": "2.1.0.604",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
+        "size_bytes": 25864
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/2a59b642fe8065de7d1e2547caf963899aa0493934e3d919c3c1ed104f04c8d1.dll.zst",
+        "sha256": "2a59b642fe8065de7d1e2547caf963899aa0493934e3d919c3c1ed104f04c8d1",
+        "size_bytes": 15503
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-12-09T10:35:49.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
+      "library_id": "amd_fidelityfx_loader_dx12",
+      "file_name": "amd_fidelityfx_loader_dx12.dll",
+      "file_version": "2.2",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
+        "size_bytes": 25864
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/56c5ffcf85ae7d9cbdba819404d1530e235cb9c84a7b24cdeff56b15fb89e35f.dll.zst",
+        "sha256": "56c5ffcf85ae7d9cbdba819404d1530e235cb9c84a7b24cdeff56b15fb89e35f",
+        "size_bytes": 15532
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-03-20T16:18:46.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
+      "library_id": "amd_fidelityfx_loader_dx12",
+      "file_name": "amd_fidelityfx_loader_dx12.dll",
+      "file_version": "2.3.0.2740",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
+        "size_bytes": 26376
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/9094d129b4fffcbb5d0b9270935343da85a94f48c47e1956e4b83e0362c1326b.dll.zst",
+        "sha256": "9094d129b4fffcbb5d0b9270935343da85a94f48c47e1956e4b83e0362c1326b",
+        "size_bytes": 15659
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-06-11T13:24:11.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
+      "library_id": "amd_fidelityfx_radiancecache_dx12",
+      "file_name": "amd_fidelityfx_radiancecache_dx12.dll",
+      "file_version": "0.9.0.2740",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
+        "size_bytes": 798992
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/2681ac9d5e41b9d73896a73fe1ef1f0bccb0a03e11a2fdd36d026a163564f774.dll.zst",
+        "sha256": "2681ac9d5e41b9d73896a73fe1ef1f0bccb0a03e11a2fdd36d026a163564f774",
+        "size_bytes": 428919
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-06-11T13:24:16.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
+      "library_id": "amd_fidelityfx_radiancecache_dx12",
+      "file_name": "amd_fidelityfx_radiancecache_dx12.dll",
+      "file_version": "0.9",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
+        "size_bytes": 795912
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/e28ddf9bc857ff72f6d46e308a22d95080e16f3164519e15abca859a52fb2ac9.dll.zst",
+        "sha256": "e28ddf9bc857ff72f6d46e308a22d95080e16f3164519e15abca859a52fb2ac9",
+        "size_bytes": 427360
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-03-20T16:18:48.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
+      "library_id": "amd_fidelityfx_radiancecache_dx12",
+      "file_name": "amd_fidelityfx_radiancecache_dx12.dll",
+      "file_version": "0.9.0.604",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
+        "size_bytes": 795920
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/6eb5d7296096fe3c7661c85aca41bd0da77edd2f3f8848d1696da65607caa10e.dll.zst",
+        "sha256": "6eb5d7296096fe3c7661c85aca41bd0da77edd2f3f8848d1696da65607caa10e",
+        "size_bytes": 427522
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-12-09T10:35:42.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
+      "library_id": "amd_fidelityfx_upscaler_dx12",
+      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
+      "file_version": "4.0.2.44888",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
+        "size_bytes": 13138192
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/691d3275c96aa48c7935e9db7f6d25dc2961204c427224827912d71c7ca04cd0.dll.zst",
+        "sha256": "691d3275c96aa48c7935e9db7f6d25dc2961204c427224827912d71c7ca04cd0",
+        "size_bytes": 2690165
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-08-07T13:36:08.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
+      "library_id": "amd_fidelityfx_upscaler_dx12",
+      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
+      "file_version": "4.0.3.604",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
+        "size_bytes": 22348552
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/adfa847aa06a20c4d8372b63b9f427ce46a2d8698e598c197bb0f59fad94eb54.dll.zst",
+        "sha256": "adfa847aa06a20c4d8372b63b9f427ce46a2d8698e598c197bb0f59fad94eb54",
+        "size_bytes": 3647505
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-12-09T10:34:59.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
+      "library_id": "amd_fidelityfx_upscaler_dx12",
+      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
+      "file_version": "4.1.1.2740",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
+        "size_bytes": 28761864
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/fce41c3905fa874233cdd4c868a432d96af15cabf14ccd425d35ba2cb4463ad5.dll.zst",
+        "sha256": "fce41c3905fa874233cdd4c868a432d96af15cabf14ccd425d35ba2cb4463ad5",
+        "size_bytes": 4341247
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-06-11T13:24:22.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+      "library_id": "amd_fidelityfx_upscaler_dx12",
+      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
+      "file_version": "4.1",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+        "size_bytes": 15605520
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/82c4aef71c6499a9967cd92752ade78bf3475b15ea01509ea52eb67e8d399cf7.dll.zst",
+        "sha256": "82c4aef71c6499a9967cd92752ade78bf3475b15ea01509ea52eb67e8d399cf7",
+        "size_bytes": 2702832
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2026-03-20T16:18:50.000Z"
       }
     },
     {
@@ -297,28 +731,9 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:a1624cc4238fef046f30c4d80ce3f47be63fc5f5373f49e3ee9edb9960f54c78",
-      "library_id": "amd_fidelityfx_vk",
-      "file_name": "amd_fidelityfx_vk.dll",
-      "file_version": "1.0.1.41314",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "a1624cc4238fef046f30c4d80ce3f47be63fc5f5373f49e3ee9edb9960f54c78",
-        "size_bytes": 9332432
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/70b65a3cd415e671fb6f047c08ea59fdbc1509bd5157a072a8ba634acb02a3a9.dll.zst",
-        "sha256": "70b65a3cd415e671fb6f047c08ea59fdbc1509bd5157a072a8ba634acb02a3a9",
-        "size_bytes": 817693
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-12-16T11:05:45.000Z"
       }
     },
     {
@@ -339,389 +754,225 @@
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-06-09T11:45:17.000Z"
       }
     },
     {
-      "artifact_id": "sha256:11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
-      "library_id": "amd_fidelityfx_loader_dx12",
-      "file_name": "amd_fidelityfx_loader_dx12.dll",
-      "file_version": "1.0.2.44888",
+      "artifact_id": "sha256:04a455bb7c01af1adc630f3be41bd85689b6a8565199e25b09696240750f6d1e",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.1.39157",
       "architecture": "X64",
       "dll": {
-        "sha256": "11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
-        "size_bytes": 24840
+        "sha256": "04a455bb7c01af1adc630f3be41bd85689b6a8565199e25b09696240750f6d1e",
+        "size_bytes": 9284304
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/93d6581df80d1228e0115cdfa2edd7a9ae8f42a1edda6bd21466af6676172b76.dll.zst",
-        "sha256": "93d6581df80d1228e0115cdfa2edd7a9ae8f42a1edda6bd21466af6676172b76",
-        "size_bytes": 14477
+        "object_key": "libraries/blobs/sha256/d516acbf76868ed2383195e9a01f9d1307bc28feb4a57d070b2d9838503ebb9a.dll.zst",
+        "sha256": "d516acbf76868ed2383195e9a01f9d1307bc28feb4a57d070b2d9838503ebb9a",
+        "size_bytes": 1080516
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-12-09T11:23:42.000Z"
       }
     },
     {
-      "artifact_id": "sha256:2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
-      "library_id": "amd_fidelityfx_loader_dx12",
-      "file_name": "amd_fidelityfx_loader_dx12.dll",
-      "file_version": "2.1.0.604",
+      "artifact_id": "sha256:239792f0653ea3ccf13d384cc462def4108a47e14d7bf72a41b778b8bc2da8f9",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.1.38338",
       "architecture": "X64",
       "dll": {
-        "sha256": "2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
-        "size_bytes": 25864
+        "sha256": "239792f0653ea3ccf13d384cc462def4108a47e14d7bf72a41b778b8bc2da8f9",
+        "size_bytes": 9277136
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/54c9e881d1afbca0863e338356a5f02a69d5bf0084f9a0bccce367f2cdac7120.dll.zst",
-        "sha256": "54c9e881d1afbca0863e338356a5f02a69d5bf0084f9a0bccce367f2cdac7120",
-        "size_bytes": 14664
+        "object_key": "libraries/blobs/sha256/5d1b09641c303a8b3e62e26efe3402049222766c2b942322244e7d94e1912975.dll.zst",
+        "sha256": "5d1b09641c303a8b3e62e26efe3402049222766c2b942322244e7d94e1912975",
+        "size_bytes": 1076485
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-10-24T09:04:16.000Z"
       }
     },
     {
-      "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
-      "library_id": "amd_fidelityfx_loader_dx12",
-      "file_name": "amd_fidelityfx_loader_dx12.dll",
-      "file_version": "2.2.0.0",
+      "artifact_id": "sha256:3cceed45fd9fc47c98eb6d205fbd8aad198afef945c39f621a6e21dfb2bd97bf",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.0.36604",
       "architecture": "X64",
       "dll": {
-        "sha256": "d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
-        "size_bytes": 25864
+        "sha256": "3cceed45fd9fc47c98eb6d205fbd8aad198afef945c39f621a6e21dfb2bd97bf",
+        "size_bytes": 9200344
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/6be1ff9a913f8bcd4c1db766df0d52814ec335f1d3453a47cacc6f04e6a02113.dll.zst",
-        "sha256": "6be1ff9a913f8bcd4c1db766df0d52814ec335f1d3453a47cacc6f04e6a02113",
-        "size_bytes": 14678
+        "object_key": "libraries/blobs/sha256/3326f18b54e48e060b27e40ff857f8b511eab6928cbb444db14e6bed922ff195.dll.zst",
+        "sha256": "3326f18b54e48e060b27e40ff857f8b511eab6928cbb444db14e6bed922ff195",
+        "size_bytes": 959768
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-07-03T21:10:47.000Z"
       }
     },
     {
-      "artifact_id": "sha256:e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
-      "library_id": "amd_fidelityfx_loader_dx12",
-      "file_name": "amd_fidelityfx_loader_dx12.dll",
-      "file_version": "2.3.0.2740",
+      "artifact_id": "sha256:6c6bfdaa15e5827a1274d41e5dea5bdb5852816fc462502caf4a32982aabea70",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.1.37507",
       "architecture": "X64",
       "dll": {
-        "sha256": "e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
-        "size_bytes": 26376
+        "sha256": "6c6bfdaa15e5827a1274d41e5dea5bdb5852816fc462502caf4a32982aabea70",
+        "size_bytes": 9262808
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/3f5aacbfd9630f2eee6b759df1dc7010e99c0d0c91b7259f4a2b08a84ce1d828.dll.zst",
-        "sha256": "3f5aacbfd9630f2eee6b759df1dc7010e99c0d0c91b7259f4a2b08a84ce1d828",
-        "size_bytes": 14779
+        "object_key": "libraries/blobs/sha256/015d7668208c13d0d958cf59d8a863bf27d1a663cce72ba0269793963330922c.dll.zst",
+        "sha256": "015d7668208c13d0d958cf59d8a863bf27d1a663cce72ba0269793963330922c",
+        "size_bytes": 1075603
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2024-09-12T10:57:18.000Z"
       }
     },
     {
-      "artifact_id": "sha256:241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
-      "library_id": "amd_fidelityfx_upscaler_dx12",
-      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
-      "file_version": "4.0.2.44888",
+      "artifact_id": "sha256:a1624cc4238fef046f30c4d80ce3f47be63fc5f5373f49e3ee9edb9960f54c78",
+      "library_id": "amd_fidelityfx_vk",
+      "file_name": "amd_fidelityfx_vk.dll",
+      "file_version": "1.0.1.41314",
       "architecture": "X64",
       "dll": {
-        "sha256": "241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
-        "size_bytes": 13138192
+        "sha256": "a1624cc4238fef046f30c4d80ce3f47be63fc5f5373f49e3ee9edb9960f54c78",
+        "size_bytes": 9332432
       },
       "transport": {
         "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/5736fc20f46ccd8843992a6c0d2d563013c86c7a68bf0c7f2395e79ed2355977.dll.zst",
-        "sha256": "5736fc20f46ccd8843992a6c0d2d563013c86c7a68bf0c7f2395e79ed2355977",
-        "size_bytes": 2484629
+        "object_key": "libraries/blobs/sha256/4eeeaaa3a60ca35cc70876a347bb57429065fbb90050785a40f7641743031c61.dll.zst",
+        "sha256": "4eeeaaa3a60ca35cc70876a347bb57429065fbb90050785a40f7641743031c61",
+        "size_bytes": 1085444
       },
       "signature": {
         "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
-      "library_id": "amd_fidelityfx_upscaler_dx12",
-      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
-      "file_version": "4.0.3.604",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
-        "size_bytes": 22348552
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/90d884cdde27bbca3382d2bf8588dcd9f1df3ad3610ae1dd9afe8e04b94baa65.dll.zst",
-        "sha256": "90d884cdde27bbca3382d2bf8588dcd9f1df3ad3610ae1dd9afe8e04b94baa65",
-        "size_bytes": 2591755
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
-      "library_id": "amd_fidelityfx_upscaler_dx12",
-      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
-      "file_version": "4.1.0.0",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
-        "size_bytes": 15605520
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/1f3c43b16062f8774eed9f7b7e9404b0143fb1d0bca597b45358bd7be8eefaa3.dll.zst",
-        "sha256": "1f3c43b16062f8774eed9f7b7e9404b0143fb1d0bca597b45358bd7be8eefaa3",
-        "size_bytes": 2254023
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
-      "library_id": "amd_fidelityfx_upscaler_dx12",
-      "file_name": "amd_fidelityfx_upscaler_dx12.dll",
-      "file_version": "4.1.1.2740",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
-        "size_bytes": 28761864
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/95bebfe3946fb42b1d5d52e4b4929820f0dde4cb79939a134aa8d80c1405fb42.dll.zst",
-        "sha256": "95bebfe3946fb42b1d5d52e4b4929820f0dde4cb79939a134aa8d80c1405fb42",
-        "size_bytes": 3449426
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
-      "library_id": "amd_fidelityfx_framegeneration_dx12",
-      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
-      "file_version": "3.1.5.44888",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
-        "size_bytes": 1090832
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/ad653789106707e8622116cb3728bf73f1d0a5458d0e1599571c51878c5f142e.dll.zst",
-        "sha256": "ad653789106707e8622116cb3728bf73f1d0a5458d0e1599571c51878c5f142e",
-        "size_bytes": 258885
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
-      "library_id": "amd_fidelityfx_framegeneration_dx12",
-      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
-      "file_version": "4.0.0.0",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
-        "size_bytes": 38246160
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/940159014637d9dacc66882a2b9d28eab54f2256e8a0d5a4b1f28351a11ff2af.dll.zst",
-        "sha256": "940159014637d9dacc66882a2b9d28eab54f2256e8a0d5a4b1f28351a11ff2af",
-        "size_bytes": 22558379
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
-      "library_id": "amd_fidelityfx_framegeneration_dx12",
-      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
-      "file_version": "4.0.0.604",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
-        "size_bytes": 38245640
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/c859cb478882a26eaaad26adc2391cf7f6eb4653ae6441eafd99f07fc68ad849.dll.zst",
-        "sha256": "c859cb478882a26eaaad26adc2391cf7f6eb4653ae6441eafd99f07fc68ad849",
-        "size_bytes": 22555366
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
-      "library_id": "amd_fidelityfx_framegeneration_dx12",
-      "file_name": "amd_fidelityfx_framegeneration_dx12.dll",
-      "file_version": "4.0.1.2740",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
-        "size_bytes": 40085776
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/e4a2e04ee594b64d967235e9fdb9b8968faf986ea8f150b2fe3f0b5f580692e7.dll.zst",
-        "sha256": "e4a2e04ee594b64d967235e9fdb9b8968faf986ea8f150b2fe3f0b5f580692e7",
-        "size_bytes": 23865709
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
-      "library_id": "amd_fidelityfx_denoiser_dx12",
-      "file_name": "amd_fidelityfx_denoiser_dx12.dll",
-      "file_version": "1.0.0.604",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
-        "size_bytes": 3699472
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/f7730a5f734f524d43213cc278f51f3b65b3015beb1f76a202ff926bd25383c3.dll.zst",
-        "sha256": "f7730a5f734f524d43213cc278f51f3b65b3015beb1f76a202ff926bd25383c3",
-        "size_bytes": 1200800
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
-      "library_id": "amd_fidelityfx_denoiser_dx12",
-      "file_name": "amd_fidelityfx_denoiser_dx12.dll",
-      "file_version": "1.1.0.0",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
-        "size_bytes": 3633936
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/1b5f71a1fbbad804f0d2bb58b2bbc8fa44fa72824f44f685986a5e67cd51493d.dll.zst",
-        "sha256": "1b5f71a1fbbad804f0d2bb58b2bbc8fa44fa72824f44f685986a5e67cd51493d",
-        "size_bytes": 1276797
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
-      "library_id": "amd_fidelityfx_denoiser_dx12",
-      "file_name": "amd_fidelityfx_denoiser_dx12.dll",
-      "file_version": "1.2.0.2740",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
-        "size_bytes": 13782280
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/a2eed788037f8d29177c488caf1901edb215952cc8195a4b56d9bbbf58a9d472.dll.zst",
-        "sha256": "a2eed788037f8d29177c488caf1901edb215952cc8195a4b56d9bbbf58a9d472",
-        "size_bytes": 2349898
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
-      "library_id": "amd_fidelityfx_radiancecache_dx12",
-      "file_name": "amd_fidelityfx_radiancecache_dx12.dll",
-      "file_version": "0.9.0.0",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
-        "size_bytes": 795912
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/ced84763ab82a500e31a837f30d9228f32471b1bf2cf55a4b665c74117bc730e.dll.zst",
-        "sha256": "ced84763ab82a500e31a837f30d9228f32471b1bf2cf55a4b665c74117bc730e",
-        "size_bytes": 383309
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
-      "library_id": "amd_fidelityfx_radiancecache_dx12",
-      "file_name": "amd_fidelityfx_radiancecache_dx12.dll",
-      "file_version": "0.9.0.604",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
-        "size_bytes": 795920
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/fa404e0eb74f002f64cb8751be0ff54c0568fe80080e8fa639bb70a6a8d0ed03.dll.zst",
-        "sha256": "fa404e0eb74f002f64cb8751be0ff54c0568fe80080e8fa639bb70a6a8d0ed03",
-        "size_bytes": 383086
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
-      }
-    },
-    {
-      "artifact_id": "sha256:256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
-      "library_id": "amd_fidelityfx_radiancecache_dx12",
-      "file_name": "amd_fidelityfx_radiancecache_dx12.dll",
-      "file_version": "0.9.0.2740",
-      "architecture": "X64",
-      "dll": {
-        "sha256": "256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
-        "size_bytes": 798992
-      },
-      "transport": {
-        "compression": "zstd",
-        "object_key": "libraries/blobs/sha256/84abd51ebc7cad32685d7c23b25a44fe36c3652c1f5af8c866bdd6274afa4808.dll.zst",
-        "sha256": "84abd51ebc7cad32685d7c23b25a44fe36c3652c1f5af8c866bdd6274afa4808",
-        "size_bytes": 384342
-      },
-      "signature": {
-        "status": "signed",
-        "signed_at": "2024-04-26T00:00:00Z"
+        "subject": "CN=Advanced Micro Devices, O=Advanced Micro Devices, S=California, C=US",
+        "thumbprint": "33D35682079E201671B738B7209B4586103BC271",
+        "signed_at": "2025-05-07T13:17:37.000Z"
       }
     }
   ],
   "packages": [
+    {
+      "package_id": "amd_fidelityfx_denoiser_dx12_1.0.0.604.ac1682872dbcf1b1fc5bed4d4c41205f51e2f63d364da46139b929249d763c3d",
+      "revision_sha256": "b68b1116ae8b3d9eafca9940a5813a5e457bf4a8fca9841e36131b1364268015",
+      "technology": "amd_fsr_ray_regeneration",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Ray Regeneration",
+      "release": {
+        "version": "1.0.0.604",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.1.1",
+        "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0"
+      },
+      "legal_document_ids": [
+        "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_denoiser_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_denoiser_dx12_1.1.6f34910f5fb0b52602f303828aa1f8332e0126097f8e2f7161fccfa73cd66c48",
+      "revision_sha256": "6fb27802c70b30b5188cad58f58bf870cb69850e6babadba4d0e8c36aa69e64d",
+      "technology": "amd_fsr_ray_regeneration",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Ray Regeneration",
+      "release": {
+        "version": "1.1",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_denoiser_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_denoiser_dx12_1.2.0.2740.5870c4e792145bb9b835ad28b65819fabd79e97e09ae8588e5e8718d4e1f5522",
+      "revision_sha256": "915d40364ea7e97fd942c679f3d5afbf7f5f7b92abb897acf9dd2160ed7e6d42",
+      "technology": "amd_fsr_ray_regeneration",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Ray Regeneration",
+      "release": {
+        "version": "1.2.0.2740",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.3.0",
+        "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3"
+      },
+      "legal_document_ids": [
+        "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_denoiser_dx12.dll"
+        }
+      ]
+    },
     {
       "package_id": "amd_fidelityfx_dx12_1.0.0.36208",
       "revision_sha256": "448c967868c2a24ea56bef3d89da9eb43cb819a120deb7d57e71338320a5fd61",
@@ -746,20 +997,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_dx12_1.0.0.36604",
-      "revision_sha256": "0ffb12093d2071435ef3a729d514a43aba64180a5338f9085fff38bf17662728",
+      "package_id": "amd_fidelityfx_dx12_1.0.0.36604.2e7cb529f4f274e1b5e49c8f1f3cfb7a43cad9c8277b28d3d077666a76501564",
+      "revision_sha256": "41b83d2061f9d421c44f3f1942ec875952887112abc6e6e171dcbd70f33f6fc6",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.0.36604",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.0"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.0",
+        "commit_sha": "1bbe66e7ea0d358e84af4471a90aa9c35b583de0"
+      },
+      "legal_document_ids": [
+        "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728"
+      ],
       "members": [
         {
           "artifact_id": "sha256:77809405a0ff464b63654f1264f0ec0fcf8f243dac7c15b5f5c032615520d143",
@@ -792,20 +1052,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_dx12_1.0.1.37507",
-      "revision_sha256": "4628b8015f21f79678848f60b4b6d8f34c7c78c4798b163923220baf5ce5f8c1",
+      "package_id": "amd_fidelityfx_dx12_1.0.1.37507.e2485572806f5c6b8b2361af9684b2f78addf7447f71e868eee6e8a8be1e71af",
+      "revision_sha256": "47f74837541a68ad4036fed129bb1f609096abe9107b4589450419bc059b18f5",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.37507",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.1"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.1",
+        "commit_sha": "be99c36a76fb6a09999dd6150f1fedc14d755182"
+      },
+      "legal_document_ids": [
+        "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728"
+      ],
       "members": [
         {
           "artifact_id": "sha256:9c2ba6727683804242980bcddc5c1ee4e16357b4bd17c8a93ce94614ed149780",
@@ -815,20 +1084,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_dx12_1.0.1.38338",
-      "revision_sha256": "fd3aff5ec6e82973c3c3da08f238a9908d2f85025b1f87f6460a451609069438",
+      "package_id": "amd_fidelityfx_dx12_1.0.1.38338.8b8f0575303c393abdba99648735d9bba4f94bc1d2af7b25307239cc47c2567a",
+      "revision_sha256": "5da03c9f45eaac0e260f767e44a4a7a4ff3538aca3737cec3d1496cd0798f0b6",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.38338",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.2"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.2",
+        "commit_sha": "c16b1d286b5b438b75da159ab51ff426bacea3d1"
+      },
+      "legal_document_ids": [
+        "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728"
+      ],
       "members": [
         {
           "artifact_id": "sha256:270b6298bfb87098cbe679c8f4535e17fd8954a1313292b1564e982b1e679a0d",
@@ -838,20 +1116,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_dx12_1.0.1.39157",
-      "revision_sha256": "0eddbbdf3f52c6f8fb4645968bd4c9177ab8de7d55e1f0a149d48869c5082a32",
+      "package_id": "amd_fidelityfx_dx12_1.0.1.39157.b4128a27a57fc713382c3cc3b7243378e0ff01a51af5d6d3a45eaf28ed567dfc",
+      "revision_sha256": "cb8ef1c63f71f49a38bcb13ceda55b82ed3eedd806bb5bc270dfee08d8cf838c",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.39157",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.3"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.3",
+        "commit_sha": "54fbaafdc34716811751bea5032700e78f5a0f33"
+      },
+      "legal_document_ids": [
+        "license.24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc"
+      ],
       "members": [
         {
           "artifact_id": "sha256:5672ee4202aa5417e23369d548a140652367494299a7678b42aa5b3395f76ad7",
@@ -884,20 +1171,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_dx12_1.0.1.41314",
-      "revision_sha256": "f587c3ce862588d8068dc8205063df42d41c7cf10037562ff8f5fcfa20fe9e1d",
+      "package_id": "amd_fidelityfx_dx12_1.0.1.41314.3f2f4dfcaa084d49281dabd1e682cf15437ac2f781efc1a273fbe4dfb107d517",
+      "revision_sha256": "8ca2c76ffbc55ad51e6c02bdd74776fbad5d3ead7a4e11fa6aa09863d8d34814",
       "technology": "amd_fsr",
       "variant": "dx12_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.41314",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.4"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.4",
+        "commit_sha": "c6efa6bf7f2027b3ec94f28578bb5965eabb9e55"
+      },
+      "legal_document_ids": [
+        "license.24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc"
+      ],
       "members": [
         {
           "artifact_id": "sha256:12a5081257ec95b0b53ad51b4a87fb3c03f97fe0bbb59f9496968f8d50ef93a6",
@@ -930,20 +1226,513 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_vk_1.0.0.36604",
-      "revision_sha256": "0cdc0fe725b71250bf7894d830d423adb7c090efc53e3b99959f5712fc3dae75",
+      "package_id": "amd_fidelityfx_framegeneration_dx12_3.1.5.44888.b5be7b0aef6c029218cdf95cff4876b13fd69a0820765d36e88a77b4df621e91",
+      "revision_sha256": "8ce2889d290f784fe8727ff66f1b8a451db5db01d3f18e8d3139c6c2db9a4447",
+      "technology": "amd_fsr_frame_generation",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Frame Generation",
+      "release": {
+        "version": "3.1.5.44888",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.0.0",
+        "commit_sha": "f4c1da8e92f3fe563b5c28c44e6267ce6b6b8eb2"
+      },
+      "legal_document_ids": [
+        "license.be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.0.604.8099959a7f4d6de2de011d6b9ddf11e7db5dc1e803d83ac09bee124895f72bcc",
+      "revision_sha256": "68bbde2f835576e1b4ebb7ff9298542aefa05e70569badf9441f54196179a40e",
+      "technology": "amd_fsr_frame_generation",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Frame Generation",
+      "release": {
+        "version": "4.0.0.604",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.1.1",
+        "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0"
+      },
+      "legal_document_ids": [
+        "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.1.2740.1ddd266dd4b2d5c6d659b6eb4cdce3f84c9bc902c91c7c305a6cdc1559a78c10",
+      "revision_sha256": "7542f56198eb3ebf2c32cb78f8a854db9ba817d4e79172c95cf1cf6a9801097d",
+      "technology": "amd_fsr_frame_generation",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Frame Generation",
+      "release": {
+        "version": "4.0.1.2740",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.3.0",
+        "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3"
+      },
+      "legal_document_ids": [
+        "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_framegeneration_dx12_4.61fbe1f13fda1fbab18609f9e534751797985fcb5d313c6f34dca9dfb98984d3",
+      "revision_sha256": "6edc14dd3d65cb146abf8dd81461412af065bfbea942bee50c36e3e08448908a",
+      "technology": "amd_fsr_frame_generation",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Frame Generation",
+      "release": {
+        "version": "4",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_loader_dx12_1.0.2.44888.c9bc44be22384cca972b86643a34e30a744b370adbb9a5c1edff54a3c4b8b459",
+      "revision_sha256": "49596ea9fea7810e6823796f422671090431f458e976001c39868f0f76814875",
+      "technology": "amd_fsr_loader",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Loader",
+      "release": {
+        "version": "1.0.2.44888",
+        "channel": "stable",
+        "label": "FidelityFX SDK 2.0.0"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.0.0",
+        "commit_sha": "f4c1da8e92f3fe563b5c28c44e6267ce6b6b8eb2"
+      },
+      "legal_document_ids": [
+        "license.be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_loader_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_loader_dx12_2.1.0.604.6e0ac38ff1f391122b6c1488ce3f85980a4d4d138e7d939e04e8bfab133e3601",
+      "revision_sha256": "9e273b11e1844c59c2e92c05007be2bf184b64f036cb014c6cb6d53ec3457f31",
+      "technology": "amd_fsr_loader",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Loader",
+      "release": {
+        "version": "2.1.0.604",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.1.1",
+        "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0"
+      },
+      "legal_document_ids": [
+        "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_loader_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_loader_dx12_2.2.2a28f520595bad146abe90841f46eb99bbaee755b851bc651425a97dc49bc17f",
+      "revision_sha256": "ed4fcf73109d26eeb0161efe3a07b181b4a1d5d8a7563d74cb019ed716b5bdc0",
+      "technology": "amd_fsr_loader",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Loader",
+      "release": {
+        "version": "2.2",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_loader_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_loader_dx12_2.3.0.2740.b0aba1d41e3d9d71bcd425877816086364748df1c0d7688ae5bd7f733bd9b1b2",
+      "revision_sha256": "650cb2233ec169f3fb65213b77fb82ace53ddaf29dbcc13be36cf34d3379a932",
+      "technology": "amd_fsr_loader",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Loader",
+      "release": {
+        "version": "2.3.0.2740",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.3.0",
+        "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3"
+      },
+      "legal_document_ids": [
+        "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_loader_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.2740.5c66b4f4ce604711af561260a0ea7c64ec8d41b0912d522ef789d569b26aeeb3",
+      "revision_sha256": "7b0209020b841570eb9858e73b62db82816380d572ba81e21c7de973e2b23823",
+      "technology": "amd_fsr_radiance_cache",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Radiance Cache",
+      "release": {
+        "version": "0.9.0.2740",
+        "channel": "stable",
+        "label": "preview"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.3.0",
+        "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3"
+      },
+      "legal_document_ids": [
+        "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.604.a7924d40e5317fe133cb8ce9fe4fea61d762f9d99c3bc000fb754b8fb727ecd5",
+      "revision_sha256": "537fb7def5af956c045fc1de34b276fd234361db551d02cec3c47c9d60303a55",
+      "technology": "amd_fsr_radiance_cache",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Radiance Cache",
+      "release": {
+        "version": "0.9.0.604",
+        "channel": "stable",
+        "label": "preview"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.1.1",
+        "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0"
+      },
+      "legal_document_ids": [
+        "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.a6bf8654ec059c15da05f90454659238bb9d0482cc8559a260de44b2f51ea181",
+      "revision_sha256": "632b1c49cdadbee7840f5a625b9765e0f2a16fd909ef94cf2e1349a7fd4c865e",
+      "technology": "amd_fsr_radiance_cache",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Radiance Cache",
+      "release": {
+        "version": "0.9",
+        "channel": "stable",
+        "label": "preview"
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_upscaler_dx12_4.0.2.44888.a48665a4a58f6070130a6446b5d927dac2a3641393b737d4be0dc4fd74be5079",
+      "revision_sha256": "fb14c757d2a513f456b39b602ea6594cc952da89e6b3ac38b3afbcd46fb1749d",
+      "technology": "amd_fsr_upscaler",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Upscaler",
+      "release": {
+        "version": "4.0.2.44888",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.0.0",
+        "commit_sha": "f4c1da8e92f3fe563b5c28c44e6267ce6b6b8eb2"
+      },
+      "legal_document_ids": [
+        "license.be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_upscaler_dx12_4.0.3.604.688e8cdc7262aecb9619670e15d733e1bca775d3b4b42cf5671a51edca14c54b",
+      "revision_sha256": "53a12b4842f89db225e4e321d66a1e80273f1660101dec9f513591e6c8afaea7",
+      "technology": "amd_fsr_upscaler",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Upscaler",
+      "release": {
+        "version": "4.0.3.604",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.1.1",
+        "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0"
+      },
+      "legal_document_ids": [
+        "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_upscaler_dx12_4.1.1.2740.f6c5947966286f25da70468206023848ab2b2eb1e1a4651d1ca12d8a64157907",
+      "revision_sha256": "03e3208d81171eb72b54cade03ac40442d1a1bf035030e8fe0003dce391c9a46",
+      "technology": "amd_fsr_upscaler",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Upscaler",
+      "release": {
+        "version": "4.1.1.2740",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.3.0",
+        "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3"
+      },
+      "legal_document_ids": [
+        "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_upscaler_dx12_4.1.1dcea90008123dcba56d518e28483301e58a21048d8894b20800fbda704312f3",
+      "revision_sha256": "bfb560b43c8ceb245128411388ae1241d46c89fd9e52307f6d48e7a668ead112",
+      "technology": "amd_fsr_upscaler",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Upscaler",
+      "release": {
+        "version": "4.1",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_vk_1.0.0.36604.f7948b7fab77d3d77b57398436257a5331f7208ee7cbe4d140a55f1ea0b9e339",
+      "revision_sha256": "e433284e3c231e871c53a9d1d55bc4b8636cf79bb729e386a99e29a1d8f40adc",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.0.36604",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.0"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.0",
+        "commit_sha": "1bbe66e7ea0d358e84af4471a90aa9c35b583de0"
+      },
+      "legal_document_ids": [
+        "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728"
+      ],
       "members": [
         {
           "artifact_id": "sha256:3cceed45fd9fc47c98eb6d205fbd8aad198afef945c39f621a6e21dfb2bd97bf",
@@ -953,20 +1742,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_vk_1.0.1.37507",
-      "revision_sha256": "57a41f59b3b0a8cfbc301b42cf4e2eb5fdf3be0138a733cc2e17c1c9aa6903fb",
+      "package_id": "amd_fidelityfx_vk_1.0.1.37507.5bea191c907776049b366e20f0cf081bcf79f8cf496d64b6959148156ad72be0",
+      "revision_sha256": "86d57b693867b2ebf694241f7bd57ab24c591680b1e7c1956ae40a1a29f20f14",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.37507",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.1"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.1",
+        "commit_sha": "be99c36a76fb6a09999dd6150f1fedc14d755182"
+      },
+      "legal_document_ids": [
+        "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728"
+      ],
       "members": [
         {
           "artifact_id": "sha256:6c6bfdaa15e5827a1274d41e5dea5bdb5852816fc462502caf4a32982aabea70",
@@ -976,20 +1774,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_vk_1.0.1.38338",
-      "revision_sha256": "18e627bbde988945833509ff4d5b70282b6ee1b8d5de5310a7e35f0879f2db1c",
+      "package_id": "amd_fidelityfx_vk_1.0.1.38338.43380c2d423fae07341e4230acaa3fd7919bb3f76f9f68c4d837cfe23e52377c",
+      "revision_sha256": "5ae4d6f1c866a628c6c82bd951fef169b7548a2e22cb66a540d87201e72d76e2",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.38338",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.2"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.2",
+        "commit_sha": "c16b1d286b5b438b75da159ab51ff426bacea3d1"
+      },
+      "legal_document_ids": [
+        "license.1b56238b999d0db2b917ba0620129cbc9b6aef0c7f0464a181f4a372ba4f9728"
+      ],
       "members": [
         {
           "artifact_id": "sha256:239792f0653ea3ccf13d384cc462def4108a47e14d7bf72a41b778b8bc2da8f9",
@@ -999,20 +1806,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_vk_1.0.1.39157",
-      "revision_sha256": "743377386c7d003134ef9aec19490ffc8673e967f085acdfd9b69055c6fc3dca",
+      "package_id": "amd_fidelityfx_vk_1.0.1.39157.c861c6cb55afb9f532b19dade958c810d5dee890f0817daeec301877710c4a81",
+      "revision_sha256": "13317c876e53a26aec837f63061d16b311c282f7894f241abdf67d17bde46d94",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.39157",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.3"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.3",
+        "commit_sha": "54fbaafdc34716811751bea5032700e78f5a0f33"
+      },
+      "legal_document_ids": [
+        "license.24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc"
+      ],
       "members": [
         {
           "artifact_id": "sha256:04a455bb7c01af1adc630f3be41bd85689b6a8565199e25b09696240750f6d1e",
@@ -1045,20 +1861,29 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_vk_1.0.1.41314",
-      "revision_sha256": "916c1c1e964de925783e7f600e5631bf6e18631a3d0995e19353990dd487c591",
+      "package_id": "amd_fidelityfx_vk_1.0.1.41314.77c8aa877c74bfcec02f3d3c935ffe3255386edc10486c11d7ac0d5311868509",
+      "revision_sha256": "6915ff457286a1d506581a04e4894f68a4e6d5b7847491efdedc5656715aa459",
       "technology": "amd_fsr",
       "variant": "vulkan_runtime",
       "display_name": "AMD FidelityFX Super Resolution",
       "release": {
         "version": "1.0.1.41314",
-        "channel": "beta",
+        "channel": "stable",
         "label": "FSR 3.1.4"
       },
       "target": {
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v1.1.4",
+        "commit_sha": "c6efa6bf7f2027b3ec94f28578bb5965eabb9e55"
+      },
+      "legal_document_ids": [
+        "license.24574816bc396473a2082ba50aef02640502395b7cdaca49ce3fafe4bf6447fc"
+      ],
       "members": [
         {
           "artifact_id": "sha256:a1624cc4238fef046f30c4d80ce3f47be63fc5f5373f49e3ee9edb9960f54c78",
@@ -1091,422 +1916,8 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_loader_dx12_1.0.2.44888",
-      "revision_sha256": "2d4b81d85e0ae473fe677de30b1a590ecb9b34b2c3f9f32a6911d7911d6ca265",
-      "technology": "amd_fsr_loader",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Loader",
-      "release": {
-        "version": "1.0.2.44888",
-        "channel": "stable",
-        "label": "FidelityFX SDK 2.0.0"
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:11633127b050ec02e147987713900f403056147df529851b1388f987897d5b0e",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_loader_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_loader_dx12_2.1.0.604",
-      "revision_sha256": "6edd7a2468f7cd639b5fbe7915fd3f22d526e31403d569f7f0368ae1ac986844",
-      "technology": "amd_fsr_loader",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Loader",
-      "release": {
-        "version": "2.1.0.604",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:2f36843c3bb8c059621c10574e586a883ef337f2a549c67ecf3a82b3959ac238",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_loader_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_loader_dx12_2.2.0.0",
-      "revision_sha256": "302aea0c79c82cc1e9a2521a6f1aba82c1a3449ed03492e61a5d78c4ed8b780c",
-      "technology": "amd_fsr_loader",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Loader",
-      "release": {
-        "version": "2.2.0.0",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_loader_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_loader_dx12_2.3.0.2740",
-      "revision_sha256": "6590b2ed63531ead7aaaad797cbedabe1d34133eb94dde608e605bb9187b8eba",
-      "technology": "amd_fsr_loader",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Loader",
-      "release": {
-        "version": "2.3.0.2740",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_loader_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_upscaler_dx12_4.0.2.44888",
-      "revision_sha256": "c6aed9ab55f67df9b5a3096a3ab980f3eadace0fa6d8daea0fcc56883c03b12d",
-      "technology": "amd_fsr_upscaler",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Upscaler",
-      "release": {
-        "version": "4.0.2.44888",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_upscaler_dx12_4.0.3.604",
-      "revision_sha256": "d08120e1a3ed4f450d8357c8eb9b3e0ec04d59f8efc7a7b301909d7777cdba68",
-      "technology": "amd_fsr_upscaler",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Upscaler",
-      "release": {
-        "version": "4.0.3.604",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_upscaler_dx12_4.1.0.0",
-      "revision_sha256": "8dc9d0b58a87513820cbb07b4366f71f4a0146fd983c5cd176b31baa88eb0cff",
-      "technology": "amd_fsr_upscaler",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Upscaler",
-      "release": {
-        "version": "4.1.0.0",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_upscaler_dx12_4.1.1.2740",
-      "revision_sha256": "01011f53cb5686f75d66fe84e6597d42758acef9c242a5c0221871ae828f5afa",
-      "technology": "amd_fsr_upscaler",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Upscaler",
-      "release": {
-        "version": "4.1.1.2740",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_framegeneration_dx12_3.1.5.44888",
-      "revision_sha256": "d5c0a6f5a7c92938c07e8aa5da5147347ef55236f53eafe7651fce1993da5fbf",
-      "technology": "amd_fsr_frame_generation",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Frame Generation",
-      "release": {
-        "version": "3.1.5.44888",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:1429c91128d59a20120dd09b189a7e7ddfecf7e7b700d825bce4c4c6e9c0d451",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.0.0",
-      "revision_sha256": "caa3f58e8ef341202c1cf06bbeaa98d9710d7e5c509a97fa7397edb3182f99f7",
-      "technology": "amd_fsr_frame_generation",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Frame Generation",
-      "release": {
-        "version": "4.0.0.0",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.0.604",
-      "revision_sha256": "0dd79672d17e6916a8fcbc441f9160f7f007188cf7648c2b2a1e2cbaea122bf5",
-      "technology": "amd_fsr_frame_generation",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Frame Generation",
-      "release": {
-        "version": "4.0.0.604",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:3f5e674a59b400756e98ef31fd583a4eb08ad567ec8dee362886bc96e55ed347",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.1.2740",
-      "revision_sha256": "da0a708526c31d21751e740dbb0c1535d40bc331d146eb4fab25243bbe5474de",
-      "technology": "amd_fsr_frame_generation",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Frame Generation",
-      "release": {
-        "version": "4.0.1.2740",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_denoiser_dx12_1.0.0.604",
-      "revision_sha256": "f7f7d672e0c4d27f8346bd2ac3c91741099b986f7dd18d165c729606d9a22183",
-      "technology": "amd_fsr_ray_regeneration",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Ray Regeneration",
-      "release": {
-        "version": "1.0.0.604",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:61bebc329bf126f96e46e642e41e661e70fc01fc060f5ac523c67867c8e71fb0",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_denoiser_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_denoiser_dx12_1.1.0.0",
-      "revision_sha256": "aa503ba2c66220b899167e08ffdb1cab6a671874c410aebab3fe10d34ba1f463",
-      "technology": "amd_fsr_ray_regeneration",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Ray Regeneration",
-      "release": {
-        "version": "1.1.0.0",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:f003e1298f7bc09e76578f995f64e46e6f5355f0597b88ff85e9a9922fdf92c6",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_denoiser_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_denoiser_dx12_1.2.0.2740",
-      "revision_sha256": "4a21c813a11385538c3714de246b0d6e4ebb2c178983bb13d17210749b812387",
-      "technology": "amd_fsr_ray_regeneration",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Ray Regeneration",
-      "release": {
-        "version": "1.2.0.2740",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:48f1e5888ba6a0a3d59a98b9751e37c392b0f7b8c223d0082d5c1f40642879d3",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_denoiser_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.0",
-      "revision_sha256": "f837147a0b8b707286e69d3317ecb776008a0bd419df63f5d3f63651670d817f",
-      "technology": "amd_fsr_radiance_cache",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Radiance Cache",
-      "release": {
-        "version": "0.9.0.0",
-        "channel": "stable",
-        "label": "preview"
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.604",
-      "revision_sha256": "a3666af3b4c9ee7cc9c68945cc4c09fdec67d8b1cbbc5456c605faad0d49f660",
-      "technology": "amd_fsr_radiance_cache",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Radiance Cache",
-      "release": {
-        "version": "0.9.0.604",
-        "channel": "stable",
-        "label": "preview"
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.2740",
-      "revision_sha256": "19273881bf68943d198459e35cb4e9f736f0473b42ebcb809c0e6c07c0681ef5",
-      "technology": "amd_fsr_radiance_cache",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Radiance Cache",
-      "release": {
-        "version": "0.9.0.2740",
-        "channel": "stable",
-        "label": "preview"
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:256db18d924c8cd38923d04e3ecd210695d3f0f796b240eab9663ad4d54e31a0",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "fsr_dx12_sdk.4.0.2.44888",
-      "revision_sha256": "5890358696f6c521683b314c55c7d1def2539bf877ff845eee16e134c611cd8f",
+      "package_id": "fsr_dx12_sdk.4.0.2.44888.b5e709e2f5bdb0ded49112dde6df3aa087c9dd8adee369a124f37972c6b2b5df",
+      "revision_sha256": "820f9252968a2a99dc923713001738954467a299f2bcbabf3dee1f561516be25",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
@@ -1519,6 +1930,15 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.0.0",
+        "commit_sha": "f4c1da8e92f3fe563b5c28c44e6267ce6b6b8eb2"
+      },
+      "legal_document_ids": [
+        "license.be05d8cd5489deff924dbe91e0c5b8c0ff034d43cd11749bf9a67a0c38252b7b"
+      ],
       "members": [
         {
           "artifact_id": "sha256:241e6e5e4d848424eb8ec9a6b22c43fe34cf0cf52d30002ca435ba42e53a9ca0",
@@ -1538,8 +1958,8 @@
       ]
     },
     {
-      "package_id": "fsr_dx12_sdk.4.0.3.604",
-      "revision_sha256": "5146d10e64540b2b7e6ccaad4403370fdf787024ca18ea7d3539cbac71a12224",
+      "package_id": "fsr_dx12_sdk.4.0.3.604.45af42350ad96f4f316790339f402f75a1d68a97fe526a6edb1110fa0eb0ba61",
+      "revision_sha256": "55da41775495f54362b614f1594fb7ea04613b48f33484827837cfe86580a2c1",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
@@ -1552,6 +1972,15 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.1.1",
+        "commit_sha": "8f7498a4b42d06d1daf64b3961ddcaedc07ccaf0"
+      },
+      "legal_document_ids": [
+        "license.b1ff86575bba155d782c8d1f12b0ad07113ce7e62956fadc2169eba29048b966"
+      ],
       "members": [
         {
           "artifact_id": "sha256:3eab9a448db1ca09d5aba17d11df5b789649c11d60f1281f4be97bd007ac7d6d",
@@ -1571,41 +2000,8 @@
       ]
     },
     {
-      "package_id": "fsr_dx12_sdk.4.1.0.0",
-      "revision_sha256": "1d70dab67c0e2ac3c6d079315fa37a413eb38a53e5f1148eda9dd84c96f6e7aa",
-      "technology": "amd_fsr",
-      "variant": "sdk_bundle",
-      "display_name": "AMD FidelityFX SDK DirectX 12",
-      "release": {
-        "version": "4.1.0.0",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "members": [
-        {
-          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        },
-        {
-          "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
-          "role": "loader",
-          "install_as": "amd_fidelityfx_dx12.dll"
-        },
-        {
-          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
-          "role": "frame_generation",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "fsr_dx12_sdk.4.1.1.2740",
-      "revision_sha256": "f3c59c0cb4e45654f599113eef0eb6bc78ab2fd1be6f18149235dea26eed19cb",
+      "package_id": "fsr_dx12_sdk.4.1.1.2740.e362d057fc5b18c56f5f6057f3fef5472f4a0cc510f4a0833fad2c3a6811a423",
+      "revision_sha256": "17edec76f29752fa7dd0f2585a549873afeb90b34f8bf00a8d44bf32917271c0",
       "technology": "amd_fsr",
       "variant": "sdk_bundle",
       "display_name": "AMD FidelityFX SDK DirectX 12",
@@ -1618,6 +2014,16 @@
         "os": "windows",
         "architecture": "X64"
       },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.3.0",
+        "commit_sha": "60f4ea81909200d8542eca14dccb2628b763a9a3"
+      },
+      "legal_document_ids": [
+        "license.6757f2fec461238da6f84f83536ec195e8c036b1773a06f6f34301b9ed8c0963",
+        "notice.94401a90486d1b53b528bb7f845a7b8daf7227b60eb7c0fc3b8c5571ba202a27"
+      ],
       "members": [
         {
           "artifact_id": "sha256:d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
@@ -1631,6 +2037,48 @@
         },
         {
           "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
+          "role": "frame_generation",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "fsr_dx12_sdk.4.1.f4aa4a8ab433347fd98074968a029e00c8739cd31462d6bb4c0eb8123543e1e7",
+      "revision_sha256": "1fa325b6edb9226d407aff179d147ba76ba08771ff6f216647ea224304738d25",
+      "technology": "amd_fsr",
+      "variant": "sdk_bundle",
+      "display_name": "AMD FidelityFX SDK DirectX 12",
+      "release": {
+        "version": "4.1",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        },
+        {
+          "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
+          "role": "loader",
+          "install_as": "amd_fidelityfx_dx12.dll"
+        },
+        {
+          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
           "role": "frame_generation",
           "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
         }
