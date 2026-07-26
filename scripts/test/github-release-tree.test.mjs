@@ -39,6 +39,44 @@ test("profiles accept reviewed stable tags and fail closed on unknown syntax", (
   );
 });
 
+test("AMD projection separates PE versions from canonical catalogue releases", () => {
+  const release = {
+    tag: "v2.2.0",
+    version: "2.2.0",
+    repository: "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+    commit_sha: "a".repeat(40),
+  };
+  const artifact = (component, peVersion, hashDigit) => ({
+    component,
+    pe_version: peVersion,
+    architecture: "X64",
+    dll_sha256: hashDigit.repeat(64),
+  });
+  const packages = githubReleaseTreeProfile("amd_fidelityfx").buildPackages(
+    release,
+    [
+      artifact("amd_fidelityfx_radiancecache_dx12", "0.9", "1"),
+      artifact("amd_fidelityfx_upscaler_dx12", "4.1", "2"),
+      artifact("amd_fidelityfx_loader_dx12", "2.2", "3"),
+      artifact("amd_fidelityfx_framegeneration_dx12", "4", "4"),
+    ],
+    [],
+  );
+  const radianceCache = packages.find(
+    (packageValue) => packageValue.technology === "amd_fsr_radiance_cache",
+  );
+  const bundle = packages.find((packageValue) => packageValue.variant === "sdk_bundle");
+
+  assert.equal(radianceCache.package_id, "amd_fidelityfx_radiancecache_dx12_0.9.0-preview");
+  assert.deepEqual(radianceCache.release, {
+    version: "0.9.0-preview",
+    channel: "preview",
+    label: null,
+  });
+  assert.equal(bundle.package_id, "fsr_dx12_sdk.4.1.0");
+  assert.equal(bundle.release.version, "4.1.0");
+});
+
 test("stable discovery is paginated, repository-bound, and records tag refs", async () => {
   const config = openVrConfig();
   config.expected_stable_releases = 2;

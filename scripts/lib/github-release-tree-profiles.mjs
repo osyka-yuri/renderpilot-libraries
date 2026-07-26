@@ -1,4 +1,5 @@
 import { assertNumericVersion, compareNumericVersions } from "./library-catalog.mjs";
+import { parsePackageVersion } from "./library-values.mjs";
 
 const AMD_EXCLUSIONS = new Map([
   ["v1.0.0", "release commit does not contain distributable FidelityFX runtime DLLs"],
@@ -233,7 +234,6 @@ function supplementalAmdLabel(release, fileName) {
   if (release.tag === "v2.0.0" && fileName === "amd_fidelityfx_loader_dx12.dll") {
     return "FidelityFX SDK 2.0.0";
   }
-  if (fileName === "amd_fidelityfx_radiancecache_dx12.dll") return "preview";
   return null;
 }
 
@@ -243,18 +243,27 @@ function singleArtifactPackage(
   legalDocumentIds,
   descriptor,
   releaseLabel = null,
+  prerelease = null,
 ) {
   const fileName = `${artifact.component}.dll`;
   const peVersion = requiredPeVersion(artifact, `${release.tag}/${fileName}`);
+  const numericPackageVersion = parsePackageVersion(
+    peVersion,
+    `${release.tag}/${fileName}: release`,
+  ).canonical;
+  const packageRelease = parsePackageVersion(
+    prerelease === null ? numericPackageVersion : `${numericPackageVersion}-${prerelease}`,
+    `${release.tag}/${fileName}: release`,
+  );
   const artifactKey = `${artifact.component}.${artifact.dll_sha256}`;
   return {
-    package_id: `${artifact.component}_${peVersion}`,
+    package_id: `${artifact.component}_${packageRelease.identity}`,
     technology: descriptor.technology,
     variant: descriptor.variant,
     display_name: descriptor.displayName,
     release: {
-      version: peVersion,
-      channel: "stable",
+      version: packageRelease.canonical,
+      channel: packageRelease.channel,
       label: releaseLabel,
     },
     target: { os: "windows", architecture: artifact.architecture },
@@ -275,6 +284,7 @@ function buildAmdPackages(release, artifacts, legalDocumentIds) {
       legalDocumentIds,
       descriptor,
       supplementalAmdLabel(release, fileName),
+      fileName === "amd_fidelityfx_radiancecache_dx12.dll" ? "preview" : null,
     );
   });
   const byComponent = new Map(artifacts.map((artifact) => [artifact.component, artifact]));
@@ -288,12 +298,17 @@ function buildAmdPackages(release, artifacts, legalDocumentIds) {
       byComponent.get(component),
     );
     const version = requiredPeVersion(upscaler, `${release.tag}: upscaler`);
+    const packageRelease = parsePackageVersion(version, `${release.tag}: bundle release`);
     packages.push({
-      package_id: `fsr_dx12_sdk.${version}`,
+      package_id: `fsr_dx12_sdk.${packageRelease.identity}`,
       technology: "amd_fsr",
       variant: "sdk_bundle",
       display_name: "AMD FidelityFX SDK DirectX 12",
-      release: { version, channel: "stable", label: null },
+      release: {
+        version: packageRelease.canonical,
+        channel: packageRelease.channel,
+        label: null,
+      },
       target: { os: "windows", architecture: "X64" },
       provenance: githubProvenance(release),
       legal_document_ids: legalDocumentIds,
@@ -329,14 +344,15 @@ function buildIntelPackages(release, artifacts, legalDocumentIds) {
 }
 
 function buildOpenVrPackages(release, artifacts, legalDocumentIds) {
+  const packageRelease = parsePackageVersion(release.version, `${release.tag}: release`);
   return artifacts.map((artifact) => ({
     package_id: `openvr.${release.tag.replace(/^v/u, "").toLowerCase()}.${artifact.architecture.toLowerCase()}`,
     technology: "openvr",
     variant: "runtime",
     display_name: "OpenVR SDK",
     release: {
-      version: release.version,
-      channel: "stable",
+      version: packageRelease.canonical,
+      channel: packageRelease.channel,
       label: release.label,
     },
     target: { os: "windows", architecture: artifact.architecture },

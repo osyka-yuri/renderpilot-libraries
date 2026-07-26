@@ -28,7 +28,8 @@
       "required": [
         "key",
         "package_id",
-        "expected_listed_stable_releases",
+        "minimum_known_releases",
+        "minimum_known_preview_releases",
         "architectures",
         "files",
         "legal_documents",
@@ -40,9 +41,13 @@
           "enum": ["d3d12_agility", "dxc", "directstorage"]
         },
         "package_id": { "type": "string", "minLength": 1 },
-        "expected_listed_stable_releases": {
+        "minimum_known_releases": {
           "type": "integer",
           "minimum": 1
+        },
+        "minimum_known_preview_releases": {
+          "type": "integer",
+          "minimum": 0
         },
         "architectures": {
           "type": "array",
@@ -80,7 +85,7 @@
     },
     "runtimeFile": {
       "type": "object",
-      "required": ["library_id", "file_name"],
+      "required": ["library_id", "file_name", "required"],
       "additionalProperties": false,
       "properties": {
         "library_id": {
@@ -90,7 +95,8 @@
         "file_name": {
           "type": "string",
           "pattern": "^[A-Za-z0-9._-]+\\.dll$"
-        }
+        },
+        "required": { "type": "boolean" }
       }
     },
     "legalDocument": {

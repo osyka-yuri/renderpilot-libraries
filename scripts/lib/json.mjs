@@ -153,10 +153,10 @@ async function cleanupBatchTemporaryFiles(prepared, operations) {
 }
 
 /**
- * Stages every JSON document before replacing any target. Each rename is
- * atomic on its own; if a later rename fails, already replaced targets are
- * restored from their exact original bytes. This is deliberately not exposed
- * as a cross-file atomic transaction.
+ * Stages every JSON document (or prepared UTF-8 body) before replacing any
+ * target. Each rename is atomic on its own; if a later rename fails, already
+ * replaced targets are restored from their exact original bytes. This is
+ * deliberately not exposed as a cross-file atomic transaction.
  */
 export async function writeJsonFilesBatchWithRollback(
   entries,
@@ -177,10 +177,29 @@ export async function writeJsonFilesBatchWithRollback(
       throw new Error(`batch JSON write has duplicate target ${entry.file}`);
     }
     targets.add(resolved);
-    await validate(entry.value, entry.file, index);
+    const hasValue = Object.hasOwn(entry, "value");
+    const hasBody = Object.hasOwn(entry, "body");
+    if (hasValue === hasBody) {
+      throw new Error(
+        `batch JSON write entry ${index} must provide exactly one of value or body`,
+      );
+    }
+    if (hasValue) await validate(entry.value, entry.file, index);
+    let content;
+    if (hasBody) {
+      if (
+        !(typeof entry.body === "string" || Buffer.isBuffer(entry.body)) ||
+        entry.body.length === 0
+      ) {
+        throw new Error(`batch JSON write entry ${index} has no non-empty body`);
+      }
+      content = Buffer.isBuffer(entry.body) ? Buffer.from(entry.body) : entry.body;
+    } else {
+      content = stringifyJson(entry.value);
+    }
     prepared.push({
       file: entry.file,
-      text: stringifyJson(entry.value),
+      content,
       stage: path.join(
         path.dirname(entry.file),
         `.${path.basename(entry.file)}.${process.pid}.${randomUUID()}.stage.tmp`,
@@ -205,7 +224,7 @@ export async function writeJsonFilesBatchWithRollback(
 
   const stagingResults = await Promise.allSettled(
     prepared.map((entry) =>
-      Promise.resolve().then(() => operations.writeFile(entry.stage, entry.text, UTF8)),
+      Promise.resolve().then(() => operations.writeFile(entry.stage, entry.content)),
     ),
   );
   const stagingErrors = stagingResults.flatMap((result, index) =>

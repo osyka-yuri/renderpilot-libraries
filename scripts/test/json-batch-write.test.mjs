@@ -28,6 +28,14 @@ test("batch JSON write stages and replaces every target", async (t) => {
   assert.deepEqual((await readdir(directory)).sort(), ["one.json", "two.json"]);
 });
 
+test("batch JSON write preserves prepared body bytes exactly", async (t) => {
+  const { files } = await fixture(t);
+  const body = Buffer.from('{"exact":true}\r\n', "utf8");
+  await writeJsonFilesBatchWithRollback([{ file: files[0], body }]);
+  body[0] = 0x7b ^ 0xff;
+  assert.deepEqual(await readFile(files[0]), Buffer.from('{"exact":true}\r\n', "utf8"));
+});
+
 test("batch JSON validation failure occurs before staging or replacement", async (t) => {
   const { directory, files } = await fixture(t);
   await assert.rejects(

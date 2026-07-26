@@ -362,11 +362,27 @@ test("generated catalog has explicit package units and repaired DLSS-D identitie
     "9454861746c218a9138384f46a2f96c7b4b958941edeff5c955fb9f587eb99a1",
   );
 
+  const dxcPackages = microsoft.packages.filter(
+    (packageValue) => packageValue.technology === "microsoft_dxc",
+  );
   assert.equal(
-    microsoft.packages
-      .filter((packageValue) => packageValue.technology === "microsoft_dxc")
-      .every((packageValue) => packageValue.members.length === 2),
+    dxcPackages.every(
+      (packageValue) =>
+        packageValue.members[0]?.install_as === "dxcompiler.dll" &&
+        packageValue.members.length <= 2 &&
+        packageValue.members.slice(1).every((member) => member.install_as === "dxil.dll"),
+    ),
     true,
+  );
+  assert.equal(
+    dxcPackages.some((packageValue) => packageValue.members.length === 1),
+    true,
+    "historical listed DXC previews legitimately omit the optional validator",
+  );
+  assert.equal(
+    dxcPackages.some((packageValue) => packageValue.members.length === 2),
+    true,
+    "modern DXC packages retain the complete compiler/validator bundle",
   );
   assert.equal(
     nvidia.packages

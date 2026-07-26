@@ -3,8 +3,11 @@ import { TextDecoder, isDeepStrictEqual } from "node:util";
 import { sha256Hex } from "./hash.mjs";
 import {
   compareDottedNumericVersions,
+  comparePackageVersions,
   dottedNumericVersionParts,
   latestRfc3339Timestamp,
+  parsePackageVersion,
+  packageVersionNumericCore,
   normalizeRfc3339Timestamp,
 } from "./library-values.mjs";
 
@@ -537,8 +540,8 @@ function assertPackageCommon(packageValue, context) {
   ) {
     throw new Error(`${context}: display_name must be a non-blank trimmed string`);
   }
-  assertNumericVersion(packageValue.release?.version, `${context}: release version`);
-  if (!new Set(["stable", "beta", "debug"]).has(packageValue.release.channel)) {
+  assertPackageVersion(packageValue.release?.version, `${context}: release version`);
+  if (!new Set(["stable", "beta", "preview", "debug"]).has(packageValue.release.channel)) {
     throw new Error(`${context}: invalid release channel`);
   }
   if (
@@ -581,7 +584,8 @@ function assertPackageCommon(packageValue, context) {
       compatibility?.kind !== "d3d12_sdk" ||
       !Number.isSafeInteger(compatibility.version) ||
       compatibility.version <= 0 ||
-      Number(packageValue.release.version.split(".")[1]) !== compatibility.version
+      Number(packageVersionNumericCore(packageValue.release.version).split(".")[1]) !==
+        compatibility.version
     ) {
       throw new Error(`${context}: D3D12 compatibility must match the release SDK line`);
     }
@@ -599,7 +603,7 @@ function assertPackageCommon(packageValue, context) {
       ) {
         throw new Error(`${context}: NuGet package id is required`);
       }
-      assertNumericVersion(packageValue.provenance.version, `${context}: NuGet version`);
+      assertPackageVersion(packageValue.provenance.version, `${context}: NuGet version`);
       if (packageValue.provenance.version !== packageValue.release.version) {
         throw new Error(`${context}: NuGet version must match the package release`);
       }
@@ -628,6 +632,17 @@ function assertPackageCommon(packageValue, context) {
       packageValue.provenance.package_id.toLowerCase() !== expectedPackageId.toLowerCase())
   ) {
     throw new Error(`${context}: Microsoft runtime provenance is missing or inconsistent`);
+  }
+  if (expectedPackageId) {
+    const expectedChannel = packageReleaseChannel(
+      packageValue.release.version,
+      `${context}: release version`,
+    );
+    if (packageValue.release.channel !== expectedChannel) {
+      throw new Error(
+        `${context}: Microsoft release channel must match NuGet prerelease identity`,
+      );
+    }
   }
   assertExtensions(packageValue.extensions, `${context}: extensions`);
 }
@@ -791,9 +806,22 @@ export function assertNumericVersion(value, label) {
   dottedNumericVersionParts(value, label);
 }
 
+export function assertPackageVersion(value, label) {
+  const normalized = parsePackageVersion(value, label).canonical;
+  if (value !== normalized) {
+    throw new Error(`${label} must use canonical NuGet version ${normalized}`);
+  }
+}
+
+export function packageReleaseChannel(value, label = "package version") {
+  return parsePackageVersion(value, label).channel;
+}
+
 export function compareNumericVersions(left, right) {
   return compareDottedNumericVersions(left, right);
 }
+
+export { comparePackageVersions };
 
 function releaseIdentity(release) {
   return {
@@ -817,7 +845,7 @@ function packageRevisionInput(packageValue, members) {
 
 function isVersionPrefix(candidate, version) {
   const candidateSegments = candidate.split(".");
-  const versionSegments = version.split(".");
+  const versionSegments = packageVersionNumericCore(version).split(".");
   return (
     candidateSegments.length <= versionSegments.length &&
     candidateSegments.every(

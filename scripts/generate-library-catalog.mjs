@@ -3,54 +3,13 @@
 import { readFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 
-import {
-  curatedLibraryVendors,
-  generatedLibraryVendors,
-  libraryIndexFile,
-  repoRoot,
-} from "./catalog.mjs";
-import {
-  buildLibraryIndex,
-  buildVendorSnapshot,
-  jsonDocument,
-} from "./lib/library-catalog.mjs";
-import {
-  assertGeneratedLibraryVendorAdapters,
-  buildGeneratedLibraryVendorSource,
-} from "./lib/library-source-adapters.mjs";
-import { readJsonFileAsync, writeTextFileAtomic } from "./lib/json.mjs";
+import { repoRoot } from "./catalog.mjs";
+import { buildLibraryCatalogPlan } from "./lib/library-generation.mjs";
+import { writeJsonFilesBatchWithRollback } from "./lib/json.mjs";
 
 async function main() {
   const check = process.argv.slice(2).includes("--check");
-  assertGeneratedLibraryVendorAdapters(generatedLibraryVendors);
-  const [curatedSources, generatedSources] = await Promise.all([
-    Promise.all(
-      curatedLibraryVendors.map(async (vendor) => ({
-        vendor,
-        source: await readJsonFileAsync(path.join(repoRoot, vendor.sourceFile)),
-      })),
-    ),
-    Promise.all(generatedLibraryVendors.map(loadGeneratedVendorSource)),
-  ]);
-
-  const registeredSources = [...curatedSources, ...generatedSources];
-  const vendorDocuments = registeredSources.map(({ vendor, source }) => {
-    if (source?.vendor?.id !== vendor.vendorId) {
-      throw new Error(
-        `${vendor.sourceFile ?? vendor.lockFile}: expected vendor ${vendor.vendorId}, got ${source?.vendor?.id ?? "missing"}`,
-      );
-    }
-    const snapshot = buildVendorSnapshot(source);
-    return { vendor, snapshot, body: jsonDocument(snapshot) };
-  });
-  const index = buildLibraryIndex(vendorDocuments);
-  const outputs = [
-    ...vendorDocuments.map(({ vendor, body }) => ({
-      file: path.join(repoRoot, vendor.outputFile),
-      body,
-    })),
-    { file: path.join(repoRoot, libraryIndexFile), body: jsonDocument(index) },
-  ];
+  const { outputs } = await buildLibraryCatalogPlan();
 
   if (check) {
     for (const output of outputs) {
@@ -70,26 +29,8 @@ async function main() {
       mkdir(directory, { recursive: true }),
     ),
   );
-  await Promise.all(
-    outputs.map((output) =>
-      writeTextFileAtomic(output.file, output.body, path.relative(repoRoot, output.file)),
-    ),
-  );
-  console.log(`Generated ${vendorDocuments.length} vendor snapshots and library index v1.`);
-}
-
-async function loadGeneratedVendorSource(vendor) {
-  const [lock, config, overlay] = await Promise.all([
-    readJsonFileAsync(path.join(repoRoot, vendor.lockFile)),
-    readJsonFileAsync(path.join(repoRoot, vendor.configFile)),
-    vendor.overlayFile
-      ? readJsonFileAsync(path.join(repoRoot, vendor.overlayFile))
-      : Promise.resolve(null),
-  ]);
-  return {
-    vendor,
-    source: buildGeneratedLibraryVendorSource(vendor, { lock, config, overlay }),
-  };
+  await writeJsonFilesBatchWithRollback(outputs.map(({ file, body }) => ({ file, body })));
+  console.log(`Generated ${outputs.length - 1} vendor snapshots and library index v1.`);
 }
 
 main().catch((error) => {

@@ -29,13 +29,17 @@ import {
   assertLockExtendsBaseline,
   assertReleaseContentIdentity,
   assertReleaseBackfillsSignatures,
+  assessMicrosoftRefreshProduct,
+  assertNuGetPackageIdentity,
   fetchPackageSha512,
-  listedStableReleases,
+  registrationReleases,
   pathForPackageMember,
   selectPackageFiles,
+  selectPackageNuspec,
   sortLock,
   verifyPackageSha512,
 } from "./lib/microsoft-nuget.mjs";
+import { parsePackageVersion } from "./lib/library-values.mjs";
 import { parseRefreshArgs } from "./lib/refresh-cli.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -62,23 +66,28 @@ async function main(options) {
   const missing = [];
   const upstreamByPackage = new Map();
   for (const product of products) {
-    const upstream = await listedStableReleases(product.package_id);
+    const registration = await registrationReleases(product.package_id);
+    const assessment = await assessMicrosoftRefreshProduct(product, lock, registration);
+    const upstream = assessment.upstream;
     upstreamByPackage.set(product.package_id, upstream);
-    if (upstream.length < product.expected_listed_stable_releases) {
+    if (assessment.state === "withdrawal_review_required") {
+      await appendGithubOutput({
+        status: "withdrawal_review_required",
+        count: String(assessment.withdrawalReport.length),
+        withdrawal_report: JSON.stringify(assessment.withdrawalReport),
+      });
       throw new Error(
-        `${product.package_id}: expected at least ${product.expected_listed_stable_releases} listed stable releases, got ${upstream.length}`,
+        `Microsoft withdrawal review required:\n${JSON.stringify(assessment.withdrawalReport, null, 2)}`,
       );
     }
-    const locked = new Set(
-      lock.releases
-        .filter((release) => release.package_id === product.package_id)
-        .map((release) => release.package_version),
-    );
-    for (const release of upstream) {
-      if (!locked.has(release.packageVersion)) missing.push({ product, release });
+    if (assessment.state === "relisted_review_required") {
+      throw new Error(
+        `${product.package_id}: withdrawn release(s) were relisted and require explicit review: ${assessment.relisted.map((release) => release.packageVersion).join(", ")}`,
+      );
     }
+    for (const release of assessment.missing) missing.push({ product, release });
     console.log(
-      `${product.package_id}: ${upstream.length} listed stable, ${upstream.length - missing.filter((item) => item.product === product).length} locked`,
+      `${product.package_id}: ${upstream.length} listed (${upstream.filter((release) => parsePackageVersion(release.packageVersion).channel === "preview").length} preview), ${upstream.length - missing.filter((item) => item.product === product).length} locked`,
     );
   }
 
@@ -116,7 +125,7 @@ async function main(options) {
     console.log("Microsoft NuGet lock is current.");
     return;
   }
-  console.log(`Missing listed stable releases: ${missing.length}`);
+  console.log(`Missing listed releases: ${missing.length}`);
   if (options.mode !== "write") {
     for (const { product, release } of missing) {
       console.log(`  ${product.key}: ${release.packageVersion}`);
@@ -177,6 +186,7 @@ async function importRelease(
       maxBuffer: 16 * 1024 * 1024,
     });
     const packagePaths = stdout.split(/\r?\n/).filter(Boolean);
+    const nuspecSelection = selectPackageNuspec(packagePaths, identity);
     const selections = selectPackageFiles(packagePaths, product);
     const selected = selections.flatMap(({ architecture, members }) =>
       members.map((member) => ({ architecture, member })),
@@ -190,6 +200,7 @@ async function importRelease(
       "--",
       ...selected.map(({ member }) => member.package_path),
       ...legalSelections.map(({ package_path }) => package_path),
+      nuspecSelection,
     ]);
     const paths = selected.map(({ member }) =>
       pathForPackageMember(extractRoot, member.package_path),
@@ -197,7 +208,8 @@ async function importRelease(
     const legalPaths = legalSelections.map(({ package_path }) =>
       pathForPackageMember(extractRoot, package_path),
     );
-    const extractedPaths = [...paths, ...legalPaths];
+    const nuspecPath = pathForPackageMember(extractRoot, nuspecSelection);
+    const extractedPaths = [...paths, ...legalPaths, nuspecPath];
     const extractedStats = await Promise.all(
       extractedPaths.map((filePath) => lstat(filePath)),
     );
@@ -208,6 +220,12 @@ async function importRelease(
         );
       }
     }
+    assertNuGetPackageIdentity(
+      await readFile(nuspecPath),
+      release.packageId,
+      release.packageVersion,
+      identity,
+    );
     const inspections = await inspectPeFiles(paths);
     const artifacts = [];
 

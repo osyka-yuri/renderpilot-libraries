@@ -4754,13 +4754,13 @@
   ],
   "packages": [
     {
-      "package_id": "nvngx_dlss_1.0.0.0",
-      "revision_sha256": "481599c88cbfa9cb30f33d3b5bd21d4d35976fb41c0ae7aba3d91dfb145eab0a",
+      "package_id": "nvngx_dlss_1.0.0",
+      "revision_sha256": "d5b2e0864a27b29dc03255e97b63a5c387436dd8eb327fca09ca5bf26ff0fecc",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.0.0.0",
+        "version": "1.0.0",
         "channel": "stable",
         "label": null
       },
@@ -4777,13 +4777,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.0.9.0",
-      "revision_sha256": "40dbb6401b8bead9c683df475e1678f1b7c9056728e68543b319723b0f0a8560",
+      "package_id": "nvngx_dlss_1.0.9",
+      "revision_sha256": "cab7fe98969d1019b96ca51f11323bcfbe7b0ad63f8d500e0c5e999d85b6405b",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.0.9.0",
+        "version": "1.0.9",
         "channel": "stable",
         "label": null
       },
@@ -4800,13 +4800,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.0.11.0",
-      "revision_sha256": "409f5f74cc6d55ec7afcd933dc1cdad13825511f680ad2d68c125c75a5ce84aa",
+      "package_id": "nvngx_dlss_1.0.11",
+      "revision_sha256": "e884c35dbb9654837a8a56e3601fe4d40ad1c0da5835a5fa390b47fec7f26863",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.0.11.0",
+        "version": "1.0.11",
         "channel": "stable",
         "label": null
       },
@@ -4823,13 +4823,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.0.13.0",
-      "revision_sha256": "bd12ee4e03d42fd46703dcfd83219a61a2559a26f9a0d88b87ef420e4c659fe2",
+      "package_id": "nvngx_dlss_1.0.13",
+      "revision_sha256": "c7194c75aeac9e1ddb92823091c42ba445f0d535196e50dcb513d871f0dddc61",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.0.13.0",
+        "version": "1.0.13",
         "channel": "stable",
         "label": null
       },
@@ -4846,13 +4846,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.0.17.0",
-      "revision_sha256": "f4a81906facae082adec4d41c739091dcc8427c11c0453f7b9d7730783ac03cb",
+      "package_id": "nvngx_dlss_1.0.17",
+      "revision_sha256": "b471d272491bd7f892931cdd5526ddfe34e53423f4fc517c06d4150650ce5f15",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.0.17.0",
+        "version": "1.0.17",
         "channel": "stable",
         "label": null
       },
@@ -4869,13 +4869,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.1.6.0",
-      "revision_sha256": "f83d9b8321ec42becd56ffaec94260068dfe80e0a117481409dfd4d9645e9b73",
+      "package_id": "nvngx_dlss_1.1.6",
+      "revision_sha256": "c5368df838440e2cc8ec12243ad69db2d05f0aa40647bc1e8a10769e9074cdc3",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.1.6.0",
+        "version": "1.1.6",
         "channel": "stable",
         "label": null
       },
@@ -4892,13 +4892,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.1.13.0",
-      "revision_sha256": "dc103f5780ee2cd56ba7094d5c83367e1bad57646052eb8b40f6a505ad1450d0",
+      "package_id": "nvngx_dlss_1.1.13",
+      "revision_sha256": "c5e963b6c824583a3bb386c8c051b375936568b0b87bf05a8bc1096d78c6820a",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.1.13.0",
+        "version": "1.1.13",
         "channel": "stable",
         "label": null
       },
@@ -4915,13 +4915,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.2.14.0",
-      "revision_sha256": "7830585715b60b431b0417a18b041d99dc394cbbbb51e30bfdc6f594964b25dc",
+      "package_id": "nvngx_dlss_1.2.14",
+      "revision_sha256": "c2a513e169372bfd632b2d37a9e1afd0d7dc73a4fa6268e3c62ed348e0617f01",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.2.14.0",
+        "version": "1.2.14",
         "channel": "stable",
         "label": null
       },
@@ -4938,13 +4938,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_1.3.2.0",
-      "revision_sha256": "cb98f59cdab3da5169524b79bf38ee48ec3b5f591359949914b38d354c857575",
+      "package_id": "nvngx_dlss_1.3.2",
+      "revision_sha256": "59a1c3a47b1276e8c089ddd55397bb6fab5fb243c574e54d2e27bf51abb650f5",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "1.3.2.0",
+        "version": "1.3.2",
         "channel": "stable",
         "label": null
       },
@@ -4961,13 +4961,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.0.34.0",
-      "revision_sha256": "fb9f043cb487b1fa7cc7288591452e3ad7eb0255245454732f961ca6d7ce9ecb",
+      "package_id": "nvngx_dlss_2.0.34",
+      "revision_sha256": "f93277365401029c99b1a0c1c7bd196e7180e998a58874fac63f6a226ae4dfcf",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.0.34.0",
+        "version": "2.0.34",
         "channel": "stable",
         "label": null
       },
@@ -4984,13 +4984,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.0.38.0",
-      "revision_sha256": "cb173f2bea57a1d90a32c428f76ce955253c78409ee6b675b2964a13acb8f0bb",
+      "package_id": "nvngx_dlss_2.0.38",
+      "revision_sha256": "c300ab2e3d96f52448b56004342a5c132a2d525b63c5d498aa8a1b41f40922fb",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.0.38.0",
+        "version": "2.0.38",
         "channel": "stable",
         "label": null
       },
@@ -5007,13 +5007,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.16.0",
-      "revision_sha256": "bdf5e7ed28a2f8e2d2f2b5359a8890a1ca19d7c1e7b551483c6091fad92cd00a",
+      "package_id": "nvngx_dlss_2.1.16",
+      "revision_sha256": "bc4560e504752072181f0fc63a01d2334653de838f2f227bf6acbd5a14dbe51b",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.16.0",
+        "version": "2.1.16",
         "channel": "stable",
         "label": null
       },
@@ -5030,13 +5030,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.19.0",
-      "revision_sha256": "9ab1286036c864fb78df8bc851c5fcc9d5c35d931a745b7ed594b792d91ee5c9",
+      "package_id": "nvngx_dlss_2.1.19",
+      "revision_sha256": "ff13d143871901d58f866626f6dffd149c51a3a80d565245d25c0e8d8b717ce5",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.19.0",
+        "version": "2.1.19",
         "channel": "stable",
         "label": null
       },
@@ -5053,13 +5053,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.24.0",
-      "revision_sha256": "dc96f004526a093cb1d4291078079919f28f221865e8072f895e506ade01a562",
+      "package_id": "nvngx_dlss_2.1.24",
+      "revision_sha256": "a4433692c8e57a48ddb83f4b89ffc9996a4df067b72942b8d0fc9ed23fda8b7c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.24.0",
+        "version": "2.1.24",
         "channel": "stable",
         "label": null
       },
@@ -5076,13 +5076,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.25.0",
-      "revision_sha256": "ec9e653dbd8737e90abebebfaba79dc9177cbafe00574f928b6a3e96e190bca4",
+      "package_id": "nvngx_dlss_2.1.25",
+      "revision_sha256": "61d20816ac86657428d66fa274e9dced5bc774988e01170e90e13fcfb58d30b7",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.25.0",
+        "version": "2.1.25",
         "channel": "stable",
         "label": null
       },
@@ -5099,13 +5099,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.28.0",
-      "revision_sha256": "d4ccec5422086e73341f1bd6f232f79d20868dbe4b621e482f6cdc2939e301d9",
+      "package_id": "nvngx_dlss_2.1.28",
+      "revision_sha256": "19313efcb387d48569461763ce42c64aa853de58ef94188c41905ea7d5b6b500",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.28.0",
+        "version": "2.1.28",
         "channel": "stable",
         "label": null
       },
@@ -5122,13 +5122,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.29.0",
-      "revision_sha256": "b47dbd23cf784dc5353371cc28eb56d33020c769e53f72389d707f648055b5d1",
+      "package_id": "nvngx_dlss_2.1.29",
+      "revision_sha256": "e2b1add55f762d0533075f523200b0fd0e8c99d366e2f54ca41895389bb18b3a",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.29.0",
+        "version": "2.1.29",
         "channel": "stable",
         "label": null
       },
@@ -5145,13 +5145,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.31.0",
-      "revision_sha256": "ac3f96736a76bd51bd1e4c8ac705673145c0a8950f50b585afecb734a7d70583",
+      "package_id": "nvngx_dlss_2.1.31",
+      "revision_sha256": "7fa250292acff102c850e941353d5610c06eb97be8eb84c35429f888ddbb1694",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.31.0",
+        "version": "2.1.31",
         "channel": "stable",
         "label": null
       },
@@ -5168,13 +5168,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.35.0",
-      "revision_sha256": "f8be6230e5ca99614c6f3f089fe1572f2d3e55c387d7749c290f290e5c3585ec",
+      "package_id": "nvngx_dlss_2.1.35",
+      "revision_sha256": "a7b5b51d60b7035f58b3522f34b2d2b350e463254b94c9ac167d5dfcb4c7edc7",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.35.0",
+        "version": "2.1.35",
         "channel": "stable",
         "label": null
       },
@@ -5191,13 +5191,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.39.0",
-      "revision_sha256": "ee79e89a0e0d70607f71651066bc6d24318b09e5e904bd7bbf8cfcf181e39c8a",
+      "package_id": "nvngx_dlss_2.1.39",
+      "revision_sha256": "b993f8f36b13d18c1b4a55280cacfcc3a45c3b2152a1ed1f95ae2ae1bdb1455d",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.39.0",
+        "version": "2.1.39",
         "channel": "stable",
         "label": null
       },
@@ -5214,13 +5214,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.40.0",
-      "revision_sha256": "90b0060506c2bd578092b08c6cad9fb5596703d344e37939dbc27bfff429a20e",
+      "package_id": "nvngx_dlss_2.1.40",
+      "revision_sha256": "35f22cb686889e37256460821b9e96fc4d5a1d68fe7972cfa1991f11440dfdf0",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.40.0",
+        "version": "2.1.40",
         "channel": "stable",
         "label": null
       },
@@ -5237,13 +5237,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.50.0",
-      "revision_sha256": "84cf95e3d658e1e08aa40978b9b7ebecc93b70e28a433177266dfbc5d0aa6d29",
+      "package_id": "nvngx_dlss_2.1.50",
+      "revision_sha256": "2a8612c06fd5c80c463a32adb32c205682387c4df49f959b35307dc56673fbaf",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.50.0",
+        "version": "2.1.50",
         "channel": "stable",
         "label": null
       },
@@ -5260,13 +5260,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.51.0",
-      "revision_sha256": "d529a238e4a329a10a1e5e32aa95ed062ea39a23611f99c87d740160f8bbbdf7",
+      "package_id": "nvngx_dlss_2.1.51",
+      "revision_sha256": "8547a5a2a2ff5c0ab7f59bfd78ff8a855e42fb56113a9bb685f0780b0058a8b7",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.51.0",
+        "version": "2.1.51",
         "channel": "stable",
         "label": null
       },
@@ -5283,13 +5283,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.52.0",
-      "revision_sha256": "3b88bd0a1cb863aadae52dc139c537f57808698f15760ddd9d499dea4ef27629",
+      "package_id": "nvngx_dlss_2.1.52",
+      "revision_sha256": "cecb24e1eec6325e727d90572cb824d4d6102bc3eedf1fcd2b4ab7b15decb13e",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.52.0",
+        "version": "2.1.52",
         "channel": "stable",
         "label": null
       },
@@ -5306,13 +5306,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.53.0",
-      "revision_sha256": "2a4fb3d4e88a6e29dcb761b8cdd995a36e1b4698a0498845520906ca9eb0a55b",
+      "package_id": "nvngx_dlss_2.1.53",
+      "revision_sha256": "458600fae6004ad1f18ff3e44a99e11fb4e4277e9c7665ebff073697c36e206e",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.53.0",
+        "version": "2.1.53",
         "channel": "stable",
         "label": null
       },
@@ -5329,13 +5329,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.55.0",
-      "revision_sha256": "a5d8d237634f64e175130fa22c76dd7ba59a0d45a4e4b0531bab64d6df697c4a",
+      "package_id": "nvngx_dlss_2.1.55",
+      "revision_sha256": "dc301e75d1c5e32d0db9176708a87dd4059753b760e8d9eaac73bafb16b81058",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.55.0",
+        "version": "2.1.55",
         "channel": "stable",
         "label": null
       },
@@ -5352,13 +5352,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.58.0",
-      "revision_sha256": "4aaf35de16b3f08b252e02ecf73ed70234d9cf13b8c97c8d27310514e97ff552",
+      "package_id": "nvngx_dlss_2.1.58",
+      "revision_sha256": "dd97d6c07a1c14985c35456778d44d085b161fbc8e50db1a3dffe2a4bdc33fb2",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.58.0",
+        "version": "2.1.58",
         "channel": "stable",
         "label": null
       },
@@ -5375,13 +5375,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.62.0",
-      "revision_sha256": "f1bcc6a2afcdbf256ca9e3ec6d64d2b1c0b438816a783683fa86460260e9929d",
+      "package_id": "nvngx_dlss_2.1.62",
+      "revision_sha256": "7e13a663c019c2ba888f9769097a072b65ba3bd0e8b5be22347d981abcc0cd41",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.62.0",
+        "version": "2.1.62",
         "channel": "stable",
         "label": null
       },
@@ -5398,13 +5398,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.63.0",
-      "revision_sha256": "443454480decfff7ebd4b67a3e945f71372c7f8197b3c86947ceade22a9df556",
+      "package_id": "nvngx_dlss_2.1.63",
+      "revision_sha256": "94edcc716b0c530fe17dd9fa19757fcc94d7e920419971de52754aae4d5301fa",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.63.0",
+        "version": "2.1.63",
         "channel": "stable",
         "label": null
       },
@@ -5421,13 +5421,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.1.66.0",
-      "revision_sha256": "7aa55e41225fcaf8c4e31bf49eff91649df0e2ee069aa604691522eb981b6631",
+      "package_id": "nvngx_dlss_2.1.66",
+      "revision_sha256": "74a103d9785b248a846d2536bab28638e1f3d81d9354703dd6a543fafd96c234",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.1.66.0",
+        "version": "2.1.66",
         "channel": "stable",
         "label": null
       },
@@ -5444,13 +5444,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.6.0",
-      "revision_sha256": "2a15be7a3a97efb54cf3d50a72e8b42645909d4ec1e203fbe4ee7d55d47ab8ca",
+      "package_id": "nvngx_dlss_2.2.6",
+      "revision_sha256": "05b128dd671213d542336dfe0811b0480d347bc387d4642812d4921fc1c3eecc",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.6.0",
+        "version": "2.2.6",
         "channel": "stable",
         "label": null
       },
@@ -5467,13 +5467,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.9.0",
-      "revision_sha256": "c3f6cc82c76a897f7c9a60b6581d1a7a22938169e6d9127a07c73a61e2b13afd",
+      "package_id": "nvngx_dlss_2.2.9",
+      "revision_sha256": "f3359b67c70d1426f5fc5b174897198497cb5990a6e2ea9a070ce78c4dd36dfe",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.9.0",
+        "version": "2.2.9",
         "channel": "stable",
         "label": null
       },
@@ -5490,13 +5490,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.10.0",
-      "revision_sha256": "925691da120391c1f7894087dc2887c966e1f03cb20819a2db66f071975f0a97",
+      "package_id": "nvngx_dlss_2.2.10",
+      "revision_sha256": "4f63ffbc49f4da3588a255b1a60fd987514bd2581763d7916eb3c76b9a3f4ab9",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.10.0",
+        "version": "2.2.10",
         "channel": "stable",
         "label": null
       },
@@ -5513,13 +5513,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.11.0",
-      "revision_sha256": "fdcf815ef83f2be628fc8fc4014f67096eb98d1a318a9bc3aabf6e9343eb9be5",
+      "package_id": "nvngx_dlss_2.2.11",
+      "revision_sha256": "ab4f3424560fbf064a7471f9d1c1ff47d31653e73aaaf70e05f91b783f124836",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.11.0",
+        "version": "2.2.11",
         "channel": "stable",
         "label": null
       },
@@ -5536,13 +5536,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.14.0",
-      "revision_sha256": "6be33e60aeb38ffa3fd9639add1f608ea07b7593bbbfd1a38438f1493013ed97",
+      "package_id": "nvngx_dlss_2.2.14",
+      "revision_sha256": "dd7f7b15435d4645549425f7a0ac865fcc52c190552fdbdb9cb984bc40a2231f",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.14.0",
+        "version": "2.2.14",
         "channel": "stable",
         "label": null
       },
@@ -5559,13 +5559,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.15.0",
-      "revision_sha256": "d0b6ef57814392a7dbaae001cd045ce25662e04c0402f788a15b69180d2ca85b",
+      "package_id": "nvngx_dlss_2.2.15",
+      "revision_sha256": "e46fb7fe02e460a77cd37c8b48e2b88431a2e0091a7aa60e80b63c65ee799173",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.15.0",
+        "version": "2.2.15",
         "channel": "stable",
         "label": null
       },
@@ -5582,13 +5582,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.16.0_8fed151a",
-      "revision_sha256": "9884abdf2a5dfa373cb481d89e701318f14c3006cc5e48a91eddceb4b9d7fcff",
+      "package_id": "nvngx_dlss_2.2.16_8fed151a",
+      "revision_sha256": "f7bd8b20e55cdf588e2b582ea2acdf9fbf9e41dd2faeb2f8fc1b432ae09d8cb2",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.16.0",
+        "version": "2.2.16",
         "channel": "stable",
         "label": null
       },
@@ -5605,13 +5605,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.16.0_ad5efa68",
-      "revision_sha256": "9fb527ce95af3109ceaea68761cec51dd4bfad99165d6aa5d5cc30e57eab458a",
+      "package_id": "nvngx_dlss_2.2.16_ad5efa68",
+      "revision_sha256": "ede4e1e5c5c3c7609f83f60302fd8ad567376150ea0b4a80a9974fa2e9b6a2ec",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.16.0",
+        "version": "2.2.16",
         "channel": "debug",
         "label": "Debug"
       },
@@ -5628,13 +5628,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.18.0_77a75b96",
-      "revision_sha256": "ca9008f9c3e2724062e7fe0e6d3051912170dcec27686318c02666747561fc87",
+      "package_id": "nvngx_dlss_2.2.18_77a75b96",
+      "revision_sha256": "d2c4f96274ebddeade92388bdbe547d83188b023a3710bf7a28e5a0bb2ae9221",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.18.0",
+        "version": "2.2.18",
         "channel": "stable",
         "label": null
       },
@@ -5651,13 +5651,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.18.0_b2b6fae8",
-      "revision_sha256": "c22e96001872dbfdf6ddf9f050d09c0dc671d1a7c721bbfd75dad3566c248380",
+      "package_id": "nvngx_dlss_2.2.18_b2b6fae8",
+      "revision_sha256": "0254a23ec2f483e5d43a5a865a8e2338b73af27306ce6113974dfb564185cc4e",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.18.0",
+        "version": "2.2.18",
         "channel": "beta",
         "label": "Beta White Collie 1"
       },
@@ -5674,13 +5674,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.2.18.0_cd71ee48",
-      "revision_sha256": "39336bfabbb2336757d75dfd3406c04feefd582cf2a6da2b431e6c0c2abc3a1d",
+      "package_id": "nvngx_dlss_2.2.18_cd71ee48",
+      "revision_sha256": "9d73f3c8c716eec74e041107d93fbcf808a318e0c548488ff4977ed1cadf28c9",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.2.18.0",
+        "version": "2.2.18",
         "channel": "beta",
         "label": "Beta White Collie 2"
       },
@@ -5697,13 +5697,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.0.0_7bbbb70f",
-      "revision_sha256": "589334f475d83c32cca8ff04ad40496043f140d5acfff1f9860b5c599fabe6d2",
+      "package_id": "nvngx_dlss_2.3.0_7bbbb70f",
+      "revision_sha256": "66c7bf9b1356ceb87c7e26fd41628bed883a816f05cfd4097d5e189acf7612fc",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.0.0",
+        "version": "2.3.0",
         "channel": "stable",
         "label": null
       },
@@ -5720,13 +5720,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.0.0_90b46302",
-      "revision_sha256": "316bbc47c7dd6ee63c665c8b48138736cd03c1713b80198e642a441564edf4cc",
+      "package_id": "nvngx_dlss_2.3.0_90b46302",
+      "revision_sha256": "6fcbf1a46788e79e5d3a7cc6d4e2c693d3eb9e99e52d9e28128f2bf1ab854334",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.0.0",
+        "version": "2.3.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -5743,13 +5743,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.1.0_0fc1727a",
-      "revision_sha256": "113d376144f170c96af6a04f060b30749b92e00e85ed06814b16aed81161318e",
+      "package_id": "nvngx_dlss_2.3.1_0fc1727a",
+      "revision_sha256": "ba97b8132f346e9bd4912052187a7868d04d03c542a1df87af0b79aa503c5f2c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.1.0",
+        "version": "2.3.1",
         "channel": "stable",
         "label": null
       },
@@ -5766,13 +5766,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.1.0_93b5f0e7",
-      "revision_sha256": "447463dc7db9dd32235a6808826d1851a561d002841af005df5764df6796599e",
+      "package_id": "nvngx_dlss_2.3.1_93b5f0e7",
+      "revision_sha256": "f44d97fc7e4219656b07489ea7803a49d683501c7cf24d0ab64f4149f45d6783",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.1.0",
+        "version": "2.3.1",
         "channel": "debug",
         "label": "Debug"
       },
@@ -5789,13 +5789,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.2.0",
-      "revision_sha256": "68e77ea37a2ef06b6ad15a95c7dcb0fee4c24d84caabe5671ad7ab9aac7531c6",
+      "package_id": "nvngx_dlss_2.3.2",
+      "revision_sha256": "3b41f67bd67bf7cef47a554811c6b67181b7cb404ba4e3c3af037ac56f31a094",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.2.0",
+        "version": "2.3.2",
         "channel": "stable",
         "label": null
       },
@@ -5812,13 +5812,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.3.0",
-      "revision_sha256": "b559815bb0e5ce7fa0bc56a2aab11c86609fdb676f326e54109d9d6102b83172",
+      "package_id": "nvngx_dlss_2.3.3",
+      "revision_sha256": "5e39ca86e3b7ce6a530a7831550d9dd5dcdd72bc46a5f443bb921638e8d5cc87",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.3.0",
+        "version": "2.3.3",
         "channel": "stable",
         "label": null
       },
@@ -5835,13 +5835,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.4.0",
-      "revision_sha256": "848efb9461b313082986b4d375e4643f011c3a4c1c1e7ae8c35ead4b07c685eb",
+      "package_id": "nvngx_dlss_2.3.4",
+      "revision_sha256": "89dd4b08684a6d234828f57ebacce70d69117b87d193508f359fa1bc042138e5",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.4.0",
+        "version": "2.3.4",
         "channel": "stable",
         "label": null
       },
@@ -5858,13 +5858,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.5.0",
-      "revision_sha256": "943dfd1f1190cbffde14105a0fa79dabb45f39455cfcd610c8d5eed61aff65d1",
+      "package_id": "nvngx_dlss_2.3.5",
+      "revision_sha256": "15585f709e54e746a79e795b3903e60468037ae076fb8c33523e9e2b830819d7",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.5.0",
+        "version": "2.3.5",
         "channel": "stable",
         "label": null
       },
@@ -5881,13 +5881,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.7.0",
-      "revision_sha256": "908a3eb54cbf8536fc3d308671f37f761ac37fe8c2826dbfa04e13ef9acf9d60",
+      "package_id": "nvngx_dlss_2.3.7",
+      "revision_sha256": "c48cab365f3d818f6358aebd47cd5751b8e3d7b65aa1991d095ecffe1da444d1",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.7.0",
+        "version": "2.3.7",
         "channel": "stable",
         "label": null
       },
@@ -5904,13 +5904,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.9.0",
-      "revision_sha256": "b1b46c5ccc6f42972d7650abd545f25b98bda690b914ae3d1f5d6cf41e20e142",
+      "package_id": "nvngx_dlss_2.3.9",
+      "revision_sha256": "1ec1e9e333adac80acdb110b0f3f630fcca4f6cf369c5da0e3f1b95bc503c58f",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.9.0",
+        "version": "2.3.9",
         "channel": "stable",
         "label": null
       },
@@ -5927,13 +5927,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.11.0_e14d1d3c",
-      "revision_sha256": "fba878b6be99ada8cdc69ed7876e2ce91d255968ec9b00f0a5f88c1be1a12188",
+      "package_id": "nvngx_dlss_2.3.11_e14d1d3c",
+      "revision_sha256": "e4a3fcc812885a05d6e0ee604d68a3359627a552973cfea641c18dc4d403a6ca",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.11.0",
+        "version": "2.3.11",
         "channel": "stable",
         "label": null
       },
@@ -5950,13 +5950,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.11.0_ca186073",
-      "revision_sha256": "5f295a58538603cb63bcd403837cba471dd22c60b28faa430a8397dfa25f22aa",
+      "package_id": "nvngx_dlss_2.3.11_ca186073",
+      "revision_sha256": "cbe62cf9a9568510660af44ad7112cd39b7fb4dc4de243cd6405a86aacfe2b39",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.11.0",
+        "version": "2.3.11",
         "channel": "beta",
         "label": "v2"
       },
@@ -5973,13 +5973,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.3.11.0_476d66c9",
-      "revision_sha256": "9fd35f92816fc3a008b69298080e23b0bf16e62f988ffeafefea28f69bc90945",
+      "package_id": "nvngx_dlss_2.3.11_476d66c9",
+      "revision_sha256": "018e817d86fd0a206a2bdc0cfabc44c595af5cb94fe794ed70691c241c2a2c2a",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.3.11.0",
+        "version": "2.3.11",
         "channel": "debug",
         "label": "Debug"
       },
@@ -5996,13 +5996,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.0.0_f395216f",
-      "revision_sha256": "081c809152949c87d7cba6eb3f82b6bbb5c2b190fb9d18f065628dd1b258ff32",
+      "package_id": "nvngx_dlss_2.4.0_f395216f",
+      "revision_sha256": "498a6b107db5d61d1b14d0274da085733f6814c53394c96baf03a562476d2e15",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.0.0",
+        "version": "2.4.0",
         "channel": "stable",
         "label": null
       },
@@ -6019,13 +6019,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.0.0_941eb47d",
-      "revision_sha256": "a015ca0ffd7f296f9430ab594eafd7c59deff87e0c9d2a77350e127f2a3827a2",
+      "package_id": "nvngx_dlss_2.4.0_941eb47d",
+      "revision_sha256": "3de8297aa0c44c6e7515fc58d0dae322cbeed4695677f7ccbeb0047ae17471a9",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.0.0",
+        "version": "2.4.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6042,13 +6042,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.2.0_fc7f4870",
-      "revision_sha256": "b453e31c6daf20ff2507ca80d74b4e770d6ef5c50b815b2d906d8ff1ba187ecf",
+      "package_id": "nvngx_dlss_2.4.2_fc7f4870",
+      "revision_sha256": "627b10cb9f5a41dc99f01552d10021ec1a2791a3cb7da4072eeac5da77b98cf3",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.2.0",
+        "version": "2.4.2",
         "channel": "stable",
         "label": null
       },
@@ -6065,13 +6065,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.2.0_68b0e070",
-      "revision_sha256": "f955a8961aa2eda59fe591763191e8f37a5aee2c8d05499bc59d631629b5c502",
+      "package_id": "nvngx_dlss_2.4.2_68b0e070",
+      "revision_sha256": "3fcd06d41cbdc6a84a89b2a90fd18a6159ba443e85e919cd3095dde72a95f7c0",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.2.0",
+        "version": "2.4.2",
         "channel": "beta",
         "label": "v2"
       },
@@ -6088,13 +6088,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.3.0",
-      "revision_sha256": "6dade8626ed503931bd74e662d697da14787d4ece23103752f217971890af886",
+      "package_id": "nvngx_dlss_2.4.3",
+      "revision_sha256": "08fbb5789590c9403d2c81e4d16c7b6879b836bec68980266c5657efec2562ac",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.3.0",
+        "version": "2.4.3",
         "channel": "stable",
         "label": null
       },
@@ -6111,13 +6111,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.6.0",
-      "revision_sha256": "b4057f00a427ae5123d3d7dfaa8e85235725e280d8700038d6fea58adbccf06a",
+      "package_id": "nvngx_dlss_2.4.6",
+      "revision_sha256": "973ae7e42bc1aea21511fef2a5ed165c3461b75647f97192e230e8379ac21dc8",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.6.0",
+        "version": "2.4.6",
         "channel": "stable",
         "label": null
       },
@@ -6134,13 +6134,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.11.0",
-      "revision_sha256": "05aca2086ba84c18e0c18bb20332adf7f10746935d6da4be32e70ef6caf2fbc4",
+      "package_id": "nvngx_dlss_2.4.11",
+      "revision_sha256": "7cfeadda6191236656adc581ae1ee08bff8b6b9e1b3f7c3b00be40e655395260",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.11.0",
+        "version": "2.4.11",
         "channel": "stable",
         "label": null
       },
@@ -6157,13 +6157,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.12.0_0aa6cf6b",
-      "revision_sha256": "398f4a88dccb8e35f5771db9cdc529a6279d6969e32be8ac61be3b57ea0f70f6",
+      "package_id": "nvngx_dlss_2.4.12_0aa6cf6b",
+      "revision_sha256": "0af4595ea6b44576901bfcf215493c20af3905fc493a71384d511c521b2ba1eb",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.12.0",
+        "version": "2.4.12",
         "channel": "stable",
         "label": null
       },
@@ -6180,13 +6180,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.12.0_0a71efba",
-      "revision_sha256": "2e4788374b87dd8433971ec4cb8c50dc9f9c60eb4e883fa738fc7acad0e0ae46",
+      "package_id": "nvngx_dlss_2.4.12_0a71efba",
+      "revision_sha256": "f9541d43cf984712caeb46ec7b577162fea4ba4a8a40fa5dc9cff27fea7ccbcd",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.12.0",
+        "version": "2.4.12",
         "channel": "beta",
         "label": "v2"
       },
@@ -6203,13 +6203,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.12.0_31bfd8f7",
-      "revision_sha256": "2ce2a7985fe1da91b69de44a591f80eb467f6efa113a059ac6db24fdfcdb4d6a",
+      "package_id": "nvngx_dlss_2.4.12_31bfd8f7",
+      "revision_sha256": "962639bd5e2e74b3225aa87b7e2055943db78c9e152883edc78d0c2d10894dfb",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.12.0",
+        "version": "2.4.12",
         "channel": "beta",
         "label": "v3"
       },
@@ -6226,13 +6226,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.4.13.0",
-      "revision_sha256": "6d2e8ed4d236cdfbc818a6705ec454dcce2750d4eed3f7b29a6b98a515cbc76b",
+      "package_id": "nvngx_dlss_2.4.13",
+      "revision_sha256": "ae126d90f4f83fcd03b9c97f6fd6631f3c9bac60d2bc9498b7f16a9a484d3a8d",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.4.13.0",
+        "version": "2.4.13",
         "channel": "stable",
         "label": null
       },
@@ -6249,13 +6249,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.5.0.0",
-      "revision_sha256": "4c2b9f321e147bf21b5b505fb88d13a088249a03293fba201dedddf4c42c8ff5",
+      "package_id": "nvngx_dlss_2.5.0",
+      "revision_sha256": "a853dbb19aae2cec9a35a63ce49f8040e8b241492934a90dd8465d2c873826d8",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.5.0.0",
+        "version": "2.5.0",
         "channel": "stable",
         "label": null
       },
@@ -6272,13 +6272,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_2.5.1.0",
-      "revision_sha256": "8c86e4e8f963f0e39ece1d39d8c6386a71506fae54369d5460a0f8fcbda07593",
+      "package_id": "nvngx_dlss_2.5.1",
+      "revision_sha256": "0f56a1827aab0a8c99777e48dafc56cdff663e6785c76267c38b3cf8006d3a05",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "2.5.1.0",
+        "version": "2.5.1",
         "channel": "stable",
         "label": null
       },
@@ -6295,13 +6295,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.1.0_4bb56706",
-      "revision_sha256": "1b279f4daf553ad14c084c0ec030a32c0577e2eb276288e8538b29a1bb67de7f",
+      "package_id": "nvngx_dlss_3.1.1_4bb56706",
+      "revision_sha256": "947f76793d756e797708ebfe5e7ea8ac8a2dc73b96c33bcb013913be7c10e2ef",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.1.0",
+        "version": "3.1.1",
         "channel": "stable",
         "label": null
       },
@@ -6318,13 +6318,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.1.0_40d46848",
-      "revision_sha256": "1f6bebec4c465b09c70b00cbdba6adaae7d58b85778a8a4fed55a79a48431651",
+      "package_id": "nvngx_dlss_3.1.1_40d46848",
+      "revision_sha256": "123564792819333be46c0c6a318406fabb7a716228802740bbcc948f90e8ca25",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.1.0",
+        "version": "3.1.1",
         "channel": "beta",
         "label": "v2"
       },
@@ -6341,13 +6341,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.1.0_1df72f79",
-      "revision_sha256": "cca0fdba4160394da108ed9a8f815eff4c4d2b35fedf393729abbde1160490ee",
+      "package_id": "nvngx_dlss_3.1.1_1df72f79",
+      "revision_sha256": "1fd07684871718591bed3cfa1df44682d14dacdd93d31efd69963c656dd11530",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.1.0",
+        "version": "3.1.1",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6364,13 +6364,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.2.0",
-      "revision_sha256": "918c53c6b114714060161534486c688e6287589e8625c05a9cc0c77b4a0c2fdf",
+      "package_id": "nvngx_dlss_3.1.2",
+      "revision_sha256": "107024027c6b58016abfefae276d092261256aebd9c1c89a19ed41edcdf66c5a",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.2.0",
+        "version": "3.1.2",
         "channel": "stable",
         "label": null
       },
@@ -6387,13 +6387,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.11.0_e557b8eb",
-      "revision_sha256": "7837996f1e23fa15303bf56628f0d579584adef4291a15faaa0c4fbc6bd37455",
+      "package_id": "nvngx_dlss_3.1.11_e557b8eb",
+      "revision_sha256": "723f8c9c965631f92ae051ec48cb15f7c11ce0c047b989822356678f9fd9913f",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.11.0",
+        "version": "3.1.11",
         "channel": "stable",
         "label": null
       },
@@ -6410,13 +6410,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.11.0_adb36f46",
-      "revision_sha256": "df11581e6894c78ea9da776293202be74b0c166f6b330a2a44c0b4a25530a165",
+      "package_id": "nvngx_dlss_3.1.11_adb36f46",
+      "revision_sha256": "ad7e79bca3d2bed8231e891b3c4b65a323e92ccfa6e74fdbc932523c39d066d8",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.11.0",
+        "version": "3.1.11",
         "channel": "beta",
         "label": "v2"
       },
@@ -6433,13 +6433,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.11.0_6b1e6a22",
-      "revision_sha256": "8949ea1f4c6863748859bed474e36e5c6f2f8c814abe90b4c63e5f5aa507ccd1",
+      "package_id": "nvngx_dlss_3.1.11_6b1e6a22",
+      "revision_sha256": "870b63ecfcb625239e41eab4b0cdeb92090fe8a92c09ecdaa8e726b66a440c35",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.11.0",
+        "version": "3.1.11",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6456,13 +6456,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.13.0_22b2359c",
-      "revision_sha256": "46df1f7be5ecf8b3f35519e58c2c3c9ab94afd290e7aa8f629cabd47ed8cfd0d",
+      "package_id": "nvngx_dlss_3.1.13_22b2359c",
+      "revision_sha256": "e4829253ac3e17f5b3bc82717af56c4e4338b6fcf7937439e8e142cf5fad4792",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.13.0",
+        "version": "3.1.13",
         "channel": "stable",
         "label": null
       },
@@ -6479,13 +6479,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.13.0_4db1c0e9",
-      "revision_sha256": "feeaff401296515fb221e196f5fe495f031c9aac57d63860a35ec8eb594f84c2",
+      "package_id": "nvngx_dlss_3.1.13_4db1c0e9",
+      "revision_sha256": "4d07e723a2599c6d8460982e9f96bfe5afa6cb563e95edeb8c6c41805bc0169c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.13.0",
+        "version": "3.1.13",
         "channel": "beta",
         "label": "v2"
       },
@@ -6502,13 +6502,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.13.0_e985d98c",
-      "revision_sha256": "5ef572497a555692f5319ad9202e16661717b1bf31a8c0c59fae8db5115f5491",
+      "package_id": "nvngx_dlss_3.1.13_e985d98c",
+      "revision_sha256": "0cb4311976ab596501f12ebd17bda3e2c263d918628f702288d8f6a26a3ce2a3",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.13.0",
+        "version": "3.1.13",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6525,13 +6525,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.30.0_96f5ced1",
-      "revision_sha256": "c2cc057477767ac3bdc38bf39fd07765cacdd93de2043346c7a9698d5282a36d",
+      "package_id": "nvngx_dlss_3.1.30_96f5ced1",
+      "revision_sha256": "afcc41b3dc63c4ae04ff141f78339f6b62cd78e517daac5d880b39912cb3658c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.30.0",
+        "version": "3.1.30",
         "channel": "stable",
         "label": null
       },
@@ -6548,13 +6548,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.1.30.0_5baca228",
-      "revision_sha256": "ef7436b0401a7ccca0374313a2ee6f5dc9ca155a8321a0a3a7cad0b2ac7ea888",
+      "package_id": "nvngx_dlss_3.1.30_5baca228",
+      "revision_sha256": "6e589cb564fa4b235a127dce808471e414124fbb37c6e5b5495d2f76cd54a1bb",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.1.30.0",
+        "version": "3.1.30",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6571,13 +6571,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.5.0.0_a6b50794",
-      "revision_sha256": "ddc99623d0b061f9923e091c2d770e64490ce3bf4a87777945196e4e138c558d",
+      "package_id": "nvngx_dlss_3.5.0_a6b50794",
+      "revision_sha256": "54a6a1ca462ff8eaf1de72b773f7ee45fef2d789f12136dfe6ddffe1d13fe82c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "stable",
         "label": null
       },
@@ -6594,13 +6594,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.5.0.0_bf68025b",
-      "revision_sha256": "2d9439a4fec92c1102a963cc457efbb0b43d7c8988050a1c431970bf6fca877c",
+      "package_id": "nvngx_dlss_3.5.0_bf68025b",
+      "revision_sha256": "b06ebe9a760acd7381fb63f4f2f98c1b24944be7ccdb97e259e522f938d3e7c8",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "beta",
         "label": "v2"
       },
@@ -6617,13 +6617,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.5.0.0_b4c2d625",
-      "revision_sha256": "9e6bc80506187afa091925faa95903d1fef445a7102151cd7633640c62236f0c",
+      "package_id": "nvngx_dlss_3.5.0_b4c2d625",
+      "revision_sha256": "ec733d2d2da5b022f5e565ce336c147696ec4b29a52c5fd4a9e270f2f7b8cff0",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6640,13 +6640,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.5.10.0_ac477775",
-      "revision_sha256": "8d95ae9abd1d5dc31a28d4b49ce8264c0894fd90720f4dfce488c114a47c3f2e",
+      "package_id": "nvngx_dlss_3.5.10_ac477775",
+      "revision_sha256": "dc42a29058328745321b20e49ec4e56c49323563c388ede806cf5b14338fa581",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.5.10.0",
+        "version": "3.5.10",
         "channel": "stable",
         "label": null
       },
@@ -6663,13 +6663,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.5.10.0_c8fae97c",
-      "revision_sha256": "2fa3c147ef48c150c924a9f365f7eb1fd952b7cbe43b9c62ca88be10f625b38e",
+      "package_id": "nvngx_dlss_3.5.10_c8fae97c",
+      "revision_sha256": "5467e6e03e94be1d18ed354827f7c69e9d0a059f17d386056f8f5430d6447c5d",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.5.10.0",
+        "version": "3.5.10",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6686,13 +6686,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.6.0.0",
-      "revision_sha256": "0b95975033fc0e96880719863a9a1b2c2f9655b5f2f88bf87618cb218365fc51",
+      "package_id": "nvngx_dlss_3.6.0",
+      "revision_sha256": "1db36c32fcbfcd48c7a87eb0d1ed3df19222d8a2157f0159139ad34f9b7c22a6",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.6.0.0",
+        "version": "3.6.0",
         "channel": "stable",
         "label": null
       },
@@ -6709,13 +6709,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.0.0_956faf7e",
-      "revision_sha256": "34542647111a46f5166bad6e2ed8524b3a43f5483c86c90c933d3e040e3bfc72",
+      "package_id": "nvngx_dlss_3.7.0_956faf7e",
+      "revision_sha256": "6b3c84e6788e58e122f3e817999cb2aed1830732842736962db956f44a28640d",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.0.0",
+        "version": "3.7.0",
         "channel": "stable",
         "label": null
       },
@@ -6732,13 +6732,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.0.0_060f8a4c",
-      "revision_sha256": "1c2276f517216d873d40e7e925ec994f24661dd3804dee7e70cbb00082f16e2e",
+      "package_id": "nvngx_dlss_3.7.0_060f8a4c",
+      "revision_sha256": "d004dcadcf0fd89e49902f94557069379f5b5cf1f90cbe9f1ceac0d9493ff92c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.0.0",
+        "version": "3.7.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6755,13 +6755,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.10.0_12627ab9",
-      "revision_sha256": "5e9883a071f651c0cb26a5fa08d0dd328ce9ef064f2d15f4face22841948cf12",
+      "package_id": "nvngx_dlss_3.7.10_12627ab9",
+      "revision_sha256": "4d91e00bbc660357f3edbed92930b6f41db1520352ed0ea64b471f380d410320",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.10.0",
+        "version": "3.7.10",
         "channel": "stable",
         "label": null
       },
@@ -6778,13 +6778,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.10.0_6af88a88",
-      "revision_sha256": "c9949d1a2333bca416809fbdf71d8a8965fb575b100d3aeae4e890cc22935166",
+      "package_id": "nvngx_dlss_3.7.10_6af88a88",
+      "revision_sha256": "efd6355cf26f1289fccf4c5243cf6fa2fef06b75d663c2621dd0d831fd907bad",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.10.0",
+        "version": "3.7.10",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6801,13 +6801,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.20.0_53dbec92",
-      "revision_sha256": "8f94f388b7bf429e9d4b5bc23cff22b7cdc6f504b060c26632eb6cb402dce28b",
+      "package_id": "nvngx_dlss_3.7.20_53dbec92",
+      "revision_sha256": "9f0544524f0dd8790883f38293b237b62fbe6849bcc0bbd3caf563f6946f15d1",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.20.0",
+        "version": "3.7.20",
         "channel": "stable",
         "label": null
       },
@@ -6824,13 +6824,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.20.0_78eb8bfb",
-      "revision_sha256": "487028422d57bfe8ed35d0568bc88fccb87358ec01f0f5a26524d2e0f8955efb",
+      "package_id": "nvngx_dlss_3.7.20_78eb8bfb",
+      "revision_sha256": "35306d9464da8e55f7f0b497c5f54c4efff0768edf6c97bc631f8681fa07e2af",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.20.0",
+        "version": "3.7.20",
         "channel": "beta",
         "label": "v2"
       },
@@ -6847,13 +6847,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.7.20.0_feb2fa31",
-      "revision_sha256": "33454a5f5a4660f9cc2f87270c3d0411bd4df1fd1cccfbf40f66e821c3be1c10",
+      "package_id": "nvngx_dlss_3.7.20_feb2fa31",
+      "revision_sha256": "cd26119999d2a0b07d869f5808856ea40b14dad7243c1fd7633115e029f79306",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.7.20.0",
+        "version": "3.7.20",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6870,13 +6870,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_3.8.10.0",
-      "revision_sha256": "39fa2dd1f437a2164161ff0f7cbe132d6efe13a50d09dc8d48b5c76065dea4aa",
+      "package_id": "nvngx_dlss_3.8.10",
+      "revision_sha256": "9e0cd14756af42916461f460144dddd199dd2e8d5367f501d3339eacd754d27e",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "3.8.10.0",
+        "version": "3.8.10",
         "channel": "stable",
         "label": null
       },
@@ -6893,13 +6893,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.1.0.0",
-      "revision_sha256": "e0bd2b30b9a3e5a592f80720a1d0dba41a2f92e5d1d9af5a0e2cf6b814160fc9",
+      "package_id": "nvngx_dlss_310.1.0",
+      "revision_sha256": "d7f6068dd232c01b77af6bfc20935205ee5d340bc496540562a2b34739c9d11f",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.1.0.0",
+        "version": "310.1.0",
         "channel": "stable",
         "label": null
       },
@@ -6916,13 +6916,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.2.1.0",
-      "revision_sha256": "23c50463722bee93e44c4571286ab5dc0dff93da014de0f95b62527bcb791dde",
+      "package_id": "nvngx_dlss_310.2.1",
+      "revision_sha256": "d923ff73d8d0faae53d83c9429ded1b3b5ec1cfde87696f32690e7b1fea07fe2",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.2.1.0",
+        "version": "310.2.1",
         "channel": "stable",
         "label": null
       },
@@ -6939,13 +6939,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.3.0.0_436bd846",
-      "revision_sha256": "09c44f79838e5a400723ccc0ffaa9c6ba47fc1899a32d9b2e8ea8d361ba0c93d",
+      "package_id": "nvngx_dlss_310.3.0_436bd846",
+      "revision_sha256": "28792bb62179dc3f60358b613ed67ea0b667953e5754de7cb177c492316d94e4",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.3.0.0",
+        "version": "310.3.0",
         "channel": "stable",
         "label": null
       },
@@ -6962,13 +6962,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.3.0.0_d75ce10f",
-      "revision_sha256": "5ed3273204d92136f282950f4824e1cd48f5e2dd3086be1ab723b1df77c0d18f",
+      "package_id": "nvngx_dlss_310.3.0_d75ce10f",
+      "revision_sha256": "27fc93e982250e497291f2df876513bc6821b9ca3d0521398f1638e910a5b18c",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.3.0.0",
+        "version": "310.3.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -6985,13 +6985,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.4.0.0_f2956394",
-      "revision_sha256": "b628f1198d4e43ffa8fc3eb8dee4a5d82df33f7c1cee3436a4126d397818ff16",
+      "package_id": "nvngx_dlss_310.4.0_f2956394",
+      "revision_sha256": "09f7d856833a47c13d32b4f79de022c7bae754801eeef0b110b751b13dae3fb7",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.4.0.0",
+        "version": "310.4.0",
         "channel": "stable",
         "label": null
       },
@@ -7008,13 +7008,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.4.0.0_8440daa1",
-      "revision_sha256": "e6054b8a8e1652eda8c1cc79b0226541153ad7af0881ebf79e2fead072c0635b",
+      "package_id": "nvngx_dlss_310.4.0_8440daa1",
+      "revision_sha256": "2a8ed5dffc5aa1e2e1835ca9ce3adabfede5ee5ad2581add8bec5badc9d0db49",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.4.0.0",
+        "version": "310.4.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -7031,13 +7031,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.5.0.0_a30d0cfb",
-      "revision_sha256": "a3f6cd06ba5e1c61c179cf817b135dc82df1089bc34a9fc3d895ad109f6e1e9b",
+      "package_id": "nvngx_dlss_310.5.0_a30d0cfb",
+      "revision_sha256": "baad29dca8741a76f3660a764857bc734379af3223bdf8804c5debe2aadec644",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.5.0.0",
+        "version": "310.5.0",
         "channel": "stable",
         "label": null
       },
@@ -7054,13 +7054,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.5.0.0_87db238e",
-      "revision_sha256": "4926654b439a7a8d1129f194916cd6078815c1d9b6090b35d53793acef0d57af",
+      "package_id": "nvngx_dlss_310.5.0_87db238e",
+      "revision_sha256": "da3a9991d124c968defc22183cb956718d3ce43f11401eb0ff981d38f745ac54",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.5.0.0",
+        "version": "310.5.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -7077,13 +7077,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.5.2.0",
-      "revision_sha256": "8b32bd31b43bbbafa9c4267b8e4ebf1f05caff920f56845a07befa6244ee04dc",
+      "package_id": "nvngx_dlss_310.5.2",
+      "revision_sha256": "280cd619695ec48484e0362426624f3bd1a73ea2473e6979a81402afd0ba3ee8",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.5.2.0",
+        "version": "310.5.2",
         "channel": "stable",
         "label": null
       },
@@ -7100,13 +7100,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.5.3.0_ad596904",
-      "revision_sha256": "3b16c7beda91664b3c4c2c5de5ba6443b7f64069a43e123a5bc75d95d387528b",
+      "package_id": "nvngx_dlss_310.5.3_ad596904",
+      "revision_sha256": "fea7c4cd3addf6908ef55fe9ae822295bf24655c785536b4043ccaabbfc935e2",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.5.3.0",
+        "version": "310.5.3",
         "channel": "stable",
         "label": null
       },
@@ -7123,13 +7123,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.5.3.0_a11b9b55",
-      "revision_sha256": "4d832f11bc9ecea569f004fc6df4d6e52fa7dfb9e1aa9a2217428ff599405103",
+      "package_id": "nvngx_dlss_310.5.3_a11b9b55",
+      "revision_sha256": "09f38024ce02711efddb1dd62472208b8f3fa0ac35bd26e890a9d51328bafd1a",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.5.3.0",
+        "version": "310.5.3",
         "channel": "debug",
         "label": "Debug"
       },
@@ -7146,13 +7146,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.6.0.0",
-      "revision_sha256": "4f167f102d6442bbeff95c3c4bde09f6b4f0096eaa5b02280e2b5353352c300c",
+      "package_id": "nvngx_dlss_310.6.0",
+      "revision_sha256": "53e6235b36f146e64dc241add47851234addf31d3bd1f94fdcc49944ee91c779",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.6.0.0",
+        "version": "310.6.0",
         "channel": "stable",
         "label": null
       },
@@ -7169,13 +7169,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlss_310.7.0.0",
-      "revision_sha256": "e87d88536f5e3efc677062b253b405c83e83dcdca9804b033a66761e93d39fc3",
+      "package_id": "nvngx_dlss_310.7.0",
+      "revision_sha256": "fa25237cc1cc402b4365c07165e983fb585ad24c6ac01a95b864e8b134f0856d",
       "technology": "dlss_super_resolution",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Super Resolution",
       "release": {
-        "version": "310.7.0.0",
+        "version": "310.7.0",
         "channel": "stable",
         "label": null
       },
@@ -7192,13 +7192,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.5.0.0_cd523b59",
-      "revision_sha256": "ea70f03be8e07c14107433789274fbed7319f281fcf6dd6374d39baed58d9a97",
+      "package_id": "nvngx_dlssd_3.5.0_cd523b59",
+      "revision_sha256": "96210ba19c7f68714c07e98c79d775dd3fc4ed078700ec07a3020fde1f225007",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "stable",
         "label": null
       },
@@ -7215,13 +7215,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.5.0.0_3ed68c94",
-      "revision_sha256": "46a66b9b261963bf113432afa6182e66c207b6326c89a865bab5c207ad343aa0",
+      "package_id": "nvngx_dlssd_3.5.0_3ed68c94",
+      "revision_sha256": "337c831677c93481c4eb94ca186c036bc629fe3186c34a640fab63cf155e3a86",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "beta",
         "label": "33284283"
       },
@@ -7238,13 +7238,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.5.0.0_625907de",
-      "revision_sha256": "db0547b9179135dcee4cac1c0bbd85d3a8ddefd468bbbcfdfec6939a3eedce8a",
+      "package_id": "nvngx_dlssd_3.5.0_625907de",
+      "revision_sha256": "200f2c444841e14716e75dcd23c23611fca53872d3dd490779cc248e2af01dc7",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "beta",
         "label": "33367307"
       },
@@ -7261,13 +7261,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.5.10.0",
-      "revision_sha256": "05e5ac3f995cefc4f91af6b9664fa598708ad0646d63b8f51bee4b115bb78a41",
+      "package_id": "nvngx_dlssd_3.5.10",
+      "revision_sha256": "f9cc1c8482c9272b050ea2597dcd20280de9ea5e95476c9bc20088e8638501d0",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.5.10.0",
+        "version": "3.5.10",
         "channel": "stable",
         "label": null
       },
@@ -7284,13 +7284,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.7.0.0",
-      "revision_sha256": "8c4e96cd2891affc24c78aaf3e88ed15092fa604fee9a42bf1d94a69905aa115",
+      "package_id": "nvngx_dlssd_3.7.0",
+      "revision_sha256": "c1c370f667697fd82382b550b6667e9d8a2948e17303781fd57513d4259984ee",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.7.0.0",
+        "version": "3.7.0",
         "channel": "stable",
         "label": null
       },
@@ -7307,13 +7307,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.7.10.0",
-      "revision_sha256": "0b75105b0125d34e4410b712f09ace5f3857bc72d6ccee623b2ab60d317c7668",
+      "package_id": "nvngx_dlssd_3.7.10",
+      "revision_sha256": "14063a31eff20d53180beb09cf89c26b570e46b7d83cfec0fe6b7a330ab69860",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.7.10.0",
+        "version": "3.7.10",
         "channel": "stable",
         "label": null
       },
@@ -7330,13 +7330,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_3.7.20.0",
-      "revision_sha256": "38122306087e76a367ea213e447ec1e98657e2534fadeb9b399f1ba49dd3c2a6",
+      "package_id": "nvngx_dlssd_3.7.20",
+      "revision_sha256": "8bdeb8b177699a7e0c644f1823915f961955c7e6a8e18e97d423a017524bb923",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "3.7.20.0",
+        "version": "3.7.20",
         "channel": "stable",
         "label": null
       },
@@ -7353,13 +7353,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.1.0.0",
-      "revision_sha256": "455332ce18dc45dbf23de669e0020a56f222c8a48cd84fe027cb3f72104ecb20",
+      "package_id": "nvngx_dlssd_310.1.0",
+      "revision_sha256": "f0ec6285ee0fee5f994b4035b07e07653b4080531d839abf6944d0e4f150ca0c",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.1.0.0",
+        "version": "310.1.0",
         "channel": "stable",
         "label": null
       },
@@ -7376,13 +7376,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.2.0.0",
-      "revision_sha256": "da447c14d846934aa70a4a5a27b941f3df456a8ff40419581a68eacb741545cf",
+      "package_id": "nvngx_dlssd_310.2.0",
+      "revision_sha256": "1ee057961bc0dfb20e10843afc5828437d78d00275ac56bfb73ec56ed076dc5c",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.2.0.0",
+        "version": "310.2.0",
         "channel": "stable",
         "label": null
       },
@@ -7399,13 +7399,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.2.1.0",
-      "revision_sha256": "84b9a44bf0ba97e93855bd41f81ade9d26e4dc6c2d741d827c03c35504c36e41",
+      "package_id": "nvngx_dlssd_310.2.1",
+      "revision_sha256": "879cacd70ade9814f6ca7d84dce03b5892786bb21b6dde63ea7e4ad66d20129a",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.2.1.0",
+        "version": "310.2.1",
         "channel": "stable",
         "label": null
       },
@@ -7422,13 +7422,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.3.0.0_fc7a45af",
-      "revision_sha256": "e7225f4c7ec1da79499f4e754e693555bd3b35fd742a8f5f43b825c02d69008f",
+      "package_id": "nvngx_dlssd_310.3.0_fc7a45af",
+      "revision_sha256": "33477eafdf1ee7ac7f0d820d5b6b16b51203e7322fe8426c5ca9c53f7310872d",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.3.0.0",
+        "version": "310.3.0",
         "channel": "stable",
         "label": null
       },
@@ -7445,13 +7445,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.3.0.0_95b33733",
-      "revision_sha256": "eae4a093397d2e5a038825088fa5071b82a9bdff68ed4f8b113f4af0753ae791",
+      "package_id": "nvngx_dlssd_310.3.0_95b33733",
+      "revision_sha256": "0e6e04f08d6e21aba8798e74113edf92f3014a16b5cfd6ba71dcb7ac7885620d",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.3.0.0",
+        "version": "310.3.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -7468,13 +7468,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.4.0.0",
-      "revision_sha256": "c4065926615d20b1d088abbf4eb79395648b34957570f5d577d006d6d50b273c",
+      "package_id": "nvngx_dlssd_310.4.0",
+      "revision_sha256": "ff837832a7b2cd5281811d6d0b9f4cf4823d2b8318f9401827828869dc66c8c4",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.4.0.0",
+        "version": "310.4.0",
         "channel": "stable",
         "label": null
       },
@@ -7491,13 +7491,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.5.0.0_ea085a17",
-      "revision_sha256": "786cb79ce27df726f2e6e94d32b8d82ab94bc27734b9cbe8245a772ee9c06fd0",
+      "package_id": "nvngx_dlssd_310.5.0_ea085a17",
+      "revision_sha256": "faf3b3114ea6311dc9aa88f96466581be41f04b025fb6a995a7d7a7fd90ae1eb",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.5.0.0",
+        "version": "310.5.0",
         "channel": "stable",
         "label": null
       },
@@ -7514,13 +7514,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.5.0.0_6026c85b",
-      "revision_sha256": "15bdb67ae48438061ae71ac8c938cc77f35f6ffe26db7cea184238daf1694b62",
+      "package_id": "nvngx_dlssd_310.5.0_6026c85b",
+      "revision_sha256": "240da3afd5f61703efdb4dd529b4badb7762aef30ecd4d8e0c137f2ad9469198",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.5.0.0",
+        "version": "310.5.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -7537,13 +7537,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.5.2.0",
-      "revision_sha256": "a1b003f8c3450d3d956789acaac23eec25579e91d512f3f54cbe1084bc5f6ef6",
+      "package_id": "nvngx_dlssd_310.5.2",
+      "revision_sha256": "0940e85dcc8774849a1bf745b933ad3193484ddffd5cfeb579e75e98726a06ac",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.5.2.0",
+        "version": "310.5.2",
         "channel": "stable",
         "label": null
       },
@@ -7560,13 +7560,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.5.3.0_4fee3757",
-      "revision_sha256": "c073d7ce005558f575dff9ebb929d615fd095e9866028cec0afb16c6ae3f8fb5",
+      "package_id": "nvngx_dlssd_310.5.3_4fee3757",
+      "revision_sha256": "46e1ac8baace0dc49de9557e49f4b42eb6da74bfb8ce24b07e2c72a7c4d31b62",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.5.3.0",
+        "version": "310.5.3",
         "channel": "stable",
         "label": null
       },
@@ -7583,13 +7583,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.5.3.0_34e9f4e5",
-      "revision_sha256": "bb4f83444438dbec1f7afc5a09b9d2714debcc971877ce1e89313792ca08ad18",
+      "package_id": "nvngx_dlssd_310.5.3_34e9f4e5",
+      "revision_sha256": "d2decc44301e9d41744997a95748f969204a7db81a79099ea2d572b1b9a36f31",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.5.3.0",
+        "version": "310.5.3",
         "channel": "debug",
         "label": "Debug"
       },
@@ -7606,13 +7606,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.6.0.0",
-      "revision_sha256": "092227079a33f9bee6f0f0c6c9723b212f01e6312f1d7edbc99ebf56593ed19e",
+      "package_id": "nvngx_dlssd_310.6.0",
+      "revision_sha256": "0c3bec1435ddffa122daad794c43bbb1332f3dfe65081e1ceba5a725d5da347f",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.6.0.0",
+        "version": "310.6.0",
         "channel": "stable",
         "label": null
       },
@@ -7629,13 +7629,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssd_310.7.0.0",
-      "revision_sha256": "14de24099cd34049942e94239a518e774a606853b70e5604bc19084c7e97e55d",
+      "package_id": "nvngx_dlssd_310.7.0",
+      "revision_sha256": "94c20a3d5e6bf87b4bd1999b1f70344a425ca1237c2f5b28f4011ccfef351121",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Ray Reconstruction",
       "release": {
-        "version": "310.7.0.0",
+        "version": "310.7.0",
         "channel": "stable",
         "label": null
       },
@@ -7652,13 +7652,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.1.0",
-      "revision_sha256": "659067abce37dbc081f223cc464feff21d5eefc9304f07f7a0b2597e17d11657",
+      "package_id": "nvngx_dlssg_1.0.1",
+      "revision_sha256": "9095ecc2c6296e2ec7d929ac060ec301038c2ee3287fa897805db0ad5d723d36",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.1.0",
+        "version": "1.0.1",
         "channel": "stable",
         "label": null
       },
@@ -7675,13 +7675,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.2.0",
-      "revision_sha256": "0f9492cc1862bae39c82d5e0a4d64f1d970da76510595b8f45218398207bc97b",
+      "package_id": "nvngx_dlssg_1.0.2",
+      "revision_sha256": "184787f1362baefaf30c0c7a5405c4c56235caea88b7961c92e6b7511106bcc2",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.2.0",
+        "version": "1.0.2",
         "channel": "stable",
         "label": null
       },
@@ -7698,13 +7698,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.3.0",
-      "revision_sha256": "00929686fceaec0b69ae43101a8a1d79f73417a4fc9e32725cf6fc24f0704370",
+      "package_id": "nvngx_dlssg_1.0.3",
+      "revision_sha256": "628f909fd314416715f6e5cb4b67f61e354341068925d9a399a932aace766573",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.3.0",
+        "version": "1.0.3",
         "channel": "stable",
         "label": null
       },
@@ -7721,13 +7721,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.4.0_9bfac446",
-      "revision_sha256": "8317961f449605c05c6dc7a290500afa04de772237f270f03090d53eaa60c7e3",
+      "package_id": "nvngx_dlssg_1.0.4_9bfac446",
+      "revision_sha256": "740ec33491a1dfd96bb949838ec23ba405f50acc163c35f4eb5c0b780c3ab989",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.4.0",
+        "version": "1.0.4",
         "channel": "stable",
         "label": null
       },
@@ -7744,13 +7744,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.4.0_de3479e4",
-      "revision_sha256": "4a461246803626374a32b1ce814daf02518b245a0a73ece2c2eb60e222c4e0a6",
+      "package_id": "nvngx_dlssg_1.0.4_de3479e4",
+      "revision_sha256": "cf2a06d32115ed492152d8857db637aa26cacf9409e0cf362808ea09d9a059d0",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.4.0",
+        "version": "1.0.4",
         "channel": "beta",
         "label": "v2"
       },
@@ -7767,13 +7767,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.5.0",
-      "revision_sha256": "7800c0850b270a915d348bdeac99ea725782113530f1fc69e77ac85d5f276b94",
+      "package_id": "nvngx_dlssg_1.0.5",
+      "revision_sha256": "93ddd10f1dfa6628c2f4d740cdf536f829562c6b492ceeac09ae4b236c4d0d46",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.5.0",
+        "version": "1.0.5",
         "channel": "stable",
         "label": null
       },
@@ -7790,13 +7790,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.6.0",
-      "revision_sha256": "05c8477e50564a3ed7cc35210ca3ed9c3144f6d7c8726b9f70d38b74a26e5079",
+      "package_id": "nvngx_dlssg_1.0.6",
+      "revision_sha256": "e05eabd38feb799ca6b7a37cef83958df55ea53db34895f338eb71cfdc69a05f",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.6.0",
+        "version": "1.0.6",
         "channel": "stable",
         "label": null
       },
@@ -7813,13 +7813,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_1.0.7.0",
-      "revision_sha256": "d054c29ebe07d4fbea3ed5cc1384f8ed887179e9b43813cc4c45912689df5fc9",
+      "package_id": "nvngx_dlssg_1.0.7",
+      "revision_sha256": "26084f51792b3afb34c429491aafff5d948d2f9795d3330004975341580dfbca",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "1.0.7.0",
+        "version": "1.0.7",
         "channel": "stable",
         "label": null
       },
@@ -7836,13 +7836,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.1.1.0",
-      "revision_sha256": "7130231e4e8afd3883b8ff8f36d3cd5260ae46d5fcdd64b7739c81f37bc3fb7c",
+      "package_id": "nvngx_dlssg_3.1.1",
+      "revision_sha256": "fc77c805ed408701ae33f8019d6298d1a6e494c0aff22df6307bd74a9bca4da6",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.1.1.0",
+        "version": "3.1.1",
         "channel": "stable",
         "label": null
       },
@@ -7859,13 +7859,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.1.11.0",
-      "revision_sha256": "31314dad4bdd4e2317fb7c59a08327902d903bbb4bab6d74d83b6b1b3f1b7d5e",
+      "package_id": "nvngx_dlssg_3.1.11",
+      "revision_sha256": "096e3442ada303a3c6a4096f1da48be45a3f8e90e06f7389fb2507426dfd02ba",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.1.11.0",
+        "version": "3.1.11",
         "channel": "stable",
         "label": null
       },
@@ -7882,13 +7882,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.1.12.0",
-      "revision_sha256": "3e916386a3dc2c1ce0cc543daf1470c077d12b2ac4ca570f8ae4204b6052feaf",
+      "package_id": "nvngx_dlssg_3.1.12",
+      "revision_sha256": "70c1d2ffcd61488d5e743a49d3d2b23b4dc87b6a00fb35069765a2e96ab7f7a2",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.1.12.0",
+        "version": "3.1.12",
         "channel": "stable",
         "label": null
       },
@@ -7905,13 +7905,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.1.13.0",
-      "revision_sha256": "bbfd191faed6f40771b2d70bcb8bcbc911fa8bfd20261b5c6adbd5df8a6f10d9",
+      "package_id": "nvngx_dlssg_3.1.13",
+      "revision_sha256": "bcff731db0ea17ce67ac3d547d0b7974052dde21d91dc97bbed37253f7970215",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.1.13.0",
+        "version": "3.1.13",
         "channel": "stable",
         "label": null
       },
@@ -7928,13 +7928,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.1.30.0",
-      "revision_sha256": "d2a5695f1d37acf5a7fea63af4d1b236a390e4eab3959c5ff082cdb74c03ee92",
+      "package_id": "nvngx_dlssg_3.1.30",
+      "revision_sha256": "7af8c779075af7ab01967b50ea09dc8c962f0a85725679a8a40b7a7f71fca808",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.1.30.0",
+        "version": "3.1.30",
         "channel": "stable",
         "label": null
       },
@@ -7951,13 +7951,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.5.0.0",
-      "revision_sha256": "f139b91651baf25391fa0545ab56d03a656c24ec8019998ac9fa0934ee54a233",
+      "package_id": "nvngx_dlssg_3.5.0",
+      "revision_sha256": "0975d8561df1c857ff96a6ccd5a5ab13d2bcce92a35339590105d453ee7d182b",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.5.0.0",
+        "version": "3.5.0",
         "channel": "stable",
         "label": null
       },
@@ -7974,13 +7974,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.5.10.0",
-      "revision_sha256": "a221a32c07e378463b282b467bac5b59003d0f9ade3fcd5c89fbcf461235c5b6",
+      "package_id": "nvngx_dlssg_3.5.10",
+      "revision_sha256": "004b973b78c2052e6e918062505ef0d7b785a4dbc591781a6d50f105f9a4bb33",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.5.10.0",
+        "version": "3.5.10",
         "channel": "stable",
         "label": null
       },
@@ -7997,13 +7997,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.6.0.0",
-      "revision_sha256": "804dbade0cc20c1d83b78a64329fa15a0daf2a147652459f60c06e9e809cc881",
+      "package_id": "nvngx_dlssg_3.6.0",
+      "revision_sha256": "d339ee35153d8ee7e7caa303d7ca54d5072eee5fe81cb2b728e25edc9a6c6764",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.6.0.0",
+        "version": "3.6.0",
         "channel": "stable",
         "label": null
       },
@@ -8020,13 +8020,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.7.0.0",
-      "revision_sha256": "6b3878a8b4a58125a81cdde888b0ca5f12fa7fcd6fea4b0c27c16d0c824776ac",
+      "package_id": "nvngx_dlssg_3.7.0",
+      "revision_sha256": "68988eaacc7797cca994aab1e34e36a1a600cb4427c374dfd40f70ba38fb1f09",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.7.0.0",
+        "version": "3.7.0",
         "channel": "stable",
         "label": null
       },
@@ -8043,13 +8043,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.7.1.0",
-      "revision_sha256": "677f932e350a9493928b5e5291b9cdf5759a73eca9c8f034da4680a110610c01",
+      "package_id": "nvngx_dlssg_3.7.1",
+      "revision_sha256": "d886b11de5be7723443bb830dffe5fa56e7b2cd85c6122b33f31f05cbe5e91cd",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.7.1.0",
+        "version": "3.7.1",
         "channel": "stable",
         "label": null
       },
@@ -8066,13 +8066,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.7.10.0",
-      "revision_sha256": "e03f107be0852e8b6cb56d0ceda3f5912c1c26ccfe81594be52f0e5f10c09bed",
+      "package_id": "nvngx_dlssg_3.7.10",
+      "revision_sha256": "30944e784ddd83e06ab4792740cd55dd9ac32abf8d5749f346fc4834239f83ea",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.7.10.0",
+        "version": "3.7.10",
         "channel": "stable",
         "label": null
       },
@@ -8089,13 +8089,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_3.8.1.0",
-      "revision_sha256": "9ff7a404e688b3fe89955ada434060cd0456fec4c4a9f1457ec2a065abae0efd",
+      "package_id": "nvngx_dlssg_3.8.1",
+      "revision_sha256": "521ee77ebf12569568f317f300dc9c8b40a1fd1511df1bc5f68fd7edbad4b90a",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "3.8.1.0",
+        "version": "3.8.1",
         "channel": "stable",
         "label": null
       },
@@ -8112,13 +8112,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.1.0.0",
-      "revision_sha256": "bfba029f75aae92e0e08b32de3814c4782dbff2a59121d805a6dc4db75d1b226",
+      "package_id": "nvngx_dlssg_310.1.0",
+      "revision_sha256": "1dc43a89ac76d73dd3e5e9dd89cecdc03b0f0a6ff3dfc4cf067fe97119260b7a",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.1.0.0",
+        "version": "310.1.0",
         "channel": "stable",
         "label": null
       },
@@ -8135,13 +8135,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.2.0.0",
-      "revision_sha256": "622435f36ea5d6007d6da4318bb0985faa89167ea716dd606a6c344e65d06d5b",
+      "package_id": "nvngx_dlssg_310.2.0",
+      "revision_sha256": "96a33f0ec70b7290e654ddd30bc57bfd35daf1700b51a1ec33653e2039a3789c",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.2.0.0",
+        "version": "310.2.0",
         "channel": "stable",
         "label": null
       },
@@ -8158,13 +8158,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.2.1.0",
-      "revision_sha256": "9b108fd5c91c5f22ca8a61f6e61f706413d834a52af2f0b8e4223dff2dd5d4e1",
+      "package_id": "nvngx_dlssg_310.2.1",
+      "revision_sha256": "804966f7f6e60d237923bcb6f8bb1bcdb25801eff58fca8bee90b14b576c34d8",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.2.1.0",
+        "version": "310.2.1",
         "channel": "stable",
         "label": null
       },
@@ -8181,13 +8181,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.3.0.0_ed5acc14",
-      "revision_sha256": "496498e1afa5b1786cd06f2496ad40ca827f1f47a3fe625b9fd3fe27fc9069d4",
+      "package_id": "nvngx_dlssg_310.3.0_ed5acc14",
+      "revision_sha256": "09f92d943981d6f891578bf16c249dafac7fd8346866cd0edd92e9755b4f02da",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.3.0.0",
+        "version": "310.3.0",
         "channel": "stable",
         "label": null
       },
@@ -8204,13 +8204,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.3.0.0_90765c32",
-      "revision_sha256": "d73da35a201b40f8e1b0b78250419ecb0d8c8ddc1aa30ded693700a0a6b1c3bc",
+      "package_id": "nvngx_dlssg_310.3.0_90765c32",
+      "revision_sha256": "426663180147354a20ba0414fe5b5945db988b167095b43372692b67d0627c02",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.3.0.0",
+        "version": "310.3.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -8227,13 +8227,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.4.0.0",
-      "revision_sha256": "ede31c7ef6e1e56597c30f9892fd1805b2233f4024ab71c98464178002ce177d",
+      "package_id": "nvngx_dlssg_310.4.0",
+      "revision_sha256": "7832abe7aa3a5d019fffc474f4074998879a9c7a80efd2aff1d921437625d285",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.4.0.0",
+        "version": "310.4.0",
         "channel": "stable",
         "label": null
       },
@@ -8250,13 +8250,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.5.0.0_2699ee09",
-      "revision_sha256": "0d0d0cbb91436d146536477f3b1b7541fb831eca9b4a1ea7c4b2b08d27076823",
+      "package_id": "nvngx_dlssg_310.5.0_2699ee09",
+      "revision_sha256": "b59dfb31be7c9c435806320a1f6e3ef034eb51f8c98842647406f5b2ee1554ff",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.5.0.0",
+        "version": "310.5.0",
         "channel": "stable",
         "label": null
       },
@@ -8273,13 +8273,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.5.0.0_27d59d09",
-      "revision_sha256": "f752ec7dd99e1ba97e4813e71c102f240e6b4269ea537d61c8b9ad6e88d0cb06",
+      "package_id": "nvngx_dlssg_310.5.0_27d59d09",
+      "revision_sha256": "6e740825ea73cd5072515a93f101fefa0a928092fdbfb742d627482ece98abea",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.5.0.0",
+        "version": "310.5.0",
         "channel": "debug",
         "label": "Debug"
       },
@@ -8296,13 +8296,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.5.2.0",
-      "revision_sha256": "4f10fbbbde6bba4c23e152d64743fc669da9982b02f54edb9980bf265b976c95",
+      "package_id": "nvngx_dlssg_310.5.2",
+      "revision_sha256": "b5c4595556a4b02c7e86db91d144c3f84a0e64de8259e37045ce4e66d9c15f21",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.5.2.0",
+        "version": "310.5.2",
         "channel": "stable",
         "label": null
       },
@@ -8319,13 +8319,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.5.3.0_67b3ed47",
-      "revision_sha256": "8b72e994b5a66a5150eb3a0d0155c798593d7ba244b915a59ed359e4226ee3a3",
+      "package_id": "nvngx_dlssg_310.5.3_67b3ed47",
+      "revision_sha256": "9b91551c642f5a1c56d40b77c2ad8704046b304c947ea22051c9ce64d1b19e86",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.5.3.0",
+        "version": "310.5.3",
         "channel": "stable",
         "label": null
       },
@@ -8342,13 +8342,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.5.3.0_9f7a3097",
-      "revision_sha256": "713b5463a5fb27e7b2a7a4e3d247b9563e2fbd65ca5bc24710c85ae907e593a8",
+      "package_id": "nvngx_dlssg_310.5.3_9f7a3097",
+      "revision_sha256": "e7028a0ccf2d282d9143722e4461e86396262035e464a9fa9360bf6f7ed673fb",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.5.3.0",
+        "version": "310.5.3",
         "channel": "debug",
         "label": "Debug"
       },
@@ -8365,13 +8365,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.6.0.0",
-      "revision_sha256": "105c303fbf50967adef44f9403eae1b74e76c35029b6a82ac43cc57a1188541e",
+      "package_id": "nvngx_dlssg_310.6.0",
+      "revision_sha256": "c54dd3088a64df5483e958e845b8059a0077cb64977234462dd4b7b8560bd677",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.6.0.0",
+        "version": "310.6.0",
         "channel": "stable",
         "label": null
       },
@@ -8388,13 +8388,13 @@
       ]
     },
     {
-      "package_id": "nvngx_dlssg_310.7.0.0",
-      "revision_sha256": "7541c07423a9ce36df962e6055ea18471d98a8c1963e99b45f02ea6a8492320b",
+      "package_id": "nvngx_dlssg_310.7.0",
+      "revision_sha256": "5ee4be5233b8b3cccbdd52388670cebed7c7a45a9a1cc67c2a54321b121f0809",
       "technology": "dlss_frame_generation",
       "variant": "runtime",
       "display_name": "NVIDIA DLSS Frame Generation",
       "release": {
-        "version": "310.7.0.0",
+        "version": "310.7.0",
         "channel": "stable",
         "label": null
       },
@@ -8411,13 +8411,13 @@
       ]
     },
     {
-      "package_id": "streamline.2.8.0.0.stable",
-      "revision_sha256": "88b396c19f599b6a66ebbb1cf3e6d8ad300312fd39da43528eb37fd25220aa23",
+      "package_id": "streamline.2.8.0.stable",
+      "revision_sha256": "17ba825a062eefc42ac262de57f7b31e94320310f65c646f897716f1725460a0",
       "technology": "nvidia_streamline",
       "variant": "runtime_bundle",
       "display_name": "NVIDIA Streamline",
       "release": {
-        "version": "2.8.0.0",
+        "version": "2.8.0",
         "channel": "stable",
         "label": null
       },
@@ -8484,13 +8484,13 @@
       ]
     },
     {
-      "package_id": "streamline.2.9.0.0.stable",
-      "revision_sha256": "6216695ba6a4df715a15a0bbfb85dadd824a73695871a7a481f152a9706836b0",
+      "package_id": "streamline.2.9.0.stable",
+      "revision_sha256": "08fa9bc5976b4919a4be20214970f500f19609fd5b7a08d930176739dce04dc0",
       "technology": "nvidia_streamline",
       "variant": "runtime_bundle",
       "display_name": "NVIDIA Streamline",
       "release": {
-        "version": "2.9.0.0",
+        "version": "2.9.0",
         "channel": "stable",
         "label": null
       },
@@ -8557,13 +8557,13 @@
       ]
     },
     {
-      "package_id": "streamline.2.10.0.0.stable",
-      "revision_sha256": "196ef49229ecf3a78a337125b0c1a4e418b5391d90d6c05a572af890cfd6d28a",
+      "package_id": "streamline.2.10.0.stable",
+      "revision_sha256": "7dbfdd4ae4d7f1b24f8cdb6755b9a5bbf0eb7395701b3742b683140a68477fe1",
       "technology": "nvidia_streamline",
       "variant": "runtime_bundle",
       "display_name": "NVIDIA Streamline",
       "release": {
-        "version": "2.10.0.0",
+        "version": "2.10.0",
         "channel": "stable",
         "label": null
       },
@@ -8630,13 +8630,13 @@
       ]
     },
     {
-      "package_id": "streamline.2.10.3.0.stable",
-      "revision_sha256": "f3bc4b4fb9ea9993235253321c5d1872b18659f9d038056fa83a9a3337484a75",
+      "package_id": "streamline.2.10.3.stable",
+      "revision_sha256": "f46c0fcf2164a2ba6561e6139aa5a89cdbf0afa07035afa678302b43a6984d14",
       "technology": "nvidia_streamline",
       "variant": "runtime_bundle",
       "display_name": "NVIDIA Streamline",
       "release": {
-        "version": "2.10.3.0",
+        "version": "2.10.3",
         "channel": "stable",
         "label": null
       },
@@ -8703,13 +8703,13 @@
       ]
     },
     {
-      "package_id": "streamline.2.11.1.0.stable",
-      "revision_sha256": "603259d9b3fc2331c6a39ff7b5709bc1fed5c145352b741b9e49658ec09a2b22",
+      "package_id": "streamline.2.11.1.stable",
+      "revision_sha256": "6fed0a72a33a99a199108c868eba2493d7eead2d406b50a1cb217aaa717c450e",
       "technology": "nvidia_streamline",
       "variant": "runtime_bundle",
       "display_name": "NVIDIA Streamline",
       "release": {
-        "version": "2.11.1.0",
+        "version": "2.11.1",
         "channel": "stable",
         "label": null
       },
@@ -8776,13 +8776,13 @@
       ]
     },
     {
-      "package_id": "streamline.2.12.0.0.stable",
-      "revision_sha256": "faabc94e2a966c690d12bc46c4c08d9988052a6999b8d94827d1673ad69a0c7a",
+      "package_id": "streamline.2.12.0.stable",
+      "revision_sha256": "6fcef026f99e2199beff4257385ab3e8b1b840b6bc1e787bfbe67b426a7bf43b",
       "technology": "nvidia_streamline",
       "variant": "runtime_bundle",
       "display_name": "NVIDIA Streamline",
       "release": {
-        "version": "2.12.0.0",
+        "version": "2.12.0",
         "channel": "stable",
         "label": null
       },

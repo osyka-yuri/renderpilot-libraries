@@ -42,6 +42,8 @@
     "libraries:check": "node scripts/libraries.mjs generate --check",
     "refresh:microsoft:check": "node scripts/libraries.mjs refresh microsoft --check",
     "refresh:microsoft:write": "node scripts/libraries.mjs refresh microsoft --write",
+    "withdraw:microsoft": "node scripts/libraries.mjs withdraw microsoft",
+    "prune:microsoft": "node scripts/libraries.mjs prune microsoft",
     "materialize:microsoft": "node scripts/libraries.mjs refresh microsoft --materialize-locked",
     "migrate:microsoft-transport": "node scripts/libraries.mjs refresh microsoft --migrate-transport",
     "backfill:microsoft-signatures": "node scripts/libraries.mjs refresh microsoft --backfill-signatures",
@@ -75,7 +77,8 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1087.0",
     "ajv": "^8.20.0",
-    "ajv-formats": "^3.0.1"
+    "ajv-formats": "^3.0.1",
+    "fast-xml-parser": "^5.10.1"
   },
   "devDependencies": {
     "prettier": "^3.9.5"

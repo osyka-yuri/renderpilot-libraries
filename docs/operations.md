@@ -67,9 +67,26 @@ pnpm run refresh:microsoft:write
 pnpm run materialize:microsoft
 pnpm run migrate:microsoft-transport
 pnpm run backfill:microsoft-signatures
+pnpm run withdraw:microsoft -- --package-id=Microsoft.Direct3D.DXC --version=1.0.0-preview
+pnpm run prune:microsoft -- --package-id=Microsoft.Direct3D.DXC --version=1.0.0-preview
 ```
 
-Microsoft discovery reads NuGet V3 Registration and Catalog Details and accepts listed stable releases only. Import verifies NuGet SHA-512, exact package layout, legal documents, PE metadata, and Authenticode. DXC x86 is optional per upstream package, but any published architecture must contain a complete `dxcompiler.dll` and `dxil.dll` pair.
+Microsoft discovery reads every NuGet V3 Registration page and imports every `listed` stable and preview release into one v1 vendor snapshot. Import verifies NuGet SHA-512, the exact package ID and version from the single root `.nuspec`, package layout, legal documents, PE metadata, and Authenticode. Architectures and runtime members are explicit capabilities: DXC x86 and `dxil.dll` may be absent when upstream does not ship them, while `dxcompiler.dll` remains required.
+
+The Microsoft implementation keeps network discovery, archive validation, lock/tombstone policy, and public projection in separate modules behind the stable `microsoft-nuget.mjs` facade. Withdrawal and prune share one CLI identity parser and one catalog-state loader, so direct and unified commands apply the same validation.
+
+Reviewed total-release and preview-release floors make an incomplete Registration response fail closed. These are coverage safeguards, not retention caps: every additional listed release is still imported, and a confirmed withdrawal continues to satisfy historical coverage through its tombstone.
+
+Refresh is append-only. An active release becoming `unlisted`, or disappearing together with a 404 from its exact flat-container endpoint, stops refresh and requires the audited `withdraw microsoft` command. The command defaults to a verified dry-run; `--write` moves the active record to an immutable tombstone and replaces the lock, all vendor snapshots, and the v1 index as one rollback-protected batch. Security/legal withdrawals additionally require trimmed printable `--reason` and `--evidence`; the evidence is persisted in the tombstone and repeated in the reviewed PR.
+
+`prune microsoft` also defaults to dry-run. `--execute` first proves that R2 contains the exact local index commit point and that its Microsoft snapshot no longer references the release. It then deletes only DLL transport keys named by that tombstone and unused by every active release. Shared blobs and legal documents are retained, and repeating the operation is safe.
+
+For production, use the **Microsoft NuGet withdrawal** workflow: `withdraw`
+creates the reviewed tombstone/catalog PR, while `prune` is run only after that
+PR has merged and the normal publish workflow has switched the v1 index. Refresh,
+publish, withdrawal, and prune share the `libraries-production-r2` concurrency
+group; prune additionally verifies the exact remote index and immutable Microsoft
+snapshot before deleting any unreferenced transport object.
 
 ### AMD, Intel, and Valve
 

@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "releases": [
     {
       "product": "d3d12_agility",
@@ -2459,6 +2459,1140 @@
       ]
     },
     {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.700.10-preview",
+      "package_sha512": "haoygNw2RQA1huRtyNpumBAbK0jaiPyZC3kXzquC3uhxXf/tau3DEDENJus6wfIfr8TgAvbkyJQp5fAwOToe/w==",
+      "published_at": "2021-12-08T04:32:04.547Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.700.10",
+          "dll_sha256": "0f78867f369747074e23a3999586127ad4694857397eea2d8eda05b7a97f5094",
+          "dll_size_bytes": 5087608,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2021-12-08T02:59:29.624Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1d3e51a76525977ae8f4fe8cd0d806818467c9637b9233dc7f793eaf0ed662a2.dll.zst",
+            "zst_sha256": "1d3e51a76525977ae8f4fe8cd0d806818467c9637b9233dc7f793eaf0ed662a2",
+            "zst_size_bytes": 1340010,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.700.10",
+          "dll_sha256": "07ecec8b4fc8bddea502fb120b1c296ee99d39e430318aeb3c988a43f76201c5",
+          "dll_size_bytes": 4153736,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2021-12-08T03:01:50.841Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fe30837fd1f68801d5179cef74937573543cfb3b1b8e82410c5f71f7340e4609.dll.zst",
+            "zst_sha256": "fe30837fd1f68801d5179cef74937573543cfb3b1b8e82410c5f71f7340e4609",
+            "zst_size_bytes": 1087969,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.706.3-preview",
+      "package_sha512": "LxAs+EH3qI532J/eFhOBTpxvFy5yUC3K3iF8P6jdB8FSkapZnqEbiPFkd/DYykvJ/NtbbzFjXoaM6ZLxoYs5NA==",
+      "published_at": "2022-07-14T19:12:50.763Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.706.3",
+          "dll_sha256": "4d6b208c452f13a98ef4db863e015b44f7d3d9f73e86cf85aa224c75aab4a49f",
+          "dll_size_bytes": 5398944,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2022-07-14T18:55:05.501Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/aa54c864d5ecc77f2ce5480fa95ad4d4fcab143f5cbaf401129ca603356c24f1.dll.zst",
+            "zst_sha256": "aa54c864d5ecc77f2ce5480fa95ad4d4fcab143f5cbaf401129ca603356c24f1",
+            "zst_size_bytes": 1387088,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.706.3",
+          "dll_sha256": "30ae89ca88943f732512203f9ba491df405b4bfc862f9463c30eb1244f8f4f94",
+          "dll_size_bytes": 4439976,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8740DF4ACB749640AD318E4BE842F72EC651AD80",
+            "signed_at": "2022-07-14T18:24:01.055Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ac984b00b17db57d9174a23db8cb6e69bc58d2e30e51308566152ddf89f3ef4e.dll.zst",
+            "zst_sha256": "ac984b00b17db57d9174a23db8cb6e69bc58d2e30e51308566152ddf89f3ef4e",
+            "zst_size_bytes": 1119228,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.706.4-preview",
+      "package_sha512": "TPqMwsDtUB6bbtsOQUoDRLjpuTCugs3zlKdWz6ccNczoZhs8TAKTITCYo5uHnEc4ZgYKaV2FOi4wtKFh1MCXGA==",
+      "published_at": "2022-08-30T21:56:36.403Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.706.4",
+          "dll_sha256": "dd5e634603acf182417a13e18bbc683c0db694f783429f4e2f7a85fa2cfd2287",
+          "dll_size_bytes": 5417888,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2022-08-29T22:04:36.119Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/763f6047f2706a042b1c17a96ca8adacc2d3e798ab22fdb4abca1975e3b49de9.dll.zst",
+            "zst_sha256": "763f6047f2706a042b1c17a96ca8adacc2d3e798ab22fdb4abca1975e3b49de9",
+            "zst_size_bytes": 1394323,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.706.4",
+          "dll_sha256": "eb5d4e40e06fa0c2b3d0e67316deec983f84fdd8ca37ced7f5bb063419e02e4c",
+          "dll_size_bytes": 4455328,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2022-08-29T22:00:40.469Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/494bc29840cc377b1273570c3533bd47196c4efa3a9f2ca9af1e20a5d71b15fa.dll.zst",
+            "zst_sha256": "494bc29840cc377b1273570c3533bd47196c4efa3a9f2ca9af1e20a5d71b15fa",
+            "zst_size_bytes": 1127707,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.710.0-preview",
+      "package_sha512": "sE+EGUg5TVtDOZXLtEqDbSAkU1qLH2AP+OlUwbuP5fH0yWCVDUw5dphJvDSXh1h8JLJ6RVDhxubZlqRJ6SRHLw==",
+      "published_at": "2023-03-30T19:04:10.940Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.710",
+          "dll_sha256": "46f938a346e93a79a2e3f9073098a2a6db609c42338376fbe51dc1a1cb891485",
+          "dll_size_bytes": 5614488,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-23T00:13:38.544Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/66b6de4b38eebe68aa688b4e81b83bc5ccd4c8643f85581bd70a2694a1c0745c.dll.zst",
+            "zst_sha256": "66b6de4b38eebe68aa688b4e81b83bc5ccd4c8643f85581bd70a2694a1c0745c",
+            "zst_size_bytes": 1426317,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.710",
+          "dll_sha256": "261b476081bf482fb6fb5cff7a15d9cd256e0c5ec90ad9428a1d8ce5bb43289f",
+          "dll_size_bytes": 4607896,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "97221B97098F37A135DCC212E2B41E452BCE51F2",
+            "signed_at": "2023-03-23T00:20:20.261Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/f01405fee4d002774ca105628c7b88b86a400ba154aac5d1967515f9af5ccead.dll.zst",
+            "zst_sha256": "f01405fee4d002774ca105628c7b88b86a400ba154aac5d1967515f9af5ccead",
+            "zst_size_bytes": 1151436,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.711.3-preview",
+      "package_sha512": "E3hm9YcC1xzCmU55mE6Eb5Gtf/u5/jRwEjyLZQIZS7tuBzAZLTha1lXcYemnuatPR9KxrozHy/SmosOK4eTQag==",
+      "published_at": "2023-06-22T19:00:15.987Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.711.3",
+          "dll_sha256": "10751a3ec750f69abd3f7758479070f4ecd96c8fc560b35491e92609cce9c308",
+          "dll_size_bytes": 5919112,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-06-20T01:31:16.053Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1c8d068f6b791b0e5fb691860a8387abef2801eb43983f8ced024da777ea49e9.dll.zst",
+            "zst_sha256": "1c8d068f6b791b0e5fb691860a8387abef2801eb43983f8ced024da777ea49e9",
+            "zst_size_bytes": 1498757,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.711.3",
+          "dll_sha256": "e1b5b9a5653d200457530dd963ad3b830c56a8164b4dd07a3371514058837012",
+          "dll_size_bytes": 4859272,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-06-20T01:29:45.231Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b10d7c7dacbd43317f118836ba6a11e1e8b9f05885db165d6868b3b00a34a129.dll.zst",
+            "zst_sha256": "b10d7c7dacbd43317f118836ba6a11e1e8b9f05885db165d6868b3b00a34a129",
+            "zst_size_bytes": 1211307,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.714.0-preview",
+      "package_sha512": "FwRW+Nk6x6DcO+vLSujm6SMExcqdXXLCN6pzRKo1kBWVqF30VwM3QFFXFdHG49kT8lqhP3LHoOHIujXYw1ZgLw==",
+      "published_at": "2024-05-29T17:03:58.737Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.714",
+          "dll_sha256": "ca533c5d0d10ab486c9b2ee2be0de087a419407ad588759da7c03efd71d5b1d4",
+          "dll_size_bytes": 3337248,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-28T23:17:38.488Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/38680706a193ed94773517fed91c6e59be8a9c3dc8b7c1a87e5ddfc8e1efbfa5.dll.zst",
+            "zst_sha256": "38680706a193ed94773517fed91c6e59be8a9c3dc8b7c1a87e5ddfc8e1efbfa5",
+            "zst_size_bytes": 1046398,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.714",
+          "dll_sha256": "b0c46f2201885d1b6b4ce3852bfd7fcba7180c35bd93e11e2eb8d1b3c5d3795e",
+          "dll_size_bytes": 2680752,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-05-28T23:14:20.032Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/6a910c08441d5bdb43566908a47551f3ea498e0ec49ec6007bac7f5ddb27f475.dll.zst",
+            "zst_sha256": "6a910c08441d5bdb43566908a47551f3ea498e0ec49ec6007bac7f5ddb27f475",
+            "zst_size_bytes": 919185,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.715.0-preview",
+      "package_sha512": "IQtb/52wPrh4PZyOZFETIxsZUNgI9X6IeBOEoGSWAsgOEG+WlNjaQVZxDKi+yJopfllXYWGp38oTdAlln9tgWg==",
+      "published_at": "2024-07-17T04:16:55.627Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.715",
+          "dll_sha256": "593099f97e90b1041e81ce3a3527defcaa009926414f2add5c9d2edbc2d6d984",
+          "dll_size_bytes": 3439536,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-17T00:12:21.637Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a1cc3938b45ecbe86c4dfa3c84802ada3d6e270f4f6ef72a80a8b61f4d25db28.dll.zst",
+            "zst_sha256": "a1cc3938b45ecbe86c4dfa3c84802ada3d6e270f4f6ef72a80a8b61f4d25db28",
+            "zst_size_bytes": 1063369,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.715",
+          "dll_sha256": "890385bb6bb7e9c853f44477874102cec6d7eebe0464c364e0a7c7b21d74a875",
+          "dll_size_bytes": 2763296,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-17T00:13:25.162Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1348fe20815fe1af4928f54a38bd4608d3dbd6c36b031ffa5480846a821e850a.dll.zst",
+            "zst_sha256": "1348fe20815fe1af4928f54a38bd4608d3dbd6c36b031ffa5480846a821e850a",
+            "zst_size_bytes": 935763,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.715.1-preview",
+      "package_sha512": "Iepuwlnv5FemRjYOQarpa+O3rf5qomBrLcwsoANAFJVnyfIOJWjpQldhPe2srjYJkm8VOarqU3tkKGF5PySOiA==",
+      "published_at": "2024-10-22T23:31:20.523Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.715.1",
+          "dll_sha256": "d5ed44f2efc9a09551472a8cff1b1d2861b54cc9e13a36bdf2fd35bd12fe6053",
+          "dll_size_bytes": 3439672,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-08-23T22:49:19.638Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/4d8163b50b80d90b76140928f3c8af4fb3f633a5ff2c9e46040265011fb6b01c.dll.zst",
+            "zst_sha256": "4d8163b50b80d90b76140928f3c8af4fb3f633a5ff2c9e46040265011fb6b01c",
+            "zst_size_bytes": 1063504,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.715.1",
+          "dll_sha256": "cd849e41ffa341db73f11d59e63aee2bb0512aecfa0ff48fa54b5e567f2a44f8",
+          "dll_size_bytes": 2763296,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-08-23T22:48:28.050Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/da9d6037cb995fbea312a9e862a843369cc406ed145d0ff1e8291c6856dc924c.dll.zst",
+            "zst_sha256": "da9d6037cb995fbea312a9e862a843369cc406ed145d0ff1e8291c6856dc924c",
+            "zst_size_bytes": 935785,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.716.0-preview",
+      "package_sha512": "Qm22mZbvoy1oHsvLbzV0efSBwq/wuDFhFnJvv14mSxllUpIsX1x1rJhaDIVliJYB/AgGcqFYph9+c98PBsnglQ==",
+      "published_at": "2025-01-30T01:34:17.817Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.716",
+          "dll_sha256": "a0391632733ada7d4d38cba0906562591917ebf03c3977845d05c3b1bf1da415",
+          "dll_size_bytes": 3406368,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-01-24T01:58:03.954Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a90d27fe98a18d58020d808b0c981290a746f1140a321b6cb534ca24a45b2e91.dll.zst",
+            "zst_sha256": "a90d27fe98a18d58020d808b0c981290a746f1140a321b6cb534ca24a45b2e91",
+            "zst_size_bytes": 1012996,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.716",
+          "dll_sha256": "a31e65bff6e393aba43dc49ad6492733d8f13ec11861281e45f5f1a30d7d645c",
+          "dll_size_bytes": 2650144,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-01-24T02:02:23.785Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/54805970d879e692c9d915c27bc1703a066eed1136cdef60b5102432b2f48951.dll.zst",
+            "zst_sha256": "54805970d879e692c9d915c27bc1703a066eed1136cdef60b5102432b2f48951",
+            "zst_size_bytes": 885260,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.716.1-preview",
+      "package_sha512": "QegKG0JTuHiF3cOFqExdjGIXOs2iYKqwz4Bjm+4qO2IBAbQldMOAw+tZ1aZsgjGVvb1uGuuJdCNBFP53h4/zkw==",
+      "published_at": "2025-02-13T21:47:41.050Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.716.1",
+          "dll_sha256": "db715edc43e9c5c91c670768dc6b6a6992909e4666aee5408ab4305cdc51bd3a",
+          "dll_size_bytes": 3405368,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-13T18:45:20.088Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/761206ece88af495e1be6ef6c5fc9e7c85d3a711c15f759f4fc899b30dc0c694.dll.zst",
+            "zst_sha256": "761206ece88af495e1be6ef6c5fc9e7c85d3a711c15f759f4fc899b30dc0c694",
+            "zst_size_bytes": 1013313,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.716.1",
+          "dll_sha256": "0687c77059d4b046202899631d32fc755455afa917e524d9d6c316965830381f",
+          "dll_size_bytes": 2650168,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-02-13T18:42:57.801Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/2d42852957e62360c2e0101dd3d62f65b51f8882dcb21a6e7269eefb63c8f3c6.dll.zst",
+            "zst_sha256": "2d42852957e62360c2e0101dd3d62f65b51f8882dcb21a6e7269eefb63c8f3c6",
+            "zst_size_bytes": 886440,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.717.0-preview",
+      "package_sha512": "w79TnUlf5ZnVdyP9t3QxxNi8wfcHyCrBoDssMtTyPOywIHP/FhluTi/JtzsMJR7f8e7jn5IpS1PQd6mPAQNgiA==",
+      "published_at": "2025-05-28T16:44:03.237Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.717",
+          "dll_sha256": "e765fdb883c2c9bad3f90f099101f90addbdb61ddd3f33ce578bb4f5eb1fef14",
+          "dll_size_bytes": 4660256,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-05-26T21:02:16.136Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/5f5ddb7698c8dcd0ab3ee94069372a574647aa3a56f4f3f5afd1e28f4219801b.dll.zst",
+            "zst_sha256": "5f5ddb7698c8dcd0ab3ee94069372a574647aa3a56f4f3f5afd1e28f4219801b",
+            "zst_size_bytes": 1602389,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.717",
+          "dll_sha256": "6d32813c747f6234a1398444e3a032e5deb94727c04da9c4848211f2cb4d099e",
+          "dll_size_bytes": 3707936,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-05-26T20:59:20.875Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/3238c1081fb245e60c79977b01ad039c33079e4405a400cb10111567d35911f5.dll.zst",
+            "zst_sha256": "3238c1081fb245e60c79977b01ad039c33079e4405a400cb10111567d35911f5",
+            "zst_size_bytes": 1392471,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.717.1-preview",
+      "package_sha512": "nJXnW/WjZwp1TkL/evKmoSlLtI1rcnoll4PkdSWzvzYx5cZIPQcx8fCrlurxVUcdmuURTwYLAb+bZfNkZH65Ew==",
+      "published_at": "2025-06-11T23:25:22.980Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.717.1",
+          "dll_sha256": "a0d4a838fa193db902b99230ab0eaa1af64f6f947cfe967d0804e79e69eec26c",
+          "dll_size_bytes": 4660256,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-06-11T22:30:03.047Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/4448644f70b7482195eb06dedb78cb5b7a9cc01fd17ceb82119dd5c63e4e4f8c.dll.zst",
+            "zst_sha256": "4448644f70b7482195eb06dedb78cb5b7a9cc01fd17ceb82119dd5c63e4e4f8c",
+            "zst_size_bytes": 1602383,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.717.1",
+          "dll_sha256": "96a429917e5cd9438d019a6fe9fde1ba1c62473796436ef7f437f4e22649333a",
+          "dll_size_bytes": 3707936,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "8F985BE8FD256085C90A95D3C74580511A1DB975",
+            "signed_at": "2025-06-11T22:31:51.636Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1ac7b6d8cea8f5756bea33996832b28df6cf3f233b6a102addda7f7a9c7e94b4.dll.zst",
+            "zst_sha256": "1ac7b6d8cea8f5756bea33996832b28df6cf3f233b6a102addda7f7a9c7e94b4",
+            "zst_size_bytes": 1392447,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.719.0-preview",
+      "package_sha512": "zm0TbzjPyWq8nkHIX5hF01TUaL0iIGDMbG2ecMhaxPXG7AJETggCTW1zJTV39PL1SiKm8hbuS1zwMEND3tLCCA==",
+      "published_at": "2026-02-24T15:30:11.747Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.719",
+          "dll_sha256": "832d6923b641b30a9470b1efc83ed72ff96b5c2f33e8556b372c6c3878156339",
+          "dll_size_bytes": 5255752,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-02-24T01:48:02.687Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/27a962a9128782e3e4ad348a1390c4df0e9eacccc7ce7a099e3f037133f37682.dll.zst",
+            "zst_sha256": "27a962a9128782e3e4ad348a1390c4df0e9eacccc7ce7a099e3f037133f37682",
+            "zst_size_bytes": 1729275,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.719",
+          "dll_sha256": "4e3d1b0a117f2c0499d3c3c3c629a9ae0d59a969f309091b1df795105a8421ef",
+          "dll_size_bytes": 4186656,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-02-24T01:48:48.066Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bdb6bcbbd800737f989608cc9f434f5d3a38af5f722c4abbcca5c050564a6b87.dll.zst",
+            "zst_sha256": "bdb6bcbbd800737f989608cc9f434f5d3a38af5f722c4abbcca5c050564a6b87",
+            "zst_size_bytes": 1503323,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.719.1-preview",
+      "package_sha512": "RABiMrIn1IdUwp5o6142pM5AuL8TIv9eBEtnGOY0lL0WSb3Mxm/jczwXd7kHgETGF6Sq9qXCXHcAYA5HkGGkPQ==",
+      "published_at": "2026-03-06T16:56:39.013Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.719.1",
+          "dll_sha256": "335e1d0bdb8cffac757524ebd26f075518b6d2f8c6125c04b176cce7aa339549",
+          "dll_size_bytes": 5256736,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-03-06T00:49:21.900Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/be406c0d1b0e611a5b23ca7f7c38e6b2bf39363c5015a00a11ac7faf0d21fa0c.dll.zst",
+            "zst_sha256": "be406c0d1b0e611a5b23ca7f7c38e6b2bf39363c5015a00a11ac7faf0d21fa0c",
+            "zst_size_bytes": 1729469,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.719.1",
+          "dll_sha256": "b91ddd20a8f2db80cde286dc893cebd254e4fea8083cb259f09b351735568604",
+          "dll_size_bytes": 4187712,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-03-06T00:47:52.700Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/08a4c2fd89a1ef267fe588473a29250ba7d0615b9a9afdd2ee9bd08a2eae5cf8.dll.zst",
+            "zst_sha256": "08a4c2fd89a1ef267fe588473a29250ba7d0615b9a9afdd2ee9bd08a2eae5cf8",
+            "zst_size_bytes": 1503527,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.720.0-preview",
+      "package_sha512": "rx3TRCq8oq8pEa62c+Ge/7nzrkDBUZdIVfl/V6j9EiiFzNrttzleYcoOVEU/JQvHntMO6d4486j//UWroEQtUQ==",
+      "published_at": "2026-04-24T15:30:33.020Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.720",
+          "dll_sha256": "f47a021163ecfd11e075b0a49b044ce7c1670035bb361819fb315e6802c05d16",
+          "dll_size_bytes": 5397304,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-04-24T00:30:20.818Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ca2e7904db69c6fe63daf64ba8899ad34ca37cf8662c8886aebde55912449802.dll.zst",
+            "zst_sha256": "ca2e7904db69c6fe63daf64ba8899ad34ca37cf8662c8886aebde55912449802",
+            "zst_size_bytes": 1747287,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.720",
+          "dll_sha256": "4efb1427d81d1b0524492b509e1faef471f7e083e3b6f6ba68cefde6729916bf",
+          "dll_size_bytes": 4306232,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-04-24T00:29:57.111Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d5878de29e22c52c6fee411bf0863bb3079d81a944b2107affceec78dbff9fa6.dll.zst",
+            "zst_sha256": "d5878de29e22c52c6fee411bf0863bb3079d81a944b2107affceec78dbff9fa6",
+            "zst_size_bytes": 1516749,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.721.0-preview",
+      "package_sha512": "BDasRYFYNbiAh7WTty9tnNZewdQCZ6XLUupTxEbp5PpRjy8c1RIeVxWZNF2A7CAdknY+I9QNa3tBGDMOQbqQxg==",
+      "published_at": "2026-05-27T22:25:03.963Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.721",
+          "dll_sha256": "91984b742f2cdb041926411b164b9ea3820f7b4df9bb82085355c01a487b37df",
+          "dll_size_bytes": 5813088,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-05-27T21:19:31.401Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/46e146cd86df6e6e37df4fb6da6d278e1e8f92d26512047a078ea61269c4f8ef.dll.zst",
+            "zst_sha256": "46e146cd86df6e6e37df4fb6da6d278e1e8f92d26512047a078ea61269c4f8ef",
+            "zst_size_bytes": 1842951,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.721",
+          "dll_sha256": "d828d81b332e0dcecdc82e0ab7794c39a7a2ba9d68b6631b9c4a08e371169dfb",
+          "dll_size_bytes": 4619032,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-27T21:20:57.106Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a5097ab0ffd01dfe3eef0aaaf60dd8afb0e9952d7a55c347265dcc0e2d1a0c11.dll.zst",
+            "zst_sha256": "a5097ab0ffd01dfe3eef0aaaf60dd8afb0e9952d7a55c347265dcc0e2d1a0c11",
+            "zst_size_bytes": 1607172,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.721.1-preview",
+      "package_sha512": "fC1eACeEGM+I3BbeH6VxPEObgh26DNrQzNlVcO4v86yWMbtqWeYQ0X5lQ/pv2e80tfgR6EfHIYgbFKfUCn4IEw==",
+      "published_at": "2026-06-17T20:57:37.047Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.721.1",
+          "dll_sha256": "450fef26d9d3fb37c62ba28bd6c8ddf2408a9a78e8c6706b56e39cab76559f5e",
+          "dll_size_bytes": 5813088,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-06-17T18:10:25.224Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bfe68c2ffcfc5ed577a6038155399f3b3f6a8d43375fef9fc2e3c8559a27f7f7.dll.zst",
+            "zst_sha256": "bfe68c2ffcfc5ed577a6038155399f3b3f6a8d43375fef9fc2e3c8559a27f7f7",
+            "zst_size_bytes": 1842846,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.721.1",
+          "dll_sha256": "2a5ef02b72262ab442faa7e488652e7e54b5d725a7503eaa867a88e6393ccdab",
+          "dll_size_bytes": 4619576,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-06-17T18:09:53.913Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a68ff401dce8256f58dc8269eff23351dcb9641491ed43c22450d2e97b16c758.dll.zst",
+            "zst_sha256": "a68ff401dce8256f58dc8269eff23351dcb9641491ed43c22450d2e97b16c758",
+            "zst_size_bytes": 1607260,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.721.2-preview",
+      "package_sha512": "p3O3y+3WsciKgZ9MCqi3je/e+i0f0Vo/zx4T+1cdbmr4ph7XsWFRMP5f73fEVdhdorlA2ZQFouxmIfc9DoIw7w==",
+      "published_at": "2026-07-03T05:16:05.707Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.721.2",
+          "dll_sha256": "8eef346be7f070cdc5804316acd3395151c6567d03be8aeca971171271e82d8e",
+          "dll_size_bytes": 5814584,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-07-02T23:42:57.949Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/85977e80c54753476ed956dc0ffee96be8a2e929d3c2c94d48b7a54ec7c5ffa6.dll.zst",
+            "zst_sha256": "85977e80c54753476ed956dc0ffee96be8a2e929d3c2c94d48b7a54ec7c5ffa6",
+            "zst_size_bytes": 1845354,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.721.2",
+          "dll_sha256": "d570c87b4b86df5d010c4d5881510682f898fcae9b58c5e2b0daa287f07079d3",
+          "dll_size_bytes": 4621624,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-07-02T23:48:28.629Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/a0ab73d783cf6bb8cdcce7a8fea469b327a1331f41908ee2d6311a6db423790d.dll.zst",
+            "zst_sha256": "a0ab73d783cf6bb8cdcce7a8fea469b327a1331f41908ee2d6311a6db423790d",
+            "zst_size_bytes": 1608296,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
       "product": "directstorage",
       "package_id": "Microsoft.Direct3D.DirectStorage",
       "package_version": "1.0.0",
@@ -2875,6 +4009,90 @@
           "sha256": "bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803",
           "size_bytes": 13369,
           "object_key": "libraries/legal/sha256/bb689acff3c600d66216dab91dfcec34016cb0b7dffd7a19bd8b761df7932803.txt"
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.4.0-preview1-2603.504",
+      "package_sha512": "KrTw8vbr5B+BArYNAsbbZVti5R3Qsb9dSn0cv8AGmwZUG+tyGt8NmKA4TEFFbnzShHFrrzWMhFiSWHcL9nT7Dg==",
+      "published_at": "2026-03-09T15:44:01.080Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.4.2603.504",
+          "dll_sha256": "4ae887a8cd21db2cfecd97c34b5f4da48d8370d4646f3853d60db809aa02a8bf",
+          "dll_size_bytes": 207392,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-03-06T03:11:37.780Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/154595e2754c64398599b6afc7d3cf65da0658861fbc50a84bed52680f9f965c.dll.zst",
+            "zst_sha256": "154595e2754c64398599b6afc7d3cf65da0658861fbc50a84bed52680f9f965c",
+            "zst_size_bytes": 108001,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "7c054787aedd488665a258d33e0f1330ece8e670d5f1cd85598e0257af6687f1",
+          "size_bytes": 12434,
+          "object_key": "libraries/legal/sha256/7c054787aedd488665a258d33e0f1330ece8e670d5f1cd85598e0257af6687f1.txt"
+        }
+      ]
+    },
+    {
+      "product": "directstorage",
+      "package_id": "Microsoft.Direct3D.DirectStorage",
+      "package_version": "1.4.0-preview2-2606.904",
+      "package_sha512": "ZFmyER/khXZDthj9oVuytkIUg72QAmuTHLxqtqVLAx4Bp/Wo1TP0Oq9DFHXk/SbdYHxEFlrX8lFLJnCYU0jULw==",
+      "published_at": "2026-06-16T22:25:41.640Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "native/bin/x64/dstorage.dll",
+          "library_id": "dstorage",
+          "file_name": "dstorage.dll",
+          "pe_version": "1.4.2606.904",
+          "dll_sha256": "ac4a39ce3d6301d1449a86b54e6f6190fcf93b9dfd92ecf8dcb143ee75e38fdb",
+          "dll_size_bytes": 207200,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-06-10T07:10:47.670Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/fa6034b9ed633818cb707a3c29323a7b2e0dff8b3e8bc2b21bb52fcdcfcb578a.dll.zst",
+            "zst_sha256": "fa6034b9ed633818cb707a3c29323a7b2e0dff8b3e8bc2b21bb52fcdcfcb578a",
+            "zst_size_bytes": 107958,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectStorage License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "7c054787aedd488665a258d33e0f1330ece8e670d5f1cd85598e0257af6687f1",
+          "size_bytes": 12434,
+          "object_key": "libraries/legal/sha256/7c054787aedd488665a258d33e0f1330ece8e670d5f1cd85598e0257af6687f1.txt"
         }
       ]
     },
@@ -3889,6 +5107,69 @@
     {
       "product": "dxc",
       "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2306.6-preview",
+      "package_sha512": "jZo5a5a6WP8MWCuDM7PgKjNmyVpL1vY6+4HOi0PBmno/zBfSKz8BS4StF9xWpBwT64QNoNd741Ll6g+BYcb2Zw==",
+      "published_at": "2023-06-23T03:47:32.330Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2306.6",
+          "dll_sha256": "e1cd8ce185cddf22835214646ae0cd1ebf3346349eaa96c242108eb517b781a3",
+          "dll_size_bytes": 17361848,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-06-23T03:07:23.549Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/d5b10f57215dc552d20bff05b9713af35f50187e297f19c0f6b93cfd2ce6c50a.dll.zst",
+            "zst_sha256": "d5b10f57215dc552d20bff05b9713af35f50187e297f19c0f6b93cfd2ce6c50a",
+            "zst_size_bytes": 6559081,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2306.6",
+          "dll_sha256": "9258d50b04b0194f3012327e1adc182ffd0f86b2f408a1bfc79f06b1bd184dd7",
+          "dll_size_bytes": 12321208,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "72105B6D5F370B62FD5C82F1512F7AD7DEE5F2C0",
+            "signed_at": "2023-06-23T03:08:38.449Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ff4b3518c1630acc6be6c869fd11441b85390ab928fd5bf462a71a8833e109ea.dll.zst",
+            "zst_sha256": "ff4b3518c1630acc6be6c869fd11441b85390ab928fd5bf462a71a8833e109ea",
+            "zst_size_bytes": 5349535,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
       "package_version": "1.8.2403.18",
       "package_sha512": "pD2jJBuhy+iz3SAqojNzmJNWoIGUgYVBDuwJPsZtYAln4TirqzAf4vLOAGmc5inQX3anW1VoWbAZDK9tIywa8Q==",
       "published_at": "2024-03-07T21:27:19.160Z",
@@ -4184,6 +5465,69 @@
             "object_key": "libraries/blobs/sha256/8605cdd19f2583a2eca3db8032007bec77f7db995ed7f3406bc648f5f3eadf34.dll.zst",
             "zst_sha256": "8605cdd19f2583a2eca3db8032007bec77f7db995ed7f3406bc648f5f3eadf34",
             "zst_size_bytes": 509545,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.8.2404.55-mesh-nodes-preview",
+      "package_sha512": "VyLbNw93pqzqWcFT2avLil2z7MlbA1FXou4f77aptKnd43zqJeAYAXtJ7Ib0cOfzNdzxn4r9NFVfwx0mKhtDXQ==",
+      "published_at": "2024-07-17T23:18:58.013Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2404.55",
+          "dll_sha256": "b094077bcefb421e59389b10defb3a6359d1ee549859e42ff3bd37569d02afa9",
+          "dll_size_bytes": 17849376,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-17T22:19:11.518Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1d8d7ba83c31c330b64e25e96af585e22f79df3b949f490a23302cbd5f0fbfd6.dll.zst",
+            "zst_sha256": "1d8d7ba83c31c330b64e25e96af585e22f79df3b949f490a23302cbd5f0fbfd6",
+            "zst_size_bytes": 6709142,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.8.2404.55",
+          "dll_sha256": "13c03794cfe43b33c06d78f2c7e1bd31ff2babe8c39e12b98318402b74314ae5",
+          "dll_size_bytes": 12676640,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "C2048FB509F1C37A8C3E9EC6648118458AA01780",
+            "signed_at": "2024-07-17T22:16:42.641Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/91dcd0baa369b1f486f99b2e5e402ddd13ed66ce88666ef20a8e3efb75bd8f23.dll.zst",
+            "zst_sha256": "91dcd0baa369b1f486f99b2e5e402ddd13ed66ce88666ef20a8e3efb75bd8f23",
+            "zst_size_bytes": 5480960,
             "compression_level": 12
           }
         }
@@ -5145,6 +6489,217 @@
           "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
         }
       ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.10.2605.2-preview",
+      "package_sha512": "nF9bT2hQ3YRPBJ90zQ3/TqVTsafj8uopt7x15u6Qv+lEMYKr4/XmpC+qty8PWtk+9RugSbuJH+RbSOzrTLYtpw==",
+      "published_at": "2026-04-22T23:00:28.137Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.10.2605.2",
+          "dll_sha256": "f73030d50ba3fab729b37961e9a63a431c876d8ef431335c5953b0891531bb9d",
+          "dll_size_bytes": 18128968,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-04-22T02:48:58.772Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/b69de6d14d012d596a61bb5b8ff6ea29e8664120decd1a05dc21b10bfaaf1104.dll.zst",
+            "zst_sha256": "b69de6d14d012d596a61bb5b8ff6ea29e8664120decd1a05dc21b10bfaaf1104",
+            "zst_size_bytes": 6857613,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.10.2605.2",
+          "dll_sha256": "63438c0b41d6110917338a838cf28a28a7abe84d3467a23b23a62fc5187ef109",
+          "dll_size_bytes": 1509448,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-04-22T02:48:55.009Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/46e18733c327d3026d5c0dc669c634cadffb521edcf743f548a6b1cc11fe132d.dll.zst",
+            "zst_sha256": "46e18733c327d3026d5c0dc669c634cadffb521edcf743f548a6b1cc11fe132d",
+            "zst_size_bytes": 634390,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.10.2605.2",
+          "dll_sha256": "14adad913bc922208d8d77e37d2031abb4cf1b8af22c7bf8551c8a6878709e93",
+          "dll_size_bytes": 13244488,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "F5877012FBD62FABCBDC8D8CEE9C9585BA30DF79",
+            "signed_at": "2026-04-22T02:49:10.113Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/bd243992525e695c2a741a7a5c50aa4746911c88227fe79a00468acc4bf24e11.dll.zst",
+            "zst_sha256": "bd243992525e695c2a741a7a5c50aa4746911c88227fe79a00468acc4bf24e11",
+            "zst_size_bytes": 5695347,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.10.2605.2",
+          "dll_sha256": "1cea46a83a7e4ac04561add5f21c7fc8ee8c15914c986622f22d04aad5cf3326",
+          "dll_size_bytes": 1136160,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "3F56A45111684D454E231CFDC4DA5C8D370F9816",
+            "signed_at": "2026-04-22T02:49:07.984Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/287ac7650e440045713c67918e29f3bd9fc7ad6f6ffbd650c74985f40bdb3cf3.dll.zst",
+            "zst_sha256": "287ac7650e440045713c67918e29f3bd9fc7ad6f6ffbd650c74985f40bdb3cf3",
+            "zst_size_bytes": 539051,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.10.2605.24-preview",
+      "package_sha512": "Fgks1QwToLEwgQrV0Kfbw11rRYPNcny9i6wxFTBO8g9OxWz/MrBOUkEEZtgWWsr0gE9/UcHzRjSzeSW1xnKQWw==",
+      "published_at": "2026-05-22T19:42:18.607Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.10.2605.24",
+          "dll_sha256": "f66c89ed6d6e739a342695cb340af9b5c03cb7c018458794621f1c01bef62a84",
+          "dll_size_bytes": 18143072,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-05-22T04:25:55.693Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/364faf9c028971d6d6c7b22493edad0db713b1b258d44a5499e116801073fe4e.dll.zst",
+            "zst_sha256": "364faf9c028971d6d6c7b22493edad0db713b1b258d44a5499e116801073fe4e",
+            "zst_size_bytes": 6863556,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.10.2605.24",
+          "dll_sha256": "963313b2a29a6fd07adfc43bb0bf7e151a93cf91e95346405a3115e8bcd749b8",
+          "dll_size_bytes": 1509176,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-22T04:25:49.304Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/056ed177432bcaa707c133d57643af96599f613c7f85255884ea20a93143a383.dll.zst",
+            "zst_sha256": "056ed177432bcaa707c133d57643af96599f613c7f85255884ea20a93143a383",
+            "zst_size_bytes": 634531,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.10.2605.24",
+          "dll_sha256": "1be54793756272b13c0e79efac67149fff82f1f87dc558a0b5cddfe6f9eaba2c",
+          "dll_size_bytes": 13255480,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-22T04:34:40.031Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/f08197a4ed896af65af15e7728508abdc8fb06f8074e8fe9a2fb517255338ad1.dll.zst",
+            "zst_sha256": "f08197a4ed896af65af15e7728508abdc8fb06f8074e8fe9a2fb517255338ad1",
+            "zst_size_bytes": 5699130,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.10.2605.24",
+          "dll_sha256": "ec06cff12262ee30d588ca64e3d3fb8f0f9f34df1b620138269f3222c004c399",
+          "dll_size_bytes": 1135928,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-05-22T04:34:35.865Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/50f6128b1d6f4d0ad8c7736dbbf7dfcd4777345d19d009413b5f779f303d2a05.dll.zst",
+            "zst_sha256": "50f6128b1d6f4d0ad8c7736dbbf7dfcd4777345d19d009413b5f779f303d2a05",
+            "zst_size_bytes": 539151,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
+        }
+      ]
     }
-  ]
+  ],
+  "withdrawn": []
 }

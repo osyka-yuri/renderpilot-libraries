@@ -186,11 +186,11 @@
       "properties": {
         "version": {
           "description": "Canonical package version used for presentation, ordering, and candidate selection.",
-          "$ref": "#/$defs/version"
+          "$ref": "#/$defs/packageVersion"
         },
         "channel": {
           "description": "Behaviorally significant release stability channel.",
-          "enum": ["stable", "beta", "debug"]
+          "enum": ["stable", "beta", "preview", "debug"]
         },
         "label": {
           "description": "Optional concise annotation appended verbatim to the package version. It must contain only supplemental information and must not repeat the package version or display name.",
@@ -227,7 +227,7 @@
           "properties": {
             "kind": { "const": "nuget" },
             "package_id": { "type": "string", "minLength": 1 },
-            "version": { "$ref": "#/$defs/version" },
+            "version": { "$ref": "#/$defs/packageVersion" },
             "package_sha512": {
               "type": "string",
               "pattern": "^[A-Za-z0-9+/]{86}==$"
@@ -307,6 +307,11 @@
     "version": {
       "type": "string",
       "pattern": "^(?:0|[1-9]\\d*)(?:\\.(?:0|[1-9]\\d*))*$"
+    },
+    "packageVersion": {
+      "type": "string",
+      "description": "Canonical NuGet/SemVer2 identity with build metadata removed.",
+      "pattern": "^(?:0|[1-9]\\d*)(?:\\.(?:0|[1-9]\\d*)){0,3}(?:-[0-9a-z-]+(?:\\.[0-9a-z-]+)*)?$"
     }
   }
 }

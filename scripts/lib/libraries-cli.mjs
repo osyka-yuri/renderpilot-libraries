@@ -7,8 +7,17 @@ import {
   generatedLibraryRefreshProvider,
   generatedLibraryValidatorScripts,
 } from "./library-source-adapters.mjs";
+import { validateMicrosoftLifecycleCommandArgs } from "./microsoft-lifecycle.mjs";
 
-const COMMANDS = new Set(["generate", "validate", "refresh", "publish", "audit-published"]);
+const COMMANDS = new Set([
+  "generate",
+  "validate",
+  "refresh",
+  "withdraw",
+  "prune",
+  "publish",
+  "audit-published",
+]);
 const REFRESH_PROVIDERS = Object.freeze({
   ...Object.fromEntries(
     generatedLibraryVendors.map((vendor) => [
@@ -31,6 +40,8 @@ Commands:
   generate [--check]
   validate
   refresh <${REFRESH_VENDOR_LIST}> [--check|--write|--materialize-locked|--migrate-transport|--backfill-signatures]
+  withdraw microsoft --package-id=<id> --version=<version> [--reason=<reason>] [--evidence=<text>] [--write]
+  prune microsoft --package-id=<id> --version=<version> [--execute]
   publish [--json-only|--assets-only] [--dry-run] [--force]
   audit-published [--verbose] [--dry-run]`,
   generate: `Usage: node scripts/libraries.mjs generate [--check]
@@ -39,12 +50,20 @@ Commands:
   validate: `Usage: node scripts/libraries.mjs validate`,
   refresh: `Usage: node scripts/libraries.mjs refresh <${REFRESH_VENDOR_LIST}> [options]
 
-  --check                    Detect missing listed stable releases.
+  --check                    Detect missing listed releases and active withdrawals.
   --write                    Import missing releases and persist the lock.
   --materialize-locked      Re-verify and restore the exact locked transport identity.
   --migrate-transport       Intentionally replace locked transport identities.
   --backfill-signatures      Re-verify and backfill missing signed_at values.
   --product=<id>             Microsoft only: limit to one configured product.`,
+  withdraw: `Usage: node scripts/libraries.mjs withdraw microsoft --package-id=<id> --version=<version> [options]
+
+  --reason=<reason>  unlisted, hard_delete, security, or legal
+  --evidence=<text>  Required for manual security/legal withdrawal
+  --write            Persist the tombstone and rebuild v1 snapshots.`,
+  prune: `Usage: node scripts/libraries.mjs prune microsoft --package-id=<id> --version=<version> [--execute]
+
+  --execute  Delete only tombstone-scoped, unreferenced DLL transport objects.`,
   publish: `Usage: node scripts/libraries.mjs publish [options]
 
   --json-only    Publish JSON snapshots and index; verify every referenced asset.
@@ -82,6 +101,12 @@ export function parseLibrariesArgs(argv) {
       case "refresh":
         validateRefreshArgs(args);
         break;
+      case "withdraw":
+        validateMicrosoftLifecycleCommandArgs(command, args);
+        break;
+      case "prune":
+        validateMicrosoftLifecycleCommandArgs(command, args);
+        break;
       case "publish":
         validatePublishArgs(args);
         break;
@@ -102,7 +127,7 @@ export function parseLibrariesArgs(argv) {
     ...(command === "refresh" ? { refreshVendor: args[0] } : {}),
     // The outer CLI consumes the provider positional argument; refresh
     // workers receive only their option flags.
-    args: command === "refresh" ? args.slice(1) : args,
+    args: new Set(["refresh", "withdraw", "prune"]).has(command) ? args.slice(1) : args,
   };
 }
 
@@ -136,6 +161,10 @@ export async function dispatchLibrariesCommand(
       }
       return runScript(provider.script, [...provider.argsPrefix, ...args]);
     }
+    case "withdraw":
+      return runScript("withdraw-microsoft-nuget.mjs", args);
+    case "prune":
+      return runScript("prune-microsoft-withdrawn.mjs", args);
     case "publish":
       return runScript("publish-library-catalog.mjs", args);
     case "audit-published":

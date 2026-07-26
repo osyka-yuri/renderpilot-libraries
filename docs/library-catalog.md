@@ -32,7 +32,9 @@ The catalogue keeps presentation, package revision, raw content, and transport i
 
 ### Release identity
 
-`release.version` is the canonical package version used for display, ordering, candidate selection, and update-all behavior. `release.label` is an optional supplemental annotation displayed after the version. It must not repeat the package name or a leading segment of the version.
+`release.version` is the canonical NuGet/SemVer 2 package version used for display, ordering, candidate selection, and update-all behavior. It contains at least a three-segment numeric core and preserves a normalized prerelease suffix such as `1.721.2-preview`. One shared parser supplies canonical identity, ordering, numeric core, and the derived stable/preview channel to every provider. Build metadata may be accepted from upstream but is never persisted as part of catalogue identity. `release.label` is an optional supplemental annotation displayed after the version. It must not repeat the package name or a leading segment of the version.
+
+Package versions and binary versions are deliberately separate. Exact numeric PE `FileVersion` metadata remains on the artifact and is used for runtime compatibility; it is never made prerelease-aware. During adoption of the canonical package-version contract, curated NVIDIA package IDs and generated AMD identities were migrated together with their normalized release versions. This one-time identity migration prevents an old receipt from colliding with a canonical active package while leaving DLL hashes, PE versions, and upstream provenance unchanged.
 
 ### Package revision
 
@@ -69,9 +71,9 @@ Legal documents are independently content-addressed and do not change an otherwi
 
 ## Upstream Provenance
 
-Microsoft imports bind NuGet package and catalogue identities, including the package SHA-512. GitHub imports bind the official repository, release, tag reference, exact commit, Git blob SHA-1, and downloaded content SHA-256.
+Microsoft imports bind the full normalized NuGet package version (including prerelease suffix), release channel, catalogue identity, and package SHA-512. The exact package ID and version are also verified against the archive's single root `.nuspec`. Stable and preview releases share the Microsoft v1 snapshot but always have distinct package/revision identities. GitHub imports bind the official repository, release, tag reference, exact commit, Git blob SHA-1, and downloaded content SHA-256.
 
-For an already known release, any unexpected change in tag, commit, package layout, or payload fails closed. Unknown stable tags or layouts also require an explicit profile decision instead of automatic normalization.
+For an already known release, any unexpected change in tag, commit, package layout, or payload fails closed. Unknown tags or layouts also require an explicit profile decision instead of automatic normalization. NuGet prereleases never mutate into stable releases; each exact package version is an independent immutable identity.
 
 ## Binary Inspection
 
@@ -97,10 +99,19 @@ The generator:
 
 - reads only validated curated sources and provider locks;
 - produces deterministic vendor snapshots and index bytes;
-- preserves stable package IDs and ordered members;
+- preserves canonical stable/preview package IDs and ordered members after the documented identity migration;
 - deduplicates physical assets by content;
 - keeps distinct release identities where required;
 - projects provider-neutral public contracts;
+- prepares every vendor snapshot and the index as one immutable generation plan;
+- orders vendor outputs lexicographically and keeps the index last as the publication commit point;
+- writes the exact prepared UTF-8 bytes from that plan;
+- stages every output before replacement and rolls back earlier replacements if the batch fails;
 - never edits the frozen root `manifest.json`.
 
 `scripts/catalog.mjs` is the repository and publication registry. Generators, validators, synchronizers, and remote checks obtain their explicit source paths, schemas, output paths, and R2 keys from that registry.
+
+Before production pruning, the R2 guard verifies the exact index bytes and validates
+every referenced vendor snapshot against the same catalog validators. A malformed or
+identity-mismatched snapshot therefore stops pruning before the global transport
+reference graph is evaluated.

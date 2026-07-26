@@ -62,15 +62,17 @@ pnpm run check
 
 ## 🛠️ Common Workflows
 
-| Goal                                       | Command                            |
-| ------------------------------------------ | ---------------------------------- |
-| Run the complete quality gate              | `pnpm run check`                   |
-| Run the network-free quality gate          | `pnpm run check:offline`           |
-| Regenerate the library catalogue           | `pnpm run libraries:generate`      |
-| Check Microsoft releases                   | `pnpm run refresh:microsoft:check` |
-| Check AMD, Intel, and Valve releases       | `pnpm run refresh:github:check`    |
-| Verify Windows PE and signature inspection | `pnpm run test:authenticode`       |
-| Verify the public R2 JSON byte for byte    | `pnpm run check:published-json`    |
+| Goal                                       | Command                                                                |
+| ------------------------------------------ | ---------------------------------------------------------------------- |
+| Run the complete quality gate              | `pnpm run check`                                                       |
+| Run the network-free quality gate          | `pnpm run check:offline`                                               |
+| Regenerate the library catalogue           | `pnpm run libraries:generate`                                          |
+| Check Microsoft releases                   | `pnpm run refresh:microsoft:check`                                     |
+| Dry-run a Microsoft withdrawal             | `pnpm run withdraw:microsoft -- --package-id=<id> --version=<version>` |
+| Dry-run tombstone-scoped R2 pruning        | `pnpm run prune:microsoft -- --package-id=<id> --version=<version>`    |
+| Check AMD, Intel, and Valve releases       | `pnpm run refresh:github:check`                                        |
+| Verify Windows PE and signature inspection | `pnpm run test:authenticode`                                           |
+| Verify the public R2 JSON byte for byte    | `pnpm run check:published-json`                                        |
 
 Refresh, materialization, migration, and publication are intentionally separate operations. See the [operations guide](docs/operations.md) before changing locks or publishing data.
 

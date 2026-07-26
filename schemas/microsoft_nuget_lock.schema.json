@@ -3,13 +3,17 @@
   "$id": "https://osyka-yuri.github.io/renderpilot-libraries/schemas/microsoft_nuget_lock.schema.json",
   "title": "RenderPilot Microsoft NuGet lock",
   "type": "object",
-  "required": ["schema_version", "releases"],
+  "required": ["schema_version", "releases", "withdrawn"],
   "additionalProperties": false,
   "properties": {
-    "schema_version": { "type": "integer", "const": 3 },
+    "schema_version": { "type": "integer", "const": 4 },
     "releases": {
       "type": "array",
       "items": { "$ref": "#/$defs/release" }
+    },
+    "withdrawn": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/withdrawn" }
     }
   },
   "$defs": {
@@ -33,7 +37,8 @@
         "package_id": { "type": "string", "minLength": 1 },
         "package_version": {
           "type": "string",
-          "pattern": "^[0-9]+(\\.[0-9]+){0,3}$"
+          "description": "Canonical NuGet/SemVer2 identity with build metadata removed.",
+          "pattern": "^(?:0|[1-9]\\d*)(?:\\.(?:0|[1-9]\\d*)){0,3}(?:-[0-9a-z-]+(?:\\.[0-9a-z-]+)*)?$"
         },
         "package_sha512": {
           "type": "string",
@@ -51,6 +56,62 @@
           "items": { "$ref": "#/$defs/legalDocument" }
         }
       }
+    },
+    "withdrawn": {
+      "type": "object",
+      "required": [
+        "product",
+        "package_id",
+        "package_version",
+        "reason",
+        "confirmed_at",
+        "transport_object_keys"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "product": {
+          "type": "string",
+          "enum": ["d3d12_agility", "dxc", "directstorage"]
+        },
+        "package_id": { "type": "string", "minLength": 1 },
+        "package_version": {
+          "type": "string",
+          "description": "Canonical NuGet/SemVer2 identity with build metadata removed.",
+          "pattern": "^(?:0|[1-9]\\d*)(?:\\.(?:0|[1-9]\\d*)){0,3}(?:-[0-9a-z-]+(?:\\.[0-9a-z-]+)*)?$"
+        },
+        "reason": {
+          "type": "string",
+          "enum": ["unlisted", "hard_delete", "security", "legal"]
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048,
+          "pattern": "^[^\\u0000-\\u001F\\u007F]+$",
+          "description": "Trimmed printable audit evidence; required for security and legal withdrawals."
+        },
+        "confirmed_at": { "type": "string", "format": "date-time" },
+        "transport_object_keys": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^libraries/blobs/sha256/[0-9a-f]{64}\\.dll\\.zst$"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "reason": { "enum": ["security", "legal"] }
+            },
+            "required": ["reason"]
+          },
+          "then": { "required": ["evidence"] }
+        }
+      ]
     },
     "legalDocument": {
       "type": "object",

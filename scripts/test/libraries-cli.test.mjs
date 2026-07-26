@@ -126,6 +126,39 @@ test("library CLI validates publish and audit flags", () => {
   );
 });
 
+test("library CLI exposes explicit Microsoft withdrawal and prune commands", () => {
+  assert.deepEqual(
+    parseLibrariesArgs([
+      "withdraw",
+      "microsoft",
+      "--package-id=Microsoft.Direct3D.DXC",
+      "--version=1.0-preview",
+      "--write",
+    ]),
+    {
+      help: false,
+      command: "withdraw",
+      args: ["--package-id=Microsoft.Direct3D.DXC", "--version=1.0-preview", "--write"],
+    },
+  );
+  assert.deepEqual(
+    parseLibrariesArgs([
+      "prune",
+      "microsoft",
+      "--package-id=Microsoft.Direct3D.DXC",
+      "--version=1.0-preview",
+      "--execute",
+    ]),
+    {
+      help: false,
+      command: "prune",
+      args: ["--package-id=Microsoft.Direct3D.DXC", "--version=1.0-preview", "--execute"],
+    },
+  );
+  assert.throws(() => parseLibrariesArgs(["withdraw", "github"]), /microsoft/u);
+  assert.throws(() => parseLibrariesArgs(["prune", "microsoft", "--bogus"]), /Unknown/u);
+});
+
 test("library CLI dispatches each command to an explicit worker sequence", async () => {
   const calls = [];
   const runScript = async (file, args) => calls.push([file, args]);
@@ -145,6 +178,22 @@ test("library CLI dispatches each command to an explicit worker sequence", async
     runScript,
   );
   assert.deepEqual(calls.splice(0), [["refresh-microsoft-nuget.mjs", ["--write"]]]);
+
+  await dispatchLibrariesCommand(
+    { command: "withdraw", args: ["--package-id=x", "--version=1"] },
+    runScript,
+  );
+  assert.deepEqual(calls.splice(0), [
+    ["withdraw-microsoft-nuget.mjs", ["--package-id=x", "--version=1"]],
+  ]);
+
+  await dispatchLibrariesCommand(
+    { command: "prune", args: ["--package-id=x", "--version=1"] },
+    runScript,
+  );
+  assert.deepEqual(calls.splice(0), [
+    ["prune-microsoft-withdrawn.mjs", ["--package-id=x", "--version=1"]],
+  ]);
 
   await assert.rejects(
     dispatchLibrariesCommand({ command: "refresh", args: ["--write"] }, runScript),

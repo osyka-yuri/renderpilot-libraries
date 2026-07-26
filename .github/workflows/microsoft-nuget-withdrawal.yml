@@ -1,0 +1,131 @@
+name: Microsoft NuGet withdrawal
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "Create a reviewed withdrawal PR, or prune after that PR is published"
+        required: true
+        type: choice
+        options:
+          - withdraw
+          - prune
+      package_id:
+        description: "Exact NuGet Package ID"
+        required: true
+        type: string
+      version:
+        description: "Exact normalized NuGet version"
+        required: true
+        type: string
+      reason:
+        description: "Use auto for a NuGet-confirmed unlisted/hard delete"
+        required: true
+        type: choice
+        default: auto
+        options:
+          - auto
+          - unlisted
+          - hard_delete
+          - security
+          - legal
+      evidence:
+        description: "Required documented evidence for security/legal withdrawal"
+        required: false
+        type: string
+
+concurrency:
+  group: libraries-production-r2
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  withdraw:
+    name: Verify withdrawal and open catalog PR
+    if: inputs.operation == 'withdraw'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-library-tools
+      - run: pnpm install --frozen-lockfile
+
+      - name: Verify dry-run and atomically rebuild v1
+        shell: pwsh
+        env:
+          PACKAGE_ID: ${{ inputs.package_id }}
+          PACKAGE_VERSION: ${{ inputs.version }}
+          WITHDRAWAL_REASON: ${{ inputs.reason }}
+          WITHDRAWAL_EVIDENCE: ${{ inputs.evidence }}
+        run: |
+          $withdrawArgs = @(
+            "scripts/libraries.mjs",
+            "withdraw",
+            "microsoft",
+            "--package-id=$env:PACKAGE_ID",
+            "--version=$env:PACKAGE_VERSION"
+          )
+          if ($env:WITHDRAWAL_REASON -ne "auto") {
+            $withdrawArgs += "--reason=$env:WITHDRAWAL_REASON"
+          }
+          if ($env:WITHDRAWAL_EVIDENCE) {
+            $withdrawArgs += "--evidence=$env:WITHDRAWAL_EVIDENCE"
+          }
+          & node @withdrawArgs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & node @withdrawArgs "--write"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          pnpm run check:offline
+
+      - name: Open reviewed withdrawal pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: chore/microsoft-withdrawal-${{ github.run_id }}
+          delete-branch: true
+          commit-message: "chore(microsoft): withdraw ${{ inputs.package_id }} ${{ inputs.version }}"
+          title: "chore(microsoft): withdraw ${{ inputs.package_id }} ${{ inputs.version }}"
+          body: |
+            Audited Microsoft NuGet withdrawal for `${{ inputs.package_id }}@${{ inputs.version }}`.
+
+            Reason: `${{ inputs.reason }}`.
+            Evidence: `${{ inputs.evidence || 'not applicable (NuGet-confirmed state)' }}`.
+
+            The workflow verified current NuGet state, printed the dry-run, moved
+            the active release to an immutable tombstone, and rebuilt the unified
+            Microsoft snapshot plus the v1 index as one rollback-protected batch.
+            R2 transport pruning is deliberately deferred until this PR is merged
+            and the publish workflow has switched the production index.
+          add-paths: |
+            catalogs/libraries/microsoft-nuget.lock.json
+            libraries/v1/vendors/microsoft.json
+            libraries/v1/index.json
+
+  prune:
+    name: Verify production commit point and prune transport
+    if: inputs.operation == 'prune'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-library-tools
+      - run: pnpm install --frozen-lockfile
+
+      - name: Print exact prune plan
+        shell: pwsh
+        env:
+          PACKAGE_ID: ${{ inputs.package_id }}
+          PACKAGE_VERSION: ${{ inputs.version }}
+        run: |
+          node scripts/libraries.mjs prune microsoft "--package-id=$env:PACKAGE_ID" "--version=$env:PACKAGE_VERSION"
+
+      - name: Delete only unreferenced withdrawn transport objects
+        shell: pwsh
+        env:
+          PACKAGE_ID: ${{ inputs.package_id }}
+          PACKAGE_VERSION: ${{ inputs.version }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          node scripts/libraries.mjs prune microsoft "--package-id=$env:PACKAGE_ID" "--version=$env:PACKAGE_VERSION" --execute

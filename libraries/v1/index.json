@@ -5,9 +5,9 @@
     {
       "vendor_id": "amd",
       "display_name": "AMD",
-      "snapshot_key": "libraries/v1/vendors/amd/56846dc4b752ef20405a105ce41d0af226097695771b594e796142e5a105cee7.json",
-      "snapshot_sha256": "56846dc4b752ef20405a105ce41d0af226097695771b594e796142e5a105cee7",
-      "snapshot_size_bytes": 79250
+      "snapshot_key": "libraries/v1/vendors/amd/26601e704fb064ec1e61e2b25fc0a3ceef9065b76558534c78a86610cca8d32e.json",
+      "snapshot_sha256": "26601e704fb064ec1e61e2b25fc0a3ceef9065b76558534c78a86610cca8d32e",
+      "snapshot_size_bytes": 79314
     },
     {
       "vendor_id": "intel",
@@ -19,16 +19,16 @@
     {
       "vendor_id": "microsoft",
       "display_name": "Microsoft",
-      "snapshot_key": "libraries/v1/vendors/microsoft/448d52c650f30d8189340c25eeb8839ba2509eb99cb05fdcc6d98438ca7158b2.json",
-      "snapshot_sha256": "448d52c650f30d8189340c25eeb8839ba2509eb99cb05fdcc6d98438ca7158b2",
-      "snapshot_size_bytes": 321878
+      "snapshot_key": "libraries/v1/vendors/microsoft/17ebbcb68ca1ca2c391b715e532a240c7e053411ac8f28f9bdbf26baa55a7c95.json",
+      "snapshot_sha256": "17ebbcb68ca1ca2c391b715e532a240c7e053411ac8f28f9bdbf26baa55a7c95",
+      "snapshot_size_bytes": 424024
     },
     {
       "vendor_id": "nvidia",
       "display_name": "NVIDIA",
-      "snapshot_key": "libraries/v1/vendors/nvidia/200ad53b5c2bd079ee138be81a6f45c27c9ae917872a3a3e398953fb4aceef0e.json",
-      "snapshot_sha256": "200ad53b5c2bd079ee138be81a6f45c27c9ae917872a3a3e398953fb4aceef0e",
-      "snapshot_size_bytes": 302220
+      "snapshot_key": "libraries/v1/vendors/nvidia/1e6eb85de32a39c98209cbfe5ec4e2e8a8f432db14ea5692debe72241552d3b6.json",
+      "snapshot_sha256": "1e6eb85de32a39c98209cbfe5ec4e2e8a8f432db14ea5692debe72241552d3b6",
+      "snapshot_size_bytes": 301560
     },
     {
       "vendor_id": "valve",

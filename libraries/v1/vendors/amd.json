@@ -909,13 +909,13 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_denoiser_dx12_1.1.6f34910f5fb0b52602f303828aa1f8332e0126097f8e2f7161fccfa73cd66c48",
-      "revision_sha256": "6fb27802c70b30b5188cad58f58bf870cb69850e6babadba4d0e8c36aa69e64d",
+      "package_id": "amd_fidelityfx_denoiser_dx12_1.1.0.6f34910f5fb0b52602f303828aa1f8332e0126097f8e2f7161fccfa73cd66c48",
+      "revision_sha256": "0cd749919a429c5a005f8d05311a6fbc8c6d69c180c4af9dcb47b3fcb0ceaa79",
       "technology": "amd_fsr_ray_regeneration",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Ray Regeneration",
       "release": {
-        "version": "1.1",
+        "version": "1.1.0",
         "channel": "stable",
         "label": null
       },
@@ -1290,6 +1290,38 @@
       ]
     },
     {
+      "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.0.61fbe1f13fda1fbab18609f9e534751797985fcb5d313c6f34dca9dfb98984d3",
+      "revision_sha256": "217bdb52e14a4917af63861594ba5f80cec87cb51f84065396a528e8a8c24231",
+      "technology": "amd_fsr_frame_generation",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Frame Generation",
+      "release": {
+        "version": "4.0.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
       "package_id": "amd_fidelityfx_framegeneration_dx12_4.0.1.2740.1ddd266dd4b2d5c6d659b6eb4cdce3f84c9bc902c91c7c305a6cdc1559a78c10",
       "revision_sha256": "7542f56198eb3ebf2c32cb78f8a854db9ba817d4e79172c95cf1cf6a9801097d",
       "technology": "amd_fsr_frame_generation",
@@ -1317,38 +1349,6 @@
       "members": [
         {
           "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_framegeneration_dx12_4.61fbe1f13fda1fbab18609f9e534751797985fcb5d313c6f34dca9dfb98984d3",
-      "revision_sha256": "6edc14dd3d65cb146abf8dd81461412af065bfbea942bee50c36e3e08448908a",
-      "technology": "amd_fsr_frame_generation",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Frame Generation",
-      "release": {
-        "version": "4",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "provenance": {
-        "kind": "github_release",
-        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
-        "tag": "v2.2.0",
-        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
-      },
-      "legal_document_ids": [
-        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
-      ],
-      "members": [
-        {
-          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
           "role": "primary",
           "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
         }
@@ -1419,13 +1419,13 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_loader_dx12_2.2.2a28f520595bad146abe90841f46eb99bbaee755b851bc651425a97dc49bc17f",
-      "revision_sha256": "ed4fcf73109d26eeb0161efe3a07b181b4a1d5d8a7563d74cb019ed716b5bdc0",
+      "package_id": "amd_fidelityfx_loader_dx12_2.2.0.2a28f520595bad146abe90841f46eb99bbaee755b851bc651425a97dc49bc17f",
+      "revision_sha256": "0bebaa632da106d7ed40169726df97c386c97b133ee13d0b09a0947afca1ecb4",
       "technology": "amd_fsr_loader",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Loader",
       "release": {
-        "version": "2.2",
+        "version": "2.2.0",
         "channel": "stable",
         "label": null
       },
@@ -1484,15 +1484,47 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.2740.5c66b4f4ce604711af561260a0ea7c64ec8d41b0912d522ef789d569b26aeeb3",
-      "revision_sha256": "7b0209020b841570eb9858e73b62db82816380d572ba81e21c7de973e2b23823",
+      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0-preview.a6bf8654ec059c15da05f90454659238bb9d0482cc8559a260de44b2f51ea181",
+      "revision_sha256": "70ad2e054eff4eedcf647647512da7f18f1560ce95bb90b59ef756a110661efe",
       "technology": "amd_fsr_radiance_cache",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Radiance Cache",
       "release": {
-        "version": "0.9.0.2740",
-        "channel": "stable",
-        "label": "preview"
+        "version": "0.9.0-preview",
+        "channel": "preview",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.2740-preview.5c66b4f4ce604711af561260a0ea7c64ec8d41b0912d522ef789d569b26aeeb3",
+      "revision_sha256": "bbd6e2fb7f84266796d4696d9fc79bcc3bf51b558a91a611a502a73a8b54e872",
+      "technology": "amd_fsr_radiance_cache",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Radiance Cache",
+      "release": {
+        "version": "0.9.0.2740-preview",
+        "channel": "preview",
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1517,15 +1549,15 @@
       ]
     },
     {
-      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.604.a7924d40e5317fe133cb8ce9fe4fea61d762f9d99c3bc000fb754b8fb727ecd5",
-      "revision_sha256": "537fb7def5af956c045fc1de34b276fd234361db551d02cec3c47c9d60303a55",
+      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.0.604-preview.a7924d40e5317fe133cb8ce9fe4fea61d762f9d99c3bc000fb754b8fb727ecd5",
+      "revision_sha256": "1457a2f7e00205758aafa20bf4e779ea104928667a9297e6d5336ba3cde49a2b",
       "technology": "amd_fsr_radiance_cache",
       "variant": "runtime",
       "display_name": "AMD FidelityFX Radiance Cache",
       "release": {
-        "version": "0.9.0.604",
-        "channel": "stable",
-        "label": "preview"
+        "version": "0.9.0.604-preview",
+        "channel": "preview",
+        "label": null
       },
       "target": {
         "os": "windows",
@@ -1543,38 +1575,6 @@
       "members": [
         {
           "artifact_id": "sha256:f5ad8425de6bbac7a94569fe2771e2c766cf0a4e7d5a8e27ae8de129616b8a88",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_radiancecache_dx12_0.9.a6bf8654ec059c15da05f90454659238bb9d0482cc8559a260de44b2f51ea181",
-      "revision_sha256": "632b1c49cdadbee7840f5a625b9765e0f2a16fd909ef94cf2e1349a7fd4c865e",
-      "technology": "amd_fsr_radiance_cache",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Radiance Cache",
-      "release": {
-        "version": "0.9",
-        "channel": "stable",
-        "label": "preview"
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "provenance": {
-        "kind": "github_release",
-        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
-        "tag": "v2.2.0",
-        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
-      },
-      "legal_document_ids": [
-        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
-      ],
-      "members": [
-        {
-          "artifact_id": "sha256:e87b31ec27f8dedcda5d669916c7504d972907e09caf81172f6d14d42d98123e",
           "role": "primary",
           "install_as": "amd_fidelityfx_radiancecache_dx12.dll"
         }
@@ -1645,6 +1645,38 @@
       ]
     },
     {
+      "package_id": "amd_fidelityfx_upscaler_dx12_4.1.0.1dcea90008123dcba56d518e28483301e58a21048d8894b20800fbda704312f3",
+      "revision_sha256": "11b2000717212f7eb2b3e5ccc9086ca0816cfc72611c1fabd82a90084b048444",
+      "technology": "amd_fsr_upscaler",
+      "variant": "runtime",
+      "display_name": "AMD FidelityFX Upscaler",
+      "release": {
+        "version": "4.1.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        }
+      ]
+    },
+    {
       "package_id": "amd_fidelityfx_upscaler_dx12_4.1.1.2740.f6c5947966286f25da70468206023848ab2b2eb1e1a4651d1ca12d8a64157907",
       "revision_sha256": "03e3208d81171eb72b54cade03ac40442d1a1bf035030e8fe0003dce391c9a46",
       "technology": "amd_fsr_upscaler",
@@ -1672,38 +1704,6 @@
       "members": [
         {
           "artifact_id": "sha256:d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "amd_fidelityfx_upscaler_dx12_4.1.1dcea90008123dcba56d518e28483301e58a21048d8894b20800fbda704312f3",
-      "revision_sha256": "bfb560b43c8ceb245128411388ae1241d46c89fd9e52307f6d48e7a668ead112",
-      "technology": "amd_fsr_upscaler",
-      "variant": "runtime",
-      "display_name": "AMD FidelityFX Upscaler",
-      "release": {
-        "version": "4.1",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "provenance": {
-        "kind": "github_release",
-        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
-        "tag": "v2.2.0",
-        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
-      },
-      "legal_document_ids": [
-        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
-      ],
-      "members": [
-        {
-          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
           "role": "primary",
           "install_as": "amd_fidelityfx_upscaler_dx12.dll"
         }
@@ -2000,6 +2000,48 @@
       ]
     },
     {
+      "package_id": "fsr_dx12_sdk.4.1.0.f4aa4a8ab433347fd98074968a029e00c8739cd31462d6bb4c0eb8123543e1e7",
+      "revision_sha256": "43f7983247524a72523624388af3c5cc6d1a8631fa9aab2e99dab69d47453116",
+      "technology": "amd_fsr",
+      "variant": "sdk_bundle",
+      "display_name": "AMD FidelityFX SDK DirectX 12",
+      "release": {
+        "version": "4.1.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+        "tag": "v2.2.0",
+        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
+      },
+      "legal_document_ids": [
+        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
+          "role": "primary",
+          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
+        },
+        {
+          "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
+          "role": "loader",
+          "install_as": "amd_fidelityfx_dx12.dll"
+        },
+        {
+          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
+          "role": "frame_generation",
+          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
+        }
+      ]
+    },
+    {
       "package_id": "fsr_dx12_sdk.4.1.1.2740.e362d057fc5b18c56f5f6057f3fef5472f4a0cc510f4a0833fad2c3a6811a423",
       "revision_sha256": "17edec76f29752fa7dd0f2585a549873afeb90b34f8bf00a8d44bf32917271c0",
       "technology": "amd_fsr",
@@ -2037,48 +2079,6 @@
         },
         {
           "artifact_id": "sha256:02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
-          "role": "frame_generation",
-          "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
-        }
-      ]
-    },
-    {
-      "package_id": "fsr_dx12_sdk.4.1.f4aa4a8ab433347fd98074968a029e00c8739cd31462d6bb4c0eb8123543e1e7",
-      "revision_sha256": "1fa325b6edb9226d407aff179d147ba76ba08771ff6f216647ea224304738d25",
-      "technology": "amd_fsr",
-      "variant": "sdk_bundle",
-      "display_name": "AMD FidelityFX SDK DirectX 12",
-      "release": {
-        "version": "4.1",
-        "channel": "stable",
-        "label": null
-      },
-      "target": {
-        "os": "windows",
-        "architecture": "X64"
-      },
-      "provenance": {
-        "kind": "github_release",
-        "repository": "GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
-        "tag": "v2.2.0",
-        "commit_sha": "e236f2304dcda35f282fdddd085f41e2ff48c86a"
-      },
-      "legal_document_ids": [
-        "license.d36e79d1ea4b5bd05da170f49764af898726c57aba70f354720d96c6a74b347d"
-      ],
-      "members": [
-        {
-          "artifact_id": "sha256:ec7ed3ca674e288240e6f04b986342aece47454c41d9b0959449e82e22bd7f6d",
-          "role": "primary",
-          "install_as": "amd_fidelityfx_upscaler_dx12.dll"
-        },
-        {
-          "artifact_id": "sha256:d98c027fbd4cc074a1c48574eecd58ded2bc9e4cb6bfc5c28d6595ab5037d371",
-          "role": "loader",
-          "install_as": "amd_fidelityfx_dx12.dll"
-        },
-        {
-          "artifact_id": "sha256:8deaf970b84dac8f761fefa546e73517e02b34a6bb05a590a74e7faea03baa4a",
           "role": "frame_generation",
           "install_as": "amd_fidelityfx_framegeneration_dx12.dll"
         }

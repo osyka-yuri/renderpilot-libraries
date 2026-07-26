@@ -12,7 +12,7 @@ on:
         default: false
 
 concurrency:
-  group: microsoft-nuget-refresh
+  group: libraries-production-r2
   cancel-in-progress: false
 
 permissions:
@@ -21,20 +21,14 @@ permissions:
 
 jobs:
   refresh:
-    name: Import listed stable Microsoft runtimes
+    name: Import listed Microsoft runtimes
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
-        with:
-          version: 11.11.0
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: .node-version
-          cache: pnpm
+      - uses: ./.github/actions/setup-library-tools
       - run: pnpm install --frozen-lockfile
 
-      - name: Detect every missing listed stable release
+      - name: Detect every missing listed release
         id: detect
         run: pnpm run refresh:microsoft:check
 
@@ -82,7 +76,7 @@ jobs:
           commit-message: "chore(microsoft): refresh NuGet runtime catalog"
           title: "chore(microsoft): refresh NuGet runtime catalog"
           body: |
-            Automated import of every missing listed, stable Microsoft runtime
+            Automated import of every missing listed Microsoft stable or preview runtime
             release and/or rebuild of content-addressed ZST transport objects.
 
             The Windows importer verified NuGet SHA-512 metadata, exact package

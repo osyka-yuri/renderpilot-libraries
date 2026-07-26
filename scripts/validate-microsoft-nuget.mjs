@@ -7,7 +7,8 @@ import {
   assertLockSemantics,
   assertLockExtendsBaseline,
   buildMicrosoftVendorSource,
-  releaseCounts,
+  knownReleaseCounts,
+  knownPreviewReleaseCounts,
 } from "./lib/microsoft-nuget.mjs";
 import { buildVendorSnapshot, compareNumericVersions } from "./lib/library-catalog.mjs";
 import { readJsonAtGitRef } from "./lib/git-json.mjs";
@@ -51,12 +52,19 @@ async function main() {
     console.log(`Microsoft NuGet lock has no baseline at ${baselineRef} (initial import).`);
   }
 
-  const counts = releaseCounts(lock);
+  const counts = knownReleaseCounts(lock);
+  const previewCounts = knownPreviewReleaseCounts(lock);
   for (const product of config.products) {
     const actual = counts.get(product.key) ?? 0;
-    if (actual < product.expected_listed_stable_releases) {
+    if (actual < product.minimum_known_releases) {
       throw new Error(
-        `${product.key}: expected at least ${product.expected_listed_stable_releases} locked releases, got ${actual}`,
+        `${product.key}: expected at least ${product.minimum_known_releases} known locked releases, got ${actual}`,
+      );
+    }
+    const actualPreviews = previewCounts.get(product.key) ?? 0;
+    if (actualPreviews < product.minimum_known_preview_releases) {
+      throw new Error(
+        `${product.key}: expected at least ${product.minimum_known_preview_releases} known preview releases, got ${actualPreviews}`,
       );
     }
   }
@@ -100,6 +108,7 @@ async function main() {
     const primary = packageValue.members.find((member) => member.role === "primary");
     const artifact = artifactById.get(primary?.artifact_id);
     const expectedVersion = DIRECTSTORAGE_RELEASES.get(artifact?.dll.sha256);
+    if (expectedVersion === undefined) continue;
     if (
       !artifact?.file_version ||
       compareNumericVersions(expectedVersion, artifact.file_version) !== 0
@@ -111,7 +120,7 @@ async function main() {
   }
 
   console.log(
-    `Microsoft NuGet lock is valid: D3D12 ${counts.get("d3d12_agility")}, DXC ${counts.get("dxc")}, DirectStorage ${counts.get("directstorage")}.`,
+    `Microsoft NuGet lock is valid: D3D12 ${counts.get("d3d12_agility")} (${previewCounts.get("d3d12_agility")} preview), DXC ${counts.get("dxc")} (${previewCounts.get("dxc")} preview), DirectStorage ${counts.get("directstorage")} (${previewCounts.get("directstorage")} preview).`,
   );
 }
 
