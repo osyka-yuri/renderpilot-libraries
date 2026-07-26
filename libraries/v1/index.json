@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-23T06:15:06.000Z",
+  "generated_at": "2026-07-24T18:24:17.000Z",
   "vendors": [
     {
       "vendor_id": "amd",
@@ -12,9 +12,9 @@
     {
       "vendor_id": "intel",
       "display_name": "Intel",
-      "snapshot_key": "libraries/v1/vendors/intel/c4dcc8b2fe0c77209f59ccd815338c92ab8dd612afb4a2bb74d9fdd8a05532de.json",
-      "snapshot_sha256": "c4dcc8b2fe0c77209f59ccd815338c92ab8dd612afb4a2bb74d9fdd8a05532de",
-      "snapshot_size_bytes": 66163
+      "snapshot_key": "libraries/v1/vendors/intel/6d5cba1d120f31eac85e65f82004981549dde4038fb8a88b36e2ac7dd03b4b13.json",
+      "snapshot_sha256": "6d5cba1d120f31eac85e65f82004981549dde4038fb8a88b36e2ac7dd03b4b13",
+      "snapshot_size_bytes": 68212
     },
     {
       "vendor_id": "microsoft",

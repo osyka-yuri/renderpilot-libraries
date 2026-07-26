@@ -4,7 +4,7 @@
     "id": "intel",
     "display_name": "Intel"
   },
-  "generated_at": "2026-06-24T18:00:00.000Z",
+  "generated_at": "2026-07-24T18:24:17.000Z",
   "legal_documents": [
     {
       "legal_document_id": "license.078f99e11c7a2d46857102eee3237a679d94ea7ebe2d136d732315cda18d2836",
@@ -228,6 +228,29 @@
         "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
         "thumbprint": "2B81BFC21940CD420FC263C975FB41A79B643DF4",
         "signed_at": "2025-10-13T11:35:04.000Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:d2030dcd694fda8f2ec7e044b13e6db8f0b56d4ba9113a5efad334e3f3ded8c7",
+      "library_id": "libxell",
+      "file_name": "libxell.dll",
+      "file_version": "1.3.2.10",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "d2030dcd694fda8f2ec7e044b13e6db8f0b56d4ba9113a5efad334e3f3ded8c7",
+        "size_bytes": 415368
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/7c2d72bf19dd53a8b26b50450e61384a339ea2e2f5441997a856b46e360b53b3.dll.zst",
+        "sha256": "7c2d72bf19dd53a8b26b50450e61384a339ea2e2f5441997a856b46e360b53b3",
+        "size_bytes": 131846
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Intel Corporation, O=Intel Corporation, S=California, C=US",
+        "thumbprint": "B9DB0C4AC026EED174330D824A05EA655322F4D2",
+        "signed_at": "2026-07-14T10:42:51.000Z"
       }
     },
     {
@@ -1032,6 +1055,39 @@
       ]
     },
     {
+      "package_id": "libxell_1.3.2.10.1cf70c4413530131038dd983539e89b7e0a2efb82f50688e7060e306d5f27af6",
+      "revision_sha256": "7c9ceee24f6aa9af2dd01f44fc20f2258000a3afb16dc5f54a10a5fa5a4f6353",
+      "technology": "intel_xell",
+      "variant": "runtime",
+      "display_name": "Intel Xe Low Latency",
+      "release": {
+        "version": "1.3.2.10",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "provenance": {
+        "kind": "github_release",
+        "repository": "intel/xess",
+        "tag": "v3.0.2",
+        "commit_sha": "8fe81bdbbaf00b3c1b733fd0d830c333dc84e6f0"
+      },
+      "legal_document_ids": [
+        "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
+        "notice.e8d8899dbfc4de0e8ca25560be9358e03c1405d7c956d20a1838c3c709b9b51c"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:d2030dcd694fda8f2ec7e044b13e6db8f0b56d4ba9113a5efad334e3f3ded8c7",
+          "role": "primary",
+          "install_as": "libxell.dll"
+        }
+      ]
+    },
+    {
       "package_id": "libxess_1.0.0.59.ba63d405d2bda4b8f86bd481ca3f366689fdb3ba22517e01f80264bcc1b0c974",
       "revision_sha256": "355bf8d6dae551849033ff7bed0df412db15e00b60d62e3a5d3e4c2ec26c057c",
       "technology": "intel_xess",
@@ -1435,7 +1491,7 @@
     },
     {
       "package_id": "libxess_2.0.2.68.4d158e81064de91d6b4cae706b1fc688eab3914c73eb998458edff46e70b4f7c",
-      "revision_sha256": "e72468f3505f5c47039c54e851b4ed1383e6165bfc00baf531bf8e30e407ec4f",
+      "revision_sha256": "594dcb1c290422b104fc4db8a1b04bdba56736d4513869216c42cb431b7b2576",
       "technology": "intel_xess",
       "variant": "dx12_runtime",
       "display_name": "Intel XeSS",
@@ -1451,8 +1507,8 @@
       "provenance": {
         "kind": "github_release",
         "repository": "intel/xess",
-        "tag": "v3.0.1",
-        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+        "tag": "v3.0.2",
+        "commit_sha": "8fe81bdbbaf00b3c1b733fd0d830c333dc84e6f0"
       },
       "legal_document_ids": [
         "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
@@ -1534,7 +1590,7 @@
     },
     {
       "package_id": "libxess_dx11_2.0.2.68.72ebaa675098beb58e4a344a703162a9e3a553e1be8bc2fe6ede90a67cceaea3",
-      "revision_sha256": "3e0ccc5b274c4756f41f0c175c59c12ba30c97e0c49bf707dd99a037d1f9cdc0",
+      "revision_sha256": "7fec771a77ce59e14ef531475a432195dc023d45a90c425660ba5352cb6c26a0",
       "technology": "intel_xess",
       "variant": "dx11_runtime",
       "display_name": "Intel XeSS",
@@ -1550,8 +1606,8 @@
       "provenance": {
         "kind": "github_release",
         "repository": "intel/xess",
-        "tag": "v3.0.1",
-        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+        "tag": "v3.0.2",
+        "commit_sha": "8fe81bdbbaf00b3c1b733fd0d830c333dc84e6f0"
       },
       "legal_document_ids": [
         "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
@@ -1791,7 +1847,7 @@
     },
     {
       "package_id": "libxess_fg_1.3.1.78.912c58016785c7ddeac7ae8837da48950691b3279ea7f91b2728cee5cbc9dce3",
-      "revision_sha256": "266a430b5c24a4059a953ca58c7ae95b544f5865278bbd4356afc9ce83284119",
+      "revision_sha256": "fcd5efab103ad947d9184104bb0195709f49fb58c08946433e972ea7a30a0b45",
       "technology": "intel_xefg",
       "variant": "dx12_runtime",
       "display_name": "Intel Xe Frame Generation",
@@ -1807,8 +1863,8 @@
       "provenance": {
         "kind": "github_release",
         "repository": "intel/xess",
-        "tag": "v3.0.1",
-        "commit_sha": "207b703ad215da5b86dde04819a16277a96980aa"
+        "tag": "v3.0.2",
+        "commit_sha": "8fe81bdbbaf00b3c1b733fd0d830c333dc84e6f0"
       },
       "legal_document_ids": [
         "license.784be42c39a4a4d03cf85d88e15e59d75828fca773ce45b8dbfffbd7eaf208df",
