@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-24T18:24:17.000Z",
+  "generated_at": "2026-07-29T17:43:05.797Z",
   "vendors": [
     {
       "vendor_id": "amd",
@@ -19,9 +19,9 @@
     {
       "vendor_id": "microsoft",
       "display_name": "Microsoft",
-      "snapshot_key": "libraries/v1/vendors/microsoft/17ebbcb68ca1ca2c391b715e532a240c7e053411ac8f28f9bdbf26baa55a7c95.json",
-      "snapshot_sha256": "17ebbcb68ca1ca2c391b715e532a240c7e053411ac8f28f9bdbf26baa55a7c95",
-      "snapshot_size_bytes": 424024
+      "snapshot_key": "libraries/v1/vendors/microsoft/3bc7385a0fdb8f2c72d40c06e00cbf55f4be74a5197440df227d23174b7841a7.json",
+      "snapshot_sha256": "3bc7385a0fdb8f2c72d40c06e00cbf55f4be74a5197440df227d23174b7841a7",
+      "snapshot_size_bytes": 430332
     },
     {
       "vendor_id": "nvidia",
