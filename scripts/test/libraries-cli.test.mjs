@@ -121,6 +121,10 @@ test("library CLI validates publish and audit flags", () => {
     /mutually exclusive/,
   );
   assert.throws(
+    () => parseLibrariesArgs(["publish", "--asset-manifest=bundle-manifest.json"]),
+    /requires --assets-only/u,
+  );
+  assert.throws(
     () => parseLibrariesArgs(["audit-published", "--bogus"]),
     (error) => error instanceof UsageError && /Unknown option/.test(error.message),
   );

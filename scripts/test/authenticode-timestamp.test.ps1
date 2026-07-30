@@ -1,467 +1,682 @@
+using namespace System
+using namespace System.Globalization
+using namespace System.Management.Automation
+using namespace System.Reflection
+using namespace System.Security.Cryptography
+using namespace System.Security.Cryptography.Pkcs
+using namespace System.Security.Cryptography.X509Certificates
+using namespace System.Text
+
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
+$modulePath = Join-Path $PSScriptRoot '../lib/authenticode-inspector.psm1'
+[PSModuleInfo] $inspectorModule = Import-Module -Name $modulePath -Force -PassThru
+
 function Format-UtcTimestamp {
-    param([DateTimeOffset] $Timestamp)
+    param(
+        [Parameter(Mandatory)]
+        [DateTimeOffset] $Timestamp
+    )
+
     return $Timestamp.ToUniversalTime().ToString(
         "yyyy-MM-dd'T'HH:mm:ss.fffffff'Z'",
-        [Globalization.CultureInfo]::InvariantCulture
+        [CultureInfo]::InvariantCulture
     )
 }
 
 function Assert-Throws {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [scriptblock] $Action,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
         [string] $Description
     )
 
     try {
-        & $Action
+        $null = & $Action
     }
     catch {
         return
     }
+
     throw "Expected failure: $Description"
-}
-
-function Find-UniqueByteSequence {
-    param(
-        [Parameter(Mandatory = $true)]
-        [byte[]] $Haystack,
-
-        [Parameter(Mandatory = $true)]
-        [byte[]] $Needle
-    )
-
-    $matches = [Collections.Generic.List[int]]::new()
-    for ($offset = 0; $offset -le ($Haystack.Length - $Needle.Length); $offset++) {
-        $equal = $true
-        for ($index = 0; $index -lt $Needle.Length; $index++) {
-            if ($Haystack[$offset + $index] -ne $Needle[$index]) {
-                $equal = $false
-                break
-            }
-        }
-        if ($equal) {
-            $matches.Add($offset)
-        }
-    }
-    if ($matches.Count -ne 1) {
-        throw "Expected one byte-sequence match, got $($matches.Count)"
-    }
-    return $matches[0]
 }
 
 function Assert-AuthenticodeError {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [scriptblock] $Action,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [RenderPilot.Tooling.AuthenticodeInspectionError] $Code,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
         [string] $Description
     )
 
     try {
-        & $Action
+        $null = & $Action
     }
     catch {
-        $current = $_.Exception
-        while ($null -ne $current) {
-            if ($current -is [RenderPilot.Tooling.AuthenticodeInspectionException]) {
-                if ($current.Code -ne $Code) {
-                    throw "$Description`: expected $Code, got $($current.Code)"
+        $exception = $_.Exception
+
+        while ($null -ne $exception) {
+            if ($exception -is [RenderPilot.Tooling.AuthenticodeInspectionException]) {
+                if ($exception.Code -ne $Code) {
+                    throw "${Description}: expected $Code, got $($exception.Code)"
                 }
+
                 return
             }
-            $current = $current.InnerException
+
+            $exception = $exception.InnerException
         }
-        throw "$Description`: exception was not typed"
+
+        throw "${Description}: exception was not typed"
     }
+
     throw "Expected Authenticode failure: $Description"
 }
 
-$modulePath = Join-Path $PSScriptRoot '../lib/authenticode-inspector.psm1'
-Import-Module -Name $modulePath -Force
+function Find-UniqueByteSequence {
+    param(
+        [Parameter(Mandatory)]
+        [AllowEmptyCollection()]
+        [byte[]] $Haystack,
 
-$fixturePath = Join-Path $PSScriptRoot 'fixtures/authenticode-rfc3161-legacy.json'
-$fixtureJson = Get-Content -LiteralPath $fixturePath -Raw
-$convertFromJson = @{ InputObject = $fixtureJson }
-if ((Get-Command ConvertFrom-Json).Parameters.ContainsKey('DateKind')) {
-    $convertFromJson.DateKind = 'String'
-}
-$fixture = ConvertFrom-Json @convertFromJson
-$token = [Convert]::FromBase64String($fixture.timestamp_token_base64)
-$signedValue = [Convert]::FromBase64String($fixture.signed_value_base64)
-[RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161(
-    $token,
-    $signedValue
-)
-$timestampCms = [Security.Cryptography.Pkcs.SignedCms]::new()
-$timestampCms.Decode($token)
-$tokenInfo = $null
-$bytesConsumed = 0
-$decoded = [Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo]::TryDecode(
-    [ReadOnlyMemory[byte]]::new($timestampCms.ContentInfo.Content),
-    [ref]$tokenInfo,
-    [ref]$bytesConsumed
-)
-if (-not $decoded -or $bytesConsumed -ne $timestampCms.ContentInfo.Content.Length) {
-    throw "$($fixture.source): failed to decode verified TSTInfo"
-}
-$actual = Format-UtcTimestamp -Timestamp $tokenInfo.Timestamp
-if ($actual -ne $fixture.expected_timestamp) {
-    throw "$($fixture.source): expected $($fixture.expected_timestamp), got $actual"
+        [Parameter(Mandatory)]
+        [byte[]] $Needle
+    )
+
+    if ($Needle.Length -eq 0) {
+        throw 'Byte sequence must not be empty'
+    }
+
+    $matchCount = 0
+    $matchOffset = -1
+    $lastCandidateOffset = $Haystack.Length - $Needle.Length
+
+    for ($offset = 0; $offset -le $lastCandidateOffset; $offset++) {
+        $isMatch = $true
+
+        for ($index = 0; $index -lt $Needle.Length; $index++) {
+            if ($Haystack[$offset + $index] -ne $Needle[$index]) {
+                $isMatch = $false
+                break
+            }
+        }
+
+        if ($isMatch) {
+            $matchCount++
+            $matchOffset = $offset
+        }
+    }
+
+    if ($matchCount -ne 1) {
+        throw "Expected one byte-sequence match, got $matchCount"
+    }
+
+    return $matchOffset
 }
 
-$tamperedToken = [byte[]]$token.Clone()
-$tamperedToken[$tamperedToken.Length - 1] = $tamperedToken[$tamperedToken.Length - 1] -bxor 1
-Assert-Throws -Description 'tampered RFC 3161 token' -Action {
-    [void][RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161(
-        $tamperedToken,
+function Copy-BytesWithFlippedBit {
+    param(
+        [Parameter(Mandatory)]
+        [byte[]] $Bytes,
+
+        [Parameter(Mandatory)]
+        [int] $Offset
+    )
+
+    if ($Offset -lt 0 -or $Offset -ge $Bytes.Length) {
+        throw "Byte offset is outside the array: $Offset"
+    }
+
+    [byte[]] $copy = $Bytes.Clone()
+    $copy[$Offset] = $copy[$Offset] -bxor 1
+    return , $copy
+}
+
+function Copy-BytesWithFlippedSequenceBit {
+    param(
+        [Parameter(Mandatory)]
+        [byte[]] $Bytes,
+
+        [Parameter(Mandatory)]
+        [byte[]] $Sequence
+    )
+
+    $offset = Find-UniqueByteSequence -Haystack $Bytes -Needle $Sequence
+    return Copy-BytesWithFlippedBit -Bytes $Bytes -Offset $offset
+}
+
+function Read-JsonFixture {
+    param(
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Path
+    )
+
+    $json = Get-Content -LiteralPath $Path -Raw
+    $parameters = @{ InputObject = $json }
+
+    if ((Get-Command ConvertFrom-Json).Parameters.ContainsKey('DateKind')) {
+        $parameters.DateKind = 'String'
+    }
+
+    return ConvertFrom-Json @parameters
+}
+
+function New-TestIdentity {
+    param(
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Subject,
+
+        [DateTimeOffset] $Now = [DateTimeOffset]::UtcNow
+    )
+
+    $key = [RSA]::Create(2048)
+
+    try {
+        $request = [CertificateRequest]::new(
+            $Subject,
+            $key,
+            [HashAlgorithmName]::SHA256,
+            [RSASignaturePadding]::Pkcs1
+        )
+        $certificate = $request.CreateSelfSigned(
+            $Now.AddDays(-1),
+            $Now.AddDays(1)
+        )
+
+        return [pscustomobject]@{
+            Key         = $key
+            Certificate = $certificate
+        }
+    }
+    catch {
+        $key.Dispose()
+        throw
+    }
+}
+
+function Close-TestIdentity {
+    param(
+        [AllowNull()]
+        [object] $Identity
+    )
+
+    if ($null -eq $Identity) {
+        return
+    }
+
+    try {
+        $Identity.Certificate.Dispose()
+    }
+    finally {
+        $Identity.Key.Dispose()
+    }
+}
+
+function New-TestCmsSigner {
+    param(
+        [Parameter(Mandatory)]
+        [X509Certificate2] $Certificate,
+
+        [DateTime] $SigningTime
+    )
+
+    $signer = [CmsSigner]::new($Certificate)
+    $signer.IncludeOption = [X509IncludeOption]::EndCertOnly
+
+    if ($PSBoundParameters.ContainsKey('SigningTime')) {
+        $null = $signer.SignedAttributes.Add(
+            [Pkcs9SigningTime]::new($SigningTime)
+        )
+    }
+
+    return $signer
+}
+
+function New-TestSignedCms {
+    param(
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Content,
+
+        [Parameter(Mandatory)]
+        [X509Certificate2] $Certificate
+    )
+
+    $contentInfo = [ContentInfo]::new([Encoding]::UTF8.GetBytes($Content))
+    $cms = [SignedCms]::new($contentInfo, $false)
+    $cms.ComputeSignature((New-TestCmsSigner -Certificate $Certificate))
+    return $cms
+}
+
+function Add-TestCounterSignature {
+    param(
+        [Parameter(Mandatory)]
+        [SignedCms] $Cms,
+
+        [Parameter(Mandatory)]
+        [X509Certificate2] $Certificate,
+
+        [DateTime] $SigningTime
+    )
+
+    $signerParameters = @{ Certificate = $Certificate }
+    if ($PSBoundParameters.ContainsKey('SigningTime')) {
+        $signerParameters.SigningTime = $SigningTime
+    }
+
+    $signer = New-TestCmsSigner @signerParameters
+    $Cms.SignerInfos[0].ComputeCounterSignature($signer)
+}
+
+function Get-PrivateVerifiedSignerTimestamp {
+    param(
+        [Parameter(Mandatory)]
+        [PSModuleInfo] $Module,
+
+        [Parameter(Mandatory)]
+        [SignedCms] $Cms,
+
+        [AllowNull()]
+        [string] $TrustedTimestampSignerThumbprint,
+
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Path
+    )
+
+    return & $Module {
+        param($Cms, $TrustedTimestampSignerThumbprint, $Path)
+
+        $parameters = @{
+            Signer                           = $Cms.SignerInfos[0]
+            Cms                              = $Cms
+            SignerIndex                      = 0
+            TrustedTimestampSignerThumbprint = $TrustedTimestampSignerThumbprint
+            Path                             = $Path
+        }
+        Get-VerifiedSignerTimestamp @parameters
+    } $Cms $TrustedTimestampSignerThumbprint $Path
+}
+
+function Invoke-PrivateMatchingSignerRecords {
+    param(
+        [Parameter(Mandatory)]
+        [PSModuleInfo] $Module,
+
+        [Parameter(Mandatory)]
+        [object] $Signer,
+
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Thumbprint,
+
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Path
+    )
+
+    & $Module {
+        param($Signer, $Thumbprint, $Path)
+
+        $parameters = @{
+            Records    = @([pscustomobject]@{ Signer = $Signer })
+            Thumbprint = $Thumbprint
+            Path       = $Path
+        }
+        Get-MatchingSignerRecords @parameters
+    } $Signer $Thumbprint $Path
+}
+
+function Get-EncodedPkcs9Parts {
+    param(
+        [Parameter(Mandatory)]
+        [byte[]] $EncodedCms
+    )
+
+    $nativeType = [RenderPilot.Tooling.AuthenticodeTimestampNative]
+    $bindingFlags = [BindingFlags]::NonPublic -bor [BindingFlags]::Static
+    $extractSignerInfo = $nativeType.GetMethod('ExtractSignerInfo', $bindingFlags)
+    $extractCounterSignerInfo = $nativeType.GetMethod(
+        'ExtractCounterSignerInfo',
+        $bindingFlags
+    )
+
+    if ($null -eq $extractSignerInfo -or $null -eq $extractCounterSignerInfo) {
+        throw 'Required Authenticode reflection helpers were not found'
+    }
+
+    [object[]] $signerArguments = @([object] $EncodedCms, [int] 0)
+    [byte[]] $encodedSignerInfo = $extractSignerInfo.Invoke(
+        $null,
+        $signerArguments
+    )
+
+    [object[]] $counterSignerArguments = @([object] $encodedSignerInfo, [int] 0)
+    [byte[]] $encodedCounterSignerInfo = $extractCounterSignerInfo.Invoke(
+        $null,
+        $counterSignerArguments
+    )
+
+    return [pscustomobject]@{
+        SignerInfo        = $encodedSignerInfo
+        CounterSignerInfo = $encodedCounterSignerInfo
+    }
+}
+
+function Invoke-Rfc3161Tests {
+    $fixturePath = Join-Path $PSScriptRoot 'fixtures/authenticode-rfc3161-legacy.json'
+    $fixture = Read-JsonFixture -Path $fixturePath
+
+    [byte[]] $token = [Convert]::FromBase64String(
+        $fixture.timestamp_token_base64
+    )
+    [byte[]] $signedValue = [Convert]::FromBase64String(
+        $fixture.signed_value_base64
+    )
+
+    $verifiedSignerThumbprint = [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161AndGetSignerThumbprint(
+        $token,
         $signedValue
     )
-}
 
-$wrongSignedValue = [byte[]]$signedValue.Clone()
-$wrongSignedValue[0] = $wrongSignedValue[0] -bxor 1
-Assert-Throws -Description 'timestamp bound to a different Authenticode signature' -Action {
-    [void][RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161(
-        $token,
-        $wrongSignedValue
-    )
-}
+    $timestampCms = [SignedCms]::new()
+    $timestampCms.Decode($token)
+    $decodedSignerCertificate = $timestampCms.SignerInfos[0].Certificate
 
-$rsa = [Security.Cryptography.RSA]::Create(2048)
-try {
-    $request = [Security.Cryptography.X509Certificates.CertificateRequest]::new(
-        'CN=RenderPilot timestamp test',
-        $rsa,
-        [Security.Cryptography.HashAlgorithmName]::SHA256,
-        [Security.Cryptography.RSASignaturePadding]::Pkcs1
+    if ($null -eq $decodedSignerCertificate -or
+        -not [StringComparer]::OrdinalIgnoreCase.Equals(
+            $verifiedSignerThumbprint,
+            $decodedSignerCertificate.Thumbprint
+        )) {
+        throw "$($fixture.source): native RFC 3161 signer identity is inconsistent"
+    }
+
+    $tokenInfo = $null
+    [int] $bytesConsumed = 0
+    $content = $timestampCms.ContentInfo.Content
+    $decoded = [Rfc3161TimestampTokenInfo]::TryDecode(
+        [ReadOnlyMemory[byte]]::new($content),
+        [ref] $tokenInfo,
+        [ref] $bytesConsumed
     )
-    $certificate = $request.CreateSelfSigned(
-        [DateTimeOffset]::UtcNow.AddDays(-1),
-        [DateTimeOffset]::UtcNow.AddDays(1)
-    )
-    try {
-        $content = [Security.Cryptography.Pkcs.ContentInfo]::new(
-            [Text.Encoding]::UTF8.GetBytes('untimestamped CMS')
+
+    if (-not $decoded -or $bytesConsumed -ne $content.Length) {
+        throw "$($fixture.source): failed to decode verified TSTInfo"
+    }
+
+    $actualTimestamp = Format-UtcTimestamp -Timestamp $tokenInfo.Timestamp
+    if ($actualTimestamp -ne $fixture.expected_timestamp) {
+        throw (
+            "$($fixture.source): expected $($fixture.expected_timestamp), " +
+            "got $actualTimestamp"
         )
-        $cms = [Security.Cryptography.Pkcs.SignedCms]::new($content, $false)
-        $cmsSigner = [Security.Cryptography.Pkcs.CmsSigner]::new($certificate)
-        $cmsSigner.IncludeOption = [Security.Cryptography.X509Certificates.X509IncludeOption]::EndCertOnly
-        $cms.ComputeSignature($cmsSigner)
+    }
 
-        $module = Get-Module -Name authenticode-inspector
-        $timestamp = & $module {
-            param($Cms)
-            Get-VerifiedSignerTimestamp `
-                -Signer $Cms.SignerInfos[0] `
-                -Cms $Cms `
-                -SignerIndex 0 `
-                -Path '<synthetic untimestamped CMS>'
-        } $cms
+    [byte[]] $tamperedToken = Copy-BytesWithFlippedBit -Bytes $token -Offset ($token.Length - 1)
+    Assert-Throws -Description 'tampered RFC 3161 token' -Action {
+        [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161AndGetSignerThumbprint(
+            $tamperedToken,
+            $signedValue
+        )
+    }
+
+    [byte[]] $wrongSignedValue = Copy-BytesWithFlippedBit -Bytes $signedValue -Offset 0
+    Assert-Throws -Description 'timestamp bound to a different Authenticode signature' -Action {
+        [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161AndGetSignerThumbprint(
+            $token,
+            $wrongSignedValue
+        )
+    }
+}
+
+function Invoke-UntimestampedCmsTest {
+    param(
+        [Parameter(Mandatory)]
+        [PSModuleInfo] $Module
+    )
+
+    $identity = $null
+
+    try {
+        $identity = New-TestIdentity -Subject 'CN=RenderPilot timestamp test'
+        $cms = New-TestSignedCms -Content 'untimestamped CMS' -Certificate $identity.Certificate
+        $timestamp = Get-PrivateVerifiedSignerTimestamp -Module $Module -Cms $cms -Path '<synthetic untimestamped CMS>'
+
         if ($null -ne $timestamp) {
             throw "Untimestamped CMS unexpectedly produced $timestamp"
         }
     }
     finally {
-        $certificate.Dispose()
+        Close-TestIdentity -Identity $identity
     }
 }
-finally {
-    $rsa.Dispose()
-}
 
-$primaryRsa = [Security.Cryptography.RSA]::Create(2048)
-$timestampRsa = [Security.Cryptography.RSA]::Create(2048)
-$wrongRsa = [Security.Cryptography.RSA]::Create(2048)
-try {
-    $notBefore = [DateTimeOffset]::UtcNow.AddDays(-1)
-    $notAfter = [DateTimeOffset]::UtcNow.AddDays(1)
-    $primaryRequest = [Security.Cryptography.X509Certificates.CertificateRequest]::new(
-        'CN=RenderPilot primary signer fixture',
-        $primaryRsa,
-        [Security.Cryptography.HashAlgorithmName]::SHA256,
-        [Security.Cryptography.RSASignaturePadding]::Pkcs1
+function Invoke-Pkcs9Tests {
+    param(
+        [Parameter(Mandatory)]
+        [PSModuleInfo] $Module
     )
-    $timestampRequest = [Security.Cryptography.X509Certificates.CertificateRequest]::new(
-        'CN=RenderPilot timestamp signer fixture',
-        $timestampRsa,
-        [Security.Cryptography.HashAlgorithmName]::SHA256,
-        [Security.Cryptography.RSASignaturePadding]::Pkcs1
-    )
-    $wrongRequest = [Security.Cryptography.X509Certificates.CertificateRequest]::new(
-        'CN=RenderPilot wrong timestamp signer',
-        $wrongRsa,
-        [Security.Cryptography.HashAlgorithmName]::SHA256,
-        [Security.Cryptography.RSASignaturePadding]::Pkcs1
-    )
-    $primaryCertificate = $primaryRequest.CreateSelfSigned($notBefore, $notAfter)
-    $timestampCertificate = $timestampRequest.CreateSelfSigned($notBefore, $notAfter)
-    $wrongCertificate = $wrongRequest.CreateSelfSigned($notBefore, $notAfter)
+
+    $primaryIdentity = $null
+    $timestampIdentity = $null
+    $wrongIdentity = $null
+    $fixtureCertificate = $null
+
     try {
-        $counterSignedCms = [Security.Cryptography.Pkcs.SignedCms]::new(
-            [Security.Cryptography.Pkcs.ContentInfo]::new(
-                [Text.Encoding]::UTF8.GetBytes('PKCS#9 fixture')
-            ),
-            $false
-        )
-        $primarySigner = [Security.Cryptography.Pkcs.CmsSigner]::new(
-            $primaryCertificate
-        )
-        $primarySigner.IncludeOption = `
-            [Security.Cryptography.X509Certificates.X509IncludeOption]::EndCertOnly
-        $counterSignedCms.ComputeSignature($primarySigner)
+        $now = [DateTimeOffset]::UtcNow
+        $primaryIdentity = New-TestIdentity -Subject 'CN=RenderPilot primary signer fixture' -Now $now
+        $timestampIdentity = New-TestIdentity -Subject 'CN=RenderPilot timestamp signer fixture' -Now $now
+        $wrongIdentity = New-TestIdentity -Subject 'CN=RenderPilot wrong timestamp signer' -Now $now
 
-        $timestampSigner = [Security.Cryptography.Pkcs.CmsSigner]::new(
-            $timestampCertificate
+        $counterSignedCms = New-TestSignedCms -Content 'PKCS#9 fixture' -Certificate $primaryIdentity.Certificate
+        $legacySigningTime = [DateTime]::UtcNow
+        $legacySigningTime = $legacySigningTime.AddTicks(
+            - ($legacySigningTime.Ticks % [TimeSpan]::TicksPerSecond)
         )
-        $timestampSigner.IncludeOption = `
-            [Security.Cryptography.X509Certificates.X509IncludeOption]::EndCertOnly
-        [void]$timestampSigner.SignedAttributes.Add(
-            [Security.Cryptography.Pkcs.Pkcs9SigningTime]::new([DateTime]::UtcNow)
-        )
-        $counterSignedCms.SignerInfos[0].ComputeCounterSignature($timestampSigner)
+        Add-TestCounterSignature `
+            -Cms $counterSignedCms `
+            -Certificate $timestampIdentity.Certificate `
+            -SigningTime $legacySigningTime
 
         [byte[]] $encodedCms = $counterSignedCms.Encode()
         $counterSigner = $counterSignedCms.SignerInfos[0].CounterSignerInfos[0]
-        $nativeType = [RenderPilot.Tooling.AuthenticodeTimestampNative]
-        $nonPublicStatic = `
-            [Reflection.BindingFlags]::NonPublic -bor [Reflection.BindingFlags]::Static
-        $extractSignerInfo = $nativeType.GetMethod(
-            'ExtractSignerInfo',
-            $nonPublicStatic
-        )
-        $extractCounterSignerInfo = $nativeType.GetMethod(
-            'ExtractCounterSignerInfo',
-            $nonPublicStatic
-        )
-        [object[]] $signerArguments = @([object]$encodedCms, [int]0)
-        [byte[]] $encodedSignerInfo = $extractSignerInfo.Invoke(
-            $null,
-            $signerArguments
-        )
-        [object[]] $counterSignerArguments = @([object]$encodedSignerInfo, [int]0)
-        [byte[]] $encodedCounterSignerInfo = $extractCounterSignerInfo.Invoke(
-            $null,
-            $counterSignerArguments
-        )
+        $encodedParts = Get-EncodedPkcs9Parts -EncodedCms $encodedCms
+        [byte[]] $encodedSignerInfo = $encodedParts.SignerInfo
+        [byte[]] $encodedCounterSignerInfo = $encodedParts.CounterSignerInfo
         [byte[]] $encodedCertificate = $counterSigner.Certificate.Export(
-            [Security.Cryptography.X509Certificates.X509ContentType]::Cert
+            [X509ContentType]::Cert
         )
-        $fixtureCertificate = `
-            [Security.Cryptography.X509Certificates.X509Certificate2]::new(
-                $encodedCertificate
+        $fixtureCertificate = [X509Certificate2]::new($encodedCertificate)
+
+        [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
+            $encodedSignerInfo,
+            $encodedCounterSignerInfo,
+            $fixtureCertificate
+        )
+
+        $trustedTimestamp = Get-PrivateVerifiedSignerTimestamp `
+            -Module $Module `
+            -Cms $counterSignedCms `
+            -TrustedTimestampSignerThumbprint $timestampIdentity.Certificate.Thumbprint `
+            -Path '<trusted PKCS#9 fixture>'
+        $expectedTrustedTimestamp = Format-UtcTimestamp -Timestamp (
+            [DateTimeOffset] $legacySigningTime
+        )
+
+        if ($trustedTimestamp -cne $expectedTrustedTimestamp) {
+            throw (
+                'Trusted PKCS#9 timestamp was decoded incorrectly: ' +
+                "expected '$expectedTrustedTimestamp', got '$trustedTimestamp'"
             )
-        try {
-            [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
-                $encodedSignerInfo,
+        }
+
+        Assert-AuthenticodeError -Code UntrustedTimestamp -Description 'timestamp absent from Windows trust result' -Action {
+            Get-PrivateVerifiedSignerTimestamp `
+                -Module $Module `
+                -Cms $counterSignedCms `
+                -TrustedTimestampSignerThumbprint $null `
+                -Path '<untrusted PKCS#9 fixture>'
+        }
+
+        Assert-AuthenticodeError -Code UntrustedTimestamp -Description 'timestamp signer differs from Windows trust result' -Action {
+            Get-PrivateVerifiedSignerTimestamp `
+                -Module $Module `
+                -Cms $counterSignedCms `
+                -TrustedTimestampSignerThumbprint $wrongIdentity.Certificate.Thumbprint `
+                -Path '<mismatched PKCS#9 trust fixture>'
+        }
+
+        [byte[]] $originalSignature = $counterSignedCms.SignerInfos[0].GetSignature()
+        [byte[]] $tamperedOriginal = Copy-BytesWithFlippedSequenceBit -Bytes $encodedSignerInfo -Sequence $originalSignature
+        Assert-Throws -Description 'PKCS#9 countersignature bound to original digest' -Action {
+            [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
+                $tamperedOriginal,
                 $encodedCounterSignerInfo,
                 $fixtureCertificate
             )
-
-            [byte[]] $tamperedOriginal = $encodedSignerInfo.Clone()
-            [byte[]] $originalDigest = $counterSignedCms.SignerInfos[0].GetSignature()
-            $originalDigestOffset = `
-                Find-UniqueByteSequence $tamperedOriginal $originalDigest
-            $tamperedOriginal[$originalDigestOffset] = `
-                $tamperedOriginal[$originalDigestOffset] -bxor 1
-            Assert-Throws `
-                -Description 'PKCS#9 countersignature bound to original digest' `
-                -Action {
-                    [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
-                        $tamperedOriginal,
-                        $encodedCounterSignerInfo,
-                        $fixtureCertificate
-                    )
-                }
-
-            [byte[]] $tamperedCounterSigner = $encodedCounterSignerInfo.Clone()
-            [byte[]] $counterSignature = $counterSigner.GetSignature()
-            $counterSignatureOffset = `
-                Find-UniqueByteSequence $tamperedCounterSigner $counterSignature
-            $tamperedCounterSigner[$counterSignatureOffset] = `
-                $tamperedCounterSigner[$counterSignatureOffset] -bxor 1
-            Assert-Throws -Description 'tampered PKCS#9 countersignature' -Action {
-                [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
-                    $encodedSignerInfo,
-                    $tamperedCounterSigner,
-                    $fixtureCertificate
-                )
-            }
-
-            Assert-Throws `
-                -Description 'PKCS#9 countersigner certificate identity' `
-                -Action {
-                    [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
-                        $encodedSignerInfo,
-                        $encodedCounterSignerInfo,
-                        $wrongCertificate
-                    )
-                }
-        }
-        finally {
-            $fixtureCertificate.Dispose()
         }
 
-        Assert-AuthenticodeError `
-            -Code MalformedCms `
-            -Description 'malformed PKCS#9 CMS' `
-            -Action {
-                [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9Countersignature(
-                    [byte[]]@(1, 2, 3),
-                    0,
-                    0,
-                    $timestampCertificate
-                )
-            }
-
-        [byte[]] $tamperedCmsBytes = $encodedCms.Clone()
-        $cmsCounterSignatureOffset = `
-            Find-UniqueByteSequence $tamperedCmsBytes $counterSignature
-        $tamperedCmsBytes[$cmsCounterSignatureOffset] = `
-            $tamperedCmsBytes[$cmsCounterSignatureOffset] -bxor 1
-        $tamperedCms = [Security.Cryptography.Pkcs.SignedCms]::new()
-        $tamperedCms.Decode($tamperedCmsBytes)
-        Assert-AuthenticodeError `
-            -Code InvalidPkcs9 `
-            -Description 'typed invalid PKCS#9 crypto' `
-            -Action {
-                & $module {
-                    param($Cms)
-                    Get-VerifiedSignerTimestamp `
-                        -Signer $Cms.SignerInfos[0] `
-                        -Cms $Cms `
-                        -SignerIndex 0 `
-                        -Path '<tampered PKCS#9 fixture>'
-                } $tamperedCms
-            }
-
-        Assert-AuthenticodeError `
-            -Code SignerMismatch `
-            -Description 'typed signer certificate mismatch' `
-            -Action {
-                & $module {
-                    param($Signer)
-                    Get-MatchingSignerRecords `
-                        -Records @([pscustomobject]@{ Signer = $Signer }) `
-                        -Thumbprint ('0' * 40) `
-                        -Path '<signer mismatch fixture>'
-                } $counterSignedCms.SignerInfos[0]
-            }
-
-        $unsupportedCms = [Security.Cryptography.Pkcs.SignedCms]::new(
-            [Security.Cryptography.Pkcs.ContentInfo]::new(
-                [Text.Encoding]::UTF8.GetBytes('unsupported PKCS#9 fixture')
-            ),
-            $false
-        )
-        $unsupportedPrimarySigner = [Security.Cryptography.Pkcs.CmsSigner]::new(
-            $primaryCertificate
-        )
-        $unsupportedPrimarySigner.IncludeOption = `
-            [Security.Cryptography.X509Certificates.X509IncludeOption]::EndCertOnly
-        $unsupportedCms.ComputeSignature($unsupportedPrimarySigner)
-        $missingTimeSigner = [Security.Cryptography.Pkcs.CmsSigner]::new(
-            $timestampCertificate
-        )
-        $missingTimeSigner.IncludeOption = `
-            [Security.Cryptography.X509Certificates.X509IncludeOption]::EndCertOnly
-        $unsupportedCms.SignerInfos[0].ComputeCounterSignature($missingTimeSigner)
-        Assert-AuthenticodeError `
-            -Code UnsupportedStructure `
-            -Description 'PKCS#9 countersignature without signingTime' `
-            -Action {
-                & $module {
-                    param($Cms)
-                    Get-VerifiedSignerTimestamp `
-                        -Signer $Cms.SignerInfos[0] `
-                        -Cms $Cms `
-                        -SignerIndex 0 `
-                        -Path '<unsupported PKCS#9 fixture>'
-                } $unsupportedCms
-            }
-
-        $secondTimestampSigner = [Security.Cryptography.Pkcs.CmsSigner]::new(
-            $timestampCertificate
-        )
-        $secondTimestampSigner.IncludeOption = `
-            [Security.Cryptography.X509Certificates.X509IncludeOption]::EndCertOnly
-        [void]$secondTimestampSigner.SignedAttributes.Add(
-            [Security.Cryptography.Pkcs.Pkcs9SigningTime]::new(
-                [DateTime]::UtcNow.AddHours(-1)
+        [byte[]] $counterSignature = $counterSigner.GetSignature()
+        [byte[]] $tamperedCounterSigner = Copy-BytesWithFlippedSequenceBit -Bytes $encodedCounterSignerInfo -Sequence $counterSignature
+        Assert-Throws -Description 'tampered PKCS#9 countersignature' -Action {
+            [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
+                $encodedSignerInfo,
+                $tamperedCounterSigner,
+                $fixtureCertificate
             )
-        )
-        $counterSignedCms.SignerInfos[0].ComputeCounterSignature(
-            $secondTimestampSigner
-        )
-        Assert-AuthenticodeError `
-            -Code ConflictingTimestamps `
-            -Description 'conflicting verified PKCS#9 timestamps' `
-            -Action {
-                & $module {
-                    param($Cms)
-                    Get-VerifiedSignerTimestamp `
-                        -Signer $Cms.SignerInfos[0] `
-                        -Cms $Cms `
-                        -SignerIndex 0 `
-                        -Path '<conflicting PKCS#9 fixture>'
-                } $counterSignedCms
-            }
+        }
+
+        Assert-Throws -Description 'PKCS#9 countersigner certificate identity' -Action {
+            [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9CountersignatureEncoded(
+                $encodedSignerInfo,
+                $encodedCounterSignerInfo,
+                $wrongIdentity.Certificate
+            )
+        }
+
+        Assert-AuthenticodeError -Code MalformedCms -Description 'malformed PKCS#9 CMS' -Action {
+            [void] [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9Countersignature(
+                [byte[]] @(1, 2, 3),
+                0,
+                0,
+                $timestampIdentity.Certificate
+            )
+        }
+
+        [byte[]] $tamperedCmsBytes = Copy-BytesWithFlippedSequenceBit -Bytes $encodedCms -Sequence $counterSignature
+        $tamperedCms = [SignedCms]::new()
+        $tamperedCms.Decode($tamperedCmsBytes)
+        Assert-AuthenticodeError -Code InvalidPkcs9 -Description 'typed invalid PKCS#9 crypto' -Action {
+            Get-PrivateVerifiedSignerTimestamp `
+                -Module $Module `
+                -Cms $tamperedCms `
+                -TrustedTimestampSignerThumbprint $timestampIdentity.Certificate.Thumbprint `
+                -Path '<tampered PKCS#9 fixture>'
+        }
+
+        Assert-AuthenticodeError -Code SignerMismatch -Description 'typed signer certificate mismatch' -Action {
+            Invoke-PrivateMatchingSignerRecords -Module $Module -Signer $counterSignedCms.SignerInfos[0] -Thumbprint ('0' * 40) -Path '<signer mismatch fixture>'
+        }
+
+        $unsupportedCms = New-TestSignedCms -Content 'unsupported PKCS#9 fixture' -Certificate $primaryIdentity.Certificate
+        Add-TestCounterSignature -Cms $unsupportedCms -Certificate $timestampIdentity.Certificate
+        Assert-AuthenticodeError -Code UnsupportedStructure -Description 'PKCS#9 countersignature without signingTime' -Action {
+            Get-PrivateVerifiedSignerTimestamp `
+                -Module $Module `
+                -Cms $unsupportedCms `
+                -TrustedTimestampSignerThumbprint $timestampIdentity.Certificate.Thumbprint `
+                -Path '<unsupported PKCS#9 fixture>'
+        }
+
+        Add-TestCounterSignature -Cms $counterSignedCms -Certificate $timestampIdentity.Certificate -SigningTime ([DateTime]::UtcNow.AddHours(-1))
+        Assert-AuthenticodeError -Code ConflictingTimestamps -Description 'conflicting verified PKCS#9 timestamps' -Action {
+            Get-PrivateVerifiedSignerTimestamp `
+                -Module $Module `
+                -Cms $counterSignedCms `
+                -TrustedTimestampSignerThumbprint $timestampIdentity.Certificate.Thumbprint `
+                -Path '<conflicting PKCS#9 fixture>'
+        }
     }
     finally {
-        $primaryCertificate.Dispose()
-        $timestampCertificate.Dispose()
-        $wrongCertificate.Dispose()
+        if ($null -ne $fixtureCertificate) {
+            $fixtureCertificate.Dispose()
+        }
+        Close-TestIdentity -Identity $wrongIdentity
+        Close-TestIdentity -Identity $timestampIdentity
+        Close-TestIdentity -Identity $primaryIdentity
     }
-}
-finally {
-    $primaryRsa.Dispose()
-    $timestampRsa.Dispose()
-    $wrongRsa.Dispose()
 }
 
-$unsignedPath = Join-Path `
-    ([IO.Path]::GetTempPath()) `
-    "renderpilot-unsigned-$([Guid]::NewGuid().ToString('N')).dll"
-try {
-    Add-Type `
-        -TypeDefinition 'public static class RenderPilotUnsignedFixture { public static int Value => 1; }' `
-        -OutputAssembly $unsignedPath
-    $unsigned = Get-AuthenticodeMetadata -Path $unsignedPath -Mode AllowUnsigned
-    if ($unsigned.status -ne 'unsigned' -or $unsigned.Count -ne 1) {
-        throw 'AllowUnsigned mode did not return the canonical unsigned result'
-    }
-    Assert-AuthenticodeError `
-        -Code UnsignedNotAllowed `
-        -Description 'RequireSigned mode rejects unsigned files' `
-        -Action {
+function Invoke-UnsignedMetadataTests {
+    $fileName = "renderpilot-unsigned-$([Guid]::NewGuid().ToString('N')).dll"
+    $unsignedPath = Join-Path ([IO.Path]::GetTempPath()) $fileName
+
+    try {
+        $typeDefinition = @'
+public static class RenderPilotUnsignedFixture
+{
+    public static int Value => 1;
+}
+'@
+        $addTypeParameters = @{
+            TypeDefinition = $typeDefinition
+            OutputAssembly = $unsignedPath
+        }
+        $null = Add-Type @addTypeParameters
+
+        $unsigned = Get-AuthenticodeMetadata -Path $unsignedPath -Mode AllowUnsigned
+        if ($unsigned.status -ne 'unsigned' -or $unsigned.Count -ne 1) {
+            throw 'AllowUnsigned mode did not return the canonical unsigned result'
+        }
+
+        Assert-AuthenticodeError -Code UnsignedNotAllowed -Description 'RequireSigned mode rejects unsigned files' -Action {
             Get-AuthenticodeMetadata -Path $unsignedPath -Mode RequireSigned
         }
-}
-finally {
-    Remove-Item -LiteralPath $unsignedPath -Force
+    }
+    finally {
+        if ([IO.File]::Exists($unsignedPath)) {
+            [IO.File]::Delete($unsignedPath)
+        }
+    }
 }
 
-$pwshPath = (Get-Command pwsh -ErrorAction Stop).Source
-$inspectorPath = Join-Path $PSScriptRoot '../inspect-pe.ps1'
-$inspectionJson = & pwsh -NoLogo -NoProfile -File $inspectorPath `
-    -AuthenticodeMode RequireSigned `
-    $pwshPath
-if ($LASTEXITCODE -ne 0) {
-    throw "PE inspector failed for $pwshPath"
+function Invoke-InspectorIntegrationTest {
+    $pwshPath = (Get-Command pwsh -ErrorAction Stop).Source
+    $inspectorPath = Join-Path $PSScriptRoot '../inspect-pe.ps1'
+    $inspectionLines = & $pwshPath -NoLogo -NoProfile -File $inspectorPath -AuthenticodeMode RequireSigned $pwshPath
+    $exitCode = $LASTEXITCODE
+
+    if ($exitCode -ne 0) {
+        throw "PE inspector failed for ${pwshPath}: exit code $exitCode"
+    }
+
+    $inspectionJson = $inspectionLines -join [Environment]::NewLine
+    if ([string]::IsNullOrWhiteSpace($inspectionJson)) {
+        throw "PE inspector returned no output for $pwshPath"
+    }
+
+    $inspection = ConvertFrom-Json -InputObject $inspectionJson
+    if ($inspection.signature.status -ne 'signed' -or
+        [string]::IsNullOrWhiteSpace($inspection.signature.signed_at)) {
+        throw "PE inspector did not return a verified timestamp for $pwshPath"
+    }
 }
-$inspection = $inspectionJson | ConvertFrom-Json
-if ($inspection.signature.status -ne 'signed' -or
-    [string]::IsNullOrWhiteSpace($inspection.signature.signed_at)) {
-    throw "PE inspector did not return a verified timestamp for $pwshPath"
-}
+
+Invoke-Rfc3161Tests
+Invoke-UntimestampedCmsTest -Module $inspectorModule
+Invoke-Pkcs9Tests -Module $inspectorModule
+Invoke-UnsignedMetadataTests
+Invoke-InspectorIntegrationTest
 
 Write-Output 'Authenticode timestamp tests passed.'

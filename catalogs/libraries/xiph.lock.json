@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "pairs": [
+    {
+      "vorbis_version": "1.3.7",
+      "ogg_version": "1.3.6",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.6",
+          "tag_object_sha": "db03f952b25717fd5c4938817c9290837a4ae1b2",
+          "commit_sha": "be05b13e98b048f0b5a0f5fa8ce514d56db5f822",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.6.tar.xz",
+          "archive_sha256": "5c8253428e181840cd20d41f3ca16557a9cc04bad4a3d04cce84808677fa1061"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.7",
+          "tag_object_sha": "0c55fa38933fd4bdb7db7c298b27e7bf2f2c5e98",
+          "commit_sha": "0657aee69dec8508a0011f47f3b69d7538e9d262",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz",
+          "archive_sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.3.6",
+      "ogg_version": "1.3.5",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.5",
+          "tag_object_sha": "65b355cc20171010ecabf245e7b339aeab8ddbb9",
+          "commit_sha": "e1774cd77f471443541596e09078e78fdc342e4f",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.5.tar.xz",
+          "archive_sha256": "c4d91be36fc8e54deae7575241e03f4211eb102afb3fc0775fbbc1b740016705"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.6",
+          "tag_object_sha": "134a0326daab05ecb838da7b1c658d382e521e44",
+          "commit_sha": "d22c3ab5f633460abc2532feee60ca0892134cbf",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.6.tar.xz",
+          "archive_sha256": "af00bb5a784e7c9e69f56823de4637c350643deedaf333d0fa86ecdba6fcb415"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.3.5",
+      "ogg_version": "1.3.4",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.4",
+          "tag_object_sha": "3328abd152508614f7ce4cd491dc98d14eba7ffc",
+          "commit_sha": "bada45718453ac27b56773ae663f7e65112f6a6e",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.4.tar.xz",
+          "archive_sha256": "c163bc12bc300c401b6aa35907ac682671ea376f13ae0969a220f7ddf71893fe"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.5",
+          "tag_object_sha": "5d0647912efb8e16b494e02a44bcdf6d0ebd8a46",
+          "commit_sha": "f4093202cb226b360d0edf8a948aa71142cec657",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.5.tar.xz",
+          "archive_sha256": "54f94a9527ff0a88477be0a71c0bab09a4c3febe0ed878b24824906cd4b0e1d1"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.3.4",
+      "ogg_version": "1.3.3",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.3",
+          "tag_object_sha": "4085b8d0eeedc4708b9ffecd066723f6584647ca",
+          "commit_sha": "4380566a44b8d5e85ad511c9c17eb04197863ec5",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.3.tar.xz",
+          "archive_sha256": "4f3fc6178a533d392064f14776b23c397ed4b9f48f5de297aba73b643f955c08"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.4",
+          "tag_object_sha": "59c3e1263733a52791cf748087a0928b3f862423",
+          "commit_sha": "e6fe0d7455f37800b8d2fc3333084ac7df5b0424",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.4.tar.xz",
+          "archive_sha256": "2f05497d29195dc23ee952a24ee3973a74e6277569c4c2eca0ec5968e541f372"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.3.3",
+      "ogg_version": "1.3.2",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.2",
+          "tag_object_sha": "dda5b1b159c292879f31d774ca097acd500ffb81",
+          "commit_sha": "36606a06c60fabb1d87ec204ae4f14dfe1224362",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz",
+          "archive_sha256": "3f687ccdd5ac8b52d76328fbbfebc70c459a40ea891dbf3dccb74a210826e79b"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.3",
+          "tag_object_sha": "beb80fd33dc125d7aa9ddd6a2a3e64c6ca82a46d",
+          "commit_sha": "7798164043197d7e33f02de4353ce2aa5b248225",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.3.tar.xz",
+          "archive_sha256": "834c7d35a5ebf4e7b8ab60b0979f2b7f204ca66ff6829728e9d2a67f15347ebd"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.3.2",
+      "ogg_version": "1.3.1",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.1",
+          "tag_object_sha": "b87b3dedfabec48506c041ea72062a8461634192",
+          "commit_sha": "343548223db74a32cfdfa22a87d712c7cd838e81",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.1.tar.xz",
+          "archive_sha256": "3a5bad78d81afb78908326d11761c0fb1a0662ee7150b6ad587cc586838cdcfa"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.2",
+          "tag_object_sha": "682e2dd8274ba82712340cc40f2d8e3a74b7af78",
+          "commit_sha": "a1f20a587a8c97edb1feca565c85c89a29e46d43",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.2.tar.xz",
+          "archive_sha256": "43242e7c10253c0697da52dd0799bbad3ee1c392b99568f6c56a610712f1b916"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.3.1",
+      "ogg_version": "1.3.0",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.3.0",
+          "tag_object_sha": "7330ab2e35df046afaf4b3821435c93865b24bcf",
+          "commit_sha": "68c7f55cf6c1d04edb16578a684b4eea24b66435",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.3.0.tar.xz",
+          "archive_sha256": "231725029c843492914f24e74085e734bca6f1d6446ac72df39b0c3a9d4bc74b"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.3.1",
+          "tag_object_sha": "79ad19fc7f4e43125453be3108fcbd6b3921ba2f",
+          "commit_sha": "051fe43b23da443e7a66d37d531c632812fe5ffe",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.1.tar.bz2",
+          "archive_sha256": "42485c40cfe903dd21e12be01d151bd71c4e54403df492b0ecaf70f31254cfe0"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.2.3",
+      "ogg_version": "1.2.2",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.2.2",
+          "tag_object_sha": "1812ce9512083e983e49a3c84f926bfd70361709",
+          "commit_sha": "23d9360b46ae26303e9e544da52dca16938bdeff",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.2.2.tar.xz",
+          "archive_sha256": "559f1ea72a559520298e518865e488eb9a7185c6b9279f70602b01a87f7defed"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.2.3",
+          "tag_object_sha": "d487fbf9db1dac5cd81b2121ce8c0f94d31f4c4a",
+          "commit_sha": "d701313fc8b102737e5fdd3fdd4ec6b5b6410211",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.2.3.tar.bz2",
+          "archive_sha256": "dbf92706c840f214a14d256579cf627d115f91dc580731d0d13ba1abbb93492a"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.2.2",
+      "ogg_version": "1.2.1",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.2.1",
+          "tag_object_sha": "4eeffa058e91c5e60d2350b194b1ca6eac59a66b",
+          "commit_sha": "a1ee996cd7a7fa5c72a69b408368f17d88808e08",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.2.1.tar.xz",
+          "archive_sha256": "21e0a61e15e9dd294587bcd39d81fbe1998b27b1c525e15ecfaba94344f921b4"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.2.2",
+          "tag_object_sha": "3f8fb67a4378924673752169a4ad6a84e9e6cf37",
+          "commit_sha": "d84f58a741071ac233e395eef7c88cca0c9ab5a7",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.2.2.tar.bz2",
+          "archive_sha256": "462b00a99b51f1da4d1917e0c7cbe172c1c3aeb0e64c2d1c6f47f9568ab3f79f"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.2.0",
+      "ogg_version": "1.2.0",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.2.0",
+          "tag_object_sha": "0eaf6d2298cdb68a0b9339b587f6ae31b70b64f1",
+          "commit_sha": "3922fa4b590a3c7e75bb02751d8f022251839363",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.2.0.tar.gz",
+          "archive_sha256": "f30d983e238acd94e80ae551327ea2f83cdc330470b4188564bef28fec59eb69"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.2.0",
+          "tag_object_sha": "2188c493a33325f2ce156b0570203b2d40982ec3",
+          "commit_sha": "aa7deae7d778550e5e9e16d6318c72a1f5f42a99",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.2.0.tar.bz2",
+          "archive_sha256": "9ef4c57ab72081d31aa2cd256276c1c1b0081927cbf0e87b7f1066e1d112065b"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.1.2",
+      "ogg_version": "1.1.4",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.1.4",
+          "tag_object_sha": "77ee0ca662425acae1071e07f35c3a133a031ef0",
+          "commit_sha": "c60a5250dfc14da332290ac2894ad1ee0ecdceab",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.1.4.tar.gz",
+          "archive_sha256": "9354c183fd88417c2860778b60b7896c9487d8f6e58b9fec3fdbf971142ce103"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.1.2",
+          "tag_object_sha": "26ad7f5adeb50337915ee1fbbc24d9f74b9ad602",
+          "commit_sha": "8edf4bc65bf10cb1e5e3ea8623f5f6e6b9381875",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.1.2.tar.gz",
+          "archive_sha256": "3f7135ccbda589c251017912f5f5ec9da626c976d2376bcfda19ad6b9c4a6050"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.1.1",
+      "ogg_version": "1.1.3",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.1.3",
+          "tag_object_sha": "7127092cfed23b008245d18d0e7b5dd2c4046f4a",
+          "commit_sha": "3daf430dd4186a450caaaa8bd19b3ef2942cfe40",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.1.3.tar.gz",
+          "archive_sha256": "bae29e79fbc50bbedf1235852094b71c8c910a1ef0cd42fe4163b7b545630b65"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.1.1",
+          "tag_object_sha": "04409e2bc9a2fa2e7d89e3aa36adc54247b5cc31",
+          "commit_sha": "e852eb0c8135efbe7e3e1e80cb808108a33b86c5",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.1.1.tar.gz",
+          "archive_sha256": "fca2c35d8f1d10e93b80171cae26da1dd03b99fe854a1698d3c47d3b28a40b0f"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.1.0",
+      "ogg_version": "1.1.2",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.1.2",
+          "tag_object_sha": "768bc59a2958c74563f95f876c6705c51e6860c1",
+          "commit_sha": "115bedb885bbc9da769f624a0f471dde8cf61601",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.1.2.tar.gz",
+          "archive_sha256": "7934f3bf689c6ea0870bc73fcf40b00d5050044b03e558819a1ed333dc3cfadf"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.1.0",
+          "tag_object_sha": "891838eaf3a157099a956bc2cc84269082106508",
+          "commit_sha": "b11402bb7ac019a3728a02e4e8459bc6a24ea4ac",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.1.0.tar.gz",
+          "archive_sha256": "928c94d373ad9a4a04a38cfe0a849ddcc7a87ad06c8e8012931c37faefa19c00"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.0.1",
+      "ogg_version": "1.1.1",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": "v1.1.1",
+          "tag_object_sha": "b2dc0ae8109ef9971524f49ab616c614944f09af",
+          "commit_sha": "225631a3367076155733c57fdb9c4cfe5cfb7eac",
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.1.1.tar.gz",
+          "archive_sha256": "269f8f6b11b8ac737cbd8ed8cfa244cc51ca42b6da6683336ba1413d2a00ceb3"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.0.1",
+          "tag_object_sha": "3ac28c46a87f2bce4095245d78507c83e654bf1c",
+          "commit_sha": "b63c4d7189f861d51e4e22ff76ff8711753179b9",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.0.1.tar.gz",
+          "archive_sha256": "20b3cbdb4b05322d470404a7d2e8cdae1e0ce5372113218ae3cada3b29da70f7"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.0",
+      "ogg_version": "1.1",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": null,
+          "tag_object_sha": null,
+          "commit_sha": null,
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.1.tar.gz",
+          "archive_sha256": "01453d561255b5fcb361997904752860e4f8c6b9742f290578a44615fcc94356"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.0.0",
+          "tag_object_sha": "cd98528fd4d834af21e2072f4f25c5eb34c50848",
+          "commit_sha": "e195c84227e6c3ede1a964ae9a0a6650baec958c",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.0.tar.gz",
+          "archive_sha256": "8ef7507c22aaddb9d99a4341c5b3e720932541f4b75b08f19fce473f054c620f"
+        }
+      },
+      "builds": []
+    },
+    {
+      "vorbis_version": "1.0",
+      "ogg_version": "1.0",
+      "build_revision": 1,
+      "sources": {
+        "ogg": {
+          "repository": "xiph/ogg",
+          "tag": null,
+          "tag_object_sha": null,
+          "commit_sha": null,
+          "archive_url": "https://downloads.xiph.org/releases/ogg/libogg-1.0.tar.gz",
+          "archive_sha256": "920fa2a0924d66884825d36a2e843de069cfdf1af01945d05da25999bbd6396c"
+        },
+        "vorbis": {
+          "repository": "xiph/vorbis",
+          "tag": "v1.0.0",
+          "tag_object_sha": "cd98528fd4d834af21e2072f4f25c5eb34c50848",
+          "commit_sha": "e195c84227e6c3ede1a964ae9a0a6650baec958c",
+          "archive_url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.0.tar.gz",
+          "archive_sha256": "8ef7507c22aaddb9d99a4341c5b3e720932541f4b75b08f19fce473f054c620f"
+        }
+      },
+      "builds": []
+    }
+  ]
+}

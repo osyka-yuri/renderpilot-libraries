@@ -42,7 +42,7 @@ Commands:
   refresh <${REFRESH_VENDOR_LIST}> [--check|--write|--materialize-locked|--migrate-transport|--backfill-signatures]
   withdraw microsoft --package-id=<id> --version=<version> [--reason=<reason>] [--evidence=<text>] [--write]
   prune microsoft --package-id=<id> --version=<version> [--execute]
-  publish [--json-only|--assets-only] [--dry-run] [--force]
+  publish [--json-only|--assets-only] [--asset-manifest=<path>] [--dry-run] [--force]
   audit-published [--verbose] [--dry-run]`,
   generate: `Usage: node scripts/libraries.mjs generate [--check]
 
@@ -68,6 +68,7 @@ Commands:
 
   --json-only    Publish JSON snapshots and index; verify every referenced asset.
   --assets-only  Publish locally available immutable DLL and legal-document assets.
+  --asset-manifest  Restrict assets-only publication to a verified CI bundle manifest.
   --dry-run      Print ordered publication phases without network access.
   --force        Re-upload objects even when the remote copy matches.`,
   "audit-published": `Usage: node scripts/libraries.mjs audit-published [options]
@@ -191,11 +192,15 @@ function validatePublishArgs(args) {
   const { values } = parseCliArgs(args, {
     "json-only": { type: "boolean" },
     "assets-only": { type: "boolean" },
+    "asset-manifest": { type: "string" },
     "dry-run": { type: "boolean" },
     force: { type: "boolean" },
   });
   if (values["json-only"] && values["assets-only"]) {
     throw new UsageError("--json-only and --assets-only are mutually exclusive");
+  }
+  if (values["asset-manifest"] && !values["assets-only"]) {
+    throw new UsageError("--asset-manifest requires --assets-only");
   }
 }
 

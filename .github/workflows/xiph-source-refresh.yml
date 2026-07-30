@@ -1,0 +1,234 @@
+name: Xiph source refresh
+
+on:
+  schedule:
+    - cron: "40 6 * * 2"
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: "Number of pending reviewed source pairs to materialize (1-32)"
+        required: false
+        type: string
+        default: "16"
+      exceptional_rebuild:
+        description: "Create build_revision + 1 for one reviewed source tuple"
+        required: false
+        type: boolean
+        default: false
+      pair:
+        description: "Exceptional rebuild tuple as vorbis|ogg"
+        required: false
+        type: string
+
+concurrency:
+  group: xiph-source-refresh
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  build:
+    runs-on: windows-2025-vs2026
+    permissions:
+      contents: read
+    outputs:
+      status: ${{ steps.detect.outputs.status }}
+    env:
+      RUNNER_IMAGE_LABEL: windows-2025-vs2026
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Preserve the reviewed catalog baseline
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path .artifacts | Out-Null
+          Copy-Item -LiteralPath libraries/v1/vendors/xiph.json `
+            -Destination .artifacts/xiph-baseline-vendor.json
+      - name: Refresh stable history and select one bounded batch
+        id: detect
+        shell: pwsh
+        env:
+          INPUT_BATCH_SIZE: ${{ inputs.batch_size }}
+          INPUT_EXCEPTIONAL_REBUILD: ${{ inputs.exceptional_rebuild }}
+          INPUT_PAIR: ${{ inputs.pair }}
+        run: |
+          $batchSize = $env:INPUT_BATCH_SIZE
+          if ([string]::IsNullOrWhiteSpace($batchSize)) { $batchSize = '16' }
+          $arguments = @('scripts/refresh-xiph-lock.mjs', '--write', "--pending-limit=$batchSize")
+          if ($env:INPUT_EXCEPTIONAL_REBUILD -eq 'true') {
+            $arguments += @('--exceptional-rebuild', "--pair=$env:INPUT_PAIR")
+          }
+          node @arguments | Tee-Object -Variable result
+          if ($LASTEXITCODE -ne 0) { throw 'Xiph refresh failed' }
+          foreach ($name in @('status', 'pairs_json')) {
+            $line = ($result | Select-String "^$name=" | Select-Object -Last 1).Line
+            if ([string]::IsNullOrWhiteSpace($line)) {
+              throw "refresh did not emit $name"
+            }
+            $line >> $env:GITHUB_OUTPUT
+          }
+      - name: Build and finalize each reviewed pair
+        if: steps.detect.outputs.status != 'no_update'
+        shell: pwsh
+        env:
+          PENDING_PAIRS_JSON: ${{ steps.detect.outputs.pairs_json }}
+        run: |
+          $pairs = $env:PENDING_PAIRS_JSON | ConvertFrom-Json
+          foreach ($pair in $pairs) {
+            Write-Host "::group::Xiph source pair $pair"
+            try {
+              pwsh -NoLogo -NoProfile -File scripts/build-xiph-source.ps1 -PairKey $pair
+              if ($LASTEXITCODE -ne 0) { throw "Xiph build failed for $pair" }
+              node scripts/finalize-xiph-source.mjs
+              if ($LASTEXITCODE -ne 0) { throw "Xiph finalization failed for $pair" }
+            }
+            finally {
+              Write-Host '::endgroup::'
+            }
+          }
+      - name: Generate and validate catalog
+        if: steps.detect.outputs.status != 'no_update'
+        shell: pwsh
+        run: |
+          pnpm run validate:xiph
+          node scripts/validate-xiph-lock.mjs --baseline-git
+          pnpm run libraries:generate
+          pnpm run libraries:check
+          pnpm run validate
+          pnpm run test:windows
+      - name: Create reviewed CI bundles
+        if: steps.detect.outputs.status != 'no_update'
+        run: >-
+          node scripts/xiph-ci-bundle.mjs create
+          --assets-root=.artifacts/xiph-ci/assets
+          --catalog-root=.artifacts/xiph-ci/catalog
+          --baseline-vendor=.artifacts/xiph-baseline-vendor.json
+      - name: Upload immutable asset bundle
+        if: steps.detect.outputs.status != 'no_update'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: xiph-assets
+          path: .artifacts/xiph-ci/assets
+          if-no-files-found: error
+          retention-days: 2
+      - name: Upload catalog changes bundle
+        if: steps.detect.outputs.status != 'no_update'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: xiph-catalog
+          path: .artifacts/xiph-ci/catalog
+          if-no-files-found: error
+          retention-days: 2
+
+  publish-assets:
+    needs: build
+    if: needs.build.outputs.status != 'no_update'
+    runs-on: windows-2025-vs2026
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Download immutable asset bundle
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: xiph-assets
+          path: .ci-bundles/assets
+      - name: Download catalog changes bundle
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: xiph-catalog
+          path: .ci-bundles/catalog
+      - name: Verify and stage untrusted bundles without executing them
+        shell: pwsh
+        run: |
+          node scripts/xiph-ci-bundle.mjs verify `
+            --assets-root=.ci-bundles/assets `
+            --catalog-root=.ci-bundles/catalog
+          node scripts/xiph-ci-bundle.mjs apply-assets `
+            --assets-root=.ci-bundles/assets `
+            --catalog-root=.ci-bundles/catalog
+          node scripts/xiph-ci-bundle.mjs apply-catalog `
+            --catalog-root=.ci-bundles/catalog
+          pnpm run validate:xiph
+          pnpm run libraries:check
+          pnpm run validate
+      - name: Upload and HEAD-verify manifest assets
+        run: >-
+          node scripts/libraries.mjs publish --assets-only
+          --asset-manifest=.ci-bundles/assets/bundle-manifest.json
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+
+  open-pr:
+    needs: [build, publish-assets]
+    if: needs.build.outputs.status != 'no_update' && needs.publish-assets.result == 'success'
+    runs-on: windows-2025-vs2026
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Download catalog changes bundle
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: xiph-catalog
+          path: .ci-bundles/catalog
+      - name: Verify allowlist and generated catalog
+        shell: pwsh
+        run: |
+          node scripts/xiph-ci-bundle.mjs verify-catalog `
+            --catalog-root=.ci-bundles/catalog
+          node scripts/xiph-ci-bundle.mjs apply-catalog `
+            --catalog-root=.ci-bundles/catalog
+          pnpm run validate:xiph
+          node scripts/validate-xiph-lock.mjs --baseline-git
+          pnpm run libraries:check
+          pnpm run validate
+      - name: Open catalog pull request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: chore/xiph-source-${{ github.run_id }}
+          base: ${{ github.event.repository.default_branch }}
+          delete-branch: true
+          commit-message: "chore(libraries): refresh Xiph source build"
+          title: "chore(libraries): refresh Xiph Vorbis/Ogg source build"
+          body: |
+            Reproducible MSVC C17 builds from reviewed stable Vorbis/Ogg
+            history. Upstream code ran in an isolated read-only build job.
+            Immutable assets were independently verified, uploaded, and
+            HEAD-checked on a separate runner before this PR was opened.
+          add-paths: |
+            catalogs/libraries/xiph.lock.json
+            catalogs/libraries/xiph.json
+            libraries/v1/vendors/xiph.json
+            libraries/v1/index.json

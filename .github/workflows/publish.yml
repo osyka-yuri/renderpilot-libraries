@@ -20,7 +20,7 @@ jobs:
     name: Validate JSON against schemas
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
       - uses: ./.github/actions/setup-library-tools
@@ -29,6 +29,21 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MICROSOFT_NUGET_BASE_REF: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || 'HEAD^' }}
+
+  windows:
+    name: Windows PowerShell and PE checks
+    if: github.event_name == 'pull_request'
+    runs-on: windows-2025-vs2026
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: ./.github/actions/setup-library-tools
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm run test:windows
 
   publish:
     name: Publish immutable snapshots and index to R2
@@ -39,7 +54,7 @@ jobs:
       group: libraries-production-r2
       cancel-in-progress: false
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-library-tools
       - run: pnpm install --frozen-lockfile
       - name: Publish to R2 (JSON only)

@@ -61,8 +61,8 @@ test("production Microsoft R2 mutations share one serialized concurrency group",
     assert.match(source, /cancel-in-progress:\s+false/u);
     assert.match(source, /uses:\s+\.\/\.github\/actions\/setup-library-tools/u);
   }
-  assert.match(setup, /pnpm\/action-setup@v6/u);
-  assert.match(setup, /actions\/setup-node@v6/u);
+  assert.match(setup, /pnpm\/action-setup@[0-9a-f]{40}\s+# v6/u);
+  assert.match(setup, /actions\/setup-node@[0-9a-f]{40}\s+# v7\.0\.0/u);
   assert.match(withdrawal, /operation == 'withdraw'/u);
   assert.match(withdrawal, /operation == 'prune'/u);
   assert.match(withdrawal, /withdraw[\s\S]+--write/u);

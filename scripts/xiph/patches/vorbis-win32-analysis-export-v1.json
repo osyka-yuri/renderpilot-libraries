@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "patch_id": "vorbis-win32-analysis-export-v1",
+  "source": "vorbis",
+  "target": "win32/vorbis.def",
+  "description": "Backport upstream commit c5b59af00de64a474b5aa5190e8349125dbafd79 for the immutable Vorbis 1.2.3 source: do not export the ANALYSIS-only diagnostic symbol from release DLLs.",
+  "applies_to": {
+    "repository": "xiph/vorbis",
+    "commit_sha": "d701313fc8b102737e5fdd3fdd4ec6b5b6410211",
+    "archive_sha256": "dbf92706c840f214a14d256579cf627d115f91dc580731d0d13ba1abbb93492a"
+  },
+  "expected_original_sha256": "fcdd7c139818144edd33175742eb2d18d71e96418acc9e1b395a6d811e2f0859",
+  "expected_patched_sha256": "07981be6e4ad30e2905ab6eda089107b079c7cbb2132bb33e63dbb6ef6d2c774",
+  "apply_if_all_contains": ["_analysis_output_always"],
+  "replacements": [
+    {
+      "kind": "replace",
+      "from": "_analysis_output_always",
+      "to": ";_analysis_output_always"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "target_os": "windows",
+  "sources": ["ogg", "vorbis"],
+  "matrix": {
+    "architectures": ["X86", "X64"],
+    "profiles": ["plain", "lib", "abi"],
+    "topologies": {
+      "shared": ["vorbis", "vorbisfile", "vorbisenc", "ogg"],
+      "embedded_ogg": ["vorbis", "vorbisfile", "vorbisenc"]
+    }
+  },
+  "imports": {
+    "shared": {
+      "vorbis": { "regular": ["ogg"], "delay": [] },
+      "vorbisfile": { "regular": ["ogg", "vorbis"], "delay": [] },
+      "vorbisenc": { "regular": ["vorbis"], "delay": [] },
+      "ogg": { "regular": [], "delay": [] }
+    },
+    "embedded_ogg": {
+      "vorbis": { "regular": [], "delay": [] },
+      "vorbisfile": { "regular": ["vorbis"], "delay": [] },
+      "vorbisenc": { "regular": ["vorbis"], "delay": [] }
+    }
+  },
+  "required_security": {
+    "all": ["dynamic_base", "nx_compat", "guard_cf"],
+    "X86": [],
+    "X64": ["high_entropy_va"]
+  },
+  "aliases": {
+    "plain": {
+      "ogg": "ogg.dll",
+      "vorbis": "vorbis.dll",
+      "vorbisfile": "vorbisfile.dll",
+      "vorbisenc": "vorbisenc.dll"
+    },
+    "lib": {
+      "ogg": "libogg.dll",
+      "vorbis": "libvorbis.dll",
+      "vorbisfile": "libvorbisfile.dll",
+      "vorbisenc": "libvorbisenc.dll"
+    },
+    "abi": {
+      "ogg": "libogg-{abi_major}.dll",
+      "vorbis": "libvorbis-{abi_major}.dll",
+      "vorbisfile": "libvorbisfile-{abi_major}.dll",
+      "vorbisenc": "libvorbisenc-{abi_major}.dll"
+    }
+  },
+  "abi_majors": {
+    "ogg": 0,
+    "vorbis": 0,
+    "vorbisfile": 3,
+    "vorbisenc": 2
+  },
+  "allowed_system_imports": [
+    "advapi32.dll",
+    "bcrypt.dll",
+    "kernel32.dll",
+    "ntdll.dll",
+    "ole32.dll",
+    "oleaut32.dll",
+    "shell32.dll",
+    "user32.dll",
+    "ws2_32.dll"
+  ],
+  "allowed_system_import_prefixes": ["api-ms-win-", "ext-ms-win-"],
+  "forbidden_imports": [
+    "api-ms-win-crt-*.dll",
+    "msvcp*.dll",
+    "msvcr*.dll",
+    "ucrtbase.dll",
+    "vcruntime*.dll"
+  ],
+  "reproducibility": {
+    "build_count": 2,
+    "comparison": "raw_sha256"
+  },
+  "toolchain": {
+    "publication_runner_image_pattern": "^windows-2025-vs2026@.+$",
+    "integration_runner_image_pattern": "^local-windows@.+$"
+  },
+  "publication": {
+    "allowed_suffixes": [".dll.zst", ".txt", ".json"],
+    "forbidden_suffixes": [".pdb", ".tar", ".tar.bz2", ".tar.gz", ".tar.xz", ".zip"]
+  }
+}

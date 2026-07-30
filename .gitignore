@@ -19,5 +19,6 @@ Thumbs.db
 **/extract/
 
 # Local generator outputs
+.artifacts/
 scripts/.cache/
 catalogs/addons/*/unmatched.json

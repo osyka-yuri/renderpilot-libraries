@@ -72,7 +72,12 @@ export async function buildLibraryCatalogPlan(inputOverrides = new Map()) {
       const snapshot = buildVendorSnapshot(source);
       return { vendor, snapshot, body: jsonDocument(snapshot) };
     });
-  const index = buildLibraryIndex(vendorDocuments);
+  const indexedVendorDocuments = vendorDocuments.filter(
+    ({ vendor, snapshot }) =>
+      !vendor.indexWhenPopulated ||
+      (snapshot.packages.length !== 0 && snapshot.artifacts.length !== 0),
+  );
+  const index = buildLibraryIndex(indexedVendorDocuments);
   const values = [
     ...vendorDocuments.map(({ vendor, snapshot }) => ({
       file: vendor.outputFile,

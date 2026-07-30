@@ -31,6 +31,18 @@ test("catalog generation plan is deterministic and index-last", async () => {
   const body = left.outputs[0].body;
   body[0] ^= 1;
   assert.equal(body.equals(left.outputs[0].body), false);
+  const index = left.outputs.at(-1).value;
+  assert.equal(
+    index.vendors.some(({ vendor_id }) => vendor_id === "xiph"),
+    false,
+    "an empty staged vendor must not become a production index entry",
+  );
+  assert.ok(
+    left.outputs.some(
+      ({ relativeFile }) => relativeFile === "libraries/v1/vendors/xiph.json",
+    ),
+    "the staged snapshot remains generated and schema-checked",
+  );
 });
 
 test("lock override rebuilds the Microsoft snapshot and index coherently", async () => {

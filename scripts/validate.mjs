@@ -5,11 +5,10 @@
 
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
 import { repoRoot, schemaChecks } from "./catalog.mjs";
 import { errorMessage } from "./lib/common.mjs";
 import { runCliMain } from "./lib/cli-main.mjs";
+import { compileJsonSchema } from "./lib/json-schema-validation.mjs";
 
 const STATUS = {
   check: "•",
@@ -48,19 +47,6 @@ async function loadJson(relPath) {
   } catch (error) {
     throw new Error(`${relPath}: invalid JSON — ${errorMessage(error)}`);
   }
-}
-
-function createAjv() {
-  const ajv = new Ajv2020({
-    allErrors: true,
-
-    // Kept intentionally for compatibility with existing schemas. Once the
-    // schemas are strict-clean, this can be changed to `true`.
-    strict: false,
-  });
-
-  addFormats(ajv);
-  return ajv;
 }
 
 function assertSchemaChecks(checks) {
@@ -113,7 +99,7 @@ async function getValidator(schemaRelPath, validators) {
   }
 
   const schema = await loadJson(schemaRelPath);
-  const validate = createAjv().compile(schema);
+  const validate = compileJsonSchema(schema);
 
   validators.set(schemaRelPath, validate);
   return validate;

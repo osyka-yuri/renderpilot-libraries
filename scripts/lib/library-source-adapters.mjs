@@ -134,7 +134,16 @@ export function assertLibraryVendorRegistry(vendors) {
       if (vendor.refreshName !== undefined || vendor.profile !== undefined) {
         throw new Error(`${vendorId}: curated source cannot define refreshName or profile`);
       }
+      if (
+        vendor.indexWhenPopulated !== undefined &&
+        typeof vendor.indexWhenPopulated !== "boolean"
+      ) {
+        throw new Error(`${vendorId}.indexWhenPopulated must be boolean`);
+      }
     } else {
+      if (vendor.indexWhenPopulated !== undefined) {
+        throw new Error(`${vendorId}: generated source cannot define indexWhenPopulated`);
+      }
       const sourceKind = generatedLibrarySourceKind(vendor.sourceKind);
       if (!BUILDERS[vendor.sourceKind]) {
         throw new Error(`${vendorId}: no source builder for ${vendor.sourceKind}`);

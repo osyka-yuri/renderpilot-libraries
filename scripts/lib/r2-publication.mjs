@@ -1,34 +1,43 @@
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
-import { promisify } from "node:util";
-import { zstdDecompress } from "node:zlib";
 import { HeadObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 
 import { libraryIndexFile, publishedJsonDocuments, r2, repoRoot } from "../catalog.mjs";
 import { UsageError, errorMessage } from "./common.mjs";
 import { parseCliArgs, wantsHelp } from "./cli-args.mjs";
 import { md5Hex, sha256Hex } from "./hash.mjs";
+import { validateLibraryAssetPayload } from "./library-asset-validation.mjs";
 import {
   LIBRARY_INDEX_KEY,
-  assertLegalDocumentPayload,
   assertLibraryIndex,
   assertVendorSnapshot,
-  legalDocumentObjectKey,
 } from "./library-catalog.mjs";
+import {
+  BUNDLE_MANIFEST_FILE,
+  XIPH_ASSET_BUNDLE_KIND,
+  verifyBundle,
+} from "./xiph-ci-bundle.mjs";
 
 const CDN_DIR = path.join(repoRoot, "cdn");
 const INDEX_FILE = path.join(repoRoot, libraryIndexFile);
 const VENDOR_DIR = path.join(repoRoot, "libraries", "v1", "vendors");
 const SINGLE_PART_MD5_ETAG = /^[0-9a-f]{32}$/;
-const zstdDecompressAsync = promisify(zstdDecompress);
 
 export function parsePublicationArgs(argv) {
   if (wantsHelp(argv)) {
-    return { jsonOnly: false, assetsOnly: false, dryRun: false, force: false, help: true };
+    return {
+      jsonOnly: false,
+      assetsOnly: false,
+      assetManifest: null,
+      dryRun: false,
+      force: false,
+      help: true,
+    };
   }
   const { values } = parseCliArgs(argv, {
     "json-only": { type: "boolean" },
     "assets-only": { type: "boolean" },
+    "asset-manifest": { type: "string" },
     "dry-run": { type: "boolean" },
     force: { type: "boolean" },
     help: { type: "boolean", short: "h" },
@@ -38,9 +47,14 @@ export function parsePublicationArgs(argv) {
   if (jsonOnly && assetsOnly) {
     throw new UsageError("--json-only and --assets-only are mutually exclusive");
   }
+  const assetManifest = values["asset-manifest"]?.trim() || null;
+  if (assetManifest !== null && !assetsOnly) {
+    throw new UsageError("--asset-manifest requires --assets-only");
+  }
   return {
     jsonOnly,
     assetsOnly,
+    assetManifest,
     dryRun: Boolean(values["dry-run"]),
     force: Boolean(values.force),
     help: false,
@@ -86,7 +100,11 @@ export async function publishResolvedCatalog(s3, options, phases) {
   console.log(`\nDone: ${summary.uploaded} uploaded, ${summary.skipped} already current.`);
 }
 
-export async function resolvePublicationPhases({ jsonOnly, assetsOnly }) {
+export async function resolvePublicationPhases({
+  jsonOnly,
+  assetsOnly,
+  assetManifest = null,
+}) {
   const indexSnapshot = await readJsonSnapshot(INDEX_FILE);
   assertLibraryIndex(indexSnapshot.value);
   const vendorSnapshots = await Promise.all(
@@ -121,6 +139,12 @@ export async function resolvePublicationPhases({ jsonOnly, assetsOnly }) {
     sha256: asset.storedSha256,
   }));
   let assetExpectations = jsonOnly ? [] : [...expectedAssets.values()];
+  if (assetManifest !== null) {
+    assetExpectations = filterManifestAssets(
+      assetExpectations,
+      await readAssetManifest(assetManifest),
+    );
+  }
   if (assetsOnly) {
     assetExpectations = (
       await Promise.all(
@@ -137,8 +161,7 @@ export async function resolvePublicationPhases({ jsonOnly, assetsOnly }) {
     abs: path.join(CDN_DIR, ...expected.key.split("/")),
     requiredChecksum: expected.storedSha256,
     checksumLabel: "vendor snapshot",
-    expectedBinary: expected.kind === "dll" ? expected : undefined,
-    expectedLegal: expected.kind === "legal" ? expected : undefined,
+    expectedAsset: expected,
     expectedSize: expected.storedSize,
   }));
 
@@ -175,6 +198,43 @@ export async function resolvePublicationPhases({ jsonOnly, assetsOnly }) {
     index,
     requiredAssets,
   };
+}
+
+async function readAssetManifest(file) {
+  const absolute = path.resolve(repoRoot, file);
+  if (path.basename(absolute) !== BUNDLE_MANIFEST_FILE) {
+    throw new Error(`asset manifest must be named ${BUNDLE_MANIFEST_FILE}`);
+  }
+  const manifest = await verifyBundle(path.dirname(absolute), XIPH_ASSET_BUNDLE_KIND);
+  return manifest.files.map((record) => {
+    if (!record.path.startsWith("cdn/") || record.path.length === "cdn/".length) {
+      throw new Error(`unsafe manifest asset path ${record.path}`);
+    }
+    return {
+      key: record.path.slice("cdn/".length),
+      size: record.size_bytes,
+      sha256: record.sha256,
+    };
+  });
+}
+
+function filterManifestAssets(expectations, manifestAssets) {
+  const byKey = new Map(expectations.map((expected) => [expected.key, expected]));
+  const selected = [];
+  for (const manifest of manifestAssets) {
+    const expected = byKey.get(manifest.key);
+    if (!expected) {
+      throw new Error(`${manifest.key}: manifest asset is absent from the catalog`);
+    }
+    if (
+      expected.storedSize !== manifest.size ||
+      expected.storedSha256 !== manifest.sha256
+    ) {
+      throw new Error(`${manifest.key}: manifest identity differs from the catalog`);
+    }
+    selected.push(expected);
+  }
+  return selected;
 }
 
 function collectAssetExpectations(vendorSnapshots) {
@@ -291,48 +351,10 @@ async function readLocalObject(object) {
       `${object.key}: local size mismatch (expected ${object.expectedSize}, got ${local.size})`,
     );
   }
-  if (object.expectedBinary) await validateBinaryPayload(local, object.expectedBinary);
-  if (object.expectedLegal) {
-    if (
-      object.expectedLegal.storedSha256 &&
-      object.key !==
-        legalDocumentObjectKey(
-          object.expectedLegal.storedSha256,
-          object.expectedLegal.format,
-        )
-    ) {
-      throw new Error(`${object.key}: legal object key does not match content identity`);
-    }
-    assertLegalDocumentPayload(local.body, object.expectedLegal.format, object.key);
+  if (object.expectedAsset) {
+    await validateLibraryAssetPayload(object.key, local.body, object.expectedAsset);
   }
   return local;
-}
-
-async function validateBinaryPayload(local, expected) {
-  if (local.size !== expected.storedSize) {
-    throw new Error(
-      `${local.key}: compressed size mismatch (expected ${expected.storedSize}, got ${local.size})`,
-    );
-  }
-  let dll;
-  try {
-    dll = await zstdDecompressAsync(local.body, {
-      maxOutputLength: expected.dllSize + 1,
-    });
-  } catch (error) {
-    throw new Error(`${local.key}: invalid ZST payload`, { cause: error });
-  }
-  if (dll.length !== expected.dllSize) {
-    throw new Error(
-      `${local.key}: DLL size mismatch (expected ${expected.dllSize}, got ${dll.length})`,
-    );
-  }
-  const dllSha256 = sha256Hex(dll);
-  if (dllSha256 !== expected.dllSha256) {
-    throw new Error(
-      `${local.key}: DLL SHA-256 mismatch (expected ${expected.dllSha256}, got ${dllSha256})`,
-    );
-  }
 }
 
 async function putObject(s3, local) {
@@ -477,10 +499,11 @@ function printDryRun(phases, options) {
 }
 
 export function printPublicationHelp() {
-  console.error(`Usage: node scripts/publish-library-catalog.mjs [--json-only | --assets-only] [--dry-run] [--force]
+  console.error(`Usage: node scripts/publish-library-catalog.mjs [--json-only | --assets-only] [--asset-manifest=<path>] [--dry-run] [--force]
 
   --json-only    Publish JSON snapshots and index; verify every referenced asset.
   --assets-only  Publish locally available immutable DLL and legal-document assets.
+  --asset-manifest  Restrict assets-only publication to one verified CI bundle.
   --dry-run      Print ordered publication phases without network access.
   --force        Re-upload objects even when the remote copy matches.`);
 }

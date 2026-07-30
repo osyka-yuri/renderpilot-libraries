@@ -28,6 +28,24 @@ test("publication modes are mutually exclusive", () => {
     () => parsePublicationArgs(["--json-only", "--assets-only"]),
     /mutually exclusive/,
   );
+  assert.throws(
+    () => parsePublicationArgs(["--asset-manifest=bundle-manifest.json"]),
+    /requires --assets-only/u,
+  );
+  assert.deepEqual(
+    parsePublicationArgs([
+      "--assets-only",
+      "--asset-manifest=.ci-bundles/assets/bundle-manifest.json",
+    ]),
+    {
+      jsonOnly: false,
+      assetsOnly: true,
+      assetManifest: ".ci-bundles/assets/bundle-manifest.json",
+      dryRun: false,
+      force: false,
+      help: false,
+    },
+  );
 });
 
 test("assets-only plan retains every catalog asset as a remote prerequisite", async () => {
@@ -93,8 +111,10 @@ test("DLL asset preflight rejects a wrong DLL before the first PUT", async () =>
       key: "runtime.dll.zst",
       abs: binary,
       requiredChecksum: null,
-      expectedBinary: {
+      expectedAsset: {
+        kind: "dll",
         storedSize: (await readFile(binary)).length,
+        storedSha256: sha256Hex(await readFile(binary)),
         dllSize: wrongDll.length,
         dllSha256: "a".repeat(64),
       },
@@ -127,8 +147,10 @@ test("DLL asset preflight bounds decompressed output before the first PUT", asyn
           {
             key: "runtime.dll.zst",
             abs: binary,
-            expectedBinary: {
+            expectedAsset: {
+              kind: "dll",
               storedSize: (await readFile(binary)).length,
+              storedSha256: sha256Hex(await readFile(binary)),
               dllSize: 8,
               dllSha256: "a".repeat(64),
             },
@@ -184,7 +206,12 @@ test("legal asset preflight rejects bytes that contradict the declared format", 
             abs: otherJson,
             requiredChecksum: sha256Hex(bytes),
             expectedSize: bytes.length,
-            expectedLegal: { format: "pdf" },
+            expectedAsset: {
+              kind: "legal",
+              storedSize: bytes.length,
+              storedSha256: sha256Hex(bytes),
+              format: "pdf",
+            },
           },
         ],
         jsonBeforeIndex: [],
@@ -255,6 +282,7 @@ test("legal identity stays bound from lock through source, snapshot, local file,
   const localFile = path.join(temporary, ...persisted.object_key.split("/"));
   const expectedLegal = {
     kind: "legal",
+    storedSize: snapshotDocument.content.size_bytes,
     storedSha256: snapshotDocument.content.sha256,
     format: snapshotDocument.format,
   };
@@ -272,7 +300,7 @@ test("legal identity stays bound from lock through source, snapshot, local file,
         abs: localFile,
         requiredChecksum: snapshotDocument.content.sha256,
         expectedSize: snapshotDocument.content.size_bytes,
-        expectedLegal,
+        expectedAsset: expectedLegal,
       },
     ],
     jsonBeforeIndex: [],
@@ -311,7 +339,7 @@ test("legal identity stays bound from lock through source, snapshot, local file,
             abs: localFile,
             requiredChecksum: required.sha256,
             expectedSize: badSize.size,
-            expectedLegal,
+            expectedAsset: { ...expectedLegal, storedSize: badSize.size },
           },
         ],
         jsonBeforeIndex: [],
@@ -332,7 +360,7 @@ test("legal identity stays bound from lock through source, snapshot, local file,
             abs: localFile,
             requiredChecksum: required.sha256,
             expectedSize: required.size,
-            expectedLegal,
+            expectedAsset: expectedLegal,
           },
         ],
         jsonBeforeIndex: [],

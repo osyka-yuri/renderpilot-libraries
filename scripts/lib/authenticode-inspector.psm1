@@ -1,9 +1,23 @@
 Set-StrictMode -Version Latest
 
-$nativeSource = Join-Path $PSScriptRoot 'authenticode-timestamp-native.cs'
-if ($null -eq ('RenderPilot.Tooling.AuthenticodeTimestampNative' -as [type])) {
-    Add-Type -Path $nativeSource
+function Initialize-AuthenticodeTimestampNative {
+    $typeName = 'RenderPilot.Tooling.AuthenticodeTimestampNative'
+    if ($null -ne ($typeName -as [type])) {
+        return
+    }
+
+    $sourcePath = Join-Path $PSScriptRoot 'authenticode-timestamp-native.cs'
+    if (-not [IO.File]::Exists($sourcePath)) {
+        throw [IO.FileNotFoundException]::new(
+            'Authenticode timestamp native source was not found.',
+            $sourcePath
+        )
+    }
+
+    Add-Type -Path $sourcePath -ErrorAction Stop
 }
+
+Initialize-AuthenticodeTimestampNative
 
 $script:Rfc3161TimestampOid = '1.3.6.1.4.1.311.3.3.1'
 $script:Rfc3161TstInfoOid = '1.2.840.113549.1.9.16.1.4'
@@ -11,14 +25,21 @@ $script:Pkcs9CounterSignatureOid = '1.2.840.113549.1.9.6'
 $script:Pkcs9SigningTimeOid = '1.2.840.113549.1.9.5'
 $script:NestedAuthenticodeSignatureOid = '1.3.6.1.4.1.311.2.4.1'
 $script:PkcsSignedDataCertificateType = 0x0002
+$script:WinCertificateHeaderSize = 8L
+$script:WinCertificateAlignment = 8L
 $script:MaximumNestedSignatureDepth = 4
+$script:MaximumCertificateTableBytes = 16MB
+$script:MaximumWinCertificateEntries = 32
+$script:MaximumSignerRecords = 64
+$script:MaximumTimestampRecordsPerSigner = 16
+$script:UtcTimestampFormat = "yyyy-MM-dd'T'HH:mm:ss.fffffff'Z'"
 
 function New-AuthenticodeInspectionException {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [RenderPilot.Tooling.AuthenticodeInspectionError] $Code,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Message,
 
         [Exception] $InnerException
@@ -30,6 +51,7 @@ function New-AuthenticodeInspectionException {
             $Message
         )
     }
+
     return [RenderPilot.Tooling.AuthenticodeInspectionException]::new(
         $Code,
         $Message,
@@ -37,115 +59,194 @@ function New-AuthenticodeInspectionException {
     )
 }
 
-function Find-AuthenticodeInspectionException {
+function Get-InnerAuthenticodeInspectionException {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Exception] $Exception
     )
 
-    $current = $Exception
-    while ($null -ne $current) {
+    for ($current = $Exception; $null -ne $current; $current = $current.InnerException) {
         if ($current -is [RenderPilot.Tooling.AuthenticodeInspectionException]) {
             return $current
         }
-        $current = $current.InnerException
     }
+
     return $null
 }
 
 function Format-UtcTimestamp {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [DateTimeOffset] $Timestamp
     )
 
     return $Timestamp.ToUniversalTime().ToString(
-        "yyyy-MM-dd'T'HH:mm:ss.fffffff'Z'",
+        $script:UtcTimestampFormat,
         [Globalization.CultureInfo]::InvariantCulture
     )
 }
 
-function Read-EmbeddedAuthenticodeCms {
+function Get-CmsAttributesByOid {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
+        [AllowEmptyCollection()]
+        [Security.Cryptography.CryptographicAttributeObjectCollection] $Attributes,
+
+        [Parameter(Mandatory)]
+        [string] $Oid
+    )
+
+    foreach ($attribute in $Attributes) {
+        if ($attribute.Oid.Value -eq $Oid) {
+            $attribute
+        }
+    }
+}
+
+function ConvertFrom-EncodedCms {
+    param(
+        [Parameter(Mandatory)]
+        [byte[]] $EncodedMessage,
+
+        [Parameter(Mandatory)]
+        [string] $ErrorMessage
+    )
+
+    $cms = [Security.Cryptography.Pkcs.SignedCms]::new()
+    try {
+        $cms.Decode($EncodedMessage)
+    }
+    catch {
+        throw (New-AuthenticodeInspectionException -Code MalformedCms -Message $ErrorMessage -InnerException $_.Exception)
+    }
+
+    return $cms
+}
+
+function Get-PeCertificateTableRange {
+    param(
+        [Parameter(Mandatory)]
+        [IO.Stream] $Stream,
+
+        [Parameter(Mandatory)]
+        [string] $Path
+    )
+
+    $peReader = [Reflection.PortableExecutable.PEReader]::new(
+        $Stream,
+        [Reflection.PortableExecutable.PEStreamOptions]::LeaveOpen
+    )
+
+    try {
+        $peHeader = $peReader.PEHeaders.PEHeader
+        if ($null -eq $peHeader) {
+            throw "Missing PE optional header: $Path"
+        }
+
+        $directory = $peHeader.CertificateTableDirectory
+        $offset = [long] $directory.RelativeVirtualAddress
+        $size = [long] $directory.Size
+    }
+    finally {
+        $peReader.Dispose()
+    }
+
+    if ($offset -le 0 -or $size -lt $script:WinCertificateHeaderSize) {
+        throw "Missing embedded Authenticode certificate table: $Path"
+    }
+
+    if ($offset -gt $Stream.Length -or $size -gt ($Stream.Length - $offset)) {
+        throw "Authenticode certificate table is outside the file: $Path"
+    }
+
+    if ($size -gt $script:MaximumCertificateTableBytes) {
+        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode certificate table exceeds $($script:MaximumCertificateTableBytes) bytes: $Path")
+    }
+
+    return [pscustomobject]@{
+        Offset = $offset
+        End    = $offset + $size
+    }
+}
+
+function Get-AlignedWinCertificateLength {
+    param(
+        [Parameter(Mandatory)]
+        [long] $Length
+    )
+
+    $remainder = $Length % $script:WinCertificateAlignment
+    if ($remainder -eq 0) {
+        return $Length
+    }
+
+    return $Length + ($script:WinCertificateAlignment - $remainder)
+}
+
+function Get-EmbeddedAuthenticodeCms {
+    param(
+        [Parameter(Mandatory)]
         [string] $Path
     )
 
     $stream = [IO.File]::OpenRead($Path)
     try {
-        $peReader = [Reflection.PortableExecutable.PEReader]::new(
-            $stream,
-            [Reflection.PortableExecutable.PEStreamOptions]::LeaveOpen
-        )
-        try {
-            $peHeader = $peReader.PEHeaders.PEHeader
-            if ($null -eq $peHeader) {
-                throw "Missing PE optional header: $Path"
-            }
-            $directory = $peHeader.CertificateTableDirectory
-            $tableOffset = [long]$directory.RelativeVirtualAddress
-            $tableSize = [long]$directory.Size
-        }
-        finally {
-            $peReader.Dispose()
-        }
-
-        if ($tableOffset -le 0 -or $tableSize -lt 8) {
-            throw "Missing embedded Authenticode certificate table: $Path"
-        }
-        $tableEnd = $tableOffset + $tableSize
-        if ($tableEnd -lt $tableOffset -or $tableEnd -gt $stream.Length) {
-            throw "Authenticode certificate table is outside the file: $Path"
-        }
-
-        $cmsDocuments = [Collections.Generic.List[object]]::new()
+        $table = Get-PeCertificateTableRange -Stream $stream -Path $Path
+        $cmsDocuments = [Collections.Generic.List[Security.Cryptography.Pkcs.SignedCms]]::new()
         $reader = [IO.BinaryReader]::new($stream, [Text.Encoding]::UTF8, $true)
+
         try {
-            $entryOffset = $tableOffset
-            while ($entryOffset -lt $tableEnd) {
-                if (($tableEnd - $entryOffset) -lt 8) {
-                    throw "Truncated WIN_CERTIFICATE header at offset $entryOffset`: $Path"
+            $entryOffset = $table.Offset
+            $entryCount = 0
+            while ($entryOffset -lt $table.End) {
+                $entryCount++
+                if ($entryCount -gt $script:MaximumWinCertificateEntries) {
+                    throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode certificate table contains more than $($script:MaximumWinCertificateEntries) entries: $Path")
                 }
+
+                if (($table.End - $entryOffset) -lt $script:WinCertificateHeaderSize) {
+                    throw "Truncated WIN_CERTIFICATE header at offset ${entryOffset}: $Path"
+                }
+
                 $stream.Position = $entryOffset
-                $entryLength = [long]$reader.ReadUInt32()
+                $entryLength = [long] $reader.ReadUInt32()
                 $revision = $reader.ReadUInt16()
                 $certificateType = $reader.ReadUInt16()
-                if ($entryLength -lt 8) {
-                    throw "Invalid WIN_CERTIFICATE length $entryLength at offset $entryOffset`: $Path"
+
+                if ($entryLength -lt $script:WinCertificateHeaderSize) {
+                    throw "Invalid WIN_CERTIFICATE length $entryLength at offset ${entryOffset}: $Path"
                 }
-                $entryEnd = $entryOffset + $entryLength
-                if ($entryEnd -lt $entryOffset -or $entryEnd -gt $tableEnd) {
+
+                if ($entryLength -gt ($table.End - $entryOffset)) {
                     throw "WIN_CERTIFICATE at offset $entryOffset exceeds its PE table: $Path"
                 }
 
                 if ($certificateType -eq $script:PkcsSignedDataCertificateType) {
-                    if ($revision -ne 0x0100 -and $revision -ne 0x0200) {
-                        throw (New-AuthenticodeInspectionException `
-                            -Code UnsupportedStructure `
-                            -Message "Unsupported WIN_CERTIFICATE revision 0x$($revision.ToString('X4')): $Path")
+                    if ($revision -notin 0x0100, 0x0200) {
+                        $revisionHex = $revision.ToString('X4')
+                        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Unsupported WIN_CERTIFICATE revision 0x${revisionHex}: $Path")
                     }
-                    $encoded = $reader.ReadBytes([int]($entryLength - 8))
-                    if ($encoded.Length -ne ($entryLength - 8)) {
-                        throw "Truncated Authenticode PKCS#7 payload at offset $entryOffset`: $Path"
+
+                    $payloadLength = $entryLength - $script:WinCertificateHeaderSize
+                    if ($payloadLength -gt [int]::MaxValue) {
+                        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode PKCS#7 payload is too large to decode at offset ${entryOffset}: $Path")
                     }
-                    $cms = [Security.Cryptography.Pkcs.SignedCms]::new()
-                    try {
-                        $cms.Decode($encoded)
+
+                    $encodedCms = $reader.ReadBytes([int] $payloadLength)
+                    if ($encodedCms.Length -ne $payloadLength) {
+                        throw "Truncated Authenticode PKCS#7 payload at offset ${entryOffset}: $Path"
                     }
-                    catch {
-                        throw [IO.InvalidDataException]::new(
-                            "Invalid Authenticode PKCS#7 payload at offset $entryOffset`: $Path",
-                            $_.Exception
-                        )
-                    }
+
+                    $cms = ConvertFrom-EncodedCms -EncodedMessage $encodedCms -ErrorMessage "Invalid Authenticode PKCS#7 payload at offset ${entryOffset}: $Path"
                     $cmsDocuments.Add($cms)
                 }
 
-                $alignedLength = ($entryLength + 7) -band (-bnot 7)
+                $alignedLength = Get-AlignedWinCertificateLength -Length $entryLength
                 $nextOffset = $entryOffset + $alignedLength
-                if ($nextOffset -le $entryOffset -or $nextOffset -gt $tableEnd) {
-                    throw "Invalid WIN_CERTIFICATE alignment at offset $entryOffset`: $Path"
+                if ($nextOffset -le $entryOffset -or $nextOffset -gt $table.End) {
+                    throw "Invalid WIN_CERTIFICATE alignment at offset ${entryOffset}: $Path"
                 }
+
                 $entryOffset = $nextOffset
             }
         }
@@ -156,64 +257,59 @@ function Read-EmbeddedAuthenticodeCms {
         if ($cmsDocuments.Count -eq 0) {
             throw "PE certificate table has no Authenticode PKCS#7 payload: $Path"
         }
-        return @($cmsDocuments)
+
+        return $cmsDocuments.ToArray()
     }
     finally {
         $stream.Dispose()
     }
 }
 
-function Add-CmsSignerRecords {
+function Add-AuthenticodeSignerRecords {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Security.Cryptography.Pkcs.SignedCms] $Cms,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [AllowEmptyCollection()]
         [Collections.Generic.List[object]] $Records,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [int] $Depth,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Path
     )
 
     if ($Depth -gt $script:MaximumNestedSignatureDepth) {
-        throw (New-AuthenticodeInspectionException `
-            -Code UnsupportedStructure `
-            -Message "Authenticode nested-signature depth exceeds $script:MaximumNestedSignatureDepth`: $Path")
+        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode nested-signature depth exceeds $($script:MaximumNestedSignatureDepth): $Path")
     }
 
     for ($signerIndex = 0; $signerIndex -lt $Cms.SignerInfos.Count; $signerIndex++) {
+        if ($Records.Count -ge $script:MaximumSignerRecords) {
+            throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode CMS contains more than $($script:MaximumSignerRecords) signer records: $Path")
+        }
+
         $signer = $Cms.SignerInfos[$signerIndex]
         $Records.Add([pscustomobject]@{
-            Signer = $signer
-            Cms = $Cms
-            SignerIndex = $signerIndex
-        })
+                Signer      = $signer
+                Cms         = $Cms
+                SignerIndex = $signerIndex
+            })
 
-        foreach ($attribute in $signer.UnsignedAttributes) {
-            if ($attribute.Oid.Value -ne $script:NestedAuthenticodeSignatureOid) {
-                continue
-            }
+        $nestedAttributes = @(
+            Get-CmsAttributesByOid -Attributes $signer.UnsignedAttributes -Oid $script:NestedAuthenticodeSignatureOid
+        )
+
+        foreach ($attribute in $nestedAttributes) {
             if ($attribute.Values.Count -eq 0) {
-                throw (New-AuthenticodeInspectionException `
-                    -Code MalformedCms `
-                    -Message "Empty nested Authenticode signature attribute: $Path")
+                throw (New-AuthenticodeInspectionException -Code MalformedCms -Message "Empty nested Authenticode signature attribute: $Path")
             }
+
             foreach ($value in $attribute.Values) {
-                $nestedCms = [Security.Cryptography.Pkcs.SignedCms]::new()
-                try {
-                    $nestedCms.Decode($value.RawData)
-                }
-                catch {
-                    throw (New-AuthenticodeInspectionException `
-                        -Code MalformedCms `
-                        -Message "Malformed nested Authenticode signature: $Path" `
-                        -InnerException $_.Exception)
-                }
-                Add-CmsSignerRecords -Cms $nestedCms -Records $Records -Depth ($Depth + 1) -Path $Path
+                $nestedCms = ConvertFrom-EncodedCms -EncodedMessage $value.RawData -ErrorMessage "Malformed nested Authenticode signature: $Path"
+
+                Add-AuthenticodeSignerRecords -Cms $nestedCms -Records $Records -Depth ($Depth + 1) -Path $Path
             }
         }
     }
@@ -221,105 +317,149 @@ function Add-CmsSignerRecords {
 
 function Get-VerifiedRfc3161Timestamps {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Security.Cryptography.Pkcs.SignerInfo] $Signer,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Path
     )
 
-    $timestamps = [Collections.Generic.List[string]]::new()
-    foreach ($attribute in $Signer.UnsignedAttributes) {
-        if ($attribute.Oid.Value -ne $script:Rfc3161TimestampOid) {
-            continue
-        }
+    $timestamps = [Collections.Generic.List[object]]::new()
+    $timestampAttributes = @(
+        Get-CmsAttributesByOid -Attributes $Signer.UnsignedAttributes -Oid $script:Rfc3161TimestampOid
+    )
+    $signerSignature = if ($timestampAttributes.Count -eq 0) {
+        $null
+    }
+    else {
+        $Signer.GetSignature()
+    }
+
+    foreach ($attribute in $timestampAttributes) {
         if ($attribute.Values.Count -eq 0) {
-            throw (New-AuthenticodeInspectionException `
-                -Code MalformedCms `
-                -Message "Empty RFC 3161 timestamp attribute: $Path")
+            throw (New-AuthenticodeInspectionException -Code MalformedCms -Message "Empty RFC 3161 timestamp attribute: $Path")
         }
+
         foreach ($value in $attribute.Values) {
-            $timestampCms = [Security.Cryptography.Pkcs.SignedCms]::new()
-            try {
-                $timestampCms.Decode($value.RawData)
+            if ($timestamps.Count -ge $script:MaximumTimestampRecordsPerSigner) {
+                throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode signer contains more than $($script:MaximumTimestampRecordsPerSigner) RFC 3161 timestamp records: $Path")
             }
-            catch {
-                throw (New-AuthenticodeInspectionException `
-                    -Code MalformedCms `
-                    -Message "Malformed RFC 3161 timestamp CMS: $Path" `
-                    -InnerException $_.Exception)
-            }
+
+            $timestampCms = ConvertFrom-EncodedCms -EncodedMessage $value.RawData -ErrorMessage "Malformed RFC 3161 timestamp CMS: $Path"
+
             try {
-                [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161(
+                $timestampSignerThumbprint = [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyRfc3161AndGetSignerThumbprint(
                     $value.RawData,
-                    $Signer.GetSignature()
+                    $signerSignature
                 )
             }
             catch {
-                throw (New-AuthenticodeInspectionException `
-                    -Code InvalidRfc3161 `
-                    -Message "RFC 3161 token does not verify the Authenticode signer: $Path" `
-                    -InnerException $_.Exception)
+                throw (New-AuthenticodeInspectionException -Code InvalidRfc3161 -Message "RFC 3161 token does not verify the Authenticode signer: $Path" -InnerException $_.Exception)
             }
+
             if ($timestampCms.ContentInfo.ContentType.Value -ne $script:Rfc3161TstInfoOid) {
-                throw (New-AuthenticodeInspectionException `
-                    -Code UnsupportedStructure `
-                    -Message "RFC 3161 timestamp CMS has unexpected content type: $Path")
+                throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "RFC 3161 timestamp CMS has unexpected content type: $Path")
             }
+
             $tokenInfo = $null
             $bytesConsumed = 0
             $encodedInfo = [ReadOnlyMemory[byte]]::new($timestampCms.ContentInfo.Content)
-            if (-not [Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo]::TryDecode(
-                    $encodedInfo,
-                    [ref]$tokenInfo,
-                    [ref]$bytesConsumed
-                ) -or $bytesConsumed -ne $timestampCms.ContentInfo.Content.Length) {
-                throw (New-AuthenticodeInspectionException `
-                    -Code MalformedCms `
-                    -Message "Malformed RFC 3161 TSTInfo: $Path")
+            $decoded = [Security.Cryptography.Pkcs.Rfc3161TimestampTokenInfo]::TryDecode(
+                $encodedInfo,
+                [ref] $tokenInfo,
+                [ref] $bytesConsumed
+            )
+
+            if (-not $decoded -or $bytesConsumed -ne $timestampCms.ContentInfo.Content.Length) {
+                throw (New-AuthenticodeInspectionException -Code MalformedCms -Message "Malformed RFC 3161 TSTInfo: $Path")
             }
 
-            # CryptoAPI verified the CMS signature and message imprint above;
-            # TSTInfo is that signed content and is the authoritative time value.
-            $timestamps.Add((Format-UtcTimestamp -Timestamp $tokenInfo.Timestamp))
+            # CryptoAPI verified the CMS signature and message imprint above.
+            # Trust is established later by correlating this signer certificate
+            # with the timestamp certificate selected by Windows WinTrust.
+            $timestamps.Add([pscustomobject]@{
+                Timestamp        = Format-UtcTimestamp -Timestamp $tokenInfo.Timestamp
+                SignerThumbprint = $timestampSignerThumbprint
+            })
         }
     }
-    return @($timestamps)
+
+    return $timestamps.ToArray()
+}
+
+function Get-CmsAttributeValueCount {
+    param(
+        [Parameter(Mandatory)]
+        [AllowEmptyCollection()]
+        [Security.Cryptography.CryptographicAttributeObjectCollection] $Attributes,
+
+        [Parameter(Mandatory)]
+        [string] $Oid
+    )
+
+    $count = 0
+    foreach ($attribute in @(Get-CmsAttributesByOid -Attributes $Attributes -Oid $Oid)) {
+        $count += $attribute.Values.Count
+    }
+
+    return $count
+}
+
+function Get-SingleCmsAttributeValue {
+    param(
+        [Parameter(Mandatory)]
+        [AllowEmptyCollection()]
+        [Security.Cryptography.CryptographicAttributeObjectCollection] $Attributes,
+
+        [Parameter(Mandatory)]
+        [string] $Oid,
+
+        [Parameter(Mandatory)]
+        [string] $ErrorMessage
+    )
+
+    $matchingAttributes = @(
+        Get-CmsAttributesByOid -Attributes $Attributes -Oid $Oid
+    )
+
+    if ($matchingAttributes.Count -ne 1 -or $matchingAttributes[0].Values.Count -ne 1) {
+        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message $ErrorMessage)
+    }
+
+    return $matchingAttributes[0].Values[0]
 }
 
 function Get-VerifiedLegacyTimestamps {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Security.Cryptography.Pkcs.SignerInfo] $Signer,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Security.Cryptography.Pkcs.SignedCms] $Cms,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [int] $SignerIndex,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Path
     )
 
-    $counterSignatureAttributes = @(
-        $Signer.UnsignedAttributes |
-            Where-Object { $_.Oid.Value -eq $script:Pkcs9CounterSignatureOid }
-    )
-    $encodedCounterSignatures = @(
-        foreach ($attribute in $counterSignatureAttributes) {
-            foreach ($value in $attribute.Values) {
-                $value
-            }
-        }
-    )
-    if ($encodedCounterSignatures.Count -ne $Signer.CounterSignerInfos.Count) {
-        throw (New-AuthenticodeInspectionException `
-            -Code MalformedCms `
-            -Message "PKCS#9 countersignature attributes do not match decoded countersigners: $Path")
+    $encodedCounterSignatureCount = Get-CmsAttributeValueCount -Attributes $Signer.UnsignedAttributes -Oid $script:Pkcs9CounterSignatureOid
+
+    if ($encodedCounterSignatureCount -ne $Signer.CounterSignerInfos.Count) {
+        throw (New-AuthenticodeInspectionException -Code MalformedCms -Message "PKCS#9 countersignature attributes do not match decoded countersigners: $Path")
     }
 
-    $timestamps = [Collections.Generic.List[string]]::new()
+    $encodedCms = $null
+    if ($Signer.CounterSignerInfos.Count -gt 0) {
+        $encodedCms = $Cms.Encode()
+    }
+
+    $timestamps = [Collections.Generic.List[object]]::new()
+    if ($Signer.CounterSignerInfos.Count -gt $script:MaximumTimestampRecordsPerSigner) {
+        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode signer contains more than $($script:MaximumTimestampRecordsPerSigner) PKCS#9 countersignatures: $Path")
+    }
+
     for (
         $counterSignerIndex = 0;
         $counterSignerIndex -lt $Signer.CounterSignerInfos.Count;
@@ -327,211 +467,286 @@ function Get-VerifiedLegacyTimestamps {
     ) {
         $counterSigner = $Signer.CounterSignerInfos[$counterSignerIndex]
         if ($null -eq $counterSigner.Certificate) {
-            throw (New-AuthenticodeInspectionException `
-                -Code SignerMismatch `
-                -Message "Authenticode countersigner certificate is missing: $Path")
+            throw (New-AuthenticodeInspectionException -Code SignerMismatch -Message "Authenticode countersigner certificate is missing: $Path")
         }
+
         try {
             [RenderPilot.Tooling.AuthenticodeTimestampNative]::VerifyPkcs9Countersignature(
-                $Cms.Encode(),
+                $encodedCms,
                 $SignerIndex,
                 $counterSignerIndex,
                 $counterSigner.Certificate
             )
         }
         catch {
-            $typed = Find-AuthenticodeInspectionException -Exception $_.Exception
-            if ($null -ne $typed) {
-                throw $typed
+            $inspectionException = Get-InnerAuthenticodeInspectionException -Exception $_.Exception
+            if ($null -ne $inspectionException) {
+                throw $inspectionException
             }
-            throw (New-AuthenticodeInspectionException `
-                -Code InvalidPkcs9 `
-                -Message "Invalid Authenticode PKCS#9 countersignature: $Path" `
-                -InnerException $_.Exception)
+
+            throw (New-AuthenticodeInspectionException -Code InvalidPkcs9 -Message "Invalid Authenticode PKCS#9 countersignature: $Path" -InnerException $_.Exception)
         }
 
-        $signingTimeAttributes = @(
-            $counterSigner.SignedAttributes |
-                Where-Object { $_.Oid.Value -eq $script:Pkcs9SigningTimeOid }
-        )
-        if ($signingTimeAttributes.Count -ne 1 -or
-            $signingTimeAttributes[0].Values.Count -ne 1) {
-            throw (New-AuthenticodeInspectionException `
-                -Code UnsupportedStructure `
-                -Message "Authenticode countersignature must contain exactly one signingTime: $Path")
-        }
+        $encodedSigningTime = Get-SingleCmsAttributeValue -Attributes $counterSigner.SignedAttributes -Oid $script:Pkcs9SigningTimeOid -ErrorMessage "Authenticode countersignature must contain exactly one signingTime: $Path"
 
         $signingTime = [Security.Cryptography.Pkcs.Pkcs9SigningTime]::new()
         try {
-            $signingTime.CopyFrom($signingTimeAttributes[0].Values[0])
+            $signingTime.CopyFrom($encodedSigningTime)
         }
         catch {
-            throw (New-AuthenticodeInspectionException `
-                -Code MalformedCms `
-                -Message "Malformed Authenticode PKCS#9 signingTime: $Path" `
-                -InnerException $_.Exception)
+            throw (New-AuthenticodeInspectionException -Code MalformedCms -Message "Malformed Authenticode PKCS#9 signingTime: $Path" -InnerException $_.Exception)
         }
 
-        $timestamp = [DateTimeOffset]$signingTime.SigningTime
-        $notBefore = [DateTimeOffset]$counterSigner.Certificate.NotBefore
-        $notAfter = [DateTimeOffset]$counterSigner.Certificate.NotAfter
+        $timestamp = ([DateTimeOffset] $signingTime.SigningTime).ToUniversalTime()
+        $notBefore = ([DateTimeOffset] $counterSigner.Certificate.NotBefore).ToUniversalTime()
+        $notAfter = ([DateTimeOffset] $counterSigner.Certificate.NotAfter).ToUniversalTime()
         if ($timestamp -lt $notBefore -or $timestamp -gt $notAfter) {
-            throw (New-AuthenticodeInspectionException `
-                -Code InvalidPkcs9 `
-                -Message "Authenticode PKCS#9 signingTime is outside the countersigner certificate validity: $Path")
+            throw (New-AuthenticodeInspectionException -Code InvalidPkcs9 -Message "Authenticode PKCS#9 signingTime is outside the countersigner certificate validity: $Path")
         }
-        $timestamps.Add((Format-UtcTimestamp -Timestamp $timestamp))
+
+        $counterSignerThumbprint = $counterSigner.Certificate.Thumbprint
+        if ([string]::IsNullOrWhiteSpace($counterSignerThumbprint)) {
+            throw (New-AuthenticodeInspectionException -Code SignerMismatch -Message "Authenticode countersigner certificate has no thumbprint: $Path")
+        }
+
+        $timestamps.Add([pscustomobject]@{
+                Timestamp        = Format-UtcTimestamp -Timestamp $timestamp
+                SignerThumbprint = $counterSignerThumbprint.ToUpperInvariant()
+            })
     }
-    return @($timestamps)
+
+    return $timestamps.ToArray()
 }
 
 function Get-VerifiedSignerTimestamp {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Security.Cryptography.Pkcs.SignerInfo] $Signer,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [Security.Cryptography.Pkcs.SignedCms] $Cms,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [int] $SignerIndex,
 
-        [Parameter(Mandatory = $true)]
+        [AllowNull()]
+        [string] $TrustedTimestampSignerThumbprint,
+
+        [Parameter(Mandatory)]
         [string] $Path
     )
 
-    $timestamps = @(
+    $timestampRecords = @(
         Get-VerifiedRfc3161Timestamps -Signer $Signer -Path $Path
-        Get-VerifiedLegacyTimestamps `
-            -Signer $Signer `
-            -Cms $Cms `
-            -SignerIndex $SignerIndex `
-            -Path $Path
+        Get-VerifiedLegacyTimestamps -Signer $Signer -Cms $Cms -SignerIndex $SignerIndex -Path $Path
     )
-    $distinct = @($timestamps | Sort-Object -Unique)
-    if ($distinct.Count -gt 1) {
-        throw (New-AuthenticodeInspectionException `
-            -Code ConflictingTimestamps `
-            -Message "Authenticode signer has conflicting verified timestamps: $Path")
+
+    if ($timestampRecords.Count -gt $script:MaximumTimestampRecordsPerSigner) {
+        throw (New-AuthenticodeInspectionException -Code UnsupportedStructure -Message "Authenticode signer contains more than $($script:MaximumTimestampRecordsPerSigner) timestamp records: $Path")
     }
-    if ($distinct.Count -eq 1) {
-        return $distinct[0]
+
+    if ($timestampRecords.Count -eq 0) {
+        return $null
     }
-    return $null
+
+    if ([string]::IsNullOrWhiteSpace($TrustedTimestampSignerThumbprint)) {
+        throw (New-AuthenticodeInspectionException -Code UntrustedTimestamp -Message "Authenticode timestamp is not trusted by Windows: $Path")
+    }
+
+    foreach ($timestampRecord in $timestampRecords) {
+        if (
+            [string]::IsNullOrWhiteSpace($timestampRecord.SignerThumbprint) -or
+            -not [StringComparer]::OrdinalIgnoreCase.Equals(
+                $timestampRecord.SignerThumbprint,
+                $TrustedTimestampSignerThumbprint
+            )
+        ) {
+            throw (New-AuthenticodeInspectionException -Code UntrustedTimestamp -Message "Authenticode timestamp signer differs from the certificate trusted by Windows: $Path")
+        }
+    }
+
+    $distinctTimestamps = @(
+        $timestampRecords.Timestamp | Sort-Object -Unique
+    )
+
+    if ($distinctTimestamps.Count -gt 1) {
+        throw (New-AuthenticodeInspectionException -Code ConflictingTimestamps -Message "Authenticode signer has conflicting verified timestamps: $Path")
+    }
+
+    return $distinctTimestamps[0]
 }
 
 function Get-MatchingSignerRecords {
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
+        [AllowEmptyCollection()]
         [object[]] $Records,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Thumbprint,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Path
     )
 
-    $matching = @(
-        $Records | Where-Object {
-            $null -ne $_.Signer.Certificate -and
-            $_.Signer.Certificate.Thumbprint.ToUpperInvariant() -eq $Thumbprint
+    $matchingRecords = @(
+        foreach ($record in $Records) {
+            $certificate = $record.Signer.Certificate
+            if (
+                $null -ne $certificate -and
+                [StringComparer]::OrdinalIgnoreCase.Equals($certificate.Thumbprint, $Thumbprint)
+            ) {
+                $record
+            }
         }
     )
-    if ($matching.Count -eq 0) {
-        throw (New-AuthenticodeInspectionException `
-            -Code SignerMismatch `
-            -Message "Windows signer certificate is absent from embedded Authenticode CMS: $Path")
+
+    if ($matchingRecords.Count -eq 0) {
+        throw (New-AuthenticodeInspectionException -Code SignerMismatch -Message "Windows signer certificate is absent from embedded Authenticode CMS: $Path")
     }
-    return $matching
+
+    return $matchingRecords
+}
+
+function Get-ConsistentSignerTimestamp {
+    param(
+        [Parameter(Mandatory)]
+        [object[]] $Records,
+
+        [AllowNull()]
+        [string] $TrustedTimestampSignerThumbprint,
+
+        [Parameter(Mandatory)]
+        [string] $Path
+    )
+
+    $isFirstRecord = $true
+    $hasTimestamp = $false
+    $signedAt = $null
+
+    foreach ($record in $Records) {
+        $currentTimestamp = Get-VerifiedSignerTimestamp `
+            -Signer $record.Signer `
+            -Cms $record.Cms `
+            -SignerIndex $record.SignerIndex `
+            -TrustedTimestampSignerThumbprint $TrustedTimestampSignerThumbprint `
+            -Path $Path
+        $currentHasTimestamp = $null -ne $currentTimestamp
+
+        if ($isFirstRecord) {
+            $hasTimestamp = $currentHasTimestamp
+            $signedAt = $currentTimestamp
+            $isFirstRecord = $false
+            continue
+        }
+
+        if (
+            $currentHasTimestamp -ne $hasTimestamp -or
+            ($currentHasTimestamp -and $currentTimestamp -cne $signedAt)
+        ) {
+            throw (New-AuthenticodeInspectionException -Code ConflictingTimestamps -Message "Matching Authenticode signatures disagree about timestamp presence or value: $Path")
+        }
+    }
+
+    return $signedAt
+}
+
+function Get-EmbeddedSignerRecords {
+    param(
+        [Parameter(Mandatory)]
+        [string] $Path
+    )
+
+    $records = [Collections.Generic.List[object]]::new()
+    try {
+        foreach ($cms in @(Get-EmbeddedAuthenticodeCms -Path $Path)) {
+            Add-AuthenticodeSignerRecords -Cms $cms -Records $records -Depth 0 -Path $Path
+        }
+    }
+    catch {
+        $inspectionException = Get-InnerAuthenticodeInspectionException -Exception $_.Exception
+        if ($null -ne $inspectionException) {
+            throw $inspectionException
+        }
+
+        throw (New-AuthenticodeInspectionException -Code MalformedCms -Message "Unable to decode embedded Authenticode CMS: $Path" -InnerException $_.Exception)
+    }
+
+    return $records.ToArray()
 }
 
 function Get-AuthenticodeMetadata {
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [string] $Path,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory)]
         [ValidateSet('RequireSigned', 'AllowUnsigned')]
         [string] $Mode
     )
 
-    $resolved = (Resolve-Path -LiteralPath $Path).Path
-    $signature = Get-AuthenticodeSignature -LiteralPath $resolved
+    $resolvedPath = (Resolve-Path -LiteralPath $Path -ErrorAction Stop).Path
+    $signature = Get-AuthenticodeSignature -LiteralPath $resolvedPath
+
     if ($signature.Status -eq [Management.Automation.SignatureStatus]::NotSigned) {
         if ($Mode -eq 'AllowUnsigned') {
-            return [ordered]@{ status = 'unsigned' }
-        }
-        throw (New-AuthenticodeInspectionException `
-            -Code UnsignedNotAllowed `
-            -Message "Unsigned PE is forbidden when a signature is required: $resolved")
-    }
-    if ($signature.Status -ne [Management.Automation.SignatureStatus]::Valid) {
-        throw (New-AuthenticodeInspectionException `
-            -Code InvalidSignature `
-            -Message "Invalid Authenticode signature ($($signature.Status)): $resolved")
-    }
-    if ($null -eq $signature.SignerCertificate) {
-        throw (New-AuthenticodeInspectionException `
-            -Code SignerMismatch `
-            -Message "Valid Authenticode signature has no signer certificate: $resolved")
-    }
-
-    $thumbprint = $signature.SignerCertificate.Thumbprint.ToUpperInvariant()
-    $records = [Collections.Generic.List[object]]::new()
-    try {
-        foreach ($cms in @(Read-EmbeddedAuthenticodeCms -Path $resolved)) {
-            Add-CmsSignerRecords -Cms $cms -Records $records -Depth 0 -Path $resolved
-        }
-    }
-    catch {
-        $typed = Find-AuthenticodeInspectionException -Exception $_.Exception
-        if ($null -ne $typed) {
-            throw $typed
-        }
-        throw (New-AuthenticodeInspectionException `
-            -Code MalformedCms `
-            -Message "Unable to decode embedded Authenticode CMS: $resolved" `
-            -InnerException $_.Exception)
-    }
-
-    $matching = @(
-        Get-MatchingSignerRecords `
-            -Records @($records) `
-            -Thumbprint $thumbprint `
-            -Path $resolved
-    )
-
-    $timestampStates = @(
-        @(
-            foreach ($record in $matching) {
-                $timestamp = Get-VerifiedSignerTimestamp `
-                    -Signer $record.Signer `
-                    -Cms $record.Cms `
-                    -SignerIndex $record.SignerIndex `
-                    -Path $resolved
-                if ($null -eq $timestamp) { '<none>' } else { $timestamp }
+            return [ordered]@{
+                status = 'unsigned'
             }
-        ) | Sort-Object -Unique
-    )
-    if ($timestampStates.Count -ne 1) {
-        throw (New-AuthenticodeInspectionException `
-            -Code ConflictingTimestamps `
-            -Message "Matching Authenticode signatures disagree about timestamp presence or value: $resolved")
+        }
+
+        throw (New-AuthenticodeInspectionException -Code UnsignedNotAllowed -Message "Unsigned PE is forbidden when a signature is required: $resolvedPath")
     }
-    $signedAt = if ($timestampStates[0] -eq '<none>') {
+
+    if ($signature.Status -ne [Management.Automation.SignatureStatus]::Valid) {
+        throw (New-AuthenticodeInspectionException -Code InvalidSignature -Message "Invalid Authenticode signature ($($signature.Status)): $resolvedPath")
+    }
+
+    if ($signature.SignatureType -ne [Management.Automation.SignatureType]::Authenticode) {
+        throw (New-AuthenticodeInspectionException -Code UnsupportedSignatureSource -Message "Only embedded Authenticode signatures are supported; Windows selected $($signature.SignatureType): $resolvedPath")
+    }
+
+    $signerCertificate = $signature.SignerCertificate
+    if ($null -eq $signerCertificate) {
+        throw (New-AuthenticodeInspectionException -Code SignerMismatch -Message "Valid Authenticode signature has no signer certificate: $resolvedPath")
+    }
+
+    $timestampSignerCertificate = $signature.TimeStamperCertificate
+    $trustedTimestampSignerThumbprint = if ($null -eq $timestampSignerCertificate) {
         $null
     }
     else {
-        $timestampStates[0]
+        if ([string]::IsNullOrWhiteSpace($timestampSignerCertificate.Thumbprint)) {
+            throw (New-AuthenticodeInspectionException -Code UntrustedTimestamp -Message "Windows timestamp certificate has no thumbprint: $resolvedPath")
+        }
+
+        $timestampSignerCertificate.Thumbprint.ToUpperInvariant()
+    }
+
+    if ([string]::IsNullOrWhiteSpace($signerCertificate.Thumbprint)) {
+        throw (New-AuthenticodeInspectionException -Code SignerMismatch -Message "Valid Authenticode signer certificate has no thumbprint: $resolvedPath")
+    }
+
+    $thumbprint = $signerCertificate.Thumbprint.ToUpperInvariant()
+    $records = @(Get-EmbeddedSignerRecords -Path $resolvedPath)
+    $matchingRecords = @(
+        Get-MatchingSignerRecords -Records $records -Thumbprint $thumbprint -Path $resolvedPath
+    )
+    $signedAt = Get-ConsistentSignerTimestamp `
+        -Records $matchingRecords `
+        -TrustedTimestampSignerThumbprint $trustedTimestampSignerThumbprint `
+        -Path $resolvedPath
+
+    if ($null -ne $timestampSignerCertificate -and $null -eq $signedAt) {
+        throw (New-AuthenticodeInspectionException -Code UntrustedTimestamp -Message "Windows reports a trusted timestamp that is absent from the embedded Authenticode CMS: $resolvedPath")
     }
 
     return [ordered]@{
-        status = 'signed'
-        subject = $signature.SignerCertificate.Subject
+        status     = 'signed'
+        subject    = $signerCertificate.Subject
         thumbprint = $thumbprint
-        signed_at = $signedAt
+        signed_at  = $signedAt
     }
 }
 

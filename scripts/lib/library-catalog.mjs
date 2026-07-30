@@ -10,6 +10,19 @@ import {
   packageVersionNumericCore,
   normalizeRfc3339Timestamp,
 } from "./library-values.mjs";
+import {
+  XIPH_POLICY,
+  XIPH_SOURCE_IDS,
+  isXiphAllowedSystemImport,
+  isXiphForbiddenImport,
+  isXiphIntegrationRunner,
+  isXiphPublishableRunner,
+  xiphAliasesForProfile,
+  xiphBuildConfigurations,
+  xiphCatalogArtifactKey,
+  xiphExpectedImports,
+  xiphKnownLibraryNames,
+} from "./xiph-matrix.mjs";
 
 const SHA256_PATTERN = /^[0-9a-f]{64}$/;
 const SAFE_ID_PATTERN = /^[a-z][a-z0-9._-]*$/;
@@ -17,7 +30,6 @@ const SAFE_FILE_NAME_PATTERN = /^[A-Za-z0-9._-]+\.dll$/i;
 const LABEL_VERSION_PATTERN = /\d+(?:\.\d+)+/gu;
 const SHA512_BASE64_PATTERN = /^[A-Za-z0-9+/]{86}==$/;
 const ARCHITECTURES = new Set(["X64", "X86"]);
-const PACKAGE_REVISION_SCHEMA_VERSION = 1;
 export const MAX_LEGAL_DOCUMENT_SIZE = 16 * 1024 * 1024;
 const MAX_LEGAL_DOCUMENT_TITLE_LENGTH = 256;
 const MAX_LEGAL_DOCUMENT_FILE_NAME_LENGTH = 128;
@@ -165,6 +177,7 @@ export function buildVendorSnapshot(source) {
       file_version: artifact.file_version,
       architecture: artifact.architecture,
       pe_named_exports: artifact.pe_named_exports,
+      pe_imports: artifact.pe_imports,
       dll: artifact.dll,
       transport: {
         compression: "zstd",
@@ -185,11 +198,12 @@ export function buildVendorSnapshot(source) {
           `${source.vendor.id}/${sourcePackage.package_id}: unknown artifact key ${member.artifact_key}`,
         );
       }
-      return {
+      return compactObject({
         artifact_id: artifact.artifactId,
+        component: member.component,
         role: member.role,
         install_as: member.install_as,
-      };
+      });
     });
     const revisionInput = packageRevisionInput(sourcePackage, members);
 
@@ -330,6 +344,14 @@ export function assertVendorSource(source) {
     artifactKeys.add(artifact.artifact_key);
     artifactsByKey.set(artifact.artifact_key, artifact);
     assertArtifactCommon(artifact, `${source.vendor.id}/${artifact.artifact_key}`);
+    if (
+      source.vendor.id === "xiph" &&
+      artifact.artifact_key !== xiphCatalogArtifactKey(artifact.dll.sha256)
+    ) {
+      throw new Error(
+        `${source.vendor.id}: artifact_key must equal the DLL content identity`,
+      );
+    }
     if (artifactIds.has(artifact.dll.sha256)) {
       throw new Error(`${source.vendor.id}: duplicate DLL identity ${artifact.dll.sha256}`);
     }
@@ -383,6 +405,7 @@ export function assertVendorSource(source) {
       throw new Error(`${context}: package must contain exactly one primary member`);
     }
     assertOpenVrPackage(packageValue, resolvedArtifacts, context);
+    assertXiphPackage(packageValue, resolvedArtifacts, context);
   }
   for (const artifactKey of artifactKeys) {
     if (!referencedArtifactKeys.has(artifactKey)) {
@@ -487,6 +510,7 @@ export function assertVendorSnapshot(snapshot) {
       throw new Error(`${context}: package must contain exactly one primary member`);
     }
     assertOpenVrPackage(packageValue, resolvedArtifacts, context);
+    assertXiphPackage(packageValue, resolvedArtifacts, context);
   }
   for (const artifactId of artifacts.keys()) {
     if (!referencedArtifactIds.has(artifactId)) {
@@ -526,6 +550,9 @@ function assertArtifactCommon(artifact, context) {
   }
   if (artifact.pe_named_exports !== undefined) {
     assertPeNamedExports(artifact.pe_named_exports, `${context}: pe_named_exports`);
+  }
+  if (artifact.pe_imports !== undefined) {
+    assertPeImports(artifact.pe_imports, `${context}: pe_imports`);
   }
   assertExtensions(artifact.extensions, `${context}: extensions`);
 }
@@ -572,6 +599,27 @@ function assertPackageCommon(packageValue, context) {
       );
     }
   }
+  if (packageValue.release.components !== undefined) {
+    const entries = Object.entries(packageValue.release.components);
+    if (entries.length === 0 || entries.some(([name]) => !SAFE_ID_PATTERN.test(name))) {
+      throw new Error(`${context}: release components must be a non-empty id map`);
+    }
+    for (const [name, version] of entries) {
+      assertPackageVersion(version, `${context}: component ${name}`);
+    }
+    if (
+      entries.map(([name]) => name).join(",") !==
+      entries
+        .map(([name]) => name)
+        .sort()
+        .join(",")
+    ) {
+      throw new Error(`${context}: release components must be sorted`);
+    }
+    if (packageValue.provenance === undefined || packageValue.provenance === null) {
+      throw new Error(`${context}: composite packages require provenance`);
+    }
+  }
   if (packageValue.target?.os !== "windows") {
     throw new Error(`${context}: only Windows packages are supported in schema v1`);
   }
@@ -594,6 +642,9 @@ function assertPackageCommon(packageValue, context) {
   }
   if (!Array.isArray(packageValue.members) || packageValue.members.length === 0) {
     throw new Error(`${context}: package must contain members`);
+  }
+  if (packageValue.provenance === null) {
+    throw new Error(`${context}: package provenance cannot be null`);
   }
   if (packageValue.provenance !== undefined) {
     if (packageValue.provenance.kind === "nuget") {
@@ -621,6 +672,8 @@ function assertPackageCommon(packageValue, context) {
       ) {
         throw new Error(`${context}: GitHub release provenance is invalid`);
       }
+    } else if (packageValue.provenance.kind === "source_build") {
+      assertSourceBuildProvenance(packageValue.provenance, context);
     } else {
       throw new Error(`${context}: unsupported package provenance`);
     }
@@ -738,6 +791,227 @@ function assertOpenVrPackage(packageValue, artifacts, context) {
   assertPeNamedExports(artifact.pe_named_exports, `${context}: OpenVR exports`);
 }
 
+function assertXiphPackage(packageValue, artifacts, context) {
+  if (packageValue.technology !== "xiph_vorbis") return;
+  const components = packageValue.release.components;
+  const provenance = packageValue.provenance;
+  const [topology, profile, ...variantRemainder] = packageValue.variant.split(".");
+  const configuration = xiphBuildConfigurations().find(
+    (candidate) =>
+      candidate.architecture === packageValue.target.architecture &&
+      candidate.topology === topology &&
+      candidate.profile === profile,
+  );
+  const expectedComponents = configuration?.components;
+  if (
+    !components ||
+    Object.keys(components).join(",") !== XIPH_SOURCE_IDS.join(",") ||
+    packageValue.release.version !== components.vorbis ||
+    packageValue.release.channel !== "stable" ||
+    provenance?.kind !== "source_build" ||
+    !expectedComponents ||
+    packageValue.target.os !== XIPH_POLICY.target_os ||
+    variantRemainder.length !== 0 ||
+    artifacts.length !== expectedComponents.length
+  ) {
+    throw new Error(`${context}: invalid Xiph composite package contract`);
+  }
+  const memberComponents = packageValue.members.map((member) => member.component);
+  if (memberComponents.join(",") !== expectedComponents.join(",")) {
+    throw new Error(`${context}: Xiph members are not in canonical dependency order`);
+  }
+  const names = packageValue.members.map((member) => member.install_as.toLowerCase());
+  const expectedNames = xiphAliasesForProfile(profile);
+  const namesByComponent = Object.fromEntries(
+    memberComponents.map((component, index) => [component, names[index]]),
+  );
+  const namesAreCanonical = expectedComponents.every(
+    (component) => namesByComponent[component] === expectedNames[component],
+  );
+  if (!namesAreCanonical || new Set(names).size !== names.length) {
+    throw new Error(`${context}: Xiph package has invalid DLL aliases`);
+  }
+  const architecture = packageValue.target.architecture.toLowerCase();
+  const sourceVersions = {
+    ogg: provenance.sources?.ogg?.version,
+    vorbis: provenance.sources?.vorbis?.version,
+  };
+  const expectedPackageId =
+    `xiph_vorbis.vorbis-${sourceVersions.vorbis}.ogg-${sourceVersions.ogg}` +
+    `.r${provenance.build_revision}.${architecture}.${topology}.${profile}`;
+  if (packageValue.package_id !== expectedPackageId) {
+    throw new Error(`${context}: Xiph package_id does not match its immutable identity`);
+  }
+  if (
+    Object.keys(provenance.sources).join(",") !== XIPH_SOURCE_IDS.join(",") ||
+    (!isXiphPublishableRunner(provenance.toolchain.runner_image) &&
+      !isXiphIntegrationRunner(provenance.toolchain.runner_image))
+  ) {
+    throw new Error(`${context}: Xiph source-build provenance is not canonical`);
+  }
+  for (const component of XIPH_SOURCE_IDS) {
+    const source = provenance.sources[component];
+    const version = source.version;
+    const expectedTag =
+      component === "vorbis" && version === "1.0" ? "v1.0.0" : `v${version}`;
+    const validGitIdentity =
+      (source.tag === expectedTag &&
+        /^[0-9a-f]{40}$/u.test(source.tag_object_sha) &&
+        /^[0-9a-f]{40}$/u.test(source.commit_sha)) ||
+      (component === "ogg" &&
+        ["1.0", "1.1"].includes(version) &&
+        source.tag === null &&
+        source.tag_object_sha === null &&
+        source.commit_sha === null);
+    if (
+      source.repository !== `xiph/${component}` ||
+      canonicalNumericVersion(version) !== canonicalNumericVersion(components[component]) ||
+      !validGitIdentity ||
+      !new RegExp(
+        `^https://downloads\\.xiph\\.org/releases/${component}/lib${component}-` +
+          `${version.replaceAll(".", "\\.")}\\.tar\\.(?:xz|bz2|gz)$`,
+        "u",
+      ).test(source.archive_url)
+    ) {
+      throw new Error(`${context}: Xiph ${component} source pin is inconsistent`);
+    }
+  }
+
+  for (const [index, artifact] of artifacts.entries()) {
+    const component = memberComponents[index];
+    const versionComponent = component === "ogg" ? "ogg" : "vorbis";
+    assertPeNamedExports(artifact.pe_named_exports, `${context}: Xiph exports`);
+    assertPeImports(artifact.pe_imports, `${context}: Xiph imports`);
+    if (
+      artifact.signature?.status !== "unsigned" ||
+      artifact.library_id !== `xiph_${component}` ||
+      artifact.file_name.toLowerCase() !== names[index] ||
+      canonicalNumericVersion(artifact.file_version) !==
+        canonicalNumericVersion(components[versionComponent])
+    ) {
+      throw new Error(`${context}: source-built Xiph artifact contract is inconsistent`);
+    }
+  }
+  const knownXiphNames = xiphKnownLibraryNames();
+  for (const [index, artifact] of artifacts.entries()) {
+    const component = memberComponents[index];
+    const expectedImports = xiphExpectedImports(topology, component, expectedNames);
+    for (const importKind of ["regular", "delay"]) {
+      const imports = artifact.pe_imports[importKind];
+      const expectedProfileImports = expectedImports[importKind];
+      const xiphImports = imports.filter((imported) => knownXiphNames.has(imported)).sort();
+      if (xiphImports.join(",") !== expectedProfileImports.join(",")) {
+        throw new Error(
+          `${context}: Xiph ${importKind} import graph does not match ${topology}`,
+        );
+      }
+      for (const imported of imports) {
+        if (isXiphForbiddenImport(imported)) {
+          throw new Error(
+            `${context}: forbidden Xiph ${importKind} dependency ${imported}`,
+          );
+        }
+        if (
+          expectedProfileImports.includes(imported) ||
+          isXiphAllowedSystemImport(imported)
+        ) {
+          continue;
+        }
+        throw new Error(`${context}: unexpected Xiph ${importKind} dependency ${imported}`);
+      }
+    }
+  }
+}
+
+function canonicalNumericVersion(value) {
+  const parts = value.split(".");
+  while (parts.length > 1 && parts.at(-1) === "0") parts.pop();
+  return parts.join(".");
+}
+
+function assertSourceBuildProvenance(provenance, context) {
+  if (
+    !Number.isSafeInteger(provenance.build_revision) ||
+    provenance.build_revision < 1 ||
+    provenance.sources === null ||
+    typeof provenance.sources !== "object" ||
+    Array.isArray(provenance.sources) ||
+    Object.keys(provenance.sources).length === 0
+  ) {
+    throw new Error(`${context}: invalid source-build identity`);
+  }
+  assertSha256(provenance.recipe_sha256, `${context}: recipe SHA-256`);
+  assertSha256(
+    provenance.verification_policy_sha256,
+    `${context}: verification policy SHA-256`,
+  );
+  assertSourceBuildPatches(provenance.patches, provenance.sources, context);
+  if (
+    provenance.toolchain === null ||
+    typeof provenance.toolchain !== "object" ||
+    Array.isArray(provenance.toolchain)
+  ) {
+    throw new Error(`${context}: source-build toolchain is required`);
+  }
+  for (const field of ["runner_image", "compiler", "linker", "windows_sdk", "cmake"]) {
+    if (
+      typeof provenance.toolchain[field] !== "string" ||
+      !provenance.toolchain[field].trim()
+    ) {
+      throw new Error(`${context}: source-build ${field} is required`);
+    }
+  }
+  for (const [name, source] of Object.entries(provenance.sources)) {
+    assertSafeId(name, `${context}: source name`);
+    const hasTaggedGitPin =
+      typeof source.tag === "string" &&
+      source.tag.length > 0 &&
+      /^[0-9a-f]{40}$/u.test(source.tag_object_sha) &&
+      /^[0-9a-f]{40}$/u.test(source.commit_sha);
+    const hasArchiveOnlyPin =
+      source.tag === null && source.tag_object_sha === null && source.commit_sha === null;
+    if (
+      typeof source.repository !== "string" ||
+      !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/u.test(source.repository) ||
+      typeof source.version !== "string" ||
+      !/^(?:0|[1-9]\d*)(?:\.(?:0|[1-9]\d*))*$/u.test(source.version) ||
+      (!hasTaggedGitPin && !hasArchiveOnlyPin) ||
+      typeof source.archive_url !== "string" ||
+      !source.archive_url.startsWith("https://")
+    ) {
+      throw new Error(`${context}: invalid source-build source ${name}`);
+    }
+    assertSha256(source.archive_sha256, `${context}: ${name} archive SHA-256`);
+  }
+}
+
+function assertSourceBuildPatches(patches, sources, context) {
+  if (patches === null || typeof patches !== "object" || Array.isArray(patches)) {
+    throw new Error(`${context}: source-build patches must be an object`);
+  }
+  for (const [patchId, patch] of Object.entries(patches)) {
+    assertSafeId(patchId, `${context}: source patch id`);
+    if (
+      typeof patch?.source !== "string" ||
+      !Object.hasOwn(sources, patch.source) ||
+      typeof patch.target !== "string" ||
+      patch.target.length === 0 ||
+      patch.target.includes("\\") ||
+      patch.target.startsWith("/") ||
+      /^[A-Za-z]:/u.test(patch.target) ||
+      patch.target.split("/").some((segment) => ["", ".", ".."].includes(segment))
+    ) {
+      throw new Error(`${context}: invalid source patch target ${patchId}`);
+    }
+    for (const field of ["descriptor_sha256", "original_sha256", "patched_sha256"]) {
+      assertSha256(patch[field], `${context}: ${patchId} ${field}`);
+    }
+    if (patch.original_sha256 === patch.patched_sha256) {
+      throw new Error(`${context}: source patch ${patchId} does not change its target`);
+    }
+  }
+}
+
 export function assertPeNamedExports(value, label) {
   if (!Array.isArray(value) || value.length === 0 || value.length > 16_384) {
     throw new Error(`${label} must contain 1..16384 names`);
@@ -759,6 +1033,34 @@ export function assertPeNamedExports(value, label) {
     }
     seen.add(name);
     previous = name;
+  }
+}
+
+export function assertPeImports(value, label) {
+  if (
+    !value ||
+    typeof value !== "object" ||
+    Array.isArray(value) ||
+    Object.keys(value).sort().join("\0") !== "delay\0regular" ||
+    !Array.isArray(value.regular) ||
+    !Array.isArray(value.delay)
+  ) {
+    throw new Error(`${label} must contain regular and delay arrays`);
+  }
+  for (const [kind, names] of Object.entries(value)) {
+    if (names.length > 4096) throw new Error(`${label}.${kind} is too large`);
+    let previous = null;
+    for (const name of names) {
+      if (
+        typeof name !== "string" ||
+        !/^[a-z0-9._-]+\.dll$/u.test(name) ||
+        name.includes("..") ||
+        (previous !== null && previous >= name)
+      ) {
+        throw new Error(`${label}.${kind} must be sorted unique lowercase DLL basenames`);
+      }
+      previous = name;
+    }
   }
 }
 
@@ -824,15 +1126,31 @@ export function compareNumericVersions(left, right) {
 export { comparePackageVersions };
 
 function releaseIdentity(release) {
-  return {
+  return compactObject({
     version: release.version,
     channel: release.channel,
-  };
+    components: release.components,
+  });
 }
 
-function packageRevisionInput(packageValue, members) {
+export function packageRevisionInput(packageValue, members) {
+  if (packageValue.release.components !== undefined) {
+    if (packageValue.provenance === undefined || packageValue.provenance === null) {
+      throw new Error("composite revision input requires provenance");
+    }
+    return {
+      schema_version: 2,
+      package_id: packageValue.package_id,
+      technology: packageValue.technology,
+      variant: packageValue.variant,
+      release: releaseIdentity(packageValue.release),
+      target: packageValue.target,
+      provenance: packageValue.provenance,
+      members,
+    };
+  }
   return compactObject({
-    schema_version: PACKAGE_REVISION_SCHEMA_VERSION,
+    schema_version: 1,
     package_id: packageValue.package_id,
     technology: packageValue.technology,
     variant: packageValue.variant,
@@ -879,7 +1197,7 @@ function compactObject(value) {
   return Object.fromEntries(Object.entries(value).filter(([, item]) => item !== undefined));
 }
 
-function canonicalJson(value) {
+export function canonicalJson(value) {
   if (Array.isArray(value)) {
     return `[${value.map((item) => canonicalJson(item)).join(",")}]`;
   }

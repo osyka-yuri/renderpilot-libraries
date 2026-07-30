@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "patch_id": "ogg-framing-selftest-padding-v1",
+  "source": "ogg",
+  "target": "src/framing.c",
+  "description": "Compare ogg_packet fields semantically so the upstream framing self-test remains valid on x64 despite structure padding.",
+  "optional_when_not_applicable": true,
+  "apply_if_all_contains": ["memcmp(&op_de,&op_de2,sizeof(op_de))"],
+  "replacements": [
+    {
+      "kind": "replace",
+      "from": "memcmp(&op_de,&op_de2,sizeof(op_de))",
+      "to": "(op_de.packet != op_de2.packet || op_de.bytes != op_de2.bytes || op_de.b_o_s != op_de2.b_o_s || op_de.e_o_s != op_de2.e_o_s || op_de.granulepos != op_de2.granulepos || op_de.packetno != op_de2.packetno)"
+    }
+  ]
+}

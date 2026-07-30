@@ -3,7 +3,7 @@ import { execFile } from "node:child_process";
 import { link, mkdir, open, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { isDeepStrictEqual, promisify } from "node:util";
-import { constants as zlibConstants, zstdCompress } from "node:zlib";
+import { constants as zlibConstants, zstdCompress, zstdDecompress } from "node:zlib";
 
 import { resolveRepoPath } from "../catalog.mjs";
 import { sha256Hex } from "./hash.mjs";
@@ -15,6 +15,7 @@ import {
 
 const execFileAsync = promisify(execFile);
 const zstdCompressAsync = promisify(zstdCompress);
+const zstdDecompressAsync = promisify(zstdDecompress);
 const INSPECT_SCRIPT = resolveRepoPath("scripts", "inspect-pe.ps1");
 const AUTHENTICODE_MODES = new Set(["RequireSigned", "AllowUnsigned"]);
 const MAX_LOCKED_TIMESTAMP_ROUNDING_DRIFT_MS = 1;
@@ -67,6 +68,18 @@ export async function persistCompressedDll(
     expectedTransport = null,
   } = {},
 ) {
+  const prepared = await prepareCompressedDll(dll, {
+    compressionLevel,
+    expectedTransport,
+  });
+  await persistPreparedLibraryObject(prepared, { cdnDirectory });
+  return prepared.result;
+}
+
+export async function prepareCompressedDll(
+  dll,
+  { compressionLevel = 12, expectedTransport = null } = {},
+) {
   if (!Buffer.isBuffer(dll) || dll.length === 0) {
     throw new Error("DLL payload must be a non-empty Buffer");
   }
@@ -84,6 +97,19 @@ export async function persistCompressedDll(
       [zlibConstants.ZSTD_c_checksumFlag]: CANONICAL_ZSTD_CHECKSUM_FLAG,
     },
   });
+  let roundTrip;
+  try {
+    roundTrip = await zstdDecompressAsync(compressed, {
+      maxOutputLength: dll.length + 1,
+    });
+  } catch (error) {
+    throw new Error("prepared Zstandard payload cannot be decompressed", {
+      cause: error,
+    });
+  }
+  if (!roundTrip.equals(dll)) {
+    throw new Error("prepared Zstandard payload does not reproduce the source DLL");
+  }
   const sha256 = sha256Hex(compressed);
   const objectKey = blobObjectKey(sha256);
   const transport = {
@@ -99,8 +125,11 @@ export async function persistCompressedDll(
         `use the explicit transport-migration mode for an intentional replacement`,
     );
   }
-  await writeImmutableObject(path.join(cdnDirectory, objectKey), compressed);
-  return transport;
+  return {
+    object_key: objectKey,
+    bytes: compressed,
+    result: transport,
+  };
 }
 
 export async function persistLegalDocument(
@@ -108,15 +137,46 @@ export async function persistLegalDocument(
   format,
   { cdnDirectory = resolveRepoPath("cdn") } = {},
 ) {
+  const prepared = prepareLegalDocument(bytes, format);
+  await persistPreparedLibraryObject(prepared, { cdnDirectory });
+  return prepared.result;
+}
+
+export function prepareLegalDocument(bytes, format) {
   assertLegalDocumentPayload(bytes, format, "legal document");
   const sha256 = sha256Hex(bytes);
   const objectKey = legalDocumentObjectKey(sha256, format);
-  await writeImmutableObject(path.join(cdnDirectory, objectKey), bytes);
   return {
     object_key: objectKey,
-    sha256,
-    size_bytes: bytes.length,
+    bytes: Buffer.from(bytes),
+    result: {
+      object_key: objectKey,
+      sha256,
+      size_bytes: bytes.length,
+    },
   };
+}
+
+export async function persistPreparedLibraryObject(
+  prepared,
+  { cdnDirectory = resolveRepoPath("cdn") } = {},
+) {
+  if (
+    typeof prepared?.object_key !== "string" ||
+    !Buffer.isBuffer(prepared.bytes) ||
+    prepared.bytes.length === 0
+  ) {
+    throw new Error("prepared library object is invalid");
+  }
+  const segments = prepared.object_key.split("/");
+  if (
+    prepared.object_key.includes("\\") ||
+    path.posix.isAbsolute(prepared.object_key) ||
+    segments.some((segment) => ["", ".", ".."].includes(segment))
+  ) {
+    throw new Error(`unsafe prepared library object key ${prepared.object_key}`);
+  }
+  await writeImmutableObject(path.join(cdnDirectory, ...segments), prepared.bytes);
 }
 
 export async function writeImmutableObject(file, bytes) {

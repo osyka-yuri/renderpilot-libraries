@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "patch_id": "vorbis-msvc-x64-ftoi-v1",
+  "source": "vorbis",
+  "target": "lib/os.h",
+  "description": "Backport the upstream MSVC x64 SSE2 conversion path without spoofing another compiler.",
+  "skip_if_any_contains": ["defined(_M_X64)", "defined(_WIN64)"],
+  "apply_if_all_contains": [
+    "#if defined(_WIN32) && !defined(__GNUC__) && !defined(__BORLANDC__)",
+    "#ifndef VORBIS_FPU_CONTROL"
+  ],
+  "replacements": [
+    {
+      "kind": "replace",
+      "from": "#if defined(_WIN32) && !defined(__GNUC__) && !defined(__BORLANDC__)",
+      "to": "#if defined(_MSC_VER) && defined(_M_IX86) && !defined(_WIN32_WCE)"
+    },
+    {
+      "kind": "insert_before",
+      "anchor": "#ifndef VORBIS_FPU_CONTROL",
+      "content": "/* RenderPilot compatibility backport from upstream Vorbis 1.3.7. */\n#if defined(_MSC_VER) && defined(_M_X64)\n#  define VORBIS_FPU_CONTROL\n\ntypedef ogg_int16_t vorbis_fpu_control;\n#include <emmintrin.h>\nstatic __inline int vorbis_ftoi(double f){\n  return _mm_cvtsd_si32(_mm_load_sd(&f));\n}\nstatic __inline void vorbis_fpu_setround(vorbis_fpu_control *fpu){\n  (void)fpu;\n}\nstatic __inline void vorbis_fpu_restore(vorbis_fpu_control fpu){\n  (void)fpu;\n}\n#endif\n\n"
+    }
+  ]
+}

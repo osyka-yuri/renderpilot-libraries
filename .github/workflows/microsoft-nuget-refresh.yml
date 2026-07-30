@@ -24,7 +24,7 @@ jobs:
     name: Import listed Microsoft runtimes
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-library-tools
       - run: pnpm install --frozen-lockfile
 
@@ -68,7 +68,7 @@ jobs:
 
       - name: Open catalog pull request
         if: success() && (steps.detect.outputs.status == 'update_available' || inputs.materialize_locked)
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           branch: chore/microsoft-nuget-${{ github.run_id }}

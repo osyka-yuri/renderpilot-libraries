@@ -1,0 +1,34 @@
+#include <winver.h>
+
+#define RP_VERSION_QUAD @RP_VERSION_MAJOR@,@RP_VERSION_MINOR@,@RP_VERSION_PATCH@,0
+#define RP_VERSION_TEXT "@RP_VERSION@.0\0"
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION     RP_VERSION_QUAD
+    PRODUCTVERSION  RP_VERSION_QUAD
+    FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+    FILEFLAGS       0x0L
+    FILEOS          VOS_NT_WINDOWS32
+    FILETYPE        VFT_DLL
+    FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        // 0409: English (United States)
+        // 04B0: Unicode, code page 1200
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "Xiph.Org Foundation\0"
+            VALUE "FileDescription",  "@RP_DESCRIPTION@\0"
+            VALUE "FileVersion",      RP_VERSION_TEXT
+            VALUE "OriginalFilename", "@RP_ORIGINAL_FILENAME@\0"
+            VALUE "ProductName",      "RenderPilot audited Xiph source build\0"
+            VALUE "ProductVersion",   RP_VERSION_TEXT
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

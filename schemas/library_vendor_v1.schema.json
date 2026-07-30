@@ -61,6 +61,7 @@
         },
         "architecture": { "$ref": "#/$defs/architecture" },
         "pe_named_exports": { "$ref": "#/$defs/peNamedExports" },
+        "pe_imports": { "$ref": "#/$defs/peImports" },
         "dll": { "$ref": "#/$defs/content" },
         "transport": { "$ref": "#/$defs/transport" },
         "signature": { "$ref": "#/$defs/signature" },
@@ -80,6 +81,17 @@
         "members"
       ],
       "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "release": { "required": ["components"] }
+            },
+            "required": ["release"]
+          },
+          "then": { "required": ["provenance"] }
+        }
+      ],
       "properties": {
         "package_id": { "$ref": "#/$defs/id" },
         "revision_sha256": { "$ref": "#/$defs/sha256" },
@@ -113,6 +125,7 @@
       "additionalProperties": false,
       "properties": {
         "artifact_id": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+        "component": { "$ref": "#/$defs/id" },
         "role": { "$ref": "#/$defs/id" },
         "install_as": { "$ref": "#/$defs/dllName" }
       }
@@ -196,6 +209,12 @@
           "description": "Optional concise annotation appended verbatim to the package version. It must contain only supplemental information and must not repeat the package version or display name.",
           "type": ["string", "null"],
           "minLength": 1
+        },
+        "components": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/packageVersion" },
+          "propertyNames": { "$ref": "#/$defs/id" }
         }
       }
     },
@@ -247,6 +266,117 @@
             "tag": { "type": "string", "minLength": 1 },
             "commit_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
           }
+        },
+        {
+          "$ref": "#/$defs/sourceBuild"
+        }
+      ]
+    },
+    "sourceBuild": {
+      "type": "object",
+      "required": [
+        "kind",
+        "sources",
+        "build_revision",
+        "recipe_sha256",
+        "verification_policy_sha256",
+        "patches",
+        "toolchain"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": { "const": "source_build" },
+        "sources": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/sourceInput" },
+          "propertyNames": { "$ref": "#/$defs/id" }
+        },
+        "build_revision": { "type": "integer", "minimum": 1 },
+        "recipe_sha256": { "$ref": "#/$defs/sha256" },
+        "verification_policy_sha256": { "$ref": "#/$defs/sha256" },
+        "patches": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/sourcePatch" },
+          "propertyNames": { "$ref": "#/$defs/id" }
+        },
+        "toolchain": {
+          "type": "object",
+          "required": ["runner_image", "compiler", "linker", "windows_sdk", "cmake"],
+          "additionalProperties": false,
+          "properties": {
+            "runner_image": { "type": "string", "minLength": 1 },
+            "compiler": { "type": "string", "minLength": 1 },
+            "linker": { "type": "string", "minLength": 1 },
+            "windows_sdk": { "type": "string", "minLength": 1 },
+            "cmake": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "sourcePatch": {
+      "type": "object",
+      "required": [
+        "source",
+        "target",
+        "descriptor_sha256",
+        "original_sha256",
+        "patched_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "source": { "$ref": "#/$defs/id" },
+        "target": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.?(/|$))(?!.*\\\\).+$"
+        },
+        "descriptor_sha256": { "$ref": "#/$defs/sha256" },
+        "original_sha256": { "$ref": "#/$defs/sha256" },
+        "patched_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "sourceInput": {
+      "type": "object",
+      "required": [
+        "repository",
+        "version",
+        "tag",
+        "tag_object_sha",
+        "commit_sha",
+        "archive_url",
+        "archive_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "repository": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "version": { "$ref": "#/$defs/version" },
+        "tag": { "type": ["string", "null"], "minLength": 1 },
+        "tag_object_sha": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "commit_sha": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "archive_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "archive_sha256": { "$ref": "#/$defs/sha256" }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "tag": { "type": "string", "minLength": 1 },
+            "tag_object_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+            "commit_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+          }
+        },
+        {
+          "properties": {
+            "tag": { "type": "null" },
+            "tag_object_sha": { "type": "null" },
+            "commit_sha": { "type": "null" }
+          }
         }
       ]
     },
@@ -260,6 +390,25 @@
         "minLength": 1,
         "maxLength": 256,
         "pattern": "^[ -~]+$"
+      }
+    },
+    "peImports": {
+      "type": "object",
+      "required": ["regular", "delay"],
+      "additionalProperties": false,
+      "properties": {
+        "regular": { "$ref": "#/$defs/peImportNames" },
+        "delay": { "$ref": "#/$defs/peImportNames" }
+      }
+    },
+    "peImportNames": {
+      "type": "array",
+      "maxItems": 4096,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "maxLength": 256,
+        "pattern": "^[a-z0-9._-]+\\.dll$"
       }
     },
     "signature": {

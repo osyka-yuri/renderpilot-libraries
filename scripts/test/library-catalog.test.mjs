@@ -20,8 +20,27 @@ import {
   buildLibraryIndex,
   buildVendorSnapshot,
   jsonDocument,
+  packageRevisionInput,
 } from "../lib/library-catalog.mjs";
 import { sha256Hex } from "../lib/hash.mjs";
+import { compileJsonSchema } from "../lib/json-schema-validation.mjs";
+
+const validateSourceSchema = compileJsonSchema(
+  JSON.parse(
+    await readFile(
+      new URL("../../schemas/library_vendor_source.schema.json", import.meta.url),
+      "utf8",
+    ),
+  ),
+);
+const validateSnapshotSchema = compileJsonSchema(
+  JSON.parse(
+    await readFile(
+      new URL("../../schemas/library_vendor_v1.schema.json", import.meta.url),
+      "utf8",
+    ),
+  ),
+);
 
 test("catalog versions accept canonical u64 segments and reject overflow", () => {
   assert.doesNotThrow(() =>
@@ -69,6 +88,162 @@ test("package revision is stable across transport recompression", () => {
   assert.notEqual(
     left.artifacts[0].transport.object_key,
     right.artifacts[0].transport.object_key,
+  );
+});
+
+test("legacy V1 package revision bytes remain frozen", () => {
+  assert.equal(
+    buildVendorSnapshot(source()).packages[0].revision_sha256,
+    "dc7bcca34ff75e258425052d02c8bced1cd13210e39c072f07deb7d4653b67d3",
+  );
+});
+
+test("composite V2 revision binds components, source build, target, and members", () => {
+  const original = compositeSourceBuild();
+  const baseline = buildVendorSnapshot(original).packages[0].revision_sha256;
+
+  const presentationOnly = structuredClone(original);
+  presentationOnly.packages[0].display_name = "Renamed Xiph package";
+  presentationOnly.packages[0].release.label = "Audited source build";
+  assert.equal(buildVendorSnapshot(presentationOnly).packages[0].revision_sha256, baseline);
+
+  for (const mutate of [
+    (value) => {
+      value.packages[0].release.components.ogg = "1.3.5";
+      value.packages[0].package_id =
+        "xiph_vorbis.vorbis-1.3.7.ogg-1.3.5.r1.x64.shared.plain";
+      value.packages[0].provenance.sources.ogg.version = "1.3.5";
+      value.packages[0].provenance.sources.ogg.tag = "v1.3.5";
+      value.packages[0].provenance.sources.ogg.archive_url =
+        "https://downloads.xiph.org/releases/ogg/libogg-1.3.5.tar.xz";
+      value.artifacts[3].file_version = "1.3.5";
+    },
+    (value) => {
+      value.packages[0].provenance.sources.ogg.commit_sha = "9".repeat(40);
+    },
+    (value) => {
+      value.packages[0].target.architecture = "X86";
+      value.packages[0].package_id =
+        "xiph_vorbis.vorbis-1.3.7.ogg-1.3.6.r1.x86.shared.plain";
+      value.artifacts.forEach((artifact) => {
+        artifact.architecture = "X86";
+      });
+    },
+    (value) => {
+      value.artifacts[1].dll.sha256 = "9".repeat(64);
+      value.artifacts[1].artifact_key = `dll.${"9".repeat(64)}`;
+      value.packages[0].members[1].artifact_key = value.artifacts[1].artifact_key;
+    },
+  ]) {
+    const changed = structuredClone(original);
+    mutate(changed);
+    assert.notEqual(buildVendorSnapshot(changed).packages[0].revision_sha256, baseline);
+  }
+});
+
+test("generic composite V2 requires and binds discriminated provenance", () => {
+  const value = compositeSourceBuild();
+  const packageValue = value.packages[0];
+  packageValue.package_id = "example.composite.x64";
+  packageValue.technology = "example_composite";
+  packageValue.provenance = {
+    kind: "nuget",
+    package_id: "Example.Composite",
+    version: packageValue.release.version,
+    package_sha512: `${"A".repeat(86)}==`,
+  };
+  const snapshot = buildVendorSnapshot(value);
+  const revisionInput = packageRevisionInput(packageValue, snapshot.packages[0].members);
+  assert.equal(revisionInput.schema_version, 2);
+  assert.deepEqual(revisionInput.provenance, packageValue.provenance);
+
+  delete packageValue.provenance;
+  assert.throws(() => buildVendorSnapshot(value), /composite packages require provenance/u);
+  assert.throws(
+    () => packageRevisionInput(packageValue, snapshot.packages[0].members),
+    /composite revision input requires provenance/u,
+  );
+  packageValue.provenance = null;
+  assert.throws(() => buildVendorSnapshot(value), /composite packages require provenance/u);
+});
+
+test("both catalog schemas require provenance on composite packages", () => {
+  const sourceValue = compositeSourceBuild();
+  const snapshot = buildVendorSnapshot(sourceValue);
+  delete sourceValue.packages[0].provenance;
+  delete snapshot.packages[0].provenance;
+
+  assert.equal(validateSourceSchema(sourceValue), false);
+  assert.equal(validateSnapshotSchema(snapshot), false);
+  assert.ok(
+    validateSourceSchema.errors?.some(
+      (error) => error.instancePath === "/packages/0" && error.keyword === "required",
+    ),
+  );
+  assert.ok(
+    validateSnapshotSchema.errors?.some(
+      (error) => error.instancePath === "/packages/0" && error.keyword === "required",
+    ),
+  );
+});
+
+test("Xiph package validation rejects API-set dynamic CRT imports", () => {
+  const value = compositeSourceBuild();
+  value.artifacts[0].pe_imports.regular = [
+    "api-ms-win-crt-runtime-l1-1-0.dll",
+    "kernel32.dll",
+    "ogg.dll",
+  ];
+
+  assert.throws(
+    () => buildVendorSnapshot(value),
+    /forbidden Xiph regular dependency api-ms-win-crt-runtime-l1-1-0\.dll/,
+  );
+});
+
+test("Xiph package validation keeps regular and delay import graphs distinct", () => {
+  const value = compositeSourceBuild();
+  value.artifacts[0].pe_imports.regular = ["kernel32.dll"];
+  value.artifacts[0].pe_imports.delay = ["ogg.dll"];
+
+  assert.throws(
+    () => buildVendorSnapshot(value),
+    /Xiph regular import graph does not match shared/u,
+  );
+});
+
+test("Xiph source artifact keys are bound to DLL content identity", () => {
+  const value = compositeSourceBuild();
+  value.artifacts[0].artifact_key = "contextual-key";
+  value.packages[0].members[0].artifact_key = "contextual-key";
+
+  assert.throws(
+    () => buildVendorSnapshot(value),
+    /artifact_key must equal the DLL content identity/u,
+  );
+});
+
+test("PE import metadata rejects fields outside its closed contract", () => {
+  const value = compositeSourceBuild();
+  value.artifacts[0].pe_imports.other = [];
+
+  assert.throws(() => buildVendorSnapshot(value), /must contain regular and delay arrays/u);
+});
+
+test("generic source patches must reference an existing provenance source", () => {
+  const source = compositeSourceBuild();
+  source.packages[0].provenance.patches = {
+    "custom.patch": {
+      source: "missing",
+      target: "src/example.c",
+      descriptor_sha256: "1".repeat(64),
+      original_sha256: "2".repeat(64),
+      patched_sha256: "3".repeat(64),
+    },
+  };
+  assert.throws(
+    () => buildVendorSnapshot(source),
+    /invalid source patch target custom\.patch/u,
   );
 });
 
@@ -520,6 +695,138 @@ function sourceWithLegalDocument() {
   ];
   value.packages[0].legal_document_ids = [legalDocumentId];
   return value;
+}
+
+function compositeSourceBuild() {
+  const sourceInput = (repository, version, marker) => ({
+    repository,
+    version,
+    tag: `v${version}`,
+    tag_object_sha: marker.repeat(40),
+    commit_sha: marker.toUpperCase().toLowerCase().repeat(40),
+    archive_url:
+      `https://downloads.xiph.org/releases/${repository.split("/")[1]}/` +
+      `lib${repository.split("/")[1]}-${version}.tar.xz`,
+    archive_sha256: marker.repeat(64),
+  });
+  return {
+    schema_version: 1,
+    vendor: { id: "xiph", display_name: "Xiph.Org Foundation" },
+    generated_at: "2026-07-27T00:00:00.000Z",
+    legal_documents: [],
+    artifacts: [
+      {
+        artifact_key: `dll.${"a".repeat(64)}`,
+        library_id: "xiph_vorbis",
+        file_name: "vorbis.dll",
+        file_version: "1.3.7",
+        architecture: "X64",
+        pe_named_exports: ["vorbis_info_init"],
+        pe_imports: { regular: ["kernel32.dll", "ogg.dll"], delay: [] },
+        dll: { sha256: "a".repeat(64), size_bytes: 7 },
+        transport: { sha256: "b".repeat(64), size_bytes: 5 },
+        signature: { status: "unsigned" },
+      },
+      {
+        artifact_key: `dll.${"c".repeat(64)}`,
+        library_id: "xiph_vorbisfile",
+        file_name: "vorbisfile.dll",
+        file_version: "1.3.7",
+        architecture: "X64",
+        pe_named_exports: ["ov_open"],
+        pe_imports: {
+          regular: ["kernel32.dll", "ogg.dll", "vorbis.dll"],
+          delay: [],
+        },
+        dll: { sha256: "c".repeat(64), size_bytes: 11 },
+        transport: { sha256: "d".repeat(64), size_bytes: 9 },
+        signature: { status: "unsigned" },
+      },
+      {
+        artifact_key: `dll.${"5".repeat(64)}`,
+        library_id: "xiph_vorbisenc",
+        file_name: "vorbisenc.dll",
+        file_version: "1.3.7",
+        architecture: "X64",
+        pe_named_exports: ["vorbis_encode_init"],
+        pe_imports: { regular: ["kernel32.dll", "vorbis.dll"], delay: [] },
+        dll: { sha256: "5".repeat(64), size_bytes: 13 },
+        transport: { sha256: "6".repeat(64), size_bytes: 10 },
+        signature: { status: "unsigned" },
+      },
+      {
+        artifact_key: `dll.${"7".repeat(64)}`,
+        library_id: "xiph_ogg",
+        file_name: "ogg.dll",
+        file_version: "1.3.6",
+        architecture: "X64",
+        pe_named_exports: ["ogg_sync_init"],
+        pe_imports: { regular: ["kernel32.dll"], delay: [] },
+        dll: { sha256: "7".repeat(64), size_bytes: 17 },
+        transport: { sha256: "8".repeat(64), size_bytes: 12 },
+        signature: { status: "unsigned" },
+      },
+    ],
+    packages: [
+      {
+        package_id: "xiph_vorbis.vorbis-1.3.7.ogg-1.3.6.r1.x64.shared.plain",
+        technology: "xiph_vorbis",
+        variant: "shared.plain",
+        display_name: "Xiph Vorbis/Ogg",
+        release: {
+          version: "1.3.7",
+          channel: "stable",
+          label: "source build",
+          components: { ogg: "1.3.6", vorbis: "1.3.7" },
+        },
+        target: { os: "windows", architecture: "X64" },
+        provenance: {
+          kind: "source_build",
+          sources: {
+            ogg: sourceInput("xiph/ogg", "1.3.6", "1"),
+            vorbis: sourceInput("xiph/vorbis", "1.3.7", "2"),
+          },
+          build_revision: 1,
+          recipe_sha256: "e".repeat(64),
+          verification_policy_sha256: "f".repeat(64),
+          patches: {},
+          toolchain: {
+            runner_image: "windows-2025-vs2026@test",
+            compiler: "MSVC 19.50",
+            linker: "link 14.50",
+            windows_sdk: "10.0.26100.0",
+            cmake: "4.1.0",
+          },
+        },
+        members: [
+          {
+            artifact_key: `dll.${"a".repeat(64)}`,
+            component: "vorbis",
+            role: "primary",
+            install_as: "vorbis.dll",
+          },
+          {
+            artifact_key: `dll.${"c".repeat(64)}`,
+            component: "vorbisfile",
+            role: "support",
+            install_as: "vorbisfile.dll",
+          },
+          {
+            artifact_key: `dll.${"5".repeat(64)}`,
+            component: "vorbisenc",
+            role: "support",
+            install_as: "vorbisenc.dll",
+          },
+          {
+            artifact_key: `dll.${"7".repeat(64)}`,
+            component: "ogg",
+            role: "support",
+            install_as: "ogg.dll",
+          },
+        ],
+      },
+    ],
+  };
 }
 
 function normalizeNumericVersion(value) {

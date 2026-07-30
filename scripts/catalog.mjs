@@ -77,6 +77,13 @@ export const libraryVendors = defineLibraryVendors([
     outputFile: "libraries/v1/vendors/valve.json",
     refreshConcurrency: 4,
   },
+  {
+    vendorId: "xiph",
+    sourceKind: "curated",
+    sourceFile: "catalogs/libraries/xiph.json",
+    outputFile: "libraries/v1/vendors/xiph.json",
+    indexWhenPopulated: true,
+  },
 ]);
 
 export const curatedLibraryVendors = Object.freeze(

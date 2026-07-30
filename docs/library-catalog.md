@@ -87,9 +87,9 @@ The Windows inspector reads PE architecture, nullable file version, bounded name
 | Valve     | Cutoff policy    | Nullable                              | Sorted OpenVR named exports   |
 | NVIDIA    | Curated metadata | Curated                               | Explicit reviewed packages    |
 
-Signed files must have Windows status `Valid` and a signer allowed by the provider profile. RFC 3161 timestamps are verified with `CryptVerifyTimeStampSignature`; legacy PKCS#9 countersignatures are verified with `CryptMsgVerifyCountersignatureEncodedEx` against the original signer digest.
+Signed files must have an embedded Authenticode signature with Windows status `Valid` and a signer allowed by the provider profile. Catalog signatures are a different trust source and are rejected rather than being mixed with embedded CMS metadata. RFC 3161 timestamps are verified with `CryptVerifyTimeStampSignature`; legacy PKCS#9 countersignatures are verified with `CryptMsgVerifyCountersignatureEncodedEx` against the original signer digest. In both cases, the timestamp signer must match the trusted `TimeStamperCertificate` selected by Windows WinTrust for that embedded signature.
 
-Malformed CMS, signer mismatch, invalid cryptography, conflicting verified times, and unsupported timestamp structures always fail. `signed_at` is `null` only when no timestamp attribute exists.
+Malformed CMS, signer or timestamp-trust mismatch, invalid cryptography, conflicting verified times, and unsupported timestamp structures always fail. `signed_at` is `null` only when neither embedded timestamp attributes nor a Windows-trusted timestamp are present.
 
 OpenVR's policy can report historical unsigned DLLs only before the configured inclusive signature cutoff. A release at or after that cutoff must be validly signed. OpenVR also publishes sorted named exports for RenderPilot's export-surface compatibility guard and preserves every official release package even when releases share the same DLL.
 
