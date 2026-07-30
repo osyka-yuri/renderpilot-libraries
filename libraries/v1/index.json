@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-29T17:43:05.797Z",
+  "generated_at": "2026-07-30T20:47:05.442Z",
   "vendors": [
     {
       "vendor_id": "amd",
@@ -36,6 +36,13 @@
       "snapshot_key": "libraries/v1/vendors/valve/a8d0264f78a38149d37450c7a5bf2de140a45790cd0ec023973537861f684f7c.json",
       "snapshot_sha256": "a8d0264f78a38149d37450c7a5bf2de140a45790cd0ec023973537861f684f7c",
       "snapshot_size_bytes": 594962
+    },
+    {
+      "vendor_id": "xiph",
+      "display_name": "Xiph.Org Foundation",
+      "snapshot_key": "libraries/v1/vendors/xiph/e2bd72aa50a8255e0f0849726cf456841b14b2e2a47629607d37d2ec261d9a3d.json",
+      "snapshot_sha256": "e2bd72aa50a8255e0f0849726cf456841b14b2e2a47629607d37d2ec261d9a3d",
+      "snapshot_size_bytes": 1832439
     }
   ]
 }
