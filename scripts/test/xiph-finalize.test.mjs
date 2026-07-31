@@ -30,6 +30,7 @@ test("finalizer materializes the complete matrix into a valid lock and catalog",
     assert.deepEqual(result.pair.builds[0].patches, {});
     assert.doesNotThrow(() => assertXiphCatalogMatchesLock(result.source, result.lock));
     assert.equal(result.source.packages[0].release.version, "1.0.0");
+    assert.equal(result.source.packages[0].release.label, null);
     assert.deepEqual(result.source.packages[0].release.components, {
       ogg: "1.0.0",
       vorbis: "1.0.0",

@@ -793,6 +793,11 @@ function assertOpenVrPackage(packageValue, artifacts, context) {
 
 function assertXiphPackage(packageValue, artifacts, context) {
   if (packageValue.technology !== "xiph_vorbis") return;
+  if (packageValue.release.label !== null) {
+    throw new Error(
+      `${context}: Xiph release label must be null; build origin belongs to provenance`,
+    );
+  }
   const components = packageValue.release.components;
   const provenance = packageValue.provenance;
   const [topology, profile, ...variantRemainder] = packageValue.variant.split(".");

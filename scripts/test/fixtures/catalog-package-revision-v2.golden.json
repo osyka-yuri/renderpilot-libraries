@@ -8,7 +8,7 @@
     "release": {
       "version": "1.3.7",
       "channel": "stable",
-      "label": "source build",
+      "label": null,
       "components": {
         "ogg": "1.3.6",
         "vorbis": "1.3.7"

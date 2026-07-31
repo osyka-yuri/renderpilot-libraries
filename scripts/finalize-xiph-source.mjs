@@ -264,7 +264,7 @@ export async function finalizeXiphSource({
       release: {
         version: canonicalXiphReleaseVersion(pair.vorbis_version),
         channel: "stable",
-        label: "source build",
+        label: null,
         components: {
           ogg: canonicalXiphReleaseVersion(pair.ogg_version),
           vorbis: canonicalXiphReleaseVersion(pair.vorbis_version),

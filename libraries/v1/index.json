@@ -40,9 +40,9 @@
     {
       "vendor_id": "xiph",
       "display_name": "Xiph.Org Foundation",
-      "snapshot_key": "libraries/v1/vendors/xiph/5ee69aafa06677b4fe91575fca48f975db1bd8f4d544f68b09fa40f039ab1211.json",
-      "snapshot_sha256": "5ee69aafa06677b4fe91575fca48f975db1bd8f4d544f68b09fa40f039ab1211",
-      "snapshot_size_bytes": 1816539
+      "snapshot_key": "libraries/v1/vendors/xiph/0a5b95b428ecc2308d4e2f089ab8bb4986248943f3e9743ee55c32241424ed9c.json",
+      "snapshot_sha256": "0a5b95b428ecc2308d4e2f089ab8bb4986248943f3e9743ee55c32241424ed9c",
+      "snapshot_size_bytes": 1814619
     }
   ]
 }

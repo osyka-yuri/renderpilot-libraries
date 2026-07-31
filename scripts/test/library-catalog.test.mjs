@@ -104,7 +104,6 @@ test("composite V2 revision binds components, source build, target, and members"
 
   const presentationOnly = structuredClone(original);
   presentationOnly.packages[0].display_name = "Renamed Xiph package";
-  presentationOnly.packages[0].release.label = "Audited source build";
   assert.equal(buildVendorSnapshot(presentationOnly).packages[0].revision_sha256, baseline);
 
   for (const mutate of [
@@ -198,6 +197,16 @@ test("Xiph package validation rejects API-set dynamic CRT imports", () => {
   assert.throws(
     () => buildVendorSnapshot(value),
     /forbidden Xiph regular dependency api-ms-win-crt-runtime-l1-1-0\.dll/,
+  );
+});
+
+test("Xiph build origin belongs to provenance rather than the release label", () => {
+  const value = compositeSourceBuild();
+  value.packages[0].release.label = "source build";
+
+  assert.throws(
+    () => buildVendorSnapshot(value),
+    /Xiph release label must be null; build origin belongs to provenance/u,
   );
 });
 
@@ -776,7 +785,7 @@ function compositeSourceBuild() {
         release: {
           version: "1.3.7",
           channel: "stable",
-          label: "source build",
+          label: null,
           components: { ogg: "1.3.6", vorbis: "1.3.7" },
         },
         target: { os: "windows", architecture: "X64" },
