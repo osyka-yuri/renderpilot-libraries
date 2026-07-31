@@ -6,6 +6,7 @@ import test from "node:test";
 
 import { resolveRepoPath } from "../catalog.mjs";
 import { sha256Hex } from "../lib/hash.mjs";
+import { buildVendorSnapshot } from "../lib/library-catalog.mjs";
 import {
   BUNDLE_MANIFEST_FILE,
   XIPH_ASSET_BUNDLE_KIND,
@@ -17,7 +18,6 @@ import {
   verifyXiphAssetBundle,
   verifyXiphCatalogBundle,
 } from "../lib/xiph-ci-bundle.mjs";
-import { expectedXiphArtifactKeys } from "../lib/xiph-matrix.mjs";
 
 test("Xiph asset bundle contains only the exact candidate delta", () => {
   const existing = artifactExpectation("a");
@@ -177,11 +177,35 @@ test("catalog bundle verifier rejects independently valid but inconsistent Xiph 
   try {
     await assert.doesNotReject(verifyXiphCatalogBundle(fixture.root));
 
-    const lockFile = path.join(fixture.root, "catalogs", "libraries", "xiph.lock.json");
-    const lock = JSON.parse(await readFile(lockFile, "utf8"));
-    const pair = lock.pairs[0];
-    pair.builds = [syntheticBuildReceipt(pair)];
-    await writeJson(lockFile, lock);
+    const sourceFile = path.join(fixture.root, "catalogs", "libraries", "xiph.json");
+    const vendorFile = path.join(fixture.root, "libraries", "v1", "vendors", "xiph.json");
+    const source = JSON.parse(await readFile(sourceFile, "utf8"));
+    const omittedPackage = source.packages[0];
+    const omittedBuild = omittedPackage.provenance;
+    source.packages = source.packages.filter(
+      ({ provenance }) =>
+        provenance.build_revision !== omittedBuild.build_revision ||
+        provenance.sources.ogg.version !== omittedBuild.sources.ogg.version ||
+        provenance.sources.vorbis.version !== omittedBuild.sources.vorbis.version,
+    );
+    const referencedArtifacts = new Set(
+      source.packages.flatMap(({ members }) =>
+        members.map(({ artifact_key }) => artifact_key),
+      ),
+    );
+    const referencedLegalDocuments = new Set(
+      source.packages.flatMap(({ legal_document_ids }) => legal_document_ids),
+    );
+    source.artifacts = source.artifacts.filter(({ artifact_key }) =>
+      referencedArtifacts.has(artifact_key),
+    );
+    source.legal_documents = source.legal_documents.filter(({ legal_document_id }) =>
+      referencedLegalDocuments.has(legal_document_id),
+    );
+    await Promise.all([
+      writeJson(sourceFile, source),
+      writeJson(vendorFile, buildVendorSnapshot(source)),
+    ]);
     await refreshCatalogBundleManifest(fixture.root);
 
     await assert.rejects(
@@ -254,36 +278,6 @@ async function refreshCatalogBundleManifest(root) {
   }
   files.sort((left, right) => left.path.localeCompare(right.path));
   await writeManifest(root, XIPH_CATALOG_BUNDLE_KIND, files);
-}
-
-function syntheticBuildReceipt(pair) {
-  const dllSha256 = "3".repeat(64);
-  const zstSha256 = "4".repeat(64);
-  return {
-    build_revision: pair.build_revision,
-    generated_at: "2026-07-27T00:00:00.000Z",
-    recipe_sha256: "1".repeat(64),
-    verification_policy_sha256: "2".repeat(64),
-    patches: {},
-    toolchain: {
-      runner_image: "windows-2025-vs2026@20260720.1",
-      compiler: "MSVC 19.51",
-      linker: "LINK 14.51",
-      windows_sdk: "10.0.26100.0",
-      cmake: "4.3.1",
-    },
-    artifacts: expectedXiphArtifactKeys(pair, pair.build_revision).map((artifact_key) => ({
-      artifact_key,
-      dll_sha256: dllSha256,
-      dll_size_bytes: 1,
-      transport: {
-        object_key: `libraries/blobs/sha256/${zstSha256}.dll.zst`,
-        zst_sha256: zstSha256,
-        zst_size_bytes: 1,
-        compression_level: 12,
-      },
-    })),
-  };
 }
 
 function artifactExpectation(marker) {

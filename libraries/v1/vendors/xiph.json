@@ -177,9 +177,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -269,9 +267,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -331,11 +327,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -396,10 +388,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -460,10 +449,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -495,10 +481,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -590,9 +573,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -624,10 +605,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -656,10 +634,7 @@
         "vorbis_encode_init_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -730,9 +705,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -804,10 +777,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -839,10 +809,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -903,10 +870,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -938,10 +902,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1001,10 +962,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1075,9 +1033,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -1138,11 +1094,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1203,9 +1155,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -1277,10 +1227,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -1350,9 +1297,7 @@
         "oggpack_writeinit"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -1412,10 +1357,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1505,9 +1447,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -1579,9 +1519,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -1654,9 +1592,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -1717,10 +1653,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1771,11 +1704,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1807,10 +1736,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1842,10 +1768,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -1917,9 +1840,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -2009,9 +1930,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -2072,10 +1991,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -2135,11 +2051,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -2229,9 +2141,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -2263,10 +2173,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -2326,11 +2233,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -2402,9 +2305,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -2436,10 +2337,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -2531,9 +2429,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -2594,10 +2490,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -2669,10 +2562,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -2732,10 +2622,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -2796,11 +2683,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -2860,10 +2743,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -2895,10 +2775,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -2959,11 +2836,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -3035,10 +2908,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -3099,10 +2969,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -3134,10 +3001,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -3209,10 +3073,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -3283,9 +3144,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -3345,10 +3204,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -3380,10 +3236,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -3455,10 +3308,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -3529,9 +3379,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -3563,10 +3411,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -3637,10 +3482,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -3711,9 +3553,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -3803,9 +3643,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -3877,10 +3715,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -3953,10 +3788,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -3988,10 +3820,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -4063,9 +3892,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -4097,10 +3924,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -4172,9 +3996,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -4234,10 +4056,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -4309,10 +4128,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -4383,9 +4199,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -4456,9 +4270,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -4548,9 +4360,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -4622,10 +4432,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -4697,10 +4504,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -4751,11 +4555,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -4806,11 +4606,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -4882,10 +4678,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -4957,9 +4750,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -5019,11 +4810,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -5083,10 +4870,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -5118,10 +4902,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -5153,10 +4934,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -5228,9 +5006,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -5262,10 +5038,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -5326,10 +5099,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -5401,9 +5171,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -5463,11 +5231,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -5539,10 +5303,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -5603,11 +5364,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -5679,9 +5436,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -5752,10 +5507,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -5816,10 +5568,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -5909,9 +5658,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -6001,9 +5748,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -6075,10 +5820,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -6149,10 +5891,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -6224,9 +5963,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -6286,11 +6023,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -6322,10 +6055,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -6396,10 +6126,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -6491,9 +6218,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -6554,11 +6279,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -6630,9 +6351,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -6693,11 +6412,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -6729,10 +6444,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -6804,10 +6516,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -6858,10 +6567,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -6951,9 +6657,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -6985,10 +6689,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7049,11 +6750,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7145,9 +6842,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -7219,10 +6914,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -7283,10 +6975,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7358,10 +7047,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -7422,10 +7108,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7515,9 +7198,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -7578,11 +7259,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7642,11 +7319,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7717,9 +7390,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -7779,11 +7450,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -7855,9 +7522,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -7949,9 +7614,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -8043,9 +7706,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -8135,9 +7796,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -8198,11 +7857,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -8263,10 +7918,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -8326,11 +7978,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -8362,10 +8010,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -8457,9 +8102,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -8549,9 +8192,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -8583,10 +8224,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -8676,9 +8314,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -8749,10 +8385,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -8813,10 +8446,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -8867,11 +8497,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -8961,9 +8587,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -9024,10 +8648,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9117,9 +8738,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -9180,11 +8799,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9256,9 +8871,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -9350,9 +8963,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -9444,9 +9055,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -9507,11 +9116,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -9543,10 +9148,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9607,10 +9209,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9670,10 +9269,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9702,10 +9298,7 @@
         "vorbis_encode_init_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -9795,9 +9388,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -9858,11 +9449,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9923,11 +9510,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -9999,10 +9582,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -10074,10 +9654,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -10149,9 +9726,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -10212,11 +9787,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -10287,10 +9858,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -10362,10 +9930,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -10438,10 +10003,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -10502,10 +10064,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -10578,10 +10137,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -10642,10 +10198,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -10706,10 +10259,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -10741,10 +10291,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -10805,11 +10352,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -10881,10 +10424,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -10944,10 +10484,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -10998,11 +10535,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -11063,11 +10596,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -11099,10 +10628,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -11174,9 +10700,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -11236,11 +10760,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -11301,10 +10821,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -11364,10 +10881,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -11459,9 +10973,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -11532,10 +11044,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -11567,10 +11076,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -11631,10 +11137,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -11695,9 +11198,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -11758,11 +11259,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -11791,10 +11288,7 @@
         "vorbis_encode_init_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -11826,10 +11320,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -11901,9 +11392,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -11935,10 +11424,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -12009,9 +11495,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -12101,9 +11585,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -12135,10 +11617,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -12228,9 +11707,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -12290,10 +11767,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -12354,9 +11828,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -12446,9 +11918,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -12519,10 +11989,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -12594,10 +12061,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -12629,10 +12093,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -12703,10 +12164,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -12766,10 +12224,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -12801,10 +12256,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -12875,10 +12327,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -12910,10 +12359,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -12974,9 +12420,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -13037,11 +12481,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -13113,10 +12553,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -13167,11 +12604,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -13231,10 +12664,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -13306,9 +12736,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -13340,10 +12768,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -13375,10 +12800,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -13450,9 +12872,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -13524,10 +12944,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -13578,11 +12995,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -13642,11 +13055,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -13697,11 +13106,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -13793,9 +13198,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -13867,9 +13270,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -13929,11 +13330,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -13994,10 +13391,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -14057,11 +13451,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -14093,10 +13483,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -14156,11 +13543,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -14221,11 +13604,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -14296,9 +13675,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -14370,10 +13747,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -14434,10 +13808,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -14498,11 +13869,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -14575,9 +13942,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -14649,10 +14014,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -14684,10 +14046,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -14777,9 +14136,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -14869,9 +14226,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -14943,9 +14298,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -15006,10 +14359,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -15070,10 +14420,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -15124,11 +14471,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -15189,11 +14532,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -15225,10 +14564,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -15299,9 +14635,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -15373,10 +14707,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -15448,10 +14779,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -15541,9 +14869,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -15615,10 +14941,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -15690,9 +15013,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -15753,10 +15074,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -15788,10 +15106,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -15823,10 +15138,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -15887,11 +15199,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -15981,9 +15289,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -16053,9 +15359,7 @@
         "oggpack_writeinit"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -16115,10 +15419,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -16189,10 +15490,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -16252,10 +15550,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -16327,9 +15622,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -16400,10 +15693,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -16475,10 +15765,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -16549,10 +15836,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -16613,10 +15897,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -16677,10 +15958,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -16741,10 +16019,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -16834,9 +16109,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -16897,10 +16170,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -16932,10 +16202,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -17007,10 +16274,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -17082,9 +16346,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -17157,9 +16419,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -17220,10 +16480,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -17294,10 +16551,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -17357,11 +16611,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -17421,10 +16671,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -17484,11 +16731,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -17548,10 +16791,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -17611,10 +16851,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -17675,10 +16912,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -17749,10 +16983,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -17813,11 +17044,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -17849,10 +17076,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -17922,9 +17146,7 @@
         "oggpack_writeinit"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -17995,10 +17217,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -18070,9 +17289,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -18144,9 +17361,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -18207,10 +17422,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -18282,10 +17494,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -18357,10 +17566,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -18392,10 +17598,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -18456,9 +17659,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -18519,11 +17720,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -18613,9 +17810,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -18675,10 +17870,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -18770,9 +17962,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -18844,10 +18034,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -18937,9 +18124,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -19010,10 +18195,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -19074,11 +18256,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19139,10 +18317,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19203,10 +18378,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19267,10 +18439,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19331,9 +18500,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -19365,10 +18532,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19429,10 +18593,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -19493,10 +18654,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -19528,10 +18686,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19603,9 +18758,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -19665,10 +18818,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19740,10 +18890,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -19775,10 +18922,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -19839,11 +18983,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19875,10 +19015,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -19968,9 +19105,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -20042,10 +19177,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -20106,9 +19238,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -20180,10 +19310,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -20215,10 +19342,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -20279,10 +19403,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -20343,11 +19464,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -20379,10 +19496,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -20443,10 +19557,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -20478,10 +19589,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -20542,10 +19650,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -20577,10 +19682,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -20650,9 +19752,7 @@
         "oggpack_writeinit"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -20742,9 +19842,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -20816,9 +19914,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -20908,9 +20004,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21000,9 +20094,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21094,9 +20186,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21168,10 +20258,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -21232,10 +20319,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -21306,9 +20390,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21380,9 +20462,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21453,9 +20533,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21516,10 +20594,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -21609,9 +20684,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21701,9 +20774,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21774,9 +20845,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -21808,10 +20877,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -21843,10 +20909,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -21907,11 +20970,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -21972,11 +21031,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -22036,10 +21091,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -22100,10 +21152,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -22135,10 +21184,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -22199,10 +21245,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -22263,11 +21306,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -22328,10 +21367,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -22421,9 +21457,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -22513,9 +21547,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -22587,10 +21619,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -22651,10 +21680,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -22715,10 +21741,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -22750,10 +21773,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -22845,9 +21865,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -22919,9 +21937,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -22993,9 +22009,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -23065,9 +22079,7 @@
         "oggpack_writeinit"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -23128,10 +22140,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23221,9 +22230,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -23252,10 +22259,7 @@
         "vorbis_encode_init_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23315,10 +22319,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -23390,9 +22391,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -23482,9 +22481,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -23545,11 +22542,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23600,10 +22593,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23664,11 +22654,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23700,10 +22686,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23775,10 +22758,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -23838,11 +22818,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23902,11 +22878,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -23938,10 +22910,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -24002,10 +22971,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -24066,11 +23032,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -24160,9 +23122,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -24252,9 +23212,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -24286,10 +23244,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -24321,10 +23276,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -24396,9 +23348,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -24490,9 +23440,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -24524,10 +23472,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -24598,10 +23543,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -24672,9 +23614,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -24746,9 +23686,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -24780,10 +23718,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -24855,10 +23790,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -24919,11 +23851,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25013,9 +23941,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -25066,11 +23992,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25142,9 +24064,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -25195,10 +24115,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25230,10 +24147,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -25323,9 +24237,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -25386,11 +24298,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -25482,9 +24390,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -25556,10 +24462,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -25588,10 +24491,7 @@
         "vorbis_encode_init_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25651,10 +24551,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25725,9 +24622,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -25788,11 +24683,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25863,10 +24754,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -25927,11 +24815,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -25963,10 +24847,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26037,10 +24918,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -26072,10 +24950,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26135,10 +25010,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26210,9 +25082,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -26244,10 +25114,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26307,10 +25174,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26370,11 +25234,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26406,10 +25266,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26499,9 +25356,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -26573,10 +25428,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -26666,9 +25518,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -26700,10 +25550,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26776,9 +25623,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -26839,11 +25684,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -26904,11 +25745,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -26980,10 +25817,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -27043,11 +25877,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -27137,9 +25967,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27212,10 +26040,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -27247,10 +26072,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -27321,9 +26143,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27384,10 +26204,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -27458,9 +26275,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27532,9 +26347,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27624,9 +26437,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27687,10 +26498,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -27762,9 +26570,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27836,9 +26642,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -27899,10 +26703,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -27974,9 +26775,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -28048,10 +26847,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -28112,10 +26908,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -28175,10 +26968,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -28229,11 +27019,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -28294,10 +27080,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -28389,9 +27172,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -28452,11 +27233,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -28517,10 +27294,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -28610,9 +27384,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -28684,10 +27456,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -28719,10 +27488,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -28754,10 +27520,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -28817,11 +27580,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -28911,9 +27670,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -28984,10 +27741,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -29059,10 +27813,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -29154,9 +27905,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -29228,10 +27977,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -29304,10 +28050,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -29397,9 +28140,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -29460,10 +28201,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -29555,9 +28293,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -29629,10 +28365,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -29664,10 +28397,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -29757,9 +28487,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -29819,11 +28547,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -29915,9 +28639,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -29989,10 +28711,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -30084,9 +28803,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -30118,10 +28835,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -30182,11 +28896,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -30237,11 +28947,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -30331,9 +29037,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -30425,9 +29129,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -30487,11 +29189,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -30581,9 +29279,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -30644,11 +29340,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -30709,11 +29401,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -30803,9 +29491,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -30866,11 +29552,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -30930,11 +29612,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31006,9 +29684,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -31080,9 +29756,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -31114,10 +29788,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31178,10 +29849,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll"],
         "delay": []
       },
       "dll": {
@@ -31241,11 +29909,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31306,11 +29970,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -31382,9 +30042,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -31416,10 +30074,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31491,9 +30146,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -31565,9 +30218,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -31628,11 +30279,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31704,10 +30351,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -31768,11 +30412,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31833,11 +30473,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -31909,10 +30545,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -31984,9 +30617,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -32057,10 +30688,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -32121,11 +30749,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -32215,9 +30839,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -32278,10 +30900,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -32352,10 +30971,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -32445,9 +31061,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -32507,11 +31121,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -32582,9 +31192,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -32674,9 +31282,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -32727,10 +31333,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -32802,10 +31405,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -32877,9 +31477,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -32940,10 +31538,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -33003,11 +31598,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -33079,9 +31670,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33113,10 +31702,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -33206,9 +31792,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33269,10 +31853,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -33304,10 +31885,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -33397,9 +31975,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33489,9 +32065,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33542,10 +32116,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -33635,9 +32206,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33697,11 +32266,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -33773,9 +32338,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33865,9 +32428,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -33938,9 +32499,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -34000,11 +32559,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34065,10 +32620,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34100,10 +32652,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -34174,9 +32723,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -34266,9 +32813,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -34358,9 +32903,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -34392,10 +32935,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -34456,10 +32996,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34531,10 +33068,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -34566,10 +33100,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34642,10 +33173,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -34705,10 +33233,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34769,9 +33294,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -34832,11 +33355,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34897,11 +33416,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -34971,9 +33486,7 @@
         "oggpack_writeinit"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -35044,9 +33557,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -35107,10 +33618,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll"],
         "delay": []
       },
       "dll": {
@@ -35170,11 +33678,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -35235,10 +33739,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -35270,10 +33771,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -35334,10 +33832,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -35410,9 +33905,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -35473,11 +33966,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -35567,9 +34056,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -35659,9 +34146,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -35721,10 +34206,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -35756,10 +34238,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -35830,10 +34309,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -35905,9 +34381,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -35999,9 +34473,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36062,11 +34534,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -36127,10 +34595,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -36220,9 +34685,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36254,10 +34717,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -36328,9 +34788,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36362,10 +34820,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -36426,11 +34881,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "ogg.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "ogg.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -36502,9 +34953,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36536,10 +34985,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -36611,9 +35057,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36685,9 +35129,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36758,9 +35200,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36789,10 +35229,7 @@
         "vorbis_encode_init_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -36865,9 +35302,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -36939,10 +35374,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libogg-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libogg-0.dll"],
         "delay": []
       },
       "dll": {
@@ -37032,9 +35464,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -37106,9 +35536,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -37169,9 +35597,7 @@
         "vorbis_synthesis_trackonly"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -37203,10 +35629,7 @@
         "vorbis_encode_setup_vbr"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -37266,10 +35689,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis.dll"],
         "delay": []
       },
       "dll": {
@@ -37329,10 +35749,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "libvorbis-0.dll"
-        ],
+        "regular": ["kernel32.dll", "libvorbis-0.dll"],
         "delay": []
       },
       "dll": {
@@ -37404,9 +35821,7 @@
         "vorbis_window"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -37498,9 +35913,7 @@
         "oggpack_writetrunc"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll"
-        ],
+        "regular": ["kernel32.dll"],
         "delay": []
       },
       "dll": {
@@ -37551,10 +35964,7 @@
         "ov_time_total"
       ],
       "pe_imports": {
-        "regular": [
-          "kernel32.dll",
-          "vorbis.dll"
-        ],
+        "regular": ["kernel32.dll", "vorbis.dll"],
         "delay": []
       },
       "dll": {

@@ -4,6 +4,8 @@ import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 
+import * as prettier from "prettier";
+
 import { resolveRepoPath } from "../catalog.mjs";
 import { finalizeXiphSource } from "../finalize-xiph-source.mjs";
 import { sha256Hex } from "../lib/hash.mjs";
@@ -43,6 +45,18 @@ test("finalizer materializes the complete matrix into a valid lock and catalog",
     const committedLock = JSON.parse(await readFile(fixture.paths.lockFile, "utf8"));
     assert.deepEqual(committedSource, result.source);
     assert.deepEqual(committedLock, result.lock);
+    assert.equal(
+      await prettier.check(await readFile(fixture.paths.sourceFile, "utf8"), {
+        filepath: fixture.paths.sourceFile,
+      }),
+      true,
+    );
+    assert.equal(
+      await prettier.check(await readFile(fixture.paths.lockFile, "utf8"), {
+        filepath: fixture.paths.lockFile,
+      }),
+      true,
+    );
 
     const before = await Promise.all([
       readFile(fixture.paths.sourceFile),

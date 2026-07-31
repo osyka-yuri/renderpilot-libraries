@@ -6,16 +6,12 @@ import {
   libraryIndexFile,
   repoRoot,
 } from "../catalog.mjs";
-import {
-  buildLibraryIndex,
-  buildVendorSnapshot,
-  jsonDocument,
-} from "./library-catalog.mjs";
+import { buildLibraryIndex, buildVendorSnapshot } from "./library-catalog.mjs";
 import {
   assertGeneratedLibraryVendorAdapters,
   buildGeneratedLibraryVendorSource,
 } from "./library-source-adapters.mjs";
-import { readJsonFileAsync } from "./json.mjs";
+import { readJsonFileAsync, stringifyFormattedJson } from "./json.mjs";
 
 /**
  * Resolves every v1 vendor snapshot and the index from one coherent input set.
@@ -57,37 +53,48 @@ export async function buildLibraryCatalogPlan(inputOverrides = new Map()) {
     ),
   ]);
 
-  const vendorDocuments = [...curatedSources, ...generatedSources]
-    .sort((left, right) => {
-      const leftFile = left.vendor.outputFile;
-      const rightFile = right.vendor.outputFile;
-      return leftFile.localeCompare(rightFile);
-    })
-    .map(({ vendor, source }) => {
+  const vendorSources = [...curatedSources, ...generatedSources].sort((left, right) => {
+    const leftFile = left.vendor.outputFile;
+    const rightFile = right.vendor.outputFile;
+    return leftFile.localeCompare(rightFile);
+  });
+  const vendorDocuments = await Promise.all(
+    vendorSources.map(async ({ vendor, source }) => {
       if (source?.vendor?.id !== vendor.vendorId) {
         throw new Error(
           `${vendor.sourceFile ?? vendor.lockFile}: expected vendor ${vendor.vendorId}, got ${source?.vendor?.id ?? "missing"}`,
         );
       }
       const snapshot = buildVendorSnapshot(source);
-      return { vendor, snapshot, body: jsonDocument(snapshot) };
-    });
+      const file = path.join(repoRoot, vendor.outputFile);
+      // The index binds the exact bytes served from R2, so formatting must be
+      // resolved before the snapshot SHA-256 and size are calculated.
+      const body = Buffer.from(await stringifyFormattedJson(snapshot, file), "utf8");
+      return { vendor, snapshot, body };
+    }),
+  );
   const indexedVendorDocuments = vendorDocuments.filter(
     ({ vendor, snapshot }) =>
       !vendor.indexWhenPopulated ||
       (snapshot.packages.length !== 0 && snapshot.artifacts.length !== 0),
   );
   const index = buildLibraryIndex(indexedVendorDocuments);
+  const indexFile = path.join(repoRoot, libraryIndexFile);
   const values = [
-    ...vendorDocuments.map(({ vendor, snapshot }) => ({
+    ...vendorDocuments.map(({ vendor, snapshot, body }) => ({
       file: vendor.outputFile,
       value: snapshot,
+      body,
     })),
-    { file: libraryIndexFile, value: index },
+    {
+      file: libraryIndexFile,
+      value: index,
+      body: Buffer.from(await stringifyFormattedJson(index, indexFile), "utf8"),
+    },
   ];
-  const outputs = values.map(({ file, value }) => {
+  const outputs = values.map(({ file, value, body }) => {
     const frozenValue = deepFreezeJson(value);
-    const preparedBody = jsonDocument(frozenValue);
+    const preparedBody = Buffer.from(body);
     return Object.freeze({
       relativeFile: file,
       file: path.join(repoRoot, file),

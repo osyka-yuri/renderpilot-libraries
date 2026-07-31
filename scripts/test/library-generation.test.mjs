@@ -2,7 +2,14 @@ import assert from "node:assert/strict";
 import path from "node:path";
 import test from "node:test";
 
-import { libraryIndexFile, microsoftLibraryVendor, repoRoot } from "../catalog.mjs";
+import * as prettier from "prettier";
+
+import {
+  libraryIndexFile,
+  libraryVendors,
+  microsoftLibraryVendor,
+  repoRoot,
+} from "../catalog.mjs";
 import { buildLibraryCatalogPlan } from "../lib/library-generation.mjs";
 import { readJsonFileAsync } from "../lib/json.mjs";
 
@@ -24,6 +31,11 @@ test("catalog generation plan is deterministic and index-last", async () => {
     assert.equal(path.isAbsolute(output.file), true);
     assert.equal(output.body.equals(right.outputs[index].body), true);
     assert.equal(Object.isFrozen(output.value), true);
+    assert.equal(
+      await prettier.check(output.body.toString("utf8"), { filepath: output.file }),
+      true,
+      `${output.relativeFile} must be emitted in canonical Prettier format`,
+    );
   }
   assert.ok(left.activeTransportObjectKeys.size > 0);
   assert.equal(Object.isFrozen(left.activeTransportObjectKeys), true);
@@ -34,14 +46,41 @@ test("catalog generation plan is deterministic and index-last", async () => {
   const index = left.outputs.at(-1).value;
   assert.equal(
     index.vendors.some(({ vendor_id }) => vendor_id === "xiph"),
-    false,
-    "an empty staged vendor must not become a production index entry",
+    true,
+    "the populated Xiph snapshot must be present in the production index",
   );
   assert.ok(
     left.outputs.some(
       ({ relativeFile }) => relativeFile === "libraries/v1/vendors/xiph.json",
     ),
     "the staged snapshot remains generated and schema-checked",
+  );
+});
+
+test("an empty staged vendor remains generated but is excluded from the index", async () => {
+  const xiphVendor = libraryVendors.find(({ vendorId }) => vendorId === "xiph");
+  assert.ok(xiphVendor?.sourceFile);
+  const source = await readJsonFileAsync(path.join(repoRoot, xiphVendor.sourceFile));
+  const emptySource = {
+    ...source,
+    legal_documents: [],
+    artifacts: [],
+    packages: [],
+  };
+
+  const plan = await buildLibraryCatalogPlan(
+    new Map([[xiphVendor.sourceFile, emptySource]]),
+  );
+  assert.ok(
+    plan.outputs.some(({ relativeFile }) => relativeFile === xiphVendor.outputFile),
+    "the empty staged snapshot must remain generated and schema-checked",
+  );
+  assert.equal(
+    plan.outputs
+      .at(-1)
+      .value.vendors.some(({ vendor_id }) => vendor_id === xiphVendor.vendorId),
+    false,
+    "the empty staged snapshot must not become a production index entry",
   );
 });
 

@@ -16,7 +16,7 @@ import { sha256Hex } from "./lib/hash.mjs";
 import { assertJsonSchema, compileJsonSchema } from "./lib/json-schema-validation.mjs";
 import { parseCliArgs } from "./lib/cli-args.mjs";
 import { runCliMain } from "./lib/cli-main.mjs";
-import { writeJsonFilesBatchWithRollback } from "./lib/json.mjs";
+import { stringifyFormattedJson, writeJsonFilesBatchWithRollback } from "./lib/json.mjs";
 import { assertXiphCatalogMatchesLock } from "./lib/xiph-catalog-state.mjs";
 import {
   assertXiphManifestMatrix,
@@ -338,6 +338,10 @@ export async function finalizeXiphSource({
   assertXiphCatalogMatchesLock(source, lock, { runnerContext });
   assertJsonSchema(source, validators.validateSource, "candidate Xiph source catalog");
   assertJsonSchema(snapshot, validators.validateSnapshot, "candidate Xiph vendor snapshot");
+  const [sourceBody, lockBody] = await Promise.all([
+    stringifyFormattedJson(source, sourceFile),
+    stringifyFormattedJson(lock, lockFile),
+  ]);
   // Immutable content-addressed objects are intentionally persisted before the
   // mutable JSON commit point. A later failure can leave safe orphan blobs, but
   // the index/source never references a partially persisted set.
@@ -345,8 +349,8 @@ export async function finalizeXiphSource({
     await persistObject(prepared);
   }
   await writeBatch([
-    { file: sourceFile, value: source },
-    { file: lockFile, value: lock },
+    { file: sourceFile, body: sourceBody },
+    { file: lockFile, body: lockBody },
   ]);
   return { pair, source, lock };
 }
