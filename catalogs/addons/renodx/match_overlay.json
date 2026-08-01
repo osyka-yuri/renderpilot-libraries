@@ -1111,6 +1111,18 @@
   "hordelord": {
     "appids": ["3676260"]
   },
+  "horizon-forbidden-west-complete-edition": {
+    "appids": ["2420110"],
+    "download_url": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-horizonzdr-fwce.addon64"
+  },
+  "horizon-zero-dawn-complete-edition": {
+    "appids": ["1151640"],
+    "download_url": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-horizonzerodawnce.addon64"
+  },
+  "horizon-zero-dawn-remastered": {
+    "appids": ["2561580"],
+    "download_url": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-horizonzdr-fwce.addon64"
+  },
   "house-flipper": {
     "appids": ["613100"]
   },

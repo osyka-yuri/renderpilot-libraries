@@ -4583,7 +4583,23 @@
     "asset": "Luma-Fallout_4.zip",
     "addon_file": "Luma-Fallout 4.addon",
     "arch": "X64",
-    "status": "unknown",
+    "status": "construction",
+    "guidance": [
+      {
+        "id": "luma.fallout-4.compatibility",
+        "kind": "compatibility",
+        "fallback_text": "This profile currently supports only DLSS and GTAO."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "completed",
+        "name": "Fallout 4",
+        "fingerprint": "f2a642d80a74ad7618f978598c1387d29a6d3b98a53120573f8db33121371852",
+        "disposition": "published",
+        "guidance_ids": ["luma.fallout-4.compatibility"]
+      }
+    ],
     "match": [
       {
         "kind": "steam_appid",

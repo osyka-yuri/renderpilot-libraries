@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-24T00:00:00Z",
+  "generated_at": "2026-08-01T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -2446,6 +2446,57 @@
       ],
       "addon": {
         "slug": "hollowknight-silksong"
+      }
+    },
+    {
+      "id": "horizon-forbidden-west-complete-edition",
+      "name": "Horizon Forbidden West Complete Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2420110",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "horizonzdr-fwce",
+        "source": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-horizonzdr-fwce.addon64"
+      }
+    },
+    {
+      "id": "horizon-zero-dawn-complete-edition",
+      "name": "Horizon Zero Dawn Complete Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1151640",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "horizonzerodawnce",
+        "source": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-horizonzerodawnce.addon64"
+      }
+    },
+    {
+      "id": "horizon-zero-dawn-remastered",
+      "name": "Horizon Zero Dawn Remastered",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2561580",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "horizonzdr-fwce",
+        "source": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-horizonzdr-fwce.addon64"
       }
     },
     {

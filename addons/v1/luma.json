@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-21T00:00:00Z",
+  "generated_at": "2026-08-01T00:00:00Z",
   "minimum_reshade_version": "6.7.0",
   "games": [
     {
@@ -4251,7 +4251,7 @@
       "id": "fallout-4",
       "name": "Fallout 4",
       "architecture": "X64",
-      "status": "unknown",
+      "status": "construction",
       "match": [
         {
           "kind": "steam_appid",
@@ -4263,7 +4263,14 @@
         "release_asset": "Luma-Fallout_4.zip",
         "addon_file": "Luma-Fallout 4.addon"
       },
-      "profile": "game"
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.fallout-4.compatibility",
+          "kind": "compatibility",
+          "fallback_text": "This profile currently supports only DLSS and GTAO."
+        }
+      ]
     },
     {
       "id": "final-fantasy-15",

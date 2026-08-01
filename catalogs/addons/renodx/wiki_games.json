@@ -805,6 +805,27 @@
     "id": "hollow-knight-silksong"
   },
   {
+    "name": "Horizon Forbidden West Complete Edition",
+    "slug": "horizonzdr-fwce",
+    "arch": "X64",
+    "status": "working",
+    "id": "horizon-forbidden-west-complete-edition"
+  },
+  {
+    "name": "Horizon Zero Dawn Complete Edition",
+    "slug": "horizonzerodawnce",
+    "arch": "X64",
+    "status": "working",
+    "id": "horizon-zero-dawn-complete-edition"
+  },
+  {
+    "name": "Horizon Zero Dawn Remastered",
+    "slug": "horizonzdr-fwce",
+    "arch": "X64",
+    "status": "working",
+    "id": "horizon-zero-dawn-remastered"
+  },
+  {
     "name": "Immortals Fenyx Rising",
     "slug": "immortalsfenyxrising",
     "arch": "X64",
