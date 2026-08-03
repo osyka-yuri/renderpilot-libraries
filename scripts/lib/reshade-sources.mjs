@@ -13,7 +13,7 @@ export const RESHADE_NIGHTLY = deepFreeze({
 // URL, not a "latest" alias — bump via refresh-reshade-stable when a new
 // stable version ships).
 export const RESHADE_STABLE = deepFreeze({
-  url: "https://reshade.me/downloads/ReShade_Setup_6.7.3_Addon.exe",
+  url: "https://reshade.me/downloads/ReShade_Setup_6.8.0_Addon.exe",
 });
 
 /** Versioned Addon installer on reshade.me (capture group 1 = X.Y.Z). */
