@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-01T00:00:00Z",
+  "generated_at": "2026-08-04T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -6056,7 +6056,7 @@
       "id": "colony-ship-a-post-earth-role-playing-game",
       "name": "Colony Ship: A Post-Earth Role Playing Game",
       "architecture": "X64",
-      "status": "working",
+      "status": "construction",
       "match": [
         {
           "kind": "steam_appid",
