@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-04T00:00:00Z",
+  "generated_at": "2026-08-06T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -4875,6 +4875,23 @@
       }
     },
     {
+      "id": "the-callisto-protocol",
+      "name": "The Callisto Protocol",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1544020",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "callistoprotocol",
+        "source": "https://mqhaji.github.io/renodx/renodx-callistoprotocol.addon64"
+      }
+    },
+    {
       "id": "the-evil-within-2",
       "name": "The Evil Within 2",
       "architecture": "X64",
@@ -9591,6 +9608,22 @@
         {
           "kind": "steam_appid",
           "value": "1543710",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "big-walk",
+      "name": "Big Walk",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1478500",
           "tier": 100
         }
       ],

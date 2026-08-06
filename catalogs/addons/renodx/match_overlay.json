@@ -339,6 +339,9 @@
   "beyond-galaxyland": {
     "appids": ["1543710"]
   },
+  "big-walk": {
+    "appids": ["1478500"]
+  },
   "biomutant": {
     "appids": ["597820"]
   },
@@ -2288,6 +2291,10 @@
   },
   "the-cabin-factory": {
     "appids": ["3311740"]
+  },
+  "the-callisto-protocol": {
+    "appids": ["1544020"],
+    "download_url": "https://mqhaji.github.io/renodx/renodx-callistoprotocol.addon64"
   },
   "the-dungeon-of-naheulbeuk-the-amulet-of-chaos": {
     "appids": ["970830"]
