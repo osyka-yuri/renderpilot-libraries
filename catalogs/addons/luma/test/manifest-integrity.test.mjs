@@ -15,6 +15,16 @@ const BORDERLANDS_2_AND_TPS = "borderlands-2-and-the-pre-sequel";
 const TEKKEN_7 = "tekken-7";
 const VANQUISH = "vanquish";
 const SHADOW_OF_WAR = "middle-earth-shadow-of-war";
+const MASS_EFFECT_LEGENDARY_EDITION = {
+  id: "mass-effect-legendary-edition",
+  name: "Mass Effect Legendary Edition",
+  architecture: "X64",
+  status: "working",
+  profile: "game",
+  releaseAsset: "Luma-Mass_Effect_Legendary_Edition.zip",
+  addonFile: "Luma-Mass Effect Legendary Edition.addon",
+  match: [{ kind: "steam_appid", value: "1328670", tier: 100 }],
+};
 
 test("manifest integrity - committed Luma v1 document is well-formed and internally consistent", async () => {
   const manifestPath = path.join(REPO_ROOT, "addons", "v1", "luma.json");
@@ -24,7 +34,7 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
   assert.ok(Array.isArray(manifest.games), "Manifest should have a games array");
   assert.ok(manifest.games.length > 0, "Manifest should have at least one game");
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 183);
+  assert.equal(manifest.games.length, 184);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
   assert.match(manifest.minimum_reshade_version, /^\d+\.\d+\.\d+$/);
   assert.equal("host" in manifest, false);
@@ -42,6 +52,30 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
     ),
     "Dishonored 2 should match by its Steam AppID",
   );
+
+  const massEffectLegendaryEdition = manifest.games.find(
+    (title) => title.id === MASS_EFFECT_LEGENDARY_EDITION.id,
+  );
+  assert.ok(
+    massEffectLegendaryEdition,
+    `${MASS_EFFECT_LEGENDARY_EDITION.id} must be present`,
+  );
+  assert.equal(massEffectLegendaryEdition.name, MASS_EFFECT_LEGENDARY_EDITION.name);
+  assert.equal(
+    massEffectLegendaryEdition.architecture,
+    MASS_EFFECT_LEGENDARY_EDITION.architecture,
+  );
+  assert.equal(massEffectLegendaryEdition.status, MASS_EFFECT_LEGENDARY_EDITION.status);
+  assert.equal(massEffectLegendaryEdition.profile, MASS_EFFECT_LEGENDARY_EDITION.profile);
+  assert.equal(
+    massEffectLegendaryEdition.package.release_asset,
+    MASS_EFFECT_LEGENDARY_EDITION.releaseAsset,
+  );
+  assert.equal(
+    massEffectLegendaryEdition.package.addon_file,
+    MASS_EFFECT_LEGENDARY_EDITION.addonFile,
+  );
+  assert.deepEqual(massEffectLegendaryEdition.match, MASS_EFFECT_LEGENDARY_EDITION.match);
 
   const borderlands = manifest.games.find((t) => t.id === BORDERLANDS_2_AND_TPS);
   assert.ok(borderlands, `${BORDERLANDS_2_AND_TPS} must be present`);

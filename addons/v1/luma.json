@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-01T00:00:00Z",
+  "generated_at": "2026-08-10T00:00:00Z",
   "minimum_reshade_version": "6.7.0",
   "games": [
     {
@@ -851,6 +851,24 @@
           "fallback_text": "Only DLAA / FSR 3 Native AA modes are available; this is not DLSS or FSR super-resolution."
         }
       ]
+    },
+    {
+      "id": "mass-effect-legendary-edition",
+      "name": "Mass Effect Legendary Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1328670",
+          "tier": 100
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Mass_Effect_Legendary_Edition.zip",
+        "addon_file": "Luma-Mass Effect Legendary Edition.addon"
+      },
+      "profile": "game"
     },
     {
       "id": "abiotic-factor",

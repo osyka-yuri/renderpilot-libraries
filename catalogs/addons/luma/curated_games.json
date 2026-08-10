@@ -846,6 +846,21 @@
     ]
   },
   {
+    "id": "mass-effect-legendary-edition",
+    "name": "Mass Effect Legendary Edition",
+    "asset": "Luma-Mass_Effect_Legendary_Edition.zip",
+    "addon_file": "Luma-Mass Effect Legendary Edition.addon",
+    "arch": "X64",
+    "status": "working",
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1328670",
+        "tier": 100
+      }
+    ]
+  },
+  {
     "id": "abiotic-factor",
     "name": "Abiotic Factor",
     "asset": "Luma-Unreal_Engine.zip",
