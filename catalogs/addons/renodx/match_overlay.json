@@ -1868,7 +1868,6 @@
     "appids": ["809060"]
   },
   "revenge-of-the-savage-planet": {
-    "download_url": "https://akuru-q.github.io/renodx/renodx-rotsp.addon64",
     "appids": ["2787320"]
   },
   "rimworld": {
@@ -2293,8 +2292,7 @@
     "appids": ["3311740"]
   },
   "the-callisto-protocol": {
-    "appids": ["1544020"],
-    "download_url": "https://mqhaji.github.io/renodx/renodx-callistoprotocol.addon64"
+    "appids": ["1544020"]
   },
   "the-dungeon-of-naheulbeuk-the-amulet-of-chaos": {
     "appids": ["970830"]
