@@ -917,6 +917,13 @@
     "id": "trails-of-cold-steel"
   },
   {
+    "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
+    "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition"
+  },
+  {
     "name": "Trails in the Sky 1st Chapter",
     "slug": "falcomengine",
     "arch": "X64",
