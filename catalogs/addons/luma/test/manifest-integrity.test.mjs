@@ -14,6 +14,7 @@ const DISHONORED_2 = {
 const BORDERLANDS_2_AND_TPS = "borderlands-2-and-the-pre-sequel";
 const TEKKEN_7 = "tekken-7";
 const VANQUISH = "vanquish";
+const THE_WITCHER_2 = "the-witcher-2";
 const SHADOW_OF_WAR = "middle-earth-shadow-of-war";
 const MASS_EFFECT_LEGENDARY_EDITION = {
   id: "mass-effect-legendary-edition",
@@ -34,7 +35,7 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
   assert.ok(Array.isArray(manifest.games), "Manifest should have a games array");
   assert.ok(manifest.games.length > 0, "Manifest should have at least one game");
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 184);
+  assert.equal(manifest.games.length, 185);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
   assert.match(manifest.minimum_reshade_version, /^\d+\.\d+\.\d+$/);
   assert.equal("host" in manifest, false);
@@ -128,6 +129,21 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
       entries: [{ key: "OutputAPI", value: "d3d11_fl11_0" }],
     },
   ]);
+
+  const witcher2 = manifest.games.find((t) => t.id === THE_WITCHER_2);
+  assert.ok(witcher2, "The Witcher 2 must be present");
+  assert.equal(witcher2.package.release_asset, "Luma-The_Witcher_2-x32.zip");
+  assert.equal(witcher2.package.addon_file, "Luma-The Witcher 2.addon");
+  assert.equal(witcher2.architecture, "X86");
+  assert.deepEqual(witcher2.requirements.managed_dependency.accepted_detected_apis, [
+    "D3D9",
+  ]);
+  assert.equal(witcher2.requirements.managed_dependency.reshade_proxy_dll, "dxgi.dll");
+  assert.equal(witcher2.requirements.managed_dependency.config_file, "dgVoodoo.conf");
+  assert.deepEqual(
+    witcher2.requirements.managed_dependency.config.map((section) => section.section),
+    ["General", "DirectX"],
+  );
 
   const shadowOfWar = manifest.games.find((title) => title.id === SHADOW_OF_WAR);
   assert.ok(shadowOfWar, "Middle-earth: Shadow of War must be published");
