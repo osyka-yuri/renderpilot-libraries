@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T00:00:00Z",
+  "generated_at": "2026-08-19T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -84,7 +84,7 @@
     {
       "id": "alice-madness-returns",
       "name": "Alice: Madness Returns",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -105,7 +105,7 @@
     {
       "id": "alien-isolation",
       "name": "Alien: Isolation",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "construction",
       "match": [
         {
@@ -185,6 +185,22 @@
       ],
       "addon": {
         "slug": "aptinnocence"
+      }
+    },
+    {
+      "id": "arknights-endfield",
+      "name": "Arknights: Endfield",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4732690",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "endfield"
       }
     },
     {
@@ -775,7 +791,7 @@
     {
       "id": "batman-arkham-asylum",
       "name": "Batman: Arkham Asylum",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -887,7 +903,7 @@
     {
       "id": "borderlands-2-the-pre-sequel",
       "name": "Borderlands 2 & The Pre-Sequel",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -929,7 +945,7 @@
     {
       "id": "call-of-juarez",
       "name": "Call of Juarez (dx10)",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -976,7 +992,7 @@
     {
       "id": "child-of-light",
       "name": "Child of Light",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -1039,7 +1055,7 @@
     {
       "id": "clive-barker-s-jericho",
       "name": "Clive Barker's Jericho",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "construction",
       "match": [
         {
@@ -2820,6 +2836,30 @@
       }
     },
     {
+      "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
+      "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2523770",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/mods/3?game_id=9856",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
       "id": "trails-in-the-sky-1st-chapter",
       "name": "Trails in the Sky 1st Chapter",
       "architecture": "X64",
@@ -2970,14 +3010,6 @@
       ],
       "addon": {
         "slug": "legohpc"
-      },
-      "availability": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/legoharrypottercollection/mods/4",
-        "message": {
-          "id": "renodx.external.nexus",
-          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
-        }
       }
     },
     {
@@ -3128,7 +3160,7 @@
     {
       "id": "max-payne-3",
       "name": "Max Payne 3",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "construction",
       "match": [
         {
@@ -3906,7 +3938,7 @@
     {
       "id": "remember-me",
       "name": "Remember Me",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -4474,7 +4506,7 @@
     {
       "id": "spec-ops-the-line",
       "name": "Spec Ops: The Line",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -4495,7 +4527,7 @@
     {
       "id": "splinter-cell-blacklist",
       "name": "Splinter Cell: Blacklist",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -9056,7 +9088,7 @@
     {
       "id": "anger-foot",
       "name": "Anger Foot",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -9152,7 +9184,7 @@
     {
       "id": "art-of-rally",
       "name": "art of rally",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -9280,7 +9312,7 @@
     {
       "id": "awaken-astral-blade",
       "name": "AWAKEN - Astral Blade",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -9584,7 +9616,7 @@
     {
       "id": "beton-brutal",
       "name": "BETON BRUTAL",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "construction",
       "match": [
         {
@@ -9872,7 +9904,7 @@
     {
       "id": "children-of-the-sun",
       "name": "Children of the Sun",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -10080,7 +10112,7 @@
     {
       "id": "death-s-door",
       "name": "Death's Door",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -10133,7 +10165,7 @@
     {
       "id": "descenders",
       "name": "Descenders",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -10767,7 +10799,7 @@
     {
       "id": "fe",
       "name": "Fe",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "construction",
       "match": [
         {
@@ -11151,7 +11183,7 @@
     {
       "id": "haste",
       "name": "Haste",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -11284,7 +11316,7 @@
     {
       "id": "hollow-cocoon",
       "name": "Hollow Cocoon",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -11716,7 +11748,7 @@
     {
       "id": "last-epoch",
       "name": "Last Epoch",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -11876,7 +11908,7 @@
     {
       "id": "lost-in-random",
       "name": "Lost In Random",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -12548,7 +12580,7 @@
     {
       "id": "osiris-new-dawn",
       "name": "Osiris: New Dawn",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -12564,7 +12596,7 @@
     {
       "id": "outer-wilds",
       "name": "Outer Wilds",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -13001,7 +13033,7 @@
     {
       "id": "reka",
       "name": "REKA",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -13033,7 +13065,7 @@
     {
       "id": "reveil",
       "name": "REVEIL",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -13257,7 +13289,7 @@
     {
       "id": "shadows-awakening",
       "name": "Shadows: Awakening",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -14515,7 +14547,7 @@
     {
       "id": "v-rising",
       "name": "V Rising",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -14755,7 +14787,7 @@
     {
       "id": "windblown",
       "name": "Windblown",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -14819,7 +14851,7 @@
     {
       "id": "xf-extreme-formula",
       "name": "XF Extreme Formula",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -14972,7 +15004,7 @@
     {
       "id": "dying-light-2",
       "name": "Dying Light 2",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "unknown",
       "match": [
         {
@@ -14993,7 +15025,7 @@
     {
       "id": "l-a-noire",
       "name": "L.A. Noire",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "unknown",
       "match": [
         {
@@ -15030,7 +15062,7 @@
     {
       "id": "sea-of-thieves",
       "name": "Sea of Thieves",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "unknown",
       "match": [
         {
@@ -15130,7 +15162,7 @@
     {
       "id": "ace-combat-7",
       "name": "Ace Combat 7",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "unknown",
       "match": [
         {
@@ -15188,7 +15220,7 @@
     {
       "id": "borderlands-4",
       "name": "Borderlands 4",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "unknown",
       "match": [
         {

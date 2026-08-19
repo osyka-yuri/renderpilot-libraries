@@ -123,6 +123,9 @@
   "arkham-horror-mother-s-embrace": {
     "appids": ["840210"]
   },
+  "arknights-endfield": {
+    "appids": ["4732690"]
+  },
   "armored-core-vi-fires-of-rubicon": {
     "appids": ["1888160"]
   },
@@ -1297,10 +1300,6 @@
     "appids": ["1898290"]
   },
   "lego-harry-potter-collection": {
-    "external": {
-      "url": "https://www.nexusmods.com/legoharrypottercollection/mods/4",
-      "label_key": "renodx.external.nexus"
-    },
     "appids": ["2950340"]
   },
   "lego-voyagers": {
@@ -2348,23 +2347,18 @@
   "the-last-stand-aftermath": {
     "appids": ["1266840"]
   },
-  "the-legend-of-zelda-breath-of-the-wild": {
-    "external": {
-      "url": "https://www.nexusmods.com/legendofzeldabreathofthewild/mods/100",
-      "label_key": "renodx.external.nexus"
-    }
-  },
-  "the-legend-of-zelda-tears-of-the-kingdom": {
-    "external": {
-      "url": "https://www.nexusmods.com/legendofzeldatearsofthekingdom/mods/175",
-      "label_key": "renodx.external.nexus"
-    }
-  },
   "the-long-dark": {
     "appids": ["305620"]
   },
   "the-looker": {
     "appids": ["1985690"]
+  },
+  "the-lord-of-the-rings-war-in-the-north-legacy-edition": {
+    "appids": ["2523770"],
+    "external": {
+      "url": "https://www.nexusmods.com/mods/3?game_id=9856",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "the-medium": {
     "appids": ["1293160"]

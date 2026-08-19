@@ -216,3 +216,64 @@ test("reconcileRenodxWiki keeps the established catalogue and overlay result", (
     label_key: "old",
   });
 });
+
+test("parseWikiRow captures 32-bit architecture from addon32 URL", () => {
+  const columnsMapping = { nameIndex: 0, statusIndex: 1, linksIndex: 2, notesIndex: 3 };
+  const row = parseWikiRow(
+    [
+      "Game32",
+      "✅",
+      "https://github.com/foo/renodx-bar/releases/download/v1/renodx-game32.addon32",
+      "",
+    ],
+    columnsMapping,
+    "unity",
+  );
+
+  assert.ok(row);
+  assert.equal(row.addonSlug, "game32");
+  assert.equal(row.arch, "X86");
+});
+
+test("reconcileRenodxWiki prefers X64 asset when game default is X64 and both 32 and 64 assets exist", () => {
+  const existingWiki = [];
+  const overlay = {};
+  const rows = [
+    {
+      name: "Dual Arch Game",
+      status: "working",
+      addonUrl: null,
+      arch: "X64",
+      addonSlug: null,
+      nexusUrl: null,
+      discordUrl: null,
+    },
+  ];
+
+  const result = reconcileRenodxWiki({
+    rows,
+    existingWiki,
+    overlay,
+    officialAssets: new Set(["renodx-dualarchgame.addon32", "renodx-dualarchgame.addon64"]),
+  });
+
+  assert.equal(result.wikiGames[0].slug, "dualarchgame");
+  assert.equal(result.wikiGames[0].arch, "X64");
+});
+
+test("parseWikiRow extracts query-based Nexus Mods URL", () => {
+  const columnsMapping = { nameIndex: 0, statusIndex: 1, linksIndex: 2, notesIndex: 3 };
+  const row = parseWikiRow(
+    [
+      "LOTR War in the North",
+      "✅",
+      "[Nexus](https://www.nexusmods.com/mods/3?game_id=9856)",
+      "",
+    ],
+    columnsMapping,
+    null,
+  );
+
+  assert.ok(row);
+  assert.equal(row.nexusUrl, "https://www.nexusmods.com/mods/3?game_id=9856");
+});

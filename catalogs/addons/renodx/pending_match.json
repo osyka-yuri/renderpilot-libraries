@@ -1,20 +1,8 @@
 [
   {
-    "id": "arknights-endfield",
-    "name": "Arknights: Endfield",
-    "slug": "endfield",
-    "arch": "X64"
-  },
-  {
     "id": "luigi-s-mansion-3",
     "name": "Luigi's Mansion 3",
     "slug": "lm3",
-    "arch": "X64"
-  },
-  {
-    "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
-    "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
-    "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
     "arch": "X64"
   },
   {
@@ -26,7 +14,7 @@
   {
     "id": "metroid-dread",
     "name": "Metroid Dread",
-    "slug": "metroid-dread",
+    "slug": "metroiddread",
     "arch": "X64"
   },
   {
@@ -50,19 +38,19 @@
   {
     "id": "splatoon-2",
     "name": "Splatoon 2",
-    "slug": "splatoon-2",
+    "slug": "splatoon2",
     "arch": "X64"
   },
   {
     "id": "splatoon-3",
     "name": "Splatoon 3",
-    "slug": "splatoon-3",
+    "slug": "splatoon3",
     "arch": "X64"
   },
   {
     "id": "super-mario-3d-world",
     "name": "Super Mario 3D World",
-    "slug": "super-mario-3d-world",
+    "slug": "supermario3dworld",
     "arch": "X64"
   },
   {

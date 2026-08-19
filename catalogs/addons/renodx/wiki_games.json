@@ -30,14 +30,14 @@
   {
     "name": "Alice: Madness Returns",
     "slug": "alicemadnessreturns",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "alice-madness-returns"
   },
   {
     "name": "Alien: Isolation",
     "slug": "alienisolation",
-    "arch": "X64",
+    "arch": "X86",
     "status": "construction",
     "id": "alien-isolation"
   },
@@ -247,7 +247,7 @@
   {
     "name": "Batman: Arkham Asylum",
     "slug": "batmanaa",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "batman-arkham-asylum"
   },
@@ -289,7 +289,7 @@
   {
     "name": "Borderlands 2 & The Pre-Sequel",
     "slug": "borderlands2",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "borderlands-2-the-pre-sequel"
   },
@@ -303,7 +303,7 @@
   {
     "name": "Call of Juarez (dx10)",
     "slug": "callofjuarez",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "call-of-juarez"
   },
@@ -317,7 +317,7 @@
   {
     "name": "Child of Light",
     "slug": "childoflight",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "child-of-light"
   },
@@ -338,7 +338,7 @@
   {
     "name": "Clive Barker's Jericho",
     "slug": "clivebarkersjericho",
-    "arch": "X64",
+    "arch": "X86",
     "status": "construction",
     "id": "clive-barker-s-jericho"
   },
@@ -1003,7 +1003,7 @@
   {
     "name": "Max Payne 3",
     "slug": "maxpayne3",
-    "arch": "X64",
+    "arch": "X86",
     "status": "construction",
     "id": "max-payne-3"
   },
@@ -1065,7 +1065,7 @@
   },
   {
     "name": "Metroid Dread",
-    "slug": "metroid-dread",
+    "slug": "metroiddread",
     "arch": "X64",
     "status": "working",
     "id": "metroid-dread"
@@ -1290,7 +1290,7 @@
   {
     "name": "Remember Me",
     "slug": "rememberme",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "remember-me"
   },
@@ -1472,7 +1472,7 @@
   {
     "name": "Spec Ops: The Line",
     "slug": "specopstheline",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "spec-ops-the-line"
   },
@@ -1485,21 +1485,21 @@
   },
   {
     "name": "Splatoon 2",
-    "slug": "splatoon-2",
+    "slug": "splatoon2",
     "arch": "X64",
     "status": "working",
     "id": "splatoon-2"
   },
   {
     "name": "Splatoon 3",
-    "slug": "splatoon-3",
+    "slug": "splatoon3",
     "arch": "X64",
     "status": "working",
     "id": "splatoon-3"
   },
   {
     "name": "Super Mario 3D World",
-    "slug": "super-mario-3d-world",
+    "slug": "supermario3dworld",
     "arch": "X64",
     "status": "working",
     "id": "super-mario-3d-world"
@@ -1507,7 +1507,7 @@
   {
     "name": "Splinter Cell: Blacklist",
     "slug": "scblacklist",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "splinter-cell-blacklist"
   },
@@ -3334,7 +3334,7 @@
   {
     "name": "Anger Foot",
     "slug": "angerfoot",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "anger-foot"
   },
@@ -3376,7 +3376,7 @@
   {
     "name": "art of rally",
     "slug": "artofrally",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "art-of-rally"
   },
@@ -3432,7 +3432,7 @@
   {
     "name": "AWAKEN - Astral Blade",
     "slug": "awakenastralblade",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "awaken-astral-blade"
   },
@@ -3565,7 +3565,7 @@
   {
     "name": "BETON BRUTAL",
     "slug": "betonbrutal",
-    "arch": "X86",
+    "arch": "X64",
     "status": "construction",
     "id": "beton-brutal"
   },
@@ -3691,7 +3691,7 @@
   {
     "name": "Children of the Sun",
     "slug": "childrenofthesun",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "children-of-the-sun"
   },
@@ -3782,7 +3782,7 @@
   {
     "name": "Death's Door",
     "slug": "deathsdoor",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "death-s-door"
   },
@@ -3803,7 +3803,7 @@
   {
     "name": "Descenders",
     "slug": "descenders",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "descenders"
   },
@@ -4076,7 +4076,7 @@
   {
     "name": "Fe",
     "slug": "fe",
-    "arch": "X86",
+    "arch": "X64",
     "status": "construction",
     "id": "fe"
   },
@@ -4244,7 +4244,7 @@
   {
     "name": "Haste",
     "slug": "haste",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "haste"
   },
@@ -4300,7 +4300,7 @@
   {
     "name": "Hollow Cocoon",
     "slug": "hollowcocoon",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "hollow-cocoon"
   },
@@ -4489,7 +4489,7 @@
   {
     "name": "Last Epoch",
     "slug": "lastepoch",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "last-epoch"
   },
@@ -4559,7 +4559,7 @@
   {
     "name": "Lost In Random",
     "slug": "lostinrandom",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "lost-in-random"
   },
@@ -4853,14 +4853,14 @@
   {
     "name": "Osiris: New Dawn",
     "slug": "osirisnewdawn",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "osiris-new-dawn"
   },
   {
     "name": "Outer Wilds",
     "slug": "outerwilds",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "outer-wilds"
   },
@@ -5049,7 +5049,7 @@
   {
     "name": "REKA",
     "slug": "reka",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "reka"
   },
@@ -5063,7 +5063,7 @@
   {
     "name": "REVEIL",
     "slug": "reveil",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "reveil"
   },
@@ -5161,7 +5161,7 @@
   {
     "name": "Shadows: Awakening",
     "slug": "shadowsawakening",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "shadows-awakening"
   },
@@ -5707,7 +5707,7 @@
   {
     "name": "V Rising",
     "slug": "vrising",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "v-rising"
   },
@@ -5812,7 +5812,7 @@
   {
     "name": "Windblown",
     "slug": "windblown",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "windblown"
   },
@@ -5840,7 +5840,7 @@
   {
     "name": "XF Extreme Formula",
     "slug": "xfextremeformula",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "xf-extreme-formula"
   },
@@ -5910,14 +5910,14 @@
   {
     "name": "Dying Light 2",
     "slug": "dyinglight2",
-    "arch": "X86",
+    "arch": "X64",
     "status": "unknown",
     "id": "dying-light-2"
   },
   {
     "name": "L.A. Noire",
     "slug": "lanoire",
-    "arch": "X86",
+    "arch": "X64",
     "status": "unknown",
     "id": "l-a-noire"
   },
@@ -5931,7 +5931,7 @@
   {
     "name": "Sea of Thieves",
     "slug": "seaofthieves",
-    "arch": "X86",
+    "arch": "X64",
     "status": "unknown",
     "id": "sea-of-thieves"
   },
@@ -5973,7 +5973,7 @@
   {
     "name": "Ace Combat 7",
     "slug": "acecombat7",
-    "arch": "X86",
+    "arch": "X64",
     "status": "unknown",
     "id": "ace-combat-7"
   },
@@ -5994,7 +5994,7 @@
   {
     "name": "Borderlands 4",
     "slug": "borderlands4",
-    "arch": "X86",
+    "arch": "X64",
     "status": "unknown",
     "id": "borderlands-4"
   }

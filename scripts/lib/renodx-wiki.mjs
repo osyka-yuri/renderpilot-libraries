@@ -7,8 +7,9 @@ import {
 } from "./wiki-markdown.mjs";
 
 export const ADDON_URL_RE =
-  /(https:\/\/[^/]+\/[^/]+\/renodx[a-zA-Z0-9_-]*\/releases\/download\/[^/]+\/renodx-[a-zA-Z0-9_-]+\.addon(?:32|64))/i;
-export const NEXUS_URL_RE = /(https:\/\/www\.nexusmods\.com\/[^/]+\/mods\/\d+)/i;
+  /(https:\/\/[^/]+\/[^/]+\/renodx[a-zA-Z0-9_-]*\/releases\/download\/[^/]+\/renodx-[a-zA-Z0-9_-]+\.addon(32|64))/i;
+export const NEXUS_URL_RE =
+  /(https:\/\/www\.nexusmods\.com\/(?:[a-zA-Z0-9_-]+\/mods\/\d+|mods\/\d+(?:\?[^\s\)\"'>]+)?))/i;
 export const DISCORD_URL_RE = /(https:\/\/(?:ptb\.)?discord\.com\/channels\/\d+\/\d+)/i;
 
 export function getModsTableHeaderColumns(headers) {
@@ -189,8 +190,9 @@ function resolveOfficialAddon({ addonUrl, slug, arch, name, officialAssets }) {
   }
   if (officialAssets.size === 0 || isOfficial) return { isOfficial, slug, arch };
 
+  const bitsOrder = arch === "X86" ? ["32", "64"] : ["64", "32"];
   for (const candidateSlug of uniqueNonEmpty([normalizeWikiName(name), slugify(name)])) {
-    for (const bits of ["32", "64"]) {
+    for (const bits of bitsOrder) {
       if (officialAssets.has(`renodx-${candidateSlug}.addon${bits}`)) {
         return {
           isOfficial: true,
