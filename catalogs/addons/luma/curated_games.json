@@ -5885,5 +5885,217 @@
         "tier": 70
       }
     ]
+  },
+  {
+    "id": "destroy-all-humans",
+    "name": "Destroy All Humans!",
+    "asset": "Luma-Unreal_Engine.zip",
+    "addon_file": "Luma-Unreal Engine.addon",
+    "arch": "X64",
+    "status": "working",
+    "profile": "unreal",
+    "features": {
+      "dlss_fsr": "supported",
+      "hdr": "unknown"
+    },
+    "guidance": [
+      {
+        "id": "luma.destroy-all-humans.game_setting",
+        "kind": "game_setting",
+        "fallback_text": "In the game settings, use: AA \"Ultra\"."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "unreal",
+        "name": "Destroy All Humans!",
+        "fingerprint": "c79b1755d7809d6078d7038087d068edc88b8d6d5de7d88853fd22c759dbc846",
+        "disposition": "published",
+        "guidance_ids": ["luma.destroy-all-humans.game_setting"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "803330",
+        "tier": 100
+      },
+      {
+        "kind": "exe_name",
+        "value": "DH.exe",
+        "tier": 70
+      },
+      {
+        "kind": "exe_name",
+        "value": "DestroyAllHumans.exe",
+        "tier": 70
+      }
+    ]
+  },
+  {
+    "id": "no-more-heroes-3",
+    "name": "No More Heroes 3",
+    "asset": "Luma-Unreal_Engine.zip",
+    "addon_file": "Luma-Unreal Engine.addon",
+    "arch": "X64",
+    "status": "working",
+    "profile": "unreal",
+    "features": {
+      "dlss_fsr": "supported",
+      "hdr": "unknown"
+    },
+    "guidance": [
+      {
+        "id": "luma.no-more-heroes-3.engine_ini",
+        "kind": "engine_ini",
+        "fallback_text": "Apply the following settings manually in Engine.ini.",
+        "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "unreal",
+        "name": "No More Heroes 3",
+        "fingerprint": "955af56335fbc126b0cf742520a6f2d9519b1fb3a7270e4b10880357b01470e6",
+        "disposition": "published",
+        "guidance_ids": ["luma.no-more-heroes-3.engine_ini"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1744330",
+        "tier": 100
+      },
+      {
+        "kind": "exe_name",
+        "value": "NMH3.exe",
+        "tier": 70
+      }
+    ]
+  },
+  {
+    "id": "rad",
+    "name": "RAD",
+    "asset": "Luma-Unreal_Engine.zip",
+    "addon_file": "Luma-Unreal Engine.addon",
+    "arch": "X64",
+    "status": "working",
+    "profile": "unreal",
+    "features": {
+      "dlss_fsr": "supported",
+      "hdr": "unknown"
+    },
+    "guidance": [
+      {
+        "id": "luma.rad.game_setting",
+        "kind": "game_setting",
+        "fallback_text": "In the game settings, use: AA \"Ultra\"."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "unreal",
+        "name": "RAD",
+        "fingerprint": "c79b1755d7809d6078d7038087d068edc88b8d6d5de7d88853fd22c759dbc846",
+        "disposition": "published",
+        "guidance_ids": ["luma.rad.game_setting"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "722560",
+        "tier": 100
+      },
+      {
+        "kind": "exe_name",
+        "value": "RAD.exe",
+        "tier": 70
+      }
+    ]
+  },
+  {
+    "id": "solar-ash",
+    "name": "Solar Ash",
+    "asset": "Luma-Unreal_Engine.zip",
+    "addon_file": "Luma-Unreal Engine.addon",
+    "arch": "X64",
+    "status": "working",
+    "profile": "unreal",
+    "features": {
+      "dlss_fsr": "supported",
+      "hdr": "unknown"
+    },
+    "guidance": [
+      {
+        "id": "luma.solar-ash.engine_ini",
+        "kind": "engine_ini",
+        "fallback_text": "Apply the following settings manually in Engine.ini.",
+        "code": "[SystemSettings]\nr.DefaultFeature.AntiAliasing=2\nr.PostProcessAAQuality=4"
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "unreal",
+        "name": "Solar Ash",
+        "fingerprint": "955af56335fbc126b0cf742520a6f2d9519b1fb3a7270e4b10880357b01470e6",
+        "disposition": "published",
+        "guidance_ids": ["luma.solar-ash.engine_ini"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1867530",
+        "tier": 100
+      },
+      {
+        "kind": "exe_name",
+        "value": "SolarAsh.exe",
+        "tier": 70
+      }
+    ]
+  },
+  {
+    "id": "spongebob-squarepants-the-cosmic-shake",
+    "name": "SpongeBob SquarePants: The Cosmic Shake",
+    "asset": "Luma-Unreal_Engine.zip",
+    "addon_file": "Luma-Unreal Engine.addon",
+    "arch": "X64",
+    "status": "working",
+    "profile": "unreal",
+    "features": {
+      "dlss_fsr": "supported",
+      "hdr": "unknown"
+    },
+    "guidance": [
+      {
+        "id": "luma.spongebob-squarepants-the-cosmic-shake.game_setting",
+        "kind": "game_setting",
+        "fallback_text": "In the game settings, use: AA \"Ultra\"."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "unreal",
+        "name": "SpongeBob SquarePants: The Cosmic Shake",
+        "fingerprint": "c79b1755d7809d6078d7038087d068edc88b8d6d5de7d88853fd22c759dbc846",
+        "disposition": "published",
+        "guidance_ids": ["luma.spongebob-squarepants-the-cosmic-shake.game_setting"]
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "1282150",
+        "tier": 100
+      },
+      {
+        "kind": "exe_name",
+        "value": "CosmicShake.exe",
+        "tier": 70
+      }
+    ]
   }
 ]
