@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-21T00:00:00Z",
+  "generated_at": "2026-08-23T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -11386,6 +11386,22 @@
         {
           "kind": "steam_appid",
           "value": "280180",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "how-to-fish",
+      "name": "How to Fish",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4001890",
           "tier": 100
         }
       ],

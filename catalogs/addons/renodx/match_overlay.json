@@ -1138,6 +1138,9 @@
   "hover": {
     "appids": ["280180"]
   },
+  "how-to-fish": {
+    "appids": ["4001890"]
+  },
   "human-fall-flat": {
     "appids": ["477160"]
   },
