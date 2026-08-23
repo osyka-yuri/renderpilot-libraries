@@ -2020,6 +2020,25 @@
       }
     },
     {
+      "artifact_key": "nvngx_dlss_310.7.128.0",
+      "library_id": "nvngx_dlss",
+      "file_name": "nvngx_dlss.dll",
+      "file_version": "310.7.128.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "2ecf41de71383416a5fb1476d26d495fc391fdc254d6e5a27689b598b2d05702",
+        "size_bytes": 58977904
+      },
+      "transport": {
+        "sha256": "f1f73a8a34c679a199dce4077b63085c11cedb7337b452425782415fc5e8974b",
+        "size_bytes": 24700501
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-06-12T07:28:58Z"
+      }
+    },
+    {
       "artifact_key": "nvngx_dlssd_3.5.0.0_cd523b59",
       "library_id": "nvngx_dlssd",
       "file_name": "nvngx_dlssd.dll",
@@ -2418,6 +2437,25 @@
       "signature": {
         "status": "signed",
         "signed_at": "2026-06-23T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "nvngx_dlssd_310.7.128.0",
+      "library_id": "nvngx_dlssd",
+      "file_name": "nvngx_dlssd.dll",
+      "file_version": "310.7.128.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "5d8ea393a9c8656ee3e2b863910a8de10a2f96b9693493743f59ac6910f6f4f1",
+        "size_bytes": 48332400
+      },
+      "transport": {
+        "sha256": "0f247ce84662db5a6e8b48bdf8c8a460d4fedeadee78d33344523f49c81e38eb",
+        "size_bytes": 19437780
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-06-12T22:14:35Z"
       }
     },
     {
@@ -3045,6 +3083,25 @@
       "signature": {
         "status": "signed",
         "signed_at": "2026-06-23T00:00:00Z"
+      }
+    },
+    {
+      "artifact_key": "nvngx_dlssg_310.7.128.0",
+      "library_id": "nvngx_dlssg",
+      "file_name": "nvngx_dlssg.dll",
+      "file_version": "310.7.128.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "b3a4bca95a1d80224a8c5aa1d4b33630f4400ac050e7f70f01609fbc77bb76a9",
+        "size_bytes": 7519856
+      },
+      "transport": {
+        "sha256": "1a1c4e2c256566263b6892fe9ea44d6cc66f159e408265ff7b258738e6ba728c",
+        "size_bytes": 3539224
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-06-12T07:26:19Z"
       }
     },
     {
@@ -6636,6 +6693,28 @@
       ]
     },
     {
+      "package_id": "nvngx_dlss_310.7.128",
+      "technology": "dlss_super_resolution",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Super Resolution",
+      "release": {
+        "version": "310.7.128",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlss_310.7.128.0",
+          "role": "primary",
+          "install_as": "nvngx_dlss.dll"
+        }
+      ]
+    },
+    {
       "package_id": "nvngx_dlssd_3.5.0_cd523b59",
       "technology": "dlss_ray_reconstruction",
       "variant": "runtime",
@@ -7070,6 +7149,28 @@
       "members": [
         {
           "artifact_key": "nvngx_dlssd_310.7.0.0",
+          "role": "primary",
+          "install_as": "nvngx_dlssd.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlssd_310.7.128",
+      "technology": "dlss_ray_reconstruction",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Ray Reconstruction",
+      "release": {
+        "version": "310.7.128",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlssd_310.7.128.0",
           "role": "primary",
           "install_as": "nvngx_dlssd.dll"
         }
@@ -7796,6 +7897,28 @@
       "members": [
         {
           "artifact_key": "nvngx_dlssg_310.7.0.0",
+          "role": "primary",
+          "install_as": "nvngx_dlssg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlssg_310.7.128",
+      "technology": "dlss_frame_generation",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Frame Generation",
+      "release": {
+        "version": "310.7.128",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlssg_310.7.128.0",
           "role": "primary",
           "install_as": "nvngx_dlssg.dll"
         }
