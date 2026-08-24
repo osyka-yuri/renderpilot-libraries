@@ -1,0 +1,20 @@
+{
+  "config": {
+    "default": true,
+    // Prettier owns source wrapping; prose has no arbitrary line limit.
+    "MD013": false,
+  },
+  "overrides": [
+    {
+      // The repository header uses centered HTML and contains its H1 inside a div.
+      "filter": ["README.md"],
+      "combine": "merge",
+      "config": {
+        "MD033": {
+          "allowed_elements": ["a", "div", "h1", "img", "p", "strong"],
+        },
+        "MD041": false,
+      },
+    },
+  ],
+}

@@ -1,11 +1,11 @@
-# Operations and Publishing
+# Operations and publishing
 
 This guide covers local validation, upstream refresh, locked-asset recovery, and Cloudflare R2 publication.
 
 ## Requirements
 
 - Node.js 24.18.0, pinned in `.node-version`
-- pnpm 11
+- pnpm 11.18.0, pinned in `package.json`
 - PowerShell 7 and Windows for PE and Authenticode inspection
 - Reviewed Zstandard 1.5.7 runtime for DLL transport generation
 - R2 credentials only for explicit publication commands
@@ -13,26 +13,27 @@ This guide covers local validation, upstream refresh, locked-asset recovery, and
 Install dependencies once:
 
 ```powershell
-pnpm install
+pnpm install --frozen-lockfile
 ```
 
-## Quality Gates
+## Quality gates
 
 | Command                          | Purpose                                                                              |
 | -------------------------------- | ------------------------------------------------------------------------------------ |
 | `pnpm run check`                 | Complete validation, deterministic generation, tests, Wiki checks, and add-on checks |
 | `pnpm run check:offline`         | Network-free formatting, schema, generation, provider-lock, and unit-test subset     |
+| `pnpm run docs:check`            | Markdown lint plus local link, anchor, and image-alt validation                      |
 | `pnpm run test:authenticode`     | Windows signature, timestamp, PE parser, RVA, and export-table tests                 |
 | `pnpm run libraries:check`       | Confirm that generated library snapshots and index are current                       |
 | `pnpm run check:published-json`  | Compare every served JSON file with local bytes by SHA-256                           |
 | `pnpm run check:upstream-health` | Probe committed upstream pins; intended for scheduled automation                     |
 | `pnpm run check:wiki-drift`      | Check RenoDX and Luma Wiki drift without writing                                     |
 
-`pnpm run check` is the required local gate before committing catalogue changes. Signature-inspector, PE-parser, or timestamp-verifier changes also require `pnpm run test:authenticode` on Windows.
+`pnpm run check` is the required local gate before committing catalog changes. Signature-inspector, PE-parser, timestamp-verifier, or Xiph source-verification changes also require `pnpm run test:windows` on Windows.
 
-## Generating Catalogues
+## Generating catalogs
 
-Refresh commands update provider locks and local content-addressed assets. They do not implicitly regenerate the public library catalogue.
+Refresh commands update provider locks and local content-addressed assets. They do not implicitly regenerate the public library catalog.
 
 ```powershell
 pnpm run libraries:generate
@@ -43,7 +44,7 @@ pnpm run generate:luma
 
 Keeping refresh and generation separate makes lock changes reviewable before they affect public snapshots or the index.
 
-## Refreshing Library Providers
+## Refreshing library providers
 
 The unified CLI has explicit provider and operation arguments:
 
@@ -113,9 +114,23 @@ pnpm run backfill:openvr-signatures
 
 The provider-neutral GitHub engine discovers every stable, non-draft, non-prerelease release with pagination. It retains the exact tag-ref and commit identities, imports only reviewed paths, and verifies Git blob SHA-1 plus content SHA-256 before atomic persistence.
 
-The scheduled GitHub workflow processes every registered release-tree source as one catalogue update. It completes all providers before writing locks, generates the shared index once, uploads immutable assets, and opens one pull request. This prevents providers from racing to update the same index commit point.
+The scheduled GitHub workflow processes every registered release-tree source as one catalog update. It completes all providers before writing locks, generates the shared index once, uploads immutable assets, and opens one pull request. This prevents providers from racing to update the same index commit point.
 
-## Refreshing Add-ons
+### Xiph Ogg and Vorbis
+
+```powershell
+pnpm run refresh:xiph:check
+pnpm run refresh:xiph:write
+pnpm run build:xiph
+pnpm run finalize:xiph
+pnpm run validate:xiph
+```
+
+The Xiph path builds executable upstream source and is intentionally Windows- and toolchain-specific. `refresh:xiph:check` discovers reviewed stable source history without writing. Write mode records a bounded pending set; build and finalization then produce the matrix and bind its exact source, recipe, policy, toolchain, artifact, and transport evidence.
+
+The scheduled Xiph workflow is the normal publication path. It builds each source pair twice, verifies reproducibility and the full binary policy, exports bounded CI bundles, and revalidates those bundles without executing them in the asset-publication and pull-request jobs. Immutable assets are uploaded before the catalog pull request opens. Use exceptional rebuild mode only when a reviewed source tuple must receive a new explicit build revision.
+
+## Refreshing add-ons
 
 ```powershell
 pnpm run refresh:reshade:check
@@ -158,7 +173,7 @@ Before the first v1 index publication, `publish:assets` must run from a workspac
 - Recompression creates a new transport object and requires an explicit lock migration.
 - `publish:json` fails before the index if any remote prerequisite is absent or has unexpected metadata.
 - Publication never mutates or deletes the frozen root `manifest.json` or legacy R2 objects.
-- Current tooling does not delete obsolete root keys; remove them only after confirming that no client still fetches them.
+- Publication commands do not delete obsolete root keys. The separately authorized Microsoft prune operation deletes only tombstone-scoped, globally unreferenced transport objects after proving the production commit point.
 
 ## Automation
 
@@ -167,14 +182,25 @@ Before the first v1 index publication, `publish:assets` must run from a workspac
 | `publish.yml`                     | Validate every change to `main`, then publish current JSON                |
 | `microsoft-nuget-refresh.yml`     | Discover and import Microsoft runtime releases on Windows                 |
 | `github-release-tree-refresh.yml` | Refresh AMD, Intel, and Valve through the shared GitHub importer          |
+| `xiph-source-refresh.yml`         | Build and verify reviewed Xiph source pairs, upload assets, and open a PR |
+| `microsoft-nuget-withdrawal.yml`  | Create reviewed Microsoft tombstones or prune after production switches   |
 | `upstream-refresh.yml`            | Refresh ReShade stable data and open a pull request                       |
 | `upstream-health.yml`             | Probe committed upstream assets                                           |
-| `wiki-drift.yml`                  | Detect explicit RenoDX or Luma catalogue drift and manage tracking issues |
+| `wiki-drift.yml`                  | Detect explicit RenoDX or Luma catalog drift and manage tracking issues   |
 
-Scheduled refresh workflows open pull requests rather than pushing catalogue changes directly to `main`.
+Scheduled refresh workflows open pull requests rather than pushing catalog changes directly to `main`.
 
 ### Bot pull requests
 
 Pull requests opened with the default `GITHUB_TOKEN` do not trigger another `pull_request` workflow run. The ReShade workflow therefore runs the offline validation gate before opening its pull request, while merging to `main` still runs the full publication workflow.
 
 If normal pull-request checks are required for bot-created pull requests, configure a fine-grained `BOT_GITHUB_TOKEN` with contents and pull-request permissions. The workflow already prefers that secret and falls back to `GITHUB_TOKEN`.
+
+## Sources of truth
+
+- [Package commands](../package.json)
+- [Unified catalog CLI](../scripts/libraries.mjs)
+- [Catalog and R2 registry](../scripts/catalog.mjs)
+- [Publish workflow](../.github/workflows/publish.yml)
+- [Microsoft withdrawal workflow](../.github/workflows/microsoft-nuget-withdrawal.yml)
+- [Xiph source refresh workflow](../.github/workflows/xiph-source-refresh.yml)

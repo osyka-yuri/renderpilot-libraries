@@ -9,8 +9,9 @@
     "node": ">=24.18.0"
   },
   "scripts": {
-    "check": "pnpm run format:check && pnpm run validate && pnpm run validate:microsoft && pnpm run validate:github && pnpm run validate:xiph && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts && pnpm run sync:renodx-wiki:check && pnpm run sync:luma-wiki:check && pnpm run check:slugs && pnpm run check:luma-assets && pnpm run check:luma-payload-layout",
-    "check:offline": "pnpm run format:check && pnpm run validate && pnpm run validate:microsoft && pnpm run validate:github && pnpm run validate:xiph && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts",
+    "check": "pnpm run format:check && pnpm run docs:check && pnpm run validate && pnpm run validate:microsoft && pnpm run validate:github && pnpm run validate:xiph && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts && pnpm run sync:renodx-wiki:check && pnpm run sync:luma-wiki:check && pnpm run check:slugs && pnpm run check:luma-assets && pnpm run check:luma-payload-layout",
+    "check:offline": "pnpm run format:check && pnpm run docs:check && pnpm run validate && pnpm run validate:microsoft && pnpm run validate:github && pnpm run validate:xiph && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts",
+    "docs:check": "markdownlint-cli2 --config .markdownlint-cli2.jsonc README.md CONTRIBUTING.md \"docs/**/*.md\" \"catalogs/addons/*/PUBLISHING.md\" && node --test scripts/check-docs.test.mjs && node scripts/check-docs.mjs",
     "validate": "node scripts/validate.mjs",
     "validate:microsoft": "node scripts/validate-microsoft-nuget.mjs",
     "validate:github": "node scripts/validate-github-release-tree.mjs",
@@ -89,6 +90,7 @@
     "fast-xml-parser": "^5.10.1"
   },
   "devDependencies": {
+    "markdownlint-cli2": "0.23.2",
     "prettier": "^3.9.5"
   }
 }

@@ -1,16 +1,16 @@
-# Library Catalogue
+# Library catalog
 
-The versioned library catalogue describes installable graphics-runtime packages, their exact upstream provenance, binary identity, compatibility metadata, legal documents, and compressed transport.
+The versioned library catalog describes installable graphics-runtime packages, their exact upstream provenance, binary identity, compatibility metadata, legal documents, and compressed transport.
 
-## Public Topology
+## Public topology
 
-| Object                                     | Purpose                                                           |
-| ------------------------------------------ | ----------------------------------------------------------------- |
-| `libraries/v1/index.json`                  | Current vendor snapshot references and the catalogue commit point |
-| `libraries/v1/vendors/<vendor>.json`       | Local generated projection of one vendor                          |
-| `libraries/v1/vendors/<vendor>/<sha>.json` | Immutable R2 vendor snapshot addressed by its exact bytes         |
-| `libraries/blobs/sha256/<sha>.dll.zst`     | Immutable compressed DLL transport                                |
-| `libraries/legal/sha256/<sha>.<format>`    | Immutable raw licence or notice document                          |
+| Object                                     | Purpose                                                         |
+| ------------------------------------------ | --------------------------------------------------------------- |
+| `libraries/v1/index.json`                  | Current vendor snapshot references and the catalog commit point |
+| `libraries/v1/vendors/<vendor>.json`       | Local generated projection of one vendor                        |
+| `libraries/v1/vendors/<vendor>/<sha>.json` | Immutable R2 vendor snapshot addressed by its exact bytes       |
+| `libraries/blobs/sha256/<sha>.dll.zst`     | Immutable compressed DLL transport                              |
+| `libraries/legal/sha256/<sha>.<format>`    | Immutable raw licence or notice document                        |
 
 The index binds every vendor snapshot by object key, SHA-256, and size. Publication verifies all referenced assets before making a new index visible.
 
@@ -23,16 +23,19 @@ The index binds every vendor snapshot by object key, SHA-256, and size. Publicat
 | AMD       | GitHub release tree + overlay | `amd-fidelityfx.{config,lock}.json` and `amd.overlays.json`                      |
 | Intel     | GitHub release tree + overlay | `intel-xess.{config,lock}.json` and `intel.overlays.json`                        |
 | Valve     | GitHub release tree           | `valve-openvr.{config,lock}.json`                                                |
+| Xiph      | Reviewed reproducible builds  | `xiph.json` and `xiph.lock.json`                                                 |
 
 The shared GitHub release-tree importer handles AMD, Intel, and Valve. Provider profiles define tag syntax, exact paths within a commit tree, package projection, and signature policy. Historical AMD and Intel overlays cover reviewed packages without a verified official GitHub-release identity; an overlay cannot replace or impersonate an official import.
 
-## Identity Model
+Xiph is intentionally outside the release-tree importer. Its reviewed source-build pipeline binds Ogg and Vorbis history, build policy, toolchain evidence, binary verification, and generated catalog projection.
 
-The catalogue keeps presentation, package revision, raw content, and transport identity separate.
+## Identity model
+
+The catalog keeps presentation, package revision, raw content, and transport identity separate.
 
 ### Release identity
 
-`release.version` is the canonical NuGet/SemVer 2 package version used for display, ordering, candidate selection, and update-all behavior. It contains at least a three-segment numeric core and preserves a normalized prerelease suffix such as `1.721.2-preview`. One shared parser supplies canonical identity, ordering, numeric core, and the derived stable/preview channel to every provider. Build metadata may be accepted from upstream but is never persisted as part of catalogue identity. `release.label` is an optional supplemental annotation displayed after the version. It must not repeat the package name or a leading segment of the version.
+`release.version` is the canonical NuGet/SemVer 2 package version used for display, ordering, candidate selection, and update-all behavior. It contains at least a three-segment numeric core and preserves a normalized prerelease suffix such as `1.721.2-preview`. One shared parser supplies canonical identity, ordering, numeric core, and the derived stable/preview channel to every provider. Build metadata may be accepted from upstream but is never persisted as part of catalog identity. `release.label` is an optional supplemental annotation displayed after the version. It must not repeat the package name or a leading segment of the version.
 
 Package versions and binary versions are deliberately separate. Exact numeric PE `FileVersion` metadata remains on the artifact and is used for runtime compatibility; it is never made prerelease-aware. During adoption of the canonical package-version contract, curated NVIDIA package IDs and generated AMD identities were migrated together with their normalized release versions. This one-time identity migration prevents an old receipt from colliding with a canonical active package while leaving DLL hashes, PE versions, and upstream provenance unchanged.
 
@@ -69,23 +72,32 @@ Each vendor snapshot contains a deduplicated `legal_documents` table. Packages r
 
 Legal documents are independently content-addressed and do not change an otherwise identical package revision.
 
-## Upstream Provenance
+## Upstream provenance
 
-Microsoft imports bind the full normalized NuGet package version (including prerelease suffix), release channel, catalogue identity, and package SHA-512. The exact package ID and version are also verified against the archive's single root `.nuspec`. Stable and preview releases share the Microsoft v1 snapshot but always have distinct package/revision identities. GitHub imports bind the official repository, release, tag reference, exact commit, Git blob SHA-1, and downloaded content SHA-256.
+Microsoft imports bind the full normalized NuGet package version (including prerelease suffix), release channel, catalog identity, and package SHA-512. The exact package ID and version are also verified against the archive's single root `.nuspec`. Stable and preview releases share the Microsoft v1 snapshot but always have distinct package/revision identities. GitHub imports bind the official repository, release, tag reference, exact commit, Git blob SHA-1, and downloaded content SHA-256.
 
 For an already known release, any unexpected change in tag, commit, package layout, or payload fails closed. Unknown tags or layouts also require an explicit profile decision instead of automatic normalization. NuGet prereleases never mutate into stable releases; each exact package version is an independent immutable identity.
 
-## Binary Inspection
+### Reviewed Xiph source builds
+
+Xiph packages are reproducible Windows builds from reviewed Ogg and Vorbis source pairs. The lock binds upstream repositories, tags, tag objects, commits, release archive URLs and hashes, recipe identity, verification-policy identity, toolchain evidence, build revision, and the resulting artifact and transport hashes.
+
+The build matrix covers x86 and x64, shared and embedded-Ogg topology, and the plain, `lib`, and ABI-major filename profiles used by existing games. Each candidate is built twice and compared by raw SHA-256. Verification also checks exports, dependency topology, allowed system imports, forbidden runtime imports, architecture, and required PE mitigations.
+
+The scheduled workflow builds upstream code in an isolated Windows job, emits bounded asset and catalog bundles, and treats those bundles as untrusted in later jobs. Assets are verified and uploaded before a pull request is opened. An exceptional rebuild must create a new build revision for one reviewed source tuple instead of replacing an existing artifact identity.
+
+## Binary inspection
 
 The Windows inspector reads PE architecture, nullable file version, bounded named exports, and Authenticode data in one inspection flow.
 
-| Provider  | Signature policy | PE version policy                     | Additional projection         |
-| --------- | ---------------- | ------------------------------------- | ----------------------------- |
-| Microsoft | Required         | Numeric version required              | Product-specific NuGet layout |
-| AMD       | Required         | Numeric when used as release identity | FidelityFX package projection |
-| Intel     | Required         | Numeric when used as release identity | XeSS package projection       |
-| Valve     | Cutoff policy    | Nullable                              | Sorted OpenVR named exports   |
-| NVIDIA    | Curated metadata | Curated                               | Explicit reviewed packages    |
+| Provider  | Signature policy      | PE version policy                       | Additional projection                          |
+| --------- | --------------------- | --------------------------------------- | ---------------------------------------------- |
+| Microsoft | Required              | Numeric version required                | Product-specific NuGet layout                  |
+| AMD       | Required              | Numeric when used as release identity   | FidelityFX package projection                  |
+| Intel     | Required              | Numeric when used as release identity   | XeSS package projection                        |
+| Valve     | Cutoff policy         | Nullable                                | Sorted OpenVR named exports                    |
+| NVIDIA    | Curated metadata      | Curated                                 | Explicit reviewed packages                     |
+| Xiph      | Unsigned source build | Generated from reviewed source versions | Exports, imports, topology, and PE mitigations |
 
 Signed files must have an embedded Authenticode signature with Windows status `Valid` and a signer allowed by the provider profile. Catalog signatures are a different trust source and are rejected rather than being mixed with embedded CMS metadata. RFC 3161 timestamps are verified with `CryptVerifyTimeStampSignature`; legacy PKCS#9 countersignatures are verified with `CryptMsgVerifyCountersignatureEncodedEx` against the original signer digest. In both cases, the timestamp signer must match the trusted `TimeStamperCertificate` selected by Windows WinTrust for that embedded signature.
 
@@ -93,7 +105,7 @@ Malformed CMS, signer or timestamp-trust mismatch, invalid cryptography, conflic
 
 OpenVR's policy can report historical unsigned DLLs only before the configured inclusive signature cutoff. A release at or after that cutoff must be validly signed. OpenVR also publishes sorted named exports for RenderPilot's export-surface compatibility guard and preserves every official release package even when releases share the same DLL.
 
-## Generation Invariants
+## Generation invariants
 
 The generator:
 
@@ -115,3 +127,13 @@ Before production pruning, the R2 guard verifies the exact index bytes and valid
 every referenced vendor snapshot against the same catalog validators. A malformed or
 identity-mismatched snapshot therefore stops pruning before the global transport
 reference graph is evaluated.
+
+## Sources of truth
+
+- [Catalog registry](../scripts/catalog.mjs)
+- [Library vendor schema](../schemas/library_vendor_v1.schema.json)
+- [Library index schema](../schemas/library_index_v1.schema.json)
+- [Library generator](../scripts/generate-library-catalog.mjs)
+- [R2 publication phases](../scripts/lib/r2-publication.mjs)
+- [Xiph verification policy](../scripts/xiph/verification-policy.json)
+- [Xiph source refresh workflow](../.github/workflows/xiph-source-refresh.yml)
