@@ -80,6 +80,8 @@ export const EXTERNAL_LABELS = Object.freeze({
 
 export function slugify(name) {
   return String(name)
+    .normalize("NFKD")
+    .replace(/\p{M}+/gu, "")
     .toLowerCase()
     .replace(/[™®©]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
@@ -108,9 +110,26 @@ export function parseRenodxWikiRows(markdown) {
   return rows;
 }
 
+function addUniqueLookup(lookup, ambiguousKeys, key, id) {
+  if (!key || ambiguousKeys.has(key)) return;
+  const existingId = lookup.get(key);
+  if (existingId === undefined || existingId === id) {
+    lookup.set(key, id);
+    return;
+  }
+  lookup.delete(key);
+  ambiguousKeys.add(key);
+}
+
 function buildIdLookups(existingWiki) {
-  const nameToId = new Map();
-  const strippedNameToId = new Map();
+  const lookups = {
+    nameToId: new Map(),
+    strippedNameToId: new Map(),
+    canonicalNameToId: new Map(),
+  };
+  const ambiguousNames = new Set();
+  const ambiguousStrippedNames = new Set();
+  const ambiguousCanonicalNames = new Set();
   const gameById = new Map();
 
   for (const game of existingWiki) {
@@ -122,22 +141,29 @@ function buildIdLookups(existingWiki) {
       continue;
     }
 
-    nameToId.set(game.name, game.id);
+    addUniqueLookup(lookups.nameToId, ambiguousNames, game.name, game.id);
     const stripped = normalizeWikiName(game.name);
-    if (stripped && !strippedNameToId.has(stripped)) {
-      strippedNameToId.set(stripped, game.id);
-    }
+    addUniqueLookup(lookups.strippedNameToId, ambiguousStrippedNames, stripped, game.id);
+    const canonicalName = slugify(game.name);
+    addUniqueLookup(
+      lookups.canonicalNameToId,
+      ambiguousCanonicalNames,
+      canonicalName,
+      game.id,
+    );
     gameById.set(game.id, game);
   }
 
-  return { nameToId, strippedNameToId, gameById };
+  return { ...lookups, gameById };
 }
 
 function resolveId(name, lookups) {
+  const canonicalName = slugify(name);
   const id =
     lookups.nameToId.get(name) ??
     lookups.strippedNameToId.get(normalizeWikiName(name)) ??
-    slugify(name);
+    lookups.canonicalNameToId.get(canonicalName) ??
+    canonicalName;
   if (!id) throw new Error(`Could not resolve a non-empty id for game name: ${name}`);
   return id;
 }

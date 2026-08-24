@@ -37,6 +37,11 @@ const TITLE_MATCH_CASES = [
     minimumScore: 100,
   },
   {
+    expected: "Disco Elysium",
+    actual: "Disco Elysium - The Final Cut",
+    minimumScore: 88,
+  },
+  {
     expected: "DRAGON QUEST XI: Echoes of an Elusive Age",
     actual: "DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition",
     minimumScore: 78,
@@ -89,17 +94,73 @@ test("normalizeBaseTitle ignores edition markers", () => {
     normalizeBaseTitle("Little Nightmares"),
     normalizeBaseTitle("Little Nightmares Enhanced Edition"),
   );
+
+  assert.equal(
+    normalizeBaseTitle("Disco Elysium"),
+    normalizeBaseTitle("Disco Elysium - The Final Cut"),
+  );
+
+  assert.notEqual(
+    normalizeBaseTitle("Fame Fatale"),
+    normalizeBaseTitle("Final Cut: Fame Fatale"),
+  );
 });
 
 test("a requested edition does not resolve to the base game", () => {
-  const result = scoreTitleMatch("Little Nightmares Enhanced Edition", "Little Nightmares");
+  const enhancedResult = scoreTitleMatch(
+    "Little Nightmares Enhanced Edition",
+    "Little Nightmares",
+  );
+
+  assert.ok(
+    enhancedResult.score < AUTO_ACCEPT_SCORE,
+    `Expected score below ${AUTO_ACCEPT_SCORE}, received ${enhancedResult.score}.`,
+  );
+
+  assert.equal(enhancedResult.reason, "requested-edition-missing");
+
+  const finalCutResult = scoreTitleMatch("Disco Elysium - The Final Cut", "Disco Elysium");
+
+  assert.ok(finalCutResult.score < AUTO_ACCEPT_SCORE);
+  assert.equal(finalCutResult.reason, "requested-edition-missing");
+});
+
+test("an exact two-word base title resolves to its added edition", () => {
+  const game = createSteamItem(632470, "Disco Elysium - The Final Cut");
+  const soundtrackAndArtbook = createSteamItem(
+    1173140,
+    "Disco Elysium - Soundtrack and Artbooklet",
+  );
+  const finalCutSoundtrack = createSteamItem(
+    1233220,
+    "Disco Elysium - The Final Cut Soundtrack",
+  );
+
+  const resolution = findBestSteamMatch("Disco Elysium", [
+    soundtrackAndArtbook,
+    finalCutSoundtrack,
+    game,
+  ]);
+
+  assert.deepEqual(resolution.item, game);
+  assert.ok(resolution.score >= AUTO_ACCEPT_SCORE);
+  assert.equal(resolution.reason, "base-title-with-added-edition");
+  assert.equal(resolution.ambiguous, false);
+  assert.ok(
+    scoreTitleMatch("Disco Elysium", soundtrackAndArtbook.name).score < AUTO_ACCEPT_SCORE,
+  );
+  assert.ok(
+    scoreTitleMatch("Disco Elysium", finalCutSoundtrack.name).score < AUTO_ACCEPT_SCORE,
+  );
+});
+
+test("an added edition does not make a one-word title safe to resolve", () => {
+  const result = scoreTitleMatch("Control", "Control Ultimate Edition");
 
   assert.ok(
     result.score < AUTO_ACCEPT_SCORE,
     `Expected score below ${AUTO_ACCEPT_SCORE}, received ${result.score}.`,
   );
-
-  assert.equal(result.reason, "requested-edition-missing");
 });
 
 test("findBestSteamMatch reports equally strong matches as ambiguous", () => {

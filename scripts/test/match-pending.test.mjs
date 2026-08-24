@@ -12,6 +12,7 @@ import {
   createRenodxStoreApi,
   validateMatchOverlay,
 } from "../lib/pending-match-stores.mjs";
+import { runPendingMatching } from "../lib/pending-matching.mjs";
 import { UsageError } from "../lib/common.mjs";
 import { filesForTool, parseToolArg } from "../match-pending.mjs";
 
@@ -222,4 +223,59 @@ test("RenoDX store updates split children without creating orphan root entries",
   assert.equal(store.isResolved("collection-one"), true);
   assert.equal(store.isResolved("collection-two"), true);
   assert.equal(store.isResolved("collection"), true);
+});
+
+test("pending matching does not persist an ambiguous Steam result", async (t) => {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), "ambiguous-pending-match-"));
+  const pendingMatch = path.join(directory, "pending_match.json");
+  const unmatched = path.join(directory, "unmatched.json");
+  const manifest = path.join(directory, "missing-manifest.json");
+  t.after(() => fs.rm(directory, { recursive: true, force: true }));
+
+  await fs.writeFile(
+    pendingMatch,
+    JSON.stringify([{ id: "example-title", name: "Example Title" }]),
+    "utf8",
+  );
+
+  const appliedMatches = [];
+  const store = {
+    isResolved: () => false,
+    claimAppIds: () => new Set(),
+    applyMatch: (gameId, appid) => appliedMatches.push({ gameId, appid }),
+    applyDuplicateIgnore: () => assert.fail("duplicate ignore must not be applied"),
+    save: async () => {},
+  };
+
+  await runPendingMatching({
+    tool: "test",
+    files: { pendingMatch, unmatched, manifest },
+    createStore: async () => store,
+    resolveStoreGame: async () => ({
+      item: { id: 100, name: "Example Title - The Final Cut", type: "app" },
+      score: 90,
+      reason: "base-title-with-added-edition",
+      ambiguous: true,
+      alternatives: [
+        {
+          item: { id: 200, name: "Example Title - The Final Cut", type: "app" },
+          score: 90,
+          reason: "base-title-with-added-edition",
+          searchRank: 1,
+        },
+      ],
+    }),
+  });
+
+  assert.deepEqual(appliedMatches, []);
+  assert.deepEqual(JSON.parse(await fs.readFile(pendingMatch, "utf8")), [
+    { id: "example-title", name: "Example Title" },
+  ]);
+  assert.deepEqual(JSON.parse(await fs.readFile(unmatched, "utf8")), [
+    {
+      id: "example-title",
+      name: "Example Title",
+      reason: "Ambiguous Steam Store match",
+    },
+  ]);
 });

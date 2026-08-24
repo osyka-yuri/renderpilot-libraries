@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { buildManifest } from "../../catalogs/addons/renodx/lib/build-manifest.mjs";
 import { extractMarkdownTables } from "../lib/wiki-markdown.mjs";
 import {
   getModsTableHeaderColumns,
@@ -7,6 +8,7 @@ import {
   parseStatus,
   parseWikiRow,
   reconcileRenodxWiki,
+  slugify,
 } from "../lib/renodx-wiki.mjs";
 
 test("extractMarkdownTables captures tables and their preceding context", () => {
@@ -98,6 +100,116 @@ test("parseStatus correctly translates emoji to status", () => {
   assert.equal(parseStatus(":construction:"), "construction");
   assert.equal(parseStatus("🚧"), "construction");
   assert.equal(parseStatus("something else"), "unknown");
+});
+
+test("slugify preserves Latin letters with combining marks", () => {
+  assert.equal(slugify("ABZÛ"), "abzu");
+});
+
+function assertStyledTitlePreservesIdentity({ existingId, existingName, incomingName }) {
+  const result = reconcileRenodxWiki({
+    rows: [
+      {
+        name: incomingName,
+        status: "working",
+        addonUrl: null,
+        arch: "X64",
+        addonSlug: "unrealengine",
+        nexusUrl: null,
+        discordUrl: null,
+      },
+    ],
+    existingWiki: [
+      {
+        id: existingId,
+        name: existingName,
+        slug: "unrealengine",
+        arch: "X64",
+        status: "working",
+      },
+    ],
+    overlay: { [existingId]: { appids: ["384190"] } },
+    officialAssets: new Set(["renodx-unrealengine.addon64"]),
+  });
+
+  assert.equal(result.wikiGames[0].id, existingId);
+  assert.deepEqual(result.overlay, { [existingId]: { appids: ["384190"] } });
+
+  const generated = buildManifest({
+    wiki: result.wikiGames,
+    overlay: result.overlay,
+    generatedAt: "2026-08-24T00:00:00Z",
+    warn: () => {},
+  });
+  assert.equal(generated.manifest.games[0].id, existingId);
+  assert.deepEqual(generated.manifest.games[0].match, [
+    { kind: "steam_appid", value: "384190", tier: 100 },
+  ]);
+  assert.deepEqual(generated.pending, []);
+}
+
+test("reconciliation preserves identity when a title gains combining marks", () => {
+  assertStyledTitlePreservesIdentity({
+    existingId: "abzu",
+    existingName: "ABZU",
+    incomingName: "ABZÛ",
+  });
+});
+
+test("reconciliation preserves identity when a title loses combining marks", () => {
+  assertStyledTitlePreservesIdentity({
+    existingId: "caf",
+    existingName: "Café",
+    incomingName: "Cafe",
+  });
+});
+
+test("reconciliation does not reuse an ambiguous canonical title id", () => {
+  const result = reconcileRenodxWiki({
+    rows: [
+      {
+        name: "Resumé",
+        status: "working",
+        addonUrl: null,
+        arch: "X64",
+        addonSlug: "unityengine",
+        nexusUrl: null,
+        discordUrl: null,
+      },
+    ],
+    existingWiki: [
+      { id: "resume-a", name: "Résumé", slug: "unityengine", arch: "X64" },
+      { id: "resume-b", name: "Resume", slug: "unityengine", arch: "X64" },
+    ],
+    overlay: {},
+    officialAssets: new Set(["renodx-unityengine.addon64"]),
+  });
+
+  assert.equal(result.wikiGames[0].id, "resume");
+});
+
+test("a stripped-name collision cannot bypass canonical ambiguity", () => {
+  const result = reconcileRenodxWiki({
+    rows: [
+      {
+        name: "Cafè",
+        status: "working",
+        addonUrl: null,
+        arch: "X64",
+        addonSlug: "unityengine",
+        nexusUrl: null,
+        discordUrl: null,
+      },
+    ],
+    existingWiki: [
+      { id: "cafe-a", name: "Café", slug: "unityengine", arch: "X64" },
+      { id: "cafe-b", name: "Cafê", slug: "unityengine", arch: "X64" },
+    ],
+    overlay: {},
+    officialAssets: new Set(["renodx-unityengine.addon64"]),
+  });
+
+  assert.equal(result.wikiGames[0].id, "cafe");
 });
 
 test("getModsTableHeaderColumns maps all known columns correctly", () => {

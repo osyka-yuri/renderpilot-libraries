@@ -17,6 +17,9 @@
   "9-years-of-shadows": {
     "appids": ["1402120"]
   },
+  "a-difficult-game-about-climbing": {
+    "appids": ["2497920"]
+  },
   "a-plague-tale-innocence": {
     "appids": ["752590"]
   },
@@ -263,6 +266,9 @@
   "b-path-of-the-teal-lotus": {
     "appids": ["1614440"]
   },
+  "baby-steps": {
+    "appids": ["1281040"]
+  },
   "bad-north-jotunn-edition": {
     "appids": ["688420"]
   },
@@ -425,6 +431,9 @@
   "bulletstorm-full-clip-edition": {
     "appids": ["501590"]
   },
+  "cairn": {
+    "appids": ["1588550"]
+  },
   "cakey-s-twisted-bakery": {
     "appids": ["3028500"]
   },
@@ -464,6 +473,9 @@
   "circuit-superstars": {
     "appids": ["1097130"]
   },
+  "citizen-sleeper": {
+    "appids": ["1578650"]
+  },
   "citizen-sleeper-2": {
     "appids": ["2442460"]
   },
@@ -478,6 +490,9 @@
   },
   "cloudpunk": {
     "appids": ["746850"]
+  },
+  "cloverpit": {
+    "appids": ["3314790"]
   },
   "code-vein": {
     "appids": ["678960"]
@@ -514,6 +529,9 @@
   "crash-bandicoot-4-it-s-about-time": {
     "appids": ["1378990"]
   },
+  "creature-kitchen": {
+    "appids": ["3097300"]
+  },
   "crimson-desert": {
     "appids": ["3321460"]
   },
@@ -535,6 +553,9 @@
   },
   "cult-of-the-lamb": {
     "appids": ["1313140"]
+  },
+  "cuphead": {
+    "appids": ["268910"]
   },
   "cyberpunk-2077": {
     "appids": ["1091500"]
@@ -596,6 +617,9 @@
   "dead-island-definitive-edition": {
     "appids": ["383150", "383180"],
     "download_url": "https://notvoosh.github.io/renodx/renodx-deadislandde.addon64"
+  },
+  "dead-letter-dept": {
+    "appids": ["1627350"]
   },
   "deadcore-redux-demo": {
     "appids": ["3726710"]
@@ -659,6 +683,9 @@
   "dirt-rally-2-0": {
     "slug": "dirtrally2",
     "appids": ["690790"]
+  },
+  "disco-elysium": {
+    "appids": ["632470"]
   },
   "dishonored": {
     "appids": ["205100"]
@@ -754,6 +781,9 @@
   },
   "eastshade": {
     "appids": ["715560"]
+  },
+  "easy-delivery-co": {
+    "appids": ["3293010"]
   },
   "echo-point-nova": {
     "appids": ["1836730"]
@@ -1150,6 +1180,9 @@
   "hunter-hunter-nen-impact": {
     "appids": ["2456420"]
   },
+  "hymer-2000": {
+    "appids": ["3255860"]
+  },
   "hyper-light-breaker": {
     "appids": ["1534840"]
   },
@@ -1182,6 +1215,12 @@
   },
   "inzoi": {
     "appids": ["2456740"]
+  },
+  "iron-lung": {
+    "appids": ["1846170"]
+  },
+  "iron-nest-heavy-turret-simulator": {
+    "appids": ["2950790"]
   },
   "islanders": {
     "appids": ["1046030"]
@@ -1231,6 +1270,9 @@
   },
   "karma-the-dark-world": {
     "appids": ["1376200"]
+  },
+  "katamari-damacy-reroll": {
+    "appids": ["848350"]
   },
   "kaze-and-the-wild-masks": {
     "appids": ["829280"]
@@ -1505,6 +1547,12 @@
     },
     "appids": ["17410"]
   },
+  "miside": {
+    "appids": ["2527500"]
+  },
+  "mon-bazou": {
+    "appids": ["1520370"]
+  },
   "monster-hunter-rise": {
     "appids": ["1446780"]
   },
@@ -1642,6 +1690,9 @@
   "oddworld-soulstorm-enhanced-edition": {
     "appids": ["619390"]
   },
+  "old-school-rally": {
+    "appids": ["2824660"]
+  },
   "once-upon-a-puppet": {
     "appids": ["1904880"]
   },
@@ -1716,8 +1767,14 @@
     "download_url": "https://marat569.github.io/renodx/renodx-pathfinder2wotr.addon64",
     "appids": ["1184370"]
   },
+  "peak": {
+    "appids": ["3527290"]
+  },
   "penny-s-big-breakaway": {
     "appids": ["1955230"]
+  },
+  "people-playground": {
+    "appids": ["1118200"]
   },
   "persona-3-reload": {
     "appids": ["2161700"]
@@ -1798,6 +1855,9 @@
   },
   "quern-undying-thoughts": {
     "appids": ["512790"]
+  },
+  "r-e-p-o": {
+    "appids": ["3241660"]
   },
   "raft": {
     "appids": ["648800"]
@@ -2033,6 +2093,12 @@
   },
   "sker-ritual": {
     "appids": ["1492070"]
+  },
+  "sledders": {
+    "appids": ["2486740"]
+  },
+  "sn-ultimate-freeriding": {
+    "appids": ["2943150"]
   },
   "sniper-elite-4": {
     "appids": ["312660"]
@@ -2353,6 +2419,9 @@
   "the-long-dark": {
     "appids": ["305620"]
   },
+  "the-long-drive": {
+    "appids": ["1017180"]
+  },
   "the-looker": {
     "appids": ["1985690"]
   },
@@ -2577,6 +2646,9 @@
   },
   "tunic": {
     "appids": ["553420"]
+  },
+  "turbo-dismount-2": {
+    "appids": ["2280350"]
   },
   "turbo-golf-racing": {
     "appids": ["1324350"]

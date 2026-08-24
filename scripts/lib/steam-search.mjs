@@ -104,6 +104,10 @@ const EDITION_DEFINITIONS = Object.freeze([
     id: "directors-cut",
     pattern: /\bdirectors cut\b/gu,
   }),
+  Object.freeze({
+    id: "final-cut",
+    pattern: /\b(?:the )?final cut$/gu,
+  }),
 ]);
 
 /**
@@ -221,6 +225,7 @@ export function scoreTitleMatch(expectedName, actualName) {
   }
 
   return (
+    scoreAddedEditionMatch(comparison) ??
     scoreShortAffixMatch(comparison) ??
     scoreOrderedInsertionMatch(comparison) ??
     scoreSameBaseTitle(comparison) ??
@@ -268,6 +273,24 @@ function scoreEditionMismatch(relation) {
   }
 
   return null;
+}
+
+/**
+ * Accepts a known added edition only when removing its marker leaves the exact
+ * requested base title. Requiring at least two base tokens keeps inherently
+ * ambiguous one-word titles out of automatic matching.
+ *
+ * @param {ReturnType<typeof createTitleComparison>} comparison
+ * @returns {{score: number; reason: string} | null}
+ */
+function scoreAddedEditionMatch(comparison) {
+  const { expectedName, actualName, expectedTokens, editionRelation } = comparison;
+  const hasExactStableBase =
+    expectedTokens.length >= 2 &&
+    editionRelation === "actual-has-extra-edition" &&
+    normalizeBaseTitle(expectedName) === normalizeBaseTitle(actualName);
+
+  return hasExactStableBase ? matchScore(90, "base-title-with-added-edition") : null;
 }
 
 /**

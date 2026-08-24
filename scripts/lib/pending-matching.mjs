@@ -7,10 +7,16 @@ import { resolveSteamStoreGame } from "./steam-search.mjs";
 const UNMATCHED_REASON = Object.freeze({
   apiFailed: "API Request Failed",
   noExactMatch: "No exact match found in Steam Store search",
+  ambiguousMatch: "Ambiguous Steam Store match",
 });
 const STEAM_SEARCH_FAILURE_MESSAGE = "Steam search returned null (all requests failed).";
 
-export async function runPendingMatching({ tool, files, createStore }) {
+export async function runPendingMatching({
+  tool,
+  files,
+  createStore,
+  resolveStoreGame = resolveSteamStoreGame,
+}) {
   console.log(`Resolving pending matches for: ${tool}`);
 
   const pendingGames = await readRequiredJson(files.pendingMatch, validatePendingGames);
@@ -34,7 +40,7 @@ export async function runPendingMatching({ tool, files, createStore }) {
     }
 
     console.log(`[${index + 1}/${pendingGames.length}] Checking ${game.name}...`);
-    const searchResult = await findExactSteamApp(game.name);
+    const searchResult = await findExactSteamApp(game.name, resolveStoreGame);
 
     if (searchResult.kind === "error") {
       console.warn(`  -> Steam search failed: ${errorMessage(searchResult.error)}`);
@@ -51,6 +57,17 @@ export async function runPendingMatching({ tool, files, createStore }) {
         id: game.id,
         name: game.name,
         reason: UNMATCHED_REASON.noExactMatch,
+      });
+      continue;
+    }
+    if (searchResult.kind === "ambiguous") {
+      console.warn(
+        `  -> Ambiguous match (score ${searchResult.score}, reason: ${searchResult.reason}). Leaving pending.`,
+      );
+      unmatchedGames.push({
+        id: game.id,
+        name: game.name,
+        reason: UNMATCHED_REASON.ambiguousMatch,
       });
       continue;
     }
@@ -98,9 +115,9 @@ export function collectManifestSteamAppIds(manifest, filePath) {
   return appIds;
 }
 
-async function findExactSteamApp(gameName) {
+async function findExactSteamApp(gameName, resolveStoreGame) {
   try {
-    const resolution = await resolveSteamStoreGame(gameName);
+    const resolution = await resolveStoreGame(gameName);
 
     if (resolution === null) {
       return {
@@ -116,9 +133,7 @@ async function findExactSteamApp(gameName) {
     }
 
     if (ambiguous) {
-      console.warn(
-        `  -> Ambiguous match (score ${score}, reason: ${reason}). Using best candidate.`,
-      );
+      return { kind: "ambiguous", item, score, reason };
     }
 
     return { kind: "match", item };

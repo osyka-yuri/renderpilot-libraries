@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T00:00:00Z",
+  "generated_at": "2026-08-24T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -5597,7 +5597,7 @@
     },
     {
       "id": "abzu",
-      "name": "ABZU",
+      "name": "ABZÛ",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -8862,6 +8862,22 @@
       }
     },
     {
+      "id": "a-difficult-game-about-climbing",
+      "name": "A Difficult Game About Climbing",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2497920",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "aer-memories-of-old",
       "name": "AER Memories of Old",
       "architecture": "X86",
@@ -9323,6 +9339,22 @@
       ],
       "addon": {
         "slug": "awakenastralblade"
+      }
+    },
+    {
+      "id": "baby-steps",
+      "name": "Baby Steps",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1281040",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
       }
     },
     {
@@ -9870,6 +9902,22 @@
       }
     },
     {
+      "id": "cairn",
+      "name": "Cairn",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1588550",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "cakey-s-twisted-bakery",
       "name": "Cakey's Twisted Bakery",
       "architecture": "X64",
@@ -9950,6 +9998,22 @@
       }
     },
     {
+      "id": "citizen-sleeper",
+      "name": "Citizen Sleeper",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1578650",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "cloudpunk",
       "name": "Cloudpunk",
       "architecture": "X64",
@@ -9958,6 +10022,22 @@
         {
           "kind": "steam_appid",
           "value": "746850",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "cloverpit",
+      "name": "Cloverpit",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3314790",
           "tier": 100
         }
       ],
@@ -10046,6 +10126,22 @@
       }
     },
     {
+      "id": "creature-kitchen",
+      "name": "Creature Kitchen",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3097300",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "ctrl-alt-ego",
       "name": "Ctrl Alt Ego",
       "architecture": "X64",
@@ -10078,6 +10174,22 @@
       }
     },
     {
+      "id": "cuphead",
+      "name": "Cuphead",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "268910",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "dave-the-diver",
       "name": "DAVE THE DIVER",
       "architecture": "X64",
@@ -10102,6 +10214,22 @@
         {
           "kind": "steam_appid",
           "value": "3726710",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "dead-letter-dept",
+      "name": "DEAD LETTER DEPT.",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1627350",
           "tier": 100
         }
       ],
@@ -10224,6 +10352,22 @@
         {
           "kind": "steam_appid",
           "value": "1272320",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "disco-elysium",
+      "name": "Disco Elysium",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "632470",
           "tier": 100
         }
       ],
@@ -10464,6 +10608,22 @@
         {
           "kind": "steam_appid",
           "value": "715560",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "easy-delivery-co",
+      "name": "Easy Delivery Co.",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3293010",
           "tier": 100
         }
       ],
@@ -11458,6 +11618,22 @@
       }
     },
     {
+      "id": "hymer-2000",
+      "name": "Hymer 2000",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3255860",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "icey",
       "name": "ICEY",
       "architecture": "X64",
@@ -11514,6 +11690,38 @@
         {
           "kind": "steam_appid",
           "value": "1119980",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "iron-lung",
+      "name": "Iron Lung",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1846170",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "iron-nest-heavy-turret-simulator",
+      "name": "IRON NEST: Heavy Turret Simulator",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2950790",
           "tier": 100
         }
       ],
@@ -11594,6 +11802,22 @@
         {
           "kind": "steam_appid",
           "value": "2820820",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "katamari-damacy-reroll",
+      "name": "Katamari Damacy REROLL",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "848350",
           "tier": 100
         }
       ],
@@ -12178,6 +12402,38 @@
       }
     },
     {
+      "id": "miside",
+      "name": "MiSide",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2527500",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "mon-bazou",
+      "name": "Mon Bazou",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1520370",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "monster-train",
       "name": "Monster Train",
       "architecture": "X64",
@@ -12530,6 +12786,22 @@
       }
     },
     {
+      "id": "old-school-rally",
+      "name": "Old School Rally",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2824660",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "once-upon-a-puppet",
       "name": "Once Upon a Puppet",
       "architecture": "X64",
@@ -12783,6 +13055,38 @@
         {
           "kind": "steam_appid",
           "value": "739630",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "peak",
+      "name": "PEAK",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3527290",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "people-playground",
+      "name": "People Playground",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1118200",
           "tier": 100
         }
       ],
@@ -13071,6 +13375,22 @@
         {
           "kind": "steam_appid",
           "value": "317100",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "r-e-p-o",
+      "name": "R.E.P.O.",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3241660",
           "tier": 100
         }
       ],
@@ -13407,6 +13727,38 @@
         {
           "kind": "steam_appid",
           "value": "1492070",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "sledders",
+      "name": "Sledders",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2486740",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "sn-ultimate-freeriding",
+      "name": "SNØ: Ultimate Freeriding",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2943150",
           "tier": 100
         }
       ],
@@ -14113,6 +14465,22 @@
       }
     },
     {
+      "id": "the-long-drive",
+      "name": "The Long Drive",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1017180",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "the-looker",
       "name": "The Looker",
       "architecture": "X64",
@@ -14393,6 +14761,22 @@
         {
           "kind": "steam_appid",
           "value": "2088930",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "turbo-dismount-2",
+      "name": "Turbo Dismount 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2280350",
           "tier": 100
         }
       ],
