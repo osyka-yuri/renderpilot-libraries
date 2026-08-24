@@ -137,7 +137,20 @@ test("pnpm setup reads its single version from package.json", async () => {
   const packageJson = JSON.parse(
     await readFile(path.join(REPOSITORY_ROOT, "package.json"), "utf8"),
   );
-  assert.equal(packageJson.packageManager, "pnpm@11.18.0");
+  assert.equal(packageJson.packageManager, "pnpm@11.23.0");
+
+  const pnpmVersion = packageJson.packageManager.slice("pnpm@".length);
+  const localBootstrap = `npm install --global pnpm@${pnpmVersion}`;
+  for (const documentationPath of ["README.md", "docs/setup.md"]) {
+    const documentation = await readFile(
+      path.join(REPOSITORY_ROOT, documentationPath),
+      "utf8",
+    );
+    assert.ok(
+      documentation.split(/\r?\n/u).includes(localBootstrap),
+      `${documentationPath} must contain the exact pnpm bootstrap command`,
+    );
+  }
 
   const files = await actionYamlFiles(path.join(REPOSITORY_ROOT, ".github"));
   const violations = [];

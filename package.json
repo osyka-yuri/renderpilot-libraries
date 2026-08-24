@@ -2,11 +2,11 @@
   "name": "renderpilot-libraries-tools",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@11.18.0",
+  "packageManager": "pnpm@11.23.0",
   "type": "module",
   "description": "Validation and Cloudflare R2 publishing tooling for the RenderPilot libraries catalog.",
   "engines": {
-    "node": ">=24.18.0"
+    "node": ">=24.19.0"
   },
   "scripts": {
     "check": "pnpm run format:check && pnpm run docs:check && pnpm run validate && pnpm run validate:microsoft && pnpm run validate:github && pnpm run validate:xiph && pnpm run check:all-generated && pnpm run test:renodx && pnpm run test:luma && pnpm run test:scripts && pnpm run sync:renodx-wiki:check && pnpm run sync:luma-wiki:check && pnpm run check:slugs && pnpm run check:luma-assets && pnpm run check:luma-payload-layout",
@@ -84,13 +84,13 @@
     "publish:json:dry-run": "node scripts/libraries.mjs publish --json-only --dry-run"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1087.0",
+    "@aws-sdk/client-s3": "^3.1116.0",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
-    "fast-xml-parser": "^5.10.1"
+    "fast-xml-parser": "^5.11.0"
   },
   "devDependencies": {
     "markdownlint-cli2": "0.23.2",
-    "prettier": "^3.9.5"
+    "prettier": "^3.9.6"
   }
 }
