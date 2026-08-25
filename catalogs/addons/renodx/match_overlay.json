@@ -339,6 +339,9 @@
     "download_url": "https://marat569.github.io/renodx/renodx-BerserkBotH.addon64",
     "appids": ["502280"]
   },
+  "besiege": {
+    "appids": ["346010"]
+  },
   "beton-brutal": {
     "appids": ["2330500"]
   },
@@ -526,6 +529,9 @@
   "coridden": {
     "appids": ["1656930"]
   },
+  "crab-game": {
+    "appids": ["1782210"]
+  },
   "crash-bandicoot-4-it-s-about-time": {
     "appids": ["1378990"]
   },
@@ -595,6 +601,9 @@
   },
   "darksiders-warmastered-edition": {
     "appids": ["462780"]
+  },
+  "darkwood": {
+    "appids": ["274520"]
   },
   "dave-the-diver": {
     "appids": ["1868140"]
@@ -772,6 +781,9 @@
   },
   "dying-light-the-beast": {
     "appids": ["3008130"]
+  },
+  "dyson-sphere-program": {
+    "appids": ["1366540"]
   },
   "dystopika": {
     "appids": ["2379910"]
@@ -972,6 +984,9 @@
   },
   "front-mission-2-remake": {
     "appids": ["2865440"]
+  },
+  "fumes": {
+    "appids": ["1920430"]
   },
   "gang-beasts": {
     "appids": ["285900"]
@@ -1960,6 +1975,9 @@
   "romancing-saga-2": {
     "appids": ["606370"]
   },
+  "rounds": {
+    "appids": ["1557740"]
+  },
   "routine": {
     "appids": ["606160"]
   },
@@ -2223,6 +2241,9 @@
   },
   "stellar-blade": {
     "appids": ["3489700"]
+  },
+  "stick-fight-the-game": {
+    "appids": ["674940"]
   },
   "stranger-of-paradise-final-fantasy-origin": {
     "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64",

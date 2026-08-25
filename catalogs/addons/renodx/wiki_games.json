@@ -3577,6 +3577,13 @@
     "id": "bendy-secrets-of-the-machine"
   },
   {
+    "name": "Besiege",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "besiege"
+  },
+  {
     "name": "BETON BRUTAL",
     "slug": "betonbrutal",
     "arch": "X64",
@@ -3787,6 +3794,13 @@
     "id": "coridden"
   },
   {
+    "name": "Crab Game",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "crab-game"
+  },
+  {
     "name": "Creature Kitchen",
     "slug": "unityengine",
     "arch": "X64",
@@ -3813,6 +3827,13 @@
     "arch": "X64",
     "status": "construction",
     "id": "cuphead"
+  },
+  {
+    "name": "Darkwood",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "darkwood"
   },
   {
     "name": "DAVE THE DIVER",
@@ -3976,6 +3997,13 @@
     "id": "dustborn"
   },
   {
+    "name": "Dyson Sphere Program",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "dyson-sphere-program"
+  },
+  {
     "name": "Dystopika",
     "slug": "unityengine",
     "arch": "X64",
@@ -4105,7 +4133,7 @@
     "name": "Exo One",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
+    "status": "working",
     "id": "exo-one"
   },
   {
@@ -4219,6 +4247,13 @@
     "arch": "X64",
     "status": "construction",
     "id": "front-mission-2-remake"
+  },
+  {
+    "name": "FUMES",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "fumes"
   },
   {
     "name": "Gang Beasts",
@@ -5243,6 +5278,13 @@
     "id": "road-redemption"
   },
   {
+    "name": "ROUNDS",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "rounds"
+  },
+  {
     "name": "Ruined King: A League of Legends Story™",
     "slug": "unityengine",
     "arch": "X64",
@@ -5472,6 +5514,13 @@
     "arch": "X64",
     "status": "construction",
     "id": "steamworld-build"
+  },
+  {
+    "name": "Stick Fight: The Game",
+    "slug": "unityengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "stick-fight-the-game"
   },
   {
     "name": "Streets of Rogue",
@@ -5757,7 +5806,7 @@
     "name": "Totally Accurate Battle Simulator",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
+    "status": "working",
     "id": "totally-accurate-battle-simulator"
   },
   {

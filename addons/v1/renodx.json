@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T00:00:00Z",
+  "generated_at": "2026-08-25T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -9646,6 +9646,22 @@
       }
     },
     {
+      "id": "besiege",
+      "name": "Besiege",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "346010",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "beton-brutal",
       "name": "BETON BRUTAL",
       "architecture": "X64",
@@ -10126,6 +10142,22 @@
       }
     },
     {
+      "id": "crab-game",
+      "name": "Crab Game",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1782210",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "creature-kitchen",
       "name": "Creature Kitchen",
       "architecture": "X64",
@@ -10182,6 +10214,22 @@
         {
           "kind": "steam_appid",
           "value": "268910",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "darkwood",
+      "name": "Darkwood",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "274520",
           "tier": 100
         }
       ],
@@ -10568,6 +10616,22 @@
       }
     },
     {
+      "id": "dyson-sphere-program",
+      "name": "Dyson Sphere Program",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1366540",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "dystopika",
       "name": "Dystopika",
       "architecture": "X64",
@@ -10859,7 +10923,7 @@
       "id": "exo-one",
       "name": "Exo One",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
@@ -11125,6 +11189,22 @@
         {
           "kind": "steam_appid",
           "value": "2865440",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "fumes",
+      "name": "FUMES",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1920430",
           "tier": 100
         }
       ],
@@ -13479,6 +13559,22 @@
       }
     },
     {
+      "id": "rounds",
+      "name": "ROUNDS",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1557740",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "ruined-king-a-league-of-legends-story",
       "name": "Ruined King: A League of Legends Story™",
       "architecture": "X64",
@@ -14009,6 +14105,22 @@
         {
           "kind": "steam_appid",
           "value": "2134770",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "stick-fight-the-game",
+      "name": "Stick Fight: The Game",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "674940",
           "tier": 100
         }
       ],
@@ -14660,7 +14772,7 @@
       "id": "totally-accurate-battle-simulator",
       "name": "Totally Accurate Battle Simulator",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
