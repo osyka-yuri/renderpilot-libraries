@@ -23,6 +23,13 @@
   "a-plague-tale-innocence": {
     "appids": ["752590"]
   },
+  "a-plague-tale-requiem": {
+    "external": {
+      "url": "https://www.nexusmods.com/aplaguetalerequiem/mods/50",
+      "label_key": "renodx.external.nexus"
+    },
+    "appids": ["1182900"]
+  },
   "abiotic-factor": {
     "appids": ["427410"]
   },
@@ -238,6 +245,9 @@
   },
   "atlas-fallen": {
     "appids": ["1230530"]
+  },
+  "atlyss": {
+    "appids": ["2768430"]
   },
   "atomic-heart": {
     "appids": ["668580"]

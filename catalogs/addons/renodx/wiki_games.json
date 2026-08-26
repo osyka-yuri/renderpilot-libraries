@@ -63,6 +63,13 @@
     "id": "a-plague-tale-innocence"
   },
   {
+    "name": "A Plague Tale: Requiem",
+    "slug": "a-plague-tale-requiem",
+    "arch": "X64",
+    "status": "working",
+    "id": "a-plague-tale-requiem"
+  },
+  {
     "name": "Arknights: Endfield",
     "slug": "endfield",
     "arch": "X64",
@@ -3407,6 +3414,13 @@
     "arch": "X64",
     "status": "working",
     "id": "atelier-resleriana-the-red-alchemist-the-white-guardian"
+  },
+  {
+    "name": "ATLYSS",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "atlyss"
   },
   {
     "name": "Atomic Owl",
