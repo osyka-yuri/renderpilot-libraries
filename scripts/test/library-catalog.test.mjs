@@ -571,8 +571,14 @@ test("generated catalog has explicit package units and repaired DLSS-D identitie
   assert.equal(
     nvidia.packages
       .filter((packageValue) => packageValue.technology === "nvidia_streamline")
-      .every((packageValue) => packageValue.members.length === 11),
+      .every(
+        (packageValue) =>
+          packageValue.members[0]?.install_as === "sl.common.dll" &&
+          packageValue.members.length >= 8 &&
+          packageValue.members.length <= 11,
+      ),
     true,
+    "streamline packages retain authentic 8-11 member bundles with sl.common.dll primary",
   );
   assert.equal(
     amd.packages
