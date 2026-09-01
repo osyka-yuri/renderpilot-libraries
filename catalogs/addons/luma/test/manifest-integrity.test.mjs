@@ -12,6 +12,8 @@ const DISHONORED_2 = {
   appid: "403640",
 };
 const BORDERLANDS_2_AND_TPS = "borderlands-2-and-the-pre-sequel";
+const MEDAL_OF_HONOR_AIRBORNE = "medal-of-honor-airborne";
+const METAPHOR_REFANTAZIO = "metaphor-refantazio";
 const TEKKEN_7 = "tekken-7";
 const VANQUISH = "vanquish";
 const THE_WITCHER_2 = "the-witcher-2";
@@ -35,7 +37,7 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
   assert.ok(Array.isArray(manifest.games), "Manifest should have a games array");
   assert.ok(manifest.games.length > 0, "Manifest should have at least one game");
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 190);
+  assert.equal(manifest.games.length, 191);
   assert.match(manifest.generated_at, /^\d{4}-\d{2}-\d{2}T00:00:00Z$/);
   assert.match(manifest.minimum_reshade_version, /^\d+\.\d+\.\d+$/);
   assert.equal("host" in manifest, false);
@@ -104,6 +106,24 @@ test("manifest integrity - committed Luma v1 document is well-formed and interna
     dependency.config.map((section) => section.section),
     ["General", "DirectX"],
   );
+
+  const medalOfHonor = manifest.games.find((t) => t.id === MEDAL_OF_HONOR_AIRBORNE);
+  assert.ok(medalOfHonor, `${MEDAL_OF_HONOR_AIRBORNE} must be present`);
+  assert.equal(medalOfHonor.architecture, "X86");
+  assert.equal(medalOfHonor.status, "working");
+  assert.equal(medalOfHonor.profile, "game");
+  assert.deepEqual(medalOfHonor.match, [
+    { kind: "steam_appid", value: "24840", tier: 100 },
+    { kind: "exe_name", value: "MOHA.exe", tier: 70 },
+  ]);
+  assert.equal(medalOfHonor.package.release_asset, "Luma-Medal_of_Honor_Airborne-x32.zip");
+  assert.equal(medalOfHonor.package.addon_file, "Luma-Medal of Honor Airborne.addon");
+  assert.deepEqual(medalOfHonor.requirements.managed_dependency, dependency);
+
+  const metaphor = manifest.games.find((t) => t.id === METAPHOR_REFANTAZIO);
+  assert.ok(metaphor, `${METAPHOR_REFANTAZIO} must be present`);
+  assert.equal(metaphor.status, "working");
+  assert.equal("guidance" in metaphor, false);
 
   const tekken7 = manifest.games.find((t) => t.id === TEKKEN_7);
   assert.ok(tekken7, `${TEKKEN_7} must be present`);

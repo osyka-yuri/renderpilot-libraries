@@ -4699,28 +4699,89 @@
     ]
   },
   {
+    "id": "medal-of-honor-airborne",
+    "name": "Medal of Honor: Airborne",
+    "asset": "Luma-Medal_of_Honor_Airborne-x32.zip",
+    "addon_file": "Luma-Medal of Honor Airborne.addon",
+    "arch": "X86",
+    "status": "working",
+    "external_requirement": {
+      "kind": "dgvoodoo2",
+      "version": "2.87.3",
+      "accepted_detected_apis": ["D3D9"],
+      "reshade_proxy_dll": "dxgi.dll",
+      "source": {
+        "url": "https://github.com/dege-diosg/dgVoodoo2/releases/download/v2.87.3/dgVoodoo2_87_3.zip",
+        "sha256": "6fb954bed55bf70e948c5045a663a9df31ea206faf105e327bafe46c318f867f",
+        "size": 9082391
+      },
+      "install_map": [
+        {
+          "source": "MS/x86/D3D9.dll",
+          "dest": "D3D9.dll",
+          "sha256": "c13e3c0969d2c70a1a63cf96b83c7cd3bc47f925f28ec92c07d5b72d6df4c240",
+          "size": 485888
+        }
+      ],
+      "config_file": "dgVoodoo.conf",
+      "config": [
+        {
+          "section": "General",
+          "entries": [
+            {
+              "key": "OutputAPI",
+              "value": "d3d11_fl11_0"
+            }
+          ]
+        },
+        {
+          "section": "DirectX",
+          "entries": [
+            {
+              "key": "VideoCard",
+              "value": "geforce_9800_gt"
+            },
+            {
+              "key": "dgVoodooWatermark",
+              "value": "false"
+            },
+            {
+              "key": "VRAM",
+              "value": "1024"
+            }
+          ]
+        }
+      ]
+    },
+    "wiki_note_reviews": [
+      {
+        "section": "completed",
+        "name": "Medal of Honor: Airborne",
+        "fingerprint": "40f9428228826691fffdfcd76f2e26cc98754e73212d84414d8059679e637b88",
+        "disposition": "omitted",
+        "reason": "RenderPilot installs and configures the managed dgVoodoo dependency."
+      }
+    ],
+    "match": [
+      {
+        "kind": "steam_appid",
+        "value": "24840",
+        "tier": 100
+      },
+      {
+        "kind": "exe_name",
+        "value": "MOHA.exe",
+        "tier": 70
+      }
+    ]
+  },
+  {
     "id": "metaphor-refantazio",
     "name": "Metaphor: ReFantazio",
     "asset": "Luma-Metaphor.zip",
     "addon_file": "Luma-Metaphor.addon",
     "arch": "X64",
-    "status": "construction",
-    "guidance": [
-      {
-        "id": "luma.metaphor-refantazio.compatibility",
-        "kind": "compatibility",
-        "fallback_text": "Only DLAA / FSR Native AA modes are available; this is not DLSS or FSR super-resolution."
-      }
-    ],
-    "wiki_note_reviews": [
-      {
-        "section": "completed",
-        "name": "Metaphor: ReFantazio",
-        "fingerprint": "6e97977e784efb3e85cd4ecd011d25e72ebda547f6507d4b44074be7a4fa5eb5",
-        "disposition": "published",
-        "guidance_ids": ["luma.metaphor-refantazio.compatibility"]
-      }
-    ],
+    "status": "working",
     "match": [
       {
         "kind": "steam_appid",
