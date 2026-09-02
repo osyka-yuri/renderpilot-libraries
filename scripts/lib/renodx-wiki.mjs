@@ -217,7 +217,11 @@ function resolveOfficialAddon({ addonUrl, slug, arch, name, officialAssets }) {
   if (officialAssets.size === 0 || isOfficial) return { isOfficial, slug, arch };
 
   const bitsOrder = arch === "X86" ? ["32", "64"] : ["64", "32"];
-  for (const candidateSlug of uniqueNonEmpty([normalizeWikiName(name), slugify(name)])) {
+  for (const candidateSlug of uniqueNonEmpty([
+    slug,
+    normalizeWikiName(name),
+    slugify(name),
+  ])) {
     for (const bits of bitsOrder) {
       if (officialAssets.has(`renodx-${candidateSlug}.addon${bits}`)) {
         return {

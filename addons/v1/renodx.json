@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-26T00:00:00Z",
+  "generated_at": "2026-09-02T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -84,7 +84,7 @@
     {
       "id": "alice-madness-returns",
       "name": "Alice: Madness Returns",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -246,7 +246,7 @@
     {
       "id": "assassin-s-creed-director-s-cut-edition",
       "name": "Assassin's Creed™: Director's Cut Edition (DX10)",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -379,7 +379,7 @@
     {
       "id": "assassins-creed-iv-black-flag",
       "name": "Assassin’s Creed® IV Black Flag™",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "construction",
       "match": [
         {
@@ -927,7 +927,7 @@
     {
       "id": "borderlands-2-the-pre-sequel",
       "name": "Borderlands 2 & The Pre-Sequel",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -995,7 +995,7 @@
     {
       "id": "castlevania-lords-of-shadow",
       "name": "Castlevania Lords of Shadow",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -1016,7 +1016,7 @@
     {
       "id": "child-of-light",
       "name": "Child of Light",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -1252,7 +1252,7 @@
     {
       "id": "darksiders-warmastered-edition",
       "name": "Darksiders Warmastered Edition",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -1801,7 +1801,7 @@
     {
       "id": "far-cry-2",
       "name": "Far Cry 2 (dx10)",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -1822,7 +1822,7 @@
     {
       "id": "far-cry-3",
       "name": "Far Cry 3 (dx11)",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -1973,7 +1973,7 @@
     {
       "id": "final-fantasy-x",
       "name": "Final Fantasy X",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -2606,7 +2606,7 @@
     {
       "id": "james-cameron-s-avatar-the-game",
       "name": "James Cameron's Avatar: The Game",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -2733,7 +2733,7 @@
     {
       "id": "kingdoms-of-amalur-re-reckoning",
       "name": "Kingdoms of Amalur: Re-Reckoning",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -3116,7 +3116,7 @@
     {
       "id": "lost-planet",
       "name": "Lost Planet",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -3962,7 +3962,7 @@
     {
       "id": "remember-me",
       "name": "Remember Me",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -4104,6 +4104,30 @@
       ],
       "addon": {
         "slug": "re7-2r-3r-village"
+      }
+    },
+    {
+      "id": "resonance-a-plague-tale-legacy",
+      "name": "Resonance: A Plague Tale Legacy",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2713000",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "resonance-a-plague-tale-legacy"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/resonanceaplaguetalelegacy/mods/38",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
       }
     },
     {
@@ -4470,7 +4494,7 @@
     {
       "id": "sonic-generations",
       "name": "Sonic Generations",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "construction",
       "match": [
         {
@@ -4530,7 +4554,7 @@
     {
       "id": "spec-ops-the-line",
       "name": "Spec Ops: The Line",
-      "architecture": "X86",
+      "architecture": "X64",
       "status": "working",
       "match": [
         {
@@ -4895,7 +4919,7 @@
     {
       "id": "terraria",
       "name": "Terraria",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "construction",
       "match": [
         {
@@ -5156,7 +5180,7 @@
     {
       "id": "tomb-raider",
       "name": "Tomb Raider (2013)",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -15577,7 +15601,7 @@
     {
       "id": "l-a-noire",
       "name": "L.A. Noire",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "unknown",
       "match": [
         {

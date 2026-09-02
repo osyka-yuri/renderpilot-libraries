@@ -30,7 +30,7 @@
   {
     "name": "Alice: Madness Returns",
     "slug": "alicemadnessreturns",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "alice-madness-returns"
   },
@@ -86,7 +86,7 @@
   {
     "name": "Assassin's Creed™: Director's Cut Edition (DX10)",
     "slug": "asscreed1",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "assassin-s-creed-director-s-cut-edition"
   },
@@ -114,7 +114,7 @@
   {
     "name": "Assassin’s Creed® IV Black Flag™",
     "slug": "asscreedblackflag",
-    "arch": "X64",
+    "arch": "X86",
     "status": "construction",
     "id": "assassins-creed-iv-black-flag"
   },
@@ -296,7 +296,7 @@
   {
     "name": "Borderlands 2 & The Pre-Sequel",
     "slug": "borderlands2",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "borderlands-2-the-pre-sequel"
   },
@@ -317,14 +317,14 @@
   {
     "name": "Castlevania Lords of Shadow",
     "slug": "castlevanialos",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "castlevania-lords-of-shadow"
   },
   {
     "name": "Child of Light",
     "slug": "childoflight",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "child-of-light"
   },
@@ -401,7 +401,7 @@
   {
     "name": "Darksiders Warmastered Edition",
     "slug": "darksiders-warmastered",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "darksiders-warmastered-edition"
   },
@@ -583,14 +583,14 @@
   {
     "name": "Far Cry 2 (dx10)",
     "slug": "duniaengine",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "far-cry-2"
   },
   {
     "name": "Far Cry 3 (dx11)",
     "slug": "duniaengine",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "far-cry-3"
   },
@@ -639,7 +639,7 @@
   {
     "name": "Final Fantasy X",
     "slug": "ffx",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "final-fantasy-x"
   },
@@ -856,7 +856,7 @@
   {
     "name": "James Cameron's Avatar: The Game",
     "slug": "duniaengine",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "james-cameron-s-avatar-the-game"
   },
@@ -898,7 +898,7 @@
   {
     "name": "Kingdoms of Amalur: Re-Reckoning",
     "slug": "koarr",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "kingdoms-of-amalur-re-reckoning"
   },
@@ -989,7 +989,7 @@
   {
     "name": "Lost Planet",
     "slug": "lostplanet",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "lost-planet"
   },
@@ -1297,7 +1297,7 @@
   {
     "name": "Remember Me",
     "slug": "rememberme",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "remember-me"
   },
@@ -1342,6 +1342,13 @@
     "arch": "X64",
     "status": "working",
     "id": "resident-evil-village"
+  },
+  {
+    "name": "Resonance: A Plague Tale Legacy",
+    "slug": "resonance-a-plague-tale-legacy",
+    "arch": "X64",
+    "status": "working",
+    "id": "resonance-a-plague-tale-legacy"
   },
   {
     "name": "Revenge of the Savage Planet",
@@ -1458,7 +1465,7 @@
   {
     "name": "Sonic Generations",
     "slug": "sonicgenerations",
-    "arch": "X64",
+    "arch": "X86",
     "status": "construction",
     "id": "sonic-generations"
   },
@@ -1479,7 +1486,7 @@
   {
     "name": "Spec Ops: The Line",
     "slug": "specopstheline",
-    "arch": "X86",
+    "arch": "X64",
     "status": "working",
     "id": "spec-ops-the-line"
   },
@@ -1626,7 +1633,7 @@
   {
     "name": "Terraria",
     "slug": "terraria",
-    "arch": "X64",
+    "arch": "X86",
     "status": "construction",
     "id": "terraria"
   },
@@ -1731,7 +1738,7 @@
   {
     "name": "Tomb Raider (2013)",
     "slug": "tombraider2013",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "tomb-raider"
   },
@@ -6155,7 +6162,7 @@
   {
     "name": "L.A. Noire",
     "slug": "lanoire",
-    "arch": "X64",
+    "arch": "X86",
     "status": "unknown",
     "id": "l-a-noire"
   },

@@ -389,3 +389,33 @@ test("parseWikiRow extracts query-based Nexus Mods URL", () => {
   assert.ok(row);
   assert.equal(row.nexusUrl, "https://www.nexusmods.com/mods/3?game_id=9856");
 });
+
+test("reconcileRenodxWiki resolves official addon architecture when preferred slug has opposite bitness", () => {
+  const result = reconcileRenodxWiki({
+    rows: [
+      {
+        name: "Assassin's Creed™: Director's Cut Edition (DX10)",
+        status: "working",
+        addonUrl: null,
+        arch: "X64",
+        addonSlug: null,
+        nexusUrl: null,
+        discordUrl: null,
+      },
+    ],
+    existingWiki: [
+      {
+        id: "assassin-s-creed-director-s-cut-edition",
+        name: "Assassin's Creed™: Director's Cut Edition (DX10)",
+        slug: "asscreed1",
+        arch: "X64",
+      },
+    ],
+    overlay: {},
+    officialAssets: new Set(["renodx-asscreed1.addon32"]),
+  });
+
+  assert.equal(result.wikiGames[0].arch, "X86");
+  assert.equal(result.wikiGames[0].slug, "asscreed1");
+  assert.equal(result.stats.official, 1);
+});

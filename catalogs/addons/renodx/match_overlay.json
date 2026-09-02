@@ -1948,6 +1948,13 @@
   "resident-evil-village": {
     "appids": ["1196590"]
   },
+  "resonance-a-plague-tale-legacy": {
+    "external": {
+      "url": "https://www.nexusmods.com/resonanceaplaguetalelegacy/mods/38",
+      "label_key": "renodx.external.nexus"
+    },
+    "appids": ["2713000"]
+  },
   "returnal": {
     "appids": ["1649240"]
   },
