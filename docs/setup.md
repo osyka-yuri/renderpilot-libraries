@@ -5,8 +5,8 @@ RenderPilot Libraries is a Node.js and PowerShell tooling repository. Most valid
 ## Requirements
 
 - Git
-- Node.js 24.19.0 LTS, pinned in [`.node-version`](../.node-version)
-- pnpm 11.23.0, pinned by the `packageManager` field in [`package.json`](../package.json)
+- Node.js 24.20.0 LTS, pinned in [`.node-version`](../.node-version)
+- pnpm 12.3.4, pinned by the `packageManager` field in [`package.json`](../package.json)
 - PowerShell 7 for Windows tooling
 - A supported Windows toolchain when maintaining PE, signature, or Xiph source-build paths
 
@@ -17,7 +17,7 @@ The shared GitHub Actions setup action reads the same version pins used by a loc
 From the repository root:
 
 ```powershell
-npm install --global pnpm@11.23.0
+npm install --global pnpm@12.3.4
 pnpm install --frozen-lockfile
 ```
 

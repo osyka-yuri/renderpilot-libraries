@@ -137,7 +137,7 @@ test("pnpm setup reads its single version from package.json", async () => {
   const packageJson = JSON.parse(
     await readFile(path.join(REPOSITORY_ROOT, "package.json"), "utf8"),
   );
-  assert.equal(packageJson.packageManager, "pnpm@11.23.0");
+  assert.equal(packageJson.packageManager, "pnpm@12.3.4");
 
   const pnpmVersion = packageJson.packageManager.slice("pnpm@".length);
   const localBootstrap = `npm install --global pnpm@${pnpmVersion}`;

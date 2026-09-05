@@ -5,7 +5,7 @@
   <p>RenderPilot Libraries tracks exact upstream releases, verifies installable artifacts, generates deterministic public contracts, and publishes immutable assets for the RenderPilot application.</p>
   <p>
     <a href="https://github.com/osyka-yuri/renderpilot-libraries/actions/workflows/publish.yml"><img src="https://img.shields.io/github/actions/workflow/status/osyka-yuri/renderpilot-libraries/publish.yml?branch=main&style=flat-square&label=Catalog" alt="Catalog workflow status"></a>
-    <img src="https://img.shields.io/badge/Node.js-24.19.0_LTS-5fa04e?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 24.19.0 LTS">
+    <img src="https://img.shields.io/badge/Node.js-24.20.0_LTS-5fa04e?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 24.20.0 LTS">
     <img src="https://img.shields.io/badge/Schema-v1-4a9eff?style=flat-square" alt="Catalog schema v1">
   </p>
   <p>Application code lives in the <a href="https://github.com/osyka-yuri/renderpilot">main RenderPilot repository</a>.</p>
@@ -43,7 +43,7 @@ Every installable file and legal document is content-addressed. A published vend
 The repository pins the latest Node.js LTS release in [`.node-version`](.node-version) and pnpm in [`package.json`](package.json). Install the pinned pnpm version explicitly on a fresh machine. PowerShell 7 and Windows are additionally required for PE inspection, Authenticode verification, and reproducible Xiph builds.
 
 ```powershell
-npm install --global pnpm@11.23.0
+npm install --global pnpm@12.3.4
 pnpm install --frozen-lockfile
 pnpm run check
 ```
