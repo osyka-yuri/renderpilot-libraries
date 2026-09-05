@@ -1724,6 +1724,10 @@
   "one-eyed-likho": {
     "appids": ["2346840"]
   },
+  "onimusha-way-of-the-sword": {
+    "appids": ["2638890"],
+    "slug": "onimusha-wots"
+  },
   "operation-wolf-returns-first-mission": {
     "appids": ["1852650"]
   },

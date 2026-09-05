@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-02T00:00:00Z",
+  "generated_at": "2026-09-05T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -3678,6 +3678,22 @@
           "id": "renodx.external.nexus",
           "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
         }
+      }
+    },
+    {
+      "id": "onimusha-way-of-the-sword",
+      "name": "Onimusha: Way of the Sword",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2638890",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "onimusha-wots"
       }
     },
     {
