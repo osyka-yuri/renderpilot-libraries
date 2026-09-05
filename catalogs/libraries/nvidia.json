@@ -4965,6 +4965,234 @@
         "status": "signed",
         "signed_at": "2026-08-11T20:29:33.0000000Z"
       }
+    },
+    {
+      "artifact_key": "nvngx_dlss_310.9.0.0",
+      "library_id": "nvngx_dlss",
+      "file_name": "nvngx_dlss.dll",
+      "file_version": "310.9.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "07c7fea19a24c75102bf34d1a4a775640ce323a0b2265d4887b331e62486c44f",
+        "size_bytes": 74187376
+      },
+      "transport": {
+        "sha256": "67ec6eb1f1fd9381102e17de1da288e234cc063646b619958fe91bc0a44e0b1b",
+        "size_bytes": 34514075
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-20T18:30:32.000Z"
+      }
+    },
+    {
+      "artifact_key": "nvngx_dlssg_310.9.0.0",
+      "library_id": "nvngx_dlssg",
+      "file_name": "nvngx_dlssg.dll",
+      "file_version": "310.9.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "c64928fdb7c48a57722ea8eef2662171edc323473adea66c29a206a23f1a2bed",
+        "size_bytes": 7460976
+      },
+      "transport": {
+        "sha256": "f40e296e2f8c01d8c9c821f025e6a4fb570fbe03c1f28ac25870b3f98df0586f",
+        "size_bytes": 3442386
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-20T18:21:37.000Z"
+      }
+    },
+    {
+      "artifact_key": "nvngx_dlssd_310.9.0.0",
+      "library_id": "nvngx_dlssd",
+      "file_name": "nvngx_dlssd.dll",
+      "file_version": "310.9.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "8be37e0da7a04852a84e45315f7d231ca59a3c3c71f6b4ea9680e883966b3cbf",
+        "size_bytes": 79669360
+      },
+      "transport": {
+        "sha256": "29dc13ddde819e2c147dd140d40aa355a7e144cd46b7505755844513c9aeaeba",
+        "size_bytes": 23675781
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-24T22:54:33.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_common_2.14.0.0",
+      "library_id": "sl_common",
+      "file_name": "sl.common.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "dc722c16dfcff98d85fb488e2c06c0c458948eab4fbd12f22c523af7fa449a9f",
+        "size_bytes": 843392
+      },
+      "transport": {
+        "sha256": "054c6a54562c88c8d1ea71ef2fb6cb08ed43a27b563fd619db6ebb5f63a69962",
+        "size_bytes": 318222
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:47:01.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_deepdvc_2.14.0.0",
+      "library_id": "sl_deepdvc",
+      "file_name": "sl.deepdvc.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "0e8d31d9d9202e3c0f15f083f9c62ad0fcf7562f049124762ba021cf1aacf225",
+        "size_bytes": 376448
+      },
+      "transport": {
+        "sha256": "fb299464ba1084888d22d77964d456ebcd4a192fa90c5d4de79fb5beb83f63d1",
+        "size_bytes": 147935
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:47:11.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_dlss_d_2.14.0.0",
+      "library_id": "sl_dlss_d",
+      "file_name": "sl.dlss_d.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "2c49f4453f3bd557d7d647e0c25f5ddb5e5f155ad4f9a833b2b99945137c9953",
+        "size_bytes": 437376
+      },
+      "transport": {
+        "sha256": "624946a32ef05c816097aeaa6241fbc9692666d846ead08fbdd0adb5174ce67d",
+        "size_bytes": 166541
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:47:41.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_dlss_g_2.14.0.0",
+      "library_id": "sl_dlss_g",
+      "file_name": "sl.dlss_g.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "73b8a78a275b5a3db58038a4ff701a1fb4049db5c379eab9473a09fa856ba84e",
+        "size_bytes": 636032
+      },
+      "transport": {
+        "sha256": "f08cb059b3d30451478f4efb93776b40ee25d9f798480f3829ea6d7febc667dc",
+        "size_bytes": 241652
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:47:51.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_dlss_2.14.0.0",
+      "library_id": "sl_dlss",
+      "file_name": "sl.dlss.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "e9486745f05bc2a92850e98e2c19b93260c9e2201cff1685f34b09325a12d77f",
+        "size_bytes": 422016
+      },
+      "transport": {
+        "sha256": "929e15ac174a41c62477f6ae03ea0531cec30a37fd8f24b9d8068f878ccca592",
+        "size_bytes": 163937
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:47:31.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_nis_2.14.0.0",
+      "library_id": "sl_nis",
+      "file_name": "sl.nis.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "546f6e927133f041d0009d7c6ddfb96e0909ccb7659b405cdcb53b98c33fedac",
+        "size_bytes": 1155712
+      },
+      "transport": {
+        "sha256": "c9bb29d3cd08b88fb084cae1555f4cf1b30fac7c1030dfe44936a8aaba55e2a8",
+        "size_bytes": 203224
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:48:52.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_nvperf_2.14.0.0",
+      "library_id": "sl_nvperf",
+      "file_name": "sl.nvperf.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "bb76b3026bfb49f3c99dfd70797f3e20d853a2a160e74b30f2c6608428aacf21",
+        "size_bytes": 761472
+      },
+      "transport": {
+        "sha256": "10af1164aa827de57a76638700b5ad08e9992b10fc012296312fffbb6ee32af9",
+        "size_bytes": 288624
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:49:02.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_pcl_2.14.0.0",
+      "library_id": "sl_pcl",
+      "file_name": "sl.pcl.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "fcbfa07bef2581f93148dfc831febf6ce12a3170824a3a99b0861b12558fbcb5",
+        "size_bytes": 360064
+      },
+      "transport": {
+        "sha256": "020ada7cda7cb2d67d3cdbe02fe505225afff184716f0798601b2bf236994ded",
+        "size_bytes": 141659
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:49:12.000Z"
+      }
+    },
+    {
+      "artifact_key": "sl_reflex_2.14.0.0",
+      "library_id": "sl_reflex",
+      "file_name": "sl.reflex.dll",
+      "file_version": "2.14.0.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "50dee3e0d31ff6447ecb92068a8c904b4595c1550e27b647123073fd60b8223f",
+        "size_bytes": 388736
+      },
+      "transport": {
+        "sha256": "67e693e9e2d85a5994937e2d2f54d2a60f77986c845af3d43aada606e8498a46",
+        "size_bytes": 152596
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-08-25T15:49:22.000Z"
+      }
     }
   ],
   "packages": [
@@ -9274,6 +9502,134 @@
           "artifact_key": "nvngx_dlssnr_310.8.0.0",
           "role": "primary",
           "install_as": "nvngx_dlssnr.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlss_310.9.0",
+      "technology": "dlss_super_resolution",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Super Resolution",
+      "release": {
+        "version": "310.9.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlss_310.9.0.0",
+          "role": "primary",
+          "install_as": "nvngx_dlss.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlssg_310.9.0",
+      "technology": "dlss_frame_generation",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Frame Generation",
+      "release": {
+        "version": "310.9.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlssg_310.9.0.0",
+          "role": "primary",
+          "install_as": "nvngx_dlssg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlssd_310.9.0",
+      "technology": "dlss_ray_reconstruction",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Ray Reconstruction",
+      "release": {
+        "version": "310.9.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlssd_310.9.0.0",
+          "role": "primary",
+          "install_as": "nvngx_dlssd.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "streamline.2.14.0.stable",
+      "technology": "nvidia_streamline",
+      "variant": "runtime_bundle",
+      "display_name": "NVIDIA Streamline",
+      "release": {
+        "version": "2.14.0",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "sl_common_2.14.0.0",
+          "role": "primary",
+          "install_as": "sl.common.dll"
+        },
+        {
+          "artifact_key": "sl_deepdvc_2.14.0.0",
+          "role": "sl_deepdvc",
+          "install_as": "sl.deepdvc.dll"
+        },
+        {
+          "artifact_key": "sl_dlss_d_2.14.0.0",
+          "role": "sl_dlss_d",
+          "install_as": "sl.dlss_d.dll"
+        },
+        {
+          "artifact_key": "sl_dlss_g_2.14.0.0",
+          "role": "sl_dlss_g",
+          "install_as": "sl.dlss_g.dll"
+        },
+        {
+          "artifact_key": "sl_dlss_2.14.0.0",
+          "role": "sl_dlss",
+          "install_as": "sl.dlss.dll"
+        },
+        {
+          "artifact_key": "sl_nis_2.14.0.0",
+          "role": "sl_nis",
+          "install_as": "sl.nis.dll"
+        },
+        {
+          "artifact_key": "sl_nvperf_2.14.0.0",
+          "role": "sl_nvperf",
+          "install_as": "sl.nvperf.dll"
+        },
+        {
+          "artifact_key": "sl_pcl_2.14.0.0",
+          "role": "sl_pcl",
+          "install_as": "sl.pcl.dll"
+        },
+        {
+          "artifact_key": "sl_reflex_2.14.0.0",
+          "role": "sl_reflex",
+          "install_as": "sl.reflex.dll"
         }
       ]
     }
