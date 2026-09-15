@@ -4,7 +4,7 @@
     "id": "microsoft",
     "display_name": "Microsoft"
   },
-  "generated_at": "2026-08-12T00:31:18.507Z",
+  "generated_at": "2026-09-14T18:26:21.910Z",
   "legal_documents": [
     {
       "legal_document_id": "license.5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd",
@@ -1906,6 +1906,52 @@
         "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
         "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
         "signed_at": "2026-07-30T18:41:59.687Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:37fa14281a58cc834076971873006feb8a8d25cddc908d1a345bda1b149ffc7d",
+      "library_id": "d3d12_core",
+      "file_name": "D3D12Core.dll",
+      "file_version": "1.619.6",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "37fa14281a58cc834076971873006feb8a8d25cddc908d1a345bda1b149ffc7d",
+        "size_bytes": 5035320
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/5fb68e9f5f106f68aa4de594a28553357ae1d4d1512c81f81194cbfebeb0a5cf.dll.zst",
+        "sha256": "5fb68e9f5f106f68aa4de594a28553357ae1d4d1512c81f81194cbfebeb0a5cf",
+        "size_bytes": 1738206
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+        "signed_at": "2026-09-14T17:18:26.628Z"
+      }
+    },
+    {
+      "artifact_id": "sha256:c9cef93e7f49fc2e7bd939065b5c83e34aba78b1da0fb2afe4f531915079b3a4",
+      "library_id": "d3d12_core",
+      "file_name": "D3D12Core.dll",
+      "file_version": "1.619.6",
+      "architecture": "X86",
+      "dll": {
+        "sha256": "c9cef93e7f49fc2e7bd939065b5c83e34aba78b1da0fb2afe4f531915079b3a4",
+        "size_bytes": 4141888
+      },
+      "transport": {
+        "compression": "zstd",
+        "object_key": "libraries/blobs/sha256/323fec205e068ed318b3a398b42729392102090b16b648aa590e34ae717a8369.dll.zst",
+        "sha256": "323fec205e068ed318b3a398b42729392102090b16b648aa590e34ae717a8369",
+        "size_bytes": 1539760
+      },
+      "signature": {
+        "status": "signed",
+        "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+        "signed_at": "2026-09-14T17:18:20.023Z"
       }
     },
     {
@@ -8373,6 +8419,78 @@
       "members": [
         {
           "artifact_id": "sha256:2191a59baad6367288a7ac325113c3c8fbf3ec44a008d5ad6380145e024affb1",
+          "role": "primary",
+          "install_as": "D3D12Core.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "d3d12_agility.1.619.6.x64",
+      "revision_sha256": "3cf2d4cff558873f44a94755d313cca3037786912acbb1ecca0e43496d723672",
+      "technology": "d3d12_agility",
+      "variant": "runtime",
+      "display_name": "Microsoft D3D12 Agility SDK",
+      "release": {
+        "version": "1.619.6",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64",
+        "compatibility": {
+          "kind": "d3d12_sdk",
+          "version": 619
+        }
+      },
+      "provenance": {
+        "kind": "nuget",
+        "package_id": "Microsoft.Direct3D.D3D12",
+        "version": "1.619.6",
+        "package_sha512": "V7Lh8h7KdHNjYEZZOEofKRaxDWseDIOMgIZduG+bEBUEFHy+mBZRnKD5DDgKLrSweW08mbpgJ8UoIYZWiDiLkw=="
+      },
+      "legal_document_ids": [
+        "license.5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:37fa14281a58cc834076971873006feb8a8d25cddc908d1a345bda1b149ffc7d",
+          "role": "primary",
+          "install_as": "D3D12Core.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "d3d12_agility.1.619.6.x86",
+      "revision_sha256": "207bc8d6bc18474bb513b1ef3bfdf69bad2198abf9012db25f3593723d8fdca7",
+      "technology": "d3d12_agility",
+      "variant": "runtime",
+      "display_name": "Microsoft D3D12 Agility SDK",
+      "release": {
+        "version": "1.619.6",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X86",
+        "compatibility": {
+          "kind": "d3d12_sdk",
+          "version": 619
+        }
+      },
+      "provenance": {
+        "kind": "nuget",
+        "package_id": "Microsoft.Direct3D.D3D12",
+        "version": "1.619.6",
+        "package_sha512": "V7Lh8h7KdHNjYEZZOEofKRaxDWseDIOMgIZduG+bEBUEFHy+mBZRnKD5DDgKLrSweW08mbpgJ8UoIYZWiDiLkw=="
+      },
+      "legal_document_ids": [
+        "license.5239850894610071566f7ecee0b751fde43c862032d92b99d7d0f596b3433ebd"
+      ],
+      "members": [
+        {
+          "artifact_id": "sha256:c9cef93e7f49fc2e7bd939065b5c83e34aba78b1da0fb2afe4f531915079b3a4",
           "role": "primary",
           "install_as": "D3D12Core.dll"
         }
