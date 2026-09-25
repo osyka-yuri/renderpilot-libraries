@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-22T00:00:00Z",
+  "generated_at": "2026-09-25T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -19064,6 +19064,49 @@
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
         }
       ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "gamble-with-your-friends",
+      "name": "Gamble With Your Friends",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3892270",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Use_Swapchain_Proxy",
+            "value": 1
+          },
+          {
+            "key": "Force_Pipeline_Cloning",
+            "value": 1
+          }
+        ]
+      },
       "profile_id": "unity"
     },
     {

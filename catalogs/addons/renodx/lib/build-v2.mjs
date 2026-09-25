@@ -337,6 +337,8 @@ function compileRenoDxConfig(guidance, profile, gameId) {
       else if (name === "Swapchain Proxy" && value === "On") add("Use_Swapchain_Proxy", 1);
       else if (name === "Swapchain Proxy" && value === "Compatibility")
         add("Use_Swapchain_Proxy", 2);
+      else if (name === "Force Pipeline Cloning" && value === "On")
+        add("Force_Pipeline_Cloning", 1);
       else if (name === "Color Grading Preset" && value === "SDR Grading Bypass") {
         add("ColorGradeContrast", 80);
         add("ColorGradeSaturation", 80);

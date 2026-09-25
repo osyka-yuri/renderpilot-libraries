@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-22T00:00:00Z",
+  "generated_at": "2026-09-25T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -11901,6 +11901,22 @@
         {
           "kind": "steam_appid",
           "value": "1920430",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "gamble-with-your-friends",
+      "name": "Gamble With Your Friends",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3892270",
           "tier": 100
         }
       ],

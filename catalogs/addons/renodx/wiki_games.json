@@ -5516,6 +5516,16 @@
     "section": "unity"
   },
   {
+    "name": "Gamble With Your Friends",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "gamble-with-your-friends",
+    "notes": "Enable Swapchain Proxy. Enable Force Pipeline Cloning.",
+    "source_key": "unity:gamble-with-your-friends",
+    "section": "unity"
+  },
+  {
     "name": "Gang Beasts",
     "slug": "unityengine",
     "arch": "X64",

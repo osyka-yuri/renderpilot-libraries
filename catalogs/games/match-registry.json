@@ -8612,6 +8612,20 @@
       ]
     },
     {
+      "id": "gamble-with-your-friends",
+      "rules": [
+        {
+          "id": "steam-3892270",
+          "kind": "steam_appid",
+          "value": "3892270",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:gamble-with-your-friends"
+          }
+        }
+      ]
+    },
+    {
       "id": "gaming-cafe-simulator",
       "rules": [
         {

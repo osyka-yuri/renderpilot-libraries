@@ -2776,6 +2776,14 @@
     "note": "Upgrade R10G10B10A2_TYPELESS"
   },
   {
+    "source_key": "unity:gamble-with-your-friends",
+    "game_id": "gamble-with-your-friends",
+    "title": "Gamble With Your Friends",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Enable Swapchain Proxy. Enable Force Pipeline Cloning."
+  },
+  {
     "source_key": "unity:gatekeeper",
     "game_id": "gatekeeper",
     "title": "Gatekeeper",

@@ -149,6 +149,7 @@ test("v2 schema publishes a closed RenoDX configuration contract", () => {
     { key: "Swapchain_Encoding", value: 1 },
     { key: "Scaling_Offset", value: 8 },
     { key: "ColorGradeContrast", value: 100 },
+    { key: "Force_Pipeline_Cloning", value: 1 },
   ];
   assert.equal(validate(representativeValues), true, JSON.stringify(validate.errors));
 
@@ -163,6 +164,22 @@ test("v2 schema publishes a closed RenoDX configuration contract", () => {
   incompatibleProfile.games[0].profile_id = "ue_extended";
   incompatibleProfile.games[0].renodx_config.settings[0].key = "ForceBorderless";
   assert.equal(validate(incompatibleProfile), false);
+
+  const incompatiblePipelineCloning = structuredClone(accepted);
+  incompatiblePipelineCloning.games[0].profile_id = "ue_extended";
+  incompatiblePipelineCloning.games[0].renodx_config.settings[0] = {
+    key: "Force_Pipeline_Cloning",
+    value: 1,
+  };
+  assert.equal(validate(incompatiblePipelineCloning), false);
+
+  const invalidPipelineCloningValue = structuredClone(accepted);
+  invalidPipelineCloningValue.games[0].profile_id = "unity";
+  invalidPipelineCloningValue.games[0].renodx_config.settings[0] = {
+    key: "Force_Pipeline_Cloning",
+    value: 2,
+  };
+  assert.equal(validate(invalidPipelineCloningValue), false);
 
   const unknownField = structuredClone(accepted);
   unknownField.games[0].renodx_config.settings[0].unsafe = "[renodx]";
@@ -276,7 +293,7 @@ test("structured guidance rejects presentation-code drift", () => {
 test("the checked-in ledger covers every active note and excludes unrelated sections", () => {
   const result = verifyCurationLedger(messages, wikiSource);
   assert.equal(result.entries.length, messages.length);
-  assert.equal(messages.length, 493);
+  assert.equal(messages.length, 494);
   assert.deepEqual(result.source.ignored_sections, ["Deprecated", "Related Mods"]);
   assert.equal(result.entries.filter((entry) => entry.disposition === "pending").length, 9);
   assert.equal(result.source.page_reviews.length, 10);
@@ -564,6 +581,28 @@ test("typed config lowers reviewed resource curation without exposing manual INI
     { key: "Upgrade_B8G8R8A8_TYPELESS", value: 1 },
   ]);
   assert.equal(JSON.stringify(manifest).includes("R8G8R8A8_TYPELESS"), false);
+});
+
+test("Unity swapchain proxy and pipeline cloning guidance lowers to typed INI settings", () => {
+  const gamble = manifest.games.find((game) => game.id === "gamble-with-your-friends");
+  assert.ok(gamble, "gamble-with-your-friends must exist in v2 manifest");
+  assert.equal(gamble.profile_id, "unity");
+  assert.deepEqual(gamble.renodx_config?.settings, [
+    { key: "Use_Swapchain_Proxy", value: 1 },
+    { key: "Force_Pipeline_Cloning", value: 1 },
+  ]);
+  assert.equal(
+    (gamble.guidance ?? []).some((item) => item.kind === "addon_setting"),
+    false,
+  );
+  assert.equal(
+    (gamble.guidance ?? []).some(
+      (item) =>
+        item.fallback_text.includes("Force Pipeline Cloning") ||
+        item.fallback_text.includes("Swapchain Proxy"),
+    ),
+    false,
+  );
 });
 
 test("resolved legacy and dedicated titles retain manually curated caveats", () => {

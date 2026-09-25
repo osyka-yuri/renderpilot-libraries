@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "0db7c969ccbdee38a86055f0a35752a849d8cd23203375ae9c8f4c38a9d4f8cc",
+    "wiki_content_sha256": "cbf675eb2ca9452fcdcc5c6401b828bc6b90c7e726b8e5d0d61faa5c1379ddfe",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "5bec7760d21dafc29ea497fc3804917d94b2185b63a5ab71c783a75c06073bac",
+    "active_message_fingerprint": "4d77cb0d7acb98edb96fa28b3e08fec2d9307509ff7f8b8175127e0c26cc2758",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -3535,6 +3535,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "fa78be19dec9ee2c0f5e05e6a789c743288857e0e5f98e9f8a89e5be6ba5f983",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:gamble-with-your-friends",
+      "game_id": "gamble-with-your-friends",
+      "title": "Gamble With Your Friends",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "b3187a228e0e3b3c96396664c49b5b4d9571a14fe19525009630e1ea9078bc96",
       "disposition": "curated_manual",
       "reason": null
     },

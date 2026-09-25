@@ -18,11 +18,15 @@ import {
 } from "./lib/renodx-translations.mjs";
 import { writeFormattedJsonFile } from "./lib/json.mjs";
 import { buildV2Manifest } from "../catalogs/addons/renodx/lib/build-v2.mjs";
+import { buildManifest } from "../catalogs/addons/renodx/lib/build-manifest.mjs";
+import { createMatchRegistry } from "./lib/match-registry.mjs";
 
 const ROOT = path.resolve(fileURLToPath(import.meta.url), "../..");
-const V1_MANIFEST_PATH = path.join(ROOT, "addons/v1/renodx.json");
 const WIKI_GAMES_PATH = path.join(ROOT, "catalogs/addons/renodx/wiki_games.json");
 const WIKI_MESSAGES_PATH = path.join(ROOT, "catalogs/addons/renodx/wiki_messages.json");
+const CURATED_GAMES_PATH = path.join(ROOT, "catalogs/addons/renodx/curated_games.json");
+const OVERLAY_PATH = path.join(ROOT, "catalogs/addons/renodx/match_overlay.json");
+const MATCH_REGISTRY_PATH = path.join(ROOT, "catalogs/games/match-registry.json");
 const MESSAGES_OUTPUT_PATH = path.join(ROOT, "catalogs/addons/renodx/messages.json");
 
 const LOCALES = Object.freeze([
@@ -145,9 +149,18 @@ export async function buildRenodxMessages(manifest) {
 }
 
 async function main() {
-  const v1Manifest = JSON.parse(await readFile(V1_MANIFEST_PATH, "utf8"));
   const wikiGames = JSON.parse(await readFile(WIKI_GAMES_PATH, "utf8"));
   const wikiMessages = JSON.parse(await readFile(WIKI_MESSAGES_PATH, "utf8"));
+  const curatedGames = JSON.parse(await readFile(CURATED_GAMES_PATH, "utf8"));
+  const overlay = JSON.parse(await readFile(OVERLAY_PATH, "utf8"));
+  const matchRegistry = JSON.parse(await readFile(MATCH_REGISTRY_PATH, "utf8"));
+  const { manifest: v1Manifest } = buildManifest({
+    wiki: wikiGames,
+    curatedGames,
+    overlay,
+    registry: createMatchRegistry(matchRegistry),
+    generatedAt: new Date().toISOString(),
+  });
   const manifest = buildV2Manifest(v1Manifest, { wikiGames, wikiMessages });
   const catalog = await buildRenodxMessages(manifest);
   await writeFormattedJsonFile(MESSAGES_OUTPUT_PATH, catalog);

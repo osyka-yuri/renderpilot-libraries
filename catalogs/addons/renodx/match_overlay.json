@@ -1008,6 +1008,9 @@
   "fumes": {
     "game_target_ids": ["fumes"]
   },
+  "gamble-with-your-friends": {
+    "game_target_ids": ["gamble-with-your-friends"]
+  },
   "gang-beasts": {
     "game_target_ids": ["gang-beasts"]
   },

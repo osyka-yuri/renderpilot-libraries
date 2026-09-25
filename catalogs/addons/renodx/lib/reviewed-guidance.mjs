@@ -1847,6 +1847,16 @@ assign(
   { inheritCommon: true },
 );
 assign(
+  keyList("unity", "gamble-with-your-friends"),
+  [
+    addonSettings([
+      { name: "Swapchain Proxy", value: "On" },
+      { name: "Force Pipeline Cloning", value: "On" },
+    ]),
+  ],
+  { inheritCommon: true },
+);
+assign(
   keyList("unity", "ghost-of-a-tale"),
   [
     addonSetting("Swapchain Proxy", "On", "Enable RenoDX Swapchain Proxy."),

@@ -46,6 +46,7 @@
             "Tonemap_Offset",
             "Blit_Copy_Hack",
             "Use_Swapchain_Proxy",
+            "Force_Pipeline_Cloning",
             "ColorGradeContrast",
             "ColorGradeSaturation",
             "ColorGradeBlowout"
@@ -88,7 +89,12 @@
             "required": ["key"],
             "properties": {
               "key": {
-                "enum": ["ForceBorderless", "Upgrade_UseSCRGB", "Swapchain_Encoding"]
+                "enum": [
+                  "ForceBorderless",
+                  "Upgrade_UseSCRGB",
+                  "Swapchain_Encoding",
+                  "Force_Pipeline_Cloning"
+                ]
               }
             }
           },
@@ -356,6 +362,19 @@
                 "contains": {
                   "required": ["key"],
                   "properties": { "key": { "const": "ColorGradeBlowout" } }
+                },
+                "minContains": 2
+              }
+            }
+          }
+        },
+        {
+          "not": {
+            "properties": {
+              "settings": {
+                "contains": {
+                  "required": ["key"],
+                  "properties": { "key": { "const": "Force_Pipeline_Cloning" } }
                 },
                 "minContains": 2
               }
@@ -641,7 +660,8 @@
                               "Scaling_Offset",
                               "Tonemap_Offset",
                               "Blit_Copy_Hack",
-                              "Use_Swapchain_Proxy"
+                              "Use_Swapchain_Proxy",
+                              "Force_Pipeline_Cloning"
                             ]
                           }
                         }
