@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "source": "optiscaler-wiki-compatibility-list",
-  "snapshot_revision": "2026-09-23",
-  "snapshot_sha256": "fffae60096d1c975cd9c93870e207a33bfd6c7c475b32323689e4f256d0493f8",
+  "snapshot_revision": "2026-09-25",
+  "snapshot_sha256": "3d45f35a349fbdb69e45b3000009f97acf11068cc752336c77716a276c44a6d6",
   "rows": [
     {
       "source_key": "main:0001",
@@ -1723,9 +1723,9 @@
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "optipatcher_supported": false,
-      "note": "Check Wiki entry for more info, DLSS input also „works“, but breaks GUI, to fix GUI try enabling options under Root Signatures tab (specifically Restore Compute Root Signature, reported by a user)",
-      "row_fingerprint": "7cda7988836e7d851b1f4b9584178de3fdd973d0bffa4a6a13305ba96c4cd72c",
-      "note_fingerprint": "5bb0d578ff7f481b16f2e5ad3c05681476d5804b6afe3ac9a1c7feab190c8690"
+      "note": "Check Wiki entry for more info",
+      "row_fingerprint": "f628b2210c5070117758d97d5e7a2779a6b158ade269b0d2ebbfa6c7454cb5f5",
+      "note_fingerprint": "bfcee663aa4d7ee20a059e1943ee2246eae4411a0965dcdbbfe5e7354e358e2f"
     },
     {
       "source_key": "main:0164",
@@ -7194,6 +7194,17 @@
       "note": "Requires using a DLSS mod and carefully reading the compatibility entry",
       "row_fingerprint": "a6e6396a743bd76e16e54d5d9dc02218a41898cc2edaba2e7c094f910b37fb83",
       "note_fingerprint": "ad32f7941a3400f2c70150b4358ddf7daea570ae843af0517fd265e8c0a66f77"
+    },
+    {
+      "source_key": "upscaler_mods:0018",
+      "section": "upscaler_mods",
+      "title": "Total War: WARHAMMER III",
+      "status": "working",
+      "declared_inputs": ["dlss2_plus"],
+      "optipatcher_supported": false,
+      "note": "Requires using Warhammer3DLSS mod and carefully reading the compatibility entry",
+      "row_fingerprint": "45f792ab138b81454ab799cbac57996799b3d201c69f9cbcc73dfbaab9c10089",
+      "note_fingerprint": "24d7d76adaad63922a49fb1fcc6c9b12e67722055b52793549e4af03ca952f64"
     },
     {
       "source_key": "luma_unreal:0001",

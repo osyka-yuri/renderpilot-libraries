@@ -2480,6 +2480,22 @@
         "zh-Hans": "此游戏需要 REFramework（pd-upscaler 分支）和 PDPerfPlugin 才能运行。",
         "zh-Hant": "此遊戲需要 REFramework（pd-upscaler 分支）和 PDPerfPlugin 才能運作。"
       }
+    },
+    {
+      "id": "optiscaler-total-war-warhammer-3-warhammer3dlss-mod",
+      "fallback_text": "The Warhammer3DLSS mod is required for this game to work with OptiScaler.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Für dieses Spiel ist die Mod Warhammer3DLSS erforderlich, damit OptiScaler funktioniert.",
+        "es": "Este juego requiere el mod Warhammer3DLSS para funcionar con OptiScaler.",
+        "fr": "Le mod Warhammer3DLSS est requis pour que ce jeu fonctionne avec OptiScaler.",
+        "ja": "このゲームで OptiScaler を動作させるには、Warhammer3DLSS MOD が必要です。",
+        "pt-BR": "O mod Warhammer3DLSS é necessário para que este jogo funcione com o OptiScaler.",
+        "ru": "Для работы OptiScaler в этой игре требуется мод Warhammer3DLSS.",
+        "zh-Hans": "此游戏需要 Warhammer3DLSS 模组才能与 OptiScaler 配合使用。",
+        "zh-Hant": "此遊戲需要 Warhammer3DLSS 模組才能與 OptiScaler 配合使用。"
+      }
     }
   ]
 }

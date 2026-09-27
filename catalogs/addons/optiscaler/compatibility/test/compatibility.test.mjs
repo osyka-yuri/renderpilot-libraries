@@ -13,11 +13,11 @@ import {
 import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
-const EXPECTED_PUBLISHED_ENTRY_COUNT = 689;
+const EXPECTED_PUBLISHED_ENTRY_COUNT = 690;
 const CURRENT_WIKI_SNAPSHOT = {
-  revision: "2026-09-23",
-  sha256: "fffae60096d1c975cd9c93870e207a33bfd6c7c475b32323689e4f256d0493f8",
-  rows: 705,
+  revision: "2026-09-25",
+  sha256: "3d45f35a349fbdb69e45b3000009f97acf11068cc752336c77716a276c44a6d6",
+  rows: 706,
 };
 const SHIFTED_MAIN_SOURCE_KEYS = Array.from(
   { length: 175 },
@@ -111,6 +111,13 @@ const EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY = [
     messageId: "optiscaler-ghost-recon-wildlands-dlss-mod",
     fallbackText:
       "A third-party DLSS mod is required for this game to work with OptiScaler.",
+  },
+  {
+    id: "total-war-warhammer-3",
+    sourceKey: "upscaler_mods:0018",
+    messageId: "optiscaler-total-war-warhammer-3-warhammer3dlss-mod",
+    fallbackText:
+      "The Warhammer3DLSS mod is required for this game to work with OptiScaler.",
   },
 ];
 const GENERIC_PENDING_IDENTITY_REASON = "An exact runtime identity has not been curated.";
@@ -1115,7 +1122,7 @@ test("upscaler mods external requirements preserve exact user guidance messages"
     messageContract.messages.map((message) => [message.id, message]),
   );
 
-  assert.equal(EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY.length, 5);
+  assert.equal(EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY.length, 6);
   for (const expected of EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY) {
     const entry = entriesById.get(expected.id);
     assert.deepEqual(entry?.source_ref, expected.sourceKey);

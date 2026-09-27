@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-24.1",
+  "revision": "2026-09-27.1",
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
-    "snapshot_revision": "2026-09-23",
-    "snapshot_sha256": "fffae60096d1c975cd9c93870e207a33bfd6c7c475b32323689e4f256d0493f8"
+    "snapshot_revision": "2026-09-25",
+    "snapshot_sha256": "3d45f35a349fbdb69e45b3000009f97acf11068cc752336c77716a276c44a6d6"
   },
   "entries": [
     {
@@ -16340,6 +16340,45 @@
           "ini_overrides": [],
           "restricted_modules": [],
           "optipatcher": "supported",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "total-war-warhammer-3",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "1142710"
+        },
+        {
+          "kind": "exe_name",
+          "value": "twmm.exe"
+        },
+        {
+          "kind": "exe_name",
+          "value": "Warhammer3.exe"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus"],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-total-war-warhammer-3-warhammer3dlss-mod",
+            "fallback_text": "The Warhammer3DLSS mod is required for this game to work with OptiScaler."
+          }
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
           "prerequisite": "none"
         }
       ]

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-24.1",
+  "revision": "2026-09-27.1",
   "messages": [
     {
       "id": "optiscaler-1666-amsterdam-fsr4-color-space",
@@ -869,6 +869,12 @@
     {
       "id": "optiscaler-tormented-souls-2-dx11",
       "fallback_text": "Use the default DirectX 11 mode. Forcing DirectX 12 with -dx12 crashes at startup.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
+      "id": "optiscaler-total-war-warhammer-3-warhammer3dlss-mod",
+      "fallback_text": "The Warhammer3DLSS mod is required for this game to work with OptiScaler.",
       "guidance_kind": "compatibility",
       "context": "compatibility"
     },

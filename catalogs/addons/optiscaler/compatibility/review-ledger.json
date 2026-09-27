@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_sha256": "fffae60096d1c975cd9c93870e207a33bfd6c7c475b32323689e4f256d0493f8",
+  "snapshot_sha256": "3d45f35a349fbdb69e45b3000009f97acf11068cc752336c77716a276c44a6d6",
   "rows": [
     {
       "source_key": "luma_unreal:0001",
@@ -2525,17 +2525,17 @@
     },
     {
       "source_key": "main:0163",
-      "row_fingerprint": "7cda7988836e7d851b1f4b9584178de3fdd973d0bffa4a6a13305ba96c4cd72c",
+      "row_fingerprint": "f628b2210c5070117758d97d5e7a2779a6b158ade269b0d2ebbfa6c7454cb5f5",
       "disposition": {
         "kind": "published",
         "entry_id": "dragons-dogma-ii"
       },
       "notes": [
         {
-          "fingerprint": "5bb0d578ff7f481b16f2e5ad3c05681476d5804b6afe3ac9a1c7feab190c8690",
+          "fingerprint": "bfcee663aa4d7ee20a059e1943ee2246eae4411a0965dcdbbfe5e7354e358e2f",
           "disposition": {
             "kind": "omitted",
-            "reason": "The unbounded external wiki reference and user-reported setting do not form a complete policy."
+            "reason": "The generic external wiki reference does not provide a bounded policy."
           }
         }
       ]
@@ -9533,6 +9533,23 @@
           "disposition": {
             "kind": "guidance",
             "message_ids": ["optiscaler-ghost-recon-wildlands-dlss-mod"]
+          }
+        }
+      ]
+    },
+    {
+      "source_key": "upscaler_mods:0018",
+      "row_fingerprint": "45f792ab138b81454ab799cbac57996799b3d201c69f9cbcc73dfbaab9c10089",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "total-war-warhammer-3"
+      },
+      "notes": [
+        {
+          "fingerprint": "24d7d76adaad63922a49fb1fcc6c9b12e67722055b52793549e4af03ca952f64",
+          "disposition": {
+            "kind": "guidance",
+            "message_ids": ["optiscaler-total-war-warhammer-3-warhammer3dlss-mod"]
           }
         }
       ]
