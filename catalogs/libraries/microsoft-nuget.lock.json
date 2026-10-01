@@ -6787,6 +6787,111 @@
     {
       "product": "dxc",
       "package_id": "Microsoft.Direct3D.DXC",
+      "package_version": "1.9.2609.5",
+      "package_sha512": "gV/8G+1EOTpuiDaIBe53sB75lABIcZrXWqUGAvNSNg6qW8u+kP9CVM5nA0MbUkdP8N5CiUU/BEPTRXR2AL6r4w==",
+      "published_at": "2026-09-29T16:58:30.747Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.9.2609.5",
+          "dll_sha256": "0689e2fee0a1c9df8662a59680469f24e2a3ad7ce6bbbcc9284f7a83172bfc59",
+          "dll_size_bytes": 22274872,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-09-28T07:26:36.878Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/ba340d55a96d06d12fba6098a6cfae5f375dcc6eaa92503dfbf0313c72b88443.dll.zst",
+            "zst_sha256": "ba340d55a96d06d12fba6098a6cfae5f375dcc6eaa92503dfbf0313c72b88443",
+            "zst_size_bytes": 8269303,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.9.2609.5",
+          "dll_sha256": "64be2368211d257a038a7d4ea6bb3e24c878eb8d588c7b8414fccf759b69c2ac",
+          "dll_size_bytes": 1995584,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-09-28T07:28:41.390Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/c2e8fe214a8c81d62b8a4d180b8f647de5788e0ccc8e07e628f878660cfd7de1.dll.zst",
+            "zst_sha256": "c2e8fe214a8c81d62b8a4d180b8f647de5788e0ccc8e07e628f878660cfd7de1",
+            "zst_size_bytes": 837620,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxcompiler.dll",
+          "library_id": "dxcompiler",
+          "file_name": "dxcompiler.dll",
+          "pe_version": "1.9.2609.5",
+          "dll_sha256": "691b2578c2ef13aaaa41b543d1b6019b1f0ebfcef3b9568d78ce2dbaa359faf7",
+          "dll_size_bytes": 19513696,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-09-28T07:23:47.069Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/7608f9256666ce08d93e744394216daf04692c553d207ffae68a855686f328df.dll.zst",
+            "zst_sha256": "7608f9256666ce08d93e744394216daf04692c553d207ffae68a855686f328df",
+            "zst_size_bytes": 7444710,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/x86/dxil.dll",
+          "library_id": "dxil",
+          "file_name": "dxil.dll",
+          "pe_version": "1.9.2609.5",
+          "dll_sha256": "ebf7f9dabeb6d80a167a5b7cab9275573f061afd7b86a90bf5c579d58f9d08dd",
+          "dll_size_bytes": 1735472,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-09-28T07:25:10.539Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/1e60fa9be445724948a05382abbb856cb4491257c4daf33444481c51a2efa9fb.dll.zst",
+            "zst_sha256": "1e60fa9be445724948a05382abbb856cb4491257c4daf33444481c51a2efa9fb",
+            "zst_size_bytes": 765556,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft DirectX Shader Compiler License",
+          "format": "text",
+          "file_name": "LICENSE-LLVM.txt",
+          "package_path": "LICENSE-LLVM.txt",
+          "sha256": "729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f",
+          "size_bytes": 1979,
+          "object_key": "libraries/legal/sha256/729615317e28dd03907e46f0fc3b5e88f7853cee61d1a1471d2749335516b46f.txt"
+        }
+      ]
+    },
+    {
+      "product": "dxc",
+      "package_id": "Microsoft.Direct3D.DXC",
       "package_version": "1.10.2605.2-preview",
       "package_sha512": "nF9bT2hQ3YRPBJ90zQ3/TqVTsafj8uopt7x15u6Qv+lEMYKr4/XmpC+qty8PWtk+9RugSbuJH+RbSOzrTLYtpw==",
       "published_at": "2026-04-22T23:00:28.137Z",
