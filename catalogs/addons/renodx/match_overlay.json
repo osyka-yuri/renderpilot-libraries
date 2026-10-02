@@ -537,6 +537,9 @@
   "content-warning": {
     "game_target_ids": ["content-warning"]
   },
+  "control-resonant": {
+    "game_target_ids": ["control-ultimate-edition"]
+  },
   "convergence-a-league-of-legends-story": {
     "game_target_ids": ["convergence-a-league-of-legends-story"]
   },
@@ -1240,6 +1243,9 @@
   },
   "hyper-light-breaker": {
     "game_target_ids": ["hyper-light-breaker"]
+  },
+  "i-know-a-guy-shady-life-simulator": {
+    "game_target_ids": ["i-know-a-guy-shady-life-simulator"]
   },
   "icey": {
     "game_target_ids": ["icey"]

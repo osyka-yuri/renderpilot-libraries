@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-25T00:00:00Z",
+  "generated_at": "2026-10-02T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -1162,6 +1162,27 @@
       "addon": {
         "slug": "codevein2",
         "source": "https://marat569.github.io/renodx/renodx-codevein2.addon64"
+      }
+    },
+    {
+      "id": "control-resonant",
+      "name": "CONTROL Resonant",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "870780",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "Control.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "controlresonant"
       }
     },
     {
@@ -20230,6 +20251,45 @@
           },
           {
             "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
+      "id": "i-know-a-guy-shady-life-simulator",
+      "name": "I Know a Guy: Shady Life Simulator",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4173620",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Upgrade_R11G11B10_FLOAT",
             "value": 1
           }
         ]

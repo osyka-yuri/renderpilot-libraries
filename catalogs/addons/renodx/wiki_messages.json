@@ -2920,6 +2920,14 @@
     "note": "Enable Swapchain Proxy, Encoding: Gamma"
   },
   {
+    "source_key": "unity:i-know-a-guy-shady-life-simulator",
+    "game_id": "i-know-a-guy-shady-life-simulator",
+    "title": "I Know a Guy: Shady Life Simulator",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Upgrade R11G11B10_FLOAT"
+  },
+  {
     "source_key": "unity:incision",
     "game_id": "incision",
     "title": "INCISION",

@@ -10353,6 +10353,20 @@
       ]
     },
     {
+      "id": "i-know-a-guy-shady-life-simulator",
+      "rules": [
+        {
+          "id": "steam-4173620",
+          "kind": "steam_appid",
+          "value": "4173620",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:i-know-a-guy-shady-life-simulator"
+          }
+        }
+      ]
+    },
+    {
       "id": "icarus",
       "rules": [
         {

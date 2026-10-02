@@ -378,6 +378,13 @@
     "id": "code-vein-ii"
   },
   {
+    "name": "CONTROL Resonant",
+    "slug": "controlresonant",
+    "arch": "X64",
+    "status": "working",
+    "id": "control-resonant"
+  },
+  {
     "name": "Crimson Desert",
     "slug": "crimsondesert",
     "arch": "X64",
@@ -5811,6 +5818,16 @@
     "id": "icey",
     "notes": "Enable Swapchain Proxy, Encoding: Gamma",
     "source_key": "unity:icey",
+    "section": "unity"
+  },
+  {
+    "name": "I Know a Guy: Shady Life Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "i-know-a-guy-shady-life-simulator",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:i-know-a-guy-shady-life-simulator",
     "section": "unity"
   },
   {

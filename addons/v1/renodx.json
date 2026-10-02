@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-25T00:00:00Z",
+  "generated_at": "2026-10-02T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -1124,6 +1124,27 @@
       "addon": {
         "slug": "codevein2",
         "source": "https://marat569.github.io/renodx/renodx-codevein2.addon64"
+      }
+    },
+    {
+      "id": "control-resonant",
+      "name": "CONTROL Resonant",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "870780",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "Control.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "controlresonant"
       }
     },
     {
@@ -12434,6 +12455,22 @@
         {
           "kind": "steam_appid",
           "value": "553640",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "i-know-a-guy-shady-life-simulator",
+      "name": "I Know a Guy: Shady Life Simulator",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4173620",
           "tier": 100
         }
       ],

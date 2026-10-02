@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "cbf675eb2ca9452fcdcc5c6401b828bc6b90c7e726b8e5d0d61faa5c1379ddfe",
+    "wiki_content_sha256": "47cdfab50c7d57fa6965fcc3531c339c5983c8167da6e74a89a99d3c790fc7d9",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "4d77cb0d7acb98edb96fa28b3e08fec2d9307509ff7f8b8175127e0c26cc2758",
+    "active_message_fingerprint": "dd33c0781005368ea9857e72242bfa55628b7fa0100610972cceb40440e113d9",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -3715,6 +3715,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "e98d03a4af757fb20003edfb04e4bbe930ea83d507bfc467a424ce8d48a3f5dc",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:i-know-a-guy-shady-life-simulator",
+      "game_id": "i-know-a-guy-shady-life-simulator",
+      "title": "I Know a Guy: Shady Life Simulator",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
     },

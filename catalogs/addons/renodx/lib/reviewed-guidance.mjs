@@ -1883,7 +1883,7 @@ assign(
   { inheritCommon: true },
 );
 assign(
-  keyList("unity", "have-a-nice-death sektori"),
+  keyList("unity", "have-a-nice-death i-know-a-guy-shady-life-simulator sektori"),
   [
     addonSetting(
       "R11G11B10_FLOAT",
