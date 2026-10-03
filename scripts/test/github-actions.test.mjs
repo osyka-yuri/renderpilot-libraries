@@ -141,7 +141,7 @@ test("pnpm setup reads its single version from package.json and pins Node.js run
   );
   assert.equal(
     packageJson.packageManager,
-    "pnpm@12.4.1+sha512-LoHjmdc/6DkNqyXgaqeIq3pZCCSNL1o3D4K0gRR6ano2e/gEj5pv22Rg8hpm8FQt7bi5TKLIcjWWdBkgsWVtTA==",
+    "pnpm@12.8.1+sha512-9kupB1B/XOr+BsjTjmBS0BeURFgOwSed3Vv8EctIqoomRLZlmOB+dh2oSHKp/FfV+QK4f6SdAkGY1VhhKqu+RQ==",
   );
 
   const pnpmVersion = packageJson.packageManager.slice("pnpm@".length).replace(/\+.*/u, "");

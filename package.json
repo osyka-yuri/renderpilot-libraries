@@ -2,11 +2,11 @@
   "name": "renderpilot-libraries-tools",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@12.4.1+sha512-LoHjmdc/6DkNqyXgaqeIq3pZCCSNL1o3D4K0gRR6ano2e/gEj5pv22Rg8hpm8FQt7bi5TKLIcjWWdBkgsWVtTA==",
+  "packageManager": "pnpm@12.8.1+sha512-9kupB1B/XOr+BsjTjmBS0BeURFgOwSed3Vv8EctIqoomRLZlmOB+dh2oSHKp/FfV+QK4f6SdAkGY1VhhKqu+RQ==",
   "type": "module",
   "description": "Validation and Cloudflare R2 publishing tooling for the RenderPilot libraries catalog.",
   "engines": {
-    "node": ">=24.20.0"
+    "node": ">=24.21.0"
   },
   "scripts": {
     "check": "pnpm run format:check && pnpm run docs:check && pnpm run validate && pnpm run validate:microsoft && pnpm run validate:github && pnpm run validate:xiph && pnpm run check:all-generated && pnpm run test:addons && pnpm run test:scripts && pnpm run sync:renodx-wiki:check && pnpm run sync:luma-wiki:check && pnpm run sync:optiscaler-wiki:check && pnpm run check:slugs",
@@ -92,13 +92,13 @@
     "publish:json:dry-run": "node scripts/libraries.mjs publish --json-only --dry-run"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1131.0",
+    "@aws-sdk/client-s3": "^3.1145.0",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
-    "fast-xml-parser": "^5.11.1"
+    "fast-xml-parser": "^5.11.2"
   },
   "devDependencies": {
-    "markdownlint-cli2": "0.23.2",
-    "prettier": "^3.9.6"
+    "markdownlint-cli2": "0.23.3",
+    "prettier": "^3.9.9"
   }
 }
