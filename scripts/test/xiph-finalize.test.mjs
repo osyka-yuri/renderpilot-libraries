@@ -504,6 +504,23 @@ test("asset persistence failure leaves JSON untouched and permits only orphan bl
   }
 });
 
+test("finalizer defaults to Zstandard compression level 20 for real DLLs", async () => {
+  const fixture = await createFixture();
+  try {
+    const result = await finalizeXiphSource({
+      ...fixture.paths,
+      now: () => new Date(FIXED_TIME),
+      persistObject: async () => {},
+    });
+    assert.equal(result.pair.builds[0].artifacts[0].transport.compression_level, 20);
+    assert.ok(
+      result.pair.builds[0].artifacts.every((a) => a.transport.compression_level === 20),
+    );
+  } finally {
+    await fixture.cleanup();
+  }
+});
+
 async function createFixture({
   pairTuples = ["1.0|1.0"],
   initialPairIndex = 0,

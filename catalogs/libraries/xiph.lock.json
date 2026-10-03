@@ -4,7 +4,7 @@
     {
       "vorbis_version": "1.3.7",
       "ogg_version": "1.3.6",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -507,7 +507,7 @@
     {
       "vorbis_version": "1.3.6",
       "ogg_version": "1.3.5",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -1010,7 +1010,7 @@
     {
       "vorbis_version": "1.3.5",
       "ogg_version": "1.3.4",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -1513,7 +1513,7 @@
     {
       "vorbis_version": "1.3.4",
       "ogg_version": "1.3.3",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -2016,7 +2016,7 @@
     {
       "vorbis_version": "1.3.3",
       "ogg_version": "1.3.2",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -2527,7 +2527,7 @@
     {
       "vorbis_version": "1.3.2",
       "ogg_version": "1.3.1",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -3038,7 +3038,7 @@
     {
       "vorbis_version": "1.3.1",
       "ogg_version": "1.3.0",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -3549,7 +3549,7 @@
     {
       "vorbis_version": "1.2.3",
       "ogg_version": "1.2.2",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -4067,7 +4067,7 @@
     {
       "vorbis_version": "1.2.2",
       "ogg_version": "1.2.1",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -4578,7 +4578,7 @@
     {
       "vorbis_version": "1.2.0",
       "ogg_version": "1.2.0",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -5096,7 +5096,7 @@
     {
       "vorbis_version": "1.1.2",
       "ogg_version": "1.1.4",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -5614,7 +5614,7 @@
     {
       "vorbis_version": "1.1.1",
       "ogg_version": "1.1.3",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -6132,7 +6132,7 @@
     {
       "vorbis_version": "1.1.0",
       "ogg_version": "1.1.2",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -6650,7 +6650,7 @@
     {
       "vorbis_version": "1.0.1",
       "ogg_version": "1.1.1",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -7168,7 +7168,7 @@
     {
       "vorbis_version": "1.0",
       "ogg_version": "1.1",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",
@@ -7686,7 +7686,7 @@
     {
       "vorbis_version": "1.0",
       "ogg_version": "1.0",
-      "build_revision": 1,
+      "build_revision": 2,
       "sources": {
         "ogg": {
           "repository": "xiph/ogg",

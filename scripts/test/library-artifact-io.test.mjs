@@ -8,6 +8,7 @@ import { zstdDecompress } from "node:zlib";
 
 import {
   CANONICAL_ZSTD_CHECKSUM_FLAG,
+  CANONICAL_ZSTD_COMPRESSION_LEVEL,
   CANONICAL_ZSTD_VERSION,
   assertCanonicalZstdRuntime,
   canonicalPeVersion,
@@ -20,6 +21,7 @@ const zstdDecompressAsync = promisify(zstdDecompress);
 test("DLL compression requires the reviewed Zstandard runtime", () => {
   assert.equal(CANONICAL_ZSTD_VERSION, "1.5.7");
   assert.equal(CANONICAL_ZSTD_CHECKSUM_FLAG, 1);
+  assert.equal(CANONICAL_ZSTD_COMPRESSION_LEVEL, 20);
   assert.doesNotThrow(() => assertCanonicalZstdRuntime());
   assert.throws(
     () => assertCanonicalZstdRuntime("1.5.8"),

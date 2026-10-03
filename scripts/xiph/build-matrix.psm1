@@ -350,7 +350,7 @@ function Assert-XiphBuildRevision {
         [string] $Context
     )
 
-    if ($BuildRevision -isnot [int] -or $BuildRevision -lt 1) {
+    if (-not ($BuildRevision -is [int] -or $BuildRevision -is [int64]) -or $BuildRevision -lt 1 -or $BuildRevision -gt [int]::MaxValue) {
         throw "$Context build_revision must be a positive integer"
     }
 }

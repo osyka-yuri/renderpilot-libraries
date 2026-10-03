@@ -21,6 +21,7 @@ const AUTHENTICODE_MODES = new Set(["RequireSigned", "AllowUnsigned"]);
 const MAX_LOCKED_TIMESTAMP_ROUNDING_DRIFT_MS = 1;
 export const CANONICAL_ZSTD_VERSION = "1.5.7";
 export const CANONICAL_ZSTD_CHECKSUM_FLAG = 1;
+export const CANONICAL_ZSTD_COMPRESSION_LEVEL = 20;
 
 export function assertCanonicalZstdRuntime(version = process.versions.zstd) {
   if (version !== CANONICAL_ZSTD_VERSION) {
@@ -64,7 +65,7 @@ export async function persistCompressedDll(
   dll,
   {
     cdnDirectory = resolveRepoPath("cdn"),
-    compressionLevel = 12,
+    compressionLevel = CANONICAL_ZSTD_COMPRESSION_LEVEL,
     expectedTransport = null,
   } = {},
 ) {
@@ -78,7 +79,7 @@ export async function persistCompressedDll(
 
 export async function prepareCompressedDll(
   dll,
-  { compressionLevel = 12, expectedTransport = null } = {},
+  { compressionLevel = CANONICAL_ZSTD_COMPRESSION_LEVEL, expectedTransport = null } = {},
 ) {
   if (!Buffer.isBuffer(dll) || dll.length === 0) {
     throw new Error("DLL payload must be a non-empty Buffer");
