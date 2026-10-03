@@ -82,7 +82,8 @@
     "game_target_ids": ["akiba-s-trip-hellbound-debriefed"]
   },
   "alice-madness-returns": {
-    "game_target_ids": ["alice-madness-returns"]
+    "game_target_ids": ["alice-madness-returns"],
+    "download_url": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-alicemadnessreturns.addon32"
   },
   "alien-isolation": {
     "game_target_ids": ["alien-isolation"]
@@ -414,6 +415,7 @@
     "game_target_ids": ["boomeroad"]
   },
   "borderlands-2-the-pre-sequel": {
+    "download_url": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-borderlands2.addon32",
     "game_target_ids": ["borderlands-2", "borderlands-the-pre-sequel"]
   },
   "borderlands-3": {
@@ -480,7 +482,8 @@
     "game_target_ids": ["chernobylite"]
   },
   "child-of-light": {
-    "game_target_ids": ["child-of-light"]
+    "game_target_ids": ["child-of-light"],
+    "download_url": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-childoflight.addon32"
   },
   "children-of-morta": {
     "game_target_ids": ["children-of-morta"]
@@ -1944,7 +1947,8 @@
     "game_target_ids": ["reka"]
   },
   "remember-me": {
-    "game_target_ids": ["remember-me"]
+    "game_target_ids": ["remember-me"],
+    "download_url": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-rememberme.addon32"
   },
   "remnant-2": {
     "game_target_ids": ["remnant-2"]
@@ -2209,7 +2213,8 @@
     "game_target_ids": ["spark-the-electric-jester-3"]
   },
   "spec-ops-the-line": {
-    "game_target_ids": ["spec-ops-the-line"]
+    "game_target_ids": ["spec-ops-the-line"],
+    "download_url": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-specopstheline.addon32"
   },
   "speedrunners-2-king-of-speed-demo": {
     "game_target_ids": ["speedrunners-2-king-of-speed-demo"]

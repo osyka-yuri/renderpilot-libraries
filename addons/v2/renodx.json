@@ -84,7 +84,7 @@
     {
       "id": "alice-madness-returns",
       "name": "Alice: Madness Returns",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -99,7 +99,8 @@
         }
       ],
       "addon": {
-        "slug": "alicemadnessreturns"
+        "slug": "alicemadnessreturns",
+        "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-alicemadnessreturns.addon32"
       }
     },
     {
@@ -953,7 +954,7 @@
     {
       "id": "borderlands-2",
       "name": "Borderlands 2 & The Pre-Sequel",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -963,13 +964,14 @@
         }
       ],
       "addon": {
-        "slug": "borderlands2"
+        "slug": "borderlands2",
+        "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-borderlands2.addon32"
       }
     },
     {
       "id": "borderlands-the-pre-sequel",
       "name": "Borderlands 2 & The Pre-Sequel",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -979,7 +981,8 @@
         }
       ],
       "addon": {
-        "slug": "borderlands2"
+        "slug": "borderlands2",
+        "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-borderlands2.addon32"
       }
     },
     {
@@ -1053,7 +1056,7 @@
     {
       "id": "child-of-light",
       "name": "Child of Light",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -1068,7 +1071,8 @@
         }
       ],
       "addon": {
-        "slug": "childoflight"
+        "slug": "childoflight",
+        "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-childoflight.addon32"
       }
     },
     {
@@ -4126,7 +4130,7 @@
     {
       "id": "remember-me",
       "name": "Remember Me",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -4141,7 +4145,8 @@
         }
       ],
       "addon": {
-        "slug": "rememberme"
+        "slug": "rememberme",
+        "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-rememberme.addon32"
       }
     },
     {
@@ -4746,7 +4751,7 @@
     {
       "id": "spec-ops-the-line",
       "name": "Spec Ops: The Line",
-      "architecture": "X64",
+      "architecture": "X86",
       "status": "working",
       "match": [
         {
@@ -4761,7 +4766,8 @@
         }
       ],
       "addon": {
-        "slug": "specopstheline"
+        "slug": "specopstheline",
+        "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-specopstheline.addon32"
       }
     },
     {

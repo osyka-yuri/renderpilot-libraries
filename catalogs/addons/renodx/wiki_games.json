@@ -30,7 +30,7 @@
   {
     "name": "Alice: Madness Returns",
     "slug": "alicemadnessreturns",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "alice-madness-returns",
     "notes": "Check the mod's thread or the nexus page for Notes.",
@@ -311,7 +311,7 @@
   {
     "name": "Borderlands 2 & The Pre-Sequel",
     "slug": "borderlands2",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "borderlands-2-the-pre-sequel",
     "notes": "Check the mod's thread or the nexus page for Notes.",
@@ -341,7 +341,7 @@
   {
     "name": "Child of Light",
     "slug": "childoflight",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "child-of-light",
     "notes": "Check the mod's thread or the nexus page for Notes.",
@@ -1359,7 +1359,7 @@
   {
     "name": "Remember Me",
     "slug": "rememberme",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "remember-me",
     "notes": "Check the mod's thread or the nexus page for Notes.",
@@ -1554,7 +1554,7 @@
   {
     "name": "Spec Ops: The Line",
     "slug": "specopstheline",
-    "arch": "X64",
+    "arch": "X86",
     "status": "working",
     "id": "spec-ops-the-line",
     "notes": "Check the mod's thread or the nexus page for Notes.",

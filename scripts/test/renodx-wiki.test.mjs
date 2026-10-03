@@ -488,6 +488,72 @@ test("reconcileRenodxWiki resolves official addon architecture when preferred sl
   assert.equal(result.stats.official, 1);
 });
 
+test("reconcileRenodxWiki preserves explicit third-party addon when only opposite-arch official asset exists", () => {
+  const gameId = "borderlands-2-the-pre-sequel";
+  const addonUrl =
+    "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-borderlands2.addon32";
+  const row = parseWikiRow(
+    ["Borderlands 2 & The Pre-Sequel", "✅", addonUrl, ""],
+    { nameIndex: 0, statusIndex: 1, linksIndex: 2, notesIndex: 3 },
+    null,
+    "main",
+  );
+
+  assert.equal(row.addonUrl, addonUrl);
+  assert.equal(row.addonSlug, "borderlands2");
+  assert.equal(row.arch, "X86");
+
+  const overlay = {
+    [gameId]: { game_target_ids: ["borderlands-2", "borderlands-the-pre-sequel"] },
+  };
+  const result = reconcileRenodxWiki({
+    rows: [row],
+    existingWiki: [],
+    overlay,
+    officialAssets: new Set(["renodx-borderlands2.addon64"]),
+  });
+
+  assert.equal(result.wikiGames[0].slug, "borderlands2");
+  assert.equal(result.wikiGames[0].arch, "X86");
+  assert.equal(result.overlay[gameId].download_url, addonUrl);
+  assert.deepEqual(result.overlay[gameId].game_target_ids, [
+    "borderlands-2",
+    "borderlands-the-pre-sequel",
+  ]);
+});
+
+test("reconcileRenodxWiki prefers matching official asset over explicit third-party addon URL", () => {
+  const gameId = "borderlands-2-the-pre-sequel";
+  const addonUrl =
+    "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-borderlands2.addon32";
+  const row = parseWikiRow(
+    ["Borderlands 2 & The Pre-Sequel", "✅", addonUrl, ""],
+    { nameIndex: 0, statusIndex: 1, linksIndex: 2, notesIndex: 3 },
+    null,
+    "main",
+  );
+
+  const overlay = {
+    [gameId]: {
+      download_url: addonUrl,
+      game_target_ids: ["borderlands-2", "borderlands-the-pre-sequel"],
+    },
+  };
+  const result = reconcileRenodxWiki({
+    rows: [row],
+    existingWiki: [],
+    overlay,
+    officialAssets: new Set(["renodx-borderlands2.addon32"]),
+  });
+
+  assert.equal(result.wikiGames[0].slug, "borderlands2");
+  assert.equal(result.wikiGames[0].arch, "X86");
+  assert.equal(Object.hasOwn(result.overlay[gameId], "download_url"), false);
+  assert.deepEqual(result.overlay[gameId], {
+    game_target_ids: ["borderlands-2", "borderlands-the-pre-sequel"],
+  });
+});
+
 test("extractMarkdownTables resets engineContext on # and ## headings", () => {
   const markdown = `
 ### Unity Engine

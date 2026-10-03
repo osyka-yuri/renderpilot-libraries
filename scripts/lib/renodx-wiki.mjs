@@ -245,11 +245,12 @@ function resolveOfficialAddon({ addonUrl, slug, arch, name, officialAssets }) {
   if (GENERIC_ENGINE_SLUGS.has(slug)) {
     return { isOfficial: false, slug, arch };
   }
-  let isOfficial = isOfficialAddonUrl(addonUrl);
-  if (officialAssets.size > 0 && officialAssets.has(addonAssetName(slug, arch))) {
-    isOfficial = true;
+  if (isOfficialAddonUrl(addonUrl) || officialAssets.has(addonAssetName(slug, arch))) {
+    return { isOfficial: true, slug, arch };
   }
-  if (officialAssets.size === 0 || isOfficial) return { isOfficial, slug, arch };
+  if (addonUrl || officialAssets.size === 0) {
+    return { isOfficial: false, slug, arch };
+  }
 
   const bitsOrder = arch === "X86" ? ["32", "64"] : ["64", "32"];
   for (const candidateSlug of uniqueNonEmpty([
