@@ -9,6 +9,9 @@ import {
   XIPH_BUILD_MATRIX,
   assertXiphVerificationPolicy,
   expectedXiphArtifactKeys,
+  xiphAliasesForProfile,
+  xiphBuildConfigurations,
+  xiphExpectedImports,
 } from "../lib/xiph-matrix.mjs";
 
 async function lockFixture() {
@@ -170,6 +173,133 @@ test("Xiph build receipt requires the exact 42-member topology matrix", async ()
   assert.throws(() => assertXiphLock(lock), /does not match the Xiph matrix/u);
 });
 
+test("Xiph build receipt supports unreal profile on x64 in revision 2", async () => {
+  const lock = await lockFixture();
+  const pair = structuredClone(lock.pairs[0]);
+  pair.build_revision = 2;
+  const artifactKeysR1 = expectedXiphArtifactKeys(pair, 1);
+  const artifactKeysR2 = expectedXiphArtifactKeys(pair, 2);
+  assert.equal(artifactKeysR1.length, 42);
+  assert.equal(artifactKeysR2.length, 49);
+
+  const unrealKeys = artifactKeysR2.filter((key) => key.includes(".unreal."));
+  assert.equal(unrealKeys.length, 7);
+  assert.ok(unrealKeys.every((key) => key.includes(".x64.")));
+  assert.ok(artifactKeysR2.every((key) => !key.includes(".x86.shared.unreal.")));
+  assert.ok(artifactKeysR2.every((key) => !key.includes(".x86.embedded_ogg.unreal.")));
+
+  const aliases = xiphAliasesForProfile("unreal");
+  assert.deepEqual(aliases, {
+    ogg: "libogg_64.dll",
+    vorbis: "libvorbis_64.dll",
+    vorbisfile: "libvorbisfile_64.dll",
+    vorbisenc: "libvorbisenc_64.dll",
+  });
+
+  const sharedVorbisfileImports = xiphExpectedImports("shared", "vorbisfile", aliases);
+  assert.deepEqual(sharedVorbisfileImports, {
+    regular: ["libogg_64.dll", "libvorbis_64.dll"],
+    delay: [],
+  });
+
+  const embeddedVorbisfileImports = xiphExpectedImports(
+    "embedded_ogg",
+    "vorbisfile",
+    aliases,
+  );
+  assert.deepEqual(embeddedVorbisfileImports, {
+    regular: ["libvorbis_64.dll"],
+    delay: [],
+  });
+
+  pair.builds.push({
+    build_revision: 2,
+    generated_at: "2026-07-27T00:00:00.000Z",
+    recipe_sha256: "1".repeat(64),
+    verification_policy_sha256: "2".repeat(64),
+    patches: {},
+    toolchain: {
+      runner_image: "windows-2025-vs2026@20260720.1",
+      compiler: "MSVC 19.51",
+      linker: "LINK 14.51",
+      windows_sdk: "10.0.26100.0",
+      cmake: "4.3.1",
+    },
+    artifacts: artifactKeysR2.map((artifact_key) => ({
+      artifact_key,
+      dll_sha256: "3".repeat(64),
+      dll_size_bytes: 1,
+      transport: {
+        object_key: `libraries/blobs/sha256/${"4".repeat(64)}.dll.zst`,
+        zst_sha256: "4".repeat(64),
+        zst_size_bytes: 1,
+        compression_level: 12,
+      },
+    })),
+  });
+  lock.pairs = [pair];
+  assert.doesNotThrow(() => assertXiphLock(lock));
+});
+
+test("xiphBuildConfigurations requires buildRevision and returns exact configurations per revision", () => {
+  assert.throws(() => xiphBuildConfigurations(), /safe positive integer/u);
+  assert.throws(() => xiphBuildConfigurations({}), /safe positive integer/u);
+  assert.throws(
+    () => xiphBuildConfigurations({ buildRevision: 0 }),
+    /safe positive integer/u,
+  );
+  assert.throws(
+    () => xiphBuildConfigurations({ buildRevision: -1 }),
+    /safe positive integer/u,
+  );
+  assert.throws(
+    () => xiphBuildConfigurations({ buildRevision: "1" }),
+    /safe positive integer/u,
+  );
+  assert.throws(
+    () => xiphBuildConfigurations({ buildRevision: 1.5 }),
+    /safe positive integer/u,
+  );
+
+  const configsR1 = xiphBuildConfigurations({ buildRevision: 1 });
+  assert.equal(configsR1.length, 12);
+  const profilesR1 = new Set(configsR1.map((c) => c.profile));
+  assert.deepEqual([...profilesR1].sort(), ["abi", "lib", "plain"]);
+  assert.equal(configsR1.filter((c) => c.architecture === "X86").length, 6);
+  assert.equal(configsR1.filter((c) => c.architecture === "X64").length, 6);
+  assert.equal(configsR1.filter((c) => c.profile === "unreal").length, 0);
+
+  const configsR2 = xiphBuildConfigurations({ buildRevision: 2 });
+  assert.equal(configsR2.length, 14);
+  assert.equal(configsR2.filter((c) => c.architecture === "X86").length, 6);
+  assert.equal(configsR2.filter((c) => c.architecture === "X64").length, 8);
+  const unrealConfigs = configsR2.filter((c) => c.profile === "unreal");
+  assert.equal(unrealConfigs.length, 2);
+  assert.ok(unrealConfigs.every((c) => c.architecture === "X64"));
+  assert.deepEqual(
+    unrealConfigs.map((c) => ({
+      architecture: c.architecture,
+      topology: c.topology,
+      profile: c.profile,
+      components: c.components,
+    })),
+    [
+      {
+        architecture: "X64",
+        topology: "shared",
+        profile: "unreal",
+        components: ["vorbis", "vorbisfile", "vorbisenc", "ogg"],
+      },
+      {
+        architecture: "X64",
+        topology: "embedded_ogg",
+        profile: "unreal",
+        components: ["vorbis", "vorbisfile", "vorbisenc"],
+      },
+    ],
+  );
+});
+
 test("Xiph policy rejects unsafe aliases and unsupported security checks", async () => {
   const policy = JSON.parse(
     await readFile(resolveRepoPath("scripts", "xiph", "verification-policy.json"), "utf8"),
@@ -200,6 +330,27 @@ test("Xiph policy rejects unsafe aliases and unsupported security checks", async
   assert.throws(
     () => assertXiphVerificationPolicy(unsupportedArchitecture),
     /unsupported Xiph build matrix/u,
+  );
+
+  const invalidProfileArch = structuredClone(policy);
+  invalidProfileArch.matrix.profile_architectures.unreal = ["ARM64"];
+  assert.throws(
+    () => assertXiphVerificationPolicy(invalidProfileArch),
+    /invalid architecture in profile architectures/u,
+  );
+
+  const invalidMinRevision = structuredClone(policy);
+  invalidMinRevision.matrix.profile_min_revisions.unreal = 0;
+  assert.throws(
+    () => assertXiphVerificationPolicy(invalidMinRevision),
+    /invalid min revision in profile min revisions/u,
+  );
+
+  const unsafeUnrealAlias = structuredClone(policy);
+  unsafeUnrealAlias.aliases.unreal.vorbis = "bad/name.dll";
+  assert.throws(
+    () => assertXiphVerificationPolicy(unsafeUnrealAlias),
+    /aliases must be safe and unique/u,
   );
 });
 
@@ -297,7 +448,19 @@ test("Xiph recipe is C17, topology-bound, hardened, and reproducible", async () 
     ".tar.xz",
     ".zip",
   ]);
-  assert.deepEqual(XIPH_BUILD_MATRIX.profiles, ["plain", "lib", "abi"]);
+  assert.deepEqual(XIPH_BUILD_MATRIX.profiles, ["plain", "lib", "abi", "unreal"]);
+  assert.deepEqual(XIPH_BUILD_MATRIX.profile_architectures, {
+    plain: ["X86", "X64"],
+    lib: ["X86", "X64"],
+    abi: ["X86", "X64"],
+    unreal: ["X64"],
+  });
+  assert.deepEqual(XIPH_BUILD_MATRIX.profile_min_revisions, {
+    plain: 1,
+    lib: 1,
+    abi: 1,
+    unreal: 2,
+  });
   assert.deepEqual(parsedPolicy.reproducibility, {
     build_count: 2,
     comparison: "raw_sha256",

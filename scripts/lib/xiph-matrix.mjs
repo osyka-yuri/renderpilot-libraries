@@ -32,6 +32,8 @@ export const XIPH_FORBIDDEN_IMPORTS = POLICY.forbidden_imports;
 export const XIPH_BUILD_MATRIX = Object.freeze({
   architectures: ARCHITECTURES,
   profiles: PROFILES,
+  profile_architectures: POLICY.matrix.profile_architectures,
+  profile_min_revisions: POLICY.matrix.profile_min_revisions,
   topologies: TOPOLOGIES,
 });
 
@@ -48,12 +50,23 @@ export function canonicalXiphReleaseVersion(value) {
   return segments.join(".");
 }
 
-export function xiphBuildConfigurations() {
+export function xiphBuildConfigurations({ buildRevision } = {}) {
+  if (!Number.isSafeInteger(buildRevision) || buildRevision < 1) {
+    throw new Error("Xiph build revision must be a safe positive integer");
+  }
   return ARCHITECTURES.flatMap((architecture) =>
     Object.entries(TOPOLOGIES).flatMap(([topology, components]) =>
-      PROFILES.map((profile) =>
-        Object.freeze({ architecture, topology, profile, components }),
-      ),
+      PROFILES.filter((profile) => {
+        const allowedArchitectures = POLICY.matrix.profile_architectures?.[profile];
+        if (allowedArchitectures && !allowedArchitectures.includes(architecture)) {
+          return false;
+        }
+        const minRevision = POLICY.matrix.profile_min_revisions?.[profile] ?? 1;
+        if (buildRevision < minRevision) {
+          return false;
+        }
+        return true;
+      }).map((profile) => Object.freeze({ architecture, topology, profile, components })),
     ),
   );
 }
@@ -149,7 +162,7 @@ export function xiphCatalogArtifactKey(dllSha256) {
 }
 
 export function expectedXiphArtifactKeys(pair, buildRevision) {
-  return xiphBuildConfigurations()
+  return xiphBuildConfigurations({ buildRevision })
     .flatMap((configuration) =>
       configuration.components.map((component) =>
         xiphArtifactKey(pair, buildRevision, { ...configuration, component }),
@@ -162,8 +175,14 @@ export function assertXiphManifestMatrix(manifest) {
   if (!Array.isArray(manifest?.artifacts)) {
     throw new Error("Xiph build manifest artifacts must be an array");
   }
+  const buildRevision = manifest.pair?.build_revision;
+  if (!Number.isSafeInteger(buildRevision) || buildRevision < 1) {
+    throw new Error(
+      "Xiph build manifest pair build_revision must be a safe positive integer",
+    );
+  }
   const expected = new Set(
-    xiphBuildConfigurations().flatMap((configuration) =>
+    xiphBuildConfigurations({ buildRevision }).flatMap((configuration) =>
       configuration.components.map(
         (component) =>
           `${configuration.architecture}|${configuration.topology}|` +
@@ -219,16 +238,45 @@ export function assertXiphVerificationPolicy(policy) {
   }
   assertExactObjectKeys(
     policy.matrix,
-    ["architectures", "profiles", "topologies"],
+    [
+      "architectures",
+      "profile_architectures",
+      "profile_min_revisions",
+      "profiles",
+      "topologies",
+    ],
     "verification matrix",
   );
   assertUniqueStrings(policy.matrix.architectures, "architectures");
   assertUniqueIds(policy.matrix.profiles, "profiles");
   if (
     policy.matrix.architectures.join("\0") !== "X86\0X64" ||
-    policy.matrix.profiles.join("\0") !== "plain\0lib\0abi"
+    policy.matrix.profiles.join("\0") !== "plain\0lib\0abi\0unreal"
   ) {
     throw new Error("unsupported Xiph build matrix");
+  }
+  assertExactObjectKeys(
+    policy.matrix.profile_architectures,
+    policy.matrix.profiles,
+    "profile architectures",
+  );
+  for (const [profile, architectures] of Object.entries(
+    policy.matrix.profile_architectures,
+  )) {
+    assertUniqueStrings(architectures, `${profile} architectures`);
+    if (architectures.some((arch) => !policy.matrix.architectures.includes(arch))) {
+      throw new Error(`${profile}: invalid architecture in profile architectures`);
+    }
+  }
+  assertExactObjectKeys(
+    policy.matrix.profile_min_revisions,
+    policy.matrix.profiles,
+    "profile min revisions",
+  );
+  for (const [profile, revision] of Object.entries(policy.matrix.profile_min_revisions)) {
+    if (!Number.isSafeInteger(revision) || revision < 1) {
+      throw new Error(`${profile}: invalid min revision in profile min revisions`);
+    }
   }
   if (
     !isRecord(policy.matrix.topologies) ||

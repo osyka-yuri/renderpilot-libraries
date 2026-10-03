@@ -127,7 +127,9 @@ export async function finalizeXiphSource({
 
   const artifacts = [];
   const lockedArtifacts = [];
-  const configurations = xiphBuildConfigurations();
+  const configurations = xiphBuildConfigurations({
+    buildRevision: manifest.pair.build_revision,
+  });
   const recordsByConfiguration = new Map(
     configurations.map((configuration) => [xiphConfigurationKey(configuration), []]),
   );

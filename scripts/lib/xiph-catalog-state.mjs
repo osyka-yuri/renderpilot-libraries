@@ -92,7 +92,9 @@ function indexLatestCompletedBuilds(lock) {
 function expectedCompletedPackageKeys(completedBuilds) {
   const expected = new Set();
   for (const buildContext of completedBuilds.values()) {
-    for (const configuration of xiphBuildConfigurations()) {
+    for (const configuration of xiphBuildConfigurations({
+      buildRevision: buildContext.build.build_revision,
+    })) {
       expected.add(configurationKey(buildContext, configuration));
     }
   }

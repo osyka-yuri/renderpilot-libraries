@@ -10,7 +10,7 @@ import { resolveRepoPath } from "../lib/repo-paths.mjs";
 import { finalizeXiphSource } from "../finalize-xiph-source.mjs";
 import { sha256Hex } from "../lib/hash.mjs";
 import { assertXiphCatalogMatchesLock } from "../lib/xiph-catalog-state.mjs";
-import { xiphBuildConfigurations } from "../lib/xiph-matrix.mjs";
+import { expectedXiphArtifactKeys, xiphBuildConfigurations } from "../lib/xiph-matrix.mjs";
 
 const FIXED_TIME = "2026-07-27T12:00:00.000Z";
 
@@ -77,6 +77,65 @@ test("finalizer materializes the complete matrix into a valid lock and catalog",
     ]);
     assert.ok(before[0].equals(after[0]));
     assert.ok(before[1].equals(after[1]));
+  } finally {
+    await fixture.cleanup();
+  }
+});
+
+test("finalizer materializes revision 2 with unreal profile for x64", async () => {
+  const fixture = await createFixture();
+  try {
+    const firstResult = await finalizeXiphSource({
+      ...fixture.paths,
+      ...fakePersistence(),
+      now: () => new Date(FIXED_TIME),
+    });
+    assert.equal(firstResult.source.packages.length, 12);
+    assert.equal(firstResult.source.artifacts.length, 42);
+    assert.equal(firstResult.pair.builds.length, 1);
+
+    const lockWithR2 = structuredClone(firstResult.lock);
+    lockWithR2.pairs[0].build_revision = 2;
+    await writeJson(fixture.paths.lockFile, lockWithR2);
+    await fixture.writeBuildForPair(lockWithR2.pairs[0]);
+
+    const result = await finalizeXiphSource({
+      ...fixture.paths,
+      ...fakePersistence(),
+      now: () => new Date("2026-07-27T13:00:00.000Z"),
+    });
+
+    assert.equal(result.source.packages.length, 14);
+    assert.equal(result.source.artifacts.length, 49);
+    assert.equal(result.pair.builds.length, 2);
+    assert.equal(result.pair.builds[1].build_revision, 2);
+    assert.equal(result.pair.builds[1].artifacts.length, 49);
+    assert.doesNotThrow(() => assertXiphCatalogMatchesLock(result.source, result.lock));
+
+    const unrealPackages = result.source.packages.filter((pkg) =>
+      pkg.variant.endsWith(".unreal"),
+    );
+    assert.equal(unrealPackages.length, 2);
+    assert.ok(unrealPackages.every((pkg) => pkg.target.architecture === "X64"));
+
+    const sharedUnreal = unrealPackages.find((pkg) => pkg.variant === "shared.unreal");
+    assert.ok(sharedUnreal);
+    assert.equal(sharedUnreal.members.length, 4);
+    const installNames = Object.fromEntries(
+      sharedUnreal.members.map((m) => [m.component, m.install_as]),
+    );
+    assert.deepEqual(installNames, {
+      vorbis: "libvorbis_64.dll",
+      vorbisfile: "libvorbisfile_64.dll",
+      vorbisenc: "libvorbisenc_64.dll",
+      ogg: "libogg_64.dll",
+    });
+
+    const embeddedUnreal = unrealPackages.find(
+      (pkg) => pkg.variant === "embedded_ogg.unreal",
+    );
+    assert.ok(embeddedUnreal);
+    assert.equal(embeddedUnreal.members.length, 3);
   } finally {
     await fixture.cleanup();
   }
@@ -311,10 +370,19 @@ test("catalog and lock validation binds packages to exact build receipts", async
     const completedRebuild = structuredClone(pendingRebuild);
     const secondBuild = structuredClone(completedRebuild.pairs[0].builds[0]);
     secondBuild.build_revision = 2;
-    secondBuild.generated_at = "2026-07-27T13:00:00.000Z";
-    for (const artifact of secondBuild.artifacts) {
-      artifact.artifact_key = artifact.artifact_key.replace(".r1.", ".r2.");
-    }
+    secondBuild.artifacts = expectedXiphArtifactKeys(completedRebuild.pairs[0], 2).map(
+      (artifact_key) => ({
+        artifact_key,
+        dll_sha256: "3".repeat(64),
+        dll_size_bytes: 1,
+        transport: {
+          object_key: `libraries/blobs/sha256/${"4".repeat(64)}.dll.zst`,
+          zst_sha256: "4".repeat(64),
+          zst_size_bytes: 1,
+          compression_level: 12,
+        },
+      }),
+    );
     completedRebuild.pairs[0].builds.push(secondBuild);
     assert.throws(
       () => assertXiphCatalogMatchesLock(result.source, completedRebuild),
@@ -439,6 +507,7 @@ test("asset persistence failure leaves JSON untouched and permits only orphan bl
 async function createFixture({
   pairTuples = ["1.0|1.0"],
   initialPairIndex = 0,
+  buildRevision = 1,
   deduplicateTopologyInvariantArtifacts = false,
   pairInvariantComponents = [],
 } = {}) {
@@ -456,7 +525,7 @@ async function createFixture({
       (candidate) => `${candidate.vorbis_version}|${candidate.ogg_version}` === tuple,
     );
     assert.ok(pair, `reviewed Xiph pair is missing from the fixture source: ${tuple}`);
-    return { ...structuredClone(pair), builds: [] };
+    return { ...structuredClone(pair), build_revision: buildRevision, builds: [] };
   });
   const lock = { schema_version: 1, pairs };
   assert.ok(
@@ -503,7 +572,9 @@ async function writeFixtureBuild({
 }) {
   const invariantComponents = new Set(pairInvariantComponents);
   const artifacts = [];
-  for (const configuration of xiphBuildConfigurations()) {
+  for (const configuration of xiphBuildConfigurations({
+    buildRevision: pair.build_revision,
+  })) {
     const names = namesForProfile(configuration.profile);
     for (const component of configuration.components) {
       const configurationIdentity =
@@ -616,6 +687,12 @@ function namesForProfile(profile) {
       vorbis: "libvorbis-0.dll",
       vorbisfile: "libvorbisfile-3.dll",
       vorbisenc: "libvorbisenc-2.dll",
+    },
+    unreal: {
+      ogg: "libogg_64.dll",
+      vorbis: "libvorbis_64.dll",
+      vorbisfile: "libvorbisfile_64.dll",
+      vorbisenc: "libvorbisenc_64.dll",
     },
   };
   return names[profile];

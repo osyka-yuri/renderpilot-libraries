@@ -800,8 +800,13 @@ function assertXiphPackage(packageValue, artifacts, context) {
   }
   const components = packageValue.release.components;
   const provenance = packageValue.provenance;
+  if (!Number.isSafeInteger(provenance?.build_revision) || provenance.build_revision < 1) {
+    throw new Error(`${context}: invalid Xiph build revision provenance`);
+  }
   const [topology, profile, ...variantRemainder] = packageValue.variant.split(".");
-  const configuration = xiphBuildConfigurations().find(
+  const configuration = xiphBuildConfigurations({
+    buildRevision: provenance.build_revision,
+  }).find(
     (candidate) =>
       candidate.architecture === packageValue.target.architecture &&
       candidate.topology === topology &&

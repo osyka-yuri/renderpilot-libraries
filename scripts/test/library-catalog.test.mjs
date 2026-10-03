@@ -139,6 +139,93 @@ test("composite V2 revision binds components, source build, target, and members"
   }
 });
 
+test("assertVendorSource validates unreal Xiph packages on x64 and rejects invalid configurations", () => {
+  const source = compositeSourceBuild();
+  source.packages[0].provenance.build_revision = 2;
+  source.packages[0].variant = "shared.unreal";
+  source.packages[0].package_id = "xiph_vorbis.vorbis-1.3.7.ogg-1.3.6.r2.x64.shared.unreal";
+
+  source.artifacts[0].file_name = "libvorbis_64.dll";
+  source.artifacts[0].pe_imports.regular = ["kernel32.dll", "libogg_64.dll"];
+  source.packages[0].members[0].install_as = "libvorbis_64.dll";
+
+  source.artifacts[1].file_name = "libvorbisfile_64.dll";
+  source.artifacts[1].pe_imports.regular = [
+    "kernel32.dll",
+    "libogg_64.dll",
+    "libvorbis_64.dll",
+  ];
+  source.packages[0].members[1].install_as = "libvorbisfile_64.dll";
+
+  source.artifacts[2].file_name = "libvorbisenc_64.dll";
+  source.artifacts[2].pe_imports.regular = ["kernel32.dll", "libvorbis_64.dll"];
+  source.packages[0].members[2].install_as = "libvorbisenc_64.dll";
+
+  source.artifacts[3].file_name = "libogg_64.dll";
+  source.artifacts[3].pe_imports.regular = ["kernel32.dll"];
+  source.packages[0].members[3].install_as = "libogg_64.dll";
+
+  assert.doesNotThrow(() => assertVendorSource(source));
+
+  const x86Unreal = structuredClone(source);
+  x86Unreal.packages[0].target.architecture = "X86";
+  x86Unreal.packages[0].package_id =
+    "xiph_vorbis.vorbis-1.3.7.ogg-1.3.6.r2.x86.shared.unreal";
+  x86Unreal.artifacts.forEach((a) => {
+    a.architecture = "X86";
+  });
+  assert.throws(
+    () => assertVendorSource(x86Unreal),
+    /invalid Xiph composite package contract/u,
+  );
+
+  const brokenImportUnreal = structuredClone(source);
+  brokenImportUnreal.artifacts[1].pe_imports.regular = [
+    "kernel32.dll",
+    "libogg_64.dll",
+    "vorbis.dll",
+  ];
+  assert.throws(
+    () => assertVendorSource(brokenImportUnreal),
+    /import graph does not match/u,
+  );
+
+  const wrongAliasUnreal = structuredClone(source);
+  wrongAliasUnreal.packages[0].members[0].install_as = "vorbis.dll";
+  wrongAliasUnreal.artifacts[0].file_name = "vorbis.dll";
+  assert.throws(() => assertVendorSource(wrongAliasUnreal), /invalid DLL aliases/u);
+
+  const r1Unreal = structuredClone(source);
+  r1Unreal.packages[0].provenance.build_revision = 1;
+  r1Unreal.packages[0].package_id =
+    "xiph_vorbis.vorbis-1.3.7.ogg-1.3.6.r1.x64.shared.unreal";
+  assert.throws(
+    () => assertVendorSource(r1Unreal),
+    /invalid Xiph composite package contract/u,
+  );
+
+  const missingRevision = structuredClone(source);
+  delete missingRevision.packages[0].provenance.build_revision;
+  assert.throws(
+    () => assertVendorSource(missingRevision),
+    /invalid source-build identity/u,
+  );
+
+  const nonPositiveRevision = structuredClone(source);
+  nonPositiveRevision.packages[0].provenance.build_revision = 0;
+  assert.throws(
+    () => assertVendorSource(nonPositiveRevision),
+    /invalid source-build identity/u,
+  );
+
+  const nonIntegerRevision = structuredClone(source);
+  nonIntegerRevision.packages[0].provenance.build_revision = 1.5;
+  assert.throws(
+    () => assertVendorSource(nonIntegerRevision),
+    /invalid source-build identity/u,
+  );
+});
+
 test("generic composite V2 requires and binds discriminated provenance", () => {
   const value = compositeSourceBuild();
   const packageValue = value.packages[0];

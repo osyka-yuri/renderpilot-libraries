@@ -320,11 +320,13 @@ function Get-XiphMatrixConfiguration {
     )
 
     $configuration = [pscustomobject]@{
-        architectures = @($Policy.matrix.architectures)
-        profiles      = @($Policy.matrix.profiles)
-        topologies    = @($Policy.matrix.topologies.PSObject.Properties.Name)
-        build_count   = [int] $Policy.reproducibility.build_count
-        comparison    = [string] $Policy.reproducibility.comparison
+        architectures         = @($Policy.matrix.architectures)
+        profiles              = @($Policy.matrix.profiles)
+        profile_architectures = $Policy.matrix.profile_architectures
+        profile_min_revisions = $Policy.matrix.profile_min_revisions
+        topologies            = @($Policy.matrix.topologies.PSObject.Properties.Name)
+        build_count           = [int] $Policy.reproducibility.build_count
+        comparison            = [string] $Policy.reproducibility.comparison
     }
 
     if ($configuration.architectures.Count -eq 0 -or
@@ -336,6 +338,56 @@ function Get-XiphMatrixConfiguration {
     }
 
     return $configuration
+}
+
+function Assert-XiphBuildRevision {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $false)]
+        [object] $BuildRevision,
+
+        [Parameter(Mandatory)]
+        [string] $Context
+    )
+
+    if ($BuildRevision -isnot [int] -or $BuildRevision -lt 1) {
+        throw "$Context build_revision must be a positive integer"
+    }
+}
+
+function Test-XiphProfileSupported {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]
+        [object] $MatrixConfiguration,
+
+        [Parameter(Mandatory)]
+        [string] $BuildProfile,
+
+        [Parameter(Mandatory)]
+        [string] $Architecture,
+
+        [Parameter(Mandatory)]
+        [int] $BuildRevision
+    )
+
+    $profileArchProp = $MatrixConfiguration.profile_architectures.PSObject.Properties[$BuildProfile]
+    if ($null -ne $profileArchProp) {
+        $allowedArchitectures = @($profileArchProp.Value)
+        if (-not ($allowedArchitectures -contains $Architecture)) {
+            return $false
+        }
+    }
+
+    $profileRevProp = $MatrixConfiguration.profile_min_revisions.PSObject.Properties[$BuildProfile]
+    if ($null -ne $profileRevProp) {
+        $minRev = [int] $profileRevProp.Value
+        if ($BuildRevision -lt $minRev) {
+            return $false
+        }
+    }
+
+    return $true
 }
 
 function Resolve-XiphProfileNames {
@@ -510,6 +562,21 @@ function Invoke-XiphBuildVariant {
         [string] $BuildProfile
     )
 
+    $matrix = if ($null -ne $Context.matrix) {
+        $Context.matrix
+    } else {
+        Get-XiphMatrixConfiguration -Policy $Context.policy
+    }
+    Assert-XiphBuildRevision -BuildRevision $Context.build_revision -Context 'Xiph build context'
+    $revision = [int] $Context.build_revision
+    if (-not (Test-XiphProfileSupported `
+        -MatrixConfiguration $matrix `
+        -BuildProfile $BuildProfile `
+        -Architecture $Architecture `
+        -BuildRevision $revision)) {
+        throw "profile $BuildProfile is not supported on architecture $Architecture for revision $revision"
+    }
+
     $generatorArchitecture = switch ($Architecture) {
         'X86' { 'Win32' }
         'X64' { 'x64' }
@@ -653,6 +720,7 @@ function Invoke-XiphBuildMatrix {
         [string] $WorkRoot
     )
 
+    Assert-XiphBuildRevision -BuildRevision $Pair.build_revision -Context 'Xiph pair'
     $matrix = Get-XiphMatrixConfiguration -Policy $Policy
     $exports = [ordered]@{
         ogg        = Get-XiphDefExports (Join-Path $OggRoot 'win32/ogg.def')
@@ -680,6 +748,7 @@ function Invoke-XiphBuildMatrix {
     $context = [pscustomobject]@{
         script_root           = $ScriptRoot
         policy                = $Policy
+        matrix                = $matrix
         tools                 = Resolve-XiphBuildTools
         exports               = $exports
         abi_majors            = $abiMajors
@@ -688,6 +757,7 @@ function Invoke-XiphBuildMatrix {
         work_root             = $WorkRoot
         ogg_version           = ConvertTo-XiphVersionTriple ([string] $Pair.ogg_version)
         vorbis_version        = ConvertTo-XiphVersionTriple ([string] $Pair.vorbis_version)
+        build_revision        = [int] $Pair.build_revision
         build_count           = $matrix.build_count
         observed_warnings     = @{}
         selected_windows_sdks = [Collections.Generic.HashSet[string]]::new(
@@ -699,6 +769,14 @@ function Invoke-XiphBuildMatrix {
     foreach ($architecture in $matrix.architectures) {
         foreach ($topology in $matrix.topologies) {
             foreach ($buildProfile in $matrix.profiles) {
+                if (-not (Test-XiphProfileSupported `
+                    -MatrixConfiguration $matrix `
+                    -BuildProfile $buildProfile `
+                    -Architecture $architecture `
+                    -BuildRevision $context.build_revision)) {
+                    continue
+                }
+
                 $variant = Invoke-XiphBuildVariant `
                     -Context $context `
                     -Architecture ([string] $architecture) `

@@ -4,7 +4,19 @@
   "sources": ["ogg", "vorbis"],
   "matrix": {
     "architectures": ["X86", "X64"],
-    "profiles": ["plain", "lib", "abi"],
+    "profiles": ["plain", "lib", "abi", "unreal"],
+    "profile_architectures": {
+      "plain": ["X86", "X64"],
+      "lib": ["X86", "X64"],
+      "abi": ["X86", "X64"],
+      "unreal": ["X64"]
+    },
+    "profile_min_revisions": {
+      "plain": 1,
+      "lib": 1,
+      "abi": 1,
+      "unreal": 2
+    },
     "topologies": {
       "shared": ["vorbis", "vorbisfile", "vorbisenc", "ogg"],
       "embedded_ogg": ["vorbis", "vorbisfile", "vorbisenc"]
@@ -46,6 +58,12 @@
       "vorbis": "libvorbis-{abi_major}.dll",
       "vorbisfile": "libvorbisfile-{abi_major}.dll",
       "vorbisenc": "libvorbisenc-{abi_major}.dll"
+    },
+    "unreal": {
+      "ogg": "libogg_64.dll",
+      "vorbis": "libvorbis_64.dll",
+      "vorbisfile": "libvorbisfile_64.dll",
+      "vorbisenc": "libvorbisenc_64.dll"
     }
   },
   "abi_majors": {
