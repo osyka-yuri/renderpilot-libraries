@@ -16,7 +16,11 @@ import { sha256Hex } from "./hash.mjs";
 import { assertVendorSnapshot, buildVendorSnapshot } from "./library-catalog.mjs";
 import { validateLibraryAssetPayload } from "./library-asset-validation.mjs";
 import { assertXiphCatalogMatchesLock } from "./xiph-catalog-state.mjs";
-import { assertXiphPublicationPath, assertXiphPublishableVendor } from "./xiph-matrix.mjs";
+import {
+  assertXiphPublicationPath,
+  assertXiphPublishableVendor,
+  canonicalXiphReleaseVersion,
+} from "./xiph-matrix.mjs";
 
 const execFileAsync = promisify(execFile);
 const REPARSE_CHECK_SCRIPT = fileURLToPath(
@@ -65,6 +69,7 @@ export async function createXiphCiBundles({
   const baselineVendor = JSON.parse(await readFile(baselineVendorFile, "utf8"));
   assertVendorSnapshot(baselineVendor);
   assertXiphPublishableVendor(baselineVendor);
+  assertXiphCatalogTransition(baselineVendor, vendor);
   const expectedAssets = collectXiphAssetDelta(baselineVendor, vendor);
   const assetFiles = [];
   for (const [objectKey, expected] of [...expectedAssets].sort(([left], [right]) =>
@@ -131,6 +136,7 @@ export async function verifyXiphAssetBundle(assetsRoot, catalogRoot, baselineVen
   const baselineVendor = JSON.parse(await readFile(baselineVendorFile, "utf8"));
   assertVendorSnapshot(baselineVendor);
   assertXiphPublishableVendor(baselineVendor);
+  assertXiphCatalogTransition(baselineVendor, vendor);
   const expected = collectXiphAssetDelta(baselineVendor, vendor);
   for (const record of manifest.files) {
     if (!record.path.startsWith("cdn/")) {
@@ -236,15 +242,94 @@ export function collectXiphAssetExpectations(vendor) {
   return values;
 }
 
+export function xiphLogicalPackageKey(packageValue) {
+  const vorbis = packageValue?.provenance?.sources?.vorbis?.version;
+  const ogg = packageValue?.provenance?.sources?.ogg?.version;
+  const os = packageValue?.target?.os;
+  const architecture = packageValue?.target?.architecture;
+  const variant = packageValue?.variant;
+  if (!vorbis || !ogg || !os || !architecture || !variant) {
+    throw new Error(
+      `${packageValue?.package_id ?? "unknown package"}: incomplete Xiph logical package identity`,
+    );
+  }
+  const releaseVorbis = packageValue?.release?.components?.vorbis;
+  const releaseOgg = packageValue?.release?.components?.ogg;
+  if (
+    (releaseVorbis !== undefined &&
+      releaseVorbis !== canonicalXiphReleaseVersion(vorbis)) ||
+    (releaseOgg !== undefined && releaseOgg !== canonicalXiphReleaseVersion(ogg))
+  ) {
+    throw new Error(
+      `${packageValue?.package_id ?? "unknown package"}: release component versions diverge from provenance sources`,
+    );
+  }
+  return [vorbis, ogg, os, architecture, variant].join("\0");
+}
+
+function indexXiphLogicalPackages(vendor, label) {
+  const packagesByKey = new Map();
+  for (const packageValue of vendor?.packages ?? []) {
+    const key = xiphLogicalPackageKey(packageValue);
+    if (packagesByKey.has(key)) {
+      throw new Error(
+        `${packageValue?.package_id}: duplicate ${label} Xiph logical package configuration`,
+      );
+    }
+    packagesByKey.set(key, packageValue);
+  }
+  return packagesByKey;
+}
+
+export function assertXiphCatalogTransition(baselineVendor, candidateVendor) {
+  if (baselineVendor?.vendor?.id !== "xiph" || candidateVendor?.vendor?.id !== "xiph") {
+    throw new Error("catalog transition assertion requires Xiph vendor snapshots");
+  }
+
+  const baselinePackages = indexXiphLogicalPackages(baselineVendor, "baseline");
+  const candidatePackages = indexXiphLogicalPackages(candidateVendor, "candidate");
+
+  for (const [key, baselinePackage] of baselinePackages) {
+    const candidatePackage = candidatePackages.get(key);
+    if (!candidatePackage) {
+      throw new Error(
+        `${baselinePackage.package_id}: baseline Xiph package configuration was removed in candidate catalog`,
+      );
+    }
+    const baselineRevision = baselinePackage.provenance?.build_revision;
+    const candidateRevision = candidatePackage.provenance?.build_revision;
+    if (
+      !Number.isSafeInteger(baselineRevision) ||
+      baselineRevision < 1 ||
+      !Number.isSafeInteger(candidateRevision) ||
+      candidateRevision < 1
+    ) {
+      throw new Error(
+        `${candidatePackage.package_id}: invalid or missing Xiph build_revision provenance`,
+      );
+    }
+    if (candidateRevision < baselineRevision) {
+      throw new Error(
+        `${candidatePackage.package_id}: candidate Xiph package has regressed build_revision (${candidateRevision} < ${baselineRevision})`,
+      );
+    }
+    if (
+      candidateRevision === baselineRevision &&
+      !isDeepStrictEqual(candidatePackage, baselinePackage)
+    ) {
+      throw new Error(
+        `${candidatePackage.package_id}: Xiph package mutated without incrementing build_revision`,
+      );
+    }
+  }
+}
+
 export function collectXiphAssetDelta(baselineVendor, candidateVendor) {
   const baseline = collectXiphAssetExpectations(baselineVendor);
   const candidate = collectXiphAssetExpectations(candidateVendor);
-  for (const [key, baselineAsset] of baseline) {
-    const candidateAsset = candidate.get(key);
-    if (!candidateAsset) {
-      throw new Error(`${key}: candidate Xiph catalog removed an existing asset`);
-    }
-    if (JSON.stringify(candidateAsset) !== JSON.stringify(baselineAsset)) {
+  for (const [key, candidateAsset] of candidate) {
+    const baselineAsset = baseline.get(key);
+    if (baselineAsset && !isDeepStrictEqual(candidateAsset, baselineAsset)) {
       throw new Error(`${key}: candidate Xiph catalog changed an existing asset identity`);
     }
   }
@@ -254,7 +339,7 @@ export function collectXiphAssetDelta(baselineVendor, candidateVendor) {
 function addExpectation(values, objectKey, expected) {
   assertSafeRelativePath(objectKey);
   const previous = values.get(objectKey);
-  if (previous && JSON.stringify(previous) !== JSON.stringify(expected)) {
+  if (previous && !isDeepStrictEqual(previous, expected)) {
     throw new Error(`${objectKey}: conflicting Xiph asset identities`);
   }
   values.set(objectKey, expected);

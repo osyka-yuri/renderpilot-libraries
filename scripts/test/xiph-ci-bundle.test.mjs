@@ -12,11 +12,13 @@ import {
   XIPH_ASSET_BUNDLE_KIND,
   XIPH_CATALOG_BUNDLE_PATHS,
   XIPH_CATALOG_BUNDLE_KIND,
+  assertXiphCatalogTransition,
   collectXiphAssetDelta,
   createXiphCiBundles,
   verifyBundle,
   verifyXiphAssetBundle,
   verifyXiphCatalogBundle,
+  xiphLogicalPackageKey,
 } from "../lib/xiph-ci-bundle.mjs";
 
 test("Xiph asset bundle contains only the exact candidate delta", () => {
@@ -38,19 +40,19 @@ test("Xiph asset bundle contains only the exact candidate delta", () => {
   ]);
 });
 
-test("Xiph asset delta preserves every existing content identity", () => {
+test("Xiph asset delta preserves existing content identities while omitting superseded baseline assets", () => {
   const existing = artifactExpectation("a");
   const changed = structuredClone(existing);
   changed.dll.size_bytes += 1;
 
-  assert.throws(
-    () =>
-      collectXiphAssetDelta(
-        { artifacts: [existing], legal_documents: [] },
-        { artifacts: [], legal_documents: [] },
-      ),
-    /removed an existing asset/u,
+  // An unreachable baseline asset is simply omitted from the upload delta without error
+  const delta = collectXiphAssetDelta(
+    { artifacts: [existing], legal_documents: [] },
+    { artifacts: [], legal_documents: [] },
   );
+  assert.equal(delta.size, 0);
+
+  // Changing the content identity of an existing CAS key is strictly forbidden
   assert.throws(
     () =>
       collectXiphAssetDelta(
@@ -58,6 +60,274 @@ test("Xiph asset delta preserves every existing content identity", () => {
         { artifacts: [changed], legal_documents: [] },
       ),
     /changed an existing asset identity/u,
+  );
+});
+
+test("Xiph legal documents follow CAS reachability and strict immutability", () => {
+  const legalA = {
+    object_key: `libraries/legal/sha256/${"a".repeat(64)}.txt`,
+    format: "text",
+    content: { sha256: "a".repeat(64), size_bytes: 100 },
+  };
+  const legalB = {
+    object_key: `libraries/legal/sha256/${"b".repeat(64)}.txt`,
+    format: "text",
+    content: { sha256: "b".repeat(64), size_bytes: 200 },
+  };
+  const mutatedLegalA = structuredClone(legalA);
+  mutatedLegalA.content.size_bytes = 101;
+
+  // Unreachable superseded legal document is omitted from upload delta without error
+  const delta = collectXiphAssetDelta(
+    { artifacts: [], legal_documents: [legalA] },
+    { artifacts: [], legal_documents: [legalB] },
+  );
+  assert.deepEqual([...delta.keys()], [legalB.object_key]);
+
+  // Mutating content of an existing CAS legal document is strictly forbidden
+  assert.throws(
+    () =>
+      collectXiphAssetDelta(
+        { artifacts: [], legal_documents: [legalA] },
+        { artifacts: [], legal_documents: [mutatedLegalA] },
+      ),
+    /changed an existing asset identity/u,
+  );
+});
+
+test("Xiph catalog transition enforces package reachability and revision monotonicity", () => {
+  const basePackage = packageExpectation({
+    vorbis: "1.2.0",
+    ogg: "1.2.0",
+    architecture: "X86",
+    variant: "shared.plain",
+    revision: 1,
+  });
+  const supersededPackage = packageExpectation({
+    vorbis: "1.2.0",
+    ogg: "1.2.0",
+    architecture: "X86",
+    variant: "shared.plain",
+    revision: 2,
+  });
+  const extendedPackage = packageExpectation({
+    vorbis: "1.2.0",
+    ogg: "1.2.0",
+    architecture: "X64",
+    variant: "embedded_ogg.unreal",
+    revision: 2,
+  });
+  const mutatedSameRevisionPackage = structuredClone(basePackage);
+  mutatedSameRevisionPackage.members = [
+    {
+      artifact_id: `sha256:${"f".repeat(64)}`,
+      component: "ogg",
+      role: "primary",
+      install_as: "ogg.dll",
+    },
+  ];
+
+  // Identical packages pass
+  assert.doesNotThrow(() =>
+    assertXiphCatalogTransition(
+      { vendor: { id: "xiph" }, packages: [basePackage] },
+      { vendor: { id: "xiph" }, packages: [basePackage] },
+    ),
+  );
+
+  // Superseding with a higher build revision passes
+  assert.doesNotThrow(() =>
+    assertXiphCatalogTransition(
+      { vendor: { id: "xiph" }, packages: [basePackage] },
+      { vendor: { id: "xiph" }, packages: [supersededPackage] },
+    ),
+  );
+
+  // Adding new configurations/packages passes
+  assert.doesNotThrow(() =>
+    assertXiphCatalogTransition(
+      { vendor: { id: "xiph" }, packages: [basePackage] },
+      { vendor: { id: "xiph" }, packages: [supersededPackage, extendedPackage] },
+    ),
+  );
+
+  // Mutating package members/metadata without incrementing revision fails
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+        { vendor: { id: "xiph" }, packages: [mutatedSameRevisionPackage] },
+      ),
+    /mutated without incrementing build_revision/u,
+  );
+
+  // Dropping a package configuration fails
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+        { vendor: { id: "xiph" }, packages: [] },
+      ),
+    /baseline Xiph package configuration was removed in candidate catalog/u,
+  );
+
+  // Regressing a package build revision fails
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [supersededPackage] },
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+      ),
+    /candidate Xiph package has regressed build_revision \(1 < 2\)/u,
+  );
+
+  // Missing, non-integer, or non-positive build_revision fails closed
+  const missingRevisionPackage = structuredClone(basePackage);
+  delete missingRevisionPackage.provenance.build_revision;
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+        { vendor: { id: "xiph" }, packages: [missingRevisionPackage] },
+      ),
+    /invalid or missing Xiph build_revision provenance/u,
+  );
+
+  const nonIntegerRevisionPackage = structuredClone(basePackage);
+  nonIntegerRevisionPackage.provenance.build_revision = 1.5;
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+        { vendor: { id: "xiph" }, packages: [nonIntegerRevisionPackage] },
+      ),
+    /invalid or missing Xiph build_revision provenance/u,
+  );
+
+  const zeroRevisionPackage = structuredClone(basePackage);
+  zeroRevisionPackage.provenance.build_revision = 0;
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+        { vendor: { id: "xiph" }, packages: [zeroRevisionPackage] },
+      ),
+    /invalid or missing Xiph build_revision provenance/u,
+  );
+
+  // Baseline invalid revision fails closed symmetrically
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [nonIntegerRevisionPackage] },
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+      ),
+    /invalid or missing Xiph build_revision provenance/u,
+  );
+
+  // Duplicate candidate configurations fail
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+        { vendor: { id: "xiph" }, packages: [basePackage, basePackage] },
+      ),
+    /duplicate candidate Xiph logical package configuration/u,
+  );
+
+  // Duplicate baseline configurations fail symmetrically
+  assert.throws(
+    () =>
+      assertXiphCatalogTransition(
+        { vendor: { id: "xiph" }, packages: [basePackage, basePackage] },
+        { vendor: { id: "xiph" }, packages: [basePackage] },
+      ),
+    /duplicate baseline Xiph logical package configuration/u,
+  );
+});
+
+test("production regression: superseding build_revision (r1 -> r2) replaces blobs and delta contains only new blobs", () => {
+  const blobA = artifactExpectation("a");
+  const blobB = artifactExpectation("b");
+
+  const r1Package = packageExpectation({
+    vorbis: "1.2.0",
+    ogg: "1.2.0",
+    architecture: "X86",
+    variant: "shared.plain",
+    revision: 1,
+  });
+  r1Package.members = [
+    {
+      artifact_id: `sha256:${blobA.dll.sha256}`,
+      component: "ogg",
+      role: "primary",
+      install_as: "ogg.dll",
+    },
+  ];
+
+  const r2Package = packageExpectation({
+    vorbis: "1.2.0",
+    ogg: "1.2.0",
+    architecture: "X86",
+    variant: "shared.plain",
+    revision: 2,
+  });
+  r2Package.members = [
+    {
+      artifact_id: `sha256:${blobB.dll.sha256}`,
+      component: "ogg",
+      role: "primary",
+      install_as: "ogg.dll",
+    },
+  ];
+
+  const baseline = {
+    vendor: { id: "xiph" },
+    artifacts: [blobA],
+    legal_documents: [],
+    packages: [r1Package],
+  };
+
+  const candidate = {
+    vendor: { id: "xiph" },
+    artifacts: [blobB],
+    legal_documents: [],
+    packages: [r2Package],
+  };
+
+  // 1. Transition validation succeeds because r2 legitimately supersedes r1
+  assert.doesNotThrow(() => assertXiphCatalogTransition(baseline, candidate));
+
+  // 2. Upload delta contains ONLY the new blob B; unreachable baseline blob A is excluded without throwing
+  const delta = collectXiphAssetDelta(baseline, candidate);
+  assert.deepEqual([...delta.keys()], [blobB.transport.object_key]);
+  assert.equal(delta.has(blobA.transport.object_key), false);
+});
+
+test("xiphLogicalPackageKey extracts canonical identity and rejects inconsistencies", () => {
+  const pkg = packageExpectation({
+    vorbis: "1.3.7",
+    ogg: "1.3.6",
+    architecture: "X64",
+    variant: "embedded_ogg.unreal",
+    revision: 2,
+  });
+  assert.equal(
+    xiphLogicalPackageKey(pkg),
+    ["1.3.7", "1.3.6", "windows", "X64", "embedded_ogg.unreal"].join("\0"),
+  );
+
+  const divergent = structuredClone(pkg);
+  divergent.release.components.vorbis = "9.9.9";
+  assert.throws(
+    () => xiphLogicalPackageKey(divergent),
+    /release component versions diverge from provenance sources/u,
+  );
+
+  assert.throws(
+    () => xiphLogicalPackageKey({}),
+    /incomplete Xiph logical package identity/u,
   );
 });
 
@@ -288,6 +558,36 @@ function artifactExpectation(marker) {
       sha256: marker.repeat(64),
       size_bytes: 11,
     },
+  };
+}
+
+function packageExpectation({
+  vorbis = "1.2.0",
+  ogg = "1.2.0",
+  architecture = "X86",
+  variant = "shared.plain",
+  revision = 1,
+} = {}) {
+  return {
+    package_id: `xiph_vorbis.vorbis-${vorbis}.ogg-${ogg}.r${revision}.${architecture.toLowerCase()}.${variant}`,
+    technology: "xiph_vorbis",
+    variant,
+    target: { os: "windows", architecture },
+    release: {
+      version: vorbis,
+      channel: "stable",
+      label: null,
+      components: { ogg, vorbis },
+    },
+    provenance: {
+      kind: "source_build",
+      build_revision: revision,
+      sources: {
+        ogg: { version: ogg },
+        vorbis: { version: vorbis },
+      },
+    },
+    members: [],
   };
 }
 
