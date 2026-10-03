@@ -7097,6 +7097,20 @@
       ]
     },
     {
+      "id": "end-of-abyss",
+      "rules": [
+        {
+          "id": "steam-2689530",
+          "kind": "steam_appid",
+          "value": "2689530",
+          "provenance": {
+            "source": "renodx-match-overlay",
+            "locator": "catalogs/addons/renodx/match_overlay.json#end-of-abyss"
+          }
+        }
+      ]
+    },
+    {
       "id": "end-transmission",
       "rules": [
         {

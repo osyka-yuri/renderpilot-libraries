@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "47cdfab50c7d57fa6965fcc3531c339c5983c8167da6e74a89a99d3c790fc7d9",
+    "wiki_content_sha256": "29b928a57844605cee636545b8fe037882091fa3c84d083b8f3a4edd79c1b70b",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "dd33c0781005368ea9857e72242bfa55628b7fa0100610972cceb40440e113d9",
+    "active_message_fingerprint": "4d7155ebc666ce66c9de0c30d2c42d4cf76d22484baf15bae81d530f7298dc19",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -505,6 +505,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "4c4f3d6785383c332f01cf614d809c496401a1ef5d22fec5ad7814c12479d630",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:end-of-abyss",
+      "game_id": "end-of-abyss",
+      "title": "End of Abyss",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "06c1a554a1623b98f92dd50c8cd5d40b98bf6cf54dd99eb213637743dbd2cb4a",
       "disposition": "curated_manual",
       "reason": null
     },

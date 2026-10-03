@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-02T00:00:00Z",
+  "generated_at": "2026-10-03T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -6630,6 +6630,33 @@
           ]
         }
       ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Upgrade_R10G10B10A2_UNORM",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "ue_extended",
+      "processing_path": "upgrade"
+    },
+    {
+      "id": "end-of-abyss",
+      "name": "End of Abyss",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2689530",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
       "renodx_config": {
         "settings": [
           {

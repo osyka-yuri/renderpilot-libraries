@@ -352,6 +352,14 @@
     "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Native HDR is broken."
   },
   {
+    "source_key": "ue-extended:end-of-abyss",
+    "game_id": "end-of-abyss",
+    "title": "End of Abyss",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Engine.ini HDR can't be used due to issues with saving game progress."
+  },
+  {
     "source_key": "ue-extended:escape-the-backrooms",
     "game_id": "escape-the-backrooms",
     "title": "Escape the Backrooms",

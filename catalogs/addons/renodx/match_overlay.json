@@ -838,6 +838,9 @@
   "encased": {
     "game_target_ids": ["encased"]
   },
+  "end-of-abyss": {
+    "game_target_ids": ["end-of-abyss"]
+  },
   "end-transmission": {
     "game_target_ids": ["end-transmission"]
   },

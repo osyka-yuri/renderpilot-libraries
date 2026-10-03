@@ -22,7 +22,7 @@ test("manifest integrity - committed RenoDX v1 document is well-formed and inter
     "Manifest should have at least one engine profile",
   );
   assert.equal(manifest.schema_version, 1);
-  assert.equal(manifest.games.length, 906);
+  assert.equal(manifest.games.length, 907);
 
   const dragonQuestS = manifest.games.find((title) => title.id === "dragon-quest-11-s");
   assert.ok(dragonQuestS, "Dragon Quest XI S must be a distinct exact RenoDX target");

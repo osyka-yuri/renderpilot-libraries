@@ -2147,6 +2147,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "End of Abyss",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "end-of-abyss",
+    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Engine.ini HDR can't be used due to issues with saving game progress.",
+    "source_key": "ue-extended:end-of-abyss",
+    "section": "ue-extended"
+  },
+  {
     "name": "Escape the Backrooms",
     "slug": "ue-extended",
     "arch": "X64",

@@ -328,6 +328,17 @@ assign(
   { processingPath: "upgrade" },
 );
 assign(
+  keyList("ue-extended", "end-of-abyss"),
+  [
+    addonSetting(
+      "R10G10B10A2_UNORM",
+      "Output Size",
+      "Set the R10G10B10A2_UNORM resource upgrade to Output Size.",
+    ),
+  ],
+  { processingPath: "upgrade" },
+);
+assign(
   keyList("ue-extended", "escape-the-backrooms"),
   [
     addonSetting(
