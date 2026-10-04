@@ -212,31 +212,34 @@ test("Xiph build receipt supports unreal profile on x64 in revision 2", async ()
     delay: [],
   });
 
-  pair.builds.push({
-    build_revision: 2,
-    generated_at: "2026-07-27T00:00:00.000Z",
-    recipe_sha256: "1".repeat(64),
-    verification_policy_sha256: "2".repeat(64),
-    patches: {},
-    toolchain: {
-      runner_image: "windows-2025-vs2026@20260720.1",
-      compiler: "MSVC 19.51",
-      linker: "LINK 14.51",
-      windows_sdk: "10.0.26100.0",
-      cmake: "4.3.1",
-    },
-    artifacts: artifactKeysR2.map((artifact_key) => ({
-      artifact_key,
-      dll_sha256: "3".repeat(64),
-      dll_size_bytes: 1,
-      transport: {
-        object_key: `libraries/blobs/sha256/${"4".repeat(64)}.dll.zst`,
-        zst_sha256: "4".repeat(64),
-        zst_size_bytes: 1,
-        compression_level: 12,
+  pair.builds = [
+    pair.builds[0],
+    {
+      build_revision: 2,
+      generated_at: "2026-07-27T00:00:00.000Z",
+      recipe_sha256: "1".repeat(64),
+      verification_policy_sha256: "2".repeat(64),
+      patches: {},
+      toolchain: {
+        runner_image: "windows-2025-vs2026@20260720.1",
+        compiler: "MSVC 19.51",
+        linker: "LINK 14.51",
+        windows_sdk: "10.0.26100.0",
+        cmake: "4.3.1",
       },
-    })),
-  });
+      artifacts: artifactKeysR2.map((artifact_key) => ({
+        artifact_key,
+        dll_sha256: "3".repeat(64),
+        dll_size_bytes: 1,
+        transport: {
+          object_key: `libraries/blobs/sha256/${"4".repeat(64)}.dll.zst`,
+          zst_sha256: "4".repeat(64),
+          zst_size_bytes: 1,
+          compression_level: 12,
+        },
+      })),
+    },
+  ];
   lock.pairs = [pair];
   assert.doesNotThrow(() => assertXiphLock(lock));
 });
