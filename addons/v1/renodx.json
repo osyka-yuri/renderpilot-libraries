@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T00:00:00Z",
+  "generated_at": "2026-10-06T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -4309,6 +4309,23 @@
       }
     },
     {
+      "id": "saints-row",
+      "name": "Saints Row",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "742420",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "saintsrow2022",
+        "source": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-saintsrow2022.addon64"
+      }
+    },
+    {
       "id": "sea-of-stars",
       "name": "Sea of Stars",
       "architecture": "X64",
@@ -6456,6 +6473,23 @@
       }
     },
     {
+      "id": "marsupilami-2-salsa-palombia",
+      "name": "Marsupilami 2: Salsa Palombia",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3650170",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "meccha-chameleon",
       "name": "MECCHA CHAMELEON",
       "architecture": "X64",
@@ -6498,6 +6532,23 @@
         {
           "kind": "steam_appid",
           "value": "1369670",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "nikoderiko-the-magical-world",
+      "name": "Nikoderiko: The Magical World",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2374190",
           "tier": 100
         }
       ],
@@ -6745,6 +6796,23 @@
         {
           "kind": "steam_appid",
           "value": "1962700",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "system-shock-remake",
+      "name": "System Shock Remake",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "482400",
           "tier": 100
         }
       ],
@@ -9106,22 +9174,6 @@
         {
           "kind": "steam_appid",
           "value": "1543030",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
-      "id": "system-shock-remake",
-      "name": "System Shock Remake",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "482400",
           "tier": 100
         }
       ],

@@ -1074,6 +1074,22 @@
       }
     },
     {
+      "id": "renodx.ue.extended.marsupilami.2.salsa.palombia.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.meccha.chameleon.1",
       "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
       "kind": "engine_ini",
@@ -1119,6 +1135,22 @@
         "ru": "В этой игре изменения ползунков RenoDX применяются не в реальном времени.",
         "zh-Hans": "在此游戏中，RenoDX 滑块更改不会实时生效。",
         "zh-Hant": "在此遊戲中，RenoDX 滑桿變更不會即時套用。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.nikoderiko.the.magical.world.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
       }
     },
     {
@@ -1299,6 +1331,22 @@
     },
     {
       "id": "renodx.ue.extended.subnautica.2.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.system.shock.remake.1",
       "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
       "kind": "engine_ini",
       "context": "guidance.engine_ini",

@@ -576,6 +576,14 @@
     "note": "Native HDR"
   },
   {
+    "source_key": "ue-extended:marsupilami-2-salsa-palombia",
+    "game_id": "marsupilami-2-salsa-palombia",
+    "title": "Marsupilami 2: Salsa Palombia",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini"
+  },
+  {
     "source_key": "ue-extended:meccha-chameleon",
     "game_id": "meccha-chameleon",
     "title": "MECCHA CHAMELEON",
@@ -598,6 +606,14 @@
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Upgrade Path: On. Sliders do not change in real-time."
+  },
+  {
+    "source_key": "ue-extended:nikoderiko-the-magical-world",
+    "game_id": "nikoderiko-the-magical-world",
+    "title": "Nikoderiko: The Magical World",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini"
   },
   {
     "source_key": "ue-extended:nobody-wants-to-die",
@@ -715,6 +731,14 @@
     "source_key": "ue-extended:subnautica-2",
     "game_id": "subnautica-2",
     "title": "Subnautica 2",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini"
+  },
+  {
+    "source_key": "ue-extended:system-shock-remake",
+    "game_id": "system-shock-remake",
+    "title": "System Shock Remake",
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Engine.ini"

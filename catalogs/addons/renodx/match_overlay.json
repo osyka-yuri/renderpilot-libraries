@@ -1534,6 +1534,9 @@
   "mars-attracts": {
     "game_target_ids": ["mars-attracts"]
   },
+  "marsupilami-2-salsa-palombia": {
+    "game_target_ids": ["marsupilami-2-salsa-palombia"]
+  },
   "marvel-s-midnight-suns": {
     "game_target_ids": ["marvels-midnight-suns"]
   },
@@ -1694,6 +1697,9 @@
   "nights-of-azure-2": {
     "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64",
     "game_target_ids": ["nights-of-azure-2"]
+  },
+  "nikoderiko-the-magical-world": {
+    "game_target_ids": ["nikoderiko-the-magical-world"]
   },
   "nine-sols": {
     "game_target_ids": ["nine-sols"]
@@ -2046,6 +2052,10 @@
   },
   "saga-emerald-beyond": {
     "game_target_ids": ["saga-emerald-beyond"]
+  },
+  "saints-row": {
+    "download_url": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-saintsrow2022.addon64",
+    "game_target_ids": ["saints-row-2022"]
   },
   "sand-land": {
     "game_target_ids": ["sand-land"]

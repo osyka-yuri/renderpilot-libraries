@@ -282,7 +282,7 @@ omit(
 assign(
   keyList(
     "ue-extended",
-    "bodycam choo-choo-charles conan-exiles-enhanced crab-champions everwind grounded-2 inzoi meccha-chameleon mortal-shell-ii nobody-wants-to-die quarantine-zone-the-last-check rv-there-yet satisfactory solarpunk subnautica-2 the-blood-of-dawnwalker the-enjenir-the-engineering-physics-building-simulator",
+    "bodycam choo-choo-charles conan-exiles-enhanced crab-champions everwind grounded-2 inzoi marsupilami-2-salsa-palombia meccha-chameleon mortal-shell-ii nikoderiko-the-magical-world nobody-wants-to-die quarantine-zone-the-last-check rv-there-yet satisfactory solarpunk subnautica-2 system-shock-remake the-blood-of-dawnwalker the-enjenir-the-engineering-physics-building-simulator",
   ),
   [
     ini(

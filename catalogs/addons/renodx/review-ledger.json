@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "29b928a57844605cee636545b8fe037882091fa3c84d083b8f3a4edd79c1b70b",
+    "wiki_content_sha256": "68fb42b55e8c5a90e71c069ef4e340038d427dbb26c012050d3e4d5609d845a4",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "4d7155ebc666ce66c9de0c30d2c42d4cf76d22484baf15bae81d530f7298dc19",
+    "active_message_fingerprint": "8a0fc45ebb085e1fd4c0b2fb9fed6b15ac7f67be36aacc16027457f49300fc55",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -789,6 +789,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:marsupilami-2-salsa-palombia",
+      "game_id": "marsupilami-2-salsa-palombia",
+      "title": "Marsupilami 2: Salsa Palombia",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:meccha-chameleon",
       "game_id": "meccha-chameleon",
       "title": "MECCHA CHAMELEON",
@@ -815,6 +825,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "0ea9daa47815b7a5cdad4c0982ee1266772f8313134e3f4931e21b71893909d6",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:nikoderiko-the-magical-world",
+      "game_id": "nikoderiko-the-magical-world",
+      "title": "Nikoderiko: The Magical World",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -962,6 +982,16 @@
       "source_key": "ue-extended:subnautica-2",
       "game_id": "subnautica-2",
       "title": "Subnautica 2",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:system-shock-remake",
+      "game_id": "system-shock-remake",
+      "title": "System Shock Remake",
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",

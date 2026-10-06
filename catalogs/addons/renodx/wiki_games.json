@@ -1459,6 +1459,13 @@
     "id": "routine"
   },
   {
+    "name": "Saints Row",
+    "slug": "saintsrow2022",
+    "arch": "X64",
+    "status": "working",
+    "id": "saints-row"
+  },
+  {
     "name": "Sea of Stars",
     "slug": "seaofstars",
     "arch": "X64",
@@ -2417,6 +2424,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Marsupilami 2: Salsa Palombia",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "marsupilami-2-salsa-palombia",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:marsupilami-2-salsa-palombia",
+    "section": "ue-extended"
+  },
+  {
     "name": "MECCHA CHAMELEON",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2444,6 +2461,16 @@
     "id": "motor-town-behind-the-wheel",
     "notes": "Upgrade Path: On. Sliders do not change in real-time.",
     "source_key": "ue-extended:motor-town-behind-the-wheel",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Nikoderiko: The Magical World",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "nikoderiko-the-magical-world",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:nikoderiko-the-magical-world",
     "section": "ue-extended"
   },
   {
@@ -2584,6 +2611,16 @@
     "id": "subnautica-2",
     "notes": "Engine.ini",
     "source_key": "ue-extended:subnautica-2",
+    "section": "ue-extended"
+  },
+  {
+    "name": "System Shock Remake",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "system-shock-remake",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:system-shock-remake",
     "section": "ue-extended"
   },
   {
@@ -3914,16 +3951,6 @@
     "id": "sword-and-fairy-7",
     "notes": "`B8G8R8A8_TYPELESS` `Output Size`",
     "source_key": "unreal:sword-and-fairy-7",
-    "section": "unreal"
-  },
-  {
-    "name": "System Shock Remake",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "system-shock-remake",
-    "notes": "`B8G8R8A8_TYPELESS` `Output Size`",
-    "source_key": "unreal:system-shock-remake",
     "section": "unreal"
   },
   {

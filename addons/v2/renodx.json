@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-03T00:00:00Z",
+  "generated_at": "2026-10-06T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -4436,6 +4436,23 @@
       }
     },
     {
+      "id": "saints-row",
+      "name": "Saints Row",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "742420",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "saintsrow2022",
+        "source": "https://github.com/jhi721/renodx/releases/download/snapshot/renodx-saintsrow2022.addon64"
+      }
+    },
+    {
       "id": "sea-of-stars",
       "name": "Sea of Stars",
       "architecture": "X64",
@@ -7991,6 +8008,64 @@
       "processing_path": "native"
     },
     {
+      "id": "marsupilami-2-salsa-palombia",
+      "name": "Marsupilami 2: Salsa Palombia",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3650170",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.marsupilami.2.salsa.palombia.1",
+          "message_id": "renodx.ue.extended.marsupilami.2.salsa.palombia.1",
+          "kind": "engine_ini",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+          "engine_ini": {
+            "schema_version": 1,
+            "revision": 1,
+            "sections": [
+              {
+                "name": "SystemSettings",
+                "entries": [
+                  {
+                    "key": "r.AllowHDR",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.EnableHDROutput",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.Display.OutputDevice",
+                    "value": "3"
+                  },
+                  {
+                    "key": "r.HDR.Display.ColorGamut",
+                    "value": "2"
+                  },
+                  {
+                    "key": "r.HDR.UI.CompositeMode",
+                    "value": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
+        }
+      ],
+      "profile_id": "ue_extended"
+    },
+    {
       "id": "meccha-chameleon",
       "name": "MECCHA CHAMELEON",
       "architecture": "X64",
@@ -8132,6 +8207,64 @@
       ],
       "profile_id": "ue_extended",
       "processing_path": "upgrade"
+    },
+    {
+      "id": "nikoderiko-the-magical-world",
+      "name": "Nikoderiko: The Magical World",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2374190",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.nikoderiko.the.magical.world.1",
+          "message_id": "renodx.ue.extended.nikoderiko.the.magical.world.1",
+          "kind": "engine_ini",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+          "engine_ini": {
+            "schema_version": 1,
+            "revision": 1,
+            "sections": [
+              {
+                "name": "SystemSettings",
+                "entries": [
+                  {
+                    "key": "r.AllowHDR",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.EnableHDROutput",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.Display.OutputDevice",
+                    "value": "3"
+                  },
+                  {
+                    "key": "r.HDR.Display.ColorGamut",
+                    "value": "2"
+                  },
+                  {
+                    "key": "r.HDR.UI.CompositeMode",
+                    "value": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
+        }
+      ],
+      "profile_id": "ue_extended"
     },
     {
       "id": "nobody-wants-to-die",
@@ -8929,6 +9062,64 @@
         {
           "id": "renodx.ue.extended.subnautica.2.1",
           "message_id": "renodx.ue.extended.subnautica.2.1",
+          "kind": "engine_ini",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+          "engine_ini": {
+            "schema_version": 1,
+            "revision": 1,
+            "sections": [
+              {
+                "name": "SystemSettings",
+                "entries": [
+                  {
+                    "key": "r.AllowHDR",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.EnableHDROutput",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.Display.OutputDevice",
+                    "value": "3"
+                  },
+                  {
+                    "key": "r.HDR.Display.ColorGamut",
+                    "value": "2"
+                  },
+                  {
+                    "key": "r.HDR.UI.CompositeMode",
+                    "value": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
+        }
+      ],
+      "profile_id": "ue_extended"
+    },
+    {
+      "id": "system-shock-remake",
+      "name": "System Shock Remake",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "482400",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.system.shock.remake.1",
+          "message_id": "renodx.ue.extended.system.shock.remake.1",
           "kind": "engine_ini",
           "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
           "engine_ini": {
@@ -13043,31 +13234,6 @@
         {
           "kind": "steam_appid",
           "value": "1543030",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      },
-      "renodx_config": {
-        "settings": [
-          {
-            "key": "Upgrade_B8G8R8A8_TYPELESS",
-            "value": 1
-          }
-        ]
-      },
-      "profile_id": "unreal_legacy"
-    },
-    {
-      "id": "system-shock-remake",
-      "name": "System Shock Remake",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "482400",
           "tier": 100
         }
       ],

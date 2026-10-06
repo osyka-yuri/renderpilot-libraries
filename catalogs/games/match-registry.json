@@ -12697,6 +12697,20 @@
       ]
     },
     {
+      "id": "marsupilami-2-salsa-palombia",
+      "rules": [
+        {
+          "id": "steam-3650170",
+          "kind": "steam_appid",
+          "value": "3650170",
+          "provenance": {
+            "source": "renodx-match-overlay",
+            "locator": "catalogs/addons/renodx/match_overlay.json#marsupilami-2-salsa-palombia"
+          }
+        }
+      ]
+    },
+    {
       "id": "martha-is-dead",
       "rules": [
         {
@@ -14062,6 +14076,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#nights-of-azure-2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nikoderiko-the-magical-world",
+      "rules": [
+        {
+          "id": "steam-2374190",
+          "kind": "steam_appid",
+          "value": "2374190",
+          "provenance": {
+            "source": "renodx-match-overlay",
+            "locator": "catalogs/addons/renodx/match_overlay.json#nikoderiko-the-magical-world"
           }
         }
       ]
