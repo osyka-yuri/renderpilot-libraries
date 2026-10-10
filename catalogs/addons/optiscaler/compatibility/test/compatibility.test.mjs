@@ -13,20 +13,20 @@ import {
 import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
-const EXPECTED_PUBLISHED_ENTRY_COUNT = 690;
+const EXPECTED_PUBLISHED_ENTRY_COUNT = 691;
 const CURRENT_WIKI_SNAPSHOT = {
-  revision: "2026-09-25",
-  sha256: "3d45f35a349fbdb69e45b3000009f97acf11068cc752336c77716a276c44a6d6",
-  rows: 706,
+  revision: "2026-10-10",
+  sha256: "ea20dad091eef09077e69ebad5e7fe466a26d00b4b1a3ac96a0cf7005637258c",
+  rows: 712,
 };
 const SHIFTED_MAIN_SOURCE_KEYS = Array.from(
   { length: 175 },
-  (_, index) => `main:${String(490 + index).padStart(4, "0")}`,
+  (_, index) => `main:${String(494 + index).padStart(4, "0")}`,
 );
 const EXPECTED_REFRAMEWORK_FAMILY = [
   {
     id: "onimusha-way-of-the-sword",
-    sourceKey: "main:0396",
+    sourceKey: "main:0400",
     inputs: ["dlss2_plus", "fsr2_plus"],
     steamAppId: "2638890",
     messageId: "optiscaler-onimusha-way-of-the-sword-reframework",
@@ -70,7 +70,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-requiem",
-    sourceKey: "main:0446",
+    sourceKey: "main:0450",
     inputs: ["dlss2_plus", "fsr2_plus"],
     steamAppId: "3764200",
     messageId: "optiscaler-resident-evil-requiem-reframework",
@@ -122,80 +122,87 @@ const EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY = [
 ];
 const GENERIC_PENDING_IDENTITY_REASON = "An exact runtime identity has not been curated.";
 const EXPECTED_PENDING_IDENTITY_REASONS = {
-  "main:0013":
-    "The Epic launcher AppName is not verified; CatalogItemId alone is not a reachable runtime identity.",
-  "main:0014": "No verified exact Epic Games Store identity is available.",
-  "main:0190": "This is a mod distribution, not a game runtime target identity.",
-  "main:0316":
-    "Multiple distinct official Steam apps and demos share this title, so no exact identity can be selected.",
-  "main:0363": "The UWP/Windows edition has no supported exact identity binding.",
-  "main:0365": "No supported exact runtime or store identity is available.",
-  "main:0415":
-    "An Epic-only candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0459":
-    "Store results are different products and do not establish an exact title binding.",
-  "main:0464": "The upstream source deliberately provides no bindable identity.",
-  "main:0479": "No exact verifiable store identity is available.",
-  "main:0489":
+  "main:0007":
     "Unreleased game; no verified runtime executable or match target is available.",
-  "main:0541":
+  "main:0014":
+    "The Epic launcher AppName is not verified; CatalogItemId alone is not a reachable runtime identity.",
+  "main:0015": "No verified exact Epic Games Store identity is available.",
+  "main:0100":
+    "Unreleased fan project; no verified runtime executable or match target is available.",
+  "main:0106": "This is a mod distribution, not a game runtime target identity.",
+  "main:0193": "This is a mod distribution, not a game runtime target identity.",
+  "main:0264": "No verified exact match target or executable observation is available.",
+  "main:0320":
+    "Multiple distinct official Steam apps and demos share this title, so no exact identity can be selected.",
+  "main:0367": "The UWP/Windows edition has no supported exact identity binding.",
+  "main:0369": "No supported exact runtime or store identity is available.",
+  "main:0419":
+    "An Epic-only candidate exists, but no verified exact Epic Games Store identity is available.",
+  "main:0463":
+    "Store results are different products and do not establish an exact title binding.",
+  "main:0468": "The upstream source deliberately provides no bindable identity.",
+  "main:0483": "No exact verifiable store identity is available.",
+  "main:0493":
+    "Unreleased game; no verified runtime executable or match target is available.",
+  "main:0545":
     "An Epic candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0583":
+  "main:0587":
     "The prior Steam AppID 3763780 is no longer a current app; other Rift results are distinct games.",
-  "main:0605": "No verified exact match target or executable observation is available.",
+  "main:0596": "No verified exact match target or executable observation is available.",
+  "main:0610": "No verified exact match target or executable observation is available.",
 };
 const EXPECTED_REAUDITED_BINDINGS = {
-  "main:0029": {
+  "main:0030": {
     entryId: "armatus-demo",
     targetId: "armatus",
     identity: { kind: "steam_appid", value: "3660710" },
   },
-  "main:0154": {
+  "main:0157": {
     entryId: "diablo-ii-resurrected",
     targetId: "diablo-ii-resurrected",
     identity: { kind: "steam_appid", value: "2536520" },
   },
-  "main:0195": {
+  "main:0198": {
     entryId: "everwind-demo",
     targetId: "everwind",
     identity: { kind: "steam_appid", value: "2253100" },
   },
-  "main:0390": {
+  "main:0394": {
     entryId: "norse-oath-of-blood-demo",
     targetId: "norse-oath-of-blood",
     identity: { kind: "steam_appid", value: "3054690" },
   },
-  "main:0397": {
+  "main:0401": {
     entryId: "online-404-demo",
     targetId: "online-404",
     identity: { kind: "steam_appid", value: "4094350" },
   },
-  "main:0428": {
+  "main:0432": {
     entryId: "protocol-terminate-demo",
     targetId: "protocol-terminate",
     identity: { kind: "steam_appid", value: "3710560" },
   },
-  "main:0527": {
+  "main:0531": {
     entryId: "stygian-outer-gods",
     targetId: "stygian-outer-gods",
     identity: { kind: "steam_appid", value: "2581410" },
   },
-  "main:0569": {
+  "main:0573": {
     entryId: "the-last-oricru",
     targetId: "the-last-oricru",
     identity: { kind: "steam_appid", value: "1663640" },
   },
-  "main:0578": {
+  "main:0582": {
     entryId: "the-other-side",
     targetId: "the-other-side",
     identity: { kind: "steam_appid", value: "2764750" },
   },
-  "main:0612": {
+  "main:0617": {
     entryId: "undertaker",
     targetId: "undertaker",
     identity: { kind: "steam_appid", value: "4030360" },
   },
-  "main:0651": {
+  "main:0656": {
     entryId: "wonder-ball",
     targetId: "wonder-ball",
     identity: { kind: "steam_appid", value: "2640030" },
@@ -793,7 +800,7 @@ test("every OptiScaler entry preserves its authored default proxy policy", async
 test("Guardians of the Galaxy projects its exact source-bound Spoofing override", async () => {
   const inputs = await fixture();
   const authored = inputs.curatedGames.entries.find(
-    (entry) => entry.source_ref === "main:0258",
+    (entry) => entry.source_ref === "main:0261",
   );
   assert.ok(authored, "Guardians source entry must remain authored");
   assert.deepEqual(authored.declared_inputs, ["dlss2_plus"]);
@@ -905,20 +912,20 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
   assert.equal(inputs.ledger.snapshot_sha256, CURRENT_WIKI_SNAPSHOT.sha256);
   assert.equal(inputs.curatedGames.snapshot_sha256, CURRENT_WIKI_SNAPSHOT.sha256);
 
-  const onimusha = snapshotBySource.get("main:0396");
+  const onimusha = snapshotBySource.get("main:0400");
   assert.equal(onimusha?.title, "Onimusha: Way of the Sword");
-  assert.deepEqual(ledgerBySource.get("main:0396")?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0400")?.disposition, {
     kind: "published",
     entry_id: "onimusha-way-of-the-sword",
   });
-  assert.deepEqual(ledgerBySource.get("main:0396")?.notes?.[0]?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0400")?.notes?.[0]?.disposition, {
     kind: "guidance",
     message_ids: ["optiscaler-onimusha-way-of-the-sword-reframework"],
   });
   assert.equal(entriesById.has("onimusha-way-of-the-sword-demo"), false);
   assert.deepEqual(entriesById.get("onimusha-way-of-the-sword"), {
     id: "onimusha-way-of-the-sword",
-    source_ref: "main:0396",
+    source_ref: "main:0400",
     status: "working",
     declared_inputs: ["dlss2_plus", "fsr2_plus"],
     guidance: [
@@ -970,12 +977,12 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
       `${sourceKey} must retain its exact post-rekey source binding`,
     );
   }
-  assert.equal(snapshotBySource.get("main:0664")?.title, "Zouhri: The Cursed Blood Demo");
+  assert.equal(snapshotBySource.get("main:0669")?.title, "Zouhri: The Cursed Blood Demo");
 
   const zero = entriesById.get("star-wars-zero-company");
   assert.deepEqual(zero, {
     id: "star-wars-zero-company",
-    source_ref: "main:0517",
+    source_ref: "main:0521",
     status: "working",
     declared_inputs: ["dlss2_plus", "fsr2_plus", "xess"],
     guidance: [
@@ -995,11 +1002,11 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
     ],
     game_target_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0517")?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0521")?.disposition, {
     kind: "published",
     entry_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0517")?.notes?.[0]?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0521")?.notes?.[0]?.disposition, {
     kind: "guidance",
     message_ids: ["optiscaler-star-wars-zero-company-vendor-options"],
   });
@@ -1208,14 +1215,14 @@ test("re-audited identities are explicit source-to-target bindings", async () =>
     assert.deepEqual(runtimeById.get(expected.entryId)?.identities, [expected.identity]);
   }
 
-  const online = entriesBySource.get("main:0397");
+  const online = entriesBySource.get("main:0401");
   assert.deepEqual(online?.guidance, [
     {
       kind: "game_setting",
       message_id: "optiscaler-online-404-reselect-upscaler",
     },
   ]);
-  assert.deepEqual(ledgerBySource.get("main:0397")?.notes[0]?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0401")?.notes[0]?.disposition, {
     kind: "guidance",
     message_ids: ["optiscaler-online-404-reselect-upscaler"],
   });

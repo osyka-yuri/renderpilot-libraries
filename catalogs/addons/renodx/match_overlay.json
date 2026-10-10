@@ -177,9 +177,15 @@
     },
     "game_target_ids": ["assassin-s-creed-iii-remastered"]
   },
+  "assassin-s-creed-liberation-remastered": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-AssassinsCreedLiberation.addon64"
+  },
   "assassin-s-creed-revelations": {
     "download_url": "https://github.com/hartapfel/renodx/releases/download/asscreedeziotrilogy-snapshot/renodx-asscreedeziotrilogy.addon32",
     "game_target_ids": ["assassins-creed-revelations"]
+  },
+  "assassin-s-creed-rogue": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-AssassinsCreedRogue.addon64"
   },
   "assassin-s-creed-syndicate": {
     "external": {
@@ -216,6 +222,16 @@
   "assault-android-cactus": {
     "game_target_ids": ["assault-android-cactus"]
   },
+  "assetto-corsa-competizione": {
+    "game_target_ids": ["assetto-corsa-competizione"]
+  },
+  "assetto-corsa-evo": {
+    "external": {
+      "url": "https://www.nexusmods.com/assettocorsaevo/mods/8",
+      "label_key": "renodx.external.nexus"
+    },
+    "game_target_ids": ["assetto-corsa-evo"]
+  },
   "assetto-corsa-rally": {
     "game_target_ids": ["assetto-corsa-rally"]
   },
@@ -231,22 +247,22 @@
   "atelier-resleriana-the-red-alchemist-the-white-guardian": {
     "game_target_ids": ["atelier-resleriana-the-red-alchemist-the-white-guardian"]
   },
-  "atelier-ryza-1": {
-    "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64",
-    "game_target_ids": ["atelier-ryza-1"]
-  },
-  "atelier-ryza-2": {
+  "atelier-ryza-2-lost-legends-the-secret-fairy": {
     "download_url": "https://marat569.github.io/renodx/renodx-ryza2.addon64",
     "game_target_ids": ["atelier-ryza-2"]
   },
-  "atelier-ryza-3": {
+  "atelier-ryza-3-alchemist-of-the-end-the-secret-key": {
     "download_url": "https://marat569.github.io/renodx/renodx-ryza3.addon64",
     "game_target_ids": ["atelier-ryza-3"]
   },
-  "atelier-ryza-dx": {
+  "atelier-ryza-ever-darkness-the-secret-hideout": {
+    "download_url": "https://akuru-q.github.io/renodx/renodx-ryza.addon64",
+    "game_target_ids": ["atelier-ryza-1"]
+  },
+  "atelier-ryza-ever-darkness-the-secret-hideout-dx": {
     "game_target_ids": ["atelier-ryza-dx"]
   },
-  "atelier-sophie-1-dx": {
+  "atelier-sophie-the-alchemist-of-the-mysterious-book-dx": {
     "download_url": "https://marat569.github.io/renodx/renodx-sophie1.addon64",
     "game_target_ids": ["atelier-sophie-1-dx"]
   },
@@ -254,7 +270,7 @@
     "download_url": "https://marat569.github.io/renodx/renodx-yumia1.addon64",
     "game_target_ids": ["atelier-yumia-the-alchemist-of-memories-the-envisioned-land"]
   },
-  "atlas-fallen": {
+  "atlas-fallen-reign-of-sand-dx12": {
     "game_target_ids": ["atlas-fallen-reign-of-sand"]
   },
   "atlyss": {
@@ -308,7 +324,7 @@
   "batbarian-testament-of-the-primordials": {
     "game_target_ids": ["batbarian-testament-of-the-primordials"]
   },
-  "batman-arkham-asylum": {
+  "batman-arkham-asylum-goty-edition": {
     "game_target_ids": ["batman-arkham-asylum"]
   },
   "batman-arkham-knight": {
@@ -384,7 +400,7 @@
   "biped": {
     "game_target_ids": ["biped"]
   },
-  "black-desert-online": {
+  "black-desert": {
     "game_target_ids": ["black-desert-online"]
   },
   "black-myth-wukong": {
@@ -460,13 +476,31 @@
   "cakey-s-twisted-bakery": {
     "game_target_ids": ["cakey-s-twisted-bakery"]
   },
+  "call-of-duty-black-ops": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODBLOPS.addon32"
+  },
+  "call-of-duty-black-ops-cold-war": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODColdWar.addon64"
+  },
+  "call-of-duty-black-ops-ii": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODBLOPS2.addon32"
+  },
+  "call-of-duty-ghosts": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODGHOSTS.addon64"
+  },
+  "call-of-duty-modern-warfare-3-2011": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODMW3.addon64"
+  },
+  "call-of-duty-world-at-war": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODWAW.addon32"
+  },
   "call-of-juarez": {
     "game_target_ids": ["call-of-juarez"]
   },
   "call-of-the-sea": {
     "game_target_ids": ["call-of-the-sea"]
   },
-  "castlevania-lords-of-shadow": {
+  "castlevania-lords-of-shadow-ultimate-edition": {
     "game_target_ids": ["castlevania-lords-of-shadow"]
   },
   "cat-quest-iii": {
@@ -506,7 +540,7 @@
   "citizen-sleeper": {
     "game_target_ids": ["citizen-sleeper"]
   },
-  "citizen-sleeper-2": {
+  "citizen-sleeper-2-starward-vector": {
     "game_target_ids": ["citizen-sleeper-2"]
   },
   "clair-obscur-expedition-33": {
@@ -523,6 +557,9 @@
   },
   "cloverpit": {
     "game_target_ids": ["cloverpit"]
+  },
+  "cocoon": {
+    "game_target_ids": ["cocoon"]
   },
   "code-vein": {
     "game_target_ids": ["code-vein"]
@@ -567,8 +604,12 @@
   "creature-kitchen": {
     "game_target_ids": ["creature-kitchen"]
   },
-  "crimson-desert": {
-    "game_target_ids": ["crimson-desert"]
+  "crimson-desert-enhanced": {
+    "game_target_ids": ["crimson-desert"],
+    "external": {
+      "url": "https://www.nexusmods.com/crimsondesert/mods/7",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "crisis-core-ff7-reunion": {
     "game_target_ids": ["crisis-core-ff7-reunion"]
@@ -604,7 +645,7 @@
   "dark-souls-remastered": {
     "game_target_ids": ["dark-souls-remastered"]
   },
-  "darkest-dungeon-2": {
+  "darkest-dungeon-ii": {
     "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
     "game_target_ids": ["darkest-dungeon-2"]
   },
@@ -660,7 +701,7 @@
   "death-s-door": {
     "game_target_ids": ["death-s-door"]
   },
-  "death-stranding-2": {
+  "death-stranding-2-on-the-beach": {
     "game_target_ids": ["death-stranding-2-on-the-beach"]
   },
   "death-stranding-director-s-cut": {
@@ -678,6 +719,9 @@
   "deliver-at-all-costs": {
     "game_target_ids": ["deliver-at-all-costs"]
   },
+  "deliver-us-the-moon": {
+    "game_target_ids": ["deliver-us-the-moon"]
+  },
   "demon-slayer-kny-hinokami-chronicles": {
     "game_target_ids": ["demon-slayer-kny-hinokami-chronicles"]
   },
@@ -687,7 +731,7 @@
   "deus-ex-mankind-divided": {
     "game_target_ids": ["deus-ex-mankind-divided"]
   },
-  "devil-may-cry-v": {
+  "devil-may-cry-5": {
     "game_target_ids": ["devil-may-cry-5"]
   },
   "digimon-story-time-stranger": {
@@ -749,11 +793,11 @@
   "dragon-quest-iii-hd-2d-remake": {
     "game_target_ids": ["dragon-quest-iii-hd-2d-remake"]
   },
-  "dragon-quest-vii-remake": {
+  "dragon-quest-vii-reimagined": {
     "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64",
     "game_target_ids": ["dragon-quest-vii-remake"]
   },
-  "dragon-quest-xi": {
+  "dragon-quest-xi-echoes-of-an-elusive-agetm-original-de": {
     "download_url": "https://danaforever.github.io/renodx/renodx-dragonquest-ue.addon64",
     "game_target_ids": ["dragon-quest-11-s", "dragon-quest-xi"]
   },
@@ -962,19 +1006,19 @@
   "figment-2-creed-valley": {
     "game_target_ids": ["figment-2-creed-valley"]
   },
-  "final-fantasy-7-rebirth": {
+  "final-fantasy-vii-rebirth": {
     "game_target_ids": ["final-fantasy-vii-rebirth"]
   },
-  "final-fantasy-7-remake": {
+  "final-fantasy-vii-remake-intergrade": {
     "game_target_ids": ["final-fantasy-vii-remake-intergrade"]
   },
-  "final-fantasy-x": {
+  "final-fantasy-x-x-2-hd-remaster": {
     "game_target_ids": ["final-fantasy-x"]
   },
-  "final-fantasy-xiv": {
+  "final-fantasy-xiv-online": {
     "game_target_ids": ["final-fantasy-xiv"]
   },
-  "final-fantasy-xv": {
+  "final-fantasy-xv-windows-edition": {
     "game_target_ids": ["final-fantasy-15"]
   },
   "firewatch": {
@@ -988,6 +1032,9 @@
   },
   "flyknight": {
     "game_target_ids": ["flyknight"]
+  },
+  "flyknight-enhanced-edition": {
+    "ignore": true
   },
   "for-the-king": {
     "game_target_ids": ["for-the-king"]
@@ -1026,6 +1073,12 @@
   "gatekeeper": {
     "game_target_ids": ["gatekeeper"]
   },
+  "gears-of-war-4": {
+    "external": {
+      "url": "https://www.nexusmods.com/gearsofwar4/mods/1",
+      "label_key": "renodx.external.nexus"
+    }
+  },
   "gedonia": {
     "game_target_ids": ["gedonia"]
   },
@@ -1035,13 +1088,6 @@
   "ghost-of-tsushima-director-s-cut": {
     "game_target_ids": ["ghost-of-tsushima-directors-cut"],
     "download_url": "https://hartapfel.github.io/renodx/renodx-gotsushima.addon64"
-  },
-  "ghost-recon-wildlands": {
-    "external": {
-      "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
-      "label_key": "renodx.external.nexus"
-    },
-    "game_target_ids": ["ghost-recon-wildlands"]
   },
   "ghostrunner": {
     "game_target_ids": ["ghostrunner"]
@@ -1137,8 +1183,11 @@
   "hades": {
     "game_target_ids": ["hades"]
   },
-  "hades-2": {
+  "hades-ii": {
     "game_target_ids": ["hades-2"]
+  },
+  "half-sword": {
+    "game_target_ids": ["half-sword"]
   },
   "halve-demo": {
     "game_target_ids": ["halve-demo"]
@@ -1486,7 +1535,7 @@
   "lost-in-vivo": {
     "game_target_ids": ["lost-in-vivo"]
   },
-  "lost-planet": {
+  "lost-planet-extreme-condition-colonies-edition": {
     "game_target_ids": ["lost-planet"]
   },
   "lost-ruins": {
@@ -1503,6 +1552,9 @@
   },
   "lunacid": {
     "game_target_ids": ["lunacid"]
+  },
+  "luto": {
+    "game_target_ids": ["luto"]
   },
   "lysfanga-the-time-shift-warrior": {
     "game_target_ids": ["lysfanga-the-time-shift-warrior"]
@@ -1690,11 +1742,11 @@
   "night-runners-prologue": {
     "game_target_ids": ["night-runners-prologue"]
   },
-  "nights-of-azure-1": {
+  "nights-of-azure": {
     "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure1.addon64",
     "game_target_ids": ["nights-of-azure-1"]
   },
-  "nights-of-azure-2": {
+  "nights-of-azure-2-bride-of-the-new-moon": {
     "download_url": "https://marat569.github.io/renodx/renodx-nightsofazure2.addon64",
     "game_target_ids": ["nights-of-azure-2"]
   },
@@ -1704,17 +1756,17 @@
   "nine-sols": {
     "game_target_ids": ["nine-sols"]
   },
+  "ninja-gaiden": {
+    "game_target_ids": ["ninja-gaiden-sigma"]
+  },
+  "ninja-gaiden-2": {
+    "game_target_ids": ["ninja-gaiden-sigma-2"]
+  },
   "ninja-gaiden-2-black": {
     "game_target_ids": ["ninja-gaiden-2-black"]
   },
   "ninja-gaiden-4": {
     "game_target_ids": ["ninja-gaiden-4"]
-  },
-  "ninja-gaiden-sigma": {
-    "game_target_ids": ["ninja-gaiden-sigma"]
-  },
-  "ninja-gaiden-sigma-2": {
-    "game_target_ids": ["ninja-gaiden-sigma-2"]
   },
   "nioh-2": {
     "download_url": "https://akuru-q.github.io/renodx/renodx-nioh2.addon64",
@@ -1729,6 +1781,9 @@
       "label_key": "renodx.external.nexus"
     },
     "game_target_ids": ["no-mans-sky"]
+  },
+  "no-rest-for-the-wicked": {
+    "game_target_ids": ["no-rest-for-the-wicked"]
   },
   "nobody-wants-to-die": {
     "game_target_ids": ["nobody-wants-to-die"]
@@ -1827,7 +1882,7 @@
   "party-club": {
     "game_target_ids": ["party-club"]
   },
-  "path-of-exile-2-dx11-only": {
+  "path-of-exile-2-dx11": {
     "download_url": "https://sgtforgery.github.io/renodx/renodx-poe2.addon64",
     "game_target_ids": ["path-of-exile-2"]
   },
@@ -1974,6 +2029,9 @@
   "resident-evil-4-remake": {
     "game_target_ids": ["resident-evil-4-remake"]
   },
+  "resident-evil-6": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-residentevil6.addon32"
+  },
   "resident-evil-7": {
     "game_target_ids": ["resident-evil-7"]
   },
@@ -2081,7 +2139,7 @@
   "sea-of-solitude": {
     "game_target_ids": ["sea-of-solitude"]
   },
-  "sea-of-stars": {
+  "sea-of-stars-sunset-edition": {
     "game_target_ids": ["sea-of-stars"]
   },
   "sekiro-shadows-die-twice": {
@@ -2109,7 +2167,7 @@
   "shadow-of-the-tomb-raider": {
     "game_target_ids": ["shadow-of-the-tomb-raider"]
   },
-  "shadow-warrior-middot-shadow-warrior-2": {
+  "shadow-warrior-2013-shadow-warrior-2": {
     "split": [
       {
         "suffix": "sw1",
@@ -2138,7 +2196,7 @@
   "shift-87": {
     "game_target_ids": ["shift-87"]
   },
-  "shin-megami-tensei-v": {
+  "shin-megami-tensei-v-vengeance": {
     "download_url": "https://marat569.github.io/renodx/renodx-smt5.addon64",
     "game_target_ids": ["shin-megami-tensei-5-vengeance"]
   },
@@ -2235,9 +2293,6 @@
   "spiritfall": {
     "game_target_ids": ["spiritfall"]
   },
-  "splinter-cell-blacklist": {
-    "game_target_ids": ["splinter-cell-blacklist"]
-  },
   "split-fiction": {
     "game_target_ids": ["split-fiction"]
   },
@@ -2294,6 +2349,9 @@
   },
   "stick-fight-the-game": {
     "game_target_ids": ["stick-fight-the-game"]
+  },
+  "still-wakes-the-deep": {
+    "game_target_ids": ["still-wakes-the-deep"]
   },
   "stranger-of-paradise-final-fantasy-origin": {
     "download_url": "https://akuru-q.github.io/renodx/renodx-sopffo.addon64",
@@ -2445,6 +2503,10 @@
   "the-elder-scrolls-iv-oblivion-remastered": {
     "game_target_ids": ["the-elder-scrolls-iv-oblivion-remastered"]
   },
+  "the-elder-scrolls-v-skyrim-special-edition": {
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-skyrimse.addon64",
+    "game_target_ids": ["the-elder-scrolls-v-skyrim-special-edition"]
+  },
   "the-enjenir": {
     "game_target_ids": ["the-enjenir"]
   },
@@ -2495,6 +2557,60 @@
   },
   "the-last-stand-aftermath": {
     "game_target_ids": ["the-last-stand-aftermath"]
+  },
+  "the-legend-of-heroes-trails-beyond-the-horizon": {
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64",
+    "game_target_ids": ["trails-beyond-the-horizon"]
+  },
+  "the-legend-of-heroes-trails-from-zero-to-azure": {
+    "split": [
+      {
+        "suffix": "zero",
+        "name": "The Legend of Heroes: Trails from Zero",
+        "game_target_ids": ["trails-from-zero-to-azure-zero"]
+      },
+      {
+        "suffix": "azure",
+        "name": "The Legend of Heroes: Trails to Azure",
+        "game_target_ids": ["trails-from-zero-to-azure-azure"]
+      }
+    ],
+    "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
+  },
+  "the-legend-of-heroes-trails-of-cold-steel-iii-iv-v": {
+    "split": [
+      {
+        "suffix": "cs3",
+        "name": "The Legend of Heroes: Trails of Cold Steel III",
+        "game_target_ids": ["trails-of-cold-steel-cs3"]
+      },
+      {
+        "suffix": "cs4",
+        "name": "The Legend of Heroes: Trails of Cold Steel IV",
+        "game_target_ids": ["trails-of-cold-steel-cs4"]
+      },
+      {
+        "suffix": "reverie",
+        "name": "The Legend of Heroes: Trails into Reverie",
+        "game_target_ids": ["trails-of-cold-steel-reverie"]
+      }
+    ],
+    "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+  },
+  "the-legend-of-heroes-trails-through-daybreak-i-ii": {
+    "split": [
+      {
+        "suffix": "d1",
+        "name": "The Legend of Heroes: Trails through Daybreak",
+        "game_target_ids": ["trails-through-daybreak-1-2-d1"]
+      },
+      {
+        "suffix": "d2",
+        "name": "The Legend of Heroes: Trails through Daybreak II",
+        "game_target_ids": ["trails-through-daybreak-1-2-d2"]
+      }
+    ],
+    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
   },
   "the-long-dark": {
     "game_target_ids": ["the-long-dark"]
@@ -2567,8 +2683,12 @@
   "the-upturned": {
     "game_target_ids": ["the-upturned"]
   },
-  "the-witcher-3": {
+  "the-witcher-3-wild-hunt-next-gen": {
     "game_target_ids": ["the-witcher-3"]
+  },
+  "the-witcher-3-wild-hunt-remastered": {
+    "ignore": true,
+    "download_url": "https://oopydoopy.github.io/renodx/renodx-thewitcher3remastered.addon64"
   },
   "the-witness": {
     "game_target_ids": ["the-witness"]
@@ -2600,6 +2720,16 @@
   "tokyo-xtreme-racer": {
     "game_target_ids": ["tokyo-xtreme-racer"]
   },
+  "tom-clancy-s-ghost-recon-wildlands": {
+    "external": {
+      "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
+      "label_key": "renodx.external.nexus"
+    },
+    "game_target_ids": ["ghost-recon-wildlands"]
+  },
+  "tom-clancy-s-splinter-cell-blacklist": {
+    "game_target_ids": ["splinter-cell-blacklist"]
+  },
   "tomb-raider": {
     "game_target_ids": ["tomb-raider"]
   },
@@ -2619,7 +2749,7 @@
     "download_url": "https://sgtforgery.github.io/renodx/renodx-tw-3kingdoms.addon64",
     "game_target_ids": ["total-war-three-kingdoms"]
   },
-  "total-war-warhammer-3": {
+  "total-war-warhammer-iii": {
     "download_url": "https://github.com/pmnoxx/renodx/releases/download/snapshot/renodx-_univ.addon64",
     "game_target_ids": ["total-war-warhammer-3"]
   },
@@ -2644,63 +2774,9 @@
   "trailmakers": {
     "game_target_ids": ["trailmakers"]
   },
-  "trails-beyond-the-horizon": {
-    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64",
-    "game_target_ids": ["trails-beyond-the-horizon"]
-  },
-  "trails-from-zero-to-azure": {
-    "split": [
-      {
-        "suffix": "zero",
-        "name": "The Legend of Heroes: Trails from Zero",
-        "game_target_ids": ["trails-from-zero-to-azure-zero"]
-      },
-      {
-        "suffix": "azure",
-        "name": "The Legend of Heroes: Trails to Azure",
-        "game_target_ids": ["trails-from-zero-to-azure-azure"]
-      }
-    ],
-    "download_url": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
-  },
   "trails-in-the-sky-1st-chapter": {
     "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64",
     "game_target_ids": ["trails-in-the-sky-1st-chapter"]
-  },
-  "trails-of-cold-steel": {
-    "split": [
-      {
-        "suffix": "cs3",
-        "name": "The Legend of Heroes: Trails of Cold Steel III",
-        "game_target_ids": ["trails-of-cold-steel-cs3"]
-      },
-      {
-        "suffix": "cs4",
-        "name": "The Legend of Heroes: Trails of Cold Steel IV",
-        "game_target_ids": ["trails-of-cold-steel-cs4"]
-      },
-      {
-        "suffix": "reverie",
-        "name": "The Legend of Heroes: Trails into Reverie",
-        "game_target_ids": ["trails-of-cold-steel-reverie"]
-      }
-    ],
-    "download_url": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
-  },
-  "trails-through-daybreak-1-2": {
-    "split": [
-      {
-        "suffix": "d1",
-        "name": "The Legend of Heroes: Trails through Daybreak",
-        "game_target_ids": ["trails-through-daybreak-1-2-d1"]
-      },
-      {
-        "suffix": "d2",
-        "name": "The Legend of Heroes: Trails through Daybreak II",
-        "game_target_ids": ["trails-through-daybreak-1-2-d2"]
-      }
-    ],
-    "download_url": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
   },
   "trek-to-yomi": {
     "game_target_ids": ["trek-to-yomi"]

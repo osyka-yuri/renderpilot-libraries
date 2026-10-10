@@ -1486,8 +1486,14 @@
             {
               "name": "SystemSettings",
               "entries": [
-                { "key": "r.DefaultFeature.AntiAliasing", "value": "2" },
-                { "key": "r.PostProcessAAQuality", "value": "4" }
+                {
+                  "key": "r.DefaultFeature.AntiAliasing",
+                  "value": "2"
+                },
+                {
+                  "key": "r.PostProcessAAQuality",
+                  "value": "4"
+                }
               ]
             }
           ]
@@ -1540,7 +1546,12 @@
           "sections": [
             {
               "name": "SystemSettings",
-              "entries": [{ "key": "r.motionblur.amount", "value": "0" }]
+              "entries": [
+                {
+                  "key": "r.motionblur.amount",
+                  "value": "0"
+                }
+              ]
             }
           ]
         }
@@ -1942,7 +1953,12 @@
           "sections": [
             {
               "name": "SystemSettings",
-              "entries": [{ "key": "r.motionblur.amount", "value": "0" }]
+              "entries": [
+                {
+                  "key": "r.motionblur.amount",
+                  "value": "0"
+                }
+              ]
             }
           ]
         }
@@ -3251,7 +3267,12 @@
           "sections": [
             {
               "name": "SystemSettings",
-              "entries": [{ "key": "r.TemporalAASamples", "value": "4" }]
+              "entries": [
+                {
+                  "key": "r.TemporalAASamples",
+                  "value": "4"
+                }
+              ]
             }
           ]
         }
@@ -3538,7 +3559,16 @@
     "asset": "Luma-Final_Fantasy_XV.zip",
     "addon_file": "Luma-Final Fantasy XV.addon",
     "arch": "X64",
-    "status": "construction",
+    "status": "working",
+    "wiki_note_reviews": [
+      {
+        "section": "completed",
+        "name": "Final Fantasy XV",
+        "fingerprint": "5a129b781dabd686cf496ec411f2dbe94567f270e0c34d099870829a5e288bc6",
+        "disposition": "omitted",
+        "reason": "Informative note summarizing features; no client action needed."
+      }
+    ],
     "game_target_ids": ["final-fantasy-15"]
   },
   {

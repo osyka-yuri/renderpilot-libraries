@@ -7,7 +7,7 @@
     "id": "007-first-light"
   },
   {
-    "name": "1000xResist",
+    "name": "1000xRESIST",
     "slug": "1000xresist",
     "arch": "X64",
     "status": "working",
@@ -44,14 +44,14 @@
     "id": "alien-isolation"
   },
   {
-    "name": "Against The Storm",
+    "name": "Against the Storm",
     "slug": "_univ",
     "arch": "X64",
     "status": "construction",
     "id": "against-the-storm"
   },
   {
-    "name": "Animal Well",
+    "name": "ANIMAL WELL",
     "slug": "animalwell",
     "arch": "X64",
     "status": "construction",
@@ -79,7 +79,7 @@
     "id": "arknights-endfield"
   },
   {
-    "name": "Armored Core VI: Fires of Rubicon",
+    "name": "ARMORED CORE™ VI FIRES OF RUBICON™",
     "slug": "fromsoft_engine",
     "arch": "X64",
     "status": "working",
@@ -128,6 +128,13 @@
     "id": "assassin-s-creed-iii-remastered"
   },
   {
+    "name": "Assassin’s Creed® Liberation Remastered",
+    "slug": "AssassinsCreedLiberation",
+    "arch": "X64",
+    "status": "working",
+    "id": "assassin-s-creed-liberation-remastered"
+  },
+  {
     "name": "Assassin’s Creed® IV Black Flag™",
     "slug": "asscreedblackflag",
     "arch": "X86",
@@ -144,11 +151,25 @@
     "id": "assassin-s-creed-black-flag-resynced"
   },
   {
-    "name": "Assassin’s Creed® Mirage",
-    "slug": "asscreedmirage",
+    "name": "Assassin’s Creed® Rogue",
+    "slug": "AssassinsCreedRogue",
     "arch": "X64",
     "status": "working",
-    "id": "assassins-creed-mirage"
+    "id": "assassin-s-creed-rogue"
+  },
+  {
+    "name": "Assassin’s Creed® Unity",
+    "slug": "assassin-s-creed-unity",
+    "arch": "X64",
+    "status": "working",
+    "id": "assassin-s-creed-unity"
+  },
+  {
+    "name": "Assassin’s Creed® Syndicate",
+    "slug": "assassin-s-creed-syndicate",
+    "arch": "X64",
+    "status": "working",
+    "id": "assassin-s-creed-syndicate"
   },
   {
     "name": "Assassin’s Creed® Origins",
@@ -165,27 +186,6 @@
     "id": "assassins-creed-odyssey"
   },
   {
-    "name": "Assassin’s Creed® Shadows",
-    "slug": "asscreedshadows",
-    "arch": "X64",
-    "status": "working",
-    "id": "assassins-creed-shadows"
-  },
-  {
-    "name": "Assassin’s Creed® Syndicate",
-    "slug": "assassin-s-creed-syndicate",
-    "arch": "X64",
-    "status": "working",
-    "id": "assassin-s-creed-syndicate"
-  },
-  {
-    "name": "Assassin’s Creed® Unity",
-    "slug": "assassin-s-creed-unity",
-    "arch": "X64",
-    "status": "working",
-    "id": "assassin-s-creed-unity"
-  },
-  {
     "name": "Assassin’s Creed® Valhalla",
     "slug": "asscreedvalhalla",
     "arch": "X64",
@@ -193,39 +193,60 @@
     "id": "assassins-creed-valhalla"
   },
   {
-    "name": "Atelier Ryza 1",
+    "name": "Assassin’s Creed® Mirage",
+    "slug": "asscreedmirage",
+    "arch": "X64",
+    "status": "working",
+    "id": "assassins-creed-mirage"
+  },
+  {
+    "name": "Assassin’s Creed® Shadows",
+    "slug": "asscreedshadows",
+    "arch": "X64",
+    "status": "working",
+    "id": "assassins-creed-shadows"
+  },
+  {
+    "name": "Assetto Corsa EVO",
+    "slug": "assetto-corsa-evo",
+    "arch": "X64",
+    "status": "working",
+    "id": "assetto-corsa-evo"
+  },
+  {
+    "name": "Atelier Ryza: Ever Darkness & the Secret Hideout",
     "slug": "ryza",
     "arch": "X64",
     "status": "working",
-    "id": "atelier-ryza-1"
+    "id": "atelier-ryza-ever-darkness-the-secret-hideout"
   },
   {
-    "name": "Atelier Ryza 2",
+    "name": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
     "slug": "ryza2",
     "arch": "X64",
     "status": "working",
-    "id": "atelier-ryza-2"
+    "id": "atelier-ryza-2-lost-legends-the-secret-fairy"
   },
   {
-    "name": "Atelier Ryza 3",
+    "name": "Atelier Ryza 3: Alchemist of the End & the Secret Key",
     "slug": "ryza3",
     "arch": "X64",
     "status": "working",
-    "id": "atelier-ryza-3"
+    "id": "atelier-ryza-3-alchemist-of-the-end-the-secret-key"
   },
   {
-    "name": "Atelier Ryza DX",
+    "name": "Atelier Ryza: Ever Darkness & the Secret Hideout DX",
     "slug": "atelierryzadx",
     "arch": "X64",
     "status": "working",
-    "id": "atelier-ryza-dx"
+    "id": "atelier-ryza-ever-darkness-the-secret-hideout-dx"
   },
   {
-    "name": "Atelier Sophie 1 DX",
+    "name": "Atelier Sophie: The Alchemist of the Mysterious Book DX",
     "slug": "sophie1",
     "arch": "X64",
     "status": "working",
-    "id": "atelier-sophie-1-dx"
+    "id": "atelier-sophie-the-alchemist-of-the-mysterious-book-dx"
   },
   {
     "name": "Atelier Yumia: The Alchemist of Memories & the Envisioned Land",
@@ -237,13 +258,13 @@
     "source_key": "main:atelier-yumia-the-alchemist-of-memories-the-envisioned-land"
   },
   {
-    "name": "Atlas Fallen (DX12)",
+    "name": "Atlas Fallen: Reign Of Sand (DX12)",
     "slug": "atlasfallen",
     "arch": "X64",
     "status": "working",
-    "id": "atlas-fallen",
+    "id": "atlas-fallen-reign-of-sand-dx12",
     "notes": "Install ReShade in 'Atlas Fallenbin'. FSR2 causes crashes.",
-    "source_key": "main:atlas-fallen-dx12"
+    "source_key": "main:atlas-fallen-reign-of-sand-dx12"
   },
   {
     "name": "Avatar: Frontiers of Pandora™",
@@ -267,18 +288,18 @@
     "id": "baldur-s-gate-3"
   },
   {
-    "name": "Batman: Arkham Knight",
+    "name": "Batman™: Arkham Knight",
     "slug": "batmanak",
     "arch": "X64",
     "status": "working",
     "id": "batman-arkham-knight"
   },
   {
-    "name": "Batman: Arkham Asylum",
+    "name": "Batman: Arkham Asylum GOTY Edition",
     "slug": "batmanaa",
     "arch": "X86",
     "status": "working",
-    "id": "batman-arkham-asylum"
+    "id": "batman-arkham-asylum-goty-edition"
   },
   {
     "name": "BERSERK and the Band of the Hawk",
@@ -295,11 +316,11 @@
     "id": "beyond-blue"
   },
   {
-    "name": "Black Desert Online",
+    "name": "Black Desert",
     "slug": "black-desert-online",
     "arch": "X64",
     "status": "working",
-    "id": "black-desert-online"
+    "id": "black-desert"
   },
   {
     "name": "Borderlands GOTY Enhanced",
@@ -325,18 +346,70 @@
     "id": "bulletstorm-full-clip-edition"
   },
   {
-    "name": "Call of Juarez (dx10)",
+    "name": "Call of Duty®: World at War",
+    "slug": "CODWAW",
+    "arch": "X86",
+    "status": "working",
+    "id": "call-of-duty-world-at-war"
+  },
+  {
+    "name": "Call of Duty®: Black Ops",
+    "slug": "CODBLOPS",
+    "arch": "X86",
+    "status": "working",
+    "id": "call-of-duty-black-ops",
+    "notes": "DXVK proxy required for increased stability! Please check the Nexus page for instructions",
+    "source_key": "main:call-of-duty-black-ops"
+  },
+  {
+    "name": "Call of Duty®: Modern Warfare® 3 (2011)",
+    "slug": "CODMW3",
+    "arch": "X64",
+    "status": "working",
+    "id": "call-of-duty-modern-warfare-3-2011",
+    "notes": "64 bit, Nexus includes a stutter fix for the game. Please check the Nexus page for instructions",
+    "source_key": "main:call-of-duty-modern-warfare-3-2011"
+  },
+  {
+    "name": "Call of Duty®: Black Ops II",
+    "slug": "CODBLOPS2",
+    "arch": "X86",
+    "status": "working",
+    "id": "call-of-duty-black-ops-ii",
+    "notes": "Avoiding multiplayer is recommended in case of a potential ban!",
+    "source_key": "main:call-of-duty-black-ops-ii"
+  },
+  {
+    "name": "Call of Duty®: Ghosts",
+    "slug": "CODGHOSTS",
+    "arch": "X64",
+    "status": "working",
+    "id": "call-of-duty-ghosts",
+    "notes": "Avoiding multiplayer is recommended in case of a potential ban!",
+    "source_key": "main:call-of-duty-ghosts"
+  },
+  {
+    "name": "Call of Duty®: Black Ops Cold War",
+    "slug": "CODColdWar",
+    "arch": "X64",
+    "status": "working",
+    "id": "call-of-duty-black-ops-cold-war",
+    "notes": "Avoiding multiplayer is recommended in case of a potential ban!",
+    "source_key": "main:call-of-duty-black-ops-cold-war"
+  },
+  {
+    "name": "Call of Juarez (DX10)",
     "slug": "callofjuarez",
     "arch": "X86",
     "status": "working",
     "id": "call-of-juarez"
   },
   {
-    "name": "Castlevania Lords of Shadow",
+    "name": "Castlevania: Lords of Shadow - Ultimate Edition",
     "slug": "castlevanialos",
     "arch": "X86",
     "status": "working",
-    "id": "castlevania-lords-of-shadow"
+    "id": "castlevania-lords-of-shadow-ultimate-edition"
   },
   {
     "name": "Child of Light",
@@ -348,11 +421,11 @@
     "source_key": "main:child-of-light"
   },
   {
-    "name": "Citizen Sleeper 2",
+    "name": "Citizen Sleeper 2: Starward Vector",
     "slug": "citizensleeper2",
     "arch": "X64",
     "status": "working",
-    "id": "citizen-sleeper-2"
+    "id": "citizen-sleeper-2-starward-vector"
   },
   {
     "name": "Clair Obscur: Expedition 33",
@@ -385,13 +458,13 @@
     "id": "control-resonant"
   },
   {
-    "name": "Crimson Desert",
-    "slug": "crimsondesert",
+    "name": "Crimson Desert Enhanced",
+    "slug": "crimson-desert-enhanced",
     "arch": "X64",
     "status": "construction",
-    "id": "crimson-desert",
+    "id": "crimson-desert-enhanced",
     "notes": "Game gets updated regularly breaking the mod. Accurate status info in discord.",
-    "source_key": "main:crimson-desert"
+    "source_key": "main:crimson-desert-enhanced"
   },
   {
     "name": "Cronos: The New Dawn",
@@ -415,18 +488,18 @@
     "id": "cyberpunk-2077"
   },
   {
-    "name": "Dark Souls: Remastered",
+    "name": "DARK SOULS™: REMASTERED",
     "slug": "darksouls",
     "arch": "X64",
     "status": "working",
     "id": "dark-souls-remastered"
   },
   {
-    "name": "Darkest Dungeon 2",
+    "name": "Darkest Dungeon® II",
     "slug": "_univ",
     "arch": "X64",
     "status": "construction",
-    "id": "darkest-dungeon-2"
+    "id": "darkest-dungeon-ii"
   },
   {
     "name": "Darksiders Warmastered Edition",
@@ -461,35 +534,35 @@
     "id": "dead-island-2"
   },
   {
-    "name": "Death Stranding : Director's Cut",
+    "name": "DEATH STRANDING DIRECTOR'S CUT",
     "slug": "deathstrandingdc",
     "arch": "X64",
     "status": "construction",
     "id": "death-stranding-director-s-cut"
   },
   {
-    "name": "Death Stranding 2",
+    "name": "DEATH STRANDING 2: ON THE BEACH",
     "slug": "deathstranding2",
     "arch": "X64",
     "status": "working",
-    "id": "death-stranding-2"
+    "id": "death-stranding-2-on-the-beach"
   },
   {
-    "name": "Deus Ex: Mankind Divided",
+    "name": "Deus Ex: Mankind Divided™",
     "slug": "dxmd",
     "arch": "X64",
     "status": "working",
     "id": "deus-ex-mankind-divided"
   },
   {
-    "name": "Devil May Cry V",
+    "name": "Devil May Cry 5",
     "slug": "dmc5",
     "arch": "X64",
     "status": "working",
-    "id": "devil-may-cry-v"
+    "id": "devil-may-cry-5"
   },
   {
-    "name": "Digimon Story: Time Stranger",
+    "name": "Digimon Story Time Stranger",
     "slug": "digimonstorytimestranger",
     "arch": "X64",
     "status": "construction",
@@ -524,7 +597,7 @@
     "id": "doom-the-dark-ages"
   },
   {
-    "name": "Dragon Age: Inquisition",
+    "name": "Dragon Age™ Inquisition",
     "slug": "dai",
     "arch": "X64",
     "status": "working",
@@ -540,18 +613,18 @@
     "source_key": "main:dragon-s-dogma-2"
   },
   {
-    "name": "Dragon Quest XI (Original & DE)",
+    "name": "DRAGON QUEST® XI: Echoes of an Elusive Age™ (Original & DE)",
     "slug": "dragonquest-ue",
     "arch": "X64",
     "status": "working",
-    "id": "dragon-quest-xi"
+    "id": "dragon-quest-xi-echoes-of-an-elusive-agetm-original-de"
   },
   {
-    "name": "Dragon Quest VII Remake",
+    "name": "DRAGON QUEST VII Reimagined",
     "slug": "dragonquest-ue",
     "arch": "X64",
     "status": "construction",
-    "id": "dragon-quest-vii-remake"
+    "id": "dragon-quest-vii-reimagined"
   },
   {
     "name": "DRAGON BALL: Sparking! ZERO",
@@ -575,14 +648,14 @@
     "id": "dying-light-the-beast"
   },
   {
-    "name": "Elden Ring",
+    "name": "ELDEN RING",
     "slug": "fromsoft_engine",
     "arch": "X64",
     "status": "working",
     "id": "elden-ring"
   },
   {
-    "name": "Elden Ring: Nightreign",
+    "name": "ELDEN RING NIGHTREIGN",
     "slug": "fromsoft_engine",
     "arch": "X64",
     "status": "working",
@@ -617,35 +690,35 @@
     "id": "fallout-76"
   },
   {
-    "name": "Far Cry 2 (dx10)",
+    "name": "Far Cry® 2 (DX10)",
     "slug": "duniaengine",
     "arch": "X86",
     "status": "working",
     "id": "far-cry-2"
   },
   {
-    "name": "Far Cry 3 (dx11)",
+    "name": "Far Cry® 3 (DX11)",
     "slug": "duniaengine",
     "arch": "X86",
     "status": "working",
     "id": "far-cry-3"
   },
   {
-    "name": "Far Cry 5",
+    "name": "Far Cry® 5",
     "slug": "farcry5",
     "arch": "X64",
     "status": "working",
     "id": "far-cry-5"
   },
   {
-    "name": "Far Cry 6",
+    "name": "Far Cry® 6",
     "slug": "farcry6",
     "arch": "X64",
     "status": "working",
     "id": "far-cry-6"
   },
   {
-    "name": "Far Cry Primal",
+    "name": "Far Cry® Primal",
     "slug": "far-cry-primal",
     "arch": "X64",
     "status": "working",
@@ -659,39 +732,39 @@
     "id": "fate-samurai-remnant"
   },
   {
-    "name": "Final Fantasy 7 : Rebirth",
+    "name": "FINAL FANTASY VII REBIRTH",
     "slug": "ff7rebirth",
     "arch": "X64",
     "status": "working",
-    "id": "final-fantasy-7-rebirth"
+    "id": "final-fantasy-vii-rebirth"
   },
   {
-    "name": "Final Fantasy 7 : Remake",
+    "name": "FINAL FANTASY VII REMAKE INTERGRADE",
     "slug": "ff7remake",
     "arch": "X64",
     "status": "working",
-    "id": "final-fantasy-7-remake"
+    "id": "final-fantasy-vii-remake-intergrade"
   },
   {
-    "name": "Final Fantasy X",
+    "name": "FINAL FANTASY X/X-2 HD Remaster",
     "slug": "ffx",
     "arch": "X86",
     "status": "working",
-    "id": "final-fantasy-x"
+    "id": "final-fantasy-x-x-2-hd-remaster"
   },
   {
-    "name": "Final Fantasy XIV",
+    "name": "FINAL FANTASY XIV Online",
     "slug": "ffxiv",
     "arch": "X64",
     "status": "working",
-    "id": "final-fantasy-xiv"
+    "id": "final-fantasy-xiv-online"
   },
   {
-    "name": "Final Fantasy XV",
+    "name": "FINAL FANTASY XV WINDOWS EDITION",
     "slug": "ffxv",
     "arch": "X64",
     "status": "working",
-    "id": "final-fantasy-xv"
+    "id": "final-fantasy-xv-windows-edition"
   },
   {
     "name": "Forza Horizon 6",
@@ -701,6 +774,13 @@
     "id": "forza-horizon-6",
     "notes": "Arguably not an HDR fix. Vanilla HDR is competent and received a separate grade from SDR.",
     "source_key": "main:forza-horizon-6"
+  },
+  {
+    "name": "Gears of War 4",
+    "slug": "gears-of-war-4",
+    "arch": "X64",
+    "status": "working",
+    "id": "gears-of-war-4"
   },
   {
     "name": "GIRLS' FRONTLINE 2: EXILIUM",
@@ -717,14 +797,7 @@
     "id": "ghost-of-tsushima-director-s-cut"
   },
   {
-    "name": "Ghost Recon® Wildlands",
-    "slug": "ghost-recon-wildlands",
-    "arch": "X64",
-    "status": "construction",
-    "id": "ghost-recon-wildlands"
-  },
-  {
-    "name": "GhostWire Tokyo",
+    "name": "Ghostwire: Tokyo",
     "slug": "ghostwiretokyo",
     "arch": "X64",
     "status": "working",
@@ -745,7 +818,7 @@
     "id": "god-of-war"
   },
   {
-    "name": "God of War Ragnarok",
+    "name": "God of War Ragnarök",
     "slug": "gowragnarok",
     "arch": "X64",
     "status": "working",
@@ -759,7 +832,7 @@
     "id": "granblue-fantasy-relink"
   },
   {
-    "name": "Grand Theft Auto V : Enhanced",
+    "name": "Grand Theft Auto V Enhanced",
     "slug": "gtav-enhanced",
     "arch": "X64",
     "status": "working",
@@ -787,7 +860,7 @@
     "id": "grim-dawn"
   },
   {
-    "name": "Guild Wars 2",
+    "name": "Guild Wars 2®",
     "slug": "guildwars2",
     "arch": "X64",
     "status": "construction",
@@ -801,11 +874,11 @@
     "id": "hades"
   },
   {
-    "name": "Hades 2",
+    "name": "Hades II",
     "slug": "hades2",
     "arch": "X64",
     "status": "construction",
-    "id": "hades-2"
+    "id": "hades-ii"
   },
   {
     "name": "Hard Reset Redux",
@@ -829,7 +902,7 @@
     "id": "heaven-burns-red"
   },
   {
-    "name": "Helldivers 2",
+    "name": "HELLDIVERS™ 2",
     "slug": "helldivers2",
     "arch": "X64",
     "status": "working",
@@ -857,21 +930,21 @@
     "id": "hollow-knight-silksong"
   },
   {
-    "name": "Horizon Forbidden West Complete Edition",
+    "name": "Horizon Forbidden West™ Complete Edition",
     "slug": "horizonzdr-fwce",
     "arch": "X64",
     "status": "working",
     "id": "horizon-forbidden-west-complete-edition"
   },
   {
-    "name": "Horizon Zero Dawn Complete Edition",
+    "name": "Horizon Zero Dawn™ Complete Edition",
     "slug": "horizonzerodawnce",
     "arch": "X64",
     "status": "working",
     "id": "horizon-zero-dawn-complete-edition"
   },
   {
-    "name": "Horizon Zero Dawn Remastered",
+    "name": "Horizon Zero Dawn™ Remastered",
     "slug": "horizonzdr-fwce",
     "arch": "X64",
     "status": "working",
@@ -892,14 +965,14 @@
     "id": "indiana-jones-and-the-great-circle"
   },
   {
-    "name": "Ixion",
+    "name": "IXION",
     "slug": "_univ",
     "arch": "X64",
     "status": "construction",
     "id": "ixion"
   },
   {
-    "name": "James Cameron's Avatar: The Game",
+    "name": "James Cameron’s Avatar™: The Game",
     "slug": "duniaengine",
     "arch": "X86",
     "status": "working",
@@ -922,7 +995,7 @@
     "id": "just-cause-4"
   },
   {
-    "name": "Karma: The Dark World",
+    "name": "KARMA: The Dark World",
     "slug": "karmathedarkworld",
     "arch": "X64",
     "status": "working",
@@ -964,49 +1037,7 @@
     "id": "luigi-s-mansion-3"
   },
   {
-    "name": "Trails of Cold Steel (3-4-5)",
-    "slug": "senkiseki",
-    "arch": "X64",
-    "status": "working",
-    "id": "trails-of-cold-steel"
-  },
-  {
-    "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
-    "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
-    "arch": "X64",
-    "status": "working",
-    "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition"
-  },
-  {
-    "name": "Trails in the Sky 1st Chapter",
-    "slug": "falcomengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "trails-in-the-sky-1st-chapter"
-  },
-  {
-    "name": "Trails through Daybreak 1&2",
-    "slug": "falcomengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "trails-through-daybreak-1-2"
-  },
-  {
-    "name": "Trails beyond the Horizon",
-    "slug": "falcomengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "trails-beyond-the-horizon"
-  },
-  {
-    "name": "Trails from Zero/to Azure",
-    "slug": "zerokiseki",
-    "arch": "X64",
-    "status": "working",
-    "id": "trails-from-zero-to-azure"
-  },
-  {
-    "name": "Lego Harry Potter Collection",
+    "name": "LEGO® Harry Potter™ Collection",
     "slug": "legohpc",
     "arch": "X64",
     "status": "working",
@@ -1034,11 +1065,11 @@
     "id": "like-a-dragon-infinite-wealth"
   },
   {
-    "name": "Lost Planet",
+    "name": "Lost Planet: Extreme Condition - Colonies Edition",
     "slug": "lostplanet",
     "arch": "X86",
     "status": "working",
-    "id": "lost-planet"
+    "id": "lost-planet-extreme-condition-colonies-edition"
   },
   {
     "name": "Mad Max",
@@ -1076,7 +1107,7 @@
     "id": "marvel-s-spider-man-2"
   },
   {
-    "name": "Marvel's Spider-Man Miles Morales",
+    "name": "Marvel's Spider-Man: Miles Morales",
     "slug": "spiderman_2018_miles",
     "arch": "X64",
     "status": "working",
@@ -1090,14 +1121,14 @@
     "id": "marvel-s-spider-man-remastered"
   },
   {
-    "name": "Mass Effect: Andromeda",
+    "name": "Mass Effect™: Andromeda",
     "slug": "masseffectandromeda",
     "arch": "X64",
     "status": "working",
     "id": "mass-effect-andromeda"
   },
   {
-    "name": "Mass Effect: Legendary Edition",
+    "name": "Mass Effect™ Legendary Edition",
     "slug": "masseffectle",
     "arch": "X64",
     "status": "working",
@@ -1139,7 +1170,7 @@
     "id": "metal-gear-solid-snake-eater"
   },
   {
-    "name": "Middle Earth: Shadow of War",
+    "name": "Middle-earth™: Shadow of War™",
     "slug": "shadowofwar",
     "arch": "X64",
     "status": "working",
@@ -1160,14 +1191,14 @@
     "id": "monster-hunter-generations-ultimate"
   },
   {
-    "name": "Monster Hunter Rise",
+    "name": "MONSTER HUNTER RISE",
     "slug": "mhrise",
     "arch": "X64",
     "status": "working",
     "id": "monster-hunter-rise"
   },
   {
-    "name": "Monster Hunter: Wilds",
+    "name": "Monster Hunter Wilds",
     "slug": "mhwilds",
     "arch": "X64",
     "status": "working",
@@ -1195,18 +1226,18 @@
     "id": "nier-replicant"
   },
   {
-    "name": "Nights of Azure 1",
+    "name": "Nights of Azure",
     "slug": "nightsofazure1",
     "arch": "X64",
     "status": "construction",
-    "id": "nights-of-azure-1"
+    "id": "nights-of-azure"
   },
   {
-    "name": "Nights of Azure 2",
+    "name": "Nights of Azure 2: Bride of the New Moon",
     "slug": "nightsofazure2",
     "arch": "X64",
     "status": "construction",
-    "id": "nights-of-azure-2"
+    "id": "nights-of-azure-2-bride-of-the-new-moon"
   },
   {
     "name": "Ninja Gaiden 4",
@@ -1218,22 +1249,22 @@
     "source_key": "main:ninja-gaiden-4"
   },
   {
-    "name": "Ninja Gaiden Sigma",
+    "name": "NINJA GAIDEN Σ",
     "slug": "ngsigma",
     "arch": "X64",
     "status": "working",
-    "id": "ninja-gaiden-sigma",
+    "id": "ninja-gaiden",
     "notes": "Requires Lyall's NinjaGaidenMCFix.",
-    "source_key": "main:ninja-gaiden-sigma"
+    "source_key": "main:ninja-gaiden"
   },
   {
-    "name": "Ninja Gaiden Sigma 2",
+    "name": "NINJA GAIDEN Σ2",
     "slug": "ngsigma2",
     "arch": "X64",
     "status": "construction",
-    "id": "ninja-gaiden-sigma-2",
+    "id": "ninja-gaiden-2",
     "notes": "Requires Lyall's NinjaGaidenMCFix.",
-    "source_key": "main:ninja-gaiden-sigma-2"
+    "source_key": "main:ninja-gaiden-2"
   },
   {
     "name": "Nioh 2",
@@ -1301,11 +1332,11 @@
     "id": "pathfinder-wrath-of-the-righteous"
   },
   {
-    "name": "Path of Exile 2 DX11 Only",
+    "name": "Path of Exile 2 (DX11)",
     "slug": "poe2",
     "arch": "X64",
     "status": "working",
-    "id": "path-of-exile-2-dx11-only"
+    "id": "path-of-exile-2-dx11"
   },
   {
     "name": "Penny's Big Breakaway",
@@ -1329,14 +1360,14 @@
     "id": "persona-5-royal"
   },
   {
-    "name": "Persona 5 : Strikers",
+    "name": "Persona 5 Strikers",
     "slug": "_p5s",
     "arch": "X64",
     "status": "construction",
     "id": "persona-5-strikers"
   },
   {
-    "name": "Pragmata",
+    "name": "PRAGMATA",
     "slug": "pragmata",
     "arch": "X64",
     "status": "working",
@@ -1366,25 +1397,32 @@
     "source_key": "main:remember-me"
   },
   {
-    "name": "Resident Evil 2 Remake",
+    "name": "Resident Evil 2 (Remake)",
     "slug": "re7-2r-3r-village",
     "arch": "X64",
     "status": "working",
     "id": "resident-evil-2-remake"
   },
   {
-    "name": "Resident Evil 3 Remake",
+    "name": "Resident Evil 3 (Remake)",
     "slug": "re7-2r-3r-village",
     "arch": "X64",
     "status": "working",
     "id": "resident-evil-3-remake"
   },
   {
-    "name": "Resident Evil 4 Remake",
+    "name": "Resident Evil 4 (Remake)",
     "slug": "re4remake",
     "arch": "X64",
     "status": "working",
     "id": "resident-evil-4-remake"
+  },
+  {
+    "name": "Resident Evil 6",
+    "slug": "residentevil6",
+    "arch": "X86",
+    "status": "construction",
+    "id": "resident-evil-6"
   },
   {
     "name": "Resident Evil 7",
@@ -1452,7 +1490,7 @@
     "id": "robocop-rogue-city"
   },
   {
-    "name": "Routine",
+    "name": "ROUTINE",
     "slug": "routine",
     "arch": "X64",
     "status": "working",
@@ -1466,14 +1504,14 @@
     "id": "saints-row"
   },
   {
-    "name": "Sea of Stars",
+    "name": "Sea of Stars: Sunset Edition",
     "slug": "seaofstars",
     "arch": "X64",
     "status": "working",
-    "id": "sea-of-stars"
+    "id": "sea-of-stars-sunset-edition"
   },
   {
-    "name": "Sekiro: Shadows Die Twice",
+    "name": "Sekiro™: Shadows Die Twice",
     "slug": "fromsoft_engine",
     "arch": "X64",
     "status": "working",
@@ -1494,18 +1532,18 @@
     "id": "shadow-of-the-tomb-raider"
   },
   {
-    "name": "Shadow Warrior (2013) &middot; Shadow Warrior 2",
+    "name": "Shadow Warrior (2013) & Shadow Warrior 2",
     "slug": "roadhogengine",
     "arch": "X64",
     "status": "working",
-    "id": "shadow-warrior-middot-shadow-warrior-2"
+    "id": "shadow-warrior-2013-shadow-warrior-2"
   },
   {
-    "name": "Shin Megami Tensei V",
+    "name": "Shin Megami Tensei V: Vengeance",
     "slug": "smt5",
     "arch": "X64",
     "status": "working",
-    "id": "shin-megami-tensei-v"
+    "id": "shin-megami-tensei-v-vengeance"
   },
   {
     "name": "SHINOBI: Art of Vengeance",
@@ -1515,14 +1553,14 @@
     "id": "shinobi-art-of-vengeance"
   },
   {
-    "name": "Silent Hill 2 Remake",
+    "name": "SILENT HILL 2 (Remake)",
     "slug": "silenthill2remake",
     "arch": "X64",
     "status": "working",
     "id": "silent-hill-2-remake"
   },
   {
-    "name": "Silent Hill f",
+    "name": "SILENT HILL f",
     "slug": "silenthillf",
     "arch": "X64",
     "status": "working",
@@ -1596,13 +1634,6 @@
     "id": "super-mario-3d-world"
   },
   {
-    "name": "Splinter Cell: Blacklist",
-    "slug": "scblacklist",
-    "arch": "X86",
-    "status": "working",
-    "id": "splinter-cell-blacklist"
-  },
-  {
     "name": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
     "slug": "ue-extended",
     "arch": "X64",
@@ -1657,14 +1688,14 @@
     "id": "star-wars-outlaws"
   },
   {
-    "name": "Stranger of Paradise: Final Fantasy Origin",
+    "name": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
     "slug": "sopffo",
     "arch": "X64",
     "status": "construction",
     "id": "stranger-of-paradise-final-fantasy-origin"
   },
   {
-    "name": "Street Fighter 6",
+    "name": "Street Fighter™ 6",
     "slug": "streetfighter6",
     "arch": "X64",
     "status": "working",
@@ -1678,7 +1709,7 @@
     "id": "sunset-overdrive"
   },
   {
-    "name": "Sword Art Online Alicization Lycoris",
+    "name": "SWORD ART ONLINE Alicization Lycoris",
     "slug": "sao-alicization",
     "arch": "X64",
     "status": "working",
@@ -1699,14 +1730,14 @@
     "id": "tales-of-graces-f-remastered"
   },
   {
-    "name": "Teardown (dx12)",
+    "name": "Teardown (DX12)",
     "slug": "teardown",
     "arch": "X64",
     "status": "construction",
     "id": "teardown"
   },
   {
-    "name": "Tekken 8",
+    "name": "TEKKEN 8",
     "slug": "tekken8",
     "arch": "X64",
     "status": "working",
@@ -1750,6 +1781,15 @@
     "id": "the-elder-scrolls-iv-oblivion-remastered"
   },
   {
+    "name": "The Elder Scrolls V: Skyrim Special Edition",
+    "slug": "skyrimse",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-elder-scrolls-v-skyrim-special-edition",
+    "notes": "Check the Nexus page for installation instructions",
+    "source_key": "main:the-elder-scrolls-v-skyrim-special-edition"
+  },
+  {
     "name": "The Hundred Line: Last Defense Academy",
     "slug": "thehundredline",
     "arch": "X64",
@@ -1762,6 +1802,48 @@
     "arch": "X64",
     "status": "working",
     "id": "the-incredible-adventures-of-van-helsing-final-cut"
+  },
+  {
+    "name": "The Legend of Heroes: Trails of Cold Steel (III-IV-V)",
+    "slug": "senkiseki",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-legend-of-heroes-trails-of-cold-steel-iii-iv-v"
+  },
+  {
+    "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
+    "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition"
+  },
+  {
+    "name": "Trails in the Sky 1st Chapter",
+    "slug": "falcomengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "trails-in-the-sky-1st-chapter"
+  },
+  {
+    "name": "The Legend of Heroes: Trails through Daybreak (I & II)",
+    "slug": "falcomengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-legend-of-heroes-trails-through-daybreak-i-ii"
+  },
+  {
+    "name": "The Legend of Heroes: Trails beyond the Horizon",
+    "slug": "falcomengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-legend-of-heroes-trails-beyond-the-horizon"
+  },
+  {
+    "name": "The Legend of Heroes: Trails from Zero/to Azure",
+    "slug": "zerokiseki",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-legend-of-heroes-trails-from-zero-to-azure"
   },
   {
     "name": "The Legend of Zelda: Breath of the Wild",
@@ -1792,11 +1874,18 @@
     "id": "the-town-of-light"
   },
   {
-    "name": "The Witcher 3",
+    "name": "The Witcher 3: Wild Hunt (Next Gen)",
     "slug": "thewitcher3",
     "arch": "X64",
     "status": "working",
-    "id": "the-witcher-3"
+    "id": "the-witcher-3-wild-hunt-next-gen"
+  },
+  {
+    "name": "The Witcher 3: Wild Hunt — Remastered",
+    "slug": "thewitcher3remastered",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-witcher-3-wild-hunt-remastered"
   },
   {
     "name": "The Witness",
@@ -1820,6 +1909,20 @@
     "id": "titan-quest-anniversary-edition"
   },
   {
+    "name": "Tom Clancy's Ghost Recon® Wildlands",
+    "slug": "tom-clancy-s-ghost-recon-wildlands",
+    "arch": "X64",
+    "status": "construction",
+    "id": "tom-clancy-s-ghost-recon-wildlands"
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell Blacklist",
+    "slug": "scblacklist",
+    "arch": "X86",
+    "status": "working",
+    "id": "tom-clancy-s-splinter-cell-blacklist"
+  },
+  {
     "name": "Tomb Raider (2013)",
     "slug": "tombraider2013",
     "arch": "X86",
@@ -1836,18 +1939,18 @@
     "source_key": "main:tomb-raider-2013-definitive-edition"
   },
   {
-    "name": "Total War: Three Kingdoms",
+    "name": "Total War: THREE KINGDOMS",
     "slug": "tw-3kingdoms",
     "arch": "X64",
     "status": "working",
     "id": "total-war-three-kingdoms"
   },
   {
-    "name": "Total War: Warhammer 3",
+    "name": "Total War: WARHAMMER III",
     "slug": "_univ",
     "arch": "X64",
     "status": "working",
-    "id": "total-war-warhammer-3"
+    "id": "total-war-warhammer-iii"
   },
   {
     "name": "Trackmania",
@@ -1866,7 +1969,7 @@
     "id": "trine-2-complete-story"
   },
   {
-    "name": "Tunic",
+    "name": "TUNIC",
     "slug": "tunic",
     "arch": "X64",
     "status": "working",
@@ -1908,7 +2011,7 @@
     "id": "warhammer-40-000-space-marine-2"
   },
   {
-    "name": "Watch Dogs",
+    "name": "Watch_Dogs",
     "slug": "watchdogs",
     "arch": "X64",
     "status": "working",
@@ -1943,7 +2046,7 @@
     "id": "yakuza-0"
   },
   {
-    "name": "Yakuza Kiwami 1",
+    "name": "Yakuza Kiwami (1)",
     "slug": "yakuza0",
     "arch": "X64",
     "status": "construction",
@@ -1973,7 +2076,7 @@
     "id": "ys-x-proud-nordics"
   },
   {
-    "name": "Xenoblade Chronicles 1-3",
+    "name": "Xenoblade Chronicles (1-3)",
     "slug": "xenobladechronicles",
     "arch": "X64",
     "status": "working",
@@ -2011,6 +2114,16 @@
     "id": "abzu",
     "notes": "Upgrade Path: On `B8G8R8A8_TYPELESS` `Output Size` for 100% render resolution or `Output Ratio` for other percentages.",
     "source_key": "ue-extended:abzu",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Assetto Corsa Competizione",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "assetto-corsa-competizione",
+    "notes": "Native HDR, need to load in-game for HDR to toggle.",
+    "source_key": "ue-extended:assetto-corsa-competizione",
     "section": "ue-extended"
   },
   {
@@ -2154,6 +2267,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Deliver Us The Moon",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "deliver-us-the-moon",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "source_key": "ue-extended:deliver-us-the-moon",
+    "section": "ue-extended"
+  },
+  {
     "name": "End of Abyss",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2194,14 +2317,14 @@
     "section": "ue-extended"
   },
   {
-    "name": "FlyKnight",
-    "slug": "unrealengine",
+    "name": "FlyKnight Enhanced Edition",
+    "slug": "ue-extended",
     "arch": "X64",
-    "status": "working",
-    "id": "flyknight",
-    "notes": "`B8G8R8A8_TYPELESS` `Output Size`",
-    "source_key": "unreal:flyknight",
-    "section": "unreal"
+    "status": "construction",
+    "id": "flyknight-enhanced-edition",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Multiple in-game filters change HDR presentation, Lacks testing.",
+    "source_key": "ue-extended:flyknight-enhanced-edition",
+    "section": "ue-extended"
   },
   {
     "name": "Frostpunk 2",
@@ -2271,6 +2394,16 @@
     "id": "grounded-2",
     "notes": "Engine.ini",
     "source_key": "ue-extended:grounded-2",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Half Sword",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "half-sword",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:half-sword",
     "section": "ue-extended"
   },
   {
@@ -2414,6 +2547,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Luto",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "construction",
+    "id": "luto",
+    "notes": "Engine.ini. UI and some graphical effects cause tonemapping issues, needs more testing.",
+    "source_key": "ue-extended:luto",
+    "section": "ue-extended"
+  },
+  {
     "name": "Mafia: The Old Country",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2514,6 +2657,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Pih",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "pih",
+    "notes": "Upgrade Path: On",
+    "source_key": "ue-extended:pih",
+    "section": "ue-extended"
+  },
+  {
     "name": "Quarantine Zone: The Last Check",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2591,6 +2744,16 @@
     "id": "star-wars-zero-companytm",
     "notes": "Native HDR",
     "source_key": "ue-extended:star-wars-zero-companytm",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Still Wakes the Deep",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "still-wakes-the-deep",
+    "notes": "Native HDR. Sliders do not change in real-time.",
+    "source_key": "ue-extended:still-wakes-the-deep",
     "section": "ue-extended"
   },
   {
@@ -3183,6 +3346,16 @@
     "arch": "X64",
     "status": "working",
     "id": "f-i-s-t-forged-in-shadow-torch",
+    "section": "unreal"
+  },
+  {
+    "name": "FlyKnight",
+    "slug": "unrealengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "flyknight",
+    "notes": "`B8G8R8A8_TYPELESS` `Output Size`",
+    "source_key": "unreal:flyknight",
     "section": "unreal"
   },
   {
@@ -4346,6 +4519,14 @@
     "section": "unity"
   },
   {
+    "name": "Aniimo",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "aniimo",
+    "section": "unity"
+  },
+  {
     "name": "Anodyne 2: Return to Dust",
     "slug": "unityengine",
     "arch": "X86",
@@ -4814,6 +4995,14 @@
     "section": "unity"
   },
   {
+    "name": "Burglin' Gnomes",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "burglin-gnomes",
+    "section": "unity"
+  },
+  {
     "name": "Cairn",
     "slug": "unityengine",
     "arch": "X64",
@@ -4897,6 +5086,14 @@
     "id": "cloverpit",
     "notes": "Use DX11 (Second launch option)",
     "source_key": "unity:cloverpit",
+    "section": "unity"
+  },
+  {
+    "name": "COCOON",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "cocoon",
     "section": "unity"
   },
   {
@@ -5049,6 +5246,14 @@
     "id": "deep-rock-survivor",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:deep-rock-survivor",
+    "section": "unity"
+  },
+  {
+    "name": "Derail Valley",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "derail-valley",
     "section": "unity"
   },
   {
@@ -5398,6 +5603,14 @@
     "section": "unity"
   },
   {
+    "name": "Exo Rally Championship",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "exo-rally-championship",
+    "section": "unity"
+  },
+  {
     "name": "Drova Forsaken Kin",
     "slug": "unityengine",
     "arch": "X64",
@@ -5635,10 +5848,8 @@
     "name": "Golf With Your Friends",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
+    "status": "working",
     "id": "golf-with-your-friends",
-    "notes": "Upgrade ??????????????",
-    "source_key": "unity:golf-with-your-friends",
     "section": "unity"
   },
   {
@@ -5713,6 +5924,14 @@
     "id": "heart-of-the-machine",
     "notes": "Compatibility Scaling Offset +1",
     "source_key": "unity:heart-of-the-machine",
+    "section": "unity"
+  },
+  {
+    "name": "Heavenly Bodies",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "heavenly-bodies",
     "section": "unity"
   },
   {
@@ -6074,6 +6293,14 @@
     "section": "unity"
   },
   {
+    "name": "LEGO® Party!",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "lego-party",
+    "section": "unity"
+  },
+  {
     "name": "LEGO® Voyagers",
     "slug": "unityengine",
     "arch": "X64",
@@ -6081,6 +6308,14 @@
     "id": "lego-voyagers",
     "notes": "Enable Swapchain Proxy",
     "source_key": "unity:lego-voyagers",
+    "section": "unity"
+  },
+  {
+    "name": "Lethal Company",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "lethal-company",
     "section": "unity"
   },
   {
@@ -6135,6 +6370,14 @@
     "arch": "X64",
     "status": "construction",
     "id": "lonely-mountains-downhill",
+    "section": "unity"
+  },
+  {
+    "name": "Lorelei and the Laser Eyes",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "lorelei-and-the-laser-eyes",
     "section": "unity"
   },
   {
@@ -6207,6 +6450,16 @@
     "id": "lysfanga-the-time-shift-warrior",
     "notes": "Upgrade R11G11B10_FLOAT. Compatibilty Scaling offset +1.",
     "source_key": "unity:lysfanga-the-time-shift-warrior",
+    "section": "unity"
+  },
+  {
+    "name": "Mage Arena",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "mage-arena",
+    "notes": "Upgrade `R8G8R8A8_TYPELESS` `Any Size`",
+    "source_key": "unity:mage-arena",
     "section": "unity"
   },
   {
@@ -6478,6 +6731,24 @@
     "section": "unity"
   },
   {
+    "name": "No Rest For The Wicked",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "no-rest-for-the-wicked",
+    "notes": "Upgrade R11G11B10_FLOAT (Output Ratio if using upscaling)",
+    "source_key": "unity:no-rest-for-the-wicked",
+    "section": "unity"
+  },
+  {
+    "name": "Normal Golf Game",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "normal-golf-game",
+    "section": "unity"
+  },
+  {
     "name": "NOTTOLOT",
     "slug": "unityengine",
     "arch": "X64",
@@ -6557,6 +6828,14 @@
     "id": "operation-wolf-returns-first-mission",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:operation-wolf-returns-first-mission",
+    "section": "unity"
+  },
+  {
+    "name": "OPUS: Prism Peak",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "opus-prism-peak",
     "section": "unity"
   },
   {
@@ -6689,6 +6968,14 @@
     "id": "peak",
     "notes": "Use DX11",
     "source_key": "unity:peak",
+    "section": "unity"
+  },
+  {
+    "name": "Peaks of Yore",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "peaks-of-yore",
     "section": "unity"
   },
   {
@@ -6848,6 +7135,14 @@
     "section": "unity"
   },
   {
+    "name": "Reentry - A Space Flight Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "reentry-a-space-flight-simulator",
+    "section": "unity"
+  },
+  {
     "name": "REKA",
     "slug": "unityengine",
     "arch": "X64",
@@ -6855,6 +7150,22 @@
     "id": "reka",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:reka",
+    "section": "unity"
+  },
+  {
+    "name": "Reignbreaker",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "reignbreaker",
+    "section": "unity"
+  },
+  {
+    "name": "REPLACED",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "replaced",
     "section": "unity"
   },
   {
@@ -6873,6 +7184,14 @@
     "id": "r-e-p-o",
     "notes": "Upgrade `R8G8B8A8_TYPELESS` to `Any Size`",
     "source_key": "unity:r-e-p-o",
+    "section": "unity"
+  },
+  {
+    "name": "ReStory: Chill Electronics Repairs",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "restory-chill-electronics-repairs",
     "section": "unity"
   },
   {
@@ -7045,8 +7364,6 @@
     "arch": "X64",
     "status": "working",
     "id": "shape-of-dreams",
-    "notes": "Upgrade R11G11B10_FLOAT. Both compatibility offsets +1",
-    "source_key": "unity:shape-of-dreams",
     "section": "unity"
   },
   {
@@ -7080,11 +7397,27 @@
     "section": "unity"
   },
   {
+    "name": "Silver Pines",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "silver-pines",
+    "section": "unity"
+  },
+  {
     "name": "Sledders",
     "slug": "unityengine",
     "arch": "X64",
     "status": "working",
     "id": "sledders",
+    "section": "unity"
+  },
+  {
+    "name": "Snake Force",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "snake-force",
     "section": "unity"
   },
   {
@@ -7119,6 +7452,14 @@
     "arch": "X64",
     "status": "working",
     "id": "solasta-crown-of-the-magister",
+    "section": "unity"
+  },
+  {
+    "name": "Solateria",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "solateria",
     "section": "unity"
   },
   {
@@ -7446,6 +7787,14 @@
     "section": "unity"
   },
   {
+    "name": "The Farmer Was Replaced",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-farmer-was-replaced",
+    "section": "unity"
+  },
+  {
     "name": "The First Tree",
     "slug": "unityengine",
     "arch": "X86",
@@ -7513,6 +7862,14 @@
     "arch": "X64",
     "status": "construction",
     "id": "the-looker",
+    "section": "unity"
+  },
+  {
+    "name": "The Message from Deep Space",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-message-from-deep-space",
     "section": "unity"
   },
   {
@@ -7711,6 +8068,16 @@
     "id": "two-point-hospital",
     "notes": "Enable Swapchain Proxy",
     "source_key": "unity:two-point-hospital",
+    "section": "unity"
+  },
+  {
+    "name": "ULTRAKILL",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "ultrakill",
+    "notes": "Swapchain Encoding: Gamma",
+    "source_key": "unity:ultrakill",
     "section": "unity"
   },
   {

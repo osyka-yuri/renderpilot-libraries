@@ -24,9 +24,9 @@
     "note": "Fully playable, just needs playtesting/feedback"
   },
   {
-    "source_key": "main:atlas-fallen-dx12",
-    "game_id": "atlas-fallen",
-    "title": "Atlas Fallen (DX12)",
+    "source_key": "main:atlas-fallen-reign-of-sand-dx12",
+    "game_id": "atlas-fallen-reign-of-sand-dx12",
+    "title": "Atlas Fallen: Reign Of Sand (DX12)",
     "section": "main",
     "profile_source": "atlasfallen",
     "note": "Install ReShade in 'Atlas Fallenbin'. FSR2 causes crashes."
@@ -38,6 +38,46 @@
     "section": "main",
     "profile_source": "borderlands2",
     "note": "Check the mod's thread or the nexus page for Notes."
+  },
+  {
+    "source_key": "main:call-of-duty-black-ops",
+    "game_id": "call-of-duty-black-ops",
+    "title": "Call of Duty®: Black Ops",
+    "section": "main",
+    "profile_source": "CODBLOPS",
+    "note": "DXVK proxy required for increased stability! Please check the Nexus page for instructions"
+  },
+  {
+    "source_key": "main:call-of-duty-modern-warfare-3-2011",
+    "game_id": "call-of-duty-modern-warfare-3-2011",
+    "title": "Call of Duty®: Modern Warfare® 3 (2011)",
+    "section": "main",
+    "profile_source": "CODMW3",
+    "note": "64 bit, Nexus includes a stutter fix for the game. Please check the Nexus page for instructions"
+  },
+  {
+    "source_key": "main:call-of-duty-black-ops-ii",
+    "game_id": "call-of-duty-black-ops-ii",
+    "title": "Call of Duty®: Black Ops II",
+    "section": "main",
+    "profile_source": "CODBLOPS2",
+    "note": "Avoiding multiplayer is recommended in case of a potential ban!"
+  },
+  {
+    "source_key": "main:call-of-duty-ghosts",
+    "game_id": "call-of-duty-ghosts",
+    "title": "Call of Duty®: Ghosts",
+    "section": "main",
+    "profile_source": "CODGHOSTS",
+    "note": "Avoiding multiplayer is recommended in case of a potential ban!"
+  },
+  {
+    "source_key": "main:call-of-duty-black-ops-cold-war",
+    "game_id": "call-of-duty-black-ops-cold-war",
+    "title": "Call of Duty®: Black Ops Cold War",
+    "section": "main",
+    "profile_source": "CODColdWar",
+    "note": "Avoiding multiplayer is recommended in case of a potential ban!"
   },
   {
     "source_key": "main:child-of-light",
@@ -56,9 +96,9 @@
     "note": "ACES output is broken, need to be removed in next update"
   },
   {
-    "source_key": "main:crimson-desert",
-    "game_id": "crimson-desert",
-    "title": "Crimson Desert",
+    "source_key": "main:crimson-desert-enhanced",
+    "game_id": "crimson-desert-enhanced",
+    "title": "Crimson Desert Enhanced",
     "section": "main",
     "profile_source": "game",
     "note": "Game gets updated regularly breaking the mod. Accurate status info in discord."
@@ -112,17 +152,17 @@
     "note": "Requires Lyall's NinjaGaidenMCFix."
   },
   {
-    "source_key": "main:ninja-gaiden-sigma",
-    "game_id": "ninja-gaiden-sigma",
-    "title": "Ninja Gaiden Sigma",
+    "source_key": "main:ninja-gaiden",
+    "game_id": "ninja-gaiden",
+    "title": "NINJA GAIDEN Σ",
     "section": "main",
     "profile_source": "ngsigma",
     "note": "Requires Lyall's NinjaGaidenMCFix."
   },
   {
-    "source_key": "main:ninja-gaiden-sigma-2",
-    "game_id": "ninja-gaiden-sigma-2",
-    "title": "Ninja Gaiden Sigma 2",
+    "source_key": "main:ninja-gaiden-2",
+    "game_id": "ninja-gaiden-2",
+    "title": "NINJA GAIDEN Σ2",
     "section": "main",
     "profile_source": "ngsigma2",
     "note": "Requires Lyall's NinjaGaidenMCFix."
@@ -192,6 +232,14 @@
     "note": "Fully playable, just needs playtesting/feedback"
   },
   {
+    "source_key": "main:the-elder-scrolls-v-skyrim-special-edition",
+    "game_id": "the-elder-scrolls-v-skyrim-special-edition",
+    "title": "The Elder Scrolls V: Skyrim Special Edition",
+    "section": "main",
+    "profile_source": "skyrimse",
+    "note": "Check the Nexus page for installation instructions"
+  },
+  {
     "source_key": "main:tomb-raider-2013-definitive-edition",
     "game_id": "tomb-raider-2013-definitive-edition",
     "title": "Tomb Raider (2013) - Definitive Edition",
@@ -210,7 +258,7 @@
   {
     "source_key": "main:yakuza-kiwami-1",
     "game_id": "yakuza-kiwami-1",
-    "title": "Yakuza Kiwami 1",
+    "title": "Yakuza Kiwami (1)",
     "section": "main",
     "profile_source": "yakuza0",
     "note": "Mod primarily made for Y0."
@@ -230,6 +278,14 @@
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Upgrade Path: On `B8G8R8A8_TYPELESS` `Output Size` for 100% render resolution or `Output Ratio` for other percentages."
+  },
+  {
+    "source_key": "ue-extended:assetto-corsa-competizione",
+    "game_id": "assetto-corsa-competizione",
+    "title": "Assetto Corsa Competizione",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Native HDR, need to load in-game for HDR to toggle."
   },
   {
     "source_key": "ue-extended:assetto-corsa-rally",
@@ -352,6 +408,14 @@
     "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Native HDR is broken."
   },
   {
+    "source_key": "ue-extended:deliver-us-the-moon",
+    "game_id": "deliver-us-the-moon",
+    "title": "Deliver Us The Moon",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+  },
+  {
     "source_key": "ue-extended:end-of-abyss",
     "game_id": "end-of-abyss",
     "title": "End of Abyss",
@@ -384,12 +448,12 @@
     "note": "Native HDR"
   },
   {
-    "source_key": "ue-extended:flyknight",
-    "game_id": "flyknight",
-    "title": "FlyKnight",
+    "source_key": "ue-extended:flyknight-enhanced-edition",
+    "game_id": "flyknight-enhanced-edition",
+    "title": "FlyKnight Enhanced Edition",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Multiple in-game filters change HDR presentation, Lacks testing."
+    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Multiple in-game filters change HDR presentation, Lacks testing."
   },
   {
     "source_key": "ue-extended:frostpunk-2",
@@ -426,7 +490,7 @@
   {
     "source_key": "ue-extended:ghostwire-tokyo",
     "game_id": "ghostwire-tokyo",
-    "title": "Ghostwire Tokyo",
+    "title": "Ghostwire: Tokyo",
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Native HDR"
@@ -451,6 +515,14 @@
     "source_key": "ue-extended:grounded-2",
     "game_id": "grounded-2",
     "title": "Grounded 2",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini"
+  },
+  {
+    "source_key": "ue-extended:half-sword",
+    "game_id": "half-sword",
+    "title": "Half Sword",
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Engine.ini"
@@ -568,6 +640,14 @@
     "note": "Native HDR. Tonemapping issues."
   },
   {
+    "source_key": "ue-extended:luto",
+    "game_id": "luto",
+    "title": "Luto",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini. UI and some graphical effects cause tonemapping issues, needs more testing."
+  },
+  {
     "source_key": "ue-extended:mafia-the-old-country",
     "game_id": "mafia-the-old-country",
     "title": "Mafia: The Old Country",
@@ -648,6 +728,14 @@
     "note": "Upgrade Path: On"
   },
   {
+    "source_key": "ue-extended:pih",
+    "game_id": "pih",
+    "title": "Pih",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Upgrade Path: On"
+  },
+  {
     "source_key": "ue-extended:quarantine-zone-the-last-check",
     "game_id": "quarantine-zone-the-last-check",
     "title": "Quarantine Zone: The Last Check",
@@ -718,6 +806,14 @@
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Native HDR"
+  },
+  {
+    "source_key": "ue-extended:still-wakes-the-deep",
+    "game_id": "still-wakes-the-deep",
+    "title": "Still Wakes the Deep",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Native HDR. Sliders do not change in real-time."
   },
   {
     "source_key": "ue-extended:stray",
@@ -2840,14 +2936,6 @@
     "note": "Upgrade R11G11B10_FLOAT"
   },
   {
-    "source_key": "unity:golf-with-your-friends",
-    "game_id": "golf-with-your-friends",
-    "title": "Golf With Your Friends",
-    "section": "unity",
-    "profile_source": "unityengine",
-    "note": "Upgrade ??????????????"
-  },
-  {
     "source_key": "unity:great-god-grove",
     "game_id": "great-god-grove",
     "title": "Great God Grove",
@@ -3120,6 +3208,14 @@
     "note": "Upgrade R11G11B10_FLOAT. Compatibilty Scaling offset +1."
   },
   {
+    "source_key": "unity:mage-arena",
+    "game_id": "mage-arena",
+    "title": "Mage Arena",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Upgrade `R8G8R8A8_TYPELESS` `Any Size`"
+  },
+  {
     "source_key": "unity:mages-of-mystralia",
     "game_id": "mages-of-mystralia",
     "title": "Mages of Mystralia",
@@ -3262,6 +3358,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT"
+  },
+  {
+    "source_key": "unity:no-rest-for-the-wicked",
+    "game_id": "no-rest-for-the-wicked",
+    "title": "No Rest For The Wicked",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Upgrade R11G11B10_FLOAT (Output Ratio if using upscaling)"
   },
   {
     "source_key": "unity:nottolot",
@@ -3526,14 +3630,6 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT"
-  },
-  {
-    "source_key": "unity:shape-of-dreams",
-    "game_id": "shape-of-dreams",
-    "title": "Shape of Dreams",
-    "section": "unity",
-    "profile_source": "unityengine",
-    "note": "Upgrade R11G11B10_FLOAT. Both compatibility offsets +1"
   },
   {
     "source_key": "unity:shift-87",
@@ -3854,6 +3950,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Enable Swapchain Proxy"
+  },
+  {
+    "source_key": "unity:ultrakill",
+    "game_id": "ultrakill",
+    "title": "ULTRAKILL",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma"
   },
   {
     "source_key": "unity:ultros",

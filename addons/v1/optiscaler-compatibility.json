@@ -3,8 +3,8 @@
   "revision": "2026-09-27.1",
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
-    "snapshot_revision": "2026-09-25",
-    "snapshot_sha256": "3d45f35a349fbdb69e45b3000009f97acf11068cc752336c77716a276c44a6d6"
+    "snapshot_revision": "2026-10-10",
+    "snapshot_sha256": "ea20dad091eef09077e69ebad5e7fe466a26d00b4b1a3ac96a0cf7005637258c"
   },
   "entries": [
     {
@@ -17245,6 +17245,33 @@
           "restricted_modules": [],
           "optipatcher": "unspecified",
           "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "watch-dogs-2",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "447040"
+        },
+        {
+          "kind": "exe_name",
+          "value": "WatchDogs2.exe"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "luma"
         }
       ]
     },

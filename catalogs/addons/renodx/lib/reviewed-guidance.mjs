@@ -138,14 +138,14 @@ assign(
   ),
   [info("The mod is considered playable but still needs broader playtesting.")],
 );
-assign(keyList("main", "atlas-fallen-dx12"), [
+assign(keyList("main", "atlas-fallen-reign-of-sand-dx12"), [
   info("Install ReShade in the game's Atlas Fallen\\bin directory."),
   warn("FSR 2 can cause crashes with this mod."),
 ]);
 assign(keyList("main", "clive-barker-s-jericho"), [
   warn("ACES output is currently broken in this build."),
 ]);
-assign(keyList("main", "crimson-desert"), [
+assign(keyList("main", "crimson-desert-enhanced"), [
   info(
     "Frequent game updates can break the mod; re-check compatibility after each update.",
   ),
@@ -166,7 +166,7 @@ assign(keyList("main", "forza-horizon-6"), [
     "The game's native HDR already works well; this mod offers an alternative presentation rather than an HDR fix.",
   ),
 ]);
-assign(keyList("main", "ninja-gaiden-4 ninja-gaiden-sigma ninja-gaiden-sigma-2"), [
+assign(keyList("main", "ninja-gaiden-4 ninja-gaiden ninja-gaiden-2"), [
   external(
     "This mod requires Lyall's NinjaGaidenMCFix.",
     "https://codeberg.org/Lyall/NinjaGaidenMCFix",
@@ -272,7 +272,7 @@ omit(
   "This UE Extended source row resolves to a legacy, dedicated, or absent manifest output; its guidance is intentionally not duplicated here.",
 );
 omit(
-  keyList("ue-extended", "flyknight ghostrunner-2 palworld"),
+  keyList("ue-extended", "flyknight-enhanced-edition ghostrunner-2 palworld"),
   "Moved to resolved legacy title guidance; no UE Extended processing policy is emitted for this source row.",
 );
 omit(
@@ -1665,7 +1665,7 @@ assign(
   { inheritCommon: true },
 );
 assign(
-  keyList("unity", "bloody-hell shape-of-dreams"),
+  keyList("unity", "bloody-hell"),
   [
     addonSettings([
       { name: "R11G11B10_FLOAT", value: "Upgrade" },
@@ -1878,7 +1878,7 @@ assign(
 pending(
   keyList(
     "unity",
-    "golf-with-your-friends gunfire-reborn lego-bricktales monster-train morbid-metal-demo phasmophobia",
+    "gunfire-reborn lego-bricktales monster-train morbid-metal-demo phasmophobia",
   ),
   "The upstream resource-upgrade instruction is incomplete and does not identify a format.",
 );
@@ -2353,6 +2353,29 @@ assign(
     ),
   ],
   { inheritCommon: true },
+);
+
+omit(
+  keyList("main", "the-elder-scrolls-v-skyrim-special-edition"),
+  "Generic installation instructions refer to manual host placement; RenderPilot manages add-on installation directly.",
+);
+pending(
+  keyList(
+    "main",
+    "call-of-duty-black-ops call-of-duty-modern-warfare-3-2011 call-of-duty-black-ops-ii call-of-duty-ghosts call-of-duty-black-ops-cold-war",
+  ),
+  "Upstream third-party instructions and multiplayer advisories pending manual review.",
+);
+pending(
+  keyList(
+    "ue-extended",
+    "assetto-corsa-competizione deliver-us-the-moon half-sword luto pih still-wakes-the-deep",
+  ),
+  "Upstream configuration instructions pending manual review.",
+);
+pending(
+  keyList("unity", "mage-arena no-rest-for-the-wicked ultrakill"),
+  "Upstream format and encoding adjustments pending manual review.",
 );
 
 export function reviewedDecision(sourceKey) {

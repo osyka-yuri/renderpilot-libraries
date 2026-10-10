@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "renodx.main.atlas.fallen.dx12.1",
+      "id": "renodx.main.atlas.fallen.reign.of.sand.dx12.1",
       "fallback_text": "Install ReShade in the game's Atlas Fallen\\bin directory.",
       "kind": "compatibility",
       "context": "guidance.compatibility",
@@ -146,7 +146,7 @@
       }
     },
     {
-      "id": "renodx.main.atlas.fallen.dx12.2",
+      "id": "renodx.main.atlas.fallen.reign.of.sand.dx12.2",
       "fallback_text": "FSR 2 can cause crashes with this mod.",
       "kind": "warning",
       "context": "guidance.warning",
@@ -178,7 +178,7 @@
       }
     },
     {
-      "id": "renodx.main.crimson.desert.1",
+      "id": "renodx.main.crimson.desert.enhanced.1",
       "fallback_text": "Frequent game updates can break the mod; re-check compatibility after each update.",
       "kind": "compatibility",
       "context": "guidance.compatibility",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "id": "renodx.main.ninja.gaiden.sigma.1",
+      "id": "renodx.main.ninja.gaiden.1",
       "fallback_text": "This mod requires Lyall's NinjaGaidenMCFix.",
       "kind": "external_tool",
       "context": "guidance.external_tool",
@@ -290,7 +290,7 @@
       }
     },
     {
-      "id": "renodx.main.ninja.gaiden.sigma.2.1",
+      "id": "renodx.main.ninja.gaiden.2.1",
       "fallback_text": "This mod requires Lyall's NinjaGaidenMCFix.",
       "kind": "external_tool",
       "context": "guidance.external_tool",

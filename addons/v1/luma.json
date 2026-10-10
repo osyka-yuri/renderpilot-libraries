@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-23T00:00:00Z",
+  "generated_at": "2026-10-10T00:00:00Z",
   "minimum_reshade_version": "6.7.0",
   "games": [
     {
@@ -4333,7 +4333,7 @@
       "id": "final-fantasy-15",
       "name": "FINAL FANTASY XV",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",

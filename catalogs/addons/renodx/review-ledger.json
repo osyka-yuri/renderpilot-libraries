@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "68fb42b55e8c5a90e71c069ef4e340038d427dbb26c012050d3e4d5609d845a4",
+    "wiki_content_sha256": "cc8a113ffcd365bf579d5cd4594c7d5da277d46f0db7c68abde7b3861518168d",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "8a0fc45ebb085e1fd4c0b2fb9fed6b15ac7f67be36aacc16027457f49300fc55",
+    "active_message_fingerprint": "9176621f65c479b65b13f01596df246db07ba8900f4b862f4980c6866a5b8454",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -99,9 +99,9 @@
       "reason": null
     },
     {
-      "source_key": "main:atlas-fallen-dx12",
-      "game_id": "atlas-fallen",
-      "title": "Atlas Fallen (DX12)",
+      "source_key": "main:atlas-fallen-reign-of-sand-dx12",
+      "game_id": "atlas-fallen-reign-of-sand-dx12",
+      "title": "Atlas Fallen: Reign Of Sand (DX12)",
       "section": "main",
       "profile_source": "atlasfallen",
       "note_sha256": "bb4b23435e1e11b49689657cb2a339f3399918569ddb58d233698144bf451a70",
@@ -117,6 +117,56 @@
       "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
+    },
+    {
+      "source_key": "main:call-of-duty-black-ops",
+      "game_id": "call-of-duty-black-ops",
+      "title": "Call of Duty®: Black Ops",
+      "section": "main",
+      "profile_source": "CODBLOPS",
+      "note_sha256": "8fa5ff0e01c44fd1f3a5c63125343e2836f5fca480546c45defd639f6e34adbf",
+      "disposition": "pending",
+      "reason": "Upstream third-party instructions and multiplayer advisories pending manual review."
+    },
+    {
+      "source_key": "main:call-of-duty-modern-warfare-3-2011",
+      "game_id": "call-of-duty-modern-warfare-3-2011",
+      "title": "Call of Duty®: Modern Warfare® 3 (2011)",
+      "section": "main",
+      "profile_source": "CODMW3",
+      "note_sha256": "d22e52fe2ac01e3f014c4a00c45945e8ecabffffa90703d2ce164d2a43eca87a",
+      "disposition": "pending",
+      "reason": "Upstream third-party instructions and multiplayer advisories pending manual review."
+    },
+    {
+      "source_key": "main:call-of-duty-black-ops-ii",
+      "game_id": "call-of-duty-black-ops-ii",
+      "title": "Call of Duty®: Black Ops II",
+      "section": "main",
+      "profile_source": "CODBLOPS2",
+      "note_sha256": "5ee0915860f8537f63ad3e27bc242bd86b14e4e0ae49fa9c4b46a405ad42f128",
+      "disposition": "pending",
+      "reason": "Upstream third-party instructions and multiplayer advisories pending manual review."
+    },
+    {
+      "source_key": "main:call-of-duty-ghosts",
+      "game_id": "call-of-duty-ghosts",
+      "title": "Call of Duty®: Ghosts",
+      "section": "main",
+      "profile_source": "CODGHOSTS",
+      "note_sha256": "5ee0915860f8537f63ad3e27bc242bd86b14e4e0ae49fa9c4b46a405ad42f128",
+      "disposition": "pending",
+      "reason": "Upstream third-party instructions and multiplayer advisories pending manual review."
+    },
+    {
+      "source_key": "main:call-of-duty-black-ops-cold-war",
+      "game_id": "call-of-duty-black-ops-cold-war",
+      "title": "Call of Duty®: Black Ops Cold War",
+      "section": "main",
+      "profile_source": "CODColdWar",
+      "note_sha256": "5ee0915860f8537f63ad3e27bc242bd86b14e4e0ae49fa9c4b46a405ad42f128",
+      "disposition": "pending",
+      "reason": "Upstream third-party instructions and multiplayer advisories pending manual review."
     },
     {
       "source_key": "main:child-of-light",
@@ -139,9 +189,9 @@
       "reason": null
     },
     {
-      "source_key": "main:crimson-desert",
-      "game_id": "crimson-desert",
-      "title": "Crimson Desert",
+      "source_key": "main:crimson-desert-enhanced",
+      "game_id": "crimson-desert-enhanced",
+      "title": "Crimson Desert Enhanced",
       "section": "main",
       "profile_source": "game",
       "note_sha256": "b4c80cf46554fd0ecc63b0a39faf145d6a5e71776729378c506b54867c189bfd",
@@ -209,9 +259,9 @@
       "reason": null
     },
     {
-      "source_key": "main:ninja-gaiden-sigma",
-      "game_id": "ninja-gaiden-sigma",
-      "title": "Ninja Gaiden Sigma",
+      "source_key": "main:ninja-gaiden",
+      "game_id": "ninja-gaiden",
+      "title": "NINJA GAIDEN Σ",
       "section": "main",
       "profile_source": "ngsigma",
       "note_sha256": "47b550a08d444dae6ef353394a93c1c7b17b11fb06c8eeda12968ed672670182",
@@ -219,9 +269,9 @@
       "reason": null
     },
     {
-      "source_key": "main:ninja-gaiden-sigma-2",
-      "game_id": "ninja-gaiden-sigma-2",
-      "title": "Ninja Gaiden Sigma 2",
+      "source_key": "main:ninja-gaiden-2",
+      "game_id": "ninja-gaiden-2",
+      "title": "NINJA GAIDEN Σ2",
       "section": "main",
       "profile_source": "ngsigma2",
       "note_sha256": "47b550a08d444dae6ef353394a93c1c7b17b11fb06c8eeda12968ed672670182",
@@ -309,6 +359,16 @@
       "reason": null
     },
     {
+      "source_key": "main:the-elder-scrolls-v-skyrim-special-edition",
+      "game_id": "the-elder-scrolls-v-skyrim-special-edition",
+      "title": "The Elder Scrolls V: Skyrim Special Edition",
+      "section": "main",
+      "profile_source": "skyrimse",
+      "note_sha256": "cf8efbc74a19780b25e712d8b1deba3b4b1854a2dea70548b53efbbb309bbdcd",
+      "disposition": "omitted",
+      "reason": "Generic installation instructions refer to manual host placement; RenderPilot manages add-on installation directly."
+    },
+    {
       "source_key": "main:tomb-raider-2013-definitive-edition",
       "game_id": "tomb-raider-2013-definitive-edition",
       "title": "Tomb Raider (2013) - Definitive Edition",
@@ -331,7 +391,7 @@
     {
       "source_key": "main:yakuza-kiwami-1",
       "game_id": "yakuza-kiwami-1",
-      "title": "Yakuza Kiwami 1",
+      "title": "Yakuza Kiwami (1)",
       "section": "main",
       "profile_source": "yakuza0",
       "note_sha256": "b0f999037e4e62f2e7989ddad25221b61b03f3499de688b3991c661a2245a109",
@@ -357,6 +417,16 @@
       "note_sha256": "0564a8a79474b5ee0800378b1ac2d8ceeb5ef33e35f84f9961b5a3e44da8241d",
       "disposition": "curated_manual",
       "reason": null
+    },
+    {
+      "source_key": "ue-extended:assetto-corsa-competizione",
+      "game_id": "assetto-corsa-competizione",
+      "title": "Assetto Corsa Competizione",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "472ee8156e3946998a16bdd94358d641641be162dc9a61aeaa09f14fcc98275d",
+      "disposition": "pending",
+      "reason": "Upstream configuration instructions pending manual review."
     },
     {
       "source_key": "ue-extended:assetto-corsa-rally",
@@ -509,6 +579,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:deliver-us-the-moon",
+      "game_id": "deliver-us-the-moon",
+      "title": "Deliver Us The Moon",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "disposition": "pending",
+      "reason": "Upstream configuration instructions pending manual review."
+    },
+    {
       "source_key": "ue-extended:end-of-abyss",
       "game_id": "end-of-abyss",
       "title": "End of Abyss",
@@ -549,12 +629,12 @@
       "reason": null
     },
     {
-      "source_key": "ue-extended:flyknight",
-      "game_id": "flyknight",
-      "title": "FlyKnight",
+      "source_key": "ue-extended:flyknight-enhanced-edition",
+      "game_id": "flyknight-enhanced-edition",
+      "title": "FlyKnight Enhanced Edition",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "68cb91956e1319cf721c808a594f7cfdf12c6559671a9afe1bae96b2c43cbf61",
+      "note_sha256": "51b64235d8d89bb204cb9cc15aa73be4ae8c6045e6d292db34cf113c0343e94a",
       "disposition": "omitted",
       "reason": "Moved to resolved legacy title guidance; no UE Extended processing policy is emitted for this source row."
     },
@@ -601,7 +681,7 @@
     {
       "source_key": "ue-extended:ghostwire-tokyo",
       "game_id": "ghostwire-tokyo",
-      "title": "Ghostwire Tokyo",
+      "title": "Ghostwire: Tokyo",
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
@@ -637,6 +717,16 @@
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
       "disposition": "curated_manual",
       "reason": null
+    },
+    {
+      "source_key": "ue-extended:half-sword",
+      "game_id": "half-sword",
+      "title": "Half Sword",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "pending",
+      "reason": "Upstream configuration instructions pending manual review."
     },
     {
       "source_key": "ue-extended:hellblade-ii-senua-s-saga",
@@ -779,6 +869,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:luto",
+      "game_id": "luto",
+      "title": "Luto",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "fc36e06b1b1b482e2d67a53308af44d801450f08df649b621ecf5a00c75c180e",
+      "disposition": "pending",
+      "reason": "Upstream configuration instructions pending manual review."
+    },
+    {
       "source_key": "ue-extended:mafia-the-old-country",
       "game_id": "mafia-the-old-country",
       "title": "Mafia: The Old Country",
@@ -879,6 +979,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:pih",
+      "game_id": "pih",
+      "title": "Pih",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "disposition": "pending",
+      "reason": "Upstream configuration instructions pending manual review."
+    },
+    {
       "source_key": "ue-extended:quarantine-zone-the-last-check",
       "game_id": "quarantine-zone-the-last-check",
       "title": "Quarantine Zone: The Last Check",
@@ -967,6 +1077,16 @@
       "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
       "disposition": "curated_manual",
       "reason": null
+    },
+    {
+      "source_key": "ue-extended:still-wakes-the-deep",
+      "game_id": "still-wakes-the-deep",
+      "title": "Still Wakes the Deep",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7571319a5f9858ad0c1554cd1ef1ffa9b1c4a5c51da6f1edf488af24ab11f4d1",
+      "disposition": "pending",
+      "reason": "Upstream configuration instructions pending manual review."
     },
     {
       "source_key": "ue-extended:stray",
@@ -3619,16 +3739,6 @@
       "reason": null
     },
     {
-      "source_key": "unity:golf-with-your-friends",
-      "game_id": "golf-with-your-friends",
-      "title": "Golf With Your Friends",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "945d3f151596b69b84bcb0db631a2ef5b6f3709181c9f05321b733eba06bec5e",
-      "disposition": "pending",
-      "reason": "The upstream resource-upgrade instruction is incomplete and does not identify a format."
-    },
-    {
       "source_key": "unity:great-god-grove",
       "game_id": "great-god-grove",
       "title": "Great God Grove",
@@ -3969,6 +4079,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:mage-arena",
+      "game_id": "mage-arena",
+      "title": "Mage Arena",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "e59df1177fa860bc13fb50ed35cb1d4ea54a0afceaf2cc4fede3c53462a99ec2",
+      "disposition": "pending",
+      "reason": "Upstream format and encoding adjustments pending manual review."
+    },
+    {
       "source_key": "unity:mages-of-mystralia",
       "game_id": "mages-of-mystralia",
       "title": "Mages of Mystralia",
@@ -4147,6 +4267,16 @@
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
+    },
+    {
+      "source_key": "unity:no-rest-for-the-wicked",
+      "game_id": "no-rest-for-the-wicked",
+      "title": "No Rest For The Wicked",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "93ffbe91944b90dd9028910905352bbcd13602fdbacad5c5a000cccc4c318161",
+      "disposition": "pending",
+      "reason": "Upstream format and encoding adjustments pending manual review."
     },
     {
       "source_key": "unity:nottolot",
@@ -4475,16 +4605,6 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
-      "source_key": "unity:shape-of-dreams",
-      "game_id": "shape-of-dreams",
-      "title": "Shape of Dreams",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "f61c60bf03facacc0d1d838bdad68389a306da85ff9deef9a83e443275918adf",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4887,6 +5007,16 @@
       "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
       "disposition": "curated_manual",
       "reason": null
+    },
+    {
+      "source_key": "unity:ultrakill",
+      "game_id": "ultrakill",
+      "title": "ULTRAKILL",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "1ebd906a9ee32330c7697e27b0d3751746775cc16ec1edac728ca65dbb936808",
+      "disposition": "pending",
+      "reason": "Upstream format and encoding adjustments pending manual review."
     },
     {
       "source_key": "unity:ultros",

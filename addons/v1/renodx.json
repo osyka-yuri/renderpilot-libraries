@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-06T00:00:00Z",
+  "generated_at": "2026-10-10T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -25,7 +25,7 @@
     },
     {
       "id": "1000xresist",
-      "name": "1000xResist",
+      "name": "1000xRESIST",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -126,7 +126,7 @@
     },
     {
       "id": "against-the-storm",
-      "name": "Against The Storm",
+      "name": "Against the Storm",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -148,7 +148,7 @@
     },
     {
       "id": "animal-well",
-      "name": "Animal Well",
+      "name": "ANIMAL WELL",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -230,7 +230,7 @@
     },
     {
       "id": "armored-core-vi-fires-of-rubicon",
-      "name": "Armored Core VI: Fires of Rubicon",
+      "name": "ARMORED CORE™ VI FIRES OF RUBICON™",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -437,24 +437,61 @@
       }
     },
     {
-      "id": "assassins-creed-mirage",
-      "name": "Assassin’s Creed® Mirage",
+      "id": "assassin-s-creed-unity",
+      "name": "Assassin’s Creed® Unity",
       "architecture": "X64",
       "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "3035570",
+          "value": "289650",
           "tier": 100
         },
         {
           "kind": "exe_name",
-          "value": "ACMirage.exe",
+          "value": "ACU.exe",
           "tier": 70
         }
       ],
       "addon": {
-        "slug": "asscreedmirage"
+        "slug": "assassin-s-creed-unity"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
+      "id": "assassin-s-creed-syndicate",
+      "name": "Assassin’s Creed® Syndicate",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "368500",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "ACS.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "assassin-s-creed-syndicate"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
       }
     },
     {
@@ -500,85 +537,6 @@
       }
     },
     {
-      "id": "assassins-creed-shadows",
-      "name": "Assassin’s Creed® Shadows",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3159330",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "ACShadows.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "asscreedshadows"
-      }
-    },
-    {
-      "id": "assassin-s-creed-syndicate",
-      "name": "Assassin’s Creed® Syndicate",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "368500",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "ACS.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "assassin-s-creed-syndicate"
-      },
-      "availability": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/assassinscreedsyndicate/mods/157",
-        "message": {
-          "id": "renodx.external.nexus",
-          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
-        }
-      }
-    },
-    {
-      "id": "assassin-s-creed-unity",
-      "name": "Assassin’s Creed® Unity",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "289650",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "ACU.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "assassin-s-creed-unity"
-      },
-      "availability": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/assassinscreedunity/mods/321",
-        "message": {
-          "id": "renodx.external.nexus",
-          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
-        }
-      }
-    },
-    {
       "id": "assassins-creed-valhalla",
       "name": "Assassin’s Creed® Valhalla",
       "architecture": "X64",
@@ -600,8 +558,74 @@
       }
     },
     {
-      "id": "atelier-ryza-1",
-      "name": "Atelier Ryza 1",
+      "id": "assassins-creed-mirage",
+      "name": "Assassin’s Creed® Mirage",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3035570",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "ACMirage.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "asscreedmirage"
+      }
+    },
+    {
+      "id": "assassins-creed-shadows",
+      "name": "Assassin’s Creed® Shadows",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3159330",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "ACShadows.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "asscreedshadows"
+      }
+    },
+    {
+      "id": "assetto-corsa-evo",
+      "name": "Assetto Corsa EVO",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3058630",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "assetto-corsa-evo"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/assettocorsaevo/mods/8",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
+      "id": "atelier-ryza-ever-darkness-the-secret-hideout",
+      "name": "Atelier Ryza: Ever Darkness & the Secret Hideout",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -622,8 +646,8 @@
       }
     },
     {
-      "id": "atelier-ryza-2",
-      "name": "Atelier Ryza 2",
+      "id": "atelier-ryza-2-lost-legends-the-secret-fairy",
+      "name": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -644,8 +668,8 @@
       }
     },
     {
-      "id": "atelier-ryza-3",
-      "name": "Atelier Ryza 3",
+      "id": "atelier-ryza-3-alchemist-of-the-end-the-secret-key",
+      "name": "Atelier Ryza 3: Alchemist of the End & the Secret Key",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -666,8 +690,8 @@
       }
     },
     {
-      "id": "atelier-ryza-dx",
-      "name": "Atelier Ryza DX",
+      "id": "atelier-ryza-ever-darkness-the-secret-hideout-dx",
+      "name": "Atelier Ryza: Ever Darkness & the Secret Hideout DX",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -687,8 +711,8 @@
       }
     },
     {
-      "id": "atelier-sophie-1-dx",
-      "name": "Atelier Sophie 1 DX",
+      "id": "atelier-sophie-the-alchemist-of-the-mysterious-book-dx",
+      "name": "Atelier Sophie: The Alchemist of the Mysterious Book DX",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -726,8 +750,8 @@
       }
     },
     {
-      "id": "atlas-fallen",
-      "name": "Atlas Fallen (DX12)",
+      "id": "atlas-fallen-reign-of-sand-dx12",
+      "name": "Atlas Fallen: Reign Of Sand (DX12)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -811,7 +835,7 @@
     },
     {
       "id": "batman-arkham-knight",
-      "name": "Batman: Arkham Knight",
+      "name": "Batman™: Arkham Knight",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -831,8 +855,8 @@
       }
     },
     {
-      "id": "batman-arkham-asylum",
-      "name": "Batman: Arkham Asylum",
+      "id": "batman-arkham-asylum-goty-edition",
+      "name": "Batman: Arkham Asylum GOTY Edition",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -890,8 +914,8 @@
       }
     },
     {
-      "id": "black-desert-online",
-      "name": "Black Desert Online",
+      "id": "black-desert",
+      "name": "Black Desert",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -978,7 +1002,7 @@
     },
     {
       "id": "call-of-juarez",
-      "name": "Call of Juarez (dx10)",
+      "name": "Call of Juarez (DX10)",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -1003,8 +1027,8 @@
       }
     },
     {
-      "id": "castlevania-lords-of-shadow",
-      "name": "Castlevania Lords of Shadow",
+      "id": "castlevania-lords-of-shadow-ultimate-edition",
+      "name": "Castlevania: Lords of Shadow - Ultimate Edition",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -1046,8 +1070,8 @@
       }
     },
     {
-      "id": "citizen-sleeper-2",
-      "name": "Citizen Sleeper 2",
+      "id": "citizen-sleeper-2-starward-vector",
+      "name": "Citizen Sleeper 2: Starward Vector",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1152,8 +1176,8 @@
       }
     },
     {
-      "id": "crimson-desert",
-      "name": "Crimson Desert",
+      "id": "crimson-desert-enhanced",
+      "name": "Crimson Desert Enhanced",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -1169,7 +1193,15 @@
         }
       ],
       "addon": {
-        "slug": "crimsondesert"
+        "slug": "crimson-desert-enhanced"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/crimsondesert/mods/7",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
       }
     },
     {
@@ -1240,7 +1272,7 @@
     },
     {
       "id": "dark-souls-remastered",
-      "name": "Dark Souls: Remastered",
+      "name": "DARK SOULS™: REMASTERED",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1260,8 +1292,8 @@
       }
     },
     {
-      "id": "darkest-dungeon-2",
-      "name": "Darkest Dungeon 2",
+      "id": "darkest-dungeon-ii",
+      "name": "Darkest Dungeon® II",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -1385,7 +1417,7 @@
     },
     {
       "id": "death-stranding-director-s-cut",
-      "name": "Death Stranding : Director's Cut",
+      "name": "DEATH STRANDING DIRECTOR'S CUT",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -1405,8 +1437,8 @@
       }
     },
     {
-      "id": "death-stranding-2",
-      "name": "Death Stranding 2",
+      "id": "death-stranding-2-on-the-beach",
+      "name": "DEATH STRANDING 2: ON THE BEACH",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1427,7 +1459,7 @@
     },
     {
       "id": "deus-ex-mankind-divided",
-      "name": "Deus Ex: Mankind Divided",
+      "name": "Deus Ex: Mankind Divided™",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1447,8 +1479,8 @@
       }
     },
     {
-      "id": "devil-may-cry-v",
-      "name": "Devil May Cry V",
+      "id": "devil-may-cry-5",
+      "name": "Devil May Cry 5",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1469,7 +1501,7 @@
     },
     {
       "id": "digimon-story-time-stranger",
-      "name": "Digimon Story: Time Stranger",
+      "name": "Digimon Story Time Stranger",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -1577,7 +1609,7 @@
     },
     {
       "id": "dragon-age-inquisition",
-      "name": "Dragon Age: Inquisition",
+      "name": "Dragon Age™ Inquisition",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1614,7 +1646,7 @@
     },
     {
       "id": "dragon-quest-11-s",
-      "name": "Dragon Quest XI (Original & DE)",
+      "name": "DRAGON QUEST® XI: Echoes of an Elusive Age™ (Original & DE)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1636,7 +1668,7 @@
     },
     {
       "id": "dragon-quest-xi",
-      "name": "Dragon Quest XI (Original & DE)",
+      "name": "DRAGON QUEST® XI: Echoes of an Elusive Age™ (Original & DE)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1657,8 +1689,8 @@
       }
     },
     {
-      "id": "dragon-quest-vii-remake",
-      "name": "Dragon Quest VII Remake",
+      "id": "dragon-quest-vii-reimagined",
+      "name": "DRAGON QUEST VII Reimagined",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -1743,7 +1775,7 @@
     },
     {
       "id": "elden-ring",
-      "name": "Elden Ring",
+      "name": "ELDEN RING",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1759,7 +1791,7 @@
     },
     {
       "id": "elden-ring-nightreign",
-      "name": "Elden Ring: Nightreign",
+      "name": "ELDEN RING NIGHTREIGN",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1856,7 +1888,7 @@
     },
     {
       "id": "far-cry-2",
-      "name": "Far Cry 2 (dx10)",
+      "name": "Far Cry® 2 (DX10)",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -1877,7 +1909,7 @@
     },
     {
       "id": "far-cry-3",
-      "name": "Far Cry 3 (dx11)",
+      "name": "Far Cry® 3 (DX11)",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -1893,7 +1925,7 @@
     },
     {
       "id": "far-cry-5",
-      "name": "Far Cry 5",
+      "name": "Far Cry® 5",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1914,7 +1946,7 @@
     },
     {
       "id": "far-cry-6",
-      "name": "Far Cry 6",
+      "name": "Far Cry® 6",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1935,7 +1967,7 @@
     },
     {
       "id": "far-cry-primal",
-      "name": "Far Cry Primal",
+      "name": "Far Cry® Primal",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -1985,8 +2017,8 @@
       }
     },
     {
-      "id": "final-fantasy-7-rebirth",
-      "name": "Final Fantasy 7 : Rebirth",
+      "id": "final-fantasy-vii-rebirth",
+      "name": "FINAL FANTASY VII REBIRTH",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2006,8 +2038,8 @@
       }
     },
     {
-      "id": "final-fantasy-7-remake",
-      "name": "Final Fantasy 7 : Remake",
+      "id": "final-fantasy-vii-remake-intergrade",
+      "name": "FINAL FANTASY VII REMAKE INTERGRADE",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2027,8 +2059,8 @@
       }
     },
     {
-      "id": "final-fantasy-x",
-      "name": "Final Fantasy X",
+      "id": "final-fantasy-x-x-2-hd-remaster",
+      "name": "FINAL FANTASY X/X-2 HD Remaster",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -2043,8 +2075,8 @@
       }
     },
     {
-      "id": "final-fantasy-xiv",
-      "name": "Final Fantasy XIV",
+      "id": "final-fantasy-xiv-online",
+      "name": "FINAL FANTASY XIV Online",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2064,8 +2096,8 @@
       }
     },
     {
-      "id": "final-fantasy-xv",
-      "name": "Final Fantasy XV",
+      "id": "final-fantasy-xv-windows-edition",
+      "name": "FINAL FANTASY XV WINDOWS EDITION",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2155,37 +2187,8 @@
       }
     },
     {
-      "id": "ghost-recon-wildlands",
-      "name": "Ghost Recon® Wildlands",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "460930",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "GRW.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "ghost-recon-wildlands"
-      },
-      "availability": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
-        "message": {
-          "id": "renodx.external.nexus",
-          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
-        }
-      }
-    },
-    {
       "id": "ghostwire-tokyo",
-      "name": "GhostWire Tokyo",
+      "name": "Ghostwire: Tokyo",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2248,7 +2251,7 @@
     },
     {
       "id": "god-of-war-ragnarok",
-      "name": "God of War Ragnarok",
+      "name": "God of War Ragnarök",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2290,7 +2293,7 @@
     },
     {
       "id": "grand-theft-auto-v-enhanced",
-      "name": "Grand Theft Auto V : Enhanced",
+      "name": "Grand Theft Auto V Enhanced",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2370,7 +2373,7 @@
     },
     {
       "id": "guild-wars-2",
-      "name": "Guild Wars 2",
+      "name": "Guild Wars 2®",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -2412,8 +2415,8 @@
       }
     },
     {
-      "id": "hades-2",
-      "name": "Hades 2",
+      "id": "hades-ii",
+      "name": "Hades II",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -2494,7 +2497,7 @@
     },
     {
       "id": "helldivers-2",
-      "name": "Helldivers 2",
+      "name": "HELLDIVERS™ 2",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2573,7 +2576,7 @@
     },
     {
       "id": "horizon-forbidden-west-complete-edition",
-      "name": "Horizon Forbidden West Complete Edition",
+      "name": "Horizon Forbidden West™ Complete Edition",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2590,7 +2593,7 @@
     },
     {
       "id": "horizon-zero-dawn-complete-edition",
-      "name": "Horizon Zero Dawn Complete Edition",
+      "name": "Horizon Zero Dawn™ Complete Edition",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2607,7 +2610,7 @@
     },
     {
       "id": "horizon-zero-dawn-remastered",
-      "name": "Horizon Zero Dawn Remastered",
+      "name": "Horizon Zero Dawn™ Remastered",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2666,7 +2669,7 @@
     },
     {
       "id": "ixion",
-      "name": "Ixion",
+      "name": "IXION",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -2688,7 +2691,7 @@
     },
     {
       "id": "james-cameron-s-avatar-the-game",
-      "name": "James Cameron's Avatar: The Game",
+      "name": "James Cameron’s Avatar™: The Game",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -2751,7 +2754,7 @@
     },
     {
       "id": "karma-the-dark-world",
-      "name": "Karma: The Dark World",
+      "name": "KARMA: The Dark World",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -2856,230 +2859,8 @@
       }
     },
     {
-      "id": "trails-of-cold-steel-cs3",
-      "name": "The Legend of Heroes: Trails of Cold Steel III",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "991270",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "ed8_3_PC.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "senkiseki",
-        "source": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
-      }
-    },
-    {
-      "id": "trails-of-cold-steel-cs4",
-      "name": "The Legend of Heroes: Trails of Cold Steel IV",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1198090",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "ed8_4_PC.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "senkiseki",
-        "source": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
-      }
-    },
-    {
-      "id": "trails-of-cold-steel-reverie",
-      "name": "The Legend of Heroes: Trails into Reverie",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1668540",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "hnk.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "senkiseki",
-        "source": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
-      }
-    },
-    {
-      "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
-      "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2523770",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition"
-      },
-      "availability": {
-        "kind": "external",
-        "url": "https://www.nexusmods.com/mods/3?game_id=9856",
-        "message": {
-          "id": "renodx.external.nexus",
-          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
-        }
-      }
-    },
-    {
-      "id": "trails-in-the-sky-1st-chapter",
-      "name": "Trails in the Sky 1st Chapter",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3375780",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "sora_1st.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "falcomengine",
-        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
-      }
-    },
-    {
-      "id": "trails-through-daybreak-1-2-d1",
-      "name": "The Legend of Heroes: Trails through Daybreak",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2138610",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "kuro.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "falcomengine",
-        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
-      }
-    },
-    {
-      "id": "trails-through-daybreak-1-2-d2",
-      "name": "The Legend of Heroes: Trails through Daybreak II",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2668430",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "kuro2.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "falcomengine",
-        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
-      }
-    },
-    {
-      "id": "trails-beyond-the-horizon",
-      "name": "Trails beyond the Horizon",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3316940",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "kai.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "falcomengine",
-        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
-      }
-    },
-    {
-      "id": "trails-from-zero-to-azure-zero",
-      "name": "The Legend of Heroes: Trails from Zero",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1668510",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "zero.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "zerokiseki",
-        "source": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
-      }
-    },
-    {
-      "id": "trails-from-zero-to-azure-azure",
-      "name": "The Legend of Heroes: Trails to Azure",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1668520",
-          "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "ao.exe",
-          "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "zerokiseki",
-        "source": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
-      }
-    },
-    {
       "id": "lego-harry-potter-collection",
-      "name": "Lego Harry Potter Collection",
+      "name": "LEGO® Harry Potter™ Collection",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3155,8 +2936,8 @@
       }
     },
     {
-      "id": "lost-planet",
-      "name": "Lost Planet",
+      "id": "lost-planet-extreme-condition-colonies-edition",
+      "name": "Lost Planet: Extreme Condition - Colonies Edition",
       "architecture": "X86",
       "status": "working",
       "match": [
@@ -3266,7 +3047,7 @@
     },
     {
       "id": "marvel-s-spider-man-miles-morales",
-      "name": "Marvel's Spider-Man Miles Morales",
+      "name": "Marvel's Spider-Man: Miles Morales",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3308,7 +3089,7 @@
     },
     {
       "id": "mass-effect-andromeda",
-      "name": "Mass Effect: Andromeda",
+      "name": "Mass Effect™: Andromeda",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3324,7 +3105,7 @@
     },
     {
       "id": "mass-effect-legendary-edition",
-      "name": "Mass Effect: Legendary Edition",
+      "name": "Mass Effect™ Legendary Edition",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3403,7 +3184,7 @@
     },
     {
       "id": "middle-earth-shadow-of-war",
-      "name": "Middle Earth: Shadow of War",
+      "name": "Middle-earth™: Shadow of War™",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3453,7 +3234,7 @@
     },
     {
       "id": "monster-hunter-rise",
-      "name": "Monster Hunter Rise",
+      "name": "MONSTER HUNTER RISE",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3474,7 +3255,7 @@
     },
     {
       "id": "monster-hunter-wilds",
-      "name": "Monster Hunter: Wilds",
+      "name": "Monster Hunter Wilds",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3553,8 +3334,8 @@
       }
     },
     {
-      "id": "nights-of-azure-1",
-      "name": "Nights of Azure 1",
+      "id": "nights-of-azure",
+      "name": "Nights of Azure",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -3570,8 +3351,8 @@
       }
     },
     {
-      "id": "nights-of-azure-2",
-      "name": "Nights of Azure 2",
+      "id": "nights-of-azure-2-bride-of-the-new-moon",
+      "name": "Nights of Azure 2: Bride of the New Moon",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -3608,8 +3389,8 @@
       }
     },
     {
-      "id": "ninja-gaiden-sigma",
-      "name": "Ninja Gaiden Sigma",
+      "id": "ninja-gaiden",
+      "name": "NINJA GAIDEN Σ",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3629,8 +3410,8 @@
       }
     },
     {
-      "id": "ninja-gaiden-sigma-2",
-      "name": "Ninja Gaiden Sigma 2",
+      "id": "ninja-gaiden-2",
+      "name": "NINJA GAIDEN Σ2",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -3844,8 +3625,8 @@
       }
     },
     {
-      "id": "path-of-exile-2-dx11-only",
-      "name": "Path of Exile 2 DX11 Only",
+      "id": "path-of-exile-2-dx11",
+      "name": "Path of Exile 2 (DX11)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -3930,7 +3711,7 @@
     },
     {
       "id": "persona-5-strikers",
-      "name": "Persona 5 : Strikers",
+      "name": "Persona 5 Strikers",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -3947,7 +3728,7 @@
     },
     {
       "id": "pragmata",
-      "name": "Pragmata",
+      "name": "PRAGMATA",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4032,7 +3813,7 @@
     },
     {
       "id": "resident-evil-2-remake",
-      "name": "Resident Evil 2 Remake",
+      "name": "Resident Evil 2 (Remake)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4053,7 +3834,7 @@
     },
     {
       "id": "resident-evil-3-remake",
-      "name": "Resident Evil 3 Remake",
+      "name": "Resident Evil 3 (Remake)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4074,7 +3855,7 @@
     },
     {
       "id": "resident-evil-4-remake",
-      "name": "Resident Evil 4 Remake",
+      "name": "Resident Evil 4 (Remake)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4289,7 +4070,7 @@
     },
     {
       "id": "routine",
-      "name": "Routine",
+      "name": "ROUTINE",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4326,8 +4107,8 @@
       }
     },
     {
-      "id": "sea-of-stars",
-      "name": "Sea of Stars",
+      "id": "sea-of-stars-sunset-edition",
+      "name": "Sea of Stars: Sunset Edition",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4348,7 +4129,7 @@
     },
     {
       "id": "sekiro-shadows-die-twice",
-      "name": "Sekiro: Shadows Die Twice",
+      "name": "Sekiro™: Shadows Die Twice",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4411,7 +4192,7 @@
       }
     },
     {
-      "id": "shadow-warrior-middot-shadow-warrior-2-sw1",
+      "id": "shadow-warrior-2013-shadow-warrior-2-sw1",
       "name": "Shadow Warrior (2013)",
       "architecture": "X64",
       "status": "working",
@@ -4432,7 +4213,7 @@
       }
     },
     {
-      "id": "shadow-warrior-middot-shadow-warrior-2-sw2",
+      "id": "shadow-warrior-2013-shadow-warrior-2-sw2",
       "name": "Shadow Warrior 2",
       "architecture": "X64",
       "status": "working",
@@ -4453,8 +4234,8 @@
       }
     },
     {
-      "id": "shin-megami-tensei-v",
-      "name": "Shin Megami Tensei V",
+      "id": "shin-megami-tensei-v-vengeance",
+      "name": "Shin Megami Tensei V: Vengeance",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4497,7 +4278,7 @@
     },
     {
       "id": "silent-hill-2-remake",
-      "name": "Silent Hill 2 Remake",
+      "name": "SILENT HILL 2 (Remake)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4518,7 +4299,7 @@
     },
     {
       "id": "silent-hill-f",
-      "name": "Silent Hill f",
+      "name": "SILENT HILL f",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4638,22 +4419,6 @@
       "addon": {
         "slug": "specopstheline",
         "source": "https://github.com/steve161803/renodx/releases/download/snapshot/renodx-specopstheline.addon32"
-      }
-    },
-    {
-      "id": "splinter-cell-blacklist",
-      "name": "Splinter Cell: Blacklist",
-      "architecture": "X86",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "235600",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "scblacklist"
       }
     },
     {
@@ -4811,7 +4576,7 @@
     },
     {
       "id": "stranger-of-paradise-final-fantasy-origin",
-      "name": "Stranger of Paradise: Final Fantasy Origin",
+      "name": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -4833,7 +4598,7 @@
     },
     {
       "id": "street-fighter-6",
-      "name": "Street Fighter 6",
+      "name": "Street Fighter™ 6",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4875,7 +4640,7 @@
     },
     {
       "id": "sword-art-online-alicization-lycoris",
-      "name": "Sword Art Online Alicization Lycoris",
+      "name": "SWORD ART ONLINE Alicization Lycoris",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -4944,7 +4709,7 @@
     },
     {
       "id": "teardown",
-      "name": "Teardown (dx12)",
+      "name": "Teardown (DX12)",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -4966,7 +4731,7 @@
     },
     {
       "id": "tekken-8",
-      "name": "Tekken 8",
+      "name": "TEKKEN 8",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -5082,6 +4847,23 @@
       }
     },
     {
+      "id": "the-elder-scrolls-v-skyrim-special-edition",
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "489830",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "skyrimse",
+        "source": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-skyrimse.addon64"
+      }
+    },
+    {
       "id": "the-hundred-line-last-defense-academy",
       "name": "The Hundred Line: Last Defense Academy",
       "architecture": "X64",
@@ -5122,6 +4904,228 @@
       "addon": {
         "slug": "vanhelsingfinalcut",
         "source": "https://notvoosh.github.io/renodx/renodx-vanhelsingfinalcut.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-of-cold-steel-iii-iv-v-cs3",
+      "name": "The Legend of Heroes: Trails of Cold Steel III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "991270",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "ed8_3_PC.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "senkiseki",
+        "source": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-of-cold-steel-iii-iv-v-cs4",
+      "name": "The Legend of Heroes: Trails of Cold Steel IV",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1198090",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "ed8_4_PC.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "senkiseki",
+        "source": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-of-cold-steel-iii-iv-v-reverie",
+      "name": "The Legend of Heroes: Trails into Reverie",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1668540",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "hnk.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "senkiseki",
+        "source": "https://danaforever.github.io/renodx/renodx-senkiseki.addon64"
+      }
+    },
+    {
+      "id": "the-lord-of-the-rings-war-in-the-north-legacy-edition",
+      "name": "The Lord of the Rings: War in the North™ - Legacy Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2523770",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "the-lord-of-the-rings-war-in-the-north-legacy-edition"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/mods/3?game_id=9856",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
+      "id": "trails-in-the-sky-1st-chapter",
+      "name": "Trails in the Sky 1st Chapter",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3375780",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "sora_1st.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "falcomengine",
+        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-through-daybreak-i-ii-d1",
+      "name": "The Legend of Heroes: Trails through Daybreak",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2138610",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "kuro.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "falcomengine",
+        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-through-daybreak-i-ii-d2",
+      "name": "The Legend of Heroes: Trails through Daybreak II",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2668430",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "kuro2.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "falcomengine",
+        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-beyond-the-horizon",
+      "name": "The Legend of Heroes: Trails beyond the Horizon",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3316940",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "kai.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "falcomengine",
+        "source": "https://danaforever.github.io/renodx/renodx-falcomengine.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-from-zero-to-azure-zero",
+      "name": "The Legend of Heroes: Trails from Zero",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1668510",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "zero.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "zerokiseki",
+        "source": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
+      }
+    },
+    {
+      "id": "the-legend-of-heroes-trails-from-zero-to-azure-azure",
+      "name": "The Legend of Heroes: Trails to Azure",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1668520",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "ao.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "zerokiseki",
+        "source": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
       }
     },
     {
@@ -5167,8 +5171,8 @@
       }
     },
     {
-      "id": "the-witcher-3",
-      "name": "The Witcher 3",
+      "id": "the-witcher-3-wild-hunt-next-gen",
+      "name": "The Witcher 3: Wild Hunt (Next Gen)",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -5247,6 +5251,51 @@
       }
     },
     {
+      "id": "tom-clancy-s-ghost-recon-wildlands",
+      "name": "Tom Clancy's Ghost Recon® Wildlands",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "460930",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "GRW.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "tom-clancy-s-ghost-recon-wildlands"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/ghostreconwildlands/mods/60",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
+      "id": "tom-clancy-s-splinter-cell-blacklist",
+      "name": "Tom Clancy's Splinter Cell Blacklist",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "235600",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "scblacklist"
+      }
+    },
+    {
       "id": "tomb-raider",
       "name": "Tomb Raider (2013)",
       "architecture": "X86",
@@ -5269,7 +5318,7 @@
     },
     {
       "id": "total-war-three-kingdoms",
-      "name": "Total War: Three Kingdoms",
+      "name": "Total War: THREE KINGDOMS",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -5285,8 +5334,8 @@
       }
     },
     {
-      "id": "total-war-warhammer-3",
-      "name": "Total War: Warhammer 3",
+      "id": "total-war-warhammer-iii",
+      "name": "Total War: WARHAMMER III",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -5351,7 +5400,7 @@
     },
     {
       "id": "tunic",
-      "name": "Tunic",
+      "name": "TUNIC",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -5468,7 +5517,7 @@
     },
     {
       "id": "watch-dogs",
-      "name": "Watch Dogs",
+      "name": "Watch_Dogs",
       "architecture": "X64",
       "status": "working",
       "match": [
@@ -5571,7 +5620,7 @@
     },
     {
       "id": "yakuza-kiwami-1",
-      "name": "Yakuza Kiwami 1",
+      "name": "Yakuza Kiwami (1)",
       "architecture": "X64",
       "status": "construction",
       "match": [
@@ -5721,6 +5770,23 @@
           "kind": "exe_name",
           "value": "AbzuGame.exe",
           "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "assetto-corsa-competizione",
+      "name": "Assetto Corsa Competizione",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "805550",
+          "tier": 100
         }
       ],
       "addon": {
@@ -5982,6 +6048,23 @@
       }
     },
     {
+      "id": "deliver-us-the-moon",
+      "name": "Deliver Us The Moon",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "428660",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "end-of-abyss",
       "name": "End of Abyss",
       "architecture": "X64",
@@ -6047,22 +6130,6 @@
       "addon": {
         "slug": "ue-extended",
         "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
-      }
-    },
-    {
-      "id": "flyknight",
-      "name": "FlyKnight",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3108510",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
       }
     },
     {
@@ -6218,6 +6285,23 @@
         {
           "kind": "steam_appid",
           "value": "2661300",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "half-sword",
+      "name": "Half Sword",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2397300",
           "tier": 100
         }
       ],
@@ -6448,6 +6532,23 @@
           "kind": "exe_name",
           "value": "Little_Nightmares_II_Enhanced.exe",
           "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "luto",
+      "name": "Luto",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1729740",
+          "tier": 100
         }
       ],
       "addon": {
@@ -6757,6 +6858,23 @@
         {
           "kind": "steam_appid",
           "value": "2075800",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "still-wakes-the-deep",
+      "name": "Still Wakes the Deep",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1622910",
           "tier": 100
         }
       ],
@@ -7840,6 +7958,22 @@
         {
           "kind": "steam_appid",
           "value": "1330470",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unrealengine"
+      }
+    },
+    {
+      "id": "flyknight",
+      "name": "FlyKnight",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3108510",
           "tier": 100
         }
       ],
@@ -10854,6 +10988,27 @@
       }
     },
     {
+      "id": "cocoon",
+      "name": "COCOON",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1497440",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "universe.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "content-warning",
       "name": "Content Warning",
       "architecture": "X64",
@@ -12136,7 +12291,7 @@
       "id": "golf-with-your-friends",
       "name": "Golf With Your Friends",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
@@ -13618,6 +13773,22 @@
         {
           "kind": "steam_appid",
           "value": "2757670",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "no-rest-for-the-wicked",
+      "name": "No Rest For The Wicked",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1371980",
           "tier": 100
         }
       ],
