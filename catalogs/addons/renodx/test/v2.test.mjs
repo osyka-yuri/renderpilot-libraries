@@ -435,7 +435,7 @@ test("double-tonemapping advice is neutral compatibility guidance", () => {
 
 test("processing policy is the reviewed UE Extended matrix", () => {
   const ueExtended = manifest.games.filter((game) => game.profile_id === "ue_extended");
-  assert.equal(ueExtended.length, 69);
+  assert.equal(ueExtended.length, 70);
   const upgradeIds = [
     "abzu",
     "astroneer",

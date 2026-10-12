@@ -957,6 +957,20 @@
       ]
     },
     {
+      "id": "aniimo",
+      "rules": [
+        {
+          "id": "steam-4126040",
+          "kind": "steam_appid",
+          "value": "4126040",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:aniimo"
+          }
+        }
+      ]
+    },
+    {
       "id": "animal-well",
       "rules": [
         {
@@ -1323,6 +1337,20 @@
           "provenance": {
             "source": "steam-appinfo",
             "locator": "steam-executable-observation:911400"
+          }
+        }
+      ]
+    },
+    {
+      "id": "assassin-s-creed-rogue",
+      "rules": [
+        {
+          "id": "steam-311560",
+          "kind": "steam_appid",
+          "value": "311560",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:assassin-s-creed-rogue"
           }
         }
       ]
@@ -3394,6 +3422,20 @@
       ]
     },
     {
+      "id": "burglin-gnomes",
+      "rules": [
+        {
+          "id": "steam-3844970",
+          "kind": "steam_appid",
+          "value": "3844970",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:burglin-gnomes"
+          }
+        }
+      ]
+    },
+    {
       "id": "burning-sword-death",
       "rules": [
         {
@@ -3459,6 +3501,90 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#cakey-s-twisted-bakery"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-black-ops",
+      "rules": [
+        {
+          "id": "steam-42700",
+          "kind": "steam_appid",
+          "value": "42700",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:call-of-duty-black-ops"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-black-ops-cold-war",
+      "rules": [
+        {
+          "id": "steam-1985810",
+          "kind": "steam_appid",
+          "value": "1985810",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:call-of-duty-black-ops-cold-war"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-black-ops-ii",
+      "rules": [
+        {
+          "id": "steam-202970",
+          "kind": "steam_appid",
+          "value": "202970",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:call-of-duty-black-ops-ii"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-ghosts",
+      "rules": [
+        {
+          "id": "steam-209160",
+          "kind": "steam_appid",
+          "value": "209160",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:call-of-duty-ghosts"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-modern-warfare-3-2011",
+      "rules": [
+        {
+          "id": "steam-42680",
+          "kind": "steam_appid",
+          "value": "42680",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:call-of-duty-modern-warfare-3-2011"
+          }
+        }
+      ]
+    },
+    {
+      "id": "call-of-duty-world-at-war",
+      "rules": [
+        {
+          "id": "steam-10090",
+          "kind": "steam_appid",
+          "value": "10090",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:call-of-duty-world-at-war"
           }
         }
       ]
@@ -5663,6 +5789,20 @@
       ]
     },
     {
+      "id": "derail-valley",
+      "rules": [
+        {
+          "id": "steam-588030",
+          "kind": "steam_appid",
+          "value": "588030",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:derail-valley"
+          }
+        }
+      ]
+    },
+    {
       "id": "descenders",
       "rules": [
         {
@@ -7502,6 +7642,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#exo-one"
+          }
+        }
+      ]
+    },
+    {
+      "id": "exo-rally-championship",
+      "rules": [
+        {
+          "id": "steam-2262020",
+          "kind": "steam_appid",
+          "value": "2262020",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:exo-rally-championship"
           }
         }
       ]
@@ -9748,6 +9902,20 @@
       ]
     },
     {
+      "id": "heavenly-bodies",
+      "rules": [
+        {
+          "id": "steam-1138850",
+          "kind": "steam_appid",
+          "value": "1138850",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:heavenly-bodies"
+          }
+        }
+      ]
+    },
+    {
       "id": "heavy-rain",
       "rules": [
         {
@@ -11806,6 +11974,20 @@
       ]
     },
     {
+      "id": "lego-party",
+      "rules": [
+        {
+          "id": "steam-1969370",
+          "kind": "steam_appid",
+          "value": "1969370",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:lego-party"
+          }
+        }
+      ]
+    },
+    {
       "id": "lego-voyagers",
       "rules": [
         {
@@ -11815,6 +11997,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#lego-voyagers"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lethal-company",
+      "rules": [
+        {
+          "id": "steam-1966720",
+          "kind": "steam_appid",
+          "value": "1966720",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:lethal-company"
           }
         }
       ]
@@ -12172,6 +12368,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#lords-of-the-fallen-2023"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lorelei-and-the-laser-eyes",
+      "rules": [
+        {
+          "id": "steam-2008920",
+          "kind": "steam_appid",
+          "value": "2008920",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:lorelei-and-the-laser-eyes"
           }
         }
       ]
@@ -12571,6 +12781,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#mafia-the-old-country"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mage-arena",
+      "rules": [
+        {
+          "id": "steam-3716600",
+          "kind": "steam_appid",
+          "value": "3716600",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:mage-arena"
           }
         }
       ]
@@ -14372,6 +14596,20 @@
       ]
     },
     {
+      "id": "normal-golf-game",
+      "rules": [
+        {
+          "id": "steam-3510740",
+          "kind": "steam_appid",
+          "value": "3510740",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:normal-golf-game"
+          }
+        }
+      ]
+    },
+    {
       "id": "norse-oath-of-blood",
       "rules": [
         {
@@ -14698,6 +14936,20 @@
           "provenance": {
             "source": "steam-appinfo",
             "locator": "steam-executable-observation:1504500"
+          }
+        }
+      ]
+    },
+    {
+      "id": "opus-prism-peak",
+      "rules": [
+        {
+          "id": "steam-1947910",
+          "kind": "steam_appid",
+          "value": "1947910",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:opus-prism-peak"
           }
         }
       ]
@@ -15205,6 +15457,20 @@
       ]
     },
     {
+      "id": "peaks-of-yore",
+      "rules": [
+        {
+          "id": "steam-2236070",
+          "kind": "steam_appid",
+          "value": "2236070",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:peaks-of-yore"
+          }
+        }
+      ]
+    },
+    {
       "id": "penny-s-big-breakaway",
       "rules": [
         {
@@ -15353,6 +15619,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#phoenix-point"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pih",
+      "rules": [
+        {
+          "id": "steam-2870710",
+          "kind": "steam_appid",
+          "value": "2870710",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:pih"
           }
         }
       ]
@@ -16245,6 +16525,34 @@
       ]
     },
     {
+      "id": "reentry-a-space-flight-simulator",
+      "rules": [
+        {
+          "id": "steam-882140",
+          "kind": "steam_appid",
+          "value": "882140",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:reentry-a-space-flight-simulator"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reignbreaker",
+      "rules": [
+        {
+          "id": "steam-2129810",
+          "kind": "steam_appid",
+          "value": "2129810",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:reignbreaker"
+          }
+        }
+      ]
+    },
+    {
       "id": "reka",
       "rules": [
         {
@@ -16342,6 +16650,20 @@
       ]
     },
     {
+      "id": "replaced",
+      "rules": [
+        {
+          "id": "steam-1663850",
+          "kind": "steam_appid",
+          "value": "1663850",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:replaced"
+          }
+        }
+      ]
+    },
+    {
       "id": "republique",
       "rules": [
         {
@@ -16425,6 +16747,20 @@
       ]
     },
     {
+      "id": "resident-evil-6",
+      "rules": [
+        {
+          "id": "steam-221040",
+          "kind": "steam_appid",
+          "value": "221040",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:resident-evil-6"
+          }
+        }
+      ]
+    },
+    {
       "id": "resident-evil-7",
       "rules": [
         {
@@ -16503,6 +16839,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#resonance-a-plague-tale-legacy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restory-chill-electronics-repairs",
+      "rules": [
+        {
+          "id": "steam-3812600",
+          "kind": "steam_appid",
+          "value": "3812600",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:restory-chill-electronics-repairs"
           }
         }
       ]
@@ -17807,6 +18157,20 @@
       ]
     },
     {
+      "id": "silver-pines",
+      "rules": [
+        {
+          "id": "steam-2333000",
+          "kind": "steam_appid",
+          "value": "2333000",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:silver-pines"
+          }
+        }
+      ]
+    },
+    {
       "id": "simulakros",
       "rules": [
         {
@@ -17947,6 +18311,20 @@
       ]
     },
     {
+      "id": "snake-force",
+      "rules": [
+        {
+          "id": "steam-1806040",
+          "kind": "steam_appid",
+          "value": "1806040",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:snake-force"
+          }
+        }
+      ]
+    },
+    {
       "id": "snake-pass",
       "rules": [
         {
@@ -18067,6 +18445,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0496"
+          }
+        }
+      ]
+    },
+    {
+      "id": "solateria",
+      "rules": [
+        {
+          "id": "steam-2947280",
+          "kind": "steam_appid",
+          "value": "2947280",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:solateria"
           }
         }
       ]
@@ -20354,6 +20746,20 @@
       ]
     },
     {
+      "id": "the-farmer-was-replaced",
+      "rules": [
+        {
+          "id": "steam-2060160",
+          "kind": "steam_appid",
+          "value": "2060160",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-farmer-was-replaced"
+          }
+        }
+      ]
+    },
+    {
       "id": "the-first-berserker-khazan",
       "rules": [
         {
@@ -20749,6 +21155,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#the-medium"
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-message-from-deep-space",
+      "rules": [
+        {
+          "id": "steam-4080030",
+          "kind": "steam_appid",
+          "value": "4080030",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-message-from-deep-space"
           }
         }
       ]
@@ -22344,6 +22764,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0610"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ultrakill",
+      "rules": [
+        {
+          "id": "steam-1229490",
+          "kind": "steam_appid",
+          "value": "1229490",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:ultrakill"
           }
         }
       ]

@@ -115,6 +115,9 @@
   "anger-foot": {
     "game_target_ids": ["anger-foot"]
   },
+  "aniimo": {
+    "game_target_ids": ["aniimo"]
+  },
   "animal-well": {
     "game_target_ids": ["animal-well"]
   },
@@ -185,7 +188,8 @@
     "game_target_ids": ["assassins-creed-revelations"]
   },
   "assassin-s-creed-rogue": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-AssassinsCreedRogue.addon64"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-AssassinsCreedRogue.addon64",
+    "game_target_ids": ["assassin-s-creed-rogue"]
   },
   "assassin-s-creed-syndicate": {
     "external": {
@@ -440,9 +444,6 @@
   "borderlands-4": {
     "game_target_ids": ["borderlands-4"]
   },
-  "borderlands-goty-enhanced": {
-    "game_target_ids": ["borderlands-goty-enhanced"]
-  },
   "bounty-star": {
     "game_target_ids": ["bounty-star"]
   },
@@ -470,6 +471,9 @@
   "bulletstorm-full-clip-edition": {
     "game_target_ids": ["bulletstorm-full-clip-edition"]
   },
+  "burglin-gnomes": {
+    "game_target_ids": ["burglin-gnomes"]
+  },
   "cairn": {
     "game_target_ids": ["cairn"]
   },
@@ -477,22 +481,34 @@
     "game_target_ids": ["cakey-s-twisted-bakery"]
   },
   "call-of-duty-black-ops": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODBLOPS.addon32"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODBLOPS.addon32",
+    "game_target_ids": ["call-of-duty-black-ops"]
+  },
+  "call-of-duty-black-ops-4": {
+    "external": {
+      "url": "https://www.nexusmods.com/callofdutyblackops4/mods/1",
+      "label_key": "renodx.external.nexus"
+    }
   },
   "call-of-duty-black-ops-cold-war": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODColdWar.addon64"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODColdWar.addon64",
+    "game_target_ids": ["call-of-duty-black-ops-cold-war"]
   },
   "call-of-duty-black-ops-ii": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODBLOPS2.addon32"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODBLOPS2.addon32",
+    "game_target_ids": ["call-of-duty-black-ops-ii"]
   },
   "call-of-duty-ghosts": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODGHOSTS.addon64"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODGHOSTS.addon64",
+    "game_target_ids": ["call-of-duty-ghosts"]
   },
   "call-of-duty-modern-warfare-3-2011": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODMW3.addon64"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODMW3.addon64",
+    "game_target_ids": ["call-of-duty-modern-warfare-3-2011"]
   },
   "call-of-duty-world-at-war": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODWAW.addon32"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-CODWAW.addon32",
+    "game_target_ids": ["call-of-duty-world-at-war"]
   },
   "call-of-juarez": {
     "game_target_ids": ["call-of-juarez"]
@@ -725,6 +741,9 @@
   "demon-slayer-kny-hinokami-chronicles": {
     "game_target_ids": ["demon-slayer-kny-hinokami-chronicles"]
   },
+  "derail-valley": {
+    "game_target_ids": ["derail-valley"]
+  },
   "descenders": {
     "game_target_ids": ["descenders"]
   },
@@ -939,6 +958,9 @@
   },
   "exo-one": {
     "game_target_ids": ["exo-one"]
+  },
+  "exo-rally-championship": {
+    "game_target_ids": ["exo-rally-championship"]
   },
   "f-i-s-t-forged-in-shadow-torch": {
     "game_target_ids": ["f-i-s-t-forged-in-shadow-torch"]
@@ -1212,6 +1234,9 @@
     "download_url": "https://pmnoxx.github.io/renodx/renodx-_hbr.addon64",
     "game_target_ids": ["heaven-burns-red"]
   },
+  "heavenly-bodies": {
+    "game_target_ids": ["heavenly-bodies"]
+  },
   "hell-clock": {
     "game_target_ids": ["hell-clock"]
   },
@@ -1460,8 +1485,14 @@
   "lego-harry-potter-collection": {
     "game_target_ids": ["lego-harry-potter-collection"]
   },
+  "lego-party": {
+    "game_target_ids": ["lego-party"]
+  },
   "lego-voyagers": {
     "game_target_ids": ["lego-voyagers"]
+  },
+  "lethal-company": {
+    "game_target_ids": ["lethal-company"]
   },
   "lies-of-p": {
     "game_target_ids": ["lies-of-p"]
@@ -1523,6 +1554,9 @@
   "lords-of-the-fallen-2023": {
     "game_target_ids": ["lords-of-the-fallen-2023"]
   },
+  "lorelei-and-the-laser-eyes": {
+    "game_target_ids": ["lorelei-and-the-laser-eyes"]
+  },
   "lost-at-sea": {
     "game_target_ids": ["lost-at-sea"]
   },
@@ -1567,6 +1601,9 @@
   },
   "mafia-the-old-country": {
     "game_target_ids": ["mafia-the-old-country"]
+  },
+  "mage-arena": {
+    "game_target_ids": ["mage-arena"]
   },
   "mages-of-mystralia": {
     "game_target_ids": ["mages-of-mystralia"]
@@ -1794,6 +1831,9 @@
   "node-the-last-favor-of-the-antarii": {
     "game_target_ids": ["node-the-last-favor-of-the-antarii"]
   },
+  "normal-golf-game": {
+    "game_target_ids": ["normal-golf-game"]
+  },
   "nottolot": {
     "game_target_ids": ["nottolot"]
   },
@@ -1833,6 +1873,9 @@
   },
   "opus-echo-of-starsong-full-bloom-edition": {
     "game_target_ids": ["opus-echo-of-starsong-full-bloom-edition"]
+  },
+  "opus-prism-peak": {
+    "game_target_ids": ["opus-prism-peak"]
   },
   "order-13": {
     "game_target_ids": ["order-13"]
@@ -1896,6 +1939,9 @@
   "peak": {
     "game_target_ids": ["peak"]
   },
+  "peaks-of-yore": {
+    "game_target_ids": ["peaks-of-yore"]
+  },
   "penny-s-big-breakaway": {
     "game_target_ids": ["penny-s-big-breakaway"]
   },
@@ -1920,6 +1966,9 @@
   },
   "phoenix-point": {
     "game_target_ids": ["phoenix-point"]
+  },
+  "pih": {
+    "game_target_ids": ["pih"]
   },
   "pillars-of-eternity": {
     "game_target_ids": ["pillars-of-eternity"]
@@ -2004,6 +2053,12 @@
   "redout-2": {
     "game_target_ids": ["redout-2"]
   },
+  "reentry-a-space-flight-simulator": {
+    "game_target_ids": ["reentry-a-space-flight-simulator"]
+  },
+  "reignbreaker": {
+    "game_target_ids": ["reignbreaker"]
+  },
   "reka": {
     "game_target_ids": ["reka"]
   },
@@ -2016,6 +2071,9 @@
   },
   "remnant-from-the-ashes": {
     "game_target_ids": ["remnant-from-the-ashes"]
+  },
+  "replaced": {
+    "game_target_ids": ["replaced"]
   },
   "republique": {
     "game_target_ids": ["republique"]
@@ -2030,7 +2088,8 @@
     "game_target_ids": ["resident-evil-4-remake"]
   },
   "resident-evil-6": {
-    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-residentevil6.addon32"
+    "download_url": "https://github.com/legoliamneeson/renodx/releases/download/nightly-20260503/renodx-residentevil6.addon32",
+    "game_target_ids": ["resident-evil-6"]
   },
   "resident-evil-7": {
     "game_target_ids": ["resident-evil-7"]
@@ -2048,6 +2107,9 @@
       "label_key": "renodx.external.nexus"
     },
     "game_target_ids": ["resonance-a-plague-tale-legacy"]
+  },
+  "restory-chill-electronics-repairs": {
+    "game_target_ids": ["restory-chill-electronics-repairs"]
   },
   "returnal": {
     "game_target_ids": ["returnal"]
@@ -2212,6 +2274,9 @@
   "silent-hill-f": {
     "game_target_ids": ["silent-hill-f"]
   },
+  "silver-pines": {
+    "game_target_ids": ["silver-pines"]
+  },
   "six-days-in-fallujah": {
     "game_target_ids": ["six-days-in-fallujah"]
   },
@@ -2227,6 +2292,9 @@
   "sn-ultimate-freeriding": {
     "game_target_ids": ["sn-ultimate-freeriding"]
   },
+  "snake-force": {
+    "game_target_ids": ["snake-force"]
+  },
   "sniper-elite-4": {
     "game_target_ids": ["sniper-elite-4"]
   },
@@ -2241,6 +2309,9 @@
   },
   "solasta-crown-of-the-magister": {
     "game_target_ids": ["solasta-crown-of-the-magister"]
+  },
+  "solateria": {
+    "game_target_ids": ["solateria"]
   },
   "song-of-the-deep": {
     "game_target_ids": ["song-of-the-deep"]
@@ -2520,6 +2591,9 @@
   "the-expanse-a-telltale-series": {
     "game_target_ids": ["the-expanse-a-telltale-series"]
   },
+  "the-farmer-was-replaced": {
+    "game_target_ids": ["the-farmer-was-replaced"]
+  },
   "the-first-berserker-khazan": {
     "download_url": "https://marat569.github.io/renodx/renodx-bersekerKhazan.addon64",
     "game_target_ids": ["the-first-berserker-khazan"]
@@ -2630,6 +2704,9 @@
   },
   "the-medium": {
     "game_target_ids": ["the-medium"]
+  },
+  "the-message-from-deep-space": {
+    "game_target_ids": ["the-message-from-deep-space"]
   },
   "the-midnight-walk": {
     "game_target_ids": ["the-midnight-walk"]
@@ -2811,6 +2888,9 @@
   },
   "two-point-hospital": {
     "game_target_ids": ["two-point-hospital"]
+  },
+  "ultrakill": {
+    "game_target_ids": ["ultrakill"]
   },
   "ultros": {
     "game_target_ids": ["ultros"]

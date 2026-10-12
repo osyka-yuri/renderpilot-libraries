@@ -33,7 +33,7 @@
     "arch": "X86",
     "status": "working",
     "id": "alice-madness-returns",
-    "notes": "Check the mod's thread or the nexus page for Notes.",
+    "notes": "Check the mod's thread Notes.",
     "source_key": "main:alice-madness-returns"
   },
   {
@@ -323,19 +323,12 @@
     "id": "black-desert"
   },
   {
-    "name": "Borderlands GOTY Enhanced",
-    "slug": "borderlandsgotyenhanced",
-    "arch": "X64",
-    "status": "working",
-    "id": "borderlands-goty-enhanced"
-  },
-  {
     "name": "Borderlands 2 & The Pre-Sequel",
     "slug": "borderlands2",
     "arch": "X86",
     "status": "working",
     "id": "borderlands-2-the-pre-sequel",
-    "notes": "Check the mod's thread or the nexus page for Notes.",
+    "notes": "Check the mod's thread Notes.",
     "source_key": "main:borderlands-2-the-pre-sequel"
   },
   {
@@ -389,6 +382,13 @@
     "source_key": "main:call-of-duty-ghosts"
   },
   {
+    "name": "Call of Duty®: Black Ops 4",
+    "slug": "call-of-duty-black-ops-4",
+    "arch": "X64",
+    "status": "working",
+    "id": "call-of-duty-black-ops-4"
+  },
+  {
     "name": "Call of Duty®: Black Ops Cold War",
     "slug": "CODColdWar",
     "arch": "X64",
@@ -417,7 +417,7 @@
     "arch": "X86",
     "status": "working",
     "id": "child-of-light",
-    "notes": "Check the mod's thread or the nexus page for Notes.",
+    "notes": "Check the mod's thread for Notes.",
     "source_key": "main:child-of-light"
   },
   {
@@ -984,7 +984,7 @@
     "arch": "X64",
     "status": "working",
     "id": "journey",
-    "notes": "Check the mod's thread or the nexus page for Notes.",
+    "notes": "Check the mod's thread Notes.",
     "source_key": "main:journey"
   },
   {
@@ -1393,7 +1393,7 @@
     "arch": "X86",
     "status": "working",
     "id": "remember-me",
-    "notes": "Check the mod's thread or the nexus page for Notes.",
+    "notes": "Check the mod's thread Notes.",
     "source_key": "main:remember-me"
   },
   {
@@ -1602,7 +1602,7 @@
     "arch": "X86",
     "status": "working",
     "id": "spec-ops-the-line",
-    "notes": "Check the mod's thread or the nexus page for Notes.",
+    "notes": "Check the mod's thread for Notes.",
     "source_key": "main:spec-ops-the-line"
   },
   {

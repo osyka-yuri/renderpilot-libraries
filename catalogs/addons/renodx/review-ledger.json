@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "cc8a113ffcd365bf579d5cd4594c7d5da277d46f0db7c68abde7b3861518168d",
+    "wiki_content_sha256": "4b1e59576567af1c4c732de5c8bf1e167458328211a5fcfe08dd0ab4e3944089",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "9176621f65c479b65b13f01596df246db07ba8900f4b862f4980c6866a5b8454",
+    "active_message_fingerprint": "1928f0a13d2ea256909a7c60266051809d5dcd37db8410ff88e476185b864a51",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -74,7 +74,7 @@
       "title": "Alice: Madness Returns",
       "section": "main",
       "profile_source": "alicemadnessreturns",
-      "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
+      "note_sha256": "ae1313f1320acafe0d1f1b969286912c7531e7200e1fef4a444be8a77cd75b83",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
     },
@@ -114,7 +114,7 @@
       "title": "Borderlands 2 & The Pre-Sequel",
       "section": "main",
       "profile_source": "borderlands2",
-      "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
+      "note_sha256": "ae1313f1320acafe0d1f1b969286912c7531e7200e1fef4a444be8a77cd75b83",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
     },
@@ -174,7 +174,7 @@
       "title": "Child of Light",
       "section": "main",
       "profile_source": "childoflight",
-      "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
+      "note_sha256": "6c85b248e8ba8a7893d956bab259b7d415455eef0d9a6ee36b92bbeae4bdcf8c",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
     },
@@ -244,7 +244,7 @@
       "title": "Journey",
       "section": "main",
       "profile_source": "journey",
-      "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
+      "note_sha256": "ae1313f1320acafe0d1f1b969286912c7531e7200e1fef4a444be8a77cd75b83",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
     },
@@ -294,7 +294,7 @@
       "title": "Remember Me",
       "section": "main",
       "profile_source": "rememberme",
-      "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
+      "note_sha256": "ae1313f1320acafe0d1f1b969286912c7531e7200e1fef4a444be8a77cd75b83",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
     },
@@ -324,7 +324,7 @@
       "title": "Spec Ops: The Line",
       "section": "main",
       "profile_source": "specopstheline",
-      "note_sha256": "f39519ce3bcb08947d6e8acf13cd027cc0884747af45bd8559f3daae03d989a2",
+      "note_sha256": "6c85b248e8ba8a7893d956bab259b7d415455eef0d9a6ee36b92bbeae4bdcf8c",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
     },

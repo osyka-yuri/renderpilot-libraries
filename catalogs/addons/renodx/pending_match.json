@@ -6,45 +6,9 @@
     "arch": "X64"
   },
   {
-    "id": "assassin-s-creed-rogue",
-    "name": "Assassin’s Creed® Rogue",
-    "slug": "AssassinsCreedRogue",
-    "arch": "X64"
-  },
-  {
-    "id": "call-of-duty-world-at-war",
-    "name": "Call of Duty®: World at War",
-    "slug": "CODWAW",
-    "arch": "X86"
-  },
-  {
-    "id": "call-of-duty-black-ops",
-    "name": "Call of Duty®: Black Ops",
-    "slug": "CODBLOPS",
-    "arch": "X86"
-  },
-  {
-    "id": "call-of-duty-modern-warfare-3-2011",
-    "name": "Call of Duty®: Modern Warfare® 3 (2011)",
-    "slug": "CODMW3",
-    "arch": "X64"
-  },
-  {
-    "id": "call-of-duty-black-ops-ii",
-    "name": "Call of Duty®: Black Ops II",
-    "slug": "CODBLOPS2",
-    "arch": "X86"
-  },
-  {
-    "id": "call-of-duty-ghosts",
-    "name": "Call of Duty®: Ghosts",
-    "slug": "CODGHOSTS",
-    "arch": "X64"
-  },
-  {
-    "id": "call-of-duty-black-ops-cold-war",
-    "name": "Call of Duty®: Black Ops Cold War",
-    "slug": "CODColdWar",
+    "id": "call-of-duty-black-ops-4",
+    "name": "Call of Duty®: Black Ops 4",
+    "slug": "call-of-duty-black-ops-4",
     "arch": "X64"
   },
   {
@@ -82,12 +46,6 @@
     "name": "Monster Hunter Generations Ultimate",
     "slug": "mhgu",
     "arch": "X64"
-  },
-  {
-    "id": "resident-evil-6",
-    "name": "Resident Evil 6",
-    "slug": "residentevil6",
-    "arch": "X86"
   },
   {
     "id": "splatoon",
@@ -135,144 +93,6 @@
     "id": "xenoblade-chronicles-x-definitive-edition",
     "name": "Xenoblade Chronicles X: Definitive Edition",
     "slug": "xbcx",
-    "arch": "X64"
-  },
-  {
-    "id": "pih",
-    "name": "Pih",
-    "slug": "ue-extended",
-    "arch": "X64"
-  },
-  {
-    "id": "aniimo",
-    "name": "Aniimo",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "burglin-gnomes",
-    "name": "Burglin' Gnomes",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "derail-valley",
-    "name": "Derail Valley",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "exo-rally-championship",
-    "name": "Exo Rally Championship",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "heavenly-bodies",
-    "name": "Heavenly Bodies",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "lego-party",
-    "name": "LEGO® Party!",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "lethal-company",
-    "name": "Lethal Company",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "lorelei-and-the-laser-eyes",
-    "name": "Lorelei and the Laser Eyes",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "mage-arena",
-    "name": "Mage Arena",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "normal-golf-game",
-    "name": "Normal Golf Game",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "opus-prism-peak",
-    "name": "OPUS: Prism Peak",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "peaks-of-yore",
-    "name": "Peaks of Yore",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "reentry-a-space-flight-simulator",
-    "name": "Reentry - A Space Flight Simulator",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "reignbreaker",
-    "name": "Reignbreaker",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "replaced",
-    "name": "REPLACED",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "restory-chill-electronics-repairs",
-    "name": "ReStory: Chill Electronics Repairs",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "silver-pines",
-    "name": "Silver Pines",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "snake-force",
-    "name": "Snake Force",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "solateria",
-    "name": "Solateria",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "the-farmer-was-replaced",
-    "name": "The Farmer Was Replaced",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "the-message-from-deep-space",
-    "name": "The Message from Deep Space",
-    "slug": "unityengine",
-    "arch": "X64"
-  },
-  {
-    "id": "ultrakill",
-    "name": "ULTRAKILL",
-    "slug": "unityengine",
     "arch": "X64"
   }
 ]
