@@ -67,9 +67,8 @@ export async function buildLibraryCatalogPlan(inputOverrides = new Map()) {
       }
       const snapshot = buildVendorSnapshot(source);
       const file = path.join(repoRoot, vendor.outputFile);
-      // The index binds the exact bytes served from R2, so formatting must be
-      // resolved before the snapshot SHA-256 and size are calculated.
-      const body = Buffer.from(await stringifyFormattedJson(snapshot, file), "utf8");
+      // Vendor snapshots are CDN payloads; compact JSON reduces transfer size.
+      const body = Buffer.from(`${JSON.stringify(snapshot)}\n`, "utf8");
       return { vendor, snapshot, body };
     }),
   );

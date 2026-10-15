@@ -31,11 +31,20 @@ test("catalog generation plan is deterministic and index-last", async () => {
     assert.equal(path.isAbsolute(output.file), true);
     assert.equal(output.body.equals(right.outputs[index].body), true);
     assert.equal(Object.isFrozen(output.value), true);
-    assert.equal(
-      await prettier.check(output.body.toString("utf8"), { filepath: output.file }),
-      true,
-      `${output.relativeFile} must be emitted in canonical Prettier format`,
-    );
+    const bodyText = output.body.toString("utf8");
+    if (output.relativeFile === libraryIndexFile) {
+      assert.equal(
+        await prettier.check(bodyText, { filepath: output.file }),
+        true,
+        `${output.relativeFile} must be emitted in canonical Prettier format`,
+      );
+    } else {
+      assert.equal(
+        bodyText,
+        `${JSON.stringify(output.value)}\n`,
+        `${output.relativeFile} must be emitted in compact JSON format`,
+      );
+    }
   }
   assert.ok(left.activeTransportObjectKeys.size > 0);
   assert.equal(Object.isFrozen(left.activeTransportObjectKeys), true);

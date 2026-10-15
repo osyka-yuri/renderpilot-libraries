@@ -5,44 +5,44 @@
     {
       "vendor_id": "amd",
       "display_name": "AMD",
-      "snapshot_key": "libraries/v1/vendors/amd/26601e704fb064ec1e61e2b25fc0a3ceef9065b76558534c78a86610cca8d32e.json",
-      "snapshot_sha256": "26601e704fb064ec1e61e2b25fc0a3ceef9065b76558534c78a86610cca8d32e",
-      "snapshot_size_bytes": 79314
+      "snapshot_key": "libraries/v1/vendors/amd/1fe4bc585a9a466cd40922365d525bf999432632c09c943994194a3a61dd5df2.json",
+      "snapshot_sha256": "1fe4bc585a9a466cd40922365d525bf999432632c09c943994194a3a61dd5df2",
+      "snapshot_size_bytes": 61408
     },
     {
       "vendor_id": "intel",
       "display_name": "Intel",
-      "snapshot_key": "libraries/v1/vendors/intel/6d5cba1d120f31eac85e65f82004981549dde4038fb8a88b36e2ac7dd03b4b13.json",
-      "snapshot_sha256": "6d5cba1d120f31eac85e65f82004981549dde4038fb8a88b36e2ac7dd03b4b13",
-      "snapshot_size_bytes": 68212
+      "snapshot_key": "libraries/v1/vendors/intel/ed0e48fba91b5ded4ed6fb843f66d519489b6636dca7a676317b54d027fd9415.json",
+      "snapshot_sha256": "ed0e48fba91b5ded4ed6fb843f66d519489b6636dca7a676317b54d027fd9415",
+      "snapshot_size_bytes": 52180
     },
     {
       "vendor_id": "microsoft",
       "display_name": "Microsoft",
-      "snapshot_key": "libraries/v1/vendors/microsoft/63a552ce2d4f32ce474cb97526e564ade2c987cd12f05613440094f5eeefd463.json",
-      "snapshot_sha256": "63a552ce2d4f32ce474cb97526e564ade2c987cd12f05613440094f5eeefd463",
-      "snapshot_size_bytes": 455664
+      "snapshot_key": "libraries/v1/vendors/microsoft/5169138614a127cc9478cdc744755ec9fc4a2cc354fc3151c8af9961194a30b8.json",
+      "snapshot_sha256": "5169138614a127cc9478cdc744755ec9fc4a2cc354fc3151c8af9961194a30b8",
+      "snapshot_size_bytes": 347396
     },
     {
       "vendor_id": "nvidia",
       "display_name": "NVIDIA",
-      "snapshot_key": "libraries/v1/vendors/nvidia/ba89dc54eaa83eca02978e588f972908ebb26476c07a05638e477fa07cc4ff95.json",
-      "snapshot_sha256": "ba89dc54eaa83eca02978e588f972908ebb26476c07a05638e477fa07cc4ff95",
-      "snapshot_size_bytes": 375491
+      "snapshot_key": "libraries/v1/vendors/nvidia/4c69630f9c700bb8783d01ac43d8ba46a95522022ce2f3dfff5b86f7b3221a24.json",
+      "snapshot_sha256": "4c69630f9c700bb8783d01ac43d8ba46a95522022ce2f3dfff5b86f7b3221a24",
+      "snapshot_size_bytes": 281826
     },
     {
       "vendor_id": "valve",
       "display_name": "Valve",
-      "snapshot_key": "libraries/v1/vendors/valve/a8d0264f78a38149d37450c7a5bf2de140a45790cd0ec023973537861f684f7c.json",
-      "snapshot_sha256": "a8d0264f78a38149d37450c7a5bf2de140a45790cd0ec023973537861f684f7c",
-      "snapshot_size_bytes": 594962
+      "snapshot_key": "libraries/v1/vendors/valve/48c05d5c9def15346e189e192295091f1e96663d60a5d0ed9c6309095447f77e.json",
+      "snapshot_sha256": "48c05d5c9def15346e189e192295091f1e96663d60a5d0ed9c6309095447f77e",
+      "snapshot_size_bytes": 461232
     },
     {
       "vendor_id": "xiph",
       "display_name": "Xiph.Org Foundation",
-      "snapshot_key": "libraries/v1/vendors/xiph/9bf43addc155d66eea34c1824cf119b6fd2b068a201ce0d79dfae02f9b7db324.json",
-      "snapshot_sha256": "9bf43addc155d66eea34c1824cf119b6fd2b068a201ce0d79dfae02f9b7db324",
-      "snapshot_size_bytes": 2116532
+      "snapshot_key": "libraries/v1/vendors/xiph/22540015eabc410f1bd84acb6cc85f273efdd66b212677ba1816503ae16f0506.json",
+      "snapshot_sha256": "22540015eabc410f1bd84acb6cc85f273efdd66b212677ba1816503ae16f0506",
+      "snapshot_size_bytes": 1531791
     }
   ]
 }
