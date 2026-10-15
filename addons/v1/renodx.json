@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12T00:00:00Z",
+  "generated_at": "2026-10-15T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -7549,6 +7549,22 @@
           "kind": "exe_name",
           "value": "COTS.exe",
           "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "unrealengine"
+      }
+    },
+    {
+      "id": "castlevania-belmont-s-curse",
+      "name": "Castlevania: Belmont's Curse",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4231820",
+          "tier": 100
         }
       ],
       "addon": {

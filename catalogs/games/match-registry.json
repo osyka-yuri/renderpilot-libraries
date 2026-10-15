@@ -3715,6 +3715,20 @@
       ]
     },
     {
+      "id": "castlevania-belmont-s-curse",
+      "rules": [
+        {
+          "id": "steam-4231820",
+          "kind": "steam_appid",
+          "value": "4231820",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:castlevania-belmont-s-curse"
+          }
+        }
+      ]
+    },
+    {
       "id": "castlevania-lords-of-shadow",
       "rules": [
         {

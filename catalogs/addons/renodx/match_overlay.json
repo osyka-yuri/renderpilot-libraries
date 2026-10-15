@@ -516,6 +516,9 @@
   "call-of-the-sea": {
     "game_target_ids": ["call-of-the-sea"]
   },
+  "castlevania-belmont-s-curse": {
+    "game_target_ids": ["castlevania-belmont-s-curse"]
+  },
   "castlevania-lords-of-shadow-ultimate-edition": {
     "game_target_ids": ["castlevania-lords-of-shadow"]
   },

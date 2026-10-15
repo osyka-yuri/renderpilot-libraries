@@ -3047,6 +3047,14 @@
     "section": "unreal"
   },
   {
+    "name": "Castlevania: Belmont's Curse",
+    "slug": "unrealengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "castlevania-belmont-s-curse",
+    "section": "unreal"
+  },
+  {
     "name": "Cepheus Protocol",
     "slug": "unrealengine",
     "arch": "X64",
