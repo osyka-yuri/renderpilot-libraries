@@ -5459,6 +5459,63 @@
         "status": "signed",
         "signed_at": "2026-09-04T17:21:51.000Z"
       }
+    },
+    {
+      "artifact_key": "nvngx_dlss_310.9.16.0",
+      "library_id": "nvngx_dlss",
+      "file_name": "nvngx_dlss.dll",
+      "file_version": "310.9.16.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "858ccff96360c3098db9264cd6f13d04a027e09b6ce7ad5bbc297570e824b4f2",
+        "size_bytes": 74187376
+      },
+      "transport": {
+        "sha256": "1c90cb56b06ca22e4a9ab150919abb7652386aa9dc75c3092de12f4a60d4d9c2",
+        "size_bytes": 34537965
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-09-15T09:02:54.0000000Z"
+      }
+    },
+    {
+      "artifact_key": "nvngx_dlssg_310.9.16.0",
+      "library_id": "nvngx_dlssg",
+      "file_name": "nvngx_dlssg.dll",
+      "file_version": "310.9.16.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "cadee1aa6db3907babdc3285da2aebc4553d92b89c38ba3eae8abd8bba1bea72",
+        "size_bytes": 7506544
+      },
+      "transport": {
+        "sha256": "e0a6ed3e6009215a449d1f1ff0db01acf9ff490534429a99cd9bff126b1f3771",
+        "size_bytes": 3462993
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-09-25T15:55:38.0000000Z"
+      }
+    },
+    {
+      "artifact_key": "nvngx_dlssd_310.9.16.0",
+      "library_id": "nvngx_dlssd",
+      "file_name": "nvngx_dlssd.dll",
+      "file_version": "310.9.16.0",
+      "architecture": "X64",
+      "dll": {
+        "sha256": "7006c3a729276e876e06a97c6262672a1be96a58d69b0e85877f911146b98fbe",
+        "size_bytes": 79669360
+      },
+      "transport": {
+        "sha256": "327f99d8ac39557abe9a3f0be8237b60970efdcd2005402d8f8bfd74a805d905",
+        "size_bytes": 23675836
+      },
+      "signature": {
+        "status": "signed",
+        "signed_at": "2026-10-02T02:19:51.0000000Z"
+      }
     }
   ],
   "packages": [
@@ -10034,6 +10091,72 @@
           "artifact_key": "sl_reflex_2.14.1.0",
           "role": "sl_reflex",
           "install_as": "sl.reflex.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlss_310.9.16",
+      "technology": "dlss_super_resolution",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Super Resolution",
+      "release": {
+        "version": "310.9.16",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlss_310.9.16.0",
+          "role": "primary",
+          "install_as": "nvngx_dlss.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlssg_310.9.16",
+      "technology": "dlss_frame_generation",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Frame Generation",
+      "release": {
+        "version": "310.9.16",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlssg_310.9.16.0",
+          "role": "primary",
+          "install_as": "nvngx_dlssg.dll"
+        }
+      ]
+    },
+    {
+      "package_id": "nvngx_dlssd_310.9.16",
+      "technology": "dlss_ray_reconstruction",
+      "variant": "runtime",
+      "display_name": "NVIDIA DLSS Ray Reconstruction",
+      "release": {
+        "version": "310.9.16",
+        "channel": "stable",
+        "label": null
+      },
+      "target": {
+        "os": "windows",
+        "architecture": "X64"
+      },
+      "members": [
+        {
+          "artifact_key": "nvngx_dlssd_310.9.16.0",
+          "role": "primary",
+          "install_as": "nvngx_dlssd.dll"
         }
       ]
     }
