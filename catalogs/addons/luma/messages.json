@@ -770,22 +770,6 @@
       }
     },
     {
-      "id": "luma.mass-effect-andromeda.compatibility",
-      "fallback_text": "Only DLAA / FSR 3 Native AA modes are available; this is not DLSS or FSR super-resolution.",
-      "kind": "compatibility",
-      "context": "guidance.compatibility",
-      "translations": {
-        "de": "Nur DLAA / FSR 3 Native AA sind verfügbar; dies ist kein DLSS- oder FSR-Super-Resolution-Modus.",
-        "es": "Solo están disponibles los modos DLAA / FSR 3 Native AA; esto no es superresolución DLSS ni FSR.",
-        "fr": "Seuls les modes DLAA / FSR 3 Native AA sont disponibles ; il ne s’agit pas de super-résolution DLSS ou FSR.",
-        "ja": "利用できるのは DLAA / FSR 3 Native AA モードのみで、DLSS または FSR の超解像ではありません。",
-        "pt-BR": "Somente os modos DLAA / FSR 3 Native AA estão disponíveis; isso não é super-resolução DLSS nem FSR.",
-        "ru": "Доступны только режимы сглаживания DLAA / FSR 3 Native AA; суперразрешение DLSS или FSR не поддерживается.",
-        "zh-Hans": "仅提供 DLAA / FSR 3 原生抗锯齿 (Native AA) 模式；这不是 DLSS 或 FSR 超分辨率。",
-        "zh-Hant": "僅提供 DLAA / FSR 3 原生反鋸齒 (Native AA) 模式；這不是 DLSS 或 FSR 超解析度。"
-      }
-    },
-    {
       "id": "luma.masterdetectivearchivesraincodeplus.game_setting",
       "fallback_text": "In the game settings, use: AA quality \"High\" and maximum resolution scale.",
       "kind": "game_setting",

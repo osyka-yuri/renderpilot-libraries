@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-10T00:00:00Z",
+  "generated_at": "2026-10-20T00:00:00Z",
   "minimum_reshade_version": "6.7.0",
   "games": [
     {
@@ -843,14 +843,7 @@
         "release_asset": "Luma-Mass_Effect_Andromeda.zip",
         "addon_file": "Luma-Mass Effect Andromeda.addon"
       },
-      "profile": "game",
-      "guidance": [
-        {
-          "id": "luma.mass-effect-andromeda.compatibility",
-          "kind": "compatibility",
-          "fallback_text": "Only DLAA / FSR 3 Native AA modes are available; this is not DLSS or FSR super-resolution."
-        }
-      ]
+      "profile": "game"
     },
     {
       "id": "mass-effect-legendary-edition",

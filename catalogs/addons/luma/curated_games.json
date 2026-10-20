@@ -468,22 +468,6 @@
     "addon_file": "Luma-Mass Effect Andromeda.addon",
     "arch": "X64",
     "status": "working",
-    "guidance": [
-      {
-        "id": "luma.mass-effect-andromeda.compatibility",
-        "kind": "compatibility",
-        "fallback_text": "Only DLAA / FSR 3 Native AA modes are available; this is not DLSS or FSR super-resolution."
-      }
-    ],
-    "wiki_note_reviews": [
-      {
-        "section": "completed",
-        "name": "Mass Effect: Andromeda",
-        "fingerprint": "2491397997aa588ad0375b0cdfb1c02fe83d98c88d5bd4f31a9d99d8afe3a050",
-        "disposition": "published",
-        "guidance_ids": ["luma.mass-effect-andromeda.compatibility"]
-      }
-    ],
     "game_target_ids": ["mass-effect-andromeda"]
   },
   {
@@ -4579,15 +4563,6 @@
         }
       ]
     },
-    "wiki_note_reviews": [
-      {
-        "section": "completed",
-        "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
-        "fingerprint": "b838f95987150e86f2c75dcf4327a2bbdbed9d5bf4388f4744c6deed1db26350",
-        "disposition": "omitted",
-        "reason": "RenderPilot installs and configures the managed dgVoodoo dependency."
-      }
-    ],
     "game_target_ids": ["the-witcher-2"]
   },
   {
