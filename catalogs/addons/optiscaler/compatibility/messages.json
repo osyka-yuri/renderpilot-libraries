@@ -2496,6 +2496,22 @@
         "zh-Hans": "此游戏需要 Warhammer3DLSS 模组才能与 OptiScaler 配合使用。",
         "zh-Hant": "此遊戲需要 Warhammer3DLSS 模組才能與 OptiScaler 配合使用。"
       }
+    },
+    {
+      "id": "optiscaler-gears-of-war-e-day-offline-mode",
+      "fallback_text": "OptiScaler can only be used in offline mode and requires an Easy Anti-Cheat (EAC) bypass.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "OptiScaler ist nur im Offline-Modus nutzbar und erfordert die Umgehung von Easy Anti-Cheat (EAC).",
+        "es": "OptiScaler solo se puede usar en modo sin conexión y requiere eludir Easy Anti-Cheat (EAC).",
+        "fr": "OptiScaler est uniquement utilisable en mode hors ligne et nécessite de contourner Easy Anti-Cheat (EAC).",
+        "ja": "OptiScaler はオフラインモードでのみ使用可能で、Easy Anti-Cheat (EAC) のバイパスが必要です。",
+        "pt-BR": "O OptiScaler só pode ser usado no modo offline e requer contornar o Easy Anti-Cheat (EAC).",
+        "ru": "OptiScaler работает только в автономном режиме и требует обхода Easy Anti-Cheat (EAC).",
+        "zh-Hans": "OptiScaler 仅可在离线模式下使用，且需要绕过 Easy Anti-Cheat (EAC)。",
+        "zh-Hant": "OptiScaler 僅可在離線模式下使用，且需要繞過 Easy Anti-Cheat (EAC)。"
+      }
     }
   ]
 }

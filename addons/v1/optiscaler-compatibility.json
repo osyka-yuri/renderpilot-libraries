@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "revision": "2026-10-15.1",
+  "revision": "2026-10-20.1",
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
-    "snapshot_revision": "2026-10-10",
-    "snapshot_sha256": "ea20dad091eef09077e69ebad5e7fe466a26d00b4b1a3ac96a0cf7005637258c"
+    "snapshot_revision": "2026-10-20",
+    "snapshot_sha256": "8177c704ff6f090e52bfe865877e2ba0daab14f945d5c8c0edacac245b9d75d1"
   },
   "entries": [
     {
@@ -2701,6 +2701,35 @@
           "ini_overrides": [],
           "restricted_modules": [],
           "optipatcher": "supported",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "control-resonant",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "3669870"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [
+            {
+              "section": "Hotfix",
+              "key": "SimulateWaitableObject",
+              "value": "true"
+            }
+          ],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
           "prerequisite": "none"
         }
       ]
@@ -6283,6 +6312,37 @@
           },
           "restricted_modules": [],
           "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "gears-of-war-e-day",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "3010850"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-gears-of-war-e-day-offline-mode",
+            "fallback_text": "OptiScaler can only be used in offline mode and requires an Easy Anti-Cheat (EAC) bypass."
+          }
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -16818,9 +16878,13 @@
       ]
     },
     {
-      "id": "valor-mortis-playtest",
+      "id": "valor-mortis",
       "status": "working",
       "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "2828710"
+        },
         {
           "kind": "steam_appid",
           "value": "3949630"

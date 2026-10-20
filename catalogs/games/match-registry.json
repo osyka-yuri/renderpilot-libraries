@@ -4457,6 +4457,20 @@
       ]
     },
     {
+      "id": "control-resonant",
+      "rules": [
+        {
+          "id": "steam-3669870",
+          "kind": "steam_appid",
+          "value": "3669870",
+          "provenance": {
+            "source": "optiscaler-reviewed-match",
+            "locator": "main:0106"
+          }
+        }
+      ]
+    },
+    {
       "id": "control-ultimate-edition",
       "rules": [
         {
@@ -9018,6 +9032,20 @@
       ]
     },
     {
+      "id": "gears-of-war-e-day",
+      "rules": [
+        {
+          "id": "steam-3010850",
+          "kind": "steam_appid",
+          "value": "3010850",
+          "provenance": {
+            "source": "optiscaler-reviewed-match",
+            "locator": "main:0238"
+          }
+        }
+      ]
+    },
+    {
       "id": "gears-of-war-reloaded",
       "rules": [
         {
@@ -9230,7 +9258,7 @@
           "value": "2486780",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0241"
+            "locator": "main:0242"
           }
         }
       ]
@@ -9267,7 +9295,7 @@
           "value": "2753000",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0242"
+            "locator": "main:0243"
           }
         }
       ]
@@ -9392,7 +9420,7 @@
           "value": "1351210",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0246"
+            "locator": "main:0247"
           }
         }
       ]
@@ -9406,7 +9434,7 @@
           "value": "1299690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0247"
+            "locator": "main:0248"
           }
         }
       ]
@@ -9420,7 +9448,7 @@
           "value": "1496790",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0245"
+            "locator": "main:0246"
           }
         }
       ]
@@ -9615,7 +9643,7 @@
           "value": "2218400",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0254"
+            "locator": "main:0255"
           }
         }
       ]
@@ -9629,7 +9657,7 @@
           "value": "1307710",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0255"
+            "locator": "main:0256"
           }
         }
       ]
@@ -9680,7 +9708,7 @@
           "value": "1336380",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0256"
+            "locator": "main:0257"
           }
         }
       ]
@@ -9731,7 +9759,7 @@
           "value": "1088850",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0258"
+            "locator": "main:0259"
           }
         }
       ]
@@ -9791,7 +9819,7 @@
           "value": "1308360",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0260"
+            "locator": "main:0261"
           }
         }
       ]
@@ -9819,7 +9847,7 @@
           "value": "1630110",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0259"
+            "locator": "main:0260"
           }
         }
       ]
@@ -9930,7 +9958,7 @@
           "value": "2397300",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0262"
+            "locator": "main:0263"
           }
         }
       ]
@@ -9944,7 +9972,7 @@
           "value": "2806050",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0263"
+            "locator": "main:0264"
           }
         }
       ]
@@ -10171,7 +10199,7 @@
           "value": "889910",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0268"
+            "locator": "main:0269"
           }
         }
       ]
@@ -10222,7 +10250,7 @@
           "value": "3043760",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0266"
+            "locator": "main:0267"
           }
         }
       ]
@@ -10273,7 +10301,7 @@
           "value": "1321680",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0269"
+            "locator": "main:0270"
           }
         }
       ]
@@ -10343,7 +10371,7 @@
           "value": "1583230",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0271"
+            "locator": "main:0272"
           }
         }
       ]
@@ -10357,7 +10385,7 @@
           "value": "2069250",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0272"
+            "locator": "main:0273"
           }
         }
       ]
@@ -10371,7 +10399,7 @@
           "value": "1489970",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0273"
+            "locator": "main:0274"
           }
         }
       ]
@@ -10413,7 +10441,7 @@
           "value": "717790",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0276"
+            "locator": "main:0277"
           }
         }
       ]
@@ -10501,7 +10529,7 @@
           "value": "1840080",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0277"
+            "locator": "main:0278"
           }
         }
       ]
@@ -10571,7 +10599,7 @@
           "value": "1271700",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0281"
+            "locator": "main:0282"
           }
         }
       ]
@@ -10683,7 +10711,7 @@
           "value": "1106840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0283"
+            "locator": "main:0284"
           }
         }
       ]
@@ -10725,7 +10753,7 @@
           "value": "1198970",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0284"
+            "locator": "main:0285"
           }
         }
       ]
@@ -10753,7 +10781,7 @@
           "value": "1149460",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0285"
+            "locator": "main:0286"
           }
         }
       ]
@@ -10781,7 +10809,7 @@
           "value": "1550730",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0286"
+            "locator": "main:0287"
           }
         }
       ]
@@ -10818,7 +10846,7 @@
           "value": "2009100",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0287"
+            "locator": "main:0288"
           }
         }
       ]
@@ -10911,7 +10939,7 @@
           "value": "2154070",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0291"
+            "locator": "main:0292"
           }
         }
       ]
@@ -10925,7 +10953,7 @@
           "value": "1129570",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0292"
+            "locator": "main:0293"
           }
         }
       ]
@@ -10967,7 +10995,7 @@
           "value": "867150",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0294"
+            "locator": "main:0295"
           }
         }
       ]
@@ -11018,7 +11046,7 @@
           "value": "2239710",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0295"
+            "locator": "main:0296"
           }
         }
       ]
@@ -11102,7 +11130,7 @@
           "value": "4119360",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0297"
+            "locator": "main:0298"
           }
         }
       ]
@@ -11204,7 +11232,7 @@
           "value": "1084160",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0298"
+            "locator": "main:0299"
           }
         }
       ]
@@ -11320,7 +11348,7 @@
           "value": "2058180",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0301"
+            "locator": "main:0302"
           }
         }
       ]
@@ -11334,7 +11362,7 @@
           "value": "1757300",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0302"
+            "locator": "main:0303"
           }
         }
       ]
@@ -11348,7 +11376,7 @@
           "value": "1244460",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0303"
+            "locator": "main:0304"
           }
         }
       ]
@@ -11362,7 +11390,7 @@
           "value": "2958130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0304"
+            "locator": "main:0305"
           }
         }
       ]
@@ -11547,7 +11575,7 @@
           "value": "3043580",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0307"
+            "locator": "main:0308"
           }
         }
       ]
@@ -11626,7 +11654,7 @@
           "value": "2405060",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0309"
+            "locator": "main:0310"
           }
         }
       ]
@@ -11682,7 +11710,7 @@
           "value": "1165990",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0310"
+            "locator": "main:0311"
           }
         },
         {
@@ -11895,7 +11923,7 @@
           "value": "2510710",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0313"
+            "locator": "main:0314"
           }
         }
       ]
@@ -11932,7 +11960,7 @@
           "value": "1981570",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0314"
+            "locator": "main:0315"
           }
         }
       ]
@@ -11946,7 +11974,7 @@
           "value": "3775710",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0315"
+            "locator": "main:0316"
           }
         }
       ]
@@ -12011,7 +12039,7 @@
           "value": "1469610",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0317"
+            "locator": "main:0318"
           }
         }
       ]
@@ -12062,7 +12090,7 @@
           "value": "1946700",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0318"
+            "locator": "main:0319"
           }
         }
       ]
@@ -12146,7 +12174,7 @@
           "value": "1544360",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0320"
+            "locator": "main:0321"
           }
         }
       ]
@@ -12206,7 +12234,7 @@
           "value": "2428810",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0322"
+            "locator": "main:0323"
           }
         }
       ]
@@ -12373,7 +12401,7 @@
           "value": "1805480",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0326"
+            "locator": "main:0327"
           }
         }
       ]
@@ -12401,7 +12429,7 @@
           "value": "3107900",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0329"
+            "locator": "main:0330"
           }
         }
       ]
@@ -12591,7 +12619,7 @@
           "value": "1650810",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0331"
+            "locator": "main:0332"
           }
         }
       ]
@@ -12689,7 +12717,7 @@
           "value": "2058190",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0332"
+            "locator": "main:0333"
           }
         }
       ]
@@ -12735,7 +12763,7 @@
           "value": "1902960",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0333"
+            "locator": "main:0334"
           }
         }
       ]
@@ -12763,7 +12791,7 @@
           "value": "1931180",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0334"
+            "locator": "main:0335"
           }
         }
       ]
@@ -12805,7 +12833,7 @@
           "value": "2840000",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0337"
+            "locator": "main:0338"
           }
         }
       ]
@@ -12833,7 +12861,7 @@
           "value": "1933000",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0338"
+            "locator": "main:0339"
           }
         }
       ]
@@ -12870,7 +12898,7 @@
           "value": "874450",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0339"
+            "locator": "main:0340"
           }
         }
       ]
@@ -12884,7 +12912,7 @@
           "value": "2953480",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0340"
+            "locator": "main:0341"
           }
         }
       ]
@@ -12898,7 +12926,7 @@
           "value": "1729740",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0341"
+            "locator": "main:0342"
           }
         }
       ]
@@ -13102,7 +13130,7 @@
           "value": "1721060",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0343"
+            "locator": "main:0344"
           }
         }
       ]
@@ -13181,7 +13209,7 @@
           "value": "515960",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0345"
+            "locator": "main:0346"
           }
         }
       ]
@@ -13195,7 +13223,7 @@
           "value": "997070",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0346"
+            "locator": "main:0347"
           }
         }
       ]
@@ -13334,7 +13362,7 @@
           "value": "4265610",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0352"
+            "locator": "main:0353"
           }
         }
       ]
@@ -13348,7 +13376,7 @@
           "value": "2926900",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0353"
+            "locator": "main:0354"
           }
         }
       ]
@@ -13399,7 +13427,7 @@
           "value": "784080",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0354"
+            "locator": "main:0355"
           }
         }
       ]
@@ -13436,7 +13464,7 @@
           "value": "1129580",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0355"
+            "locator": "main:0356"
           }
         }
       ]
@@ -13464,7 +13492,7 @@
           "value": "2613980",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0356"
+            "locator": "main:0357"
           }
         }
       ]
@@ -13478,7 +13506,7 @@
           "value": "2432860",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0357"
+            "locator": "main:0358"
           }
         }
       ]
@@ -13654,7 +13682,7 @@
           "value": "1250410",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0360"
+            "locator": "main:0361"
           }
         }
       ]
@@ -13668,7 +13696,7 @@
           "value": "2537590",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0361"
+            "locator": "main:0362"
           }
         }
       ]
@@ -13733,7 +13761,7 @@
           "value": "3265250",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0362"
+            "locator": "main:0363"
           }
         }
       ]
@@ -13747,7 +13775,7 @@
           "value": "4024480",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0364"
+            "locator": "main:0365"
           }
         }
       ]
@@ -13849,7 +13877,7 @@
           "value": "2852190",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0367"
+            "locator": "main:0368"
           }
         }
       ]
@@ -13979,7 +14007,7 @@
           "value": "1866130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0369"
+            "locator": "main:0370"
           }
         }
       ]
@@ -14030,7 +14058,7 @@
           "value": "2518410",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0370"
+            "locator": "main:0371"
           }
         }
       ]
@@ -14044,7 +14072,7 @@
           "value": "1971870",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0371"
+            "locator": "main:0372"
           }
         }
       ]
@@ -14081,7 +14109,7 @@
           "value": "1110910",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0372"
+            "locator": "main:0373"
           }
         }
       ]
@@ -14160,7 +14188,7 @@
           "value": "261550",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0374"
+            "locator": "main:0375"
           }
         }
       ]
@@ -14174,7 +14202,7 @@
           "value": "2416450",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0375"
+            "locator": "main:0376"
           }
         }
       ]
@@ -14202,7 +14230,7 @@
           "value": "3368050",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0376"
+            "locator": "main:0377"
           }
         }
       ]
@@ -14295,7 +14323,7 @@
           "value": "1255560",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0377"
+            "locator": "main:0378"
           }
         }
       ]
@@ -14337,7 +14365,7 @@
           "value": "2019760",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0380"
+            "locator": "main:0381"
           }
         }
       ]
@@ -14379,7 +14407,7 @@
           "value": "1846380",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0378"
+            "locator": "main:0379"
           }
         }
       ]
@@ -14551,7 +14579,7 @@
           "value": "1928980",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0382"
+            "locator": "main:0383"
           }
         }
       ]
@@ -14842,7 +14870,7 @@
           "value": "1371980",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0389"
+            "locator": "main:0390"
           }
         }
       ]
@@ -14912,7 +14940,7 @@
           "value": "3054690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0394"
+            "locator": "main:0395"
           }
         }
       ]
@@ -14982,7 +15010,7 @@
           "value": "1386900",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0391"
+            "locator": "main:0392"
           }
         }
       ]
@@ -15024,7 +15052,7 @@
           "value": "2795230",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0392"
+            "locator": "main:0393"
           }
         }
       ]
@@ -15038,7 +15066,7 @@
           "value": "1817800",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0393"
+            "locator": "main:0394"
           }
         }
       ]
@@ -15066,7 +15094,7 @@
           "value": "3708420",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0394"
+            "locator": "main:0395"
           }
         }
       ]
@@ -15094,7 +15122,7 @@
           "value": "2336440",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0395"
+            "locator": "main:0396"
           }
         }
       ]
@@ -15164,7 +15192,7 @@
           "value": "3974650",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0396"
+            "locator": "main:0397"
           }
         }
       ]
@@ -15178,7 +15206,7 @@
           "value": "4094350",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0401"
+            "locator": "main:0402"
           }
         }
       ]
@@ -15192,7 +15220,7 @@
           "value": "2500750",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0398"
+            "locator": "main:0399"
           }
         }
       ]
@@ -15257,7 +15285,7 @@
           "value": "1668130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0399"
+            "locator": "main:0400"
           }
         }
       ]
@@ -15345,7 +15373,7 @@
           "value": "1622630",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0400"
+            "locator": "main:0401"
           }
         }
       ]
@@ -15359,7 +15387,7 @@
           "value": "1013140",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0401"
+            "locator": "main:0402"
           }
         }
       ]
@@ -15396,7 +15424,7 @@
           "value": "1566690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0403"
+            "locator": "main:0404"
           }
         }
       ]
@@ -15438,7 +15466,7 @@
           "value": "4703940",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0404"
+            "locator": "main:0405"
           }
         }
       ]
@@ -15536,7 +15564,7 @@
           "value": "3210",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0406"
+            "locator": "main:0407"
           }
         }
       ]
@@ -15564,7 +15592,7 @@
           "value": "2695940",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0408"
+            "locator": "main:0409"
           }
         }
       ]
@@ -15578,7 +15606,7 @@
           "value": "1160220",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0409"
+            "locator": "main:0410"
           }
         }
       ]
@@ -15592,7 +15620,7 @@
           "value": "4362740",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0410"
+            "locator": "main:0411"
           }
         }
       ]
@@ -15717,7 +15745,7 @@
           "value": "4107120",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0413"
+            "locator": "main:0414"
           }
         }
       ]
@@ -15731,7 +15759,7 @@
           "value": "1272080",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0414"
+            "locator": "main:0415"
           }
         }
       ]
@@ -15810,7 +15838,7 @@
           "value": "4124340",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0416"
+            "locator": "main:0417"
           }
         }
       ]
@@ -15968,7 +15996,7 @@
           "value": "3224960",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0417"
+            "locator": "main:0418"
           }
         }
       ]
@@ -15996,7 +16024,7 @@
           "value": "2688950",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0418"
+            "locator": "main:0419"
           }
         }
       ]
@@ -16052,7 +16080,7 @@
           "value": "3166290",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0419"
+            "locator": "main:0420"
           }
         }
       ]
@@ -16150,7 +16178,7 @@
           "value": "2410180",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0421"
+            "locator": "main:0422"
           }
         }
       ]
@@ -16164,7 +16192,7 @@
           "value": "707030",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0422"
+            "locator": "main:0423"
           }
         }
       ]
@@ -16303,7 +16331,7 @@
           "value": "2215490",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0424"
+            "locator": "main:0425"
           }
         }
       ]
@@ -16317,7 +16345,7 @@
           "value": "3437660",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0425"
+            "locator": "main:0426"
           }
         }
       ]
@@ -16331,7 +16359,7 @@
           "value": "4633360",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0426"
+            "locator": "main:0427"
           }
         }
       ]
@@ -16368,7 +16396,7 @@
           "value": "2585830",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0427"
+            "locator": "main:0428"
           }
         }
       ]
@@ -16382,7 +16410,7 @@
           "value": "3710560",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0432"
+            "locator": "main:0433"
           }
         }
       ]
@@ -16396,7 +16424,7 @@
           "value": "3916260",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0429"
+            "locator": "main:0430"
           }
         }
       ]
@@ -16410,7 +16438,7 @@
           "value": "2208780",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0430"
+            "locator": "main:0431"
           }
         }
       ]
@@ -16461,7 +16489,7 @@
           "value": "1186640",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0431"
+            "locator": "main:0432"
           }
         }
       ]
@@ -16498,7 +16526,7 @@
           "value": "3419520",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0432"
+            "locator": "main:0433"
           }
         }
       ]
@@ -16512,7 +16540,7 @@
           "value": "1564220",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0433"
+            "locator": "main:0434"
           }
         }
       ]
@@ -16614,7 +16642,7 @@
           "value": "730390",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0434"
+            "locator": "main:0435"
           }
         }
       ]
@@ -16628,7 +16656,7 @@
           "value": "1119730",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0435"
+            "locator": "main:0436"
           }
         }
       ]
@@ -16642,7 +16670,7 @@
           "value": "1895880",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0436"
+            "locator": "main:0437"
           }
         }
       ]
@@ -16670,7 +16698,7 @@
           "value": "3301490",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0438"
+            "locator": "main:0439"
           }
         }
       ]
@@ -16781,7 +16809,7 @@
           "value": "1294810",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0442"
+            "locator": "main:0443"
           }
         }
       ]
@@ -16841,7 +16869,7 @@
           "value": "886060",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0443"
+            "locator": "main:0444"
           }
         }
       ]
@@ -17267,7 +17295,7 @@
           "value": "1558830",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0449"
+            "locator": "main:0450"
           }
         }
       ]
@@ -17341,7 +17369,7 @@
           "value": "1712350",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0452"
+            "locator": "main:0453"
           }
         }
       ]
@@ -17383,7 +17411,7 @@
           "value": "2104890",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0453"
+            "locator": "main:0454"
           }
         }
       ]
@@ -17420,7 +17448,7 @@
           "value": "3527760",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0455"
+            "locator": "main:0456"
           }
         }
       ]
@@ -17448,7 +17476,7 @@
           "value": "2623040",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0456"
+            "locator": "main:0457"
           }
         }
       ]
@@ -17462,7 +17490,7 @@
           "value": "1192810",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0457"
+            "locator": "main:0458"
           }
         }
       ]
@@ -17490,7 +17518,7 @@
           "value": "3050900",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0458"
+            "locator": "main:0459"
           }
         }
       ]
@@ -17578,7 +17606,7 @@
           "value": "2864560",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0461"
+            "locator": "main:0462"
           }
         }
       ]
@@ -17671,7 +17699,7 @@
           "value": "3130220",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0466"
+            "locator": "main:0467"
           }
         }
       ]
@@ -17685,7 +17713,7 @@
           "value": "742420",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0467"
+            "locator": "main:0468"
           }
         }
       ]
@@ -17722,7 +17750,7 @@
           "value": "3634520",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0468"
+            "locator": "main:0469"
           }
         }
       ]
@@ -17750,7 +17778,7 @@
           "value": "1119840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0469"
+            "locator": "main:0470"
           }
         }
       ]
@@ -17829,7 +17857,7 @@
           "value": "1154830",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0471"
+            "locator": "main:0472"
           }
         }
       ]
@@ -17880,7 +17908,7 @@
           "value": "1718130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0473"
+            "locator": "main:0474"
           }
         }
       ]
@@ -17931,7 +17959,7 @@
           "value": "695330",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0474"
+            "locator": "main:0475"
           }
         }
       ]
@@ -18005,7 +18033,7 @@
           "value": "1702010",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0475"
+            "locator": "main:0476"
           }
         }
       ]
@@ -18121,7 +18149,7 @@
           "value": "3638110",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0481"
+            "locator": "main:0482"
           }
         }
       ]
@@ -18135,7 +18163,7 @@
           "value": "1036890",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0482"
+            "locator": "main:0483"
           }
         }
       ]
@@ -18251,7 +18279,7 @@
           "value": "2087030",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0483"
+            "locator": "main:0484"
           }
         }
       ]
@@ -18325,7 +18353,7 @@
           "value": "1949030",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0484"
+            "locator": "main:0485"
           }
         }
       ]
@@ -18413,7 +18441,7 @@
           "value": "4804160",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0485"
+            "locator": "main:0486"
           }
         }
       ]
@@ -18501,7 +18529,7 @@
           "value": "2067160",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0490"
+            "locator": "main:0491"
           }
         }
       ]
@@ -18557,7 +18585,7 @@
           "value": "1820140",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0491"
+            "locator": "main:0492"
           }
         }
       ]
@@ -18585,7 +18613,7 @@
           "value": "252330",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0492"
+            "locator": "main:0493"
           }
         }
       ]
@@ -18613,7 +18641,7 @@
           "value": "768200",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0493"
+            "locator": "main:0494"
           }
         }
       ]
@@ -18627,7 +18655,7 @@
           "value": "4793190",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0495"
+            "locator": "main:0496"
           }
         }
       ]
@@ -18780,7 +18808,7 @@
           "value": "2975950",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0496"
+            "locator": "main:0497"
           }
         }
       ]
@@ -18933,7 +18961,7 @@
           "value": "2646460",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0498"
+            "locator": "main:0499"
           }
         }
       ]
@@ -18947,7 +18975,7 @@
           "value": "2429240",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0499"
+            "locator": "main:0500"
           }
         }
       ]
@@ -19017,7 +19045,7 @@
           "value": "1133870",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0502"
+            "locator": "main:0503"
           }
         }
       ]
@@ -19142,7 +19170,7 @@
           "value": "1778840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0503"
+            "locator": "main:0504"
           }
         }
       ]
@@ -19156,7 +19184,7 @@
           "value": "2538880",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0504"
+            "locator": "main:0505"
           }
         }
       ]
@@ -19249,7 +19277,7 @@
           "value": "2479650",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0506"
+            "locator": "main:0507"
           }
         }
       ]
@@ -19286,7 +19314,7 @@
           "value": "1549690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0507"
+            "locator": "main:0508"
           }
         }
       ]
@@ -19337,7 +19365,7 @@
           "value": "2427430",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0508"
+            "locator": "main:0509"
           }
         }
       ]
@@ -19351,7 +19379,7 @@
           "value": "2427420",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0509"
+            "locator": "main:0510"
           }
         }
       ]
@@ -19365,7 +19393,7 @@
           "value": "2427410",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0510"
+            "locator": "main:0511"
           }
         }
       ]
@@ -19393,7 +19421,7 @@
           "value": "2055590",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0513"
+            "locator": "main:0514"
           }
         }
       ]
@@ -19407,7 +19435,7 @@
           "value": "2643390",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0514"
+            "locator": "main:0515"
           }
         }
       ]
@@ -19532,7 +19560,7 @@
           "value": "1296010",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0517"
+            "locator": "main:0518"
           }
         }
       ]
@@ -19680,7 +19708,7 @@
           "value": "1622910",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0521"
+            "locator": "main:0522"
           }
         }
       ]
@@ -19694,7 +19722,7 @@
           "value": "1442430",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0522"
+            "locator": "main:0523"
           }
         }
       ]
@@ -19708,7 +19736,7 @@
           "value": "1324130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0524"
+            "locator": "main:0525"
           }
         }
       ]
@@ -19768,7 +19796,7 @@
           "value": "2162020",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0525"
+            "locator": "main:0526"
           }
         }
       ]
@@ -19819,7 +19847,7 @@
           "value": "2581410",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0531"
+            "locator": "main:0532"
           }
         }
       ]
@@ -19833,7 +19861,7 @@
           "value": "3290690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0527"
+            "locator": "main:0528"
           }
         }
       ]
@@ -19870,7 +19898,7 @@
           "value": "2300840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0528"
+            "locator": "main:0529"
           }
         }
       ]
@@ -19986,7 +20014,7 @@
           "value": "315210",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0530"
+            "locator": "main:0531"
           }
         }
       ]
@@ -20000,7 +20028,7 @@
           "value": "1429850",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0531"
+            "locator": "main:0532"
           }
         }
       ]
@@ -20093,7 +20121,7 @@
           "value": "3288210",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0532"
+            "locator": "main:0533"
           }
         }
       ]
@@ -20172,7 +20200,7 @@
           "value": "1522870",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0534"
+            "locator": "main:0535"
           }
         }
       ]
@@ -20186,7 +20214,7 @@
           "value": "1869290",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0535"
+            "locator": "main:0536"
           }
         }
       ]
@@ -20288,7 +20316,7 @@
           "value": "1471410",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0536"
+            "locator": "main:0537"
           }
         }
       ]
@@ -20506,7 +20534,7 @@
           "value": "1496590",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0541"
+            "locator": "main:0542"
           }
         }
       ]
@@ -20557,7 +20585,7 @@
           "value": "2498910",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0542"
+            "locator": "main:0543"
           }
         }
       ]
@@ -20654,7 +20682,7 @@
           "value": "1486920",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0544"
+            "locator": "main:0545"
           }
         }
       ]
@@ -20719,7 +20747,7 @@
           "value": "3596700",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0545"
+            "locator": "main:0546"
           }
         }
       ]
@@ -20733,7 +20761,7 @@
           "value": "1249970",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0546"
+            "locator": "main:0547"
           }
         }
       ]
@@ -20747,7 +20775,7 @@
           "value": "2176430",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0547"
+            "locator": "main:0548"
           }
         }
       ]
@@ -20784,7 +20812,7 @@
           "value": "4215750",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0548"
+            "locator": "main:0549"
           }
         }
       ]
@@ -20858,7 +20886,7 @@
           "value": "1807810",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0551"
+            "locator": "main:0552"
           }
         }
       ]
@@ -20872,7 +20900,7 @@
           "value": "3254050",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0552"
+            "locator": "main:0553"
           }
         }
       ]
@@ -20928,7 +20956,7 @@
           "value": "2223840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0555"
+            "locator": "main:0556"
           }
         }
       ]
@@ -20942,7 +20970,7 @@
           "value": "1577250",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0556"
+            "locator": "main:0557"
           }
         }
       ]
@@ -20979,7 +21007,7 @@
           "value": "1399080",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0557"
+            "locator": "main:0558"
           }
         }
       ]
@@ -21030,7 +21058,7 @@
           "value": "489830",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0559"
+            "locator": "main:0560"
           }
         }
       ]
@@ -21220,7 +21248,7 @@
           "value": "4219940",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0561"
+            "locator": "main:0562"
           }
         }
       ]
@@ -21308,7 +21336,7 @@
           "value": "2948730",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0563"
+            "locator": "main:0564"
           }
         }
       ]
@@ -21336,7 +21364,7 @@
           "value": "2254890",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0564"
+            "locator": "main:0565"
           }
         }
       ]
@@ -21364,7 +21392,7 @@
           "value": "1783560",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0565"
+            "locator": "main:0566"
           }
         }
       ]
@@ -21378,7 +21406,7 @@
           "value": "1888930",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0566"
+            "locator": "main:0567"
           }
         }
       ]
@@ -21392,7 +21420,7 @@
           "value": "2531310",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0567"
+            "locator": "main:0568"
           }
         }
       ]
@@ -21406,7 +21434,7 @@
           "value": "1663640",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0573"
+            "locator": "main:0574"
           }
         }
       ]
@@ -21476,7 +21504,7 @@
           "value": "1265780",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0570"
+            "locator": "main:0571"
           }
         }
       ]
@@ -21490,7 +21518,7 @@
           "value": "2933130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0571"
+            "locator": "main:0572"
           }
         }
       ]
@@ -21560,7 +21588,7 @@
           "value": "2569760",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0574"
+            "locator": "main:0575"
           }
         }
       ]
@@ -21574,7 +21602,7 @@
           "value": "2092840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0575"
+            "locator": "main:0576"
           }
         }
       ]
@@ -21602,7 +21630,7 @@
           "value": "1096200",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0576"
+            "locator": "main:0577"
           }
         }
       ]
@@ -21616,7 +21644,7 @@
           "value": "2764750",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0582"
+            "locator": "main:0583"
           }
         }
       ]
@@ -21695,7 +21723,7 @@
           "value": "3000460",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0580"
+            "locator": "main:0581"
           }
         }
       ]
@@ -21746,7 +21774,7 @@
           "value": "1140100",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0581"
+            "locator": "main:0582"
           }
         }
       ]
@@ -21788,7 +21816,7 @@
           "value": "780310",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0583"
+            "locator": "main:0584"
           }
         }
       ]
@@ -21858,7 +21886,7 @@
           "value": "2429270",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0584"
+            "locator": "main:0585"
           }
         }
       ]
@@ -21886,7 +21914,7 @@
           "value": "3679080",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0585"
+            "locator": "main:0586"
           }
         }
       ]
@@ -21932,7 +21960,7 @@
           "value": "2825860",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0586"
+            "locator": "main:0587"
           }
         }
       ]
@@ -21983,7 +22011,7 @@
           "value": "835960",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0589"
+            "locator": "main:0590"
           }
         }
       ]
@@ -21997,7 +22025,7 @@
           "value": "2806640",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0588"
+            "locator": "main:0589"
           }
         }
       ]
@@ -22201,7 +22229,7 @@
           "value": "1430930",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0592"
+            "locator": "main:0593"
           }
         }
       ]
@@ -22275,7 +22303,7 @@
           "value": "1623440",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0594"
+            "locator": "main:0595"
           }
         }
       ]
@@ -22377,7 +22405,7 @@
           "value": "1154030",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0597"
+            "locator": "main:0598"
           }
         }
       ]
@@ -22391,7 +22419,7 @@
           "value": "1881120",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0596"
+            "locator": "main:0597"
           }
         }
       ]
@@ -22433,7 +22461,7 @@
           "value": "1550270",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0598"
+            "locator": "main:0599"
           }
         }
       ]
@@ -22484,7 +22512,7 @@
           "value": "2545710",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0600"
+            "locator": "main:0601"
           }
         }
       ]
@@ -22679,7 +22707,7 @@
           "value": "1664220",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0602"
+            "locator": "main:0603"
           }
         }
       ]
@@ -23011,7 +23039,7 @@
           "value": "2479770",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0607"
+            "locator": "main:0608"
           }
         }
       ]
@@ -23118,7 +23146,7 @@
           "value": "1443630",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0608"
+            "locator": "main:0609"
           }
         }
       ]
@@ -23146,7 +23174,7 @@
           "value": "1662690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0609"
+            "locator": "main:0610"
           }
         }
       ]
@@ -23197,7 +23225,7 @@
           "value": "494840",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0610"
+            "locator": "main:0611"
           }
         }
       ]
@@ -23262,7 +23290,7 @@
           "value": "4030360",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0617"
+            "locator": "main:0618"
           }
         }
       ]
@@ -23290,7 +23318,7 @@
           "value": "817020",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0613"
+            "locator": "main:0614"
           }
         }
       ]
@@ -23304,7 +23332,7 @@
           "value": "1477940",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0614"
+            "locator": "main:0615"
           }
         }
       ]
@@ -23383,7 +23411,7 @@
           "value": "1963210",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0616"
+            "locator": "main:0617"
           }
         }
       ]
@@ -23403,15 +23431,24 @@
       ]
     },
     {
-      "id": "valor-mortis-playtest",
+      "id": "valor-mortis",
       "rules": [
+        {
+          "id": "steam-2828710",
+          "kind": "steam_appid",
+          "value": "2828710",
+          "provenance": {
+            "source": "optiscaler-reviewed-match",
+            "locator": "main:0624"
+          }
+        },
         {
           "id": "steam-3949630",
           "kind": "steam_appid",
           "value": "3949630",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0617"
+            "locator": "main:0624"
           }
         }
       ]
@@ -23485,7 +23522,7 @@
           "value": "1857950",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0619"
+            "locator": "main:0620"
           }
         }
       ]
@@ -23499,7 +23536,7 @@
           "value": "3155730",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0620"
+            "locator": "main:0621"
           }
         }
       ]
@@ -23555,7 +23592,7 @@
           "value": "2814860",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0621"
+            "locator": "main:0622"
           }
         }
       ]
@@ -23569,7 +23606,7 @@
           "value": "3112260",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0622"
+            "locator": "main:0623"
           }
         }
       ]
@@ -23597,7 +23634,7 @@
           "value": "1316680",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0624"
+            "locator": "main:0625"
           }
         }
       ]
@@ -23611,7 +23648,7 @@
           "value": "2615540",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0625"
+            "locator": "main:0626"
           }
         }
       ]
@@ -23639,7 +23676,7 @@
           "value": "1159690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0626"
+            "locator": "main:0627"
           }
         }
       ]
@@ -23653,7 +23690,7 @@
           "value": "2464530",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0627"
+            "locator": "main:0628"
           }
         }
       ]
@@ -23667,7 +23704,7 @@
           "value": "3071240",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0628"
+            "locator": "main:0629"
           }
         }
       ]
@@ -23681,7 +23718,7 @@
           "value": "2686630",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0629"
+            "locator": "main:0630"
           }
         }
       ]
@@ -23709,7 +23746,7 @@
           "value": "1981610",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0630"
+            "locator": "main:0631"
           }
         }
       ]
@@ -23955,7 +23992,7 @@
           "value": "2239550",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0633"
+            "locator": "main:0634"
           }
         }
       ]
@@ -23983,7 +24020,7 @@
           "value": "1288320",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0634"
+            "locator": "main:0635"
           }
         }
       ]
@@ -23997,7 +24034,7 @@
           "value": "1171690",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0635"
+            "locator": "main:0636"
           }
         }
       ]
@@ -24039,7 +24076,7 @@
           "value": "4421200",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0639"
+            "locator": "main:0640"
           }
         }
       ]
@@ -24076,7 +24113,7 @@
           "value": "1519090",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0636"
+            "locator": "main:0637"
           }
         }
       ]
@@ -24090,7 +24127,7 @@
           "value": "3869850",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0637"
+            "locator": "main:0638"
           }
         }
       ]
@@ -24104,7 +24141,7 @@
           "value": "4235230",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0638"
+            "locator": "main:0639"
           }
         }
       ]
@@ -24155,7 +24192,7 @@
           "value": "3564740",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0640"
+            "locator": "main:0641"
           }
         }
       ]
@@ -24169,7 +24206,7 @@
           "value": "2489330",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0641"
+            "locator": "main:0642"
           }
         }
       ]
@@ -24211,7 +24248,7 @@
           "value": "1943730",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0642"
+            "locator": "main:0643"
           }
         }
       ]
@@ -24225,7 +24262,7 @@
           "value": "1938010",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0643"
+            "locator": "main:0644"
           }
         }
       ]
@@ -24253,7 +24290,7 @@
           "value": "3144860",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0644"
+            "locator": "main:0645"
           }
         }
       ]
@@ -24295,7 +24332,7 @@
           "value": "3041230",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0645"
+            "locator": "main:0646"
           }
         }
       ]
@@ -24309,7 +24346,7 @@
           "value": "3875670",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0646"
+            "locator": "main:0647"
           }
         }
       ]
@@ -24411,7 +24448,7 @@
           "value": "1056960",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0649"
+            "locator": "main:0650"
           }
         }
       ]
@@ -24425,7 +24462,7 @@
           "value": "2640030",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0656"
+            "locator": "main:0657"
           }
         }
       ]
@@ -24439,7 +24476,7 @@
           "value": "699130",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0651"
+            "locator": "main:0652"
           }
         }
       ]
@@ -24467,7 +24504,7 @@
           "value": "1953520",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0652"
+            "locator": "main:0653"
           }
         }
       ]
@@ -24481,7 +24518,7 @@
           "value": "1203190",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0653"
+            "locator": "main:0654"
           }
         }
       ]
@@ -24495,7 +24532,7 @@
           "value": "936720",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0654"
+            "locator": "main:0655"
           }
         }
       ]
@@ -24601,7 +24638,7 @@
           "value": "1249800",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0657"
+            "locator": "main:0658"
           }
         }
       ]
@@ -24652,7 +24689,7 @@
           "value": "2163330",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0658"
+            "locator": "main:0659"
           }
         }
       ]
@@ -24781,7 +24818,7 @@
           "value": "1801520",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0661"
+            "locator": "main:0662"
           }
         }
       ]
@@ -24795,7 +24832,7 @@
           "value": "2458560",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0662"
+            "locator": "main:0663"
           }
         }
       ]
@@ -24809,7 +24846,7 @@
           "value": "4254190",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0663"
+            "locator": "main:0664"
           }
         }
       ]

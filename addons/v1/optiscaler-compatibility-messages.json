@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-10-15.1",
+  "revision": "2026-10-20.1",
   "messages": [
     {
       "id": "optiscaler-1666-amsterdam-fsr4-color-space",
@@ -331,6 +331,12 @@
       "fallback_text": "Use FSR input. If FSR 4 flickers at the Balanced preset, select the Non-Linear sRGB input color space.",
       "guidance_kind": "game_setting",
       "context": "game_setting"
+    },
+    {
+      "id": "optiscaler-gears-of-war-e-day-offline-mode",
+      "fallback_text": "OptiScaler can only be used in offline mode and requires an Easy Anti-Cheat (EAC) bypass.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
     },
     {
       "id": "optiscaler-ghost-recon-wildlands-dlss-mod",
