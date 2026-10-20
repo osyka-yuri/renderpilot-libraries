@@ -210,6 +210,20 @@
       ]
     },
     {
+      "id": "a-short-hike",
+      "rules": [
+        {
+          "id": "steam-1055540",
+          "kind": "steam_appid",
+          "value": "1055540",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:a-short-hike"
+          }
+        }
+      ]
+    },
+    {
       "id": "a-way-out",
       "rules": [
         {
@@ -2803,6 +2817,20 @@
       ]
     },
     {
+      "id": "black-mesa",
+      "rules": [
+        {
+          "id": "steam-362890",
+          "kind": "steam_appid",
+          "value": "362890",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:black-mesa"
+          }
+        }
+      ]
+    },
+    {
       "id": "black-myth-wukong",
       "rules": [
         {
@@ -4401,6 +4429,20 @@
       ]
     },
     {
+      "id": "constance",
+      "rules": [
+        {
+          "id": "steam-2313700",
+          "kind": "steam_appid",
+          "value": "2313700",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:constance"
+          }
+        }
+      ]
+    },
+    {
       "id": "content-warning",
       "rules": [
         {
@@ -4549,6 +4591,20 @@
           "provenance": {
             "source": "xbox-store",
             "locator": "https://www.xbox.com/en-US/games/store/corsair-cove/9PHS0189K408"
+          }
+        }
+      ]
+    },
+    {
+      "id": "counter-strike-source",
+      "rules": [
+        {
+          "id": "steam-240",
+          "kind": "steam_appid",
+          "value": "240",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:counter-strike-source"
           }
         }
       ]
@@ -5194,6 +5250,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0125"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day-of-defeat-source",
+      "rules": [
+        {
+          "id": "steam-300",
+          "kind": "steam_appid",
+          "value": "300",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:day-of-defeat-source"
           }
         }
       ]
@@ -6790,6 +6860,20 @@
       ]
     },
     {
+      "id": "dusk",
+      "rules": [
+        {
+          "id": "steam-519860",
+          "kind": "steam_appid",
+          "value": "519860",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:dusk"
+          }
+        }
+      ]
+    },
+    {
       "id": "duskfade-demo",
       "rules": [
         {
@@ -7367,6 +7451,34 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0185"
+          }
+        }
+      ]
+    },
+    {
+      "id": "entropy-zero",
+      "rules": [
+        {
+          "id": "steam-714070",
+          "kind": "steam_appid",
+          "value": "714070",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:entropy-zero"
+          }
+        }
+      ]
+    },
+    {
+      "id": "entropy-zero-2",
+      "rules": [
+        {
+          "id": "steam-1583720",
+          "kind": "steam_appid",
+          "value": "1583720",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:entropy-zero-2"
           }
         }
       ]
@@ -8148,6 +8260,20 @@
       ]
     },
     {
+      "id": "fear-the-spotlight",
+      "rules": [
+        {
+          "id": "steam-1959390",
+          "kind": "steam_appid",
+          "value": "1959390",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:fear-the-spotlight"
+          }
+        }
+      ]
+    },
+    {
       "id": "feed-the-deep",
       "rules": [
         {
@@ -8794,6 +8920,20 @@
       ]
     },
     {
+      "id": "furi",
+      "rules": [
+        {
+          "id": "steam-423230",
+          "kind": "steam_appid",
+          "value": "423230",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:furi"
+          }
+        }
+      ]
+    },
+    {
       "id": "gamble-with-your-friends",
       "rules": [
         {
@@ -8845,6 +8985,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0234"
+          }
+        }
+      ]
+    },
+    {
+      "id": "garry-s-mod",
+      "rules": [
+        {
+          "id": "steam-4000",
+          "kind": "steam_appid",
+          "value": "4000",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:garry-s-mod"
           }
         }
       ]
@@ -9388,6 +9542,20 @@
       ]
     },
     {
+      "id": "graveyard-keeper",
+      "rules": [
+        {
+          "id": "steam-599140",
+          "kind": "steam_appid",
+          "value": "599140",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:graveyard-keeper"
+          }
+        }
+      ]
+    },
+    {
       "id": "great-god-grove",
       "rules": [
         {
@@ -9735,6 +9903,20 @@
           "provenance": {
             "source": "steam-appinfo",
             "locator": "steam-executable-observation:1145350"
+          }
+        }
+      ]
+    },
+    {
+      "id": "half-life-2",
+      "rules": [
+        {
+          "id": "steam-220",
+          "kind": "steam_appid",
+          "value": "220",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:half-life-2"
           }
         }
       ]
@@ -10786,6 +10968,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0294"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inscryption",
+      "rules": [
+        {
+          "id": "steam-1092790",
+          "kind": "steam_appid",
+          "value": "1092790",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:inscryption"
           }
         }
       ]
@@ -11867,6 +12063,34 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0318"
+          }
+        }
+      ]
+    },
+    {
+      "id": "left-4-dead",
+      "rules": [
+        {
+          "id": "steam-500",
+          "kind": "steam_appid",
+          "value": "500",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:left-4-dead"
+          }
+        }
+      ]
+    },
+    {
+      "id": "left-4-dead-2",
+      "rules": [
+        {
+          "id": "steam-550",
+          "kind": "steam_appid",
+          "value": "550",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:left-4-dead-2"
           }
         }
       ]
@@ -14161,6 +14385,48 @@
       ]
     },
     {
+      "id": "need-for-speedtm-most-wanted-2005",
+      "rules": [
+        {
+          "id": "exe-name-need-for-speedtm-most-wanted-2005",
+          "kind": "exe_name",
+          "value": "speed.exe",
+          "provenance": {
+            "source": "renodx-match-overlay",
+            "locator": "catalogs/addons/renodx/match_overlay.json#need-for-speedtm-most-wanted-2005"
+          }
+        }
+      ]
+    },
+    {
+      "id": "need-for-speedtm-most-wanted-2012",
+      "rules": [
+        {
+          "id": "steam-1262560",
+          "kind": "steam_appid",
+          "value": "1262560",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:need-for-speedtm-most-wanted-2012"
+          }
+        }
+      ]
+    },
+    {
+      "id": "need-for-speedtm-the-run",
+      "rules": [
+        {
+          "id": "exe-name-need-for-speedtm-the-run",
+          "kind": "exe_name",
+          "value": "NeedForSpeedTheRun.exe",
+          "provenance": {
+            "source": "renodx-match-overlay",
+            "locator": "catalogs/addons/renodx/match_overlay.json#need-for-speedtm-the-run"
+          }
+        }
+      ]
+    },
+    {
       "id": "neon-abyss",
       "rules": [
         {
@@ -14549,6 +14815,20 @@
           "provenance": {
             "source": "luma-curated-games",
             "locator": "catalogs/addons/luma/curated_games.json#no-more-heroes-3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "no-more-room-in-hell",
+      "rules": [
+        {
+          "id": "steam-224260",
+          "kind": "steam_appid",
+          "value": "224260",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:no-more-room-in-hell"
           }
         }
       ]
@@ -15829,6 +16109,34 @@
           "provenance": {
             "source": "luma-curated-games",
             "locator": "catalogs/addons/luma/curated_games.json#poppyplaytime"
+          }
+        }
+      ]
+    },
+    {
+      "id": "portal",
+      "rules": [
+        {
+          "id": "steam-400",
+          "kind": "steam_appid",
+          "value": "400",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:portal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "portal-2",
+      "rules": [
+        {
+          "id": "steam-620",
+          "kind": "steam_appid",
+          "value": "620",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:portal-2"
           }
         }
       ]
@@ -18283,6 +18591,20 @@
       ]
     },
     {
+      "id": "slime-rancher",
+      "rules": [
+        {
+          "id": "steam-433340",
+          "kind": "steam_appid",
+          "value": "433340",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:slime-rancher"
+          }
+        }
+      ]
+    },
+    {
       "id": "smalland-survive-the-wilds",
       "rules": [
         {
@@ -19986,6 +20308,20 @@
       ]
     },
     {
+      "id": "tabletop-simulator",
+      "rules": [
+        {
+          "id": "steam-286160",
+          "kind": "steam_appid",
+          "value": "286160",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:tabletop-simulator"
+          }
+        }
+      ]
+    },
+    {
       "id": "tactical-breach-wizards",
       "rules": [
         {
@@ -20171,6 +20507,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0541"
+          }
+        }
+      ]
+    },
+    {
+      "id": "team-fortress-2",
+      "rules": [
+        {
+          "id": "steam-440",
+          "kind": "steam_appid",
+          "value": "440",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:team-fortress-2"
           }
         }
       ]
@@ -21458,6 +21808,48 @@
       ]
     },
     {
+      "id": "the-room-4-old-sins",
+      "rules": [
+        {
+          "id": "steam-1361320",
+          "kind": "steam_appid",
+          "value": "1361320",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-room-4-old-sins"
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-room-three",
+      "rules": [
+        {
+          "id": "steam-456750",
+          "kind": "steam_appid",
+          "value": "456750",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-room-three"
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-room-two",
+      "rules": [
+        {
+          "id": "steam-425580",
+          "kind": "steam_appid",
+          "value": "425580",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-room-two"
+          }
+        }
+      ]
+    },
+    {
       "id": "the-rpg",
       "rules": [
         {
@@ -21467,6 +21859,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0584"
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-seance-of-blake-manor",
+      "rules": [
+        {
+          "id": "steam-1395520",
+          "kind": "steam_appid",
+          "value": "1395520",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-seance-of-blake-manor"
           }
         }
       ]
@@ -21671,6 +22077,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#the-upturned"
+          }
+        }
+      ]
+    },
+    {
+      "id": "the-wandering-village",
+      "rules": [
+        {
+          "id": "steam-1121640",
+          "kind": "steam_appid",
+          "value": "1121640",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-wandering-village"
           }
         }
       ]
@@ -24020,6 +24440,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0651"
+          }
+        }
+      ]
+    },
+    {
+      "id": "worldbox-god-simulator",
+      "rules": [
+        {
+          "id": "steam-1206560",
+          "kind": "steam_appid",
+          "value": "1206560",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:worldbox-god-simulator"
           }
         }
       ]

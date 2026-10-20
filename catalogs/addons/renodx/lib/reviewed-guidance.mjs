@@ -128,6 +128,17 @@ omit(
   ),
   "The upstream note only redirects to another page and contains no actionable instruction.",
 );
+omit(
+  keyList(
+    "main",
+    "black-mesa entropy-zero entropy-zero-2 half-life-2 left-4-dead-2 portal portal-2",
+  ),
+  "The 32-bit requirement is represented by the manifest architecture.",
+);
+omit(
+  keyList("main", "day-of-defeat-source no-more-room-in-hell team-fortress-2"),
+  "The 64-bit requirement is represented by the manifest architecture.",
+);
 assign(keyList("main", "assassin-s-creed-iv-black-flagtm"), [
   info("The mod is playable, but some graphics issues remain unresolved."),
 ]);
@@ -351,7 +362,7 @@ assign(
   { processingPath: "upgrade" },
 );
 assign(
-  keyList("ue-extended", "pacific-drive"),
+  keyList("ue-extended", "pacific-drive the-forgotten-city threshold"),
   [
     addonSetting(
       "B8G8R8A8_TYPELESS",
@@ -1532,7 +1543,7 @@ assign(
 assign(
   keyList(
     "unity",
-    "agent-a-a-puzzle-in-disguise atlyss ball-x-pit beyond-galaxyland oxenfree",
+    "agent-a-a-puzzle-in-disguise atlyss ball-x-pit beyond-galaxyland furi oxenfree worldbox-god-simulator",
   ),
   [addonSetting("Swapchain Encoding", "Gamma", "Set Swapchain Encoding to Gamma.")],
   { inheritCommon: true },
@@ -2377,6 +2388,38 @@ pending(
   keyList("unity", "mage-arena no-rest-for-the-wicked ultrakill"),
   "Upstream format and encoding adjustments pending manual review.",
 );
+assign(
+  keyList("unity", "a-short-hike dusk inscryption"),
+  [
+    addonSettings([
+      { name: "Swapchain Encoding", value: "Gamma" },
+      { name: "R8G8B8A8_TYPELESS", value: "Any Size" },
+    ]),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "the-room-two the-room-three"),
+  [addonSetting("Swapchain Encoding", "Gamma", "Set Swapchain Encoding to Gamma.")],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "the-wandering-village"),
+  [addonSetting("Swapchain Proxy", "On", "Enable Swapchain Proxy.")],
+  { inheritCommon: true },
+);
+pending(
+  keyList("main", "need-for-speedtm-most-wanted-2005"),
+  "Upstream DXVK proxy and ReShade instructions pending manual review.",
+);
+assign(keyList("main", "counter-strike-source left-4-dead"), [
+  info("Some models have visual glitches, and maps using only LDR can appear overexposed."),
+]);
+assign(keyList("main", "garry-s-mod"), [
+  info(
+    "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.",
+  ),
+]);
 
 export function reviewedDecision(sourceKey) {
   const decision = decisions.get(sourceKey);

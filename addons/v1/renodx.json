@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T00:00:00Z",
+  "generated_at": "2026-10-20T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -3396,6 +3396,71 @@
       ],
       "addon": {
         "slug": "mhworld"
+      }
+    },
+    {
+      "id": "need-for-speedtm-most-wanted-2005",
+      "name": "Need for Speed™ Most Wanted (2005)",
+      "architecture": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "exe_name",
+          "value": "speed.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "nfsmw05",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/nightly-20261008/renodx-nfsmw05.addon32"
+      }
+    },
+    {
+      "id": "need-for-speedtm-the-run",
+      "name": "Need for Speed™ The Run",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "exe_name",
+          "value": "NeedForSpeedTheRun.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "need-for-speedtm-the-run"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/needforspeedtherun/mods/2",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
+      "id": "need-for-speedtm-most-wanted-2012",
+      "name": "Need for Speed™ Most Wanted (2012)",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1262560",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "need-for-speedtm-most-wanted-2012"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/needforspeedmostwanted2012/mods/90",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
       }
     },
     {
@@ -7133,6 +7198,40 @@
       }
     },
     {
+      "id": "the-forgotten-city",
+      "name": "The Forgotten City",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "874260",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "threshold",
+      "name": "THRESHOLD",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2580020",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "tokyo-xtreme-racer",
       "name": "Tokyo Xtreme Racer",
       "architecture": "X64",
@@ -8143,22 +8242,6 @@
         {
           "kind": "steam_appid",
           "value": "1590910",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
-      "id": "the-forgotten-city",
-      "name": "The Forgotten City",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "874260",
           "tier": 100
         }
       ],
@@ -9580,22 +9663,6 @@
       }
     },
     {
-      "id": "threshold",
-      "name": "THRESHOLD",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2580020",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
       "id": "thymesia",
       "name": "Thymesia",
       "architecture": "X64",
@@ -9933,6 +10000,22 @@
         {
           "kind": "steam_appid",
           "value": "2497920",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "a-short-hike",
+      "name": "A Short Hike",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1055540",
           "tier": 100
         }
       ],
@@ -11194,6 +11277,22 @@
       }
     },
     {
+      "id": "constance",
+      "name": "Constance",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2313700",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "content-warning",
       "name": "Content Warning",
       "architecture": "X64",
@@ -11748,6 +11847,22 @@
       }
     },
     {
+      "id": "dusk",
+      "name": "DUSK",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "519860",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "dustborn",
       "name": "Dustborn",
       "architecture": "X64",
@@ -12201,6 +12316,22 @@
       }
     },
     {
+      "id": "fear-the-spotlight",
+      "name": "Fear the Spotlight",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1959390",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "feed-the-deep",
       "name": "Feed the Deep",
       "architecture": "X64",
@@ -12377,6 +12508,22 @@
       }
     },
     {
+      "id": "furi",
+      "name": "Furi",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "423230",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "gamble-with-your-friends",
       "name": "Gamble With Your Friends",
       "architecture": "X64",
@@ -12513,6 +12660,22 @@
         {
           "kind": "steam_appid",
           "value": "431240",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "graveyard-keeper",
+      "name": "Graveyard Keeper",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "599140",
           "tier": 100
         }
       ],
@@ -12966,6 +13129,22 @@
         {
           "kind": "steam_appid",
           "value": "1184480",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "inscryption",
+      "name": "Inscryption",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1092790",
           "tier": 100
         }
       ],
@@ -15304,6 +15483,22 @@
       }
     },
     {
+      "id": "slime-rancher",
+      "name": "Slime Rancher",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "433340",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "snake-force",
       "name": "Snake Force",
       "architecture": "X64",
@@ -15842,6 +16037,22 @@
       }
     },
     {
+      "id": "tabletop-simulator",
+      "name": "Tabletop Simulator",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "286160",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "tainted-grail-conquest",
       "name": "Tainted Grail: Conquest",
       "architecture": "X64",
@@ -16178,6 +16389,70 @@
       }
     },
     {
+      "id": "the-room-two",
+      "name": "The Room Two",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "425580",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "the-room-three",
+      "name": "The Room Three",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "456750",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "the-room-4-old-sins",
+      "name": "The Room 4: Old Sins",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1361320",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "the-seance-of-blake-manor",
+      "name": "The Séance of Blake Manor",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1395520",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "the-universim",
       "name": "The Universim",
       "architecture": "X64",
@@ -16202,6 +16477,22 @@
         {
           "kind": "steam_appid",
           "value": "1717770",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "the-wandering-village",
+      "name": "The Wandering Village",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1121640",
           "tier": 100
         }
       ],
@@ -16898,6 +17189,22 @@
       }
     },
     {
+      "id": "worldbox-god-simulator",
+      "name": "WorldBox - God Simulator",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1206560",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "xf-extreme-formula",
       "name": "XF Extreme Formula",
       "architecture": "X64",
@@ -16932,6 +17239,227 @@
       ],
       "addon": {
         "slug": "unityengine"
+      }
+    },
+    {
+      "id": "black-mesa",
+      "name": "Black Mesa",
+      "architecture": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "362890",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "counter-strike-source",
+      "name": "Counter Strike: Source",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "240",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
+      }
+    },
+    {
+      "id": "day-of-defeat-source",
+      "name": "Day of Defeat: Source",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "300",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
+      }
+    },
+    {
+      "id": "entropy-zero",
+      "name": "Entropy: Zero",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "714070",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "entropy-zero-2",
+      "name": "Entropy: Zero 2",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1583720",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "garry-s-mod",
+      "name": "Garry's Mod",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4000",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "half-life-2",
+      "name": "Half Life 2",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "220",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "left-4-dead",
+      "name": "Left 4 Dead",
+      "architecture": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "500",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "left-4-dead-2",
+      "name": "Left 4 Dead 2",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "550",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "no-more-room-in-hell",
+      "name": "No More Room in Hell",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "224260",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
+      }
+    },
+    {
+      "id": "portal",
+      "name": "Portal",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "400",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "portal-2",
+      "name": "Portal 2",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "620",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+      }
+    },
+    {
+      "id": "team-fortress-2",
+      "name": "Team Fortress 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "440",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "sourceengine",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
       }
     },
     {

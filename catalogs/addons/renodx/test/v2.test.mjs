@@ -293,11 +293,11 @@ test("structured guidance rejects presentation-code drift", () => {
 test("the checked-in ledger covers every active note and excludes unrelated sections", () => {
   const result = verifyCurationLedger(messages, wikiSource);
   assert.equal(result.entries.length, messages.length);
-  assert.equal(messages.length, 512);
+  assert.equal(messages.length, 536);
   assert.deepEqual(result.source.ignored_sections, ["Deprecated", "Related Mods"]);
   assert.equal(
     result.entries.filter((entry) => entry.disposition === "pending").length,
-    22,
+    23,
   );
   assert.equal(result.source.page_reviews.length, 10);
   assert.equal(ledger.entries.length, messages.length);
@@ -435,7 +435,7 @@ test("double-tonemapping advice is neutral compatibility guidance", () => {
 
 test("processing policy is the reviewed UE Extended matrix", () => {
   const ueExtended = manifest.games.filter((game) => game.profile_id === "ue_extended");
-  assert.equal(ueExtended.length, 70);
+  assert.equal(ueExtended.length, 72);
   const upgradeIds = [
     "abzu",
     "astroneer",
@@ -460,6 +460,8 @@ test("processing policy is the reviewed UE Extended matrix", () => {
     "sifu",
     "stray",
     "the-alters",
+    "the-forgotten-city",
+    "threshold",
     "vholume",
     "what-remains-of-edith-finch",
   ].sort();

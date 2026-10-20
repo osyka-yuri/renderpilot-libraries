@@ -313,6 +313,10 @@ export const RUSSIAN_TRANSLATIONS = Object.freeze({
     "В этой игре ползунок яркости интерфейса RenoDX регулирует уровень эталонного белого (Paper White).",
   "Output remains limited to BT.709.":
     "Вывод остаётся ограниченным цветовым пространством BT.709.",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "На некоторых моделях возможны визуальные артефакты, а карты, использующие только LDR, могут выглядеть пересвеченными.",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot автоматически устанавливает только 32-битный аддон. Для ветки x86-64 необходимо вручную установить renodx-sourceengine.addon64 и прокси-DLL DXVK.",
 });
 
 export const GERMAN_TRANSLATIONS = Object.freeze({
@@ -626,6 +630,10 @@ export const GERMAN_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "Der RenoDX-Regler für UI-Helligkeit steuert in diesem Spiel das Papierweiß (Paper White).",
   "Output remains limited to BT.709.": "Die Ausgabe bleibt auf BT.709 begrenzt.",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "Einige Modelle weisen visuelle Fehler auf, und Karten, die nur LDR verwenden, können überbelichtet wirken.",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot installiert automatisch nur das 32-Bit-Add-on. Der x86-64-Zweig erfordert die manuelle Installation von renodx-sourceengine.addon64 und einer DXVK-Proxy-DLL.",
 });
 
 export const FRENCH_TRANSLATIONS = Object.freeze({
@@ -937,6 +945,10 @@ export const FRENCH_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "Dans ce jeu, le curseur de luminosité de l'interface RenoDX contrôle le niveau de blanc de référence (paper white).",
   "Output remains limited to BT.709.": "La sortie reste limitée à l'espace BT.709.",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "Certains modèles présentent des bugs visuels et les cartes utilisant uniquement le LDR peuvent sembler surexposées.",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot installe automatiquement uniquement l'extension 32 bits. La branche x86-64 nécessite l'installation manuelle de renodx-sourceengine.addon64 et d'une DLL proxy DXVK.",
 });
 
 export const SPANISH_TRANSLATIONS = Object.freeze({
@@ -1251,6 +1263,10 @@ export const SPANISH_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "En este juego, el control deslizante de brillo de la interfaz de RenoDX ajusta el blanco de referencia (paper white).",
   "Output remains limited to BT.709.": "La salida permanece limitada a BT.709.",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "Algunos modelos presentan fallos visuales y los mapas que solo usan LDR pueden verse sobreexpuestos.",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot solo instala automáticamente el complemento de 32 bits. La rama x86-64 requiere la instalación manual de renodx-sourceengine.addon64 y una DLL proxy de DXVK.",
 });
 
 export const JAPANESE_TRANSLATIONS = Object.freeze({
@@ -1567,6 +1583,10 @@ export const JAPANESE_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "このゲームでは、RenoDX の UI 明るさスライダーがペーパーホワイトを制御します。",
   "Output remains limited to BT.709.": "出力は BT.709 に制限されたままになります。",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "一部のモデルに視覚的な不具合があり、LDRのみを使用するマップは露出オーバーに見える場合があります。",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot が自動インストールするのは 32 ビット版アドオンのみです。x86-64 ブランチでは renodx-sourceengine.addon64 と DXVK プロキシ DLL の手動インストールが必要です。",
 });
 
 export const BRAZILIAN_PORTUGUESE_TRANSLATIONS = Object.freeze({
@@ -1880,6 +1900,10 @@ export const BRAZILIAN_PORTUGUESE_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "Neste jogo, o controle deslizante de brilho da interface do RenoDX ajusta o branco de referência (paper white).",
   "Output remains limited to BT.709.": "A saída permanece limitada ao padrão BT.709.",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "Alguns modelos apresentam falhas visuais e mapas que usam apenas LDR podem parecer superexpostos.",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "O RenderPilot instala automaticamente apenas o complemento de 32 bits. A ramificação x86-64 requer a instalação manual do renodx-sourceengine.addon64 e de uma DLL proxy do DXVK.",
 });
 
 export const SIMPLIFIED_CHINESE_TRANSLATIONS = Object.freeze({
@@ -2161,6 +2185,10 @@ export const SIMPLIFIED_CHINESE_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "在此游戏中，RenoDX UI 亮度滑块用于控制参考白（Paper White）。",
   "Output remains limited to BT.709.": "输出仍受限于 BT.709 范围。",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "部分模型存在画面瑕疵，且仅使用 LDR 的地图可能会显得过曝。",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot 仅会自动安装 32 位插件。x86-64 分支需要手动安装 renodx-sourceengine.addon64 和 DXVK 代理 DLL。",
 });
 
 export const TRADITIONAL_CHINESE_TRANSLATIONS = Object.freeze({
@@ -2442,4 +2470,8 @@ export const TRADITIONAL_CHINESE_TRANSLATIONS = Object.freeze({
   "The RenoDX UI brightness slider controls paper white in this game.":
     "在此遊戲中，RenoDX UI 亮度滑桿用於控制參考白（Paper White）。",
   "Output remains limited to BT.709.": "輸出仍受限於 BT.709 範圍。",
+  "Some models have visual glitches, and maps using only LDR can appear overexposed.":
+    "部分模型存在畫面瑕疵，且僅使用 LDR 的地圖可能會顯得過曝。",
+  "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
+    "RenderPilot 僅會自動安裝 32 位元外掛程式。x86-64 分支需要手動安裝 renodx-sourceengine.addon64 和 DXVK 代理 DLL。",
 });

@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "100cca6ec6c02b8c72095b1fb5f6db7c494b39cf27b0e51131f739bc2649af28",
+    "wiki_content_sha256": "869cc635b6e0248f6820395ccc8dbc1f6a4c363e24b43b9e92b1454909029d52",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "1928f0a13d2ea256909a7c60266051809d5dcd37db8410ff88e476185b864a51",
+    "active_message_fingerprint": "7a556ec4ecf093ef8bedac9a53dc8ce0a2b5cd9010edb5cb8823b752929d297a",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -247,6 +247,16 @@
       "note_sha256": "ae1313f1320acafe0d1f1b969286912c7531e7200e1fef4a444be8a77cd75b83",
       "disposition": "omitted",
       "reason": "The upstream note only redirects to another page and contains no actionable instruction."
+    },
+    {
+      "source_key": "main:need-for-speedtm-most-wanted-2005",
+      "game_id": "need-for-speedtm-most-wanted-2005",
+      "title": "Need for Speed™ Most Wanted (2005)",
+      "section": "main",
+      "profile_source": "nfsmw05",
+      "note_sha256": "8bb27c3dc777af7dcb8b6b9bb4b5f6cf2844a5af86b05416711341f9efb1d8f6",
+      "disposition": "pending",
+      "reason": "Upstream DXVK proxy and ReShade instructions pending manual review."
     },
     {
       "source_key": "main:ninja-gaiden-4",
@@ -1155,6 +1165,26 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:the-forgotten-city",
+      "game_id": "the-forgotten-city",
+      "title": "The Forgotten City",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:threshold",
+      "game_id": "threshold",
+      "title": "THRESHOLD",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -2759,6 +2789,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:a-short-hike",
+      "game_id": "a-short-hike",
+      "title": "A Short Hike",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "09384a4dd0fca16c08e1d38b970dc26f5a26c0714d3a38d9f2c1f69df533a998",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:aer-memories-of-old",
       "game_id": "aer-memories-of-old",
       "title": "AER Memories of Old",
@@ -3064,7 +3104,7 @@
       "title": "Besiege",
       "section": "unity",
       "profile_source": "unityengine",
-      "note_sha256": "9245ab70dff1fd4529ce7eb21d6bbf5d95eb0b814bfe3d9b2c654c3fa56cb511",
+      "note_sha256": "1301a200cab26316e58370178c84bfcd77b19a8953af3dbf61902581e33f106c",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3429,6 +3469,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:dusk",
+      "game_id": "dusk",
+      "title": "DUSK",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "f119cce008f4e16e3db3b6569f0772295e8ce8279835416130ea41c008234084",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:dystopika",
       "game_id": "dystopika",
       "title": "Dystopika",
@@ -3699,6 +3749,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:furi",
+      "game_id": "furi",
+      "title": "Furi",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "1ebd906a9ee32330c7697e27b0d3751746775cc16ec1edac728ca65dbb936808",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:gamble-with-your-friends",
       "game_id": "gamble-with-your-friends",
       "title": "Gamble With Your Friends",
@@ -3885,6 +3945,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:inscryption",
+      "game_id": "inscryption",
+      "title": "Inscryption",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "f119cce008f4e16e3db3b6569f0772295e8ce8279835416130ea41c008234084",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4919,12 +4989,42 @@
       "reason": null
     },
     {
+      "source_key": "unity:the-room-two",
+      "game_id": "the-room-two",
+      "title": "The Room Two",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "2b4a244e5f28357b45b7723db206f2b18139d65818b9f5ada24889ceff3a5e69",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:the-room-three",
+      "game_id": "the-room-three",
+      "title": "The Room Three",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "2b4a244e5f28357b45b7723db206f2b18139d65818b9f5ada24889ceff3a5e69",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:the-upturned",
       "game_id": "the-upturned",
       "title": "The Upturned",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "cff7dcace3760f8eb7c3834bfcb57874e3dc6f49c05bf8ad568892cbdbd76058",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:the-wandering-village",
+      "game_id": "the-wandering-village",
+      "title": "The Wandering Village",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "0df8f93da94ececdf9d34bddc80d5573b4da52eacfa8fa3522eee6a4278b77a9",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -5179,6 +5279,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:worldbox-god-simulator",
+      "game_id": "worldbox-god-simulator",
+      "title": "WorldBox - God Simulator",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "6d2bf235abf4fd8d1de00de36cebd0100a0471a417970a498856c9b89c98b93e",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:yooka-replaylee",
       "game_id": "yooka-replaylee",
       "title": "Yooka-Replaylee",
@@ -5187,6 +5297,136 @@
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
+    },
+    {
+      "source_key": "main:black-mesa",
+      "game_id": "black-mesa",
+      "title": "Black Mesa",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:counter-strike-source",
+      "game_id": "counter-strike-source",
+      "title": "Counter Strike: Source",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "4ebd47e361f0ceed424eb9a0ce4ae4454591472d95391041809fda54284b57c2",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "main:day-of-defeat-source",
+      "game_id": "day-of-defeat-source",
+      "title": "Day of Defeat: Source",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "25de446bd5103a01b28c24ebd0400c8c3e6aa517916ca6242814ab47b81ec1ec",
+      "disposition": "omitted",
+      "reason": "The 64-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:entropy-zero",
+      "game_id": "entropy-zero",
+      "title": "Entropy: Zero",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:entropy-zero-2",
+      "game_id": "entropy-zero-2",
+      "title": "Entropy: Zero 2",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:garry-s-mod",
+      "game_id": "garry-s-mod",
+      "title": "Garry's Mod",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "d7da24d1a127074e5138b69b3d965f652e50ca3708179d4d65028ae4d70074c6",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "main:half-life-2",
+      "game_id": "half-life-2",
+      "title": "Half Life 2",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:left-4-dead",
+      "game_id": "left-4-dead",
+      "title": "Left 4 Dead",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "8d38ee8b3ac5a4d47202c50a399169d8a793a483cbe3426aae8c3c9d3e35557e",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "main:left-4-dead-2",
+      "game_id": "left-4-dead-2",
+      "title": "Left 4 Dead 2",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:no-more-room-in-hell",
+      "game_id": "no-more-room-in-hell",
+      "title": "No More Room in Hell",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "25de446bd5103a01b28c24ebd0400c8c3e6aa517916ca6242814ab47b81ec1ec",
+      "disposition": "omitted",
+      "reason": "The 64-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:portal",
+      "game_id": "portal",
+      "title": "Portal",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:portal-2",
+      "game_id": "portal-2",
+      "title": "Portal 2",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "7c3c6701af6d2a3ef414ed1d95742aafa7a8b51b40af1c8d1779dbff6b9b7e2a",
+      "disposition": "omitted",
+      "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "main:team-fortress-2",
+      "game_id": "team-fortress-2",
+      "title": "Team Fortress 2",
+      "section": "main",
+      "profile_source": "game",
+      "note_sha256": "25de446bd5103a01b28c24ebd0400c8c3e6aa517916ca6242814ab47b81ec1ec",
+      "disposition": "omitted",
+      "reason": "The 64-bit requirement is represented by the manifest architecture."
     }
   ]
 }

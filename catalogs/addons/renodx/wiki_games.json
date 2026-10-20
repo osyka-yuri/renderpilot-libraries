@@ -1212,6 +1212,29 @@
     "id": "monster-hunter-world"
   },
   {
+    "name": "Need for Speed™ Most Wanted (2005)",
+    "slug": "nfsmw05",
+    "arch": "X86",
+    "status": "construction",
+    "id": "need-for-speedtm-most-wanted-2005",
+    "notes": "Requires DXVK Reshade proxy! Please see instructions down in Source 1 section.",
+    "source_key": "main:need-for-speedtm-most-wanted-2005"
+  },
+  {
+    "name": "Need for Speed™ The Run",
+    "slug": "need-for-speedtm-the-run",
+    "arch": "X64",
+    "status": "working",
+    "id": "need-for-speedtm-the-run"
+  },
+  {
+    "name": "Need for Speed™ Most Wanted (2012)",
+    "slug": "need-for-speedtm-most-wanted-2012",
+    "arch": "X64",
+    "status": "working",
+    "id": "need-for-speedtm-most-wanted-2012"
+  },
+  {
     "name": "Need for Speed™ (2016)",
     "slug": "nfs16",
     "arch": "X64",
@@ -2817,6 +2840,26 @@
     "section": "ue-extended"
   },
   {
+    "name": "The Forgotten City",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-forgotten-city",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "source_key": "ue-extended:the-forgotten-city",
+    "section": "ue-extended"
+  },
+  {
+    "name": "THRESHOLD",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "threshold",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "source_key": "ue-extended:threshold",
+    "section": "ue-extended"
+  },
+  {
     "name": "Tokyo Xtreme Racer",
     "slug": "ue-extended",
     "arch": "X64",
@@ -3374,16 +3417,6 @@
     "id": "forgive-me-father",
     "notes": "Some text turns into blocks. `B8G8R8A8_TYPELESS` `Output Size`",
     "source_key": "unreal:forgive-me-father",
-    "section": "unreal"
-  },
-  {
-    "name": "The Forgotten City",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "the-forgotten-city",
-    "notes": "`B8G8R8A8_TYPELESS` `Output Size`",
-    "source_key": "unreal:the-forgotten-city",
     "section": "unreal"
   },
   {
@@ -4193,16 +4226,6 @@
     "section": "unreal"
   },
   {
-    "name": "THRESHOLD",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "threshold",
-    "notes": "`B8G8R8A8_TYPELESS` `Any Size`",
-    "source_key": "unreal:threshold",
-    "section": "unreal"
-  },
-  {
     "name": "Thymesia",
     "slug": "unrealengine",
     "arch": "X64",
@@ -4382,6 +4405,16 @@
     "arch": "X64",
     "status": "working",
     "id": "a-difficult-game-about-climbing",
+    "section": "unity"
+  },
+  {
+    "name": "A Short Hike",
+    "slug": "unityengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "a-short-hike",
+    "notes": "32-bit. Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`.",
+    "source_key": "unity:a-short-hike",
     "section": "unity"
   },
   {
@@ -4850,7 +4883,7 @@
     "arch": "X64",
     "status": "working",
     "id": "besiege",
-    "notes": "Enable Swapchain Proxy. Swapchain Encoding: Gamma",
+    "notes": "Enable Swapchain Proxy, Swapchain Encoding: Gamma.",
     "source_key": "unity:besiege",
     "section": "unity"
   },
@@ -5102,6 +5135,14 @@
     "arch": "X64",
     "status": "working",
     "id": "cocoon",
+    "section": "unity"
+  },
+  {
+    "name": "Constance",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "constance",
     "section": "unity"
   },
   {
@@ -5415,6 +5456,16 @@
     "section": "unity"
   },
   {
+    "name": "DUSK",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "dusk",
+    "notes": "Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`.",
+    "source_key": "unity:dusk",
+    "section": "unity"
+  },
+  {
     "name": "Dustborn",
     "slug": "unityengine",
     "arch": "X64",
@@ -5679,6 +5730,14 @@
     "section": "unity"
   },
   {
+    "name": "Fear the Spotlight",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "fear-the-spotlight",
+    "section": "unity"
+  },
+  {
     "name": "Feed the Deep",
     "slug": "unityengine",
     "arch": "X64",
@@ -5781,6 +5840,16 @@
     "section": "unity"
   },
   {
+    "name": "Furi",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "furi",
+    "notes": "Swapchain Encoding: Gamma",
+    "source_key": "unity:furi",
+    "section": "unity"
+  },
+  {
     "name": "Gamble With Your Friends",
     "slug": "unityengine",
     "arch": "X64",
@@ -5858,6 +5927,14 @@
     "arch": "X64",
     "status": "working",
     "id": "golf-with-your-friends",
+    "section": "unity"
+  },
+  {
+    "name": "Graveyard Keeper",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "graveyard-keeper",
     "section": "unity"
   },
   {
@@ -6110,6 +6187,16 @@
     "arch": "X64",
     "status": "working",
     "id": "inertial-drift",
+    "section": "unity"
+  },
+  {
+    "name": "Inscryption",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "inscryption",
+    "notes": "Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`.",
+    "source_key": "unity:inscryption",
     "section": "unity"
   },
   {
@@ -7421,6 +7508,14 @@
     "section": "unity"
   },
   {
+    "name": "Slime Rancher",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "slime-rancher",
+    "section": "unity"
+  },
+  {
     "name": "Snake Force",
     "slug": "unityengine",
     "arch": "X64",
@@ -7719,6 +7814,14 @@
     "section": "unity"
   },
   {
+    "name": "Tabletop Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "tabletop-simulator",
+    "section": "unity"
+  },
+  {
     "name": "Tainted Grail: Conquest",
     "slug": "unityengine",
     "arch": "X64",
@@ -7909,6 +8012,42 @@
     "section": "unity"
   },
   {
+    "name": "The Room Two",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "the-room-two",
+    "notes": "Swapchain Encoding: Gamma. Some rooms appear to be clamped.",
+    "source_key": "unity:the-room-two",
+    "section": "unity"
+  },
+  {
+    "name": "The Room Three",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-room-three",
+    "notes": "Swapchain Encoding: Gamma. Some rooms appear to be clamped.",
+    "source_key": "unity:the-room-three",
+    "section": "unity"
+  },
+  {
+    "name": "The Room 4: Old Sins",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-room-4-old-sins",
+    "section": "unity"
+  },
+  {
+    "name": "The Séance of Blake Manor",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-seance-of-blake-manor",
+    "section": "unity"
+  },
+  {
     "name": "The Universim",
     "slug": "unityengine",
     "arch": "X64",
@@ -7924,6 +8063,16 @@
     "id": "the-upturned",
     "notes": "Upgrade R11G11B10_FLOAT. Compatibility Scaling offset +1",
     "source_key": "unity:the-upturned",
+    "section": "unity"
+  },
+  {
+    "name": "The Wandering Village",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "the-wandering-village",
+    "notes": "Enable Swapchain Proxy. Not very bright.",
+    "source_key": "unity:the-wandering-village",
     "section": "unity"
   },
   {
@@ -8321,6 +8470,16 @@
     "section": "unity"
   },
   {
+    "name": "WorldBox - God Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "worldbox-god-simulator",
+    "notes": "Swapchain Encoding: Gamma.",
+    "source_key": "unity:worldbox-god-simulator",
+    "section": "unity"
+  },
+  {
     "name": "XF Extreme Formula",
     "slug": "unityengine",
     "arch": "X64",
@@ -8337,5 +8496,122 @@
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:yooka-replaylee",
     "section": "unity"
+  },
+  {
+    "name": "Black Mesa",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "construction",
+    "id": "black-mesa",
+    "notes": "32-bit",
+    "source_key": "main:black-mesa"
+  },
+  {
+    "name": "Counter Strike: Source",
+    "slug": "sourceengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "counter-strike-source",
+    "notes": "64-bit. Some of the maps are LDR, so you won't see many highlights on them.",
+    "source_key": "main:counter-strike-source"
+  },
+  {
+    "name": "Day of Defeat: Source",
+    "slug": "sourceengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "day-of-defeat-source",
+    "notes": "64-bit",
+    "source_key": "main:day-of-defeat-source"
+  },
+  {
+    "name": "Entropy: Zero",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "entropy-zero",
+    "notes": "32-bit",
+    "source_key": "main:entropy-zero"
+  },
+  {
+    "name": "Entropy: Zero 2",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "entropy-zero-2",
+    "notes": "32-bit",
+    "source_key": "main:entropy-zero-2"
+  },
+  {
+    "name": "Garry's Mod",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "garry-s-mod",
+    "notes": "Both 32 AND 64-bit. <details><summary> Installation instructions</summary> Install x32 version as usual, install Reshade for `gmod.exe` to get 32-bit Reshade and move it to `/bin`. Then install Reshade again for `gmod_win64.exe` to get 64-bit Reshade and move it to `/bin/win64` folder. Install DXVK proxy in both folders (`dxgi_dxvk.dll` and `reshade.ini`). A single `dxvk.conf` should be in the root folder, x32 bit installation in `/bin` and x64 installation in `/bin/win64`.</details>",
+    "source_key": "main:garry-s-mod"
+  },
+  {
+    "name": "Half Life 2",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "half-life-2",
+    "notes": "32-bit",
+    "source_key": "main:half-life-2"
+  },
+  {
+    "name": "Left 4 Dead",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "construction",
+    "id": "left-4-dead",
+    "notes": "32-bit. Visual glitches, LDR maps.",
+    "source_key": "main:left-4-dead"
+  },
+  {
+    "name": "Left 4 Dead 2",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "left-4-dead-2",
+    "notes": "32-bit",
+    "source_key": "main:left-4-dead-2"
+  },
+  {
+    "name": "No More Room in Hell",
+    "slug": "sourceengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "no-more-room-in-hell",
+    "notes": "64-bit",
+    "source_key": "main:no-more-room-in-hell"
+  },
+  {
+    "name": "Portal",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "portal",
+    "notes": "32-bit",
+    "source_key": "main:portal"
+  },
+  {
+    "name": "Portal 2",
+    "slug": "sourceengine",
+    "arch": "X86",
+    "status": "working",
+    "id": "portal-2",
+    "notes": "32-bit",
+    "source_key": "main:portal-2"
+  },
+  {
+    "name": "Team Fortress 2",
+    "slug": "sourceengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "team-fortress-2",
+    "notes": "64-bit",
+    "source_key": "main:team-fortress-2"
   }
 ]

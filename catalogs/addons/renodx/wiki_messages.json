@@ -144,6 +144,14 @@
     "note": "Check the mod's thread Notes."
   },
   {
+    "source_key": "main:need-for-speedtm-most-wanted-2005",
+    "game_id": "need-for-speedtm-most-wanted-2005",
+    "title": "Need for Speed™ Most Wanted (2005)",
+    "section": "main",
+    "profile_source": "nfsmw05",
+    "note": "Requires DXVK Reshade proxy! Please see instructions down in Source 1 section."
+  },
+  {
     "source_key": "main:ninja-gaiden-4",
     "game_id": "ninja-gaiden-4",
     "title": "Ninja Gaiden 4",
@@ -870,6 +878,22 @@
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Engine.ini"
+  },
+  {
+    "source_key": "ue-extended:the-forgotten-city",
+    "game_id": "the-forgotten-city",
+    "title": "The Forgotten City",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+  },
+  {
+    "source_key": "ue-extended:threshold",
+    "game_id": "threshold",
+    "title": "THRESHOLD",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:tokyo-xtreme-racer",
@@ -2152,6 +2176,14 @@
     "note": "If using basic upscaler (Dynamic Resolution or Scale), Enable Swapchain Proxy."
   },
   {
+    "source_key": "unity:a-short-hike",
+    "game_id": "a-short-hike",
+    "title": "A Short Hike",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "32-bit. Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`."
+  },
+  {
     "source_key": "unity:aer-memories-of-old",
     "game_id": "aer-memories-of-old",
     "title": "AER Memories of Old",
@@ -2397,7 +2429,7 @@
     "title": "Besiege",
     "section": "unity",
     "profile_source": "unityengine",
-    "note": "Enable Swapchain Proxy. Swapchain Encoding: Gamma"
+    "note": "Enable Swapchain Proxy, Swapchain Encoding: Gamma."
   },
   {
     "source_key": "unity:beyond-galaxyland",
@@ -2688,6 +2720,14 @@
     "note": "Change game's Brightness (Gamma) setting to refresh LUT"
   },
   {
+    "source_key": "unity:dusk",
+    "game_id": "dusk",
+    "title": "DUSK",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`."
+  },
+  {
     "source_key": "unity:dystopika",
     "game_id": "dystopika",
     "title": "Dystopika",
@@ -2904,6 +2944,14 @@
     "note": "Upgrade R10G10B10A2_TYPELESS"
   },
   {
+    "source_key": "unity:furi",
+    "game_id": "furi",
+    "title": "Furi",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma"
+  },
+  {
     "source_key": "unity:gamble-with-your-friends",
     "game_id": "gamble-with-your-friends",
     "title": "Gamble With Your Friends",
@@ -3054,6 +3102,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Enable Swapchain Proxy"
+  },
+  {
+    "source_key": "unity:inscryption",
+    "game_id": "inscryption",
+    "title": "Inscryption",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`."
   },
   {
     "source_key": "unity:in-sound-mind",
@@ -3880,12 +3936,36 @@
     "note": "Upgrade R11G11B10_FLOAT"
   },
   {
+    "source_key": "unity:the-room-two",
+    "game_id": "the-room-two",
+    "title": "The Room Two",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Some rooms appear to be clamped."
+  },
+  {
+    "source_key": "unity:the-room-three",
+    "game_id": "the-room-three",
+    "title": "The Room Three",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Some rooms appear to be clamped."
+  },
+  {
     "source_key": "unity:the-upturned",
     "game_id": "the-upturned",
     "title": "The Upturned",
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT. Compatibility Scaling offset +1"
+  },
+  {
+    "source_key": "unity:the-wandering-village",
+    "game_id": "the-wandering-village",
+    "title": "The Wandering Village",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Enable Swapchain Proxy. Not very bright."
   },
   {
     "source_key": "unity:tin-can",
@@ -4088,11 +4168,123 @@
     "note": "Enable Swapchain Proxy. Recommend raising highlights quite a bit as highlights are quite dim otherwise."
   },
   {
+    "source_key": "unity:worldbox-god-simulator",
+    "game_id": "worldbox-god-simulator",
+    "title": "WorldBox - God Simulator",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma."
+  },
+  {
     "source_key": "unity:yooka-replaylee",
     "game_id": "yooka-replaylee",
     "title": "Yooka-Replaylee",
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT"
+  },
+  {
+    "source_key": "main:black-mesa",
+    "game_id": "black-mesa",
+    "title": "Black Mesa",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:counter-strike-source",
+    "game_id": "counter-strike-source",
+    "title": "Counter Strike: Source",
+    "section": "main",
+    "profile_source": "game",
+    "note": "64-bit. Some of the maps are LDR, so you won't see many highlights on them."
+  },
+  {
+    "source_key": "main:day-of-defeat-source",
+    "game_id": "day-of-defeat-source",
+    "title": "Day of Defeat: Source",
+    "section": "main",
+    "profile_source": "game",
+    "note": "64-bit"
+  },
+  {
+    "source_key": "main:entropy-zero",
+    "game_id": "entropy-zero",
+    "title": "Entropy: Zero",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:entropy-zero-2",
+    "game_id": "entropy-zero-2",
+    "title": "Entropy: Zero 2",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:garry-s-mod",
+    "game_id": "garry-s-mod",
+    "title": "Garry's Mod",
+    "section": "main",
+    "profile_source": "game",
+    "note": "Both 32 AND 64-bit. <details><summary> Installation instructions</summary> Install x32 version as usual, install Reshade for `gmod.exe` to get 32-bit Reshade and move it to `/bin`. Then install Reshade again for `gmod_win64.exe` to get 64-bit Reshade and move it to `/bin/win64` folder. Install DXVK proxy in both folders (`dxgi_dxvk.dll` and `reshade.ini`). A single `dxvk.conf` should be in the root folder, x32 bit installation in `/bin` and x64 installation in `/bin/win64`.</details>"
+  },
+  {
+    "source_key": "main:half-life-2",
+    "game_id": "half-life-2",
+    "title": "Half Life 2",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:left-4-dead",
+    "game_id": "left-4-dead",
+    "title": "Left 4 Dead",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit. Visual glitches, LDR maps."
+  },
+  {
+    "source_key": "main:left-4-dead-2",
+    "game_id": "left-4-dead-2",
+    "title": "Left 4 Dead 2",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:no-more-room-in-hell",
+    "game_id": "no-more-room-in-hell",
+    "title": "No More Room in Hell",
+    "section": "main",
+    "profile_source": "game",
+    "note": "64-bit"
+  },
+  {
+    "source_key": "main:portal",
+    "game_id": "portal",
+    "title": "Portal",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:portal-2",
+    "game_id": "portal-2",
+    "title": "Portal 2",
+    "section": "main",
+    "profile_source": "game",
+    "note": "32-bit"
+  },
+  {
+    "source_key": "main:team-fortress-2",
+    "game_id": "team-fortress-2",
+    "title": "Team Fortress 2",
+    "section": "main",
+    "profile_source": "game",
+    "note": "64-bit"
   }
 ]

@@ -32,6 +32,9 @@
     },
     "game_target_ids": ["a-plague-tale-requiem"]
   },
+  "a-short-hike": {
+    "game_target_ids": ["a-short-hike"]
+  },
   "a-way-out": {
     "game_target_ids": ["a-way-out"]
   },
@@ -407,6 +410,11 @@
   "black-desert": {
     "game_target_ids": ["black-desert-online"]
   },
+  "black-mesa": {
+    "game_target_ids": ["black-mesa"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+  },
   "black-myth-wukong": {
     "game_target_ids": ["black-myth-wukong"]
   },
@@ -593,6 +601,9 @@
   "conan-exiles-enhanced": {
     "game_target_ids": ["conan-exiles-enhanced"]
   },
+  "constance": {
+    "game_target_ids": ["constance"]
+  },
   "content-warning": {
     "game_target_ids": ["content-warning"]
   },
@@ -610,6 +621,11 @@
   },
   "coridden": {
     "game_target_ids": ["coridden"]
+  },
+  "counter-strike-source": {
+    "game_target_ids": ["counter-strike-source"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
   },
   "crab-champions": {
     "game_target_ids": ["crab-champions"]
@@ -682,6 +698,11 @@
   },
   "dave-the-diver": {
     "game_target_ids": ["dave-the-diver"]
+  },
+  "day-of-defeat-source": {
+    "game_target_ids": ["day-of-defeat-source"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
   },
   "daymare-1994-sandcastle": {
     "game_target_ids": ["daymare-1994-sandcastle"]
@@ -853,6 +874,9 @@
   "dungeons-4": {
     "game_target_ids": ["dungeons-4"]
   },
+  "dusk": {
+    "game_target_ids": ["dusk"]
+  },
   "dustborn": {
     "game_target_ids": ["dustborn"]
   },
@@ -925,6 +949,16 @@
   },
   "enter-the-gungeon": {
     "game_target_ids": ["enter-the-gungeon"]
+  },
+  "entropy-zero": {
+    "game_target_ids": ["entropy-zero"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+  },
+  "entropy-zero-2": {
+    "game_target_ids": ["entropy-zero-2"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
   },
   "epistory-typing-chronicles": {
     "game_target_ids": ["epistory-typing-chronicles"]
@@ -1022,6 +1056,9 @@
   "fe": {
     "game_target_ids": ["fe"]
   },
+  "fear-the-spotlight": {
+    "game_target_ids": ["fear-the-spotlight"]
+  },
   "feed-the-deep": {
     "game_target_ids": ["feed-the-deep"]
   },
@@ -1089,11 +1126,19 @@
   "fumes": {
     "game_target_ids": ["fumes"]
   },
+  "furi": {
+    "game_target_ids": ["furi"]
+  },
   "gamble-with-your-friends": {
     "game_target_ids": ["gamble-with-your-friends"]
   },
   "gang-beasts": {
     "game_target_ids": ["gang-beasts"]
+  },
+  "garry-s-mod": {
+    "game_target_ids": ["garry-s-mod"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
   },
   "gatekeeper": {
     "game_target_ids": ["gatekeeper"]
@@ -1170,6 +1215,9 @@
   "grand-theft-auto-v-enhanced": {
     "game_target_ids": ["grand-theft-auto-v-enhanced"]
   },
+  "graveyard-keeper": {
+    "game_target_ids": ["graveyard-keeper"]
+  },
   "great-god-grove": {
     "game_target_ids": ["great-god-grove"]
   },
@@ -1210,6 +1258,11 @@
   },
   "hades-ii": {
     "game_target_ids": ["hades-2"]
+  },
+  "half-life-2": {
+    "game_target_ids": ["half-life-2"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
   },
   "half-sword": {
     "game_target_ids": ["half-sword"]
@@ -1357,6 +1410,9 @@
   "infinity-nikki": {
     "game_target_ids": ["infinity-nikki"]
   },
+  "inscryption": {
+    "game_target_ids": ["inscryption"]
+  },
   "inzoi": {
     "game_target_ids": ["inzoi"]
   },
@@ -1475,6 +1531,16 @@
   },
   "lay-of-the-land": {
     "game_target_ids": ["lay-of-the-land"]
+  },
+  "left-4-dead": {
+    "game_target_ids": ["left-4-dead"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+  },
+  "left-4-dead-2": {
+    "game_target_ids": ["left-4-dead-2"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
   },
   "lego-2k-drive": {
     "game_target_ids": ["lego-2k-drive"]
@@ -1763,6 +1829,24 @@
   "need-for-speed": {
     "game_target_ids": ["need-for-speed"]
   },
+  "need-for-speedtm-most-wanted-2005": {
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/nightly-20261008/renodx-nfsmw05.addon32",
+    "game_target_ids": ["need-for-speedtm-most-wanted-2005"]
+  },
+  "need-for-speedtm-most-wanted-2012": {
+    "external": {
+      "url": "https://www.nexusmods.com/needforspeedmostwanted2012/mods/90",
+      "label_key": "renodx.external.nexus"
+    },
+    "game_target_ids": ["need-for-speedtm-most-wanted-2012"]
+  },
+  "need-for-speedtm-the-run": {
+    "external": {
+      "url": "https://www.nexusmods.com/needforspeedtherun/mods/2",
+      "label_key": "renodx.external.nexus"
+    },
+    "game_target_ids": ["need-for-speedtm-the-run"]
+  },
   "neon-abyss": {
     "game_target_ids": ["neon-abyss"]
   },
@@ -1821,6 +1905,11 @@
       "label_key": "renodx.external.nexus"
     },
     "game_target_ids": ["no-mans-sky"]
+  },
+  "no-more-room-in-hell": {
+    "game_target_ids": ["no-more-room-in-hell"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
   },
   "no-rest-for-the-wicked": {
     "game_target_ids": ["no-rest-for-the-wicked"]
@@ -1999,6 +2088,16 @@
   },
   "pools": {
     "game_target_ids": ["pools"]
+  },
+  "portal": {
+    "game_target_ids": ["portal"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
+  },
+  "portal-2": {
+    "game_target_ids": ["portal-2"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon32"
   },
   "postal-brain-damaged": {
     "game_target_ids": ["postal-brain-damaged"]
@@ -2292,6 +2391,9 @@
   "sledders": {
     "game_target_ids": ["sledders"]
   },
+  "slime-rancher": {
+    "game_target_ids": ["slime-rancher"]
+  },
   "sn-ultimate-freeriding": {
     "game_target_ids": ["sn-ultimate-freeriding"]
   },
@@ -2501,6 +2603,9 @@
   "system-shock-remake": {
     "game_target_ids": ["system-shock-remake"]
   },
+  "tabletop-simulator": {
+    "game_target_ids": ["tabletop-simulator"]
+  },
   "tactical-breach-wizards": {
     "game_target_ids": ["tactical-breach-wizards"]
   },
@@ -2527,6 +2632,11 @@
   },
   "tales-of-xillia-remastered": {
     "game_target_ids": ["tales-of-xillia-remastered"]
+  },
+  "team-fortress-2": {
+    "game_target_ids": ["team-fortress-2"],
+    "slug": "sourceengine",
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-sourceengine.addon64"
   },
   "teardown": {
     "download_url": "https://notvoosh.github.io/renodx/renodx-teardown.addon64",
@@ -2742,6 +2852,18 @@
   "the-rogue-prince-of-persia": {
     "game_target_ids": ["the-rogue-prince-of-persia"]
   },
+  "the-room-4-old-sins": {
+    "game_target_ids": ["the-room-4-old-sins"]
+  },
+  "the-room-three": {
+    "game_target_ids": ["the-room-three"]
+  },
+  "the-room-two": {
+    "game_target_ids": ["the-room-two"]
+  },
+  "the-seance-of-blake-manor": {
+    "game_target_ids": ["the-seance-of-blake-manor"]
+  },
   "the-smurfs-dreams": {
     "game_target_ids": ["the-smurfs-dreams"]
   },
@@ -2762,6 +2884,9 @@
   },
   "the-upturned": {
     "game_target_ids": ["the-upturned"]
+  },
+  "the-wandering-village": {
+    "game_target_ids": ["the-wandering-village"]
   },
   "the-witcher-3-wild-hunt-next-gen": {
     "game_target_ids": ["the-witcher-3"]
@@ -3026,6 +3151,9 @@
   "wo-long-fallen-dynasty": {
     "download_url": "https://akuru-q.github.io/renodx/renodx-wolong.addon64",
     "game_target_ids": ["wo-long-fallen-dynasty"]
+  },
+  "worldbox-god-simulator": {
+    "game_target_ids": ["worldbox-god-simulator"]
   },
   "wuchang-fallen-feathers": {
     "game_target_ids": ["wuchang-fallen-feathers"]
