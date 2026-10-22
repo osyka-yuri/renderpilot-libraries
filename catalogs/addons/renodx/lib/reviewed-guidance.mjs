@@ -1508,7 +1508,7 @@ omit(
   "The 32-bit requirement is represented by the manifest architecture.",
 );
 assign(
-  keyList("unity", "aeterna-noctis"),
+  keyList("unity", "aeterna-noctis core-keeper"),
   [
     addonSetting(
       "R8G8B8A8_TYPELESS",
@@ -2131,6 +2131,13 @@ assign(keyList("unity", "prince-of-persia-the-lost-crown"), [
 assign(
   keyList("unity", "ruined-king-a-league-of-legends-storytm"),
   [info("The pause-menu background is broken.")],
+  {
+    inheritCommon: true,
+  },
+);
+assign(
+  keyList("unity", "silver-pines"),
+  [info("On first launch, the main menu may flicker before a save file is created.")],
   {
     inheritCommon: true,
   },

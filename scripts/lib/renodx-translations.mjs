@@ -317,6 +317,8 @@ export const RUSSIAN_TRANSLATIONS = Object.freeze({
     "На некоторых моделях возможны визуальные артефакты, а карты, использующие только LDR, могут выглядеть пересвеченными.",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot автоматически устанавливает только 32-битный аддон. Для ветки x86-64 необходимо вручную установить renodx-sourceengine.addon64 и прокси-DLL DXVK.",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "При первом запуске главное меню может мерцать до создания файла сохранения.",
 });
 
 export const GERMAN_TRANSLATIONS = Object.freeze({
@@ -634,6 +636,8 @@ export const GERMAN_TRANSLATIONS = Object.freeze({
     "Einige Modelle weisen visuelle Fehler auf, und Karten, die nur LDR verwenden, können überbelichtet wirken.",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot installiert automatisch nur das 32-Bit-Add-on. Der x86-64-Zweig erfordert die manuelle Installation von renodx-sourceengine.addon64 und einer DXVK-Proxy-DLL.",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "Beim ersten Start kann das Hauptmenü flackern, bevor eine Speicherdatei erstellt wird.",
 });
 
 export const FRENCH_TRANSLATIONS = Object.freeze({
@@ -949,6 +953,8 @@ export const FRENCH_TRANSLATIONS = Object.freeze({
     "Certains modèles présentent des bugs visuels et les cartes utilisant uniquement le LDR peuvent sembler surexposées.",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot installe automatiquement uniquement l'extension 32 bits. La branche x86-64 nécessite l'installation manuelle de renodx-sourceengine.addon64 et d'une DLL proxy DXVK.",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "Au premier lancement, le menu principal peut scintiller avant la création d'un fichier de sauvegarde.",
 });
 
 export const SPANISH_TRANSLATIONS = Object.freeze({
@@ -1267,6 +1273,8 @@ export const SPANISH_TRANSLATIONS = Object.freeze({
     "Algunos modelos presentan fallos visuales y los mapas que solo usan LDR pueden verse sobreexpuestos.",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot solo instala automáticamente el complemento de 32 bits. La rama x86-64 requiere la instalación manual de renodx-sourceengine.addon64 y una DLL proxy de DXVK.",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "Al iniciar el juego por primera vez, el menú principal puede parpadear antes de que se cree un archivo de guardado.",
 });
 
 export const JAPANESE_TRANSLATIONS = Object.freeze({
@@ -1587,6 +1595,8 @@ export const JAPANESE_TRANSLATIONS = Object.freeze({
     "一部のモデルに視覚的な不具合があり、LDRのみを使用するマップは露出オーバーに見える場合があります。",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot が自動インストールするのは 32 ビット版アドオンのみです。x86-64 ブランチでは renodx-sourceengine.addon64 と DXVK プロキシ DLL の手動インストールが必要です。",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "初回起動時、セーブファイル作成前にメインメニューがちらつく場合があります。",
 });
 
 export const BRAZILIAN_PORTUGUESE_TRANSLATIONS = Object.freeze({
@@ -1904,6 +1914,8 @@ export const BRAZILIAN_PORTUGUESE_TRANSLATIONS = Object.freeze({
     "Alguns modelos apresentam falhas visuais e mapas que usam apenas LDR podem parecer superexpostos.",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "O RenderPilot instala automaticamente apenas o complemento de 32 bits. A ramificação x86-64 requer a instalação manual do renodx-sourceengine.addon64 e de uma DLL proxy do DXVK.",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "Na primeira inicialização, o menu principal pode piscar antes da criação de um arquivo de salvamento.",
 });
 
 export const SIMPLIFIED_CHINESE_TRANSLATIONS = Object.freeze({
@@ -2189,6 +2201,8 @@ export const SIMPLIFIED_CHINESE_TRANSLATIONS = Object.freeze({
     "部分模型存在画面瑕疵，且仅使用 LDR 的地图可能会显得过曝。",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot 仅会自动安装 32 位插件。x86-64 分支需要手动安装 renodx-sourceengine.addon64 和 DXVK 代理 DLL。",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "首次启动时，创建存档前主菜单可能会闪烁。",
 });
 
 export const TRADITIONAL_CHINESE_TRANSLATIONS = Object.freeze({
@@ -2474,4 +2488,6 @@ export const TRADITIONAL_CHINESE_TRANSLATIONS = Object.freeze({
     "部分模型存在畫面瑕疵，且僅使用 LDR 的地圖可能會顯得過曝。",
   "RenderPilot only installs the 32-bit add-on automatically. The x86-64 branch requires manual installation of renodx-sourceengine.addon64 and a DXVK proxy DLL.":
     "RenderPilot 僅會自動安裝 32 位元外掛程式。x86-64 分支需要手動安裝 renodx-sourceengine.addon64 和 DXVK 代理 DLL。",
+  "On first launch, the main menu may flicker before a save file is created.":
+    "首次啟動時，建立存檔前主選單可能會閃爍。",
 });

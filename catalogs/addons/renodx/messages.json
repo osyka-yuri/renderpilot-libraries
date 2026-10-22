@@ -2066,6 +2066,22 @@
       }
     },
     {
+      "id": "renodx.unity.silver.pines.1",
+      "fallback_text": "On first launch, the main menu may flicker before a save file is created.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Beim ersten Start kann das Hauptmenü flackern, bevor eine Speicherdatei erstellt wird.",
+        "es": "Al iniciar el juego por primera vez, el menú principal puede parpadear antes de que se cree un archivo de guardado.",
+        "fr": "Au premier lancement, le menu principal peut scintiller avant la création d'un fichier de sauvegarde.",
+        "ja": "初回起動時、セーブファイル作成前にメインメニューがちらつく場合があります。",
+        "pt-BR": "Na primeira inicialização, o menu principal pode piscar antes da criação de um arquivo de salvamento.",
+        "ru": "При первом запуске главное меню может мерцать до создания файла сохранения.",
+        "zh-Hans": "首次启动时，创建存档前主菜单可能会闪烁。",
+        "zh-Hant": "首次啟動時，建立存檔前主選單可能會閃爍。"
+      }
+    },
+    {
       "id": "renodx.unity.skate.story.2",
       "fallback_text": "Disable the game's native HDR.",
       "kind": "game_setting",

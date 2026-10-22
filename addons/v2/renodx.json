@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-20T00:00:00Z",
+  "generated_at": "2026-10-22T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -17357,6 +17357,14 @@
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
         }
       ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Upgrade_R8G8B8A8_TYPELESS",
+            "value": 2
+          }
+        ]
+      },
       "profile_id": "unity"
     },
     {
@@ -26346,6 +26354,12 @@
           "kind": "compatibility",
           "message_id": "renodx.unity.windowed",
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.silver.pines.1",
+          "message_id": "renodx.unity.silver.pines.1",
+          "kind": "compatibility",
+          "fallback_text": "On first launch, the main menu may flicker before a save file is created."
         }
       ],
       "profile_id": "unity"

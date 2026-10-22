@@ -2576,6 +2576,14 @@
     "note": "Upgrade R10G10B10A2_TYPELESS"
   },
   {
+    "source_key": "unity:core-keeper",
+    "game_id": "core-keeper",
+    "title": "Core Keeper",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Upgrade `R8G8B8A8_TYPELESS` to `Output Ratio` or `Any Size`"
+  },
+  {
     "source_key": "unity:coridden",
     "game_id": "coridden",
     "title": "Coridden",
@@ -3710,6 +3718,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT. Open game graphic settings and hit Apply to refresh Tonemap/Color grading."
+  },
+  {
+    "source_key": "unity:silver-pines",
+    "game_id": "silver-pines",
+    "title": "Silver Pines",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Flickering warning in addon, only in title menu on very first launch when no save file is created yet"
   },
   {
     "source_key": "unity:spellforce-conquest-of-eo",
