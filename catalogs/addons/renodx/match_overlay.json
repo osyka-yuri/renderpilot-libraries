@@ -292,6 +292,13 @@
   "au-revoir": {
     "game_target_ids": ["au-revoir"]
   },
+  "automobilista-2": {
+    "external": {
+      "url": "https://www.nexusmods.com/automobilista2/mods/3",
+      "label_key": "renodx.external.nexus"
+    },
+    "game_target_ids": ["automobilista-2"]
+  },
   "autonauts": {
     "game_target_ids": ["autonauts"]
   },

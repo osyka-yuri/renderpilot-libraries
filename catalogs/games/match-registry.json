@@ -2017,6 +2017,20 @@
       ]
     },
     {
+      "id": "automobilista-2",
+      "rules": [
+        {
+          "id": "steam-1066890",
+          "kind": "steam_appid",
+          "value": "1066890",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:automobilista-2"
+          }
+        }
+      ]
+    },
+    {
       "id": "autonauts",
       "rules": [
         {

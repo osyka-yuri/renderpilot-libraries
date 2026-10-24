@@ -15,8 +15,8 @@ import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.m
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
 const EXPECTED_PUBLISHED_ENTRY_COUNT = 693;
 const CURRENT_WIKI_SNAPSHOT = {
-  revision: "2026-10-20",
-  sha256: "8177c704ff6f090e52bfe865877e2ba0daab14f945d5c8c0edacac245b9d75d1",
+  revision: "2026-10-23",
+  sha256: "019e8304bb84413599a29f5b33b13499883d0d776343b98445cf56dd376a99c7",
   rows: 713,
 };
 const SHIFTED_MAIN_SOURCE_KEYS = Array.from(

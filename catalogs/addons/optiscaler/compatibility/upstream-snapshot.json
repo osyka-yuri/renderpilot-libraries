@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "source": "optiscaler-wiki-compatibility-list",
-  "snapshot_revision": "2026-10-20",
-  "snapshot_sha256": "8177c704ff6f090e52bfe865877e2ba0daab14f945d5c8c0edacac245b9d75d1",
+  "snapshot_revision": "2026-10-23",
+  "snapshot_sha256": "019e8304bb84413599a29f5b33b13499883d0d776343b98445cf56dd376a99c7",
   "rows": [
     {
       "source_key": "main:0001",

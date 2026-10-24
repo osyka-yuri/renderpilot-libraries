@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-22T00:00:00Z",
+  "generated_at": "2026-10-24T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -821,6 +821,30 @@
           "fallback_text": "FSR 2 can cause crashes with this mod."
         }
       ]
+    },
+    {
+      "id": "automobilista-2",
+      "name": "Automobilista 2",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1066890",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "automobilista-2"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/automobilista2/mods/3",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
     },
     {
       "id": "avatar-frontiers-of-pandora",

@@ -267,6 +267,13 @@
     "source_key": "main:atlas-fallen-reign-of-sand-dx12"
   },
   {
+    "name": "Automobilista 2",
+    "slug": "automobilista-2",
+    "arch": "X64",
+    "status": "construction",
+    "id": "automobilista-2"
+  },
+  {
     "name": "Avatar: Frontiers of Pandora™",
     "slug": "avatarfop-swoutlaws",
     "arch": "X64",
