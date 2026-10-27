@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "revision": "2026-10-23.1",
+  "revision": "2026-10-26.1",
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
-    "snapshot_revision": "2026-10-23",
-    "snapshot_sha256": "019e8304bb84413599a29f5b33b13499883d0d776343b98445cf56dd376a99c7"
+    "snapshot_revision": "2026-10-26",
+    "snapshot_sha256": "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d"
   },
   "entries": [
     {
@@ -3756,7 +3756,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -3775,7 +3775,15 @@
         }
       ],
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-death-stranding-directors-cut-xess-input",
+            "fallback_text": "Prefer XeSS input, as DLSS input may cause image shimmering or crashes."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -5719,7 +5727,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -6388,7 +6396,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -7569,7 +7577,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -7615,7 +7623,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -9456,7 +9464,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -9483,7 +9491,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -9510,7 +9518,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -9583,7 +9591,7 @@
             "requirement": "required"
           },
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -11827,7 +11835,7 @@
           "value": "1895880"
         }
       ],
-      "declared_inputs": ["fsr2_plus", "xess"],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
       "variants": [
         {
@@ -11836,7 +11844,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -12502,6 +12510,29 @@
           "ini_overrides": [],
           "restricted_modules": [],
           "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "rivage",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "4094660"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -15615,7 +15646,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]

@@ -802,6 +802,22 @@
       }
     },
     {
+      "id": "optiscaler-death-stranding-directors-cut-xess-input",
+      "fallback_text": "Prefer XeSS input, as DLSS input may cause image shimmering or crashes.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Verwenden Sie XeSS statt DLSS als Eingabe, da DLSS Bildflimmern oder Spielabstürze verursachen kann.",
+        "es": "Se recomienda utilizar XeSS en lugar de DLSS como entrada, ya que DLSS puede provocar parpadeos en la imagen o cierres inesperados del juego.",
+        "fr": "Privilégiez l’entrée XeSS, car l’entrée DLSS peut provoquer des scintillements de l’image ou des plantages du jeu.",
+        "ja": "DLSS 入力では画面のちらつきやゲームのクラッシュが発生する可能性があるため、XeSS 入力の使用を推奨します。",
+        "pt-BR": "Prefira a entrada XeSS, pois a entrada DLSS pode causar cintilação na imagem ou encerramentos inesperados do jogo.",
+        "ru": "Рекомендуется использовать режим XeSS, поскольку DLSS может вызывать мерцание изображения или вылеты игры.",
+        "zh-Hans": "建议优先使用 XeSS 输入，因为 DLSS 输入可能导致画面闪烁或游戏崩溃。",
+        "zh-Hant": "建議優先使用 XeSS 輸入，因為 DLSS 輸入可能導致畫面閃爍或遊戲當機。"
+      }
+    },
+    {
       "id": "optiscaler-deconstruction-simulator-fsr4-color-space",
       "fallback_text": "When using FSR 4, select the Non-Linear sRGB input color space to fix flashing graphics.",
       "guidance_kind": "game_setting",

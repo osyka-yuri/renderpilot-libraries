@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-10-23.1",
+  "revision": "2026-10-26.1",
   "messages": [
     {
       "id": "optiscaler-1666-amsterdam-fsr4-color-space",
@@ -197,6 +197,12 @@
     {
       "id": "optiscaler-death-stranding-2-xess-input",
       "fallback_text": "Use XeSS input to avoid shimmer.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
+      "id": "optiscaler-death-stranding-directors-cut-xess-input",
+      "fallback_text": "Prefer XeSS input, as DLSS input may cause image shimmering or crashes.",
       "guidance_kind": "compatibility",
       "context": "compatibility"
     },

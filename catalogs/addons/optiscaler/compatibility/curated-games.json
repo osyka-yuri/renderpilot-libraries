@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "revision": "2026-10-23.1",
+  "revision": "2026-10-26.1",
   "source": "optiscaler-wiki-compatibility-list",
-  "snapshot_sha256": "019e8304bb84413599a29f5b33b13499883d0d776343b98445cf56dd376a99c7",
+  "snapshot_sha256": "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d",
   "entries": [
     {
       "id": "007-first-light",
@@ -2977,7 +2977,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -2988,7 +2988,12 @@
       "source_ref": "main:0144",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message_id": "optiscaler-death-stranding-directors-cut-xess-input"
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -4553,7 +4558,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -5084,7 +5089,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -5758,7 +5763,7 @@
     },
     {
       "id": "hellblade-ii-senuas-saga",
-      "source_ref": "main:0481",
+      "source_ref": "main:0482",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -6012,7 +6017,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -6050,7 +6055,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -6436,7 +6441,7 @@
     },
     {
       "id": "jedi-survivor",
-      "source_ref": "main:0520",
+      "source_ref": "main:0521",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -7515,7 +7520,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -7534,7 +7539,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -7553,7 +7558,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -7610,7 +7615,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none",
           "launch": {
             "arguments": ["-dx12"],
@@ -9391,7 +9396,7 @@
       "id": "ratchet-clank-rift-apart",
       "source_ref": "main:0441",
       "status": "working",
-      "declared_inputs": ["fsr2_plus", "xess"],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
       "variants": [
         {
@@ -9400,7 +9405,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -9893,8 +9898,27 @@
       "game_target_id": "rise-of-the-tomb-raider"
     },
     {
-      "id": "riven",
+      "id": "rivage",
       "source_ref": "main:0457",
+      "status": "working",
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
+          "prerequisite": "none"
+        }
+      ],
+      "game_target_id": "rivage"
+    },
+    {
+      "id": "riven",
+      "source_ref": "main:0458",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -9918,7 +9942,7 @@
     },
     {
       "id": "roadcraft",
-      "source_ref": "main:0458",
+      "source_ref": "main:0459",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -9937,7 +9961,7 @@
     },
     {
       "id": "robocop-rogue-city",
-      "source_ref": "main:0459",
+      "source_ref": "main:0460",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -9956,7 +9980,7 @@
     },
     {
       "id": "robocop-rogue-city-unfinished-business",
-      "source_ref": "main:0460",
+      "source_ref": "main:0461",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [
@@ -10004,7 +10028,7 @@
     },
     {
       "id": "robots-at-midnight",
-      "source_ref": "main:0461",
+      "source_ref": "main:0462",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10023,7 +10047,7 @@
     },
     {
       "id": "romancelvania",
-      "source_ref": "main:0462",
+      "source_ref": "main:0463",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10051,7 +10075,7 @@
     },
     {
       "id": "romeo-is-a-dead-man",
-      "source_ref": "main:0463",
+      "source_ref": "main:0464",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [
@@ -10075,7 +10099,7 @@
     },
     {
       "id": "routine",
-      "source_ref": "main:0465",
+      "source_ref": "main:0466",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10113,7 +10137,7 @@
     },
     {
       "id": "rune-factory-guardians-of-azuma",
-      "source_ref": "main:0466",
+      "source_ref": "main:0467",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10138,7 +10162,7 @@
     },
     {
       "id": "runescape-dragonwilds",
-      "source_ref": "main:0467",
+      "source_ref": "main:0468",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10157,7 +10181,7 @@
     },
     {
       "id": "rv-there-yet",
-      "source_ref": "main:0468",
+      "source_ref": "main:0469",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10176,7 +10200,7 @@
     },
     {
       "id": "s-t-a-l-k-e-r-2-heart-of-chornobyl",
-      "source_ref": "main:0516",
+      "source_ref": "main:0517",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -10195,7 +10219,7 @@
     },
     {
       "id": "sackboy-a-big-adventure",
-      "source_ref": "main:0470",
+      "source_ref": "main:0471",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10214,7 +10238,7 @@
     },
     {
       "id": "sagas-of-lumin",
-      "source_ref": "main:0471",
+      "source_ref": "main:0472",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10233,7 +10257,7 @@
     },
     {
       "id": "saints-row-2022",
-      "source_ref": "main:0472",
+      "source_ref": "main:0473",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [
@@ -10257,7 +10281,7 @@
     },
     {
       "id": "samson",
-      "source_ref": "main:0473",
+      "source_ref": "main:0474",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10276,7 +10300,7 @@
     },
     {
       "id": "sands-of-aura",
-      "source_ref": "main:0474",
+      "source_ref": "main:0475",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10299,7 +10323,7 @@
     },
     {
       "id": "satisfactory",
-      "source_ref": "main:0475",
+      "source_ref": "main:0476",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -10318,7 +10342,7 @@
     },
     {
       "id": "scathe",
-      "source_ref": "main:0476",
+      "source_ref": "main:0477",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10346,7 +10370,7 @@
     },
     {
       "id": "scorn",
-      "source_ref": "main:0477",
+      "source_ref": "main:0478",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -10365,7 +10389,7 @@
     },
     {
       "id": "scp-secret-files",
-      "source_ref": "main:0478",
+      "source_ref": "main:0479",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10393,7 +10417,7 @@
     },
     {
       "id": "season-a-letter-to-the-future",
-      "source_ref": "main:0479",
+      "source_ref": "main:0480",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10440,7 +10464,7 @@
     },
     {
       "id": "sengoku-dynasty",
-      "source_ref": "main:0480",
+      "source_ref": "main:0481",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10459,7 +10483,7 @@
     },
     {
       "id": "severed-steel",
-      "source_ref": "main:0482",
+      "source_ref": "main:0483",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10478,7 +10502,7 @@
     },
     {
       "id": "shadow-of-the-tomb-raider",
-      "source_ref": "main:0483",
+      "source_ref": "main:0484",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
       "guidance": [],
@@ -10497,7 +10521,7 @@
     },
     {
       "id": "shadow-project-demo",
-      "source_ref": "main:0486",
+      "source_ref": "main:0487",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
       "guidance": [],
@@ -10516,7 +10540,7 @@
     },
     {
       "id": "shadow-warrior-3",
-      "source_ref": "main:0487",
+      "source_ref": "main:0488",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10544,7 +10568,7 @@
     },
     {
       "id": "shadows-of-doubt",
-      "source_ref": "main:0485",
+      "source_ref": "main:0486",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10563,7 +10587,7 @@
     },
     {
       "id": "shatterline",
-      "source_ref": "main:0488",
+      "source_ref": "main:0489",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10587,7 +10611,7 @@
     },
     {
       "id": "sherlock-holmes-the-awakened",
-      "source_ref": "main:0489",
+      "source_ref": "main:0490",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10606,7 +10630,7 @@
     },
     {
       "id": "shrot-demo",
-      "source_ref": "main:0490",
+      "source_ref": "main:0491",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10631,7 +10655,7 @@
     },
     {
       "id": "sifu",
-      "source_ref": "main:0491",
+      "source_ref": "main:0492",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10650,7 +10674,7 @@
     },
     {
       "id": "silent-hill-2-remake",
-      "source_ref": "main:0492",
+      "source_ref": "main:0493",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -10669,7 +10693,7 @@
     },
     {
       "id": "silent-hill-f",
-      "source_ref": "main:0493",
+      "source_ref": "main:0494",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10688,7 +10712,7 @@
     },
     {
       "id": "simulakros",
-      "source_ref": "main:0495",
+      "source_ref": "main:0496",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10707,7 +10731,7 @@
     },
     {
       "id": "slavicpunk-oldtimer",
-      "source_ref": "main:0496",
+      "source_ref": "main:0497",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10726,7 +10750,7 @@
     },
     {
       "id": "slender-the-arrival",
-      "source_ref": "main:0497",
+      "source_ref": "main:0498",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10745,7 +10769,7 @@
     },
     {
       "id": "smalland-survive-the-wilds",
-      "source_ref": "main:0498",
+      "source_ref": "main:0499",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10764,7 +10788,7 @@
     },
     {
       "id": "smile-protocol-demo",
-      "source_ref": "main:0500",
+      "source_ref": "main:0501",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10788,7 +10812,7 @@
     },
     {
       "id": "solasta-ii",
-      "source_ref": "main:0501",
+      "source_ref": "main:0502",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -10807,7 +10831,7 @@
     },
     {
       "id": "sons-of-the-forest",
-      "source_ref": "main:0502",
+      "source_ref": "main:0503",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -10831,7 +10855,7 @@
     },
     {
       "id": "soulmask",
-      "source_ref": "main:0503",
+      "source_ref": "main:0504",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10850,7 +10874,7 @@
     },
     {
       "id": "soulslinger-envoy-of-death",
-      "source_ref": "main:0504",
+      "source_ref": "main:0505",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -10874,7 +10898,7 @@
     },
     {
       "id": "soulstice",
-      "source_ref": "main:0505",
+      "source_ref": "main:0506",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10903,7 +10927,7 @@
     },
     {
       "id": "south-of-midnight",
-      "source_ref": "main:0506",
+      "source_ref": "main:0507",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -10922,7 +10946,7 @@
     },
     {
       "id": "space-engineers-2",
-      "source_ref": "main:0507",
+      "source_ref": "main:0508",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -10942,7 +10966,7 @@
     },
     {
       "id": "spirit-of-the-north-2",
-      "source_ref": "main:0508",
+      "source_ref": "main:0509",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -10961,7 +10985,7 @@
     },
     {
       "id": "spirit-x-strike",
-      "source_ref": "main:0509",
+      "source_ref": "main:0510",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -10980,7 +11004,7 @@
     },
     {
       "id": "split-fiction",
-      "source_ref": "main:0510",
+      "source_ref": "main:0511",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -10999,7 +11023,7 @@
     },
     {
       "id": "spongebob-squarepants-titans-of-the-tide",
-      "source_ref": "main:0511",
+      "source_ref": "main:0512",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -11018,7 +11042,7 @@
     },
     {
       "id": "sprawl",
-      "source_ref": "main:0512",
+      "source_ref": "main:0513",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11065,7 +11089,7 @@
     },
     {
       "id": "stalker-call-of-prypiat-enhanced-edition",
-      "source_ref": "main:0513",
+      "source_ref": "main:0514",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -11089,7 +11113,7 @@
     },
     {
       "id": "stalker-clear-sky-enhanced-edition",
-      "source_ref": "main:0514",
+      "source_ref": "main:0515",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -11113,7 +11137,7 @@
     },
     {
       "id": "stalker-shadow-of-chornobyl-enhanced-edition",
-      "source_ref": "main:0515",
+      "source_ref": "main:0516",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -11137,7 +11161,7 @@
     },
     {
       "id": "star-overdrive",
-      "source_ref": "main:0518",
+      "source_ref": "main:0519",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11156,7 +11180,7 @@
     },
     {
       "id": "star-trek-voyager-across-the-unknown",
-      "source_ref": "main:0519",
+      "source_ref": "main:0520",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11194,7 +11218,7 @@
     },
     {
       "id": "star-wars-outlaws",
-      "source_ref": "main:0521",
+      "source_ref": "main:0522",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -11213,7 +11237,7 @@
     },
     {
       "id": "star-wars-zero-company",
-      "source_ref": "main:0522",
+      "source_ref": "main:0523",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [
@@ -11237,7 +11261,7 @@
     },
     {
       "id": "starfield",
-      "source_ref": "main:0517",
+      "source_ref": "main:0518",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11256,7 +11280,7 @@
     },
     {
       "id": "stay-in-the-light",
-      "source_ref": "main:0523",
+      "source_ref": "main:0524",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11275,7 +11299,7 @@
     },
     {
       "id": "steel-seed",
-      "source_ref": "main:0524",
+      "source_ref": "main:0525",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -11294,7 +11318,7 @@
     },
     {
       "id": "steelrising",
-      "source_ref": "main:0525",
+      "source_ref": "main:0526",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11318,7 +11342,7 @@
     },
     {
       "id": "stellar-blade",
-      "source_ref": "main:0526",
+      "source_ref": "main:0527",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11337,7 +11361,7 @@
     },
     {
       "id": "still-wakes-the-deep",
-      "source_ref": "main:0527",
+      "source_ref": "main:0528",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -11356,7 +11380,7 @@
     },
     {
       "id": "storage-hunter-simulator",
-      "source_ref": "main:0528",
+      "source_ref": "main:0529",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11375,7 +11399,7 @@
     },
     {
       "id": "stranded-alien-dawn",
-      "source_ref": "main:0530",
+      "source_ref": "main:0531",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11399,7 +11423,7 @@
     },
     {
       "id": "stranger-of-paradise-final-fantasy-origin",
-      "source_ref": "main:0529",
+      "source_ref": "main:0530",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11437,7 +11461,7 @@
     },
     {
       "id": "strayed-lights",
-      "source_ref": "main:0531",
+      "source_ref": "main:0532",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11456,7 +11480,7 @@
     },
     {
       "id": "stygian-outer-gods",
-      "source_ref": "main:0532",
+      "source_ref": "main:0533",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11475,7 +11499,7 @@
     },
     {
       "id": "styx-blades-of-greed",
-      "source_ref": "main:0533",
+      "source_ref": "main:0534",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -11518,7 +11542,7 @@
     },
     {
       "id": "subliminal",
-      "source_ref": "main:0534",
+      "source_ref": "main:0535",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -11537,7 +11561,7 @@
     },
     {
       "id": "subnautica-2",
-      "source_ref": "main:0535",
+      "source_ref": "main:0536",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11556,7 +11580,7 @@
     },
     {
       "id": "suicide-squad-kill-the-justice-league",
-      "source_ref": "main:0536",
+      "source_ref": "main:0537",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11575,7 +11599,7 @@
     },
     {
       "id": "sumerian-six",
-      "source_ref": "main:0537",
+      "source_ref": "main:0538",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11599,7 +11623,7 @@
     },
     {
       "id": "super-meat-boy-3d",
-      "source_ref": "main:0538",
+      "source_ref": "main:0539",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11618,7 +11642,7 @@
     },
     {
       "id": "supraland",
-      "source_ref": "main:0539",
+      "source_ref": "main:0540",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11641,7 +11665,7 @@
     },
     {
       "id": "supraland-six-inches-under",
-      "source_ref": "main:0540",
+      "source_ref": "main:0541",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11660,7 +11684,7 @@
     },
     {
       "id": "supraworld",
-      "source_ref": "main:0541",
+      "source_ref": "main:0542",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11679,7 +11703,7 @@
     },
     {
       "id": "synthetik-2",
-      "source_ref": "main:0542",
+      "source_ref": "main:0543",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11698,7 +11722,7 @@
     },
     {
       "id": "system-shock-remake",
-      "source_ref": "main:0543",
+      "source_ref": "main:0544",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11722,7 +11746,7 @@
     },
     {
       "id": "tainted-grail-the-fall-of-avalon",
-      "source_ref": "main:0544",
+      "source_ref": "main:0545",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11750,7 +11774,7 @@
     },
     {
       "id": "tales-of-kenzera-zau",
-      "source_ref": "main:0545",
+      "source_ref": "main:0546",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -11769,7 +11793,7 @@
     },
     {
       "id": "tchia",
-      "source_ref": "main:0547",
+      "source_ref": "main:0548",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11793,7 +11817,7 @@
     },
     {
       "id": "technofumer",
-      "source_ref": "main:0548",
+      "source_ref": "main:0549",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -11812,7 +11836,7 @@
     },
     {
       "id": "tekken-8",
-      "source_ref": "main:0549",
+      "source_ref": "main:0550",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [
@@ -11836,7 +11860,7 @@
     },
     {
       "id": "tempest-rising",
-      "source_ref": "main:0550",
+      "source_ref": "main:0551",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -11879,7 +11903,7 @@
     },
     {
       "id": "terratech-legion",
-      "source_ref": "main:0551",
+      "source_ref": "main:0552",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11903,7 +11927,7 @@
     },
     {
       "id": "test-drive-unlimited-solar-crown",
-      "source_ref": "main:0552",
+      "source_ref": "main:0553",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11922,7 +11946,7 @@
     },
     {
       "id": "testament-the-order-of-high-human",
-      "source_ref": "main:0553",
+      "source_ref": "main:0554",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -11945,7 +11969,7 @@
     },
     {
       "id": "the-alley-demo",
-      "source_ref": "main:0554",
+      "source_ref": "main:0555",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -11969,7 +11993,7 @@
     },
     {
       "id": "the-alters",
-      "source_ref": "main:0555",
+      "source_ref": "main:0556",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -11993,7 +12017,7 @@
     },
     {
       "id": "the-ascent",
-      "source_ref": "main:0556",
+      "source_ref": "main:0557",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12016,7 +12040,7 @@
     },
     {
       "id": "the-axis-unseen",
-      "source_ref": "main:0557",
+      "source_ref": "main:0558",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12035,7 +12059,7 @@
     },
     {
       "id": "the-black-ice",
-      "source_ref": "main:0558",
+      "source_ref": "main:0559",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12054,7 +12078,7 @@
     },
     {
       "id": "the-blood-of-dawnwalker",
-      "source_ref": "main:0559",
+      "source_ref": "main:0560",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12073,7 +12097,7 @@
     },
     {
       "id": "the-callisto-protocol",
-      "source_ref": "main:0560",
+      "source_ref": "main:0561",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -12092,7 +12116,7 @@
     },
     {
       "id": "the-casting-of-frank-stone",
-      "source_ref": "main:0561",
+      "source_ref": "main:0562",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12111,7 +12135,7 @@
     },
     {
       "id": "the-chant",
-      "source_ref": "main:0562",
+      "source_ref": "main:0563",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -12135,7 +12159,7 @@
     },
     {
       "id": "the-diofield-chronicle",
-      "source_ref": "main:0563",
+      "source_ref": "main:0564",
       "status": "working",
       "declared_inputs": ["xess"],
       "guidance": [],
@@ -12154,7 +12178,7 @@
     },
     {
       "id": "the-elder-scrolls-iv-oblivion-remastered",
-      "source_ref": "main:0564",
+      "source_ref": "main:0565",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12173,7 +12197,7 @@
     },
     {
       "id": "the-elder-scrolls-v-skyrim-special-edition",
-      "source_ref": "main:0565",
+      "source_ref": "main:0566",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12192,7 +12216,7 @@
     },
     {
       "id": "the-first-berserker-khazan",
-      "source_ref": "main:0566",
+      "source_ref": "main:0567",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12211,7 +12235,7 @@
     },
     {
       "id": "the-hollow-complex-demo",
-      "source_ref": "main:0567",
+      "source_ref": "main:0568",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -12235,7 +12259,7 @@
     },
     {
       "id": "the-invincible",
-      "source_ref": "main:0568",
+      "source_ref": "main:0569",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12254,7 +12278,7 @@
     },
     {
       "id": "the-joy-of-creation",
-      "source_ref": "main:0569",
+      "source_ref": "main:0570",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12273,7 +12297,7 @@
     },
     {
       "id": "the-killing-antidote",
-      "source_ref": "main:0570",
+      "source_ref": "main:0571",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12292,7 +12316,7 @@
     },
     {
       "id": "the-last-caretaker",
-      "source_ref": "main:0571",
+      "source_ref": "main:0572",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12311,7 +12335,7 @@
     },
     {
       "id": "the-last-of-us-part-i",
-      "source_ref": "main:0572",
+      "source_ref": "main:0573",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12330,7 +12354,7 @@
     },
     {
       "id": "the-last-of-us-part-ii-remastered",
-      "source_ref": "main:0573",
+      "source_ref": "main:0574",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12341,7 +12365,7 @@
           },
           "ini_overrides": [],
           "restricted_modules": [],
-          "optipatcher": "unspecified",
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ],
@@ -12349,7 +12373,7 @@
     },
     {
       "id": "the-last-oricru",
-      "source_ref": "main:0574",
+      "source_ref": "main:0575",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12368,7 +12392,7 @@
     },
     {
       "id": "the-lord-of-the-rings-gollum",
-      "source_ref": "main:0576",
+      "source_ref": "main:0577",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12387,7 +12411,7 @@
     },
     {
       "id": "the-lord-of-the-rings-return-to-moria",
-      "source_ref": "main:0577",
+      "source_ref": "main:0578",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12406,7 +12430,7 @@
     },
     {
       "id": "the-medium",
-      "source_ref": "main:0578",
+      "source_ref": "main:0579",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -12430,7 +12454,7 @@
     },
     {
       "id": "the-midnight-walk",
-      "source_ref": "main:0579",
+      "source_ref": "main:0580",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12449,7 +12473,7 @@
     },
     {
       "id": "the-mound-omen-of-cthulhu",
-      "source_ref": "main:0580",
+      "source_ref": "main:0581",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12468,7 +12492,7 @@
     },
     {
       "id": "the-occultist",
-      "source_ref": "main:0581",
+      "source_ref": "main:0582",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [
@@ -12492,7 +12516,7 @@
     },
     {
       "id": "the-orville-interactive-fan-experience",
-      "source_ref": "main:0582",
+      "source_ref": "main:0583",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -12516,7 +12540,7 @@
     },
     {
       "id": "the-other-side",
-      "source_ref": "main:0583",
+      "source_ref": "main:0584",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12535,7 +12559,7 @@
     },
     {
       "id": "the-outer-worlds-2",
-      "source_ref": "main:0585",
+      "source_ref": "main:0586",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12554,7 +12578,7 @@
     },
     {
       "id": "the-outer-worlds-spacer-s-choice-edition",
-      "source_ref": "main:0584",
+      "source_ref": "main:0585",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -12573,7 +12597,7 @@
     },
     {
       "id": "the-path-into-the-abyss",
-      "source_ref": "main:0586",
+      "source_ref": "main:0587",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -12592,7 +12616,7 @@
     },
     {
       "id": "the-persistence",
-      "source_ref": "main:0587",
+      "source_ref": "main:0588",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12611,7 +12635,7 @@
     },
     {
       "id": "the-riftbreaker",
-      "source_ref": "main:0589",
+      "source_ref": "main:0590",
       "status": "working",
       "declared_inputs": ["xess"],
       "guidance": [],
@@ -12630,7 +12654,7 @@
     },
     {
       "id": "the-rpg",
-      "source_ref": "main:0590",
+      "source_ref": "main:0591",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12649,7 +12673,7 @@
     },
     {
       "id": "the-seven-deadly-sins-origin",
-      "source_ref": "main:0591",
+      "source_ref": "main:0592",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12668,7 +12692,7 @@
     },
     {
       "id": "the-sinking-city",
-      "source_ref": "main:0593",
+      "source_ref": "main:0594",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12687,7 +12711,7 @@
     },
     {
       "id": "the-sinking-city-2",
-      "source_ref": "main:0592",
+      "source_ref": "main:0593",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12706,7 +12730,7 @@
     },
     {
       "id": "the-talos-principle-2",
-      "source_ref": "main:0595",
+      "source_ref": "main:0596",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12725,7 +12749,7 @@
     },
     {
       "id": "the-talos-principle-reawakened",
-      "source_ref": "main:0594",
+      "source_ref": "main:0595",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12744,7 +12768,7 @@
     },
     {
       "id": "the-thaumaturge",
-      "source_ref": "main:0596",
+      "source_ref": "main:0597",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -12763,7 +12787,7 @@
     },
     {
       "id": "the-witcher-3",
-      "source_ref": "main:0598",
+      "source_ref": "main:0599",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
       "guidance": [],
@@ -12782,7 +12806,7 @@
     },
     {
       "id": "thiefs-shelter",
-      "source_ref": "main:0599",
+      "source_ref": "main:0600",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12801,7 +12825,7 @@
     },
     {
       "id": "thymesia",
-      "source_ref": "main:0600",
+      "source_ref": "main:0601",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -12820,7 +12844,7 @@
     },
     {
       "id": "time-breaker",
-      "source_ref": "main:0601",
+      "source_ref": "main:0602",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12839,7 +12863,7 @@
     },
     {
       "id": "tiny-tina-s-wonderlands",
-      "source_ref": "main:0602",
+      "source_ref": "main:0603",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -12858,7 +12882,7 @@
     },
     {
       "id": "titan-quest-ii",
-      "source_ref": "main:0604",
+      "source_ref": "main:0605",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -12877,7 +12901,7 @@
     },
     {
       "id": "titan-station",
-      "source_ref": "main:0603",
+      "source_ref": "main:0604",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12896,7 +12920,7 @@
     },
     {
       "id": "togges",
-      "source_ref": "main:0605",
+      "source_ref": "main:0606",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12915,7 +12939,7 @@
     },
     {
       "id": "tokyo-xtreme-racer",
-      "source_ref": "main:0606",
+      "source_ref": "main:0607",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12934,7 +12958,7 @@
     },
     {
       "id": "tony-hawks-pro-skater-3-4",
-      "source_ref": "main:0607",
+      "source_ref": "main:0608",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -12953,7 +12977,7 @@
     },
     {
       "id": "tormented-souls-2",
-      "source_ref": "main:0608",
+      "source_ref": "main:0609",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13001,7 +13025,7 @@
     },
     {
       "id": "trail-out",
-      "source_ref": "main:0609",
+      "source_ref": "main:0610",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13020,7 +13044,7 @@
     },
     {
       "id": "trails-in-the-sky-1st-chapter",
-      "source_ref": "main:0610",
+      "source_ref": "main:0611",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -13050,7 +13074,7 @@
     },
     {
       "id": "trails-through-daybreak-1-2-d2",
-      "source_ref": "main:0575",
+      "source_ref": "main:0576",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13088,7 +13112,7 @@
     },
     {
       "id": "trepang2",
-      "source_ref": "main:0612",
+      "source_ref": "main:0613",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13116,7 +13140,7 @@
     },
     {
       "id": "trine-5",
-      "source_ref": "main:0613",
+      "source_ref": "main:0614",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13140,7 +13164,7 @@
     },
     {
       "id": "troublemaker-2-beyond-dream",
-      "source_ref": "main:0614",
+      "source_ref": "main:0615",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -13159,7 +13183,7 @@
     },
     {
       "id": "turbo-sloths",
-      "source_ref": "main:0615",
+      "source_ref": "main:0616",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13178,7 +13202,7 @@
     },
     {
       "id": "twin-stones-the-journey-of-bukka",
-      "source_ref": "main:0616",
+      "source_ref": "main:0617",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13201,7 +13225,7 @@
     },
     {
       "id": "uboat",
-      "source_ref": "main:0617",
+      "source_ref": "main:0618",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13220,7 +13244,7 @@
     },
     {
       "id": "uncharted-legacy-of-thieves-collection",
-      "source_ref": "main:0619",
+      "source_ref": "main:0620",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13239,7 +13263,7 @@
     },
     {
       "id": "undertaker",
-      "source_ref": "main:0618",
+      "source_ref": "main:0619",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13258,7 +13282,7 @@
     },
     {
       "id": "unholy",
-      "source_ref": "main:0620",
+      "source_ref": "main:0621",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13277,7 +13301,7 @@
     },
     {
       "id": "unknown-9-awakening",
-      "source_ref": "main:0621",
+      "source_ref": "main:0622",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -13296,7 +13320,7 @@
     },
     {
       "id": "until-dawn",
-      "source_ref": "main:0622",
+      "source_ref": "main:0623",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13320,7 +13344,7 @@
     },
     {
       "id": "valkyrie-elysium",
-      "source_ref": "main:0623",
+      "source_ref": "main:0624",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13339,7 +13363,7 @@
     },
     {
       "id": "valor-mortis",
-      "source_ref": "main:0624",
+      "source_ref": "main:0625",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -13358,7 +13382,7 @@
     },
     {
       "id": "vampire-the-masquerade-bloodlines-2",
-      "source_ref": "main:0625",
+      "source_ref": "main:0626",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13401,7 +13425,7 @@
     },
     {
       "id": "vein",
-      "source_ref": "main:0626",
+      "source_ref": "main:0627",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13426,7 +13450,7 @@
     },
     {
       "id": "venus-vacation-prism-dead-or-alive-xtreme",
-      "source_ref": "main:0627",
+      "source_ref": "main:0628",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13445,7 +13469,7 @@
     },
     {
       "id": "vindictus-defying-fate",
-      "source_ref": "main:0628",
+      "source_ref": "main:0629",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13464,7 +13488,7 @@
     },
     {
       "id": "virtua-fighter-5-revo-world-stage",
-      "source_ref": "main:0629",
+      "source_ref": "main:0630",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
       "guidance": [],
@@ -13483,7 +13507,7 @@
     },
     {
       "id": "visions-of-mana",
-      "source_ref": "main:0630",
+      "source_ref": "main:0631",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -13502,7 +13526,7 @@
     },
     {
       "id": "vladik-brutal",
-      "source_ref": "main:0631",
+      "source_ref": "main:0632",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13521,7 +13545,7 @@
     },
     {
       "id": "void-breaker",
-      "source_ref": "main:0632",
+      "source_ref": "main:0633",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13540,7 +13564,7 @@
     },
     {
       "id": "voidtrain",
-      "source_ref": "main:0633",
+      "source_ref": "main:0634",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13564,7 +13588,7 @@
     },
     {
       "id": "voin",
-      "source_ref": "main:0634",
+      "source_ref": "main:0635",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
       "guidance": [],
@@ -13587,7 +13611,7 @@
     },
     {
       "id": "voodoo-fishin",
-      "source_ref": "main:0635",
+      "source_ref": "main:0636",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13612,7 +13636,7 @@
     },
     {
       "id": "voyagers-of-nera",
-      "source_ref": "main:0636",
+      "source_ref": "main:0637",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13631,7 +13655,7 @@
     },
     {
       "id": "wanted-dead",
-      "source_ref": "main:0637",
+      "source_ref": "main:0638",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13650,7 +13674,7 @@
     },
     {
       "id": "warhammer-40-000-space-marine-2",
-      "source_ref": "main:0639",
+      "source_ref": "main:0640",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13669,7 +13693,7 @@
     },
     {
       "id": "warhammer-40000-darktide",
-      "source_ref": "main:0638",
+      "source_ref": "main:0639",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -13707,7 +13731,7 @@
     },
     {
       "id": "watch-dogs-legion",
-      "source_ref": "main:0640",
+      "source_ref": "main:0641",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13726,7 +13750,7 @@
     },
     {
       "id": "way-of-the-hunter",
-      "source_ref": "main:0641",
+      "source_ref": "main:0642",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [
@@ -13750,7 +13774,7 @@
     },
     {
       "id": "wayfinder",
-      "source_ref": "main:0642",
+      "source_ref": "main:0643",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13769,7 +13793,7 @@
     },
     {
       "id": "we-were-here-tomorrow-demo",
-      "source_ref": "main:0646",
+      "source_ref": "main:0647",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13788,7 +13812,7 @@
     },
     {
       "id": "welcome-to-paradize",
-      "source_ref": "main:0643",
+      "source_ref": "main:0644",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -13807,7 +13831,7 @@
     },
     {
       "id": "welcome-to-the-game-iii",
-      "source_ref": "main:0644",
+      "source_ref": "main:0645",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13831,7 +13855,7 @@
     },
     {
       "id": "werewolf-the-inner-beast",
-      "source_ref": "main:0645",
+      "source_ref": "main:0646",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13850,7 +13874,7 @@
     },
     {
       "id": "where-winds-meet",
-      "source_ref": "main:0647",
+      "source_ref": "main:0648",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13870,7 +13894,7 @@
     },
     {
       "id": "whiskerwood",
-      "source_ref": "main:0648",
+      "source_ref": "main:0649",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -13889,7 +13913,7 @@
     },
     {
       "id": "wicked-island",
-      "source_ref": "main:0649",
+      "source_ref": "main:0650",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -13913,7 +13937,7 @@
     },
     {
       "id": "wild-hearts",
-      "source_ref": "main:0650",
+      "source_ref": "main:0651",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13932,7 +13956,7 @@
     },
     {
       "id": "will-follow-the-light",
-      "source_ref": "main:0651",
+      "source_ref": "main:0652",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -13951,7 +13975,7 @@
     },
     {
       "id": "windrose",
-      "source_ref": "main:0652",
+      "source_ref": "main:0653",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13970,7 +13994,7 @@
     },
     {
       "id": "winemaker-simulator",
-      "source_ref": "main:0653",
+      "source_ref": "main:0654",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -13989,7 +14013,7 @@
     },
     {
       "id": "witchfire",
-      "source_ref": "main:0654",
+      "source_ref": "main:0655",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
       "guidance": [],
@@ -14008,7 +14032,7 @@
     },
     {
       "id": "wo-long-fallen-dynasty",
-      "source_ref": "main:0655",
+      "source_ref": "main:0656",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
       "guidance": [],
@@ -14027,7 +14051,7 @@
     },
     {
       "id": "wolfenstein-youngblood",
-      "source_ref": "main:0656",
+      "source_ref": "main:0657",
       "status": "conditional",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14046,7 +14070,7 @@
     },
     {
       "id": "wonder-ball",
-      "source_ref": "main:0657",
+      "source_ref": "main:0658",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14065,7 +14089,7 @@
     },
     {
       "id": "world-war-z",
-      "source_ref": "main:0658",
+      "source_ref": "main:0659",
       "status": "working",
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
@@ -14084,7 +14108,7 @@
     },
     {
       "id": "wrc-generations",
-      "source_ref": "main:0659",
+      "source_ref": "main:0660",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14103,7 +14127,7 @@
     },
     {
       "id": "wreckfest-2",
-      "source_ref": "main:0660",
+      "source_ref": "main:0661",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -14122,7 +14146,7 @@
     },
     {
       "id": "wrench",
-      "source_ref": "main:0661",
+      "source_ref": "main:0662",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14141,7 +14165,7 @@
     },
     {
       "id": "wuchang-fallen-feathers",
-      "source_ref": "main:0662",
+      "source_ref": "main:0663",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -14160,7 +14184,7 @@
     },
     {
       "id": "wuthering-waves",
-      "source_ref": "main:0663",
+      "source_ref": "main:0664",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -14179,7 +14203,7 @@
     },
     {
       "id": "xuan-yuan-sword-vii",
-      "source_ref": "main:0664",
+      "source_ref": "main:0665",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [
@@ -14203,7 +14227,7 @@
     },
     {
       "id": "yet-another-zombie-survivors",
-      "source_ref": "main:0665",
+      "source_ref": "main:0666",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14228,7 +14252,7 @@
     },
     {
       "id": "yooka-replaylee",
-      "source_ref": "main:0666",
+      "source_ref": "main:0667",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14247,7 +14271,7 @@
     },
     {
       "id": "zenless-zone-zero",
-      "source_ref": "main:0667",
+      "source_ref": "main:0668",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],
@@ -14266,7 +14290,7 @@
     },
     {
       "id": "zombieville-usa-3d",
-      "source_ref": "main:0668",
+      "source_ref": "main:0669",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14285,7 +14309,7 @@
     },
     {
       "id": "zoochosis",
-      "source_ref": "main:0669",
+      "source_ref": "main:0670",
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "guidance": [],
@@ -14304,7 +14328,7 @@
     },
     {
       "id": "zouhri-the-cursed-blood-demo",
-      "source_ref": "main:0670",
+      "source_ref": "main:0671",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "guidance": [],

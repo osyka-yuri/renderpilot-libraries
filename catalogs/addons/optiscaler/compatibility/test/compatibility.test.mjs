@@ -13,15 +13,15 @@ import {
 import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
-const EXPECTED_PUBLISHED_ENTRY_COUNT = 693;
+const EXPECTED_PUBLISHED_ENTRY_COUNT = 694;
 const CURRENT_WIKI_SNAPSHOT = {
-  revision: "2026-10-23",
-  sha256: "019e8304bb84413599a29f5b33b13499883d0d776343b98445cf56dd376a99c7",
-  rows: 713,
+  revision: "2026-10-26",
+  sha256: "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d",
+  rows: 714,
 };
 const SHIFTED_MAIN_SOURCE_KEYS = Array.from(
-  { length: 176 },
-  (_, index) => `main:${String(495 + index).padStart(4, "0")}`,
+  { length: 214 },
+  (_, index) => `main:${String(458 + index).padStart(4, "0")}`,
 );
 const EXPECTED_REFRAMEWORK_FAMILY = [
   {
@@ -137,18 +137,18 @@ const EXPECTED_PENDING_IDENTITY_REASONS = {
   "main:0370": "No supported exact runtime or store identity is available.",
   "main:0420":
     "An Epic-only candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0464":
+  "main:0465":
     "Store results are different products and do not establish an exact title binding.",
-  "main:0469": "The upstream source deliberately provides no bindable identity.",
-  "main:0484": "No exact verifiable store identity is available.",
-  "main:0494":
+  "main:0470": "The upstream source deliberately provides no bindable identity.",
+  "main:0485": "No exact verifiable store identity is available.",
+  "main:0495":
     "Unreleased game; no verified runtime executable or match target is available.",
-  "main:0546":
+  "main:0547":
     "An Epic candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0588":
+  "main:0589":
     "The prior Steam AppID 3763780 is no longer a current app; other Rift results are distinct games.",
-  "main:0597": "No verified exact match target or executable observation is available.",
-  "main:0611": "No verified exact match target or executable observation is available.",
+  "main:0598": "No verified exact match target or executable observation is available.",
+  "main:0612": "No verified exact match target or executable observation is available.",
 };
 const EXPECTED_REAUDITED_BINDINGS = {
   "main:0030": {
@@ -181,27 +181,27 @@ const EXPECTED_REAUDITED_BINDINGS = {
     targetId: "protocol-terminate",
     identity: { kind: "steam_appid", value: "3710560" },
   },
-  "main:0532": {
+  "main:0533": {
     entryId: "stygian-outer-gods",
     targetId: "stygian-outer-gods",
     identity: { kind: "steam_appid", value: "2581410" },
   },
-  "main:0574": {
+  "main:0575": {
     entryId: "the-last-oricru",
     targetId: "the-last-oricru",
     identity: { kind: "steam_appid", value: "1663640" },
   },
-  "main:0583": {
+  "main:0584": {
     entryId: "the-other-side",
     targetId: "the-other-side",
     identity: { kind: "steam_appid", value: "2764750" },
   },
-  "main:0618": {
+  "main:0619": {
     entryId: "undertaker",
     targetId: "undertaker",
     identity: { kind: "steam_appid", value: "4030360" },
   },
-  "main:0657": {
+  "main:0658": {
     entryId: "wonder-ball",
     targetId: "wonder-ball",
     identity: { kind: "steam_appid", value: "2640030" },
@@ -677,7 +677,7 @@ test("Russian compatibility guidance names technology modes and input color spac
   const technologyModeMessages = inputs.messages.messages.filter(
     (message) => isTechnologyInputMessage(message) && !isInputColorSpaceMessage(message),
   );
-  assert.equal(technologyModeMessages.length, 39);
+  assert.equal(technologyModeMessages.length, 40);
   for (const message of technologyModeMessages) {
     assert.match(
       message.translations.ru,
@@ -976,12 +976,12 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
       `${sourceKey} must retain its exact post-rekey source binding`,
     );
   }
-  assert.equal(snapshotBySource.get("main:0670")?.title, "Zouhri: The Cursed Blood Demo");
+  assert.equal(snapshotBySource.get("main:0671")?.title, "Zouhri: The Cursed Blood Demo");
 
   const zero = entriesById.get("star-wars-zero-company");
   assert.deepEqual(zero, {
     id: "star-wars-zero-company",
-    source_ref: "main:0522",
+    source_ref: "main:0523",
     status: "working",
     declared_inputs: ["dlss2_plus", "fsr2_plus", "xess"],
     guidance: [
@@ -1001,11 +1001,11 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
     ],
     game_target_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0522")?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0523")?.disposition, {
     kind: "published",
     entry_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0522")?.notes?.[0]?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0523")?.notes?.[0]?.disposition, {
     kind: "guidance",
     message_ids: ["optiscaler-star-wars-zero-company-vendor-options"],
   });
