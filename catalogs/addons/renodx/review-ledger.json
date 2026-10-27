@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "3fa6345d465c48bee678fbf31d392896a6269de42fa8baec11d1048df82bf500",
+    "wiki_content_sha256": "2cc96bc5f48433fe809d12e3bea4eae20d2600418415c483db53e0449c6dd97a",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "713ca058104a47e3ea347ed3fff98947cae4c557994075fe3c00c3d1d477fc93",
+    "active_message_fingerprint": "dddcb9b634ccf20e77f41a43d1f4c3cbd6d466dbdeac9a5835e28e6191d0d2b8",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -409,6 +409,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:a-way-out",
+      "game_id": "a-way-out",
+      "title": "A Way Out",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "b4c2395329e3c5b25b521755654d398654243fce3be721c523c5085db7d08ae3",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:abiotic-factor",
       "game_id": "abiotic-factor",
       "title": "Abiotic Factor",
@@ -459,12 +469,12 @@
       "reason": null
     },
     {
-      "source_key": "ue-extended:a-way-out",
-      "game_id": "a-way-out",
-      "title": "A Way Out",
+      "source_key": "ue-extended:avowed",
+      "game_id": "avowed",
+      "title": "Avowed",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "b4c2395329e3c5b25b521755654d398654243fce3be721c523c5085db7d08ae3",
+      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -479,12 +489,12 @@
       "reason": null
     },
     {
-      "source_key": "ue-extended:borderlands-4",
-      "game_id": "borderlands-4",
-      "title": "Borderlands 4",
+      "source_key": "ue-extended:blacktail",
+      "game_id": "blacktail",
+      "title": "BLACKTAIL",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -495,6 +505,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:borderlands-4",
+      "game_id": "borderlands-4",
+      "title": "Borderlands 4",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -529,6 +549,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:code-vein-ii",
+      "game_id": "code-vein-ii",
+      "title": "CODE VEIN II",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:conan-exiles-enhanced",
       "game_id": "conan-exiles-enhanced",
       "title": "Conan Exiles Enhanced",
@@ -542,6 +572,16 @@
       "source_key": "ue-extended:crab-champions",
       "game_id": "crab-champions",
       "title": "Crab Champions",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:cthulu-the-cosmin-abyss",
+      "game_id": "cthulu-the-cosmin-abyss",
+      "title": "Cthulu: The Cosmin Abyss",
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
@@ -599,6 +639,36 @@
       "reason": "Upstream configuration instructions pending manual review."
     },
     {
+      "source_key": "ue-extended:destroy-all-humans",
+      "game_id": "destroy-all-humans",
+      "title": "Destroy All Humans",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:destroy-all-humans-2-reprobed",
+      "game_id": "destroy-all-humans-2-reprobed",
+      "title": "Destroy All Humans! 2 Reprobed",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:directive-8020",
+      "game_id": "directive-8020",
+      "title": "Directive 8020",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:end-of-abyss",
       "game_id": "end-of-abyss",
       "title": "End of Abyss",
@@ -615,6 +685,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "3e5c2b31b335c65855a03d021104a1994938c40771991fa5c702066c438bc951",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:eternal-strands",
+      "game_id": "eternal-strands",
+      "title": "Eternal Strands",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "9e6ed60b28a8dc800d777c7691b19189275cc26f99df774d6f46e16b9b9fe4b3",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -659,12 +739,22 @@
       "reason": null
     },
     {
-      "source_key": "ue-extended:goat-simulator-3",
-      "game_id": "goat-simulator-3",
-      "title": "Goat Simulator 3",
+      "source_key": "ue-extended:garfield-escape-from-monday",
+      "game_id": "garfield-escape-from-monday",
+      "title": "Garfield - Escape from Monday",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:gears-of-war-e-day",
+      "game_id": "gears-of-war-e-day",
+      "title": "Gears of War: E-Day",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "217f850bcd65cce90b8a573d21e2bd934d88bcb88d31b0a610ea69293a9196c7",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -695,6 +785,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:goat-simulator-3",
+      "game_id": "goat-simulator-3",
+      "title": "Goat Simulator 3",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -739,6 +839,16 @@
       "reason": "Upstream configuration instructions pending manual review."
     },
     {
+      "source_key": "ue-extended:halo-campaign-evolved",
+      "game_id": "halo-campaign-evolved",
+      "title": "Halo - Campaign Evolved",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:hellblade-ii-senua-s-saga",
       "game_id": "hellblade-ii-senua-s-saga",
       "title": "Hellblade II: Senua’s Saga",
@@ -765,16 +875,6 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
-      "source_key": "ue-extended:the-idolm-ster-starlit-season",
-      "game_id": "the-idolm-ster-starlit-season",
-      "title": "The iDOLM@STER: Starlit Season",
-      "section": "ue-extended",
-      "profile_source": "ue-extended",
-      "note_sha256": "b7ed211d50222bebc80ff2a2dd79cd26a5f2ae38b13b654f48c512b5ad00ba4c",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -829,6 +929,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:like-a-dragon-ishin",
+      "game_id": "like-a-dragon-ishin",
+      "title": "Like a Dragon: Ishin!",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "af7524caf689fbcb20ce6c88c8dd952939a434a5af8fcddf2e23721503e6b772",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:little-nightmares",
       "game_id": "little-nightmares",
       "title": "Little Nightmares",
@@ -875,6 +985,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "f8f2ff72de5d5d5f6ad7df602b5904a3108d8edbcb052581aa662ff0e57d58d7",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:lost-soul-aside",
+      "game_id": "lost-soul-aside",
+      "title": "Lost Soul Aside",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1059,12 +1179,42 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:silent-hill-townfall",
+      "game_id": "silent-hill-townfall",
+      "title": "SILENT HILL: Townfall",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:solarpunk",
       "game_id": "solarpunk",
       "title": "Solarpunk",
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:song-of-nunu-a-league-of-legends-story",
+      "game_id": "song-of-nunu-a-league-of-legends-story",
+      "title": "Song of Nunu: A League of Legends Story",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:sprawl",
+      "game_id": "sprawl",
+      "title": "SPRAWL",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1079,12 +1229,42 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:star-wars-galactic-racertm",
+      "game_id": "star-wars-galactic-racertm",
+      "title": "STAR WARS: Galactic Racer™",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:star-wars-zero-companytm",
       "game_id": "star-wars-zero-companytm",
       "title": "STAR WARS Zero Company™",
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:state-of-decay-2",
+      "game_id": "state-of-decay-2",
+      "title": "State Of Decay 2",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "0e9a3541bffa57285f0d9c77637984c9716cf533982dfff5b7a7f40ac61f78c7",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:stellar-blade",
+      "game_id": "stellar-blade",
+      "title": "Stellar Blade",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "12ec08ddfac27caf13a00a6c9d7c44a6048c436a2063f9326ab07cefc571c528",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1139,16 +1319,6 @@
       "reason": null
     },
     {
-      "source_key": "ue-extended:the-first-berserker-khazan",
-      "game_id": "the-first-berserker-khazan",
-      "title": "The First Berserker: Khazan",
-      "section": "ue-extended",
-      "profile_source": "ue-extended",
-      "note_sha256": "f7b617e26b9d75aa6beec35115e23c52b5bbba8d9782b267a50d660434fcdc23",
-      "disposition": "omitted",
-      "reason": "Moved to resolved dedicated title guidance; no UE Extended processing policy is emitted for this source row."
-    },
-    {
       "source_key": "ue-extended:the-blood-of-dawnwalker",
       "game_id": "the-blood-of-dawnwalker",
       "title": "The Blood of Dawnwalker",
@@ -1169,12 +1339,32 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:the-first-berserker-khazan",
+      "game_id": "the-first-berserker-khazan",
+      "title": "The First Berserker: Khazan",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "f7b617e26b9d75aa6beec35115e23c52b5bbba8d9782b267a50d660434fcdc23",
+      "disposition": "omitted",
+      "reason": "Moved to resolved dedicated title guidance; no UE Extended processing policy is emitted for this source row."
+    },
+    {
       "source_key": "ue-extended:the-forgotten-city",
       "game_id": "the-forgotten-city",
       "title": "The Forgotten City",
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:the-idolm-ster-starlit-season",
+      "game_id": "the-idolm-ster-starlit-season",
+      "title": "The iDOLM@STER: Starlit Season",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "b7ed211d50222bebc80ff2a2dd79cd26a5f2ae38b13b654f48c512b5ad00ba4c",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1195,6 +1385,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:tormented-souls-2",
+      "game_id": "tormented-souls-2",
+      "title": "Tormented Souls 2",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "c2f4d9fddd1d7bc13156bde2554f807ecee6b69e6c964c0de9879922c2079f53",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -2799,6 +2999,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:actraiser-renaissance",
+      "game_id": "actraiser-renaissance",
+      "title": "Actraiser Renaissance",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "fd566eda5776c1d39ebb82c84088b0573244f3efaadace86c8f56224a07d3062",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:aer-memories-of-old",
       "game_id": "aer-memories-of-old",
       "title": "AER Memories of Old",
@@ -3209,6 +3419,26 @@
       "reason": null
     },
     {
+      "source_key": "unity:butcher-s-creek",
+      "game_id": "butcher-s-creek",
+      "title": "Butcher's Creek",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "9b22c84a450baf71416f45a69977618f6ff56549cd70dd31e85410d496c2129c",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:bye-sweet-carole",
+      "game_id": "bye-sweet-carole",
+      "title": "Bye Sweet Carole",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "d974ae2da24e10c2959843d6fb99eda280af2120943f8f2e2cbe077952573eaf",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:cakey-s-twisted-bakery",
       "game_id": "cakey-s-twisted-bakery",
       "title": "Cakey's Twisted Bakery",
@@ -3229,12 +3459,12 @@
       "reason": null
     },
     {
-      "source_key": "unity:children-of-the-sun",
-      "game_id": "children-of-the-sun",
-      "title": "Children of the Sun",
+      "source_key": "unity:chainstaff",
+      "game_id": "chainstaff",
+      "title": "ChainStaff",
       "section": "unity",
       "profile_source": "unityengine",
-      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "note_sha256": "6d2bf235abf4fd8d1de00de36cebd0100a0471a417970a498856c9b89c98b93e",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3245,6 +3475,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:children-of-the-sun",
+      "game_id": "children-of-the-sun",
+      "title": "Children of the Sun",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3369,6 +3609,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:demon-tides",
+      "game_id": "demon-tides",
+      "title": "Demon Tides",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "d974ae2da24e10c2959843d6fb99eda280af2120943f8f2e2cbe077952573eaf",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:digimon-world-next-order",
       "game_id": "digimon-world-next-order",
       "title": "Digimon World: Next Order",
@@ -3419,6 +3669,16 @@
       "reason": "The 32-bit requirement is represented by the manifest architecture."
     },
     {
+      "source_key": "unity:dread-templar",
+      "game_id": "dread-templar",
+      "title": "Dread Templar",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "f84ce1edcde3479f081cd9f251173899974fe1e9193bb84d164581288f575682",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:dreamfall-chapters-the-final-cut",
       "game_id": "dreamfall-chapters-the-final-cut",
       "title": "Dreamfall Chapters - The Final Cut",
@@ -3439,12 +3699,12 @@
       "reason": "The 32-bit requirement is represented by the manifest architecture."
     },
     {
-      "source_key": "unity:dread-templar",
-      "game_id": "dread-templar",
-      "title": "Dread Templar",
+      "source_key": "unity:drova-forsaken-kin",
+      "game_id": "drova-forsaken-kin",
+      "title": "Drova Forsaken Kin",
       "section": "unity",
       "profile_source": "unityengine",
-      "note_sha256": "f84ce1edcde3479f081cd9f251173899974fe1e9193bb84d164581288f575682",
+      "note_sha256": "47b1d1c28297dc35bff7bd95af67e5dce7627f4e958ac870335aa62a452c9c1d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3559,22 +3819,22 @@
       "reason": null
     },
     {
-      "source_key": "unity:end-transmission",
-      "game_id": "end-transmission",
-      "title": "End Transmission?",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "928efba327308f43d567ffc6e2b864c236501049677ba8fdaa85a11f4f802bbf",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
       "source_key": "unity:encased",
       "game_id": "encased",
       "title": "Encased",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:end-transmission",
+      "game_id": "end-transmission",
+      "title": "End Transmission?",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "928efba327308f43d567ffc6e2b864c236501049677ba8fdaa85a11f4f802bbf",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3599,16 +3859,6 @@
       "reason": null
     },
     {
-      "source_key": "unity:ereban-shadow-legacy",
-      "game_id": "ereban-shadow-legacy",
-      "title": "Ereban - Shadow Legacy",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
       "source_key": "unity:epistory-typing-chronicles",
       "game_id": "epistory-typing-chronicles",
       "title": "Epistory - Typing Chronicles",
@@ -3619,22 +3869,22 @@
       "reason": null
     },
     {
+      "source_key": "unity:ereban-shadow-legacy",
+      "game_id": "ereban-shadow-legacy",
+      "title": "Ereban - Shadow Legacy",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:exit-the-gungeon",
       "game_id": "exit-the-gungeon",
       "title": "Exit The Gungeon",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "9b22c84a450baf71416f45a69977618f6ff56549cd70dd31e85410d496c2129c",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
-      "source_key": "unity:drova-forsaken-kin",
-      "game_id": "drova-forsaken-kin",
-      "title": "Drova Forsaken Kin",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "47b1d1c28297dc35bff7bd95af67e5dce7627f4e958ac870335aa62a452c9c1d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3929,6 +4179,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:i-know-a-guy-shady-life-simulator",
+      "game_id": "i-know-a-guy-shady-life-simulator",
+      "title": "I Know a Guy: Shady Life Simulator",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:icey",
       "game_id": "icey",
       "title": "ICEY",
@@ -3939,9 +4199,9 @@
       "reason": null
     },
     {
-      "source_key": "unity:i-know-a-guy-shady-life-simulator",
-      "game_id": "i-know-a-guy-shady-life-simulator",
-      "title": "I Know a Guy: Shady Life Simulator",
+      "source_key": "unity:in-sound-mind",
+      "game_id": "in-sound-mind",
+      "title": "In Sound Mind",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
@@ -3965,16 +4225,6 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "f119cce008f4e16e3db3b6569f0772295e8ce8279835416130ea41c008234084",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
-      "source_key": "unity:in-sound-mind",
-      "game_id": "in-sound-mind",
-      "title": "In Sound Mind",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4039,9 +4289,9 @@
       "reason": null
     },
     {
-      "source_key": "unity:killer-frequency",
-      "game_id": "killer-frequency",
-      "title": "Killer Frequency",
+      "source_key": "unity:kill-knight",
+      "game_id": "kill-knight",
+      "title": "KILL KNIGHT",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
@@ -4049,9 +4299,9 @@
       "reason": null
     },
     {
-      "source_key": "unity:kill-knight",
-      "game_id": "kill-knight",
-      "title": "KILL KNIGHT",
+      "source_key": "unity:killer-frequency",
+      "game_id": "killer-frequency",
+      "title": "Killer Frequency",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
@@ -4139,6 +4389,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:lucius-iii",
+      "game_id": "lucius-iii",
+      "title": "Lucius III",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "9b22c84a450baf71416f45a69977618f6ff56549cd70dd31e85410d496c2129c",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:lumines-arise",
       "game_id": "lumines-arise",
       "title": "Lumines Arise",
@@ -4209,6 +4469,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:minishoot-adventures",
+      "game_id": "minishoot-adventures",
+      "title": "Minishoot Adventures",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "078a4f1fe44aac7d30b7f7717d1e9d6c73a5bbc38c90c7a4bba0ef5ca879a48d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:monster-train",
       "game_id": "monster-train",
       "title": "Monster Train",
@@ -4269,22 +4539,22 @@
       "reason": null
     },
     {
-      "source_key": "unity:my-friendly-neighborhood",
-      "game_id": "my-friendly-neighborhood",
-      "title": "My Friendly Neighborhood",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
       "source_key": "unity:my-friend-pedro",
       "game_id": "my-friend-pedro",
       "title": "My Friend Pedro",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "882fa8ad67c38c9b223593f504a0b570dbce02cfafed43855d9f2e3ecbaaaea7",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:my-friendly-neighborhood",
+      "game_id": "my-friendly-neighborhood",
+      "title": "My Friendly Neighborhood",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4329,6 +4599,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:no-rest-for-the-wicked",
+      "game_id": "no-rest-for-the-wicked",
+      "title": "No Rest For The Wicked",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "93ffbe91944b90dd9028910905352bbcd13602fdbacad5c5a000cccc4c318161",
+      "disposition": "pending",
+      "reason": "Upstream format and encoding adjustments pending manual review."
+    },
+    {
       "source_key": "unity:nocturnal",
       "game_id": "nocturnal",
       "title": "Nocturnal",
@@ -4347,16 +4627,6 @@
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
       "disposition": "curated_manual",
       "reason": null
-    },
-    {
-      "source_key": "unity:no-rest-for-the-wicked",
-      "game_id": "no-rest-for-the-wicked",
-      "title": "No Rest For The Wicked",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "93ffbe91944b90dd9028910905352bbcd13602fdbacad5c5a000cccc4c318161",
-      "disposition": "pending",
-      "reason": "Upstream format and encoding adjustments pending manual review."
     },
     {
       "source_key": "unity:nottolot",
@@ -4489,16 +4759,6 @@
       "reason": null
     },
     {
-      "source_key": "unity:phasmophobia",
-      "game_id": "phasmophobia",
-      "title": "Phasmophobia",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "945d3f151596b69b84bcb0db631a2ef5b6f3709181c9f05321b733eba06bec5e",
-      "disposition": "pending",
-      "reason": "The upstream resource-upgrade instruction is incomplete and does not identify a format."
-    },
-    {
       "source_key": "unity:peak",
       "game_id": "peak",
       "title": "PEAK",
@@ -4509,14 +4769,14 @@
       "reason": null
     },
     {
-      "source_key": "unity:playing-kafka",
-      "game_id": "playing-kafka",
-      "title": "Playing Kafka",
+      "source_key": "unity:phasmophobia",
+      "game_id": "phasmophobia",
+      "title": "Phasmophobia",
       "section": "unity",
       "profile_source": "unityengine",
-      "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
-      "disposition": "curated_manual",
-      "reason": null
+      "note_sha256": "945d3f151596b69b84bcb0db631a2ef5b6f3709181c9f05321b733eba06bec5e",
+      "disposition": "pending",
+      "reason": "The upstream resource-upgrade instruction is incomplete and does not identify a format."
     },
     {
       "source_key": "unity:pillars-of-eternity",
@@ -4535,6 +4795,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "9b22c84a450baf71416f45a69977618f6ff56549cd70dd31e85410d496c2129c",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:playing-kafka",
+      "game_id": "playing-kafka",
+      "title": "Playing Kafka",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4699,6 +4969,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:silver-pines",
+      "game_id": "silver-pines",
+      "title": "Silver Pines",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "6db7b18369eadeaf84066329f5ccbe7df0b7677698539079554927d70b896ac4",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:skate-story",
       "game_id": "skate-story",
       "title": "Skate Story",
@@ -4717,26 +4997,6 @@
       "note_sha256": "64e4ba2feac8534e3f779abc4eb4806ca22b1e864f7ccd9a35bbbee9ea70ee48",
       "disposition": "curated_manual",
       "reason": null
-    },
-    {
-      "source_key": "unity:silver-pines",
-      "game_id": "silver-pines",
-      "title": "Silver Pines",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "6db7b18369eadeaf84066329f5ccbe7df0b7677698539079554927d70b896ac4",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
-      "source_key": "unity:spellforce-conquest-of-eo",
-      "game_id": "spellforce-conquest-of-eo",
-      "title": "Spellforce Conquest of Eo",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "517e3ef5563e9765c6b977bb7f7ca9b7f22ec9c72f464ec70bcd3a9996a1162e",
-      "disposition": "pending",
-      "reason": "The upstream Swapchain Proxy instruction is explicitly uncertain."
     },
     {
       "source_key": "unity:songs-of-silence",
@@ -4759,6 +5019,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:space-crew",
+      "game_id": "space-crew",
+      "title": "Space Crew",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:spacebase-startopia",
       "game_id": "spacebase-startopia",
       "title": "Spacebase Startopia",
@@ -4769,14 +5039,14 @@
       "reason": null
     },
     {
-      "source_key": "unity:space-crew",
-      "game_id": "space-crew",
-      "title": "Space Crew",
+      "source_key": "unity:spellforce-conquest-of-eo",
+      "game_id": "spellforce-conquest-of-eo",
+      "title": "Spellforce Conquest of Eo",
       "section": "unity",
       "profile_source": "unityengine",
-      "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
-      "disposition": "curated_manual",
-      "reason": null
+      "note_sha256": "517e3ef5563e9765c6b977bb7f7ca9b7f22ec9c72f464ec70bcd3a9996a1162e",
+      "disposition": "pending",
+      "reason": "The upstream Swapchain Proxy instruction is explicitly uncertain."
     },
     {
       "source_key": "unity:spiritfall",
@@ -4919,9 +5189,9 @@
       "reason": null
     },
     {
-      "source_key": "unity:tales-of-xillia-remastered",
-      "game_id": "tales-of-xillia-remastered",
-      "title": "Tales of Xillia Remastered",
+      "source_key": "unity:tales-of-the-shire-a-the-lord-of-the-ringstm-game",
+      "game_id": "tales-of-the-shire-a-the-lord-of-the-rings-game",
+      "title": "Tales of the Shire: A The Lord of The Rings™ Game",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "5b068f5bfef5d5dc5694d49601f5172ceb76f4a874e15b53d0f56677e4197a99",
@@ -4929,9 +5199,9 @@
       "reason": null
     },
     {
-      "source_key": "unity:tales-of-the-shire-a-the-lord-of-the-ringstm-game",
-      "game_id": "tales-of-the-shire-a-the-lord-of-the-rings-game",
-      "title": "Tales of the Shire: A The Lord of The Rings™ Game",
+      "source_key": "unity:tales-of-xillia-remastered",
+      "game_id": "tales-of-xillia-remastered",
+      "title": "Tales of Xillia Remastered",
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "5b068f5bfef5d5dc5694d49601f5172ceb76f4a874e15b53d0f56677e4197a99",
@@ -5169,6 +5439,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:v-rising",
+      "game_id": "v-rising",
+      "title": "V Rising",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "51c55413a5eb1070f2b88023e1311e0b5efde53c1e43c6807a926fccfd9e1b09",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:valley",
       "game_id": "valley",
       "title": "Valley",
@@ -5189,26 +5469,6 @@
       "reason": null
     },
     {
-      "source_key": "unity:void-crew",
-      "game_id": "void-crew",
-      "title": "Void Crew",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "19411c42f9c12f8c15d4ae9ac28d3d0df76819231012c591614f58cdb3decc31",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
-      "source_key": "unity:v-rising",
-      "game_id": "v-rising",
-      "title": "V Rising",
-      "section": "unity",
-      "profile_source": "unityengine",
-      "note_sha256": "51c55413a5eb1070f2b88023e1311e0b5efde53c1e43c6807a926fccfd9e1b09",
-      "disposition": "curated_manual",
-      "reason": null
-    },
-    {
       "source_key": "unity:vigil-the-longest-night",
       "game_id": "vigil-the-longest-night",
       "title": "Vigil: The Longest Night",
@@ -5217,6 +5477,16 @@
       "note_sha256": "a003d0b8afc7a286c18ce32e3ce0859c1a93a201b3a24a3644e42517a3a950aa",
       "disposition": "omitted",
       "reason": "The 32-bit requirement is represented by the manifest architecture."
+    },
+    {
+      "source_key": "unity:void-crew",
+      "game_id": "void-crew",
+      "title": "Void Crew",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "19411c42f9c12f8c15d4ae9ac28d3d0df76819231012c591614f58cdb3decc31",
+      "disposition": "curated_manual",
+      "reason": null
     },
     {
       "source_key": "unity:warhammer-40-000-shootas-blood-teef",
@@ -5265,6 +5535,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:wicked-seed",
+      "game_id": "wicked-seed",
+      "title": "Wicked Seed",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "2639203cb7c66f3a175877d5c165c4fab72dbaef277ab89ac0ec4c678a691d91",
       "disposition": "curated_manual",
       "reason": null
     },

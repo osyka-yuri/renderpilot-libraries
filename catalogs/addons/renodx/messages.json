@@ -754,6 +754,22 @@
       }
     },
     {
+      "id": "renodx.ue.extended.cthulu.the.cosmin.abyss.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.dead.as.disco.1",
       "fallback_text": "Enable the game's native HDR.",
       "kind": "game_setting",
@@ -799,6 +815,38 @@
         "ru": "Оставьте нативный HDR игры выключенным: нативный HDR-путь работает некорректно.",
         "zh-Hans": "请保持游戏的原生 HDR 处于禁用状态；其原生 HDR 路径存在缺陷。",
         "zh-Hant": "請保持遊戲的原生 HDR 處於停用狀態；其原生 HDR 路徑存在缺陷。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.destroy.all.humans.2.reprobed.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.directive.8020.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
       }
     },
     {
@@ -866,6 +914,54 @@
       }
     },
     {
+      "id": "renodx.ue.extended.garfield.escape.from.monday.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.gears.of.war.e.day.1",
+      "fallback_text": "Enable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Aktiviere das native HDR des Spiels.",
+        "es": "Activa el HDR nativo del juego.",
+        "fr": "Activez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を有効にしてください。",
+        "pt-BR": "Ative o HDR nativo do jogo.",
+        "ru": "Включите нативный HDR в игре.",
+        "zh-Hans": "请启用游戏的原生 HDR。",
+        "zh-Hant": "請啟用遊戲的原生 HDR。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.gears.of.war.e.day.2",
+      "fallback_text": "Disable Easy Anti-Cheat before using the mod.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Deaktiviere Easy Anti-Cheat vor der Nutzung der Mod.",
+        "es": "Desactiva Easy Anti-Cheat antes de usar el mod.",
+        "fr": "Désactivez Easy Anti-Cheat avant d'utiliser ce mod.",
+        "ja": "この Mod を使用する前に、Easy Anti-Cheat を無効にしてください。",
+        "pt-BR": "Desative o Easy Anti-Cheat antes de usar o mod.",
+        "ru": "Отключите Easy Anti-Cheat перед использованием мода.",
+        "zh-Hans": "使用此 Mod 前请禁用 Easy Anti-Cheat。",
+        "zh-Hant": "使用此 Mod 前請停用 Easy Anti-Cheat。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.grounded.2.1",
       "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
       "kind": "engine_ini",
@@ -879,6 +975,22 @@
         "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
         "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
         "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.halo.campaign.evolved.1",
+      "fallback_text": "Enable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Aktiviere das native HDR des Spiels.",
+        "es": "Activa el HDR nativo del juego.",
+        "fr": "Activez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を有効にしてください。",
+        "pt-BR": "Ative o HDR nativo do jogo.",
+        "ru": "Включите нативный HDR в игре.",
+        "zh-Hans": "请启用游戏的原生 HDR。",
+        "zh-Hant": "請啟用遊戲的原生 HDR。"
       }
     },
     {
@@ -1103,6 +1215,22 @@
         "ru": "Проблемы с цветокоррекцией сохраняются.",
         "zh-Hans": "色彩分级问题依然存在。",
         "zh-Hant": "色彩分級問題依然存在。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.lost.soul.aside.1",
+      "fallback_text": "Enable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Aktiviere das native HDR des Spiels.",
+        "es": "Activa el HDR nativo del juego.",
+        "fr": "Activez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を有効にしてください。",
+        "pt-BR": "Ative o HDR nativo do jogo.",
+        "ru": "Включите нативный HDR в игре.",
+        "zh-Hans": "请启用游戏的原生 HDR。",
+        "zh-Hant": "請啟用遊戲的原生 HDR。"
       }
     },
     {
@@ -1346,6 +1474,22 @@
       }
     },
     {
+      "id": "renodx.ue.extended.silent.hill.townfall.1",
+      "fallback_text": "Enable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Aktiviere das native HDR des Spiels.",
+        "es": "Activa el HDR nativo del juego.",
+        "fr": "Activez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を有効にしてください。",
+        "pt-BR": "Ative o HDR nativo do jogo.",
+        "ru": "Включите нативный HDR в игре.",
+        "zh-Hans": "请启用游戏的原生 HDR。",
+        "zh-Hant": "請啟用遊戲的原生 HDR。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.solarpunk.1",
       "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
       "kind": "engine_ini",
@@ -1362,6 +1506,38 @@
       }
     },
     {
+      "id": "renodx.ue.extended.song.of.nunu.a.league.of.legends.story.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.star.wars.galactic.racertm.1",
+      "fallback_text": "Enable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Aktiviere das native HDR des Spiels.",
+        "es": "Activa el HDR nativo del juego.",
+        "fr": "Activez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を有効にしてください。",
+        "pt-BR": "Ative o HDR nativo do jogo.",
+        "ru": "Включите нативный HDR в игре.",
+        "zh-Hans": "请启用游戏的原生 HDR。",
+        "zh-Hant": "請啟用遊戲的原生 HDR。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.star.wars.zero.companytm.1",
       "fallback_text": "Enable the game's native HDR.",
       "kind": "game_setting",
@@ -1375,6 +1551,22 @@
         "ru": "Включите нативный HDR в игре.",
         "zh-Hans": "请启用游戏的原生 HDR。",
         "zh-Hant": "請啟用遊戲的原生 HDR。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.stellar.blade.1",
+      "fallback_text": "Disable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Deaktiviere das native HDR des Spiels.",
+        "es": "Desactiva el HDR nativo del juego.",
+        "fr": "Désactivez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を無効にしてください。",
+        "pt-BR": "Desative o HDR nativo do jogo.",
+        "ru": "Отключите нативный HDR в игре.",
+        "zh-Hans": "请禁用游戏的原生 HDR。",
+        "zh-Hant": "請停用遊戲的原生 HDR。"
       }
     },
     {
@@ -1471,6 +1663,22 @@
         "ru": "Включите нативный HDR в игре.",
         "zh-Hans": "请启用游戏的原生 HDR。",
         "zh-Hant": "請啟用遊戲的原生 HDR。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.tormented.souls.2.1",
+      "fallback_text": "Disable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Deaktiviere das native HDR des Spiels.",
+        "es": "Desactiva el HDR nativo del juego.",
+        "fr": "Désactivez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を無効にしてください。",
+        "pt-BR": "Desative o HDR nativo do jogo.",
+        "ru": "Отключите нативный HDR в игре.",
+        "zh-Hans": "请禁用游戏的原生 HDR。",
+        "zh-Hant": "請停用遊戲的原生 HDR。"
       }
     },
     {
@@ -2290,6 +2498,38 @@
       }
     },
     {
+      "id": "renodx.unity.wicked.seed.2",
+      "fallback_text": "Use Borderless Windowed mode.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Verwende den randlosen Fenstermodus.",
+        "es": "Usa el modo ventana sin bordes.",
+        "fr": "Utilisez le mode fenêtré sans bordures.",
+        "ja": "ボーダーレスウィンドウモードを使用してください。",
+        "pt-BR": "Use o modo janela sem bordas.",
+        "ru": "Используйте режим «В окне без рамки» (Borderless Windowed).",
+        "zh-Hans": "请使用无边框窗口模式。",
+        "zh-Hant": "請使用無邊框視窗模式。"
+      }
+    },
+    {
+      "id": "renodx.unity.wicked.seed.3",
+      "fallback_text": "Set the game's resolution scale to 100%.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Stelle die Auflösungsskalierung im Spiel auf 100 % ein.",
+        "es": "Ajusta la escala de resolución del juego al 100 %.",
+        "fr": "Réglez l’échelle de résolution du jeu sur 100 %.",
+        "ja": "ゲーム内の解像度スケールを100%に設定してください。",
+        "pt-BR": "Defina a escala de resolução do jogo para 100%.",
+        "ru": "Установите масштаб разрешения в игре на 100 %.",
+        "zh-Hans": "将游戏内的分辨率缩放比例设为 100%。",
+        "zh-Hant": "將遊戲內的解析度縮放比例設為 100%。"
+      }
+    },
+    {
       "id": "renodx.unity.windowed",
       "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode.",
       "kind": "compatibility",
@@ -2802,22 +3042,6 @@
       }
     },
     {
-      "id": "renodx.unreal.lost.soul.aside.1",
-      "fallback_text": "Disable the game's native HDR.",
-      "kind": "game_setting",
-      "context": "guidance.game_setting",
-      "translations": {
-        "de": "Deaktiviere das native HDR des Spiels.",
-        "es": "Desactiva el HDR nativo del juego.",
-        "fr": "Désactivez le HDR natif du jeu.",
-        "ja": "ゲームのネイティブ HDR を無効にしてください。",
-        "pt-BR": "Desative o HDR nativo do jogo.",
-        "ru": "Отключите нативный HDR в игре.",
-        "zh-Hans": "请禁用游戏的原生 HDR。",
-        "zh-Hant": "請停用遊戲的原生 HDR。"
-      }
-    },
-    {
       "id": "renodx.unreal.marvel.s.midnight.suns.1",
       "fallback_text": "Disable the game's native HDR.",
       "kind": "game_setting",
@@ -3151,38 +3375,6 @@
         "ru": "Для применения изменений ползунков может потребоваться смена сцены.",
         "zh-Hans": "滑块更改可能需要切换场景才能生效。",
         "zh-Hant": "滑桿變更可能需要切換場景才會生效。"
-      }
-    },
-    {
-      "id": "renodx.unreal.stellar.blade.1",
-      "fallback_text": "Disable the game's native HDR.",
-      "kind": "game_setting",
-      "context": "guidance.game_setting",
-      "translations": {
-        "de": "Deaktiviere das native HDR des Spiels.",
-        "es": "Desactiva el HDR nativo del juego.",
-        "fr": "Désactivez le HDR natif du jeu.",
-        "ja": "ゲームのネイティブ HDR を無効にしてください。",
-        "pt-BR": "Desative o HDR nativo do jogo.",
-        "ru": "Отключите нативный HDR в игре.",
-        "zh-Hans": "请禁用游戏的原生 HDR。",
-        "zh-Hant": "請停用遊戲的原生 HDR。"
-      }
-    },
-    {
-      "id": "renodx.unreal.stellar.blade.2",
-      "fallback_text": "On ultrawide displays, use the in-game Auto aspect ratio to avoid NIKKE minigame problems.",
-      "kind": "game_setting",
-      "context": "guidance.game_setting",
-      "translations": {
-        "de": "Verwende auf Ultrawide-Bildschirmen das spieleeigene Seitenverhältnis Auto, um Probleme im NIKKE-Minispiel zu vermeiden.",
-        "es": "En pantallas ultrapanorámicas, usa la relación de aspecto Auto del juego para evitar problemas en el minijuego de NIKKE.",
-        "fr": "Sur les écrans ultra-larges, utilisez le format d'image Auto du jeu pour éviter les problèmes dans le mini-jeu NIKKE.",
-        "ja": "ウルトラワイドディスプレイでは、NIKKE ミニゲームの不具合を回避するため、ゲーム内のアスペクト比設定を「自動」にしてください。",
-        "pt-BR": "Em telas ultrawide, use a proporção de tela Automática do jogo para evitar problemas no minijogo de NIKKE.",
-        "ru": "На ультрашироких мониторах используйте соотношение сторон «Авто», чтобы избежать проблем в мини-игре NIKKE.",
-        "zh-Hans": "在超宽屏显示器上，请使用游戏内的“自动”宽高比以避免 NIKKE 小游戏出现问题。",
-        "zh-Hant": "在超寬螢幕顯示器上，請使用遊戲內的「自動」長寬比以避免 NIKKE 小遊戲出現問題。"
       }
     },
     {

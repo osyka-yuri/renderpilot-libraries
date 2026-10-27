@@ -107,6 +107,8 @@ export const RUSSIAN_TRANSLATIONS = Object.freeze({
     "Установите качество графики в игре на «Среднее» (Medium) или выше.",
   "Set the game's Rendering Quality to 100%.":
     "Установите качество рендеринга в игре на 100%.",
+  "Set the game's resolution scale to 100%.":
+    "Установите масштаб разрешения в игре на 100 %.",
   "Use Borderless Windowed mode.":
     "Используйте режим «В окне без рамки» (Borderless Windowed).",
   "Use Borderless display mode.": "Используйте режим экрана Borderless.",
@@ -430,6 +432,8 @@ export const GERMAN_TRANSLATIONS = Object.freeze({
     "Stelle die Grafikqualität des Spiels auf Medium oder höher.",
   "Set the game's Rendering Quality to 100%.":
     "Stelle die Rendering-Qualität des Spiels auf 100 %.",
+  "Set the game's resolution scale to 100%.":
+    "Stelle die Auflösungsskalierung im Spiel auf 100 % ein.",
   "Use Borderless Windowed mode.": "Verwende den randlosen Fenstermodus.",
   "Use Borderless display mode.": "Verwende den randlosen Anzeigemodus.",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":
@@ -748,6 +752,8 @@ export const FRENCH_TRANSLATIONS = Object.freeze({
     "Réglez la qualité graphique du jeu sur Moyenne ou supérieure.",
   "Set the game's Rendering Quality to 100%.":
     "Réglez la qualité de rendu du jeu sur 100 %.",
+  "Set the game's resolution scale to 100%.":
+    "Réglez l’échelle de résolution du jeu sur 100 %.",
   "Use Borderless Windowed mode.": "Utilisez le mode fenêtré sans bordures.",
   "Use Borderless display mode.": "Utilisez le mode d'affichage sans bordures.",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":
@@ -1065,6 +1071,8 @@ export const SPANISH_TRANSLATIONS = Object.freeze({
     "Establece la calidad gráfica del juego en Media o superior.",
   "Set the game's Rendering Quality to 100%.":
     "Establece la calidad de renderizado del juego en 100 %.",
+  "Set the game's resolution scale to 100%.":
+    "Ajusta la escala de resolución del juego al 100 %.",
   "Use Borderless Windowed mode.": "Usa el modo ventana sin bordes.",
   "Use Borderless display mode.": "Usa el modo de pantalla sin bordes.",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":
@@ -1386,6 +1394,8 @@ export const JAPANESE_TRANSLATIONS = Object.freeze({
     "ゲームのグラフィック品質を「中」以上に設定してください。",
   "Set the game's Rendering Quality to 100%.":
     "ゲームのレンダリング品質を 100% に設定してください。",
+  "Set the game's resolution scale to 100%.":
+    "ゲーム内の解像度スケールを100%に設定してください。",
   "Use Borderless Windowed mode.": "ボーダーレスウィンドウモードを使用してください。",
   "Use Borderless display mode.": "ボーダーレス表示モードを使用してください。",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":
@@ -1706,6 +1716,8 @@ export const BRAZILIAN_PORTUGUESE_TRANSLATIONS = Object.freeze({
     "Defina a qualidade gráfica do jogo como Média ou superior.",
   "Set the game's Rendering Quality to 100%.":
     "Defina a qualidade de renderização do jogo como 100%.",
+  "Set the game's resolution scale to 100%.":
+    "Defina a escala de resolução do jogo para 100%.",
   "Use Borderless Windowed mode.": "Use o modo janela sem bordas.",
   "Use Borderless display mode.": "Use o modo de exibição sem bordas.",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":
@@ -2013,6 +2025,7 @@ export const SIMPLIFIED_CHINESE_TRANSLATIONS = Object.freeze({
   "Set the game's Graphics Quality to Medium or higher.":
     "请将游戏的图形质量设为中等或更高。",
   "Set the game's Rendering Quality to 100%.": "请将游戏的渲染质量设为 100%。",
+  "Set the game's resolution scale to 100%.": "将游戏内的分辨率缩放比例设为 100%。",
   "Use Borderless Windowed mode.": "请使用无边框窗口模式。",
   "Use Borderless display mode.": "请使用无边框显示模式。",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":
@@ -2300,6 +2313,7 @@ export const TRADITIONAL_CHINESE_TRANSLATIONS = Object.freeze({
   "Set the game's Graphics Quality to Medium or higher.":
     "請將遊戲的畫面品質設為中等或更高。",
   "Set the game's Rendering Quality to 100%.": "請將遊戲的渲染品質設為 100%。",
+  "Set the game's resolution scale to 100%.": "將遊戲內的解析度縮放比例設為 100%。",
   "Use Borderless Windowed mode.": "請使用無邊框視窗模式。",
   "Use Borderless display mode.": "請使用無邊框顯示模式。",
   "SMAA and SMAA + TAA are unsupported; use TAA or disable anti-aliasing.":

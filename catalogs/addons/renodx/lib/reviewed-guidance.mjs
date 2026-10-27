@@ -224,10 +224,14 @@ assign(keyList("main", "s-t-a-l-k-e-r-2-heart-of-chornobyl"), [
 assign(
   keyList(
     "ue-extended",
-    "assetto-corsa-rally borderlands-4 dead-as-disco deep-rock-galactic far-far-west ghostwire-tokyo jusant mafia-the-old-country s-t-a-l-k-e-r-2-heart-of-chornobyl star-wars-zero-companytm tokyo-xtreme-racer until-dawn",
+    "assetto-corsa-rally avowed borderlands-4 dead-as-disco deep-rock-galactic far-far-west ghostwire-tokyo halo-campaign-evolved jusant lost-soul-aside mafia-the-old-country s-t-a-l-k-e-r-2-heart-of-chornobyl silent-hill-townfall star-wars-galactic-racertm star-wars-zero-companytm tokyo-xtreme-racer until-dawn",
   ),
   [gameSetting("Native HDR", "On", "Enable the game's native HDR.")],
 );
+assign(keyList("ue-extended", "gears-of-war-e-day"), [
+  gameSetting("Native HDR", "On", "Enable the game's native HDR."),
+  gameSetting("Easy Anti-Cheat", "Off", "Disable Easy Anti-Cheat before using the mod."),
+]);
 assign(keyList("ue-extended", "days-gone"), [
   gameSetting("Native HDR", "On", "Enable the game's native HDR."),
   info("This configuration has limited playtesting."),
@@ -270,7 +274,7 @@ assign(
 assign(
   keyList(
     "ue-extended",
-    "goat-simulator-3 ghostrunner hydroneer little-nightmares little-nightmares-enhanced scorn stray the-alters vholume",
+    "blacktail goat-simulator-3 ghostrunner hydroneer little-nightmares little-nightmares-enhanced scorn stray the-alters vholume",
   ),
   [],
   { inheritCommon: true, processingPath: "upgrade" },
@@ -293,7 +297,7 @@ omit(
 assign(
   keyList(
     "ue-extended",
-    "bodycam choo-choo-charles conan-exiles-enhanced crab-champions everwind grounded-2 inzoi marsupilami-2-salsa-palombia meccha-chameleon mortal-shell-ii nikoderiko-the-magical-world nobody-wants-to-die quarantine-zone-the-last-check rv-there-yet satisfactory solarpunk subnautica-2 system-shock-remake the-blood-of-dawnwalker the-enjenir-the-engineering-physics-building-simulator",
+    "bodycam choo-choo-charles code-vein-ii conan-exiles-enhanced crab-champions cthulu-the-cosmin-abyss destroy-all-humans-2-reprobed directive-8020 everwind garfield-escape-from-monday grounded-2 inzoi marsupilami-2-salsa-palombia meccha-chameleon mortal-shell-ii nikoderiko-the-magical-world nobody-wants-to-die quarantine-zone-the-last-check rv-there-yet satisfactory solarpunk song-of-nunu-a-league-of-legends-story subnautica-2 system-shock-remake the-blood-of-dawnwalker the-enjenir-the-engineering-physics-building-simulator",
   ),
   [
     ini(
@@ -339,7 +343,7 @@ assign(
   { processingPath: "upgrade" },
 );
 assign(
-  keyList("ue-extended", "end-of-abyss"),
+  keyList("ue-extended", "end-of-abyss eternal-strands"),
   [
     addonSetting(
       "R10G10B10A2_UNORM",
@@ -362,7 +366,10 @@ assign(
   { processingPath: "upgrade" },
 );
 assign(
-  keyList("ue-extended", "pacific-drive the-forgotten-city threshold"),
+  keyList(
+    "ue-extended",
+    "destroy-all-humans pacific-drive sprawl the-forgotten-city threshold",
+  ),
   [
     addonSetting(
       "B8G8R8A8_TYPELESS",
@@ -371,6 +378,43 @@ assign(
     ),
   ],
   { processingPath: "upgrade" },
+);
+assign(
+  keyList("ue-extended", "like-a-dragon-ishin"),
+  [
+    addonSettings([
+      { name: "R8G8B8A8_TYPELESS", value: "Output Size" },
+      { name: "R10G10B10A2_UNORM", value: "Output Size" },
+    ]),
+  ],
+  { processingPath: "upgrade" },
+);
+assign(
+  keyList("ue-extended", "state-of-decay-2"),
+  [
+    addonSettings([
+      { name: "B8G8R8A8_TYPELESS", value: "Output Size" },
+      { name: "R10G10B10A2_UNORM", value: "Output Size" },
+    ]),
+  ],
+  { processingPath: "upgrade" },
+);
+assign(
+  keyList("ue-extended", "stellar-blade"),
+  [gameSetting("Native HDR", "Off", "Disable the game's native HDR.")],
+  { inheritCommon: true, processingPath: "upgrade" },
+);
+assign(
+  keyList("ue-extended", "tormented-souls-2"),
+  [
+    gameSetting("Native HDR", "Off", "Disable the game's native HDR."),
+    addonSetting(
+      "R10G10B10A2_UNORM",
+      "Output Size",
+      "Set the R10G10B10A2_UNORM resource upgrade to Output Size.",
+    ),
+  ],
+  { inheritCommon: true, processingPath: "upgrade" },
 );
 assign(
   keyList("ue-extended", "frostpunk-2"),
@@ -1529,7 +1573,7 @@ assign(
 assign(
   keyList(
     "unity",
-    "agatha-christie-death-on-the-nile all-we-need altheia-the-wrath-of-aferi amerzone-the-explorer-s-legacy-2025 bendy-secrets-of-the-machine blazblue-entropy-effect bo-path-of-the-teal-lotus bounty-star breachway bubsy-4d cakey-s-twisted-bakery children-of-the-sun circuit-superstars coridden dave-the-diver deep-rock-survivor dino-topia dracomaton eiyuden-chronicle-hundred-heroes eiyuden-chronicle-rising el-paso-elsewhere encased enigma-of-fear ereban-shadow-legacy five-nights-at-freddy-s-into-the-pit flashback-2 forgotten-23 gatekeeper giggleland-terry-s-vegetable-patch halve-demo hardspace-shipbreaker hordelord hunter-hunter-nen-impact in-sound-mind killer-frequency kill-knight little-kitty-big-city little-noah-scion-of-paradise little-witch-in-the-woods lost-in-random mai-child-of-ages maid-of-sker metal-hellsinger my-friendly-neighborhood neoverse node-the-last-favor-of-the-antarii operation-wolf-returns-first-mission oxenfree-ii-lost-signals reka reveil road-96-mile-0 shadow-labyrinth shadow-of-the-road-demo shadows-of-doubt shift-87 soulstone-survivors spacebase-startopia super-crazy-rhythm-castle sworn syberia-remastered syberia-the-world-before tainted-grail-conquest teenage-mutant-ninja-turtles-mutants-unleashed the-karters-2-turbo-charged the-knightling the-rogue-prince-of-persia tin-can tinykin touhou-dystopian wavetale we-were-here-expeditions-the-friendship witchspring-r-the-story-of-pieberry yooka-replaylee",
+    "agatha-christie-death-on-the-nile all-we-need altheia-the-wrath-of-aferi amerzone-the-explorer-s-legacy-2025 bendy-secrets-of-the-machine blazblue-entropy-effect bo-path-of-the-teal-lotus bounty-star breachway bubsy-4d bye-sweet-carole cakey-s-twisted-bakery children-of-the-sun circuit-superstars coridden dave-the-diver deep-rock-survivor demon-tides dino-topia dracomaton eiyuden-chronicle-hundred-heroes eiyuden-chronicle-rising el-paso-elsewhere encased enigma-of-fear ereban-shadow-legacy five-nights-at-freddy-s-into-the-pit flashback-2 forgotten-23 gatekeeper giggleland-terry-s-vegetable-patch halve-demo hardspace-shipbreaker hordelord hunter-hunter-nen-impact in-sound-mind killer-frequency kill-knight little-kitty-big-city little-noah-scion-of-paradise little-witch-in-the-woods lost-in-random mai-child-of-ages maid-of-sker metal-hellsinger my-friendly-neighborhood neoverse node-the-last-favor-of-the-antarii operation-wolf-returns-first-mission oxenfree-ii-lost-signals reka reveil road-96-mile-0 shadow-labyrinth shadow-of-the-road-demo shadows-of-doubt shift-87 soulstone-survivors spacebase-startopia super-crazy-rhythm-castle sworn syberia-remastered syberia-the-world-before tainted-grail-conquest teenage-mutant-ninja-turtles-mutants-unleashed the-karters-2-turbo-charged the-knightling the-rogue-prince-of-persia tin-can tinykin touhou-dystopian wavetale we-were-here-expeditions-the-friendship witchspring-r-the-story-of-pieberry yooka-replaylee",
   ),
   [
     addonSetting(
@@ -2396,7 +2440,7 @@ pending(
   "Upstream format and encoding adjustments pending manual review.",
 );
 assign(
-  keyList("unity", "a-short-hike dusk inscryption"),
+  keyList("unity", "a-short-hike actraiser-renaissance dusk inscryption"),
   [
     addonSettings([
       { name: "Swapchain Encoding", value: "Gamma" },
@@ -2406,13 +2450,37 @@ assign(
   { inheritCommon: true },
 );
 assign(
-  keyList("unity", "the-room-two the-room-three"),
+  keyList("unity", "chainstaff the-room-two the-room-three"),
   [addonSetting("Swapchain Encoding", "Gamma", "Set Swapchain Encoding to Gamma.")],
   { inheritCommon: true },
 );
 assign(
-  keyList("unity", "the-wandering-village"),
+  keyList("unity", "butcher-s-creek lucius-iii the-wandering-village"),
   [addonSetting("Swapchain Proxy", "On", "Enable Swapchain Proxy.")],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "minishoot-adventures"),
+  [
+    addonSetting(
+      "Compatibility Scaling Offset",
+      "+1",
+      "Set Compatibility Scaling Offset to +1.",
+    ),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "wicked-seed"),
+  [
+    addonSetting(
+      "R8G8B8A8_TYPELESS",
+      "Upgrade",
+      "Set the R8G8B8A8_TYPELESS resource upgrade to Output Size.",
+    ),
+    gameSetting("Display Mode", "Borderless Windowed", "Use Borderless Windowed mode."),
+    gameSetting("Resolution Scale", "100%", "Set the game's resolution scale to 100%."),
+  ],
   { inheritCommon: true },
 );
 pending(

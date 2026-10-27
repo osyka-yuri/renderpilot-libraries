@@ -47,6 +47,9 @@
   "abzu": {
     "game_target_ids": ["abzu"]
   },
+  "actraiser-renaissance": {
+    "game_target_ids": ["actraiser-renaissance"]
+  },
   "adorable-adventures": {
     "game_target_ids": ["adorable-adventures"]
   },
@@ -350,6 +353,9 @@
   "battletech": {
     "game_target_ids": ["battletech"]
   },
+  "battletoads": {
+    "game_target_ids": ["battletoads"]
+  },
   "becalm": {
     "game_target_ids": ["becalm"]
   },
@@ -489,6 +495,12 @@
   "burglin-gnomes": {
     "game_target_ids": ["burglin-gnomes"]
   },
+  "butcher-s-creek": {
+    "game_target_ids": ["butcher-s-creek"]
+  },
+  "bye-sweet-carole": {
+    "game_target_ids": ["bye-sweet-carole"]
+  },
   "cairn": {
     "game_target_ids": ["cairn"]
   },
@@ -545,6 +557,9 @@
   },
   "chained-together": {
     "game_target_ids": ["chained-together"]
+  },
+  "chainstaff": {
+    "game_target_ids": ["chainstaff"]
   },
   "chernobylite": {
     "game_target_ids": ["chernobylite"]
@@ -666,6 +681,9 @@
     },
     "game_target_ids": ["crysis-remastered"]
   },
+  "cthulu-the-cosmin-abyss": {
+    "game_target_ids": ["cthulhu-the-cosmic-abyss"]
+  },
   "ctrl-alt-ego": {
     "game_target_ids": ["ctrl-alt-ego"]
   },
@@ -772,11 +790,20 @@
   "demon-slayer-kny-hinokami-chronicles": {
     "game_target_ids": ["demon-slayer-kny-hinokami-chronicles"]
   },
+  "demon-tides": {
+    "game_target_ids": ["demon-tides"]
+  },
   "derail-valley": {
     "game_target_ids": ["derail-valley"]
   },
   "descenders": {
     "game_target_ids": ["descenders"]
+  },
+  "destroy-all-humans": {
+    "game_target_ids": ["destroy-all-humans"]
+  },
+  "destroy-all-humans-2-reprobed": {
+    "game_target_ids": ["destroy-all-humans-2-reprobed"]
   },
   "deus-ex-mankind-divided": {
     "game_target_ids": ["deus-ex-mankind-divided"]
@@ -795,6 +822,9 @@
   },
   "diplomacy-is-not-an-option": {
     "game_target_ids": ["diplomacy-is-not-an-option"]
+  },
+  "directive-8020": {
+    "game_target_ids": ["directive-8020"]
   },
   "dirt-4": {
     "external": {
@@ -982,6 +1012,9 @@
   "escape-the-backrooms": {
     "game_target_ids": ["escape-the-backrooms"]
   },
+  "eternal-strands": {
+    "game_target_ids": ["eternal-strands"]
+  },
   "eternal-threads": {
     "game_target_ids": ["eternal-threads"]
   },
@@ -1142,6 +1175,9 @@
   "gang-beasts": {
     "game_target_ids": ["gang-beasts"]
   },
+  "garfield-escape-from-monday": {
+    "game_target_ids": ["garfield-escape-from-monday"]
+  },
   "garry-s-mod": {
     "game_target_ids": ["garry-s-mod"],
     "slug": "sourceengine",
@@ -1155,6 +1191,9 @@
       "url": "https://www.nexusmods.com/gearsofwar4/mods/1",
       "label_key": "renodx.external.nexus"
     }
+  },
+  "gears-of-war-e-day": {
+    "game_target_ids": ["gears-of-war-e-day"]
   },
   "gedonia": {
     "game_target_ids": ["gedonia"]
@@ -1273,6 +1312,9 @@
   },
   "half-sword": {
     "game_target_ids": ["half-sword"]
+  },
+  "halo-campaign-evolved": {
+    "game_target_ids": ["halo-campaign-evolved"]
   },
   "halve-demo": {
     "game_target_ids": ["halve-demo"]
@@ -1587,6 +1629,9 @@
     "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64",
     "game_target_ids": ["like-a-dragon-infinite-wealth"]
   },
+  "like-a-dragon-ishin": {
+    "game_target_ids": ["like-a-dragon-ishin"]
+  },
   "like-a-dragon-pirate-yakuza-in-hawaii": {
     "download_url": "https://marat569.github.io/renodx/renodx-yakuzapirates.addon64",
     "game_target_ids": ["like-a-dragon-pirate-yakuza-in-hawaii"]
@@ -1656,6 +1701,9 @@
   },
   "lost-words-beyond-the-page": {
     "game_target_ids": ["lost-words-beyond-the-page"]
+  },
+  "lucius-iii": {
+    "game_target_ids": ["lucius-iii"]
   },
   "lumines-arise": {
     "game_target_ids": ["lumines-arise"]
@@ -1762,6 +1810,9 @@
   },
   "minds-beneath-us": {
     "game_target_ids": ["minds-beneath-us"]
+  },
+  "minishoot-adventures": {
+    "game_target_ids": ["minishoot-adventures"]
   },
   "mirror-s-edge": {
     "external": {
@@ -2383,6 +2434,9 @@
   "silent-hill-f": {
     "game_target_ids": ["silent-hill-f"]
   },
+  "silent-hill-townfall": {
+    "game_target_ids": ["silent-hill-townfall"]
+  },
   "silver-pines": {
     "game_target_ids": ["silver-pines"]
   },
@@ -2424,6 +2478,9 @@
   },
   "solateria": {
     "game_target_ids": ["solateria"]
+  },
+  "song-of-nunu-a-league-of-legends-story": {
+    "game_target_ids": ["song-of-nunu"]
   },
   "song-of-the-deep": {
     "game_target_ids": ["song-of-the-deep"]
@@ -2485,6 +2542,9 @@
   "spooky-s-jump-scare-mansion-hd-renovation": {
     "game_target_ids": ["spooky-s-jump-scare-mansion-hd-renovation"]
   },
+  "sprawl": {
+    "game_target_ids": ["sprawl"]
+  },
   "spyro-reignited-trilogy": {
     "game_target_ids": ["spyro-reignited-trilogy"]
   },
@@ -2497,6 +2557,9 @@
   "star-trucker": {
     "game_target_ids": ["star-trucker"]
   },
+  "star-wars-galactic-racertm": {
+    "game_target_ids": ["star-wars-galactic-racer"]
+  },
   "star-wars-jedi-survivor": {
     "game_target_ids": ["jedi-survivor"]
   },
@@ -2508,6 +2571,9 @@
   },
   "starfield": {
     "game_target_ids": ["starfield"]
+  },
+  "state-of-decay-2": {
+    "game_target_ids": ["state-of-decay-2"]
   },
   "steamworld-build": {
     "game_target_ids": ["steamworld-build"]
@@ -2892,6 +2958,9 @@
   "the-upturned": {
     "game_target_ids": ["the-upturned"]
   },
+  "the-walking-dead-streets-of-survival": {
+    "game_target_ids": ["the-walking-dead-streets-of-survival"]
+  },
   "the-wandering-village": {
     "game_target_ids": ["the-wandering-village"]
   },
@@ -3136,6 +3205,9 @@
   },
   "whisper-of-the-house": {
     "game_target_ids": ["whisper-of-the-house"]
+  },
+  "wicked-seed": {
+    "game_target_ids": ["wicked-seed"]
   },
   "wildmender": {
     "game_target_ids": ["wildmender"]

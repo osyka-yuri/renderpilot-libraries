@@ -2127,6 +2127,16 @@
     "id": "zenless-zone-zero"
   },
   {
+    "name": "A Way Out",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "construction",
+    "id": "a-way-out",
+    "notes": "Upgrade Path: On. Lacks testing.",
+    "source_key": "ue-extended:a-way-out",
+    "section": "ue-extended"
+  },
+  {
     "name": "Abiotic Factor",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2177,16 +2187,6 @@
     "section": "ue-extended"
   },
   {
-    "name": "A Way Out",
-    "slug": "ue-extended",
-    "arch": "X64",
-    "status": "construction",
-    "id": "a-way-out",
-    "notes": "Upgrade Path: On. Lacks testing.",
-    "source_key": "ue-extended:a-way-out",
-    "section": "ue-extended"
-  },
-  {
     "name": "Black Myth: Wukong",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2197,13 +2197,13 @@
     "section": "ue-extended"
   },
   {
-    "name": "Borderlands 4",
+    "name": "BLACKTAIL",
     "slug": "ue-extended",
     "arch": "X64",
     "status": "working",
-    "id": "borderlands-4",
-    "notes": "Native HDR",
-    "source_key": "ue-extended:borderlands-4",
+    "id": "blacktail",
+    "notes": "Upgrade Path: On",
+    "source_key": "ue-extended:blacktail",
     "section": "ue-extended"
   },
   {
@@ -2214,6 +2214,16 @@
     "id": "bodycam",
     "notes": "Engine.ini",
     "source_key": "ue-extended:bodycam",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Borderlands 4",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "borderlands-4",
+    "notes": "Native HDR",
+    "source_key": "ue-extended:borderlands-4",
     "section": "ue-extended"
   },
   {
@@ -2267,6 +2277,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Cthulu: The Cosmin Abyss",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "cthulu-the-cosmin-abyss",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:cthulu-the-cosmin-abyss",
+    "section": "ue-extended"
+  },
+  {
     "name": "Dead as Disco",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2307,6 +2327,36 @@
     "section": "ue-extended"
   },
   {
+    "name": "Destroy All Humans",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "destroy-all-humans",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "source_key": "ue-extended:destroy-all-humans",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Destroy All Humans! 2 Reprobed",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "destroy-all-humans-2-reprobed",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:destroy-all-humans-2-reprobed",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Directive 8020",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "directive-8020",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:directive-8020",
+    "section": "ue-extended"
+  },
+  {
     "name": "End of Abyss",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2324,6 +2374,16 @@
     "id": "escape-the-backrooms",
     "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Lacks testing.",
     "source_key": "ue-extended:escape-the-backrooms",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Eternal Strands",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "eternal-strands",
+    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`.",
+    "source_key": "ue-extended:eternal-strands",
     "section": "ue-extended"
   },
   {
@@ -2367,13 +2427,23 @@
     "section": "ue-extended"
   },
   {
-    "name": "Goat Simulator 3",
+    "name": "Garfield - Escape from Monday",
     "slug": "ue-extended",
     "arch": "X64",
     "status": "working",
-    "id": "goat-simulator-3",
-    "notes": "Upgrade Path: On",
-    "source_key": "ue-extended:goat-simulator-3",
+    "id": "garfield-escape-from-monday",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:garfield-escape-from-monday",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Gears of War: E-Day",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "gears-of-war-e-day",
+    "notes": "Native HDR. ReShade with addon support requires EAC being disabled.",
+    "source_key": "ue-extended:gears-of-war-e-day",
     "section": "ue-extended"
   },
   {
@@ -2395,6 +2465,16 @@
     "notes": "Limited to BT.709 `B8G8R8A8_TYPELESS` `Output Size`",
     "source_key": "unreal:ghostrunner-2",
     "section": "unreal"
+  },
+  {
+    "name": "Goat Simulator 3",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "goat-simulator-3",
+    "notes": "Upgrade Path: On",
+    "source_key": "ue-extended:goat-simulator-3",
+    "section": "ue-extended"
   },
   {
     "name": "Gothic 1 Remake",
@@ -2437,6 +2517,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Halo - Campaign Evolved",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "halo-campaign-evolved",
+    "notes": "Native HDR",
+    "source_key": "ue-extended:halo-campaign-evolved",
+    "section": "ue-extended"
+  },
+  {
     "name": "Hellblade II: Senua’s Saga",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2464,16 +2554,6 @@
     "id": "hydroneer",
     "notes": "Upgrade Path: On",
     "source_key": "ue-extended:hydroneer",
-    "section": "ue-extended"
-  },
-  {
-    "name": "The iDOLM@STER: Starlit Season",
-    "slug": "ue-extended",
-    "arch": "X64",
-    "status": "construction",
-    "id": "the-idolm-ster-starlit-season",
-    "notes": "Upgrade Path: On as Engine.ini edits overexposed the shading. DX11; refused to boot up DX12 as Low Level Fatal Error Line: 266 Camped to UI brightness has issues with Commu's blue lighting, as well for the stage lighting on the top. Small cameras with multiple idols during certain Commus does not highlight the HDR. `Upgrade Copy Destinations` `Off` `B8G8R8A8_TYPELESS` `Any Size`",
-    "source_key": "ue-extended:the-idolm-ster-starlit-season",
     "section": "ue-extended"
   },
   {
@@ -2527,6 +2607,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "Like a Dragon: Ishin!",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "like-a-dragon-ishin",
+    "notes": "Upgrade Path: On, `R8G8B8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`.",
+    "source_key": "ue-extended:like-a-dragon-ishin",
+    "section": "ue-extended"
+  },
+  {
     "name": "Little Nightmares",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2574,6 +2664,16 @@
     "id": "lords-of-the-fallen",
     "notes": "Native HDR. Tonemapping issues.",
     "source_key": "ue-extended:lords-of-the-fallen",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Lost Soul Aside",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "lost-soul-aside",
+    "notes": "Native HDR",
+    "source_key": "ue-extended:lost-soul-aside",
     "section": "ue-extended"
   },
   {
@@ -2757,6 +2857,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "SILENT HILL: Townfall",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "silent-hill-townfall",
+    "notes": "Native HDR",
+    "source_key": "ue-extended:silent-hill-townfall",
+    "section": "ue-extended"
+  },
+  {
     "name": "Solarpunk",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2767,6 +2877,36 @@
     "section": "ue-extended"
   },
   {
+    "name": "Song of Nunu: A League of Legends Story",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "song-of-nunu-a-league-of-legends-story",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:song-of-nunu-a-league-of-legends-story",
+    "section": "ue-extended"
+  },
+  {
+    "name": "SPRAWL",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "sprawl",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "source_key": "ue-extended:sprawl",
+    "section": "ue-extended"
+  },
+  {
+    "name": "STAR WARS: Galactic Racer™",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "star-wars-galactic-racertm",
+    "notes": "Native HDR",
+    "source_key": "ue-extended:star-wars-galactic-racertm",
+    "section": "ue-extended"
+  },
+  {
     "name": "STAR WARS Zero Company™",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2774,6 +2914,26 @@
     "id": "star-wars-zero-companytm",
     "notes": "Native HDR",
     "source_key": "ue-extended:star-wars-zero-companytm",
+    "section": "ue-extended"
+  },
+  {
+    "name": "State Of Decay 2",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "state-of-decay-2",
+    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`.",
+    "source_key": "ue-extended:state-of-decay-2",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Stellar Blade",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "stellar-blade",
+    "notes": "Upgrade Path: On. Disable in game HDR.",
+    "source_key": "ue-extended:stellar-blade",
     "section": "ue-extended"
   },
   {
@@ -2857,6 +3017,16 @@
     "section": "ue-extended"
   },
   {
+    "name": "The iDOLM@STER: Starlit Season",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "construction",
+    "id": "the-idolm-ster-starlit-season",
+    "notes": "Upgrade Path: On as Engine.ini edits overexposed the shading. DX11; refused to boot up DX12 as Low Level Fatal Error Line: 266 Camped to UI brightness has issues with Commu's blue lighting, as well for the stage lighting on the top. Small cameras with multiple idols during certain Commus does not highlight the HDR. `Upgrade Copy Destinations` `Off` `B8G8R8A8_TYPELESS` `Any Size`",
+    "source_key": "ue-extended:the-idolm-ster-starlit-season",
+    "section": "ue-extended"
+  },
+  {
     "name": "THRESHOLD",
     "slug": "ue-extended",
     "arch": "X64",
@@ -2874,6 +3044,16 @@
     "id": "tokyo-xtreme-racer",
     "notes": "Native HDR",
     "source_key": "ue-extended:tokyo-xtreme-racer",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Tormented Souls 2",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "tormented-souls-2",
+    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Turn off in game HDR.",
+    "source_key": "ue-extended:tormented-souls-2",
     "section": "ue-extended"
   },
   {
@@ -3018,14 +3198,6 @@
     "arch": "X64",
     "status": "construction",
     "id": "biomutant",
-    "section": "unreal"
-  },
-  {
-    "name": "BLACKTAIL",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "blacktail",
     "section": "unreal"
   },
   {
@@ -3683,16 +3855,6 @@
     "section": "unreal"
   },
   {
-    "name": "Lost Soul Aside",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "lost-soul-aside",
-    "notes": "Disable in-game HDR. `B8G8R8A8_TYPELESS` `Output Size`",
-    "source_key": "unreal:lost-soul-aside",
-    "section": "unreal"
-  },
-  {
     "name": "Marvel's Midnight Suns",
     "slug": "unrealengine",
     "arch": "X64",
@@ -4137,16 +4299,6 @@
     "section": "unreal"
   },
   {
-    "name": "Stellar Blade",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "stellar-blade",
-    "notes": "Disable in-game HDR. Ultrawide users should set aspect ratio to \"auto\" in-game to prevent issues with the NIKKE minigames.",
-    "source_key": "unreal:stellar-blade",
-    "section": "unreal"
-  },
-  {
     "name": "Styx: Shards of Darkness",
     "slug": "unrealengine",
     "arch": "X64",
@@ -4250,14 +4402,6 @@
     "id": "tiny-tina-s-wonderlands",
     "notes": "Disable in-game FidelityFX Sharpening. `Upgrade Copy Destinations` `On` `R8G8B8A8_TYPELESS` `Output Ratio`",
     "source_key": "unreal:tiny-tina-s-wonderlands",
-    "section": "unreal"
-  },
-  {
-    "name": "Tormented Souls 2",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "tormented-souls-2",
     "section": "unreal"
   },
   {
@@ -4422,6 +4566,16 @@
     "id": "a-short-hike",
     "notes": "32-bit. Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`.",
     "source_key": "unity:a-short-hike",
+    "section": "unity"
+  },
+  {
+    "name": "Actraiser Renaissance",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "actraiser-renaissance",
+    "notes": "Upgrade R8G8B8A8_TYPELESS to Any Size. Swapchain Encoding: Gamma.",
+    "source_key": "unity:actraiser-renaissance",
     "section": "unity"
   },
   {
@@ -4777,6 +4931,14 @@
     "section": "unity"
   },
   {
+    "name": "Battletoads",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "battletoads",
+    "section": "unity"
+  },
+  {
     "name": "Becalm",
     "slug": "unityengine",
     "arch": "X64",
@@ -5051,6 +5213,26 @@
     "section": "unity"
   },
   {
+    "name": "Butcher's Creek",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "butcher-s-creek",
+    "notes": "Enable Swapchain Proxy.",
+    "source_key": "unity:butcher-s-creek",
+    "section": "unity"
+  },
+  {
+    "name": "Bye Sweet Carole",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "bye-sweet-carole",
+    "notes": "Upgrade R11G11B10_FLOAT.",
+    "source_key": "unity:bye-sweet-carole",
+    "section": "unity"
+  },
+  {
     "name": "Cairn",
     "slug": "unityengine",
     "arch": "X64",
@@ -5079,13 +5261,13 @@
     "section": "unity"
   },
   {
-    "name": "Children of the Sun",
+    "name": "ChainStaff",
     "slug": "unityengine",
     "arch": "X64",
     "status": "working",
-    "id": "children-of-the-sun",
-    "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:children-of-the-sun",
+    "id": "chainstaff",
+    "notes": "Swapchain Encoding: Gamma.",
+    "source_key": "unity:chainstaff",
     "section": "unity"
   },
   {
@@ -5096,6 +5278,16 @@
     "id": "children-of-morta",
     "notes": "Enable Swapchain Proxy",
     "source_key": "unity:children-of-morta",
+    "section": "unity"
+  },
+  {
+    "name": "Children of the Sun",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "children-of-the-sun",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:children-of-the-sun",
     "section": "unity"
   },
   {
@@ -5263,6 +5455,14 @@
     "section": "unity"
   },
   {
+    "name": "DEAD LETTER DEPT.",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "dead-letter-dept",
+    "section": "unity"
+  },
+  {
     "name": "DeadCore Redux Demo",
     "slug": "unityengine",
     "arch": "X64",
@@ -5270,14 +5470,6 @@
     "id": "deadcore-redux-demo",
     "notes": "Upgrade R11G11B10_FLOAT. Tonemap/color grading not in real time",
     "source_key": "unity:deadcore-redux-demo",
-    "section": "unity"
-  },
-  {
-    "name": "DEAD LETTER DEPT.",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "dead-letter-dept",
     "section": "unity"
   },
   {
@@ -5289,6 +5481,16 @@
     "section": "unity"
   },
   {
+    "name": "Deep Rock Survivor",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "deep-rock-survivor",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:deep-rock-survivor",
+    "section": "unity"
+  },
+  {
     "name": "Deliver At All Costs",
     "slug": "unityengine",
     "arch": "X64",
@@ -5297,13 +5499,13 @@
     "section": "unity"
   },
   {
-    "name": "Deep Rock Survivor",
+    "name": "Demon Tides",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
-    "id": "deep-rock-survivor",
-    "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:deep-rock-survivor",
+    "status": "working",
+    "id": "demon-tides",
+    "notes": "Upgrade R11G11B10_FLOAT.",
+    "source_key": "unity:demon-tides",
     "section": "unity"
   },
   {
@@ -5397,6 +5599,16 @@
     "section": "unity"
   },
   {
+    "name": "Dread Templar",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "dread-templar",
+    "notes": "Works out of the box. Crashes when any settings are applied/saved but settings are saved anyways.",
+    "source_key": "unity:dread-templar",
+    "section": "unity"
+  },
+  {
     "name": "Dreamfall Chapters - The Final Cut",
     "slug": "unityengine",
     "arch": "X64",
@@ -5417,21 +5629,21 @@
     "section": "unity"
   },
   {
-    "name": "Dread Templar",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "dread-templar",
-    "notes": "Works out of the box. Crashes when any settings are applied/saved but settings are saved anyways.",
-    "source_key": "unity:dread-templar",
-    "section": "unity"
-  },
-  {
     "name": "DROS",
     "slug": "unityengine",
     "arch": "X64",
     "status": "construction",
     "id": "dros",
+    "section": "unity"
+  },
+  {
+    "name": "Drova Forsaken Kin",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "drova-forsaken-kin",
+    "notes": "Use fullscreen windowed borderless. Swapchain encoding set to gamma.",
+    "source_key": "unity:drova-forsaken-kin",
     "section": "unity"
   },
   {
@@ -5559,14 +5771,6 @@
     "section": "unity"
   },
   {
-    "name": "ELDERBORN",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "elderborn",
-    "section": "unity"
-  },
-  {
     "name": "El Paso, Elsewhere",
     "slug": "unityengine",
     "arch": "X64",
@@ -5577,13 +5781,11 @@
     "section": "unity"
   },
   {
-    "name": "End Transmission?",
+    "name": "ELDERBORN",
     "slug": "unityengine",
     "arch": "X64",
     "status": "construction",
-    "id": "end-transmission",
-    "notes": "Upgrade R10G10B10A2_TYPELESS & R11G11B10_FLOAT",
-    "source_key": "unity:end-transmission",
+    "id": "elderborn",
     "section": "unity"
   },
   {
@@ -5594,6 +5796,16 @@
     "id": "encased",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:encased",
+    "section": "unity"
+  },
+  {
+    "name": "End Transmission?",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "end-transmission",
+    "notes": "Upgrade R10G10B10A2_TYPELESS & R11G11B10_FLOAT",
+    "source_key": "unity:end-transmission",
     "section": "unity"
   },
   {
@@ -5617,16 +5829,6 @@
     "section": "unity"
   },
   {
-    "name": "Ereban - Shadow Legacy",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "ereban-shadow-legacy",
-    "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:ereban-shadow-legacy",
-    "section": "unity"
-  },
-  {
     "name": "Epistory - Typing Chronicles",
     "slug": "unityengine",
     "arch": "X64",
@@ -5634,6 +5836,16 @@
     "id": "epistory-typing-chronicles",
     "notes": "Enable Swapchain Proxy, Encoding: Gamma",
     "source_key": "unity:epistory-typing-chronicles",
+    "section": "unity"
+  },
+  {
+    "name": "Ereban - Shadow Legacy",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "ereban-shadow-legacy",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:ereban-shadow-legacy",
     "section": "unity"
   },
   {
@@ -5676,16 +5888,6 @@
     "arch": "X64",
     "status": "working",
     "id": "exo-rally-championship",
-    "section": "unity"
-  },
-  {
-    "name": "Drova Forsaken Kin",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "drova-forsaken-kin",
-    "notes": "Use fullscreen windowed borderless. Swapchain encoding set to gamma.",
-    "source_key": "unity:drova-forsaken-kin",
     "section": "unity"
   },
   {
@@ -6063,14 +6265,6 @@
     "section": "unity"
   },
   {
-    "name": "Hollowbody",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "hollowbody",
-    "section": "unity"
-  },
-  {
     "name": "Hollow Cocoon",
     "slug": "unityengine",
     "arch": "X64",
@@ -6078,6 +6272,14 @@
     "id": "hollow-cocoon",
     "notes": "Upgrade R11G11B10_FLOAT. Game's Rendering Quality setting should be 100%",
     "source_key": "unity:hollow-cocoon",
+    "section": "unity"
+  },
+  {
+    "name": "Hollowbody",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "hollowbody",
     "section": "unity"
   },
   {
@@ -6161,6 +6363,16 @@
     "section": "unity"
   },
   {
+    "name": "I Know a Guy: Shady Life Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "i-know-a-guy-shady-life-simulator",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:i-know-a-guy-shady-life-simulator",
+    "section": "unity"
+  },
+  {
     "name": "ICEY",
     "slug": "unityengine",
     "arch": "X64",
@@ -6171,13 +6383,13 @@
     "section": "unity"
   },
   {
-    "name": "I Know a Guy: Shady Life Simulator",
+    "name": "In Sound Mind",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
-    "id": "i-know-a-guy-shady-life-simulator",
+    "status": "working",
+    "id": "in-sound-mind",
     "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:i-know-a-guy-shady-life-simulator",
+    "source_key": "unity:in-sound-mind",
     "section": "unity"
   },
   {
@@ -6209,16 +6421,6 @@
     "section": "unity"
   },
   {
-    "name": "In Sound Mind",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "in-sound-mind",
-    "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:in-sound-mind",
-    "section": "unity"
-  },
-  {
     "name": "Iron Lung",
     "slug": "unityengine",
     "arch": "X64",
@@ -6243,19 +6445,19 @@
     "section": "unity"
   },
   {
-    "name": "ITORAH",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "itorah",
-    "section": "unity"
-  },
-  {
     "name": "It Steals",
     "slug": "unityengine",
     "arch": "X64",
     "status": "construction",
     "id": "it-steals",
+    "section": "unity"
+  },
+  {
+    "name": "ITORAH",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "itorah",
     "section": "unity"
   },
   {
@@ -6317,16 +6519,6 @@
     "section": "unity"
   },
   {
-    "name": "Killer Frequency",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "killer-frequency",
-    "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:killer-frequency",
-    "section": "unity"
-  },
-  {
     "name": "KILL KNIGHT",
     "slug": "unityengine",
     "arch": "X64",
@@ -6334,6 +6526,16 @@
     "id": "kill-knight",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:kill-knight",
+    "section": "unity"
+  },
+  {
+    "name": "Killer Frequency",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "killer-frequency",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:killer-frequency",
     "section": "unity"
   },
   {
@@ -6537,6 +6739,16 @@
     "section": "unity"
   },
   {
+    "name": "Lucius III",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "lucius-iii",
+    "notes": "Enable Swapchain Proxy.",
+    "source_key": "unity:lucius-iii",
+    "section": "unity"
+  },
+  {
     "name": "Lumines Arise",
     "slug": "unityengine",
     "arch": "X64",
@@ -6647,6 +6859,16 @@
     "section": "unity"
   },
   {
+    "name": "Minishoot Adventures",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "minishoot-adventures",
+    "notes": "Compatibility Scaling offset +1.",
+    "source_key": "unity:minishoot-adventures",
+    "section": "unity"
+  },
+  {
     "name": "MiSide",
     "slug": "unityengine",
     "arch": "X64",
@@ -6731,11 +6953,13 @@
     "section": "unity"
   },
   {
-    "name": "Mycopunk",
+    "name": "My Friend Pedro",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "working",
-    "id": "mycopunk",
+    "status": "construction",
+    "id": "my-friend-pedro",
+    "notes": "Enable Swapchain Proxy. Tonemap/CG not in real time (restart level to reload)",
+    "source_key": "unity:my-friend-pedro",
     "section": "unity"
   },
   {
@@ -6749,13 +6973,11 @@
     "section": "unity"
   },
   {
-    "name": "My Friend Pedro",
+    "name": "Mycopunk",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
-    "id": "my-friend-pedro",
-    "notes": "Enable Swapchain Proxy. Tonemap/CG not in real time (restart level to reload)",
-    "source_key": "unity:my-friend-pedro",
+    "status": "working",
+    "id": "mycopunk",
     "section": "unity"
   },
   {
@@ -6815,6 +7037,16 @@
     "section": "unity"
   },
   {
+    "name": "No Rest For The Wicked",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "no-rest-for-the-wicked",
+    "notes": "Upgrade R11G11B10_FLOAT (Output Ratio if using upscaling)",
+    "source_key": "unity:no-rest-for-the-wicked",
+    "section": "unity"
+  },
+  {
     "name": "Nocturnal",
     "slug": "unityengine",
     "arch": "X64",
@@ -6832,16 +7064,6 @@
     "id": "node-the-last-favor-of-the-antarii",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:node-the-last-favor-of-the-antarii",
-    "section": "unity"
-  },
-  {
-    "name": "No Rest For The Wicked",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "no-rest-for-the-wicked",
-    "notes": "Upgrade R11G11B10_FLOAT (Output Ratio if using upscaling)",
-    "source_key": "unity:no-rest-for-the-wicked",
     "section": "unity"
   },
   {
@@ -7055,16 +7277,6 @@
     "section": "unity"
   },
   {
-    "name": "Phasmophobia",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "phasmophobia",
-    "notes": "Upgrade ??????????????",
-    "source_key": "unity:phasmophobia",
-    "section": "unity"
-  },
-  {
     "name": "PEAK",
     "slug": "unityengine",
     "arch": "X64",
@@ -7091,45 +7303,21 @@
     "section": "unity"
   },
   {
+    "name": "Phasmophobia",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "phasmophobia",
+    "notes": "Upgrade ??????????????",
+    "source_key": "unity:phasmophobia",
+    "section": "unity"
+  },
+  {
     "name": "Phoenix Point",
     "slug": "unityengine",
     "arch": "X64",
     "status": "construction",
     "id": "phoenix-point",
-    "section": "unity"
-  },
-  {
-    "name": "Plan B: Terraform",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "plan-b-terraform",
-    "section": "unity"
-  },
-  {
-    "name": "Planet of Lana 2",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "planet-of-lana-2",
-    "section": "unity"
-  },
-  {
-    "name": "Playing Kafka",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "playing-kafka",
-    "notes": "Enable Swapchain Proxy",
-    "source_key": "unity:playing-kafka",
-    "section": "unity"
-  },
-  {
-    "name": "Plasma",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "plasma",
     "section": "unity"
   },
   {
@@ -7150,6 +7338,40 @@
     "id": "pillars-of-eternity-ii-deadfire",
     "notes": "Enable Swapchain Proxy.",
     "source_key": "unity:pillars-of-eternity-ii-deadfire",
+    "section": "unity"
+  },
+  {
+    "name": "Plan B: Terraform",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "plan-b-terraform",
+    "section": "unity"
+  },
+  {
+    "name": "Planet of Lana 2",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "planet-of-lana-2",
+    "section": "unity"
+  },
+  {
+    "name": "Plasma",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "plasma",
+    "section": "unity"
+  },
+  {
+    "name": "Playing Kafka",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "playing-kafka",
+    "notes": "Enable Swapchain Proxy",
+    "source_key": "unity:playing-kafka",
     "section": "unity"
   },
   {
@@ -7247,6 +7469,14 @@
     "section": "unity"
   },
   {
+    "name": "Reignbreaker",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "reignbreaker",
+    "section": "unity"
+  },
+  {
     "name": "REKA",
     "slug": "unityengine",
     "arch": "X64",
@@ -7254,14 +7484,6 @@
     "id": "reka",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:reka",
-    "section": "unity"
-  },
-  {
-    "name": "Reignbreaker",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "reignbreaker",
     "section": "unity"
   },
   {
@@ -7273,14 +7495,6 @@
     "section": "unity"
   },
   {
-    "name": "Republique",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "republique",
-    "section": "unity"
-  },
-  {
     "name": "R.E.P.O.",
     "slug": "unityengine",
     "arch": "X64",
@@ -7288,6 +7502,14 @@
     "id": "r-e-p-o",
     "notes": "Upgrade `R8G8B8A8_TYPELESS` to `Any Size`",
     "source_key": "unity:r-e-p-o",
+    "section": "unity"
+  },
+  {
+    "name": "Republique",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "republique",
     "section": "unity"
   },
   {
@@ -7481,6 +7703,16 @@
     "section": "unity"
   },
   {
+    "name": "Silver Pines",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "silver-pines",
+    "notes": "Flickering warning in addon, only in title menu on very first launch when no save file is created yet",
+    "source_key": "unity:silver-pines",
+    "section": "unity"
+  },
+  {
     "name": "Skate Story",
     "slug": "unityengine",
     "arch": "X64",
@@ -7501,16 +7733,6 @@
     "section": "unity"
   },
   {
-    "name": "Silver Pines",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "silver-pines",
-    "notes": "Flickering warning in addon, only in title menu on very first launch when no save file is created yet",
-    "source_key": "unity:silver-pines",
-    "section": "unity"
-  },
-  {
     "name": "Sledders",
     "slug": "unityengine",
     "arch": "X64",
@@ -7527,14 +7749,6 @@
     "section": "unity"
   },
   {
-    "name": "Snake Force",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "snake-force",
-    "section": "unity"
-  },
-  {
     "name": "SNØ: Ultimate Freeriding",
     "slug": "unityengine",
     "arch": "X64",
@@ -7543,13 +7757,11 @@
     "section": "unity"
   },
   {
-    "name": "Spellforce Conquest of Eo",
+    "name": "Snake Force",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
-    "id": "spellforce-conquest-of-eo",
-    "notes": "swapchain (enable proxy ?)",
-    "source_key": "unity:spellforce-conquest-of-eo",
+    "status": "working",
+    "id": "snake-force",
     "section": "unity"
   },
   {
@@ -7605,16 +7817,6 @@
     "section": "unity"
   },
   {
-    "name": "Spacebase Startopia",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "spacebase-startopia",
-    "notes": "Upgrade R11G11B10_FLOAT",
-    "source_key": "unity:spacebase-startopia",
-    "section": "unity"
-  },
-  {
     "name": "Space Crew",
     "slug": "unityengine",
     "arch": "X64",
@@ -7622,6 +7824,16 @@
     "id": "space-crew",
     "notes": "Enable Swapchain Proxy",
     "source_key": "unity:space-crew",
+    "section": "unity"
+  },
+  {
+    "name": "Spacebase Startopia",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "spacebase-startopia",
+    "notes": "Upgrade R11G11B10_FLOAT",
+    "source_key": "unity:spacebase-startopia",
     "section": "unity"
   },
   {
@@ -7638,6 +7850,16 @@
     "arch": "X64",
     "status": "construction",
     "id": "speedrunners-2-king-of-speed-demo",
+    "section": "unity"
+  },
+  {
+    "name": "Spellforce Conquest of Eo",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "spellforce-conquest-of-eo",
+    "notes": "swapchain (enable proxy ?)",
+    "source_key": "unity:spellforce-conquest-of-eo",
     "section": "unity"
   },
   {
@@ -7705,14 +7927,6 @@
     "section": "unity"
   },
   {
-    "name": "SuchArt: Genius Artist Simulator",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "suchart-genius-artist-simulator",
-    "section": "unity"
-  },
-  {
     "name": "Subnautica",
     "slug": "unityengine",
     "arch": "X64",
@@ -7726,6 +7940,14 @@
     "arch": "X64",
     "status": "construction",
     "id": "subnautica-below-zero",
+    "section": "unity"
+  },
+  {
+    "name": "SuchArt: Genius Artist Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "suchart-genius-artist-simulator",
     "section": "unity"
   },
   {
@@ -7861,16 +8083,6 @@
     "section": "unity"
   },
   {
-    "name": "Tales of Xillia Remastered",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "tales-of-xillia-remastered",
-    "notes": "64-bit. Enable Swapchain Proxy, Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS",
-    "source_key": "unity:tales-of-xillia-remastered",
-    "section": "unity"
-  },
-  {
     "name": "Tales of the Shire: A The Lord of The Rings™ Game",
     "slug": "unityengine",
     "arch": "X64",
@@ -7878,6 +8090,16 @@
     "id": "tales-of-the-shire-a-the-lord-of-the-rings-game",
     "notes": "64-bit. Enable Swapchain Proxy, Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS",
     "source_key": "unity:tales-of-the-shire-a-the-lord-of-the-ringstm-game",
+    "section": "unity"
+  },
+  {
+    "name": "Tales of Xillia Remastered",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "tales-of-xillia-remastered",
+    "notes": "64-bit. Enable Swapchain Proxy, Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS",
+    "source_key": "unity:tales-of-xillia-remastered",
     "section": "unity"
   },
   {
@@ -8077,6 +8299,14 @@
     "section": "unity"
   },
   {
+    "name": "The Walking Dead - Streets of Survival",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-walking-dead-streets-of-survival",
+    "section": "unity"
+  },
+  {
     "name": "The Wandering Village",
     "slug": "unityengine",
     "arch": "X64",
@@ -8195,6 +8425,14 @@
     "section": "unity"
   },
   {
+    "name": "Tunguska The Visitation",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "tunguska-the-visitation",
+    "section": "unity"
+  },
+  {
     "name": "Turbo Dismount 2",
     "slug": "unityengine",
     "arch": "X64",
@@ -8218,14 +8456,6 @@
     "arch": "X64",
     "status": "working",
     "id": "turbo-overkill",
-    "section": "unity"
-  },
-  {
-    "name": "Tunguska The Visitation",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "tunguska-the-visitation",
     "section": "unity"
   },
   {
@@ -8279,6 +8509,16 @@
     "section": "unity"
   },
   {
+    "name": "V Rising",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "v-rising",
+    "notes": "Toggle Pause or Options menu in solo to refresh LUT. In multi stay under the sun or in Graphic settings Calibrate Brightness > Confirm (leave 50 default value)",
+    "source_key": "unity:v-rising",
+    "section": "unity"
+  },
+  {
     "name": "Valley",
     "slug": "unityengine",
     "arch": "X64",
@@ -8299,6 +8539,16 @@
     "section": "unity"
   },
   {
+    "name": "Vigil: The Longest Night",
+    "slug": "unityengine",
+    "arch": "X86",
+    "status": "construction",
+    "id": "vigil-the-longest-night",
+    "notes": "32-bit.",
+    "source_key": "unity:vigil-the-longest-night",
+    "section": "unity"
+  },
+  {
     "name": "Void Crew",
     "slug": "unityengine",
     "arch": "X64",
@@ -8309,23 +8559,11 @@
     "section": "unity"
   },
   {
-    "name": "V Rising",
+    "name": "War for the Overlord",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "working",
-    "id": "v-rising",
-    "notes": "Toggle Pause or Options menu in solo to refresh LUT. In multi stay under the sun or in Graphic settings Calibrate Brightness > Confirm (leave 50 default value)",
-    "source_key": "unity:v-rising",
-    "section": "unity"
-  },
-  {
-    "name": "Vigil: The Longest Night",
-    "slug": "unityengine",
-    "arch": "X86",
     "status": "construction",
-    "id": "vigil-the-longest-night",
-    "notes": "32-bit.",
-    "source_key": "unity:vigil-the-longest-night",
+    "id": "war-for-the-overlord",
     "section": "unity"
   },
   {
@@ -8368,14 +8606,6 @@
     "arch": "X64",
     "status": "construction",
     "id": "warpips",
-    "section": "unity"
-  },
-  {
-    "name": "War for the Overlord",
-    "slug": "unityengine",
-    "arch": "X64",
-    "status": "construction",
-    "id": "war-for-the-overlord",
     "section": "unity"
   },
   {
@@ -8432,6 +8662,16 @@
     "arch": "X64",
     "status": "construction",
     "id": "whisper-of-the-house",
+    "section": "unity"
+  },
+  {
+    "name": "Wicked Seed",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "wicked-seed",
+    "notes": "Upgrade R8G8B8A8_TYPELESS. Game settings: Scaling Resolution 100%, Borderless Windowed.",
+    "source_key": "unity:wicked-seed",
     "section": "unity"
   },
   {

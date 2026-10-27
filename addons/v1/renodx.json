@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T00:00:00Z",
+  "generated_at": "2026-10-27T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -5943,6 +5943,23 @@
       }
     },
     {
+      "id": "a-way-out",
+      "name": "A Way Out",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1222700",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "abiotic-factor",
       "name": "Abiotic Factor",
       "architecture": "X64",
@@ -6038,23 +6055,6 @@
       }
     },
     {
-      "id": "a-way-out",
-      "name": "A Way Out",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1222700",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "ue-extended",
-        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
-      }
-    },
-    {
       "id": "black-myth-wukong",
       "name": "Black Myth: Wukong",
       "architecture": "X64",
@@ -6077,20 +6077,15 @@
       }
     },
     {
-      "id": "borderlands-4",
-      "name": "Borderlands 4",
+      "id": "blacktail",
+      "name": "BLACKTAIL",
       "architecture": "X64",
       "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "1285190",
+          "value": "1532690",
           "tier": 100
-        },
-        {
-          "kind": "exe_name",
-          "value": "Borderlands4.exe",
-          "tier": 70
         }
       ],
       "addon": {
@@ -6108,6 +6103,28 @@
           "kind": "steam_appid",
           "value": "2406770",
           "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "borderlands-4",
+      "name": "Borderlands 4",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1285190",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "Borderlands4.exe",
+          "tier": 70
         }
       ],
       "addon": {
@@ -6206,6 +6223,23 @@
       }
     },
     {
+      "id": "cthulu-the-cosmin-abyss",
+      "name": "Cthulu: The Cosmin Abyss",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2760560",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "dead-as-disco",
       "name": "Dead as Disco",
       "architecture": "X64",
@@ -6274,6 +6308,67 @@
       }
     },
     {
+      "id": "destroy-all-humans",
+      "name": "Destroy All Humans",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "803330",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "DestroyAllHumans.exe",
+          "tier": 70
+        },
+        {
+          "kind": "exe_name",
+          "value": "DH.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "destroy-all-humans-2-reprobed",
+      "name": "Destroy All Humans! 2 Reprobed",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1266700",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "directive-8020",
+      "name": "Directive 8020",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2255370",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "end-of-abyss",
       "name": "End of Abyss",
       "architecture": "X64",
@@ -6299,6 +6394,23 @@
         {
           "kind": "steam_appid",
           "value": "1943950",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "eternal-strands",
+      "name": "Eternal Strands",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1491410",
           "tier": 100
         }
       ],
@@ -6359,20 +6471,32 @@
       }
     },
     {
-      "id": "goat-simulator-3",
-      "name": "Goat Simulator 3",
+      "id": "garfield-escape-from-monday",
+      "name": "Garfield - Escape from Monday",
       "architecture": "X64",
       "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "850190",
+          "value": "3932790",
           "tier": 100
-        },
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "gears-of-war-e-day",
+      "name": "Gears of War: E-Day",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
         {
-          "kind": "exe_name",
-          "value": "Goat2.exe",
-          "tier": 70
+          "kind": "steam_appid",
+          "value": "3010850",
+          "tier": 100
         }
       ],
       "addon": {
@@ -6416,6 +6540,28 @@
       ],
       "addon": {
         "slug": "unrealengine"
+      }
+    },
+    {
+      "id": "goat-simulator-3",
+      "name": "Goat Simulator 3",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "850190",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "Goat2.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
       }
     },
     {
@@ -6520,6 +6666,23 @@
       }
     },
     {
+      "id": "halo-campaign-evolved",
+      "name": "Halo - Campaign Evolved",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2806050",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "hellblade-ii-senua-s-saga",
       "name": "Hellblade II: Senua’s Saga",
       "architecture": "X64",
@@ -6562,23 +6725,6 @@
         {
           "kind": "steam_appid",
           "value": "1106840",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "ue-extended",
-        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
-      }
-    },
-    {
-      "id": "the-idolm-ster-starlit-season",
-      "name": "The iDOLM@STER: Starlit Season",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1046480",
           "tier": 100
         }
       ],
@@ -6678,6 +6824,23 @@
       }
     },
     {
+      "id": "like-a-dragon-ishin",
+      "name": "Like a Dragon: Ishin!",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1805480",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "little-nightmares",
       "name": "Little Nightmares",
       "architecture": "X64",
@@ -6741,6 +6904,23 @@
           "kind": "exe_name",
           "value": "Little_Nightmares_II_Enhanced.exe",
           "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "lost-soul-aside",
+      "name": "Lost Soul Aside",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3378960",
+          "tier": 100
         }
       ],
       "addon": {
@@ -7059,6 +7239,23 @@
       }
     },
     {
+      "id": "silent-hill-townfall",
+      "name": "SILENT HILL: Townfall",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1636440",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "solarpunk",
       "name": "Solarpunk",
       "architecture": "X64",
@@ -7076,6 +7273,62 @@
       }
     },
     {
+      "id": "song-of-nunu-a-league-of-legends-story",
+      "name": "Song of Nunu: A League of Legends Story",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1333200",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "SongOfNunu.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "sprawl",
+      "name": "SPRAWL",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1549690",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "star-wars-galactic-racertm",
+      "name": "STAR WARS: Galactic Racer™",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4078430",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "star-wars-zero-companytm",
       "name": "STAR WARS Zero Company™",
       "architecture": "X64",
@@ -7084,6 +7337,45 @@
         {
           "kind": "steam_appid",
           "value": "2075800",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "state-of-decay-2",
+      "name": "State Of Decay 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "495420",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "StateOfDecay2-Win64-Shipping.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "stellar-blade",
+      "name": "Stellar Blade",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3489700",
           "tier": 100
         }
       ],
@@ -7239,6 +7531,23 @@
       }
     },
     {
+      "id": "the-idolm-ster-starlit-season",
+      "name": "The iDOLM@STER: Starlit Season",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1046480",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
       "id": "threshold",
       "name": "THRESHOLD",
       "architecture": "X64",
@@ -7264,6 +7573,23 @@
         {
           "kind": "steam_appid",
           "value": "2634950",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      }
+    },
+    {
+      "id": "tormented-souls-2",
+      "name": "Tormented Souls 2",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2464280",
           "tier": 100
         }
       ],
@@ -7533,22 +7859,6 @@
         {
           "kind": "steam_appid",
           "value": "597820",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
-      "id": "blacktail",
-      "name": "BLACKTAIL",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1532690",
           "tier": 100
         }
       ],
@@ -8715,22 +9025,6 @@
       }
     },
     {
-      "id": "lost-soul-aside",
-      "name": "Lost Soul Aside",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3378960",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
       "id": "marvel-s-midnight-suns",
       "name": "Marvel's Midnight Suns",
       "architecture": "X64",
@@ -9502,22 +9796,6 @@
       }
     },
     {
-      "id": "stellar-blade",
-      "name": "Stellar Blade",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3489700",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
       "id": "styx-shards-of-darkness",
       "name": "Styx: Shards of Darkness",
       "architecture": "X64",
@@ -9717,22 +9995,6 @@
           "kind": "exe_name",
           "value": "Wonderlands.exe",
           "tier": 70
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      }
-    },
-    {
-      "id": "tormented-souls-2",
-      "name": "Tormented Souls 2",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2464280",
-          "tier": 100
         }
       ],
       "addon": {
@@ -10040,6 +10302,22 @@
         {
           "kind": "steam_appid",
           "value": "1055540",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "actraiser-renaissance",
+      "name": "Actraiser Renaissance",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1393370",
           "tier": 100
         }
       ],
@@ -10656,6 +10934,22 @@
       }
     },
     {
+      "id": "battletoads",
+      "name": "Battletoads",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1244950",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "becalm",
       "name": "Becalm",
       "architecture": "X64",
@@ -11136,6 +11430,38 @@
       }
     },
     {
+      "id": "butcher-s-creek",
+      "name": "Butcher's Creek",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2512560",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "bye-sweet-carole",
+      "name": "Bye Sweet Carole",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2428980",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "cairn",
       "name": "Cairn",
       "architecture": "X64",
@@ -11184,14 +11510,14 @@
       }
     },
     {
-      "id": "children-of-the-sun",
-      "name": "Children of the Sun",
+      "id": "chainstaff",
+      "name": "ChainStaff",
       "architecture": "X64",
       "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "1309950",
+          "value": "2976260",
           "tier": 100
         }
       ],
@@ -11208,6 +11534,22 @@
         {
           "kind": "steam_appid",
           "value": "330020",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "children-of-the-sun",
+      "name": "Children of the Sun",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1309950",
           "tier": 100
         }
       ],
@@ -11509,22 +11851,6 @@
       }
     },
     {
-      "id": "deadcore-redux-demo",
-      "name": "DeadCore Redux Demo",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "3726710",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "dead-letter-dept",
       "name": "DEAD LETTER DEPT.",
       "architecture": "X64",
@@ -11533,6 +11859,22 @@
         {
           "kind": "steam_appid",
           "value": "1627350",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "deadcore-redux-demo",
+      "name": "DeadCore Redux Demo",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3726710",
           "tier": 100
         }
       ],
@@ -11562,6 +11904,22 @@
       }
     },
     {
+      "id": "deep-rock-survivor",
+      "name": "Deep Rock Survivor",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2321470",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "deliver-at-all-costs",
       "name": "Deliver At All Costs",
       "architecture": "X64",
@@ -11578,14 +11936,14 @@
       }
     },
     {
-      "id": "deep-rock-survivor",
-      "name": "Deep Rock Survivor",
+      "id": "demon-tides",
+      "name": "Demon Tides",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "2321470",
+          "value": "2585890",
           "tier": 100
         }
       ],
@@ -11759,6 +12117,22 @@
       }
     },
     {
+      "id": "dread-templar",
+      "name": "Dread Templar",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1334730",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "dreamfall-chapters-the-final-cut",
       "name": "Dreamfall Chapters - The Final Cut",
       "architecture": "X64",
@@ -11791,22 +12165,6 @@
       }
     },
     {
-      "id": "dread-templar",
-      "name": "Dread Templar",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1334730",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "dros",
       "name": "DROS",
       "architecture": "X64",
@@ -11815,6 +12173,22 @@
         {
           "kind": "steam_appid",
           "value": "1554650",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "drova-forsaken-kin",
+      "name": "Drova Forsaken Kin",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1585180",
           "tier": 100
         }
       ],
@@ -12031,22 +12405,6 @@
       }
     },
     {
-      "id": "elderborn",
-      "name": "ELDERBORN",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "727850",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "el-paso-elsewhere",
       "name": "El Paso, Elsewhere",
       "architecture": "X64",
@@ -12063,14 +12421,14 @@
       }
     },
     {
-      "id": "end-transmission",
-      "name": "End Transmission?",
+      "id": "elderborn",
+      "name": "ELDERBORN",
       "architecture": "X64",
       "status": "construction",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "3426490",
+          "value": "727850",
           "tier": 100
         }
       ],
@@ -12087,6 +12445,22 @@
         {
           "kind": "steam_appid",
           "value": "921800",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "end-transmission",
+      "name": "End Transmission?",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3426490",
           "tier": 100
         }
       ],
@@ -12127,22 +12501,6 @@
       }
     },
     {
-      "id": "ereban-shadow-legacy",
-      "name": "Ereban - Shadow Legacy",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1671360",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "epistory-typing-chronicles",
       "name": "Epistory - Typing Chronicles",
       "architecture": "X64",
@@ -12151,6 +12509,22 @@
         {
           "kind": "steam_appid",
           "value": "398850",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "ereban-shadow-legacy",
+      "name": "Ereban - Shadow Legacy",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1671360",
           "tier": 100
         }
       ],
@@ -12231,22 +12605,6 @@
         {
           "kind": "steam_appid",
           "value": "2262020",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "drova-forsaken-kin",
-      "name": "Drova Forsaken Kin",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1585180",
           "tier": 100
         }
       ],
@@ -12921,22 +13279,6 @@
       }
     },
     {
-      "id": "hollowbody",
-      "name": "Hollowbody",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2123640",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "hollow-cocoon",
       "name": "Hollow Cocoon",
       "architecture": "X64",
@@ -12945,6 +13287,22 @@
         {
           "kind": "steam_appid",
           "value": "2414630",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "hollowbody",
+      "name": "Hollowbody",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2123640",
           "tier": 100
         }
       ],
@@ -13097,6 +13455,22 @@
       }
     },
     {
+      "id": "i-know-a-guy-shady-life-simulator",
+      "name": "I Know a Guy: Shady Life Simulator",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "4173620",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "icey",
       "name": "ICEY",
       "architecture": "X64",
@@ -13113,14 +13487,14 @@
       }
     },
     {
-      "id": "i-know-a-guy-shady-life-simulator",
-      "name": "I Know a Guy: Shady Life Simulator",
+      "id": "in-sound-mind",
+      "name": "In Sound Mind",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "4173620",
+          "value": "1119980",
           "tier": 100
         }
       ],
@@ -13177,22 +13551,6 @@
       }
     },
     {
-      "id": "in-sound-mind",
-      "name": "In Sound Mind",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1119980",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "iron-lung",
       "name": "Iron Lung",
       "architecture": "X64",
@@ -13241,22 +13599,6 @@
       }
     },
     {
-      "id": "itorah",
-      "name": "ITORAH",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1132910",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "it-steals",
       "name": "It Steals",
       "architecture": "X64",
@@ -13265,6 +13607,22 @@
         {
           "kind": "steam_appid",
           "value": "1349060",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "itorah",
+      "name": "ITORAH",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1132910",
           "tier": 100
         }
       ],
@@ -13369,22 +13727,6 @@
       }
     },
     {
-      "id": "killer-frequency",
-      "name": "Killer Frequency",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1903620",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "kill-knight",
       "name": "KILL KNIGHT",
       "architecture": "X64",
@@ -13393,6 +13735,22 @@
         {
           "kind": "steam_appid",
           "value": "2694420",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "killer-frequency",
+      "name": "Killer Frequency",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1903620",
           "tier": 100
         }
       ],
@@ -13769,6 +14127,22 @@
       }
     },
     {
+      "id": "lucius-iii",
+      "name": "Lucius III",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "513290",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "lumines-arise",
       "name": "Lumines Arise",
       "architecture": "X64",
@@ -13961,6 +14335,22 @@
       }
     },
     {
+      "id": "minishoot-adventures",
+      "name": "Minishoot Adventures",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1634860",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "miside",
       "name": "MiSide",
       "architecture": "X64",
@@ -14105,14 +14495,14 @@
       }
     },
     {
-      "id": "mycopunk",
-      "name": "Mycopunk",
+      "id": "my-friend-pedro",
+      "name": "My Friend Pedro",
       "architecture": "X64",
-      "status": "working",
+      "status": "construction",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "3247750",
+          "value": "557340",
           "tier": 100
         }
       ],
@@ -14137,14 +14527,14 @@
       }
     },
     {
-      "id": "my-friend-pedro",
-      "name": "My Friend Pedro",
+      "id": "mycopunk",
+      "name": "Mycopunk",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "557340",
+          "value": "3247750",
           "tier": 100
         }
       ],
@@ -14249,6 +14639,22 @@
       }
     },
     {
+      "id": "no-rest-for-the-wicked",
+      "name": "No Rest For The Wicked",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1371980",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "nocturnal",
       "name": "Nocturnal",
       "architecture": "X64",
@@ -14273,22 +14679,6 @@
         {
           "kind": "steam_appid",
           "value": "2757670",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "no-rest-for-the-wicked",
-      "name": "No Rest For The Wicked",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1371980",
           "tier": 100
         }
       ],
@@ -14670,22 +15060,6 @@
       }
     },
     {
-      "id": "phasmophobia",
-      "name": "Phasmophobia",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "739630",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "peak",
       "name": "PEAK",
       "architecture": "X64",
@@ -14734,6 +15108,22 @@
       }
     },
     {
+      "id": "phasmophobia",
+      "name": "Phasmophobia",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "739630",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "phoenix-point",
       "name": "Phoenix Point",
       "architecture": "X64",
@@ -14742,6 +15132,38 @@
         {
           "kind": "steam_appid",
           "value": "839770",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "pillars-of-eternity",
+      "name": "Pillars of Eternity",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "291650",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "pillars-of-eternity-ii-deadfire",
+      "name": "Pillars of Eternity II: Deadfire",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "560130",
           "tier": 100
         }
       ],
@@ -14782,22 +15204,6 @@
       }
     },
     {
-      "id": "playing-kafka",
-      "name": "Playing Kafka",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2911850",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "plasma",
       "name": "Plasma",
       "architecture": "X64",
@@ -14814,30 +15220,14 @@
       }
     },
     {
-      "id": "pillars-of-eternity",
-      "name": "Pillars of Eternity",
+      "id": "playing-kafka",
+      "name": "Playing Kafka",
       "architecture": "X64",
       "status": "construction",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "291650",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "pillars-of-eternity-ii-deadfire",
-      "name": "Pillars of Eternity II: Deadfire",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "560130",
+          "value": "2911850",
           "tier": 100
         }
       ],
@@ -15027,22 +15417,6 @@
       }
     },
     {
-      "id": "reka",
-      "name": "REKA",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1737870",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "reignbreaker",
       "name": "Reignbreaker",
       "architecture": "X64",
@@ -15051,6 +15425,22 @@
         {
           "kind": "steam_appid",
           "value": "2129810",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "reka",
+      "name": "REKA",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1737870",
           "tier": 100
         }
       ],
@@ -15075,22 +15465,6 @@
       }
     },
     {
-      "id": "republique",
-      "name": "Republique",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "317100",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "r-e-p-o",
       "name": "R.E.P.O.",
       "architecture": "X64",
@@ -15099,6 +15473,22 @@
         {
           "kind": "steam_appid",
           "value": "3241660",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "republique",
+      "name": "Republique",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "317100",
           "tier": 100
         }
       ],
@@ -15443,6 +15833,22 @@
       }
     },
     {
+      "id": "silver-pines",
+      "name": "Silver Pines",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2333000",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "skate-story",
       "name": "Skate Story",
       "architecture": "X64",
@@ -15467,22 +15873,6 @@
         {
           "kind": "steam_appid",
           "value": "1492070",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "silver-pines",
-      "name": "Silver Pines",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2333000",
           "tier": 100
         }
       ],
@@ -15523,22 +15913,6 @@
       }
     },
     {
-      "id": "snake-force",
-      "name": "Snake Force",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1806040",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "sn-ultimate-freeriding",
       "name": "SNØ: Ultimate Freeriding",
       "architecture": "X64",
@@ -15555,14 +15929,14 @@
       }
     },
     {
-      "id": "spellforce-conquest-of-eo",
-      "name": "Spellforce Conquest of Eo",
+      "id": "snake-force",
+      "name": "Snake Force",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "1581770",
+          "value": "1806040",
           "tier": 100
         }
       ],
@@ -15667,22 +16041,6 @@
       }
     },
     {
-      "id": "spacebase-startopia",
-      "name": "Spacebase Startopia",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "840390",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "space-crew",
       "name": "Space Crew",
       "architecture": "X64",
@@ -15691,6 +16049,22 @@
         {
           "kind": "steam_appid",
           "value": "1176710",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "spacebase-startopia",
+      "name": "Spacebase Startopia",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "840390",
           "tier": 100
         }
       ],
@@ -15728,6 +16102,22 @@
         {
           "kind": "steam_appid",
           "value": "3730740",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "spellforce-conquest-of-eo",
+      "name": "Spellforce Conquest of Eo",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1581770",
           "tier": 100
         }
       ],
@@ -15853,22 +16243,6 @@
       }
     },
     {
-      "id": "suchart-genius-artist-simulator",
-      "name": "SuchArt: Genius Artist Simulator",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1293180",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "subnautica",
       "name": "Subnautica",
       "architecture": "X64",
@@ -15893,6 +16267,22 @@
         {
           "kind": "steam_appid",
           "value": "848450",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "suchart-genius-artist-simulator",
+      "name": "SuchArt: Genius Artist Simulator",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1293180",
           "tier": 100
         }
       ],
@@ -16125,22 +16515,6 @@
       }
     },
     {
-      "id": "tales-of-xillia-remastered",
-      "name": "Tales of Xillia Remastered",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2246670",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
       "id": "tales-of-the-shire-a-the-lord-of-the-rings-game",
       "name": "Tales of the Shire: A The Lord of The Rings™ Game",
       "architecture": "X64",
@@ -16149,6 +16523,22 @@
         {
           "kind": "steam_appid",
           "value": "2016460",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "tales-of-xillia-remastered",
+      "name": "Tales of Xillia Remastered",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2246670",
           "tier": 100
         }
       ],
@@ -16509,6 +16899,22 @@
       }
     },
     {
+      "id": "the-walking-dead-streets-of-survival",
+      "name": "The Walking Dead - Streets of Survival",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3777850",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "the-wandering-village",
       "name": "The Wandering Village",
       "architecture": "X64",
@@ -16717,6 +17123,22 @@
       }
     },
     {
+      "id": "tunguska-the-visitation",
+      "name": "Tunguska The Visitation",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1601970",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "turbo-dismount-2",
       "name": "Turbo Dismount 2",
       "architecture": "X64",
@@ -16757,22 +17179,6 @@
         {
           "kind": "steam_appid",
           "value": "1328350",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "tunguska-the-visitation",
-      "name": "Tunguska The Visitation",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1601970",
           "tier": 100
         }
       ],
@@ -16861,6 +17267,22 @@
       }
     },
     {
+      "id": "v-rising",
+      "name": "V Rising",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1604030",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "valley",
       "name": "Valley",
       "architecture": "X64",
@@ -16893,6 +17315,22 @@
       }
     },
     {
+      "id": "vigil-the-longest-night",
+      "name": "Vigil: The Longest Night",
+      "architecture": "X86",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "720560",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
       "id": "void-crew",
       "name": "Void Crew",
       "architecture": "X64",
@@ -16909,30 +17347,14 @@
       }
     },
     {
-      "id": "v-rising",
-      "name": "V Rising",
+      "id": "war-for-the-overlord",
+      "name": "War for the Overlord",
       "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "1604030",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "vigil-the-longest-night",
-      "name": "Vigil: The Longest Night",
-      "architecture": "X86",
       "status": "construction",
       "match": [
         {
           "kind": "steam_appid",
-          "value": "720560",
+          "value": "230190",
           "tier": 100
         }
       ],
@@ -17013,22 +17435,6 @@
         {
           "kind": "steam_appid",
           "value": "1291010",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unityengine"
-      }
-    },
-    {
-      "id": "war-for-the-overlord",
-      "name": "War for the Overlord",
-      "architecture": "X64",
-      "status": "construction",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "230190",
           "tier": 100
         }
       ],
@@ -17125,6 +17531,22 @@
         {
           "kind": "steam_appid",
           "value": "2589500",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      }
+    },
+    {
+      "id": "wicked-seed",
+      "name": "Wicked Seed",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2767530",
           "tier": 100
         }
       ],

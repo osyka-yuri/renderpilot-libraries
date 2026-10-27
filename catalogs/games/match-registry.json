@@ -344,6 +344,20 @@
       ]
     },
     {
+      "id": "actraiser-renaissance",
+      "rules": [
+        {
+          "id": "steam-1393370",
+          "kind": "steam_appid",
+          "value": "1393370",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:actraiser-renaissance"
+          }
+        }
+      ]
+    },
+    {
       "id": "ad-infinitum",
       "rules": [
         {
@@ -2366,6 +2380,20 @@
       ]
     },
     {
+      "id": "battletoads",
+      "rules": [
+        {
+          "id": "steam-1244950",
+          "kind": "steam_appid",
+          "value": "1244950",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:battletoads"
+          }
+        }
+      ]
+    },
+    {
       "id": "bears-in-space",
       "rules": [
         {
@@ -3520,6 +3548,34 @@
       ]
     },
     {
+      "id": "butcher-s-creek",
+      "rules": [
+        {
+          "id": "steam-2512560",
+          "kind": "steam_appid",
+          "value": "2512560",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:butcher-s-creek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bye-sweet-carole",
+      "rules": [
+        {
+          "id": "steam-2428980",
+          "kind": "steam_appid",
+          "value": "2428980",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:bye-sweet-carole"
+          }
+        }
+      ]
+    },
+    {
       "id": "cairn",
       "rules": [
         {
@@ -3845,6 +3901,20 @@
           "provenance": {
             "source": "steam-store-search",
             "locator": "pending:renodx:chained-together"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chainstaff",
+      "rules": [
+        {
+          "id": "steam-2976260",
+          "kind": "steam_appid",
+          "value": "2976260",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:chainstaff"
           }
         }
       ]
@@ -5868,6 +5938,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#demon-slayer-kny-hinokami-chronicles"
+          }
+        }
+      ]
+    },
+    {
+      "id": "demon-tides",
+      "rules": [
+        {
+          "id": "steam-2585890",
+          "kind": "steam_appid",
+          "value": "2585890",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:demon-tides"
           }
         }
       ]
@@ -9013,6 +9097,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0234"
+          }
+        }
+      ]
+    },
+    {
+      "id": "garfield-escape-from-monday",
+      "rules": [
+        {
+          "id": "steam-3932790",
+          "kind": "steam_appid",
+          "value": "3932790",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:garfield-escape-from-monday"
           }
         }
       ]
@@ -12839,6 +12937,20 @@
       ]
     },
     {
+      "id": "lucius-iii",
+      "rules": [
+        {
+          "id": "steam-513290",
+          "kind": "steam_appid",
+          "value": "513290",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:lucius-iii"
+          }
+        }
+      ]
+    },
+    {
       "id": "lumina-veil",
       "rules": [
         {
@@ -13776,6 +13888,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0363"
+          }
+        }
+      ]
+    },
+    {
+      "id": "minishoot-adventures",
+      "rules": [
+        {
+          "id": "steam-1634860",
+          "kind": "steam_appid",
+          "value": "1634860",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:minishoot-adventures"
           }
         }
       ]
@@ -18521,6 +18647,20 @@
       ]
     },
     {
+      "id": "silent-hill-townfall",
+      "rules": [
+        {
+          "id": "steam-1636440",
+          "kind": "steam_appid",
+          "value": "1636440",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:silent-hill-townfall"
+          }
+        }
+      ]
+    },
+    {
       "id": "silver-pines",
       "rules": [
         {
@@ -19464,6 +19604,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#star-trucker"
+          }
+        }
+      ]
+    },
+    {
+      "id": "star-wars-galactic-racer",
+      "rules": [
+        {
+          "id": "steam-4078430",
+          "kind": "steam_appid",
+          "value": "4078430",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:star-wars-galactic-racer"
           }
         }
       ]
@@ -22124,6 +22278,20 @@
       ]
     },
     {
+      "id": "the-walking-dead-streets-of-survival",
+      "rules": [
+        {
+          "id": "steam-3777850",
+          "kind": "steam_appid",
+          "value": "3777850",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-walking-dead-streets-of-survival"
+          }
+        }
+      ]
+    },
+    {
       "id": "the-wandering-village",
       "rules": [
         {
@@ -24263,6 +24431,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0643"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wicked-seed",
+      "rules": [
+        {
+          "id": "steam-2767530",
+          "kind": "steam_appid",
+          "value": "2767530",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:wicked-seed"
           }
         }
       ]
