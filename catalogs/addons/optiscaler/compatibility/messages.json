@@ -2528,6 +2528,102 @@
         "zh-Hans": "OptiScaler 仅可在离线模式下使用，且需要绕过 Easy Anti-Cheat (EAC)。",
         "zh-Hant": "OptiScaler 僅可在離線模式下使用，且需要繞過 Easy Anti-Cheat (EAC)。"
       }
+    },
+    {
+      "id": "optiscaler-clair-obscur-expedition-33-ultra-quality",
+      "fallback_text": "Avoid the Ultra Quality preset; it can cause severe rendering issues.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Vermeiden Sie die Voreinstellung \"Ultra Quality\", da sie schwerwiegende Darstellungsfehler verursachen kann.",
+        "es": "Evite el ajuste preestablecido Ultra Quality, ya que puede provocar errores graves de renderizado.",
+        "fr": "Évitez le préréglage Ultra Quality, qui peut provoquer d’importants problèmes de rendu.",
+        "ja": "「Ultra Quality」プリセットは描画が正常に行われなくなる可能性があるため、使用を避けてください。",
+        "pt-BR": "Evite o preset Ultra Quality, pois ele pode causar falhas graves de renderização.",
+        "ru": "Не используйте пресет Ultra Quality: он может вызывать серьёзные ошибки отображения.",
+        "zh-Hans": "请避免使用 Ultra Quality 预设，因为它可能导致严重的渲染异常。",
+        "zh-Hant": "請避免使用 Ultra Quality 預設，因為它可能導致嚴重的渲染異常。"
+      }
+    },
+    {
+      "id": "optiscaler-manor-lords-fsr4-color-space",
+      "fallback_text": "For FSR 4, select Non-Linear sRGB as the input color space when using XeSS input or DLSS input with a preset other than Balanced.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Wählen Sie für FSR 4 den Eingabefarbraum \"Non-Linear sRGB\", wenn Sie XeSS als Eingabe oder DLSS mit einer anderen Qualitätsstufe als Balanced verwenden.",
+        "es": "Con FSR 4, seleccione Non-Linear sRGB como espacio de color de entrada si utiliza la entrada XeSS o la entrada DLSS con un ajuste distinto de Balanced.",
+        "fr": "Avec FSR 4, sélectionnez « Non-Linear sRGB » comme espace colorimétrique d’entrée si vous utilisez l’entrée XeSS ou l’entrée DLSS avec un préréglage autre que Balanced.",
+        "ja": "FSR 4 で XeSS 入力を使う場合、または DLSS 入力で「Balanced」以外のプリセットを使う場合は、入力色空間を「Non-Linear sRGB」に設定してください。",
+        "pt-BR": "Ao usar FSR 4, selecione Non-Linear sRGB como espaço de cores de entrada se estiver usando a entrada XeSS ou a entrada DLSS com um preset diferente de Balanced.",
+        "ru": "При использовании FSR 4 выберите входное цветовое пространство Non-Linear sRGB, если используется режим XeSS или режим DLSS с пресетом, отличным от Balanced.",
+        "zh-Hans": "使用 FSR 4 时，如果采用 XeSS 输入，或在 DLSS 输入下选择 Balanced 以外的预设，请将输入色彩空间设为 Non-Linear sRGB。",
+        "zh-Hant": "使用 FSR 4 時，如果採用 XeSS 輸入，或在 DLSS 輸入下選擇 Balanced 以外的預設，請將輸入色彩空間設為 Non-Linear sRGB。"
+      }
+    },
+    {
+      "id": "optiscaler-nioh-3-boot-crash",
+      "fallback_text": "Use XeSS input: DLSS input may revert to FSR and cause the game to crash on startup.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Verwenden Sie XeSS als Eingabe: Bei DLSS kann die Einstellung wieder auf FSR wechseln und beim Spielstart einen Absturz verursachen.",
+        "es": "Use XeSS como entrada: la entrada DLSS puede volver a FSR y provocar que el juego se cierre inesperadamente al iniciarse.",
+        "fr": "Privilégiez l’entrée XeSS : l’entrée DLSS peut revenir à FSR et provoquer un plantage au démarrage.",
+        "ja": "XeSS 入力の使用を推奨します。DLSS 入力では FSR に切り替わり、ゲームの起動時にクラッシュすることがあります。",
+        "pt-BR": "Prefira a entrada XeSS: a entrada DLSS pode voltar para FSR e fazer o jogo fechar inesperadamente na inicialização.",
+        "ru": "Рекомендуется использовать режим XeSS: режим DLSS может переключаться обратно на FSR и вызывать вылет игры при запуске.",
+        "zh-Hans": "建议使用 XeSS 输入：DLSS 输入可能会切换回 FSR，导致游戏启动时崩溃。",
+        "zh-Hant": "建議使用 XeSS 輸入：DLSS 輸入可能會切換回 FSR，導致遊戲啟動時當機。"
+      }
+    },
+    {
+      "id": "optiscaler-silent-hill-f-balanced-flicker",
+      "fallback_text": "DLSS input may cause flickering with presets such as Balanced; use FSR input instead.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Bei DLSS als Eingabe kann das Bild mit einigen Voreinstellungen, z. B. Balanced, flimmern. Verwenden Sie stattdessen FSR als Eingabe.",
+        "es": "La entrada DLSS puede causar parpadeos en la imagen con algunos ajustes de calidad, como Balanced; utilice la entrada FSR en su lugar.",
+        "fr": "L’entrée DLSS peut provoquer un scintillement avec certains préréglages, notamment Balanced ; utilisez plutôt l’entrée FSR.",
+        "ja": "DLSS 入力では、「Balanced」など一部のプリセットで画面がちらつくことがあります。代わりに FSR 入力を使用してください。",
+        "pt-BR": "A entrada DLSS pode causar cintilação na imagem em alguns presets, como Balanced; use a entrada FSR em vez dela.",
+        "ru": "В режиме DLSS изображение может мерцать на некоторых пресетах, включая Balanced. В таком случае используйте режим FSR.",
+        "zh-Hans": "使用 DLSS 输入时，画面可能会在 Balanced 等部分预设下闪烁；建议改用 FSR 输入。",
+        "zh-Hant": "使用 DLSS 輸入時，畫面可能會在 Balanced 等部分預設下閃爍；建議改用 FSR 輸入。"
+      }
+    },
+    {
+      "id": "optiscaler-silent-hill-townfall-display-settings",
+      "fallback_text": "Disable Letterboxing and mouse smoothing in the game settings.",
+      "guidance_kind": "game_setting",
+      "context": "game_setting",
+      "translations": {
+        "de": "Deaktiviere Letterboxing und Mausglättung in den Spieleinstellungen.",
+        "es": "Desactiva Letterboxing y el suavizado del ratón en los ajustes del juego.",
+        "fr": "Désactivez le Letterboxing et le lissage de la souris dans les paramètres du jeu.",
+        "ja": "ゲーム内の設定で、レターボックス表示（Letterboxing）とマウススムージングを無効にしてください。",
+        "pt-BR": "Desative Letterboxing e a suavização do mouse nas configurações do jogo.",
+        "ru": "Отключите Letterboxing (чёрные полосы сверху и снизу экрана) и сглаживание мыши в настройках игры.",
+        "zh-Hans": "请在游戏设置中关闭 Letterboxing（上下黑边）和鼠标平滑处理。",
+        "zh-Hant": "請在遊戲設定中關閉 Letterboxing（上下黑邊）和滑鼠平滑處理。"
+      }
+    },
+    {
+      "id": "optiscaler-seven-seven-one-upscale-ratio",
+      "fallback_text": "The game locks the upscaling preset to Balanced. Use Upscale Ratio Override in OptiScaler to adjust the internal rendering resolution. DX12 cannot be forced.",
+      "guidance_kind": "game_setting",
+      "context": "game_setting",
+      "translations": {
+        "de": "Das Spiel erzwingt die Upscaling-Voreinstellung Balanced. Nutze Upscale Ratio Override in OptiScaler, um die interne Renderauflösung anzupassen. DX12 lässt sich nicht erzwingen.",
+        "es": "El juego fija el preajuste de reescalado en Balanced. Usa Upscale Ratio Override en OptiScaler para ajustar la resolución interna de renderizado. No se puede forzar el uso de DX12.",
+        "fr": "Le jeu impose le préréglage de mise à l’échelle Balanced. Utilisez Upscale Ratio Override dans OptiScaler pour ajuster la résolution de rendu interne. Il n’est pas possible de forcer DX12.",
+        "ja": "ゲームではアップスケーリングのプリセットが「Balanced」に固定されています。内部レンダリング解像度を調整するには、OptiScaler の「Upscale Ratio Override」を使用してください。DX12 を強制的に有効にすることはできません。",
+        "pt-BR": "O jogo fixa o preset de upscaling em Balanced. Use Upscale Ratio Override no OptiScaler para ajustar a resolução interna de renderização. Não é possível forçar o uso do DX12.",
+        "ru": "В игре зафиксирован пресет Balanced. Чтобы изменить внутреннее разрешение рендеринга, используйте настройку Upscale Ratio Override в OptiScaler. Принудительно включить DX12 нельзя.",
+        "zh-Hans": "游戏将超分辨率预设锁定为 Balanced。可通过 OptiScaler 中的 Upscale Ratio Override 调整内部渲染分辨率。无法强制启用 DX12。",
+        "zh-Hant": "遊戲將升頻預設鎖定為 Balanced。可使用 OptiScaler 中的 Upscale Ratio Override 調整內部渲染解析度。無法強制啟用 DX12。"
+      }
     }
   ]
 }

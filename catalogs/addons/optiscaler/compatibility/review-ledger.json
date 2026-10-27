@@ -84,15 +84,15 @@
       "source_key": "main:0007",
       "row_fingerprint": "cec6b38f1117690fefe9ca0e1d070b52a0c529f52ec636305834907e9102cacd",
       "disposition": {
-        "kind": "pending_identity",
-        "reason": "Unreleased game; no verified runtime executable or match target is available."
+        "kind": "published",
+        "entry_id": "seven-seven-one"
       },
       "notes": [
         {
           "fingerprint": "33177405e9c52e053f13aa4be64e9b439263aa49f0d7efbe9cdd92f93320321a",
           "disposition": {
-            "kind": "omitted",
-            "reason": "The note is withheld until its game identity and policy are reviewed."
+            "kind": "guidance",
+            "message_ids": ["optiscaler-seven-seven-one-upscale-ratio"]
           }
         }
       ]
@@ -1348,8 +1348,8 @@
         {
           "fingerprint": "a73289a227ff4543e2d6031293da77b5cedc1b5f84d1416f1a28fcaff8c2a41f",
           "disposition": {
-            "kind": "omitted",
-            "reason": "The source combines subjective presets and conditional tuning without a bounded policy."
+            "kind": "guidance",
+            "message_ids": ["optiscaler-clair-obscur-expedition-33-ultra-quality"]
           }
         }
       ]
@@ -1375,15 +1375,15 @@
       "source_key": "main:0100",
       "row_fingerprint": "46024da383b344d11dde4d9d058866e87c1b236dc70910a35d8f78aa3abfd50f",
       "disposition": {
-        "kind": "pending_identity",
-        "reason": "Unreleased fan project; no verified runtime executable or match target is available."
+        "kind": "published",
+        "entry_id": "clive-barkers-hellraiser-revival"
       },
       "notes": [
         {
           "fingerprint": "431adccc5ed27347e45dd24f65977a30c4b54911d0f44ceacc4f3a79376896a5",
           "disposition": {
             "kind": "omitted",
-            "reason": "The note is withheld until its game identity and policy are reviewed."
+            "reason": "The version-specific OptiScaler 0.9 conditional workaround (AlwaysCaptureFSRFGSwapchain=true) is not a bounded configuration policy."
           }
         }
       ]
@@ -4724,8 +4724,8 @@
         {
           "fingerprint": "8f2a211bb69c60f7a5ddca2452927bfd85ebe49a5a78ee9c51c97a7249426e20",
           "disposition": {
-            "kind": "omitted",
-            "reason": "The detailed ratios and subjective tuning advice do not form a stable installer policy."
+            "kind": "guidance",
+            "message_ids": ["optiscaler-manor-lords-fsr4-color-space"]
           }
         }
       ]
@@ -5287,8 +5287,8 @@
         {
           "fingerprint": "e25b0e8767d9937c13054334a220195ae6941b7429440adfd60b96c7b7697125",
           "disposition": {
-            "kind": "omitted",
-            "reason": "The source is a subjective input recommendation rather than a stable policy."
+            "kind": "guidance",
+            "message_ids": ["optiscaler-nioh-3-boot-crash"]
           }
         }
       ]
@@ -6704,8 +6704,8 @@
         {
           "fingerprint": "713b266d57d3e33586a57cbe24d7a5324a188e633a0d0c23f8dd9eb46b628f6d",
           "disposition": {
-            "kind": "omitted",
-            "reason": "The preset-specific input recommendation is not a stable installer policy."
+            "kind": "guidance",
+            "message_ids": ["optiscaler-silent-hill-f-balanced-flicker"]
           }
         }
       ]
@@ -6714,15 +6714,15 @@
       "source_key": "main:0495",
       "row_fingerprint": "4e182f9964b400a2f5afbc9b92a8551068c7d822ee28e600f8d3c9804ee21055",
       "disposition": {
-        "kind": "pending_identity",
-        "reason": "Unreleased game; no verified runtime executable or match target is available."
+        "kind": "published",
+        "entry_id": "silent-hill-townfall"
       },
       "notes": [
         {
           "fingerprint": "1568f5f63386d14065d870029b1be6c3b9874bc6b3d715aa2e98fda1bc3a0b7b",
           "disposition": {
-            "kind": "omitted",
-            "reason": "The game is pending identity and general display preferences are not bounded policy."
+            "kind": "guidance",
+            "message_ids": ["optiscaler-silent-hill-townfall-display-settings"]
           }
         }
       ]

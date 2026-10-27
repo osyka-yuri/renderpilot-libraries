@@ -13,7 +13,7 @@ import {
 import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
-const EXPECTED_PUBLISHED_ENTRY_COUNT = 694;
+const EXPECTED_PUBLISHED_ENTRY_COUNT = 697;
 const CURRENT_WIKI_SNAPSHOT = {
   revision: "2026-10-26",
   sha256: "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d",
@@ -122,13 +122,9 @@ const EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY = [
 ];
 const GENERIC_PENDING_IDENTITY_REASON = "An exact runtime identity has not been curated.";
 const EXPECTED_PENDING_IDENTITY_REASONS = {
-  "main:0007":
-    "Unreleased game; no verified runtime executable or match target is available.",
   "main:0014":
     "The Epic launcher AppName is not verified; CatalogItemId alone is not a reachable runtime identity.",
   "main:0015": "No verified exact Epic Games Store identity is available.",
-  "main:0100":
-    "Unreleased fan project; no verified runtime executable or match target is available.",
   "main:0193": "This is a mod distribution, not a game runtime target identity.",
   "main:0265": "No verified exact match target or executable observation is available.",
   "main:0321":
@@ -141,8 +137,6 @@ const EXPECTED_PENDING_IDENTITY_REASONS = {
     "Store results are different products and do not establish an exact title binding.",
   "main:0470": "The upstream source deliberately provides no bindable identity.",
   "main:0485": "No exact verifiable store identity is available.",
-  "main:0495":
-    "Unreleased game; no verified runtime executable or match target is available.",
   "main:0547":
     "An Epic candidate exists, but no verified exact Epic Games Store identity is available.",
   "main:0589":
@@ -665,7 +659,7 @@ test("Russian compatibility guidance names technology modes and input color spac
     );
 
   const inputColorSpaceMessages = inputs.messages.messages.filter(isInputColorSpaceMessage);
-  assert.equal(inputColorSpaceMessages.length, 33);
+  assert.equal(inputColorSpaceMessages.length, 34);
   for (const message of inputColorSpaceMessages) {
     assert.match(
       message.translations.ru,
@@ -677,7 +671,7 @@ test("Russian compatibility guidance names technology modes and input color spac
   const technologyModeMessages = inputs.messages.messages.filter(
     (message) => isTechnologyInputMessage(message) && !isInputColorSpaceMessage(message),
   );
-  assert.equal(technologyModeMessages.length, 40);
+  assert.equal(technologyModeMessages.length, 42);
   for (const message of technologyModeMessages) {
     assert.match(
       message.translations.ru,

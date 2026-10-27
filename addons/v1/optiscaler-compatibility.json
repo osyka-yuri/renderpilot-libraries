@@ -2542,7 +2542,15 @@
         }
       ],
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-clair-obscur-expedition-33-ultra-quality",
+            "fallback_text": "Avoid the Ultra Quality preset; it can cause severe rendering issues."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -2582,6 +2590,29 @@
           },
           "restricted_modules": [],
           "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "clive-barkers-hellraiser-revival",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "1551980"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]
@@ -9351,7 +9382,15 @@
         }
       ],
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-manor-lords-fsr4-color-space",
+            "fallback_text": "For FSR 4, select Non-Linear sRGB as the input color space when using XeSS input or DLSS input with a preset other than Balanced."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -10395,7 +10434,15 @@
         }
       ],
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-nioh-3-boot-crash",
+            "fallback_text": "Use XeSS input: DLSS input may revert to FSR and cause the game to crash on startup."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -13258,6 +13305,37 @@
       ]
     },
     {
+      "id": "seven-seven-one",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "3916440"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus"],
+      "guidance": [
+        {
+          "kind": "game_setting",
+          "message": {
+            "id": "optiscaler-seven-seven-one-upscale-ratio",
+            "fallback_text": "The game locks the upscaling preset to Balanced. Use Upscale Ratio Override in OptiScaler to adjust the internal rendering resolution. DX12 cannot be forced."
+          }
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
       "id": "severed-steel",
       "status": "working",
       "identities": [
@@ -13535,7 +13613,46 @@
         }
       ],
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-silent-hill-f-balanced-flicker",
+            "fallback_text": "DLSS input may cause flickering with presets such as Balanced; use FSR input instead."
+          }
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "silent-hill-townfall",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "1636440"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus"],
+      "guidance": [
+        {
+          "kind": "game_setting",
+          "message": {
+            "id": "optiscaler-silent-hill-townfall-display-settings",
+            "fallback_text": "Disable Letterboxing and mouse smoothing in the game settings."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {

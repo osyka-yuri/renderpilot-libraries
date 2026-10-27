@@ -4300,6 +4300,20 @@
       ]
     },
     {
+      "id": "clive-barkers-hellraiser-revival",
+      "rules": [
+        {
+          "id": "steam-1551980",
+          "kind": "steam_appid",
+          "value": "1551980",
+          "provenance": {
+            "source": "optiscaler-reviewed-match",
+            "locator": "main:0100"
+          }
+        }
+      ]
+    },
+    {
       "id": "close-to-the-sun",
       "rules": [
         {
@@ -18202,6 +18216,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#session-skate-sim"
+          }
+        }
+      ]
+    },
+    {
+      "id": "seven-seven-one",
+      "rules": [
+        {
+          "id": "steam-3916440",
+          "kind": "steam_appid",
+          "value": "3916440",
+          "provenance": {
+            "source": "optiscaler-reviewed-match",
+            "locator": "main:0007"
           }
         }
       ]

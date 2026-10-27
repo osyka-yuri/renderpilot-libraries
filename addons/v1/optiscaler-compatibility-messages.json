@@ -123,6 +123,12 @@
       "context": "compatibility"
     },
     {
+      "id": "optiscaler-clair-obscur-expedition-33-ultra-quality",
+      "fallback_text": "Avoid the Ultra Quality preset; it can cause severe rendering issues.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
       "id": "optiscaler-crash-bandicoot-4-antialiasing",
       "fallback_text": "Set anti-aliasing quality to at least Medium (2×) in the game settings.",
       "guidance_kind": "game_setting",
@@ -501,6 +507,12 @@
       "context": "compatibility"
     },
     {
+      "id": "optiscaler-manor-lords-fsr4-color-space",
+      "fallback_text": "For FSR 4, select Non-Linear sRGB as the input color space when using XeSS input or DLSS input with a preset other than Balanced.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
       "id": "optiscaler-martha-is-dead-fsr4-color-space",
       "fallback_text": "If angled windows look pixelated with FSR 4, try the Non-Linear PQ input color space.",
       "guidance_kind": "game_setting",
@@ -521,6 +533,12 @@
     {
       "id": "optiscaler-mr-photographer-dx11",
       "fallback_text": "XeSS input is unavailable in DirectX 11 mode.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
+      "id": "optiscaler-nioh-3-boot-crash",
+      "fallback_text": "Use XeSS input: DLSS input may revert to FSR and cause the game to crash on startup.",
       "guidance_kind": "compatibility",
       "context": "compatibility"
     },
@@ -717,6 +735,12 @@
       "context": "compatibility"
     },
     {
+      "id": "optiscaler-seven-seven-one-upscale-ratio",
+      "fallback_text": "The game locks the upscaling preset to Balanced. Use Upscale Ratio Override in OptiScaler to adjust the internal rendering resolution. DX12 cannot be forced.",
+      "guidance_kind": "game_setting",
+      "context": "game_setting"
+    },
+    {
       "id": "optiscaler-shadow-warrior-3-dx12",
       "fallback_text": "DirectX 11 has lower performance and severe shimmer.",
       "guidance_kind": "compatibility",
@@ -727,6 +751,18 @@
       "fallback_text": "In DX11, upscaler image quality can be worse than native.",
       "guidance_kind": "compatibility",
       "context": "compatibility"
+    },
+    {
+      "id": "optiscaler-silent-hill-f-balanced-flicker",
+      "fallback_text": "DLSS input may cause flickering with presets such as Balanced; use FSR input instead.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
+      "id": "optiscaler-silent-hill-townfall-display-settings",
+      "fallback_text": "Disable Letterboxing and mouse smoothing in the game settings.",
+      "guidance_kind": "game_setting",
+      "context": "game_setting"
     },
     {
       "id": "optiscaler-smile-protocol-demo-xefg",

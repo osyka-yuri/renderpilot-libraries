@@ -2022,7 +2022,12 @@
       "source_ref": "main:0098",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message_id": "optiscaler-clair-obscur-expedition-33-ultra-quality"
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -2058,6 +2063,25 @@
         }
       ],
       "game_target_id": "clash-artifacts-of-chaos"
+    },
+    {
+      "id": "clive-barkers-hellraiser-revival",
+      "source_ref": "main:0100",
+      "status": "working",
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
+          "prerequisite": "none"
+        }
+      ],
+      "game_target_id": "clive-barkers-hellraiser-revival"
     },
     {
       "id": "code-exit-demo",
@@ -7430,7 +7454,12 @@
       "source_ref": "main:0349",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message_id": "optiscaler-manor-lords-fsr4-color-space"
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -8250,7 +8279,12 @@
       "source_ref": "main:0391",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "xess"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message_id": "optiscaler-nioh-3-boot-crash"
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -10482,6 +10516,30 @@
       "game_target_id": "sengoku-dynasty"
     },
     {
+      "id": "seven-seven-one",
+      "source_ref": "main:0007",
+      "status": "working",
+      "declared_inputs": ["dlss2_plus"],
+      "guidance": [
+        {
+          "kind": "game_setting",
+          "message_id": "optiscaler-seven-seven-one-upscale-ratio"
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ],
+      "game_target_id": "seven-seven-one"
+    },
+    {
       "id": "severed-steel",
       "source_ref": "main:0483",
       "status": "working",
@@ -10696,7 +10754,12 @@
       "source_ref": "main:0494",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message_id": "optiscaler-silent-hill-f-balanced-flicker"
+        }
+      ],
       "variants": [
         {
           "proxy": {
@@ -10709,6 +10772,30 @@
         }
       ],
       "game_target_id": "silent-hill-f"
+    },
+    {
+      "id": "silent-hill-townfall",
+      "source_ref": "main:0495",
+      "status": "working",
+      "declared_inputs": ["dlss2_plus", "fsr2_plus"],
+      "guidance": [
+        {
+          "kind": "game_setting",
+          "message_id": "optiscaler-silent-hill-townfall-display-settings"
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
+          "prerequisite": "none"
+        }
+      ],
+      "game_target_id": "silent-hill-townfall"
     },
     {
       "id": "simulakros",
