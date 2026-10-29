@@ -2587,6 +2587,69 @@
     {
       "product": "d3d12_agility",
       "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.620.1",
+      "package_sha512": "mHaJjpKCVJEwNNtW3RuCvav0ZlZpVmB49BehgEfCaFg/2juGIr81VDcsNiIzwLM5WnzDHXcWkoLC3r2QkC3eEQ==",
+      "published_at": "2026-10-27T00:18:27.937Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.620.1",
+          "dll_sha256": "de33d6921ae9284f789682475793207051e129f67e305dda9ad06d5748fb8324",
+          "dll_size_bytes": 4873520,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-10-26T17:55:15.694Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/8fc23e513e305fed3c4f9f4d63e5af41beb3631dbd40bea4bb2831c4b23f7d1a.dll.zst",
+            "zst_sha256": "8fc23e513e305fed3c4f9f4d63e5af41beb3631dbd40bea4bb2831c4b23f7d1a",
+            "zst_size_bytes": 1886558,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.620.1",
+          "dll_sha256": "f53ce46ba7b13e1f316545767ab83f56b580225c6a35a3d073cd92ef6ebb37ca",
+          "dll_size_bytes": 3842328,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "AB172913A2960A224809EE8A0C371CD47A079B72",
+            "signed_at": "2026-10-26T18:00:47.795Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/418d3daba4688e1eae93bf7678b97a349d65a5c9431bccdc9886b1ee69dbfe36.dll.zst",
+            "zst_sha256": "418d3daba4688e1eae93bf7678b97a349d65a5c9431bccdc9886b1ee69dbfe36",
+            "zst_size_bytes": 1563364,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "c30b054818f141f016901bbb6260069bed3bdb0ee30bbad52f389258ec1a50af",
+          "size_bytes": 13152,
+          "object_key": "libraries/legal/sha256/c30b054818f141f016901bbb6260069bed3bdb0ee30bbad52f389258ec1a50af.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
       "package_version": "1.700.10-preview",
       "package_sha512": "haoygNw2RQA1huRtyNpumBAbK0jaiPyZC3kXzquC3uhxXf/tau3DEDENJus6wfIfr8TgAvbkyJQp5fAwOToe/w==",
       "published_at": "2021-12-08T04:32:04.547Z",
@@ -3764,6 +3827,69 @@
             "object_key": "libraries/blobs/sha256/68e7d5b076abb01dc1dd79e46a0bbc8a16c457ec65a5b479dc89492521e99e53.dll.zst",
             "zst_sha256": "68e7d5b076abb01dc1dd79e46a0bbc8a16c457ec65a5b479dc89492521e99e53",
             "zst_size_bytes": 1608952,
+            "compression_level": 12
+          }
+        }
+      ],
+      "legal_documents": [
+        {
+          "kind": "license",
+          "title": "Microsoft D3D12 Agility SDK License",
+          "format": "text",
+          "file_name": "LICENSE.txt",
+          "package_path": "LICENSE.txt",
+          "sha256": "b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0",
+          "size_bytes": 10233,
+          "object_key": "libraries/legal/sha256/b79425b6d54d8dc63971f2b2291441bcbcba75d878d8bdd4fd1d43046c05e0c0.txt"
+        }
+      ]
+    },
+    {
+      "product": "d3d12_agility",
+      "package_id": "Microsoft.Direct3D.D3D12",
+      "package_version": "1.722.0-preview",
+      "package_sha512": "BQzCylzIPly8dkaCxNsyIgXw92ry/4rv2EPOxAwLpx9ZZ5FVzD1MF2lv2t7SAAAjIyM0aNl17gSVLd51n2JtYg==",
+      "published_at": "2026-10-27T00:21:52.950Z",
+      "artifacts": [
+        {
+          "architecture": "X64",
+          "package_path": "build/native/bin/x64/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.722",
+          "dll_sha256": "1a588965b12422db5df18f9331e244616f4f7a3893db83a4c578f7de50a36f13",
+          "dll_size_bytes": 4992296,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-10-26T18:11:48.730Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/9df50a78a0ce840601a081cfeaa5309b945741dc09b48604116c6b2ac0369d2b.dll.zst",
+            "zst_sha256": "9df50a78a0ce840601a081cfeaa5309b945741dc09b48604116c6b2ac0369d2b",
+            "zst_size_bytes": 1918629,
+            "compression_level": 12
+          }
+        },
+        {
+          "architecture": "X86",
+          "package_path": "build/native/bin/win32/D3D12Core.dll",
+          "library_id": "d3d12_core",
+          "file_name": "D3D12Core.dll",
+          "pe_version": "1.722",
+          "dll_sha256": "100ca2acaf308f5de44972249f7c10c83c340010d41d7089698730218e139529",
+          "dll_size_bytes": 4019496,
+          "signature": {
+            "status": "signed",
+            "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+            "thumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1",
+            "signed_at": "2026-10-26T18:09:17.554Z"
+          },
+          "r2": {
+            "object_key": "libraries/blobs/sha256/42ffbf87aa7ecd2cc54ad2c93c39b581e7488c2cc9edcd3dc09db67fd4261819.dll.zst",
+            "zst_sha256": "42ffbf87aa7ecd2cc54ad2c93c39b581e7488c2cc9edcd3dc09db67fd4261819",
+            "zst_size_bytes": 1597241,
             "compression_level": 12
           }
         }
