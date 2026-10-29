@@ -16,7 +16,7 @@ const ROOT = path.resolve(import.meta.dirname, "../../../../..");
 const EXPECTED_PUBLISHED_ENTRY_COUNT = 697;
 const CURRENT_WIKI_SNAPSHOT = {
   revision: "2026-10-26",
-  sha256: "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d",
+  sha256: "8a1f98bf2e3dbe2fca15f0f1d2969dfc66b025f9385928412c09300135967db6",
   rows: 714,
 };
 const SHIFTED_MAIN_SOURCE_KEYS = Array.from(

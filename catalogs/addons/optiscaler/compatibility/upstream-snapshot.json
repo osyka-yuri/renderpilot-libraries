@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "optiscaler-wiki-compatibility-list",
   "snapshot_revision": "2026-10-26",
-  "snapshot_sha256": "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d",
+  "snapshot_sha256": "8a1f98bf2e3dbe2fca15f0f1d2969dfc66b025f9385928412c09300135967db6",
   "rows": [
     {
       "source_key": "main:0001",
@@ -5419,9 +5419,9 @@
       "status": "working",
       "declared_inputs": ["dlss2_plus"],
       "optipatcher_supported": true,
-      "note": "Run from shortcut with -dx12 launch parameter, DX11 version requires checking UE DX11 note",
-      "row_fingerprint": "3b97db84f2dac9190b534920f9ce3b19274a2293fdd72730a7495edb778dfdaa",
-      "note_fingerprint": "3398e257ce74d506f3213bbe65712d5ba992b39461a8983dbe90d0cf2028292a"
+      "note": "Requires downloading nvngxdlss.dll and putting next to game exe (dev removed it for whatever reason). Run from shortcut with -dx12 launch parameter, DX11 version requires checking UE DX11 note",
+      "row_fingerprint": "68d4423eadc36a8e4f9ef6ad63bc2e10b5de2ddc15c05a1cb7f746eb06c3bd24",
+      "note_fingerprint": "32e882566f4c6f19c5d8c3c689eef0731a80b8252828237bb50c7fdc7a66567b"
     },
     {
       "source_key": "main:0514",

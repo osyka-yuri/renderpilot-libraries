@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_sha256": "f6e831116017c01b774738788d35e0577237148d3e8705f48aec587c023b3d9d",
+  "snapshot_sha256": "8a1f98bf2e3dbe2fca15f0f1d2969dfc66b025f9385928412c09300135967db6",
   "rows": [
     {
       "source_key": "main:0001",
@@ -6932,17 +6932,17 @@
     },
     {
       "source_key": "main:0513",
-      "row_fingerprint": "3b97db84f2dac9190b534920f9ce3b19274a2293fdd72730a7495edb778dfdaa",
+      "row_fingerprint": "68d4423eadc36a8e4f9ef6ad63bc2e10b5de2ddc15c05a1cb7f746eb06c3bd24",
       "disposition": {
         "kind": "published",
         "entry_id": "sprawl"
       },
       "notes": [
         {
-          "fingerprint": "3398e257ce74d506f3213bbe65712d5ba992b39461a8983dbe90d0cf2028292a",
+          "fingerprint": "32e882566f4c6f19c5d8c3c689eef0731a80b8252828237bb50c7fdc7a66567b",
           "disposition": {
             "kind": "typed_policy",
-            "reason": "The exact launch argument and its required status are represented by the typed launch policy. The linked Unreal Engine DirectX 11 note has no bounded in-app action."
+            "reason": "The exact launch argument and its required status are represented by the typed launch policy. The manual nvngxdlss.dll file-copy instruction and the linked Unreal Engine DirectX 11 note cannot be represented by a portable typed policy."
           }
         }
       ]
