@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T00:21:52.950Z",
+  "generated_at": "2026-10-28T13:18:15.000Z",
   "vendors": [
     {
       "vendor_id": "amd",
       "display_name": "AMD",
-      "snapshot_key": "libraries/v1/vendors/amd/1fe4bc585a9a466cd40922365d525bf999432632c09c943994194a3a61dd5df2.json",
-      "snapshot_sha256": "1fe4bc585a9a466cd40922365d525bf999432632c09c943994194a3a61dd5df2",
-      "snapshot_size_bytes": 61408
+      "snapshot_key": "libraries/v1/vendors/amd/be662cfac0a3772f9fc88968be9230bd0fff98a8654dc434ace93e24c2cc17d7.json",
+      "snapshot_sha256": "be662cfac0a3772f9fc88968be9230bd0fff98a8654dc434ace93e24c2cc17d7",
+      "snapshot_size_bytes": 78423
     },
     {
       "vendor_id": "intel",

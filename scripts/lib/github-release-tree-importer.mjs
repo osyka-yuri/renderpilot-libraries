@@ -6,6 +6,7 @@ import { isDeepStrictEqual } from "node:util";
 import { sha256Hex } from "./hash.mjs";
 import { fetchWithTimeout, readResponseBufferBounded } from "./http.mjs";
 import {
+  CANONICAL_ZSTD_COMPRESSION_LEVEL,
   canonicalAuthenticodeSignature,
   canonicalPeVersion,
   inspectPeFiles,
@@ -126,7 +127,8 @@ export async function constructGitHubReleaseTreeRelease(
         context,
       });
       const r2 = await persistCompressedDll(unit.bytes, {
-        compressionLevel: expectedArtifact?.r2.compression_level ?? 12,
+        compressionLevel:
+          expectedArtifact?.r2.compression_level ?? CANONICAL_ZSTD_COMPRESSION_LEVEL,
         expectedTransport:
           expectedArtifact && !migrateTransport ? expectedArtifact.r2 : null,
       });

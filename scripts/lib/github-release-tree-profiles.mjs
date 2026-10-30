@@ -24,12 +24,27 @@ const AMD_COMPONENTS = Object.freeze({
     variant: "runtime",
     displayName: "AMD FidelityFX Loader",
   }),
+  "amd_fidelityfx_loader_vk.dll": Object.freeze({
+    technology: "amd_fsr_loader",
+    variant: "runtime",
+    displayName: "AMD FidelityFX Loader",
+  }),
   "amd_fidelityfx_upscaler_dx12.dll": Object.freeze({
     technology: "amd_fsr_upscaler",
     variant: "runtime",
     displayName: "AMD FidelityFX Upscaler",
   }),
+  "amd_fidelityfx_upscaler_vk.dll": Object.freeze({
+    technology: "amd_fsr_upscaler",
+    variant: "runtime",
+    displayName: "AMD FidelityFX Upscaler",
+  }),
   "amd_fidelityfx_framegeneration_dx12.dll": Object.freeze({
+    technology: "amd_fsr_frame_generation",
+    variant: "runtime",
+    displayName: "AMD FidelityFX Frame Generation",
+  }),
+  "amd_fidelityfx_framegeneration_vk.dll": Object.freeze({
     technology: "amd_fsr_frame_generation",
     variant: "runtime",
     displayName: "AMD FidelityFX Frame Generation",
@@ -108,6 +123,19 @@ function amdReleasePlan(release) {
       "amd_fidelityfx_upscaler_dx12.dll",
     ];
     licensePath = "Kits/FidelityFX/docs/license.md";
+  } else if (release.tag === "v2.4.0") {
+    dllDirectory = "Kits/FidelityFX/signedbin";
+    dllNames = [
+      "amd_fidelityfx_denoiser_dx12.dll",
+      "amd_fidelityfx_framegeneration_dx12.dll",
+      "amd_fidelityfx_framegeneration_vk.dll",
+      "amd_fidelityfx_loader_dx12.dll",
+      "amd_fidelityfx_loader_vk.dll",
+      "amd_fidelityfx_radiancecache_dx12.dll",
+      "amd_fidelityfx_upscaler_dx12.dll",
+      "amd_fidelityfx_upscaler_vk.dll",
+    ];
+    licensePath = "Kits/FidelityFX/docs/license.md";
   } else {
     throw new Error(`unreviewed AMD FidelityFX release layout ${release.tag}`);
   }
@@ -121,7 +149,7 @@ function amdReleasePlan(release) {
       repository_path: licensePath,
     },
   ];
-  if (release.tag === "v2.3.0") {
+  if (release.tag === "v2.3.0" || release.tag === "v2.4.0") {
     legalDocuments.push({
       kind: "notice",
       title: "AMD FidelityFX SDK Third-Party Notices",
@@ -327,6 +355,52 @@ function buildAmdPackages(release, artifacts, legalDocumentIds) {
           artifact_key: artifactKey(frameGeneration),
           role: "frame_generation",
           install_as: "amd_fidelityfx_framegeneration_dx12.dll",
+        },
+      ],
+    });
+  }
+  const vkBundleComponents = [
+    "amd_fidelityfx_upscaler_vk",
+    "amd_fidelityfx_loader_vk",
+    "amd_fidelityfx_framegeneration_vk",
+  ];
+  if (vkBundleComponents.every((component) => byComponent.has(component))) {
+    const [upscaler, loader, frameGeneration] = vkBundleComponents.map((component) =>
+      byComponent.get(component),
+    );
+    const version = requiredPeVersion(upscaler, `${release.tag}: vk upscaler`);
+    const packageRelease = parsePackageVersion(
+      version,
+      `${release.tag}: vk bundle release`,
+    );
+    packages.push({
+      package_id: `fsr_vk_sdk.${packageRelease.identity}`,
+      technology: "amd_fsr",
+      variant: "sdk_bundle",
+      display_name: "AMD FidelityFX SDK Vulkan",
+      release: {
+        version: packageRelease.canonical,
+        channel: packageRelease.channel,
+        label: null,
+      },
+      target: { os: "windows", architecture: "X64" },
+      provenance: githubProvenance(release),
+      legal_document_ids: legalDocumentIds,
+      members: [
+        {
+          artifact_key: artifactKey(upscaler),
+          role: "primary",
+          install_as: "amd_fidelityfx_upscaler_vk.dll",
+        },
+        {
+          artifact_key: artifactKey(loader),
+          role: "loader",
+          install_as: "amd_fidelityfx_vk.dll",
+        },
+        {
+          artifact_key: artifactKey(frameGeneration),
+          role: "frame_generation",
+          install_as: "amd_fidelityfx_framegeneration_vk.dll",
         },
       ],
     });
