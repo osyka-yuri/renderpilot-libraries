@@ -149,7 +149,7 @@
     "title": "Need for Speed™ Most Wanted (2005)",
     "section": "main",
     "profile_source": "nfsmw05",
-    "note": "Requires DXVK Reshade proxy! Please see instructions down in Source 1 section."
+    "note": "DXVK Reshade proxy is recommended! Please see instructions down in Source 1 section."
   },
   {
     "source_key": "main:ninja-gaiden-4",
@@ -246,6 +246,14 @@
     "section": "main",
     "profile_source": "skyrimse",
     "note": "Check the Nexus page for installation instructions"
+  },
+  {
+    "source_key": "main:the-saboteur",
+    "game_id": "the-saboteur",
+    "title": "The Saboteur",
+    "section": "main",
+    "profile_source": "saboteur",
+    "note": "DXVK Reshade proxy is recommended! Please see instructions down in Source 1 section."
   },
   {
     "source_key": "main:tomb-raider-2013-definitive-edition",

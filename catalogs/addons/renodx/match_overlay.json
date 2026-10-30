@@ -3273,5 +3273,9 @@
   "zenless-zone-zero": {
     "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64",
     "game_target_ids": ["zenless-zone-zero"]
+  },
+  "the-saboteur": {
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-saboteur.addon32",
+    "game_target_ids": ["the-saboteur"]
   }
 }

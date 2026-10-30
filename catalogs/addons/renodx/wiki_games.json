@@ -1222,9 +1222,9 @@
     "name": "Need for Speed™ Most Wanted (2005)",
     "slug": "nfsmw05",
     "arch": "X86",
-    "status": "construction",
+    "status": "working",
     "id": "need-for-speedtm-most-wanted-2005",
-    "notes": "Requires DXVK Reshade proxy! Please see instructions down in Source 1 section.",
+    "notes": "DXVK Reshade proxy is recommended! Please see instructions down in Source 1 section.",
     "source_key": "main:need-for-speedtm-most-wanted-2005"
   },
   {
@@ -1888,6 +1888,15 @@
     "arch": "X64",
     "status": "working",
     "id": "the-legend-of-zelda-tears-of-the-kingdom"
+  },
+  {
+    "name": "The Saboteur",
+    "slug": "saboteur",
+    "arch": "X86",
+    "status": "working",
+    "id": "the-saboteur",
+    "notes": "DXVK Reshade proxy is recommended! Please see instructions down in Source 1 section.",
+    "source_key": "main:the-saboteur"
   },
   {
     "name": "The Surge",

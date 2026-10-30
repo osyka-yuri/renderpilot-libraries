@@ -22102,6 +22102,20 @@
       ]
     },
     {
+      "id": "the-saboteur",
+      "rules": [
+        {
+          "id": "steam-24880",
+          "kind": "steam_appid",
+          "value": "24880",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-saboteur"
+          }
+        }
+      ]
+    },
+    {
       "id": "the-seance-of-blake-manor",
       "rules": [
         {

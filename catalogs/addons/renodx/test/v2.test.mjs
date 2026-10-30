@@ -293,11 +293,11 @@ test("structured guidance rejects presentation-code drift", () => {
 test("the checked-in ledger covers every active note and excludes unrelated sections", () => {
   const result = verifyCurationLedger(messages, wikiSource);
   assert.equal(result.entries.length, messages.length);
-  assert.equal(messages.length, 566);
+  assert.equal(messages.length, 567);
   assert.deepEqual(result.source.ignored_sections, ["Deprecated", "Related Mods"]);
   assert.equal(
     result.entries.filter((entry) => entry.disposition === "pending").length,
-    23,
+    24,
   );
   assert.equal(result.source.page_reviews.length, 10);
   assert.equal(ledger.entries.length, messages.length);

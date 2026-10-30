@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T00:00:00Z",
+  "generated_at": "2026-10-30T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -3504,7 +3504,7 @@
       "id": "need-for-speedtm-most-wanted-2005",
       "name": "Need for Speed™ Most Wanted (2005)",
       "architecture": "X86",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "exe_name",
@@ -5534,6 +5534,23 @@
       "addon": {
         "slug": "zerokiseki",
         "source": "https://danaforever.github.io/renodx/renodx-zerokiseki.addon64"
+      }
+    },
+    {
+      "id": "the-saboteur",
+      "name": "The Saboteur",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "24880",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "saboteur",
+        "source": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-saboteur.addon32"
       }
     },
     {

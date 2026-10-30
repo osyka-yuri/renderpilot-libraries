@@ -2484,7 +2484,7 @@ assign(
   { inheritCommon: true },
 );
 pending(
-  keyList("main", "need-for-speedtm-most-wanted-2005"),
+  keyList("main", "need-for-speedtm-most-wanted-2005 the-saboteur"),
   "Upstream DXVK proxy and ReShade instructions pending manual review.",
 );
 assign(keyList("main", "counter-strike-source left-4-dead"), [

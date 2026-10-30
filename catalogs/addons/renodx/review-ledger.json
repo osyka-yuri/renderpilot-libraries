@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "2cc96bc5f48433fe809d12e3bea4eae20d2600418415c483db53e0449c6dd97a",
+    "wiki_content_sha256": "d8910092892c7124813b9806eaab78e0139971244bb82cb7ac9b45dfe0ffa495",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "dddcb9b634ccf20e77f41a43d1f4c3cbd6d466dbdeac9a5835e28e6191d0d2b8",
+    "active_message_fingerprint": "1ababadbb17dfce3de47acf533f55031266406af8d28a79bf37dcf7e58db00a5",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -254,7 +254,7 @@
       "title": "Need for Speed™ Most Wanted (2005)",
       "section": "main",
       "profile_source": "nfsmw05",
-      "note_sha256": "8bb27c3dc777af7dcb8b6b9bb4b5f6cf2844a5af86b05416711341f9efb1d8f6",
+      "note_sha256": "056a8994a92aea2b6c8998ef8d529ded7ec82ae8841faffa77e053844e02e9f3",
       "disposition": "pending",
       "reason": "Upstream DXVK proxy and ReShade instructions pending manual review."
     },
@@ -377,6 +377,16 @@
       "note_sha256": "cf8efbc74a19780b25e712d8b1deba3b4b1854a2dea70548b53efbbb309bbdcd",
       "disposition": "omitted",
       "reason": "Generic installation instructions refer to manual host placement; RenderPilot manages add-on installation directly."
+    },
+    {
+      "source_key": "main:the-saboteur",
+      "game_id": "the-saboteur",
+      "title": "The Saboteur",
+      "section": "main",
+      "profile_source": "saboteur",
+      "note_sha256": "056a8994a92aea2b6c8998ef8d529ded7ec82ae8841faffa77e053844e02e9f3",
+      "disposition": "pending",
+      "reason": "Upstream DXVK proxy and ReShade instructions pending manual review."
     },
     {
       "source_key": "main:tomb-raider-2013-definitive-edition",
