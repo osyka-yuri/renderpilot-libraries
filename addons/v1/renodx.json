@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T00:00:00Z",
+  "generated_at": "2026-11-02T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -4070,7 +4070,7 @@
       "id": "resident-evil-6",
       "name": "Resident Evil 6",
       "architecture": "X86",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
@@ -5519,6 +5519,23 @@
       ],
       "addon": {
         "slug": "scblacklist"
+      }
+    },
+    {
+      "id": "tom-clancy-s-splinter-cell-chaos-theory",
+      "name": "Tom Clancy's Splinter Cell: Chaos Theory",
+      "architecture": "X86",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "13570",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "scct",
+        "source": "https://github.com/ldavid1994/renodx/releases/download/snapshot/renodx-scct.addon32"
       }
     },
     {

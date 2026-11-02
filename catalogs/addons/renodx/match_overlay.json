@@ -3277,5 +3277,9 @@
   "the-saboteur": {
     "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-saboteur.addon32",
     "game_target_ids": ["the-saboteur"]
+  },
+  "tom-clancy-s-splinter-cell-chaos-theory": {
+    "download_url": "https://github.com/ldavid1994/renodx/releases/download/snapshot/renodx-scct.addon32",
+    "game_target_ids": ["tom-clancy-s-splinter-cell-chaos-theory"]
   }
 }

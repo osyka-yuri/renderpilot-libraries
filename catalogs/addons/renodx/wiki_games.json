@@ -1451,7 +1451,7 @@
     "name": "Resident Evil 6",
     "slug": "residentevil6",
     "arch": "X86",
-    "status": "construction",
+    "status": "working",
     "id": "resident-evil-6"
   },
   {
@@ -1960,6 +1960,13 @@
     "arch": "X86",
     "status": "working",
     "id": "tom-clancy-s-splinter-cell-blacklist"
+  },
+  {
+    "name": "Tom Clancy's Splinter Cell: Chaos Theory",
+    "slug": "scct",
+    "arch": "X86",
+    "status": "working",
+    "id": "tom-clancy-s-splinter-cell-chaos-theory"
   },
   {
     "name": "Tomb Raider (2013)",

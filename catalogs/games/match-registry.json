@@ -22719,6 +22719,20 @@
       ]
     },
     {
+      "id": "tom-clancy-s-splinter-cell-chaos-theory",
+      "rules": [
+        {
+          "id": "steam-13570",
+          "kind": "steam_appid",
+          "value": "13570",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:tom-clancy-s-splinter-cell-chaos-theory"
+          }
+        }
+      ]
+    },
+    {
       "id": "tomb-raider",
       "rules": [
         {
