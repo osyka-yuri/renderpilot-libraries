@@ -2,7 +2,7 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "4714d249601972374a46434c50e6c9baa455860db5ddf534f22dfb32f8e39bb1",
+    "wiki_content_sha256": "7c8e96d25c64bcafa192c4473130ae8225e9075d9834d00d45419c7294040b5a",
     "ignored_sections": ["Deprecated", "Related Mods"],
     "active_message_fingerprint": "1ababadbb17dfce3de47acf533f55031266406af8d28a79bf37dcf7e58db00a5",
     "page_reviews": [
