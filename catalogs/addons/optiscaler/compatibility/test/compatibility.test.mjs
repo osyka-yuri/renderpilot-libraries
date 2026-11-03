@@ -13,16 +13,22 @@ import {
 import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
-const EXPECTED_PUBLISHED_ENTRY_COUNT = 697;
+const EXPECTED_PUBLISHED_ENTRY_COUNT = 700;
 const CURRENT_WIKI_SNAPSHOT = {
-  revision: "2026-10-26",
-  sha256: "8a1f98bf2e3dbe2fca15f0f1d2969dfc66b025f9385928412c09300135967db6",
-  rows: 714,
+  revision: "2026-11-02",
+  sha256: "419fd6c8a40764760eabb2c8c0250c0abdb3deba1ec4fe6dab621a706d4699fa",
+  rows: 717,
 };
-const SHIFTED_MAIN_SOURCE_KEYS = Array.from(
-  { length: 214 },
-  (_, index) => `main:${String(458 + index).padStart(4, "0")}`,
-);
+const SHIFTED_MAIN_SOURCE_KEYS = [
+  ...Array.from(
+    { length: 28 },
+    (_, index) => `main:${String(452 + index).padStart(4, "0")}`,
+  ),
+  ...Array.from(
+    { length: 193 },
+    (_, index) => `main:${String(481 + index).padStart(4, "0")}`,
+  ),
+];
 const EXPECTED_REFRAMEWORK_FAMILY = [
   {
     id: "onimusha-way-of-the-sword",
@@ -34,7 +40,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-2-remake",
-    sourceKey: "upscaler_mods:0011",
+    sourceKey: "upscaler_mods:0012",
     inputs: ["dlss2_plus", "xess"],
     steamAppId: "883710",
     messageId: "optiscaler-resident-evil-2-remake-reframework-upscalerbase-plugin",
@@ -43,7 +49,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-3-remake",
-    sourceKey: "upscaler_mods:0012",
+    sourceKey: "upscaler_mods:0013",
     inputs: ["dlss2_plus", "xess"],
     steamAppId: "952060",
     messageId: "optiscaler-resident-evil-3-remake-reframework-upscalerbase-plugin",
@@ -52,7 +58,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-4-remake",
-    sourceKey: "upscaler_mods:0013",
+    sourceKey: "upscaler_mods:0014",
     inputs: ["dlss2_plus", "xess"],
     steamAppId: "2050650",
     messageId: "optiscaler-resident-evil-4-remake-reframework-upscalerbase-plugin",
@@ -61,7 +67,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-7",
-    sourceKey: "upscaler_mods:0014",
+    sourceKey: "upscaler_mods:0015",
     inputs: ["dlss2_plus", "xess"],
     steamAppId: "418370",
     messageId: "optiscaler-resident-evil-7-reframework-upscalerbase-plugin",
@@ -70,7 +76,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-requiem",
-    sourceKey: "main:0451",
+    sourceKey: "main:0452",
     inputs: ["dlss2_plus", "fsr2_plus"],
     steamAppId: "3764200",
     messageId: "optiscaler-resident-evil-requiem-reframework",
@@ -101,20 +107,20 @@ const EXPECTED_EXTERNAL_MOD_GUIDANCE_FAMILY = [
   },
   {
     id: "sekiro-shadows-die-twice",
-    sourceKey: "upscaler_mods:0016",
+    sourceKey: "upscaler_mods:0017",
     messageId: "optiscaler-sekiro-shadows-die-twice-sekirotsr-mod",
     fallbackText: "The SekiroTSR mod is required as a basis for DLSS inputs.",
   },
   {
     id: "ghost-recon-wildlands",
-    sourceKey: "upscaler_mods:0017",
+    sourceKey: "upscaler_mods:0018",
     messageId: "optiscaler-ghost-recon-wildlands-dlss-mod",
     fallbackText:
       "A third-party DLSS mod is required for this game to work with OptiScaler.",
   },
   {
     id: "total-war-warhammer-3",
-    sourceKey: "upscaler_mods:0018",
+    sourceKey: "upscaler_mods:0019",
     messageId: "optiscaler-total-war-warhammer-3-warhammer3dlss-mod",
     fallbackText:
       "The Warhammer3DLSS mod is required for this game to work with OptiScaler.",
@@ -133,16 +139,16 @@ const EXPECTED_PENDING_IDENTITY_REASONS = {
   "main:0370": "No supported exact runtime or store identity is available.",
   "main:0420":
     "An Epic-only candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0465":
+  "main:0466":
     "Store results are different products and do not establish an exact title binding.",
-  "main:0470": "The upstream source deliberately provides no bindable identity.",
-  "main:0485": "No exact verifiable store identity is available.",
-  "main:0547":
+  "main:0471": "The upstream source deliberately provides no bindable identity.",
+  "main:0487": "No exact verifiable store identity is available.",
+  "main:0549":
     "An Epic candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0589":
+  "main:0591":
     "The prior Steam AppID 3763780 is no longer a current app; other Rift results are distinct games.",
-  "main:0598": "No verified exact match target or executable observation is available.",
-  "main:0612": "No verified exact match target or executable observation is available.",
+  "main:0600": "No verified exact match target or executable observation is available.",
+  "main:0614": "No verified exact match target or executable observation is available.",
 };
 const EXPECTED_REAUDITED_BINDINGS = {
   "main:0030": {
@@ -175,27 +181,27 @@ const EXPECTED_REAUDITED_BINDINGS = {
     targetId: "protocol-terminate",
     identity: { kind: "steam_appid", value: "3710560" },
   },
-  "main:0533": {
+  "main:0535": {
     entryId: "stygian-outer-gods",
     targetId: "stygian-outer-gods",
     identity: { kind: "steam_appid", value: "2581410" },
   },
-  "main:0575": {
+  "main:0577": {
     entryId: "the-last-oricru",
     targetId: "the-last-oricru",
     identity: { kind: "steam_appid", value: "1663640" },
   },
-  "main:0584": {
+  "main:0586": {
     entryId: "the-other-side",
     targetId: "the-other-side",
     identity: { kind: "steam_appid", value: "2764750" },
   },
-  "main:0619": {
+  "main:0621": {
     entryId: "undertaker",
     targetId: "undertaker",
     identity: { kind: "steam_appid", value: "4030360" },
   },
-  "main:0658": {
+  "main:0660": {
     entryId: "wonder-ball",
     targetId: "wonder-ball",
     identity: { kind: "steam_appid", value: "2640030" },
@@ -349,45 +355,42 @@ const EXPECTED_RETAINED_LAUNCH_MESSAGES = {
 
 const EXPECTED_RUSSIAN_TECHNICAL_TERMS = {
   "optiscaler-automate-it-fsr-detection":
-    "Один раз измените внутриигровую настройку FSR, чтобы OptiScaler смог перехватить режим FSR.",
+    "Один раз измените внутриигровую настройку FSR, чтобы OptiScaler смог обнаружить FSR.",
   "optiscaler-cyberpunk-fsr4-input":
-    "Режим FSR 4 можно использовать с OptiScaler на любой видеокарте.",
+    "FSR 4 можно использовать с OptiScaler на любой видеокарте.",
   "optiscaler-ghostrunner-2-dx12-performance":
     "Для лучшей производительности выберите режим FSR или XeSS либо используйте OptiPatcher.",
   "optiscaler-tainted-grail-dx12-skybox":
     "Если при FSR 4 возникают редкие проблемы с небом, выберите входное цветовое пространство Non-Linear PQ.",
   "optiscaler-bright-memory-dx12-ray-tracing":
-    "Чтобы использовать режим DLSS, включите трассировку лучей и спуфинг NVIDIA.",
+    "Чтобы использовать DLSS, включите трассировку лучей и спуфинг NVIDIA.",
   "optiscaler-dawn-break-demo-dx12-motion-blur-color-space":
     "Отключите размытие в движении. При FSR 4 выберите входное цветовое пространство Non-Linear PQ, чтобы избежать мерцания.",
   "optiscaler-dream-eaters-fsr4-color-space":
-    "При использовании FSR 4 в режиме DLSS выберите входное цветовое пространство Non-Linear.",
+    "При использовании FSR 4 через DLSS выберите входное цветовое пространство Non-Linear.",
   "optiscaler-forgive-me-father-2-dx12-fsr4":
     "Если при FSR 4 экран мерцает, выберите входное цветовое пространство Non-Linear sRGB.",
   "optiscaler-flipscapes-input-detection":
-    "Измените внутриигровую настройку FSR, чтобы OptiScaler перехватил режим FSR 3.1. При выборе режима DLSS перезапустите игру после изменения настройки.",
+    "Измените внутриигровую настройку FSR, чтобы OptiScaler обнаружил FSR 3.1. При выборе DLSS перезапустите игру после изменения настройки.",
   "optiscaler-funko-fusion-fsr4-color-space":
-    "Используйте режим FSR. Если FSR 4 мерцает с пресетом Balanced, выберите входное цветовое пространство Non-Linear sRGB.",
+    "Используйте FSR. Если FSR 4 мерцает с пресетом Balanced, выберите входное цветовое пространство Non-Linear sRGB.",
   "optiscaler-lunar-eclipse-frame-generation":
-    "Не используйте генерацию кадров FSR. При использовании FSR 4 в режиме DLSS выберите входное цветовое пространство Non-Linear.",
-  "optiscaler-mr-photographer-dx11": "В DirectX 11 режим XeSS недоступен.",
-  "optiscaler-oddroom-dx12":
-    "Если режим DLSS не работает, запустите игру с параметром -dx12.",
-  "optiscaler-pax-autocratica-prologue-dlss-input":
-    "Используйте режим DLSS: режим FSR недоступен.",
-  "optiscaler-planet-coaster-2-dlss-input":
-    "Используйте режим DLSS: режим FSR 3 недоступен.",
+    "Не используйте генерацию кадров FSR. При использовании FSR 4 через DLSS выберите входное цветовое пространство Non-Linear.",
+  "optiscaler-mr-photographer-dx11": "В DirectX 11 XeSS недоступен.",
+  "optiscaler-oddroom-dx12": "Если DLSS не работает, запустите игру с параметром -dx12.",
+  "optiscaler-pax-autocratica-prologue-dlss-input": "Используйте DLSS: FSR недоступен.",
+  "optiscaler-planet-coaster-2-dlss-input": "Используйте DLSS: FSR 3 недоступен.",
   "optiscaler-project-station-demo-dx12":
-    "Режим FSR 3 и режим генерации кадров XeSS недоступны. Не включайте Allow Async вместе с генерацией кадров FSR: игра может завершиться сбоем.",
+    "FSR 3 и генерация кадров XeSS недоступны. Не включайте Allow Async вместе с генерацией кадров FSR: игра может завершиться сбоем.",
   "optiscaler-quarantine-zone-the-last-check-fsr4-input-color-space":
     "Для FSR 4 выберите входное цветовое пространство Non-Linear, чтобы избежать артефактов на небе.",
   "optiscaler-robocop-rogue-city-unfinished-business-fsr4-balanced-flicker":
-    "При FSR 4 режим DLSS Balanced может мерцать. Попробуйте другой пресет или режим. Входное цветовое пространство Non-Linear sRGB может помочь, но способно усилить гостинг.",
-  "optiscaler-scathe-dx12-fsr-input": "Режим FSR может вызвать сбой игры.",
+    "При FSR 4 пресет DLSS Balanced может мерцать. Попробуйте другой пресет или апскейлер. Входное цветовое пространство Non-Linear sRGB может помочь, но способно усилить гостинг.",
+  "optiscaler-scathe-dx12-fsr-input": "Использование FSR может привести к сбою игры.",
   "optiscaler-scp-secret-files-dx12":
-    "Не выбирайте режим FSR 2: он может вызвать сбой. В DirectX 11 ниже производительность и заметно сильное мерцание.",
+    "Не выбирайте FSR 2: он может вызвать сбой. В DirectX 11 ниже производительность и заметно сильное мерцание.",
   "optiscaler-terratech-legion-fsr4-non-linear-color-space":
-    "Режим FSR 3.1 недоступен. Для FSR 4 выберите входное цветовое пространство Non-Linear, чтобы избежать чёрного экрана и артефактов DLSS.",
+    "FSR 3.1 недоступен. Для FSR 4 выберите входное цветовое пространство Non-Linear, чтобы избежать чёрного экрана и артефактов DLSS.",
   "optiscaler-car-mechanic-simulator-2026-single-player-demo-fsr3-mode":
     "Режим FSR 3 недоступен.",
 };
@@ -671,12 +674,12 @@ test("Russian compatibility guidance names technology modes and input color spac
   const technologyModeMessages = inputs.messages.messages.filter(
     (message) => isTechnologyInputMessage(message) && !isInputColorSpaceMessage(message),
   );
-  assert.equal(technologyModeMessages.length, 42);
+  assert.equal(technologyModeMessages.length, 43);
   for (const message of technologyModeMessages) {
     assert.match(
       message.translations.ru,
-      /режим/iu,
-      `${message.id} must name the selected DLSS, FSR, or XeSS technology as a mode`,
+      /(?:режим|DLSS|FSR|XeSS)/iu,
+      `${message.id} must name the selected DLSS, FSR, or XeSS technology or mode`,
     );
   }
 });
@@ -697,7 +700,7 @@ test("frame-generation guidance uses the localized term in every published local
     /frame generation/iu.test(message.fallback_text),
   );
 
-  assert.equal(frameGenerationMessages.length, 11);
+  assert.equal(frameGenerationMessages.length, 13);
   for (const message of frameGenerationMessages) {
     for (const [locale, term] of Object.entries(localizedTerms)) {
       const translation = message.translations[locale];
@@ -970,12 +973,12 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
       `${sourceKey} must retain its exact post-rekey source binding`,
     );
   }
-  assert.equal(snapshotBySource.get("main:0671")?.title, "Zouhri: The Cursed Blood Demo");
+  assert.equal(snapshotBySource.get("main:0673")?.title, "Zouhri: The Cursed Blood Demo");
 
   const zero = entriesById.get("star-wars-zero-company");
   assert.deepEqual(zero, {
     id: "star-wars-zero-company",
-    source_ref: "main:0523",
+    source_ref: "main:0525",
     status: "working",
     declared_inputs: ["dlss2_plus", "fsr2_plus", "xess"],
     guidance: [
@@ -995,11 +998,11 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
     ],
     game_target_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0523")?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0525")?.disposition, {
     kind: "published",
     entry_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0523")?.notes?.[0]?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0525")?.notes?.[0]?.disposition, {
     kind: "guidance",
     message_ids: ["optiscaler-star-wars-zero-company-vendor-options"],
   });

@@ -28,7 +28,7 @@
         "fr": "Vous pouvez utiliser FSR 4 comme entrée pour OptiScaler, quelle que soit votre carte graphique.",
         "ja": "使用する GPU に関係なく、FSR 4 を OptiScaler の入力として使用できます。",
         "pt-BR": "Você pode usar o FSR 4 como entrada do OptiScaler independentemente da sua GPU.",
-        "ru": "Режим FSR 4 можно использовать с OptiScaler на любой видеокарте.",
+        "ru": "FSR 4 можно использовать с OptiScaler на любой видеокарте.",
         "zh-Hans": "无论使用何种 GPU，都可将 FSR 4 用作 OptiScaler 的输入模式。",
         "zh-Hant": "無論使用何種 GPU，都可將 FSR 4 用作 OptiScaler 的輸入模式。"
       }
@@ -92,7 +92,7 @@
         "fr": "Modifiez une fois le réglage de qualité FSR dans le jeu afin qu’OptiScaler puisse détecter l’entrée FSR 2.",
         "ja": "OptiScaler が FSR 2 入力を検出できるように、ゲーム内の FSR 品質設定を一度変更してください。",
         "pt-BR": "Altere uma vez a qualidade do FSR nas configurações do jogo para que o OptiScaler detecte a entrada FSR 2.",
-        "ru": "Один раз измените внутриигровую настройку качества FSR, чтобы OptiScaler смог перехватить режим FSR 2.",
+        "ru": "Один раз измените внутриигровую настройку качества FSR, чтобы OptiScaler смог обнаружить FSR 2.",
         "zh-Hans": "请在游戏内更改一次 FSR 质量设置，以便 OptiScaler 检测到 FSR 2 输入。",
         "zh-Hant": "請在遊戲內變更一次 FSR 品質設定，讓 OptiScaler 能偵測到 FSR 2 輸入。"
       }
@@ -236,7 +236,7 @@
         "fr": "L’entrée XeSS peut afficher des artefacts en blocs noirs dans les cinématiques et certains niveaux.",
         "ja": "XeSS 入力では、カットシーンや一部のレベルで黒いブロック状のアーティファクトが表示される場合があります。",
         "pt-BR": "A entrada XeSS pode apresentar artefatos em blocos pretos nas cinemáticas e em algumas fases.",
-        "ru": "В режиме XeSS в роликах и на некоторых уровнях могут появляться чёрные блочные артефакты.",
+        "ru": "При использовании XeSS в роликах и на некоторых уровнях могут появляться чёрные квадратные артефакты.",
         "zh-Hans": "XeSS 输入模式可能会在过场动画和部分关卡中出现黑色块状伪影。",
         "zh-Hant": "XeSS 輸入模式可能會在過場動畫和部分關卡中出現黑色塊狀偽影。"
       }
@@ -316,7 +316,7 @@
         "fr": "Utilisez l’entrée DLSS : OptiScaler ne détecte pas le réglage FSR 3 du jeu.",
         "ja": "DLSS 入力を使用してください。OptiScaler はゲーム内の FSR 3 設定を検出しません。",
         "pt-BR": "Use a entrada DLSS: o OptiScaler não detecta a configuração FSR 3 do jogo.",
-        "ru": "Используйте режим DLSS: OptiScaler не обнаруживает внутриигровую настройку FSR 3.",
+        "ru": "Используйте DLSS: OptiScaler не обнаруживает внутриигровую настройку FSR 3.",
         "zh-Hans": "请使用 DLSS 输入模式：OptiScaler 无法检测游戏内的 FSR 3 设置。",
         "zh-Hant": "請使用 DLSS 輸入模式：OptiScaler 無法偵測遊戲內的 FSR 3 設定。"
       }
@@ -364,7 +364,7 @@
         "fr": "Réglez l’échelle de résolution du jeu sous 100 % afin qu’OptiScaler puisse détecter l’entrée FSR 2.",
         "ja": "OptiScaler が FSR 2 入力を検出できるよう、ゲーム内の解像度スケールを 100% 未満に設定してください。",
         "pt-BR": "Defina a escala de resolução do jogo abaixo de 100% para que o OptiScaler detecte a entrada FSR 2.",
-        "ru": "Установите внутриигровой масштаб разрешения ниже 100 %, чтобы OptiScaler смог перехватить режим FSR 2.",
+        "ru": "Установите внутриигровой масштаб разрешения ниже 100 %, чтобы OptiScaler смог обнаружить FSR 2.",
         "zh-Hans": "请将游戏内的分辨率缩放设为低于 100%，以便 OptiScaler 检测 FSR 2 输入模式。",
         "zh-Hant": "請將遊戲內的解析度縮放設為低於 100%，以便 OptiScaler 偵測 FSR 2 輸入模式。"
       }
@@ -460,7 +460,7 @@
         "fr": "Avec FSR 4 et l’entrée DLSS, activez AutoExposure.",
         "ja": "FSR 4 を DLSS 入力で使用する場合は、AutoExposure を有効にしてください。",
         "pt-BR": "Ao usar o FSR 4 com a entrada DLSS, ative AutoExposure.",
-        "ru": "При использовании FSR 4 в режиме DLSS включите AutoExposure.",
+        "ru": "При использовании FSR 4 через DLSS включите AutoExposure.",
         "zh-Hans": "使用 FSR 4 和 DLSS 输入模式时，请启用 AutoExposure。",
         "zh-Hant": "使用 FSR 4 和 DLSS 輸入模式時，請啟用 AutoExposure。"
       }
@@ -476,7 +476,7 @@
         "fr": "Modifiez une fois le réglage FSR dans le jeu afin qu’OptiScaler puisse détecter l’entrée FSR.",
         "ja": "OptiScaler が FSR 入力を検出できるように、ゲーム内の FSR 設定を一度変更してください。",
         "pt-BR": "Altere uma vez a configuração FSR do jogo para que o OptiScaler detecte a entrada FSR.",
-        "ru": "Один раз измените внутриигровую настройку FSR, чтобы OptiScaler смог перехватить режим FSR.",
+        "ru": "Один раз измените внутриигровую настройку FSR, чтобы OptiScaler смог обнаружить FSR.",
         "zh-Hans": "请在游戏内更改一次 FSR 设置，以便 OptiScaler 检测 FSR 输入模式。",
         "zh-Hant": "請在遊戲內變更一次 FSR 設定，以便 OptiScaler 偵測 FSR 輸入模式。"
       }
@@ -556,7 +556,7 @@
         "fr": "Pour utiliser une entrée DLSS, activez le lancer de rayons et l’usurpation NVIDIA.",
         "ja": "DLSS 入力を使用するには、レイトレーシングと NVIDIA スプーフィングを有効にしてください。",
         "pt-BR": "Para usar uma entrada DLSS, ative o ray tracing e a simulação de uma GPU NVIDIA.",
-        "ru": "Чтобы использовать режим DLSS, включите трассировку лучей и спуфинг NVIDIA.",
+        "ru": "Чтобы использовать DLSS, включите трассировку лучей и спуфинг NVIDIA.",
         "zh-Hans": "要使用 DLSS 输入，请启用光线追踪和 NVIDIA 伪装。",
         "zh-Hant": "要使用 DLSS 輸入，請啟用光線追蹤和 NVIDIA 偽裝。"
       }
@@ -652,7 +652,7 @@
         "fr": "Avec FSR 4 et l'entrée XeSS, sélectionnez l'espace colorimétrique d'entrée Non-Linear.",
         "ja": "FSR 4 を XeSS 入力で使用する場合は、入力カラースペースに Non-Linear を選択してください。",
         "pt-BR": "Ao usar o FSR 4 com a entrada XeSS, selecione o espaço de cores de entrada Non-Linear.",
-        "ru": "При использовании FSR 4 в режиме XeSS выберите нелинейное входное цветовое пространство.",
+        "ru": "При использовании FSR 4 через XeSS выберите входное цветовое пространство Non-Linear.",
         "zh-Hans": "使用 FSR 4 和 XeSS 输入模式时，请选择 Non-Linear 输入色彩空间。",
         "zh-Hant": "使用 FSR 4 和 XeSS 輸入模式時，請選擇 Non-Linear 輸入色彩空間。"
       }
@@ -732,7 +732,7 @@
         "fr": "Si le mode DLSS présente des problèmes graphiques, activez « Restore Compute Root Signature » dans OptiScaler.",
         "ja": "DLSS モードで表示の問題が出る場合は、OptiScaler で「Restore Compute Root Signature」を有効にしてください。",
         "pt-BR": "Se a entrada DLSS apresentar problemas gráficos, ative Restore Compute Root Signature no OptiScaler.",
-        "ru": "Если в режиме DLSS возникают графические проблемы, включите в меню OptiScaler параметр Restore Compute Root Signature.",
+        "ru": "Если при использовании DLSS возникают графические проблемы, включите в меню OptiScaler параметр Restore Compute Root Signature.",
         "zh-Hans": "如果 DLSS 模式出现图形问题，请在 OptiScaler 中启用“Restore Compute Root Signature”。",
         "zh-Hant": "如果 DLSS 模式出現圖形問題，請在 OptiScaler 中啟用「Restore Compute Root Signature」。"
       }
@@ -796,7 +796,7 @@
         "fr": "Utilisez l’entrée XeSS pour éviter le scintillement.",
         "ja": "ちらつきを避けるため、XeSS 入力を使用してください。",
         "pt-BR": "Use a entrada XeSS para evitar cintilação.",
-        "ru": "Используйте режим XeSS, чтобы избежать мерцания.",
+        "ru": "Используйте XeSS, чтобы избежать мерцания.",
         "zh-Hans": "请使用 XeSS 输入模式以避免闪烁。",
         "zh-Hant": "請使用 XeSS 輸入模式以避免閃爍。"
       }
@@ -812,7 +812,7 @@
         "fr": "Privilégiez l’entrée XeSS, car l’entrée DLSS peut provoquer des scintillements de l’image ou des plantages du jeu.",
         "ja": "DLSS 入力では画面のちらつきやゲームのクラッシュが発生する可能性があるため、XeSS 入力の使用を推奨します。",
         "pt-BR": "Prefira a entrada XeSS, pois a entrada DLSS pode causar cintilação na imagem ou encerramentos inesperados do jogo.",
-        "ru": "Рекомендуется использовать режим XeSS, поскольку DLSS может вызывать мерцание изображения или вылеты игры.",
+        "ru": "Рекомендуется использовать XeSS, поскольку DLSS может вызывать мерцание изображения или вылеты игры.",
         "zh-Hans": "建议优先使用 XeSS 输入，因为 DLSS 输入可能导致画面闪烁或游戏崩溃。",
         "zh-Hant": "建議優先使用 XeSS 輸入，因為 DLSS 輸入可能導致畫面閃爍或遊戲當機。"
       }
@@ -908,7 +908,7 @@
         "fr": "Avec FSR 4 et l'entrée DLSS, sélectionnez l'espace colorimétrique d'entrée Non-Linear.",
         "ja": "FSR 4 を DLSS 入力で使用する場合は、入力カラースペースに Non-Linear を選択してください。",
         "pt-BR": "Ao usar o FSR 4 com a entrada DLSS, selecione o espaço de cores de entrada Non-Linear.",
-        "ru": "При использовании FSR 4 в режиме DLSS выберите входное цветовое пространство Non-Linear.",
+        "ru": "При использовании FSR 4 через DLSS выберите входное цветовое пространство Non-Linear.",
         "zh-Hans": "使用 FSR 4 和 DLSS 输入模式时，请选择 Non-Linear 输入色彩空间。",
         "zh-Hant": "使用 FSR 4 和 DLSS 輸入模式時，請選擇 Non-Linear 輸入色彩空間。"
       }
@@ -988,7 +988,7 @@
         "fr": "L’entrée de génération d’images FSR 3.1 n’est pas prise en charge. Utilisez DLSSG via l’entrée Streamline ou la génération d’images native XeFG/FSR.",
         "ja": "FSR 3.1 のフレーム生成入力はサポートされていません。Streamline 入力の DLSSG、またはネイティブの XeFG/FSR フレーム生成を使用してください。",
         "pt-BR": "A entrada de geração de quadros do FSR 3.1 não é compatível. Use DLSSG por meio da entrada Streamline ou a geração de quadros nativa XeFG/FSR.",
-        "ru": "Генерация кадров FSR 3.1 не поддерживается. Используйте DLSSG через режим Streamline или нативную генерацию кадров XeFG/FSR.",
+        "ru": "Генерация кадров FSR 3.1 не поддерживается. Используйте DLSSG через Streamline или нативную генерацию кадров XeFG/FSR.",
         "zh-Hans": "不支持 FSR 3.1 帧生成输入模式。请通过 Streamline 输入模式使用 DLSSG，或使用原生 XeFG/FSR 帧生成。",
         "zh-Hant": "不支援 FSR 3.1 畫格生成輸入模式。請透過 Streamline 輸入模式使用 DLSSG，或使用原生 XeFG/FSR 畫格生成。"
       }
@@ -1004,7 +1004,7 @@
         "fr": "Modifiez le réglage FSR dans le jeu afin qu’OptiScaler puisse détecter l’entrée FSR 3.1. Avec l’entrée DLSS, redémarrez le jeu après avoir sélectionné DLSS.",
         "ja": "OptiScaler が FSR 3.1 入力を検出できるように、ゲーム内の FSR 設定を変更してください。DLSS 入力を使用する場合は、DLSS を選択した後にゲームを再起動してください。",
         "pt-BR": "Altere a configuração FSR do jogo para que o OptiScaler detecte a entrada FSR 3.1. Se usar a entrada DLSS, reinicie o jogo após selecionar DLSS.",
-        "ru": "Измените внутриигровую настройку FSR, чтобы OptiScaler перехватил режим FSR 3.1. При выборе режима DLSS перезапустите игру после изменения настройки.",
+        "ru": "Измените внутриигровую настройку FSR, чтобы OptiScaler обнаружил FSR 3.1. При выборе DLSS перезапустите игру после изменения настройки.",
         "zh-Hans": "请更改游戏内的 FSR 设置，以便 OptiScaler 检测 FSR 3.1 输入模式。使用 DLSS 输入模式时，请在选择 DLSS 后重启游戏。",
         "zh-Hant": "請變更遊戲內的 FSR 設定，以便 OptiScaler 偵測 FSR 3.1 輸入模式。使用 DLSS 輸入模式時，請在選擇 DLSS 後重新啟動遊戲。"
       }
@@ -1100,7 +1100,7 @@
         "fr": "Utilisez l'entrée FSR. Si FSR 4 scintille avec le préréglage Balanced, sélectionnez l'espace colorimétrique d'entrée Non-Linear sRGB.",
         "ja": "FSR 入力を使用してください。FSR 4 で Balanced プリセット時にちらつく場合は、入力カラースペースに Non-Linear sRGB を選択してください。",
         "pt-BR": "Use a entrada FSR. Se o FSR 4 apresentar cintilação na predefinição Balanced, selecione o espaço de cores de entrada Non-Linear sRGB.",
-        "ru": "Используйте режим FSR. Если FSR 4 мерцает с пресетом Balanced, выберите входное цветовое пространство Non-Linear sRGB.",
+        "ru": "Используйте FSR. Если FSR 4 мерцает с пресетом Balanced, выберите входное цветовое пространство Non-Linear sRGB.",
         "zh-Hans": "请使用 FSR 输入模式。若 FSR 4 在 Balanced 预设下闪烁，请选择 Non-Linear sRGB 输入色彩空间。",
         "zh-Hant": "請使用 FSR 輸入模式。若 FSR 4 在 Balanced 預設下閃爍，請選擇 Non-Linear sRGB 輸入色彩空間。"
       }
@@ -1164,7 +1164,7 @@
         "fr": "Après avoir sélectionné l'entrée DLSS, redémarrez le jeu afin qu'OptiScaler puisse la détecter. L'entrée FSR 3 ne nécessite pas de redémarrage.",
         "ja": "DLSS 入力を選択した後、OptiScaler が検出できるようゲームを再起動してください。FSR 3 入力では再起動は不要です。",
         "pt-BR": "Após selecionar a entrada DLSS, reinicie o jogo para que o OptiScaler possa detectar essa entrada. A entrada FSR 3 não exige reinicialização.",
-        "ru": "После выбора режима DLSS перезапустите игру, чтобы OptiScaler смог обнаружить этот режим. Для режима FSR 3 перезапуск не требуется.",
+        "ru": "После выбора DLSS перезапустите игру, чтобы OptiScaler смог его обнаружить. Для FSR 3 перезапуск не требуется.",
         "zh-Hans": "选择 DLSS 输入模式后，请重启游戏，以便 OptiScaler 检测到它。FSR 3 输入模式无需重启。",
         "zh-Hant": "選擇 DLSS 輸入模式後，請重啟遊戲，以便 OptiScaler 偵測到它。FSR 3 輸入模式無需重啟。"
       }
@@ -1196,7 +1196,7 @@
         "fr": "L’entrée DLSS est disponible dans le menu d’OptiScaler, même si aucune option DLSS n’est affichée dans les paramètres du jeu.",
         "ja": "ゲーム設定に DLSS オプションが表示されなくても、OptiScaler メニューでは DLSS 入力を使用できます。",
         "pt-BR": "A entrada DLSS está disponível no menu do OptiScaler mesmo que nenhuma opção DLSS apareça nas configurações do jogo.",
-        "ru": "Режим DLSS доступен в меню OptiScaler, хотя в настройках игры нет опции DLSS.",
+        "ru": "DLSS доступен в меню OptiScaler, хотя в настройках игры нет опции DLSS.",
         "zh-Hans": "即使游戏设置中未显示 DLSS 选项，OptiScaler 菜单中仍可使用 DLSS 输入模式。",
         "zh-Hant": "即使遊戲設定中未顯示 DLSS 選項，OptiScaler 選單中仍可使用 DLSS 輸入模式。"
       }
@@ -1292,7 +1292,7 @@
         "fr": "Utilisez l’entrée DLSS ; les entrées FSR 2.1 et XeSS ne sont pas disponibles.",
         "ja": "DLSS 入力を使用してください。FSR 2.1 と XeSS の入力は利用できません。",
         "pt-BR": "Use a entrada DLSS; as entradas FSR 2.1 e XeSS não estão disponíveis.",
-        "ru": "Используйте режим DLSS; режимы FSR 2.1 и XeSS недоступны.",
+        "ru": "Используйте DLSS: FSR 2.1 и XeSS недоступны.",
         "zh-Hans": "请使用 DLSS 输入模式；FSR 2.1 和 XeSS 输入模式不可用。",
         "zh-Hant": "請使用 DLSS 輸入模式；FSR 2.1 和 XeSS 輸入模式無法使用。"
       }
@@ -1388,7 +1388,7 @@
         "fr": "Activez le correctif de plantage pour l’entrée FSR 3.1 avant d’utiliser l’entrée FSR.",
         "ja": "FSR 入力を使用する前に、FSR 3.1 入力のクラッシュ修正を有効にしてください。",
         "pt-BR": "Ative a correção de falha da entrada FSR 3.1 antes de usar a entrada FSR.",
-        "ru": "Перед использованием режима FSR включите исправление сбоев FSR 3.1 в OptiScaler.",
+        "ru": "Перед использованием FSR включите исправление сбоев FSR 3.1 в OptiScaler.",
         "zh-Hans": "使用 FSR 输入模式前，请启用 FSR 3.1 输入模式崩溃修复。",
         "zh-Hant": "使用 FSR 輸入模式前，請啟用 FSR 3.1 輸入模式當機修正。"
       }
@@ -1404,7 +1404,7 @@
         "fr": "Sélectionnez XeSS dans les paramètres du jeu ; l’entrée DLSS n’est pas disponible.",
         "ja": "ゲーム設定で XeSS を選択してください。DLSS 入力は利用できません。",
         "pt-BR": "Selecione XeSS nas configurações do jogo; a entrada DLSS não está disponível.",
-        "ru": "Выберите XeSS в настройках игры; режим DLSS недоступен.",
+        "ru": "Выберите XeSS в настройках игры: DLSS недоступен.",
         "zh-Hans": "请在游戏设置中选择 XeSS；DLSS 输入模式不可用。",
         "zh-Hant": "請在遊戲設定中選擇 XeSS；DLSS 輸入模式無法使用。"
       }
@@ -1420,7 +1420,7 @@
         "fr": "Utilisez l’entrée DLSS ; l’entrée FSR 3 n’est pas disponible.",
         "ja": "DLSS 入力を使用してください。FSR 3 入力は利用できません。",
         "pt-BR": "Use a entrada DLSS; a entrada FSR 3 não está disponível.",
-        "ru": "Используйте режим DLSS; режим FSR 3 недоступен.",
+        "ru": "Используйте DLSS: FSR 3 недоступен.",
         "zh-Hans": "请使用 DLSS 输入模式；FSR 3 输入模式不可用。",
         "zh-Hant": "請使用 DLSS 輸入模式；FSR 3 輸入模式無法使用。"
       }
@@ -1452,7 +1452,7 @@
         "fr": "N’utilisez pas la génération d’images FSR. Avec FSR 4 via l’entrée DLSS, sélectionnez l’espace colorimétrique d’entrée Non-Linear.",
         "ja": "FSR フレーム生成を使用しないでください。DLSS 入力経由で FSR 4 を使用する場合は、入力カラースペースに Non-Linear を選択してください。",
         "pt-BR": "Não use a geração de quadros do FSR. Com o FSR 4 por meio da entrada DLSS, selecione o espaço de cores de entrada Non-Linear.",
-        "ru": "Не используйте генерацию кадров FSR. При использовании FSR 4 в режиме DLSS выберите входное цветовое пространство Non-Linear.",
+        "ru": "Не используйте генерацию кадров FSR. При использовании FSR 4 через DLSS выберите входное цветовое пространство Non-Linear.",
         "zh-Hans": "请勿使用 FSR 帧生成。通过 DLSS 输入模式使用 FSR 4 时，请选择 Non-Linear 输入色彩空间。",
         "zh-Hant": "請勿使用 FSR 畫格生成。透過 DLSS 輸入模式使用 FSR 4 時，請選擇 Non-Linear 輸入色彩空間。"
       }
@@ -1516,7 +1516,7 @@
         "fr": "L’entrée XeSS n’est pas disponible en mode DirectX 11.",
         "ja": "DirectX 11 モードでは XeSS 入力を使用できません。",
         "pt-BR": "A entrada XeSS não está disponível no modo DirectX 11.",
-        "ru": "В DirectX 11 режим XeSS недоступен.",
+        "ru": "В DirectX 11 XeSS недоступен.",
         "zh-Hans": "DirectX 11 模式下无法使用 XeSS 输入。",
         "zh-Hant": "DirectX 11 模式下無法使用 XeSS 輸入。"
       }
@@ -1532,7 +1532,7 @@
         "fr": "Si l’entrée DLSS ne fonctionne pas, lancez le jeu avec -dx12.",
         "ja": "DLSS 入力が動作しない場合は、-dx12 を付けてゲームを起動してください。",
         "pt-BR": "Se a entrada DLSS não funcionar, inicie o jogo com -dx12.",
-        "ru": "Если режим DLSS не работает, запустите игру с параметром -dx12.",
+        "ru": "Если DLSS не работает, запустите игру с параметром -dx12.",
         "zh-Hans": "如果 DLSS 输入无法工作，请使用 -dx12 启动游戏。",
         "zh-Hant": "如果 DLSS 輸入無法運作，請使用 -dx12 啟動遊戲。"
       }
@@ -1612,7 +1612,7 @@
         "fr": "Exécutez le jeu en mode DX12 ; les entrées FSR2 provoquent un plantage sous DX11.",
         "ja": "ゲームを DX12 モードで実行してください。FSR2 入力は DX11 でクラッシュを引き起こします。",
         "pt-BR": "Execute o jogo no modo DX12; as entradas FSR2 fazem o jogo travar no DX11.",
-        "ru": "Запустите игру в режиме DX12: режим FSR 2 вызывает сбой в DX11.",
+        "ru": "Запустите игру в режиме DX12: FSR 2 вызывает сбой в DX11.",
         "zh-Hans": "在 DX12 模式下运行游戏；FSR2 输入会在 DX11 下导致崩溃。",
         "zh-Hant": "在 DX12 模式下執行遊戲；FSR2 輸入會在 DX11 下導致崩潰。"
       }
@@ -1644,7 +1644,7 @@
         "fr": "Utilisez les entrées OptiFG ; les entrées DLSSG ne sont pas prises en charge.",
         "ja": "OptiFG 入力を使用してください。DLSSG 入力はサポートされていません。",
         "pt-BR": "Use entradas OptiFG; entradas DLSSG não são compatíveis.",
-        "ru": "Используйте генерацию кадров OptiFG; режим DLSSG не поддерживается.",
+        "ru": "Используйте генерацию кадров OptiFG: DLSSG не поддерживается.",
         "zh-Hans": "使用 OptiFG 输入；不支持 DLSSG 输入。",
         "zh-Hant": "使用 OptiFG 輸入；不支援 DLSSG 輸入。"
       }
@@ -1692,7 +1692,7 @@
         "fr": "Utilisez DLSS, car les entrées FSR ne sont pas disponibles.",
         "ja": "FSR 入力は利用できないため、DLSS を使用してください。",
         "pt-BR": "Use DLSS, pois as entradas FSR não estão disponíveis.",
-        "ru": "Используйте режим DLSS: режим FSR недоступен.",
+        "ru": "Используйте DLSS: FSR недоступен.",
         "zh-Hans": "FSR 输入不可用，请使用 DLSS。",
         "zh-Hant": "FSR 輸入無法使用，請使用 DLSS。"
       }
@@ -1708,7 +1708,7 @@
         "fr": "Évitez les entrées FSR 3, car elles peuvent faire planter le jeu.",
         "ja": "FSR 3 入力はゲームをクラッシュさせる可能性があるため、使用しないでください。",
         "pt-BR": "Evite entradas FSR 3, pois elas podem fazer o jogo travar.",
-        "ru": "Не используйте режим FSR 3: он может привести к сбою игры.",
+        "ru": "Не используйте FSR 3: он может привести к сбою игры.",
         "zh-Hans": "请避免使用 FSR 3 输入，它可能导致游戏崩溃。",
         "zh-Hant": "請避免使用 FSR 3 輸入，它可能導致遊戲當機。"
       }
@@ -1724,7 +1724,7 @@
         "fr": "Utilisez DLSS, car les entrées FSR 3 ne sont pas disponibles.",
         "ja": "FSR 3 入力は利用できないため、DLSS を使用してください。",
         "pt-BR": "Use DLSS, pois as entradas FSR 3 não estão disponíveis.",
-        "ru": "Используйте режим DLSS: режим FSR 3 недоступен.",
+        "ru": "Используйте DLSS: FSR 3 недоступен.",
         "zh-Hans": "FSR 3 输入不可用，请使用 DLSS。",
         "zh-Hant": "FSR 3 輸入無法使用，請使用 DLSS。"
       }
@@ -1740,7 +1740,7 @@
         "fr": "Les entrées DLSS et de génération d’images DLSS ne sont pas disponibles. La génération d’images FSR 3.1 peut faire planter le jeu avec OptiScaler 0.9.1.",
         "ja": "DLSS と DLSS フレーム生成の入力は利用できません。FSR 3.1 フレーム生成は OptiScaler 0.9.1 でゲームをクラッシュさせることがあります。",
         "pt-BR": "As entradas DLSS e de geração de quadros do DLSS não estão disponíveis. A geração de quadros do FSR 3.1 pode fazer o jogo travar com o OptiScaler 0.9.1.",
-        "ru": "Режим DLSS и генерация кадров DLSS недоступны. Генерация кадров FSR 3.1 может приводить к сбою с OptiScaler 0.9.1.",
+        "ru": "DLSS и генерация кадров DLSS недоступны. Генерация кадров FSR 3.1 может приводить к сбою с OptiScaler 0.9.1.",
         "zh-Hans": "DLSS 和 DLSS 帧生成输入不可用。FSR 3.1 帧生成与 OptiScaler 0.9.1 一起使用时可能导致游戏崩溃。",
         "zh-Hant": "DLSS 和 DLSS 畫格生成輸入無法使用。FSR 3.1 畫格生成搭配 OptiScaler 0.9.1 使用時可能導致遊戲當機。"
       }
@@ -1756,7 +1756,7 @@
         "fr": "Activez la résolution dynamique dans les paramètres du jeu pour utiliser DLSS. Les entrées FSR ne sont pas disponibles.",
         "ja": "DLSS を使用するには、ゲーム設定で動的解像度を有効にしてください。FSR 入力は利用できません。",
         "pt-BR": "Ative a resolução dinâmica nas configurações do jogo para usar DLSS. As entradas FSR não estão disponíveis.",
-        "ru": "Чтобы использовать DLSS, включите динамическое разрешение в настройках игры. Режим FSR недоступен.",
+        "ru": "Чтобы использовать DLSS, включите динамическое разрешение в настройках игры. FSR недоступен.",
         "zh-Hans": "要使用 DLSS，请在游戏设置中启用动态分辨率。FSR 输入不可用。",
         "zh-Hant": "要使用 DLSS，請在遊戲設定中啟用動態解析度。FSR 輸入無法使用。"
       }
@@ -1772,7 +1772,7 @@
         "fr": "L’entrée FSR 3 et la sortie de génération d’images XeSS ne sont pas disponibles. N’activez pas Allow Async avec la génération d’images FSR : le jeu peut planter.",
         "ja": "FSR 3 入力と XeSS フレーム生成出力は使用できません。FSR フレーム生成と Allow Async を有効にしないでください。ゲームがクラッシュすることがあります。",
         "pt-BR": "A entrada FSR 3 e a saída de geração de quadros do XeSS não estão disponíveis. Não ative Allow Async com a geração de quadros do FSR; isso pode fazer o jogo travar.",
-        "ru": "Режим FSR 3 и режим генерации кадров XeSS недоступны. Не включайте Allow Async вместе с генерацией кадров FSR: игра может завершиться сбоем.",
+        "ru": "FSR 3 и генерация кадров XeSS недоступны. Не включайте Allow Async вместе с генерацией кадров FSR: игра может завершиться сбоем.",
         "zh-Hans": "FSR 3 输入和 XeSS 帧生成输出不可用。不要将 Allow Async 与 FSR 帧生成一起启用；游戏可能崩溃。",
         "zh-Hant": "FSR 3 輸入和 XeSS 畫格生成輸出無法使用。不要將 Allow Async 與 FSR 畫格生成一起啟用；遊戲可能當機。"
       }
@@ -1788,7 +1788,7 @@
         "fr": "Utilisez DLSS, car les entrées FSR ne sont pas disponibles. Ne forcez pas DirectX 12.",
         "ja": "FSR 入力は利用できないため、DLSS を使用してください。DirectX 12 を強制しないでください。",
         "pt-BR": "Use DLSS, pois as entradas FSR não estão disponíveis. Não force o DirectX 12.",
-        "ru": "Используйте режим DLSS: FSR недоступен. Не включайте DirectX 12 принудительно.",
+        "ru": "Используйте DLSS: FSR недоступен. Не включайте DirectX 12 принудительно.",
         "zh-Hans": "FSR 输入不可用，请使用 DLSS。请勿强制使用 DirectX 12。",
         "zh-Hant": "FSR 輸入無法使用，請使用 DLSS。請勿強制使用 DirectX 12。"
       }
@@ -1836,7 +1836,7 @@
         "fr": "Utilisez DLSS, car l’entrée FSR n’est pas détectée.",
         "ja": "FSR 入力が検出されないため、DLSS を使用してください。",
         "pt-BR": "Use DLSS, pois a entrada FSR não é detectada.",
-        "ru": "Используйте режим DLSS: FSR не обнаруживается OptiScaler.",
+        "ru": "Используйте DLSS: FSR не обнаруживается OptiScaler.",
         "zh-Hans": "未检测到 FSR 输入，请使用 DLSS。",
         "zh-Hant": "未偵測到 FSR 輸入，請使用 DLSS。"
       }
@@ -1900,7 +1900,7 @@
         "fr": "Avec FSR 4, DLSS Balanced peut scintiller. Essayez un autre préréglage ou mode d’entrée ; « Non-Linear sRGB Input » peut aider, mais accroître le ghosting.",
         "ja": "FSR 4 では DLSS Balanced がちらつく場合があります。別のプリセットまたは入力を試してください。「Non-Linear sRGB Input」は有効な場合がありますが、ゴーストが増えることがあります。",
         "pt-BR": "Com o FSR 4, o DLSS Balanced pode apresentar cintilação. Tente outra predefinição ou entrada; Non-Linear sRGB Input pode ajudar, mas também pode aumentar o efeito fantasma.",
-        "ru": "При FSR 4 режим DLSS Balanced может мерцать. Попробуйте другой пресет или режим. Входное цветовое пространство Non-Linear sRGB может помочь, но способно усилить гостинг.",
+        "ru": "При FSR 4 пресет DLSS Balanced может мерцать. Попробуйте другой пресет или апскейлер. Входное цветовое пространство Non-Linear sRGB может помочь, но способно усилить гостинг.",
         "zh-Hans": "使用 FSR 4 时，DLSS Balanced 可能闪烁。请尝试其他预设或输入模式；“Non-Linear sRGB Input”可能有帮助，但会增加重影。",
         "zh-Hant": "使用 FSR 4 時，DLSS Balanced 可能閃爍。請嘗試其他預設或輸入模式；「Non-Linear sRGB Input」可能有幫助，但會增加殘影。"
       }
@@ -1964,7 +1964,7 @@
         "fr": "Le mode FSR peut faire planter le jeu.",
         "ja": "FSR モードはゲームをクラッシュさせることがあります。",
         "pt-BR": "O modo FSR pode fazer o jogo travar.",
-        "ru": "Режим FSR может вызвать сбой игры.",
+        "ru": "Использование FSR может привести к сбою игры.",
         "zh-Hans": "FSR 模式可能导致游戏崩溃。",
         "zh-Hant": "FSR 模式可能導致遊戲當機。"
       }
@@ -2044,7 +2044,7 @@
         "fr": "Utilisez les entrées DLSS, car les entrées FSR 3.1 peuvent ne pas effectuer correctement la mise à l’échelle.",
         "ja": "FSR 3.1 入力は正常にアップスケールされないことがあるため、DLSS 入力を使用してください。",
         "pt-BR": "Use entradas DLSS, pois as entradas FSR 3.1 podem não escalonar a imagem corretamente.",
-        "ru": "Используйте режим DLSS: масштабирование через FSR 3.1 может работать некорректно.",
+        "ru": "Используйте DLSS: масштабирование через FSR 3.1 может работать некорректно.",
         "zh-Hans": "请使用 DLSS 输入；FSR 3.1 输入可能无法正确进行超分辨率处理。",
         "zh-Hant": "請使用 DLSS 輸入；FSR 3.1 輸入可能無法正確進行超解析度處理。"
       }
@@ -2060,7 +2060,7 @@
         "fr": "Utilisez les entrées DLSS, car les entrées FSR 3.1 peuvent ne pas effectuer correctement la mise à l’échelle.",
         "ja": "FSR 3.1 入力は正常にアップスケールされないことがあるため、DLSS 入力を使用してください。",
         "pt-BR": "Use entradas DLSS, pois as entradas FSR 3.1 podem não escalonar a imagem corretamente.",
-        "ru": "Используйте режим DLSS: масштабирование через FSR 3.1 может работать некорректно.",
+        "ru": "Используйте DLSS: масштабирование через FSR 3.1 может работать некорректно.",
         "zh-Hans": "请使用 DLSS 输入；FSR 3.1 输入可能无法正确进行超分辨率处理。",
         "zh-Hant": "請使用 DLSS 輸入；FSR 3.1 輸入可能無法正確進行超解析度處理。"
       }
@@ -2076,7 +2076,7 @@
         "fr": "Utilisez les entrées DLSS, car les entrées FSR 3.1 peuvent ne pas effectuer correctement la mise à l’échelle.",
         "ja": "FSR 3.1 入力は正常にアップスケールされないことがあるため、DLSS 入力を使用してください。",
         "pt-BR": "Use entradas DLSS, pois as entradas FSR 3.1 podem não escalonar a imagem corretamente.",
-        "ru": "Используйте режим DLSS: масштабирование через FSR 3.1 может работать некорректно.",
+        "ru": "Используйте DLSS: масштабирование через FSR 3.1 может работать некорректно.",
         "zh-Hans": "请使用 DLSS 输入；FSR 3.1 输入可能无法正确进行超分辨率处理。",
         "zh-Hant": "請使用 DLSS 輸入；FSR 3.1 輸入可能無法正確進行超解析度處理。"
       }
@@ -2092,7 +2092,7 @@
         "fr": "Les entrées FSR 2 peuvent ne pas fonctionner.",
         "ja": "FSR 2 入力は動作しないことがあります。",
         "pt-BR": "As entradas FSR 2 podem não funcionar.",
-        "ru": "Режим FSR 2 может не работать.",
+        "ru": "FSR 2 может не работать.",
         "zh-Hans": "FSR 2 输入可能无法工作。",
         "zh-Hant": "FSR 2 輸入可能無法運作。"
       }
@@ -2108,7 +2108,7 @@
         "fr": "Pour FSR 4, sélectionnez « Non-Linear sRGB Input » afin d’éviter le scintillement avec l’entrée DLSS.",
         "ja": "FSR 4 では、DLSS 入力のちらつきを防ぐため「Non-Linear sRGB Input」を選択してください。",
         "pt-BR": "Para o FSR 4, selecione Non-Linear sRGB Input para evitar cintilação ao usar a entrada DLSS.",
-        "ru": "Для FSR 4 выберите входное цветовое пространство Non-Linear sRGB, чтобы устранить мерцание при использовании режима DLSS.",
+        "ru": "Для FSR 4 выберите входное цветовое пространство Non-Linear sRGB, чтобы устранить мерцание при использовании DLSS.",
         "zh-Hans": "使用 FSR 4 时，请选择“Non-Linear sRGB Input”以避免 DLSS 输入闪烁。",
         "zh-Hant": "使用 FSR 4 時，請選擇「Non-Linear sRGB Input」以避免 DLSS 輸入閃爍。"
       }
@@ -2156,7 +2156,7 @@
         "fr": "Utilisez les entrées DLSS ; XeSS peut provoquer de graves artefacts visuels.",
         "ja": "DLSS 入力を使用してください。XeSS は重大な表示崩れを引き起こすことがあります。",
         "pt-BR": "Use entradas DLSS; o XeSS pode causar graves artefatos visuais.",
-        "ru": "Используйте режим DLSS: при выборе XeSS возможны сильные визуальные искажения.",
+        "ru": "Используйте DLSS: при выборе XeSS возможны сильные визуальные искажения.",
         "zh-Hans": "请使用 DLSS 输入；XeSS 可能造成严重的画面异常。",
         "zh-Hant": "請使用 DLSS 輸入；XeSS 可能造成嚴重的畫面異常。"
       }
@@ -2188,7 +2188,7 @@
         "fr": "Les entrées FSR 3.1 ne sont pas disponibles. Pour FSR 4, sélectionnez l’espace colorimétrique non linéaire afin d’éviter les écrans noirs et les artefacts DLSS.",
         "ja": "FSR 3.1 入力は利用できません。FSR 4 では、黒い画面と DLSS のアーティファクトを避けるため非線形カラースペースを選択してください。",
         "pt-BR": "As entradas FSR 3.1 não estão disponíveis. Para o FSR 4, selecione o espaço de cores Non-Linear para evitar telas pretas e artefatos do DLSS.",
-        "ru": "Режим FSR 3.1 недоступен. Для FSR 4 выберите входное цветовое пространство Non-Linear, чтобы избежать чёрного экрана и артефактов DLSS.",
+        "ru": "FSR 3.1 недоступен. Для FSR 4 выберите входное цветовое пространство Non-Linear, чтобы избежать чёрного экрана и артефактов DLSS.",
         "zh-Hans": "FSR 3.1 输入不可用。使用 FSR 4 时，请选择非线性色彩空间以避免黑屏和 DLSS 伪影。",
         "zh-Hant": "FSR 3.1 輸入無法使用。使用 FSR 4 時，請選擇非線性色彩空間以避免黑畫面和 DLSS 偽影。"
       }
@@ -2220,7 +2220,7 @@
         "fr": "Utilisez l’entrée DLSS ; FSR 2 peut scintiller.",
         "ja": "DLSS 入力を使用してください。FSR 2 ではちらつきが発生することがあります。",
         "pt-BR": "Use a entrada DLSS; o FSR 2 pode apresentar cintilação.",
-        "ru": "Используйте режим DLSS: FSR 2 может мерцать.",
+        "ru": "Используйте DLSS: FSR 2 может мерцать.",
         "zh-Hans": "请使用 DLSS 输入；FSR 2 可能出现闪烁。",
         "zh-Hant": "請使用 DLSS 輸入；FSR 2 可能出現閃爍。"
       }
@@ -2236,7 +2236,7 @@
         "fr": "Les entrées FSR 3 ne sont pas disponibles.",
         "ja": "FSR 3 入力は利用できません。",
         "pt-BR": "As entradas FSR 3 não estão disponíveis.",
-        "ru": "Режим FSR 3 недоступен.",
+        "ru": "FSR 3 недоступен.",
         "zh-Hans": "FSR 3 输入不可用。",
         "zh-Hant": "FSR 3 輸入無法使用。"
       }
@@ -2252,7 +2252,7 @@
         "fr": "Ne sélectionnez pas d’entrée FSR 2 : elle peut faire planter le jeu. DirectX 11 offre des performances plus faibles et un scintillement important.",
         "ja": "FSR 2 入力は選択しないでください。クラッシュすることがあります。DirectX 11 ではパフォーマンスが低下し、強いちらつきが発生します。",
         "pt-BR": "Não selecione uma entrada FSR 2; ela pode fazer o jogo travar. O DirectX 11 apresenta desempenho inferior e cintilação intensa.",
-        "ru": "Не выбирайте режим FSR 2: он может вызвать сбой. В DirectX 11 ниже производительность и заметно сильное мерцание.",
+        "ru": "Не выбирайте FSR 2: он может вызвать сбой. В DirectX 11 ниже производительность и заметно сильное мерцание.",
         "zh-Hans": "不要选择 FSR 2 输入；它可能导致崩溃。DirectX 11 的性能较低，且会严重闪烁。",
         "zh-Hant": "不要選擇 FSR 2 輸入；它可能導致當機。DirectX 11 的效能較低，且會嚴重閃爍。"
       }
@@ -2476,7 +2476,7 @@
         "fr": "Le mod SekiroTSR est requis comme base pour les entrées DLSS.",
         "ja": "DLSS 入力のベースとして SekiroTSR MOD が必要です。",
         "pt-BR": "O mod SekiroTSR é necessário como base para as entradas DLSS.",
-        "ru": "Для работы требуется мод SekiroTSR в качестве основы для режима DLSS.",
+        "ru": "Для работы требуется мод SekiroTSR в качестве основы для DLSS.",
         "zh-Hans": "需要使用 SekiroTSR 模组作为 DLSS 输入的基础。",
         "zh-Hant": "需要使用 SekiroTSR 模組作為 DLSS 輸入的基礎。"
       }
@@ -2556,7 +2556,7 @@
         "fr": "Avec FSR 4, sélectionnez « Non-Linear sRGB » comme espace colorimétrique d’entrée si vous utilisez l’entrée XeSS ou l’entrée DLSS avec un préréglage autre que Balanced.",
         "ja": "FSR 4 で XeSS 入力を使う場合、または DLSS 入力で「Balanced」以外のプリセットを使う場合は、入力色空間を「Non-Linear sRGB」に設定してください。",
         "pt-BR": "Ao usar FSR 4, selecione Non-Linear sRGB como espaço de cores de entrada se estiver usando a entrada XeSS ou a entrada DLSS com um preset diferente de Balanced.",
-        "ru": "При использовании FSR 4 выберите входное цветовое пространство Non-Linear sRGB, если используется режим XeSS или режим DLSS с пресетом, отличным от Balanced.",
+        "ru": "При использовании FSR 4 выберите входное цветовое пространство Non-Linear sRGB, если используется XeSS или DLSS с пресетом, отличным от Balanced.",
         "zh-Hans": "使用 FSR 4 时，如果采用 XeSS 输入，或在 DLSS 输入下选择 Balanced 以外的预设，请将输入色彩空间设为 Non-Linear sRGB。",
         "zh-Hant": "使用 FSR 4 時，如果採用 XeSS 輸入，或在 DLSS 輸入下選擇 Balanced 以外的預設，請將輸入色彩空間設為 Non-Linear sRGB。"
       }
@@ -2572,7 +2572,7 @@
         "fr": "Privilégiez l’entrée XeSS : l’entrée DLSS peut revenir à FSR et provoquer un plantage au démarrage.",
         "ja": "XeSS 入力の使用を推奨します。DLSS 入力では FSR に切り替わり、ゲームの起動時にクラッシュすることがあります。",
         "pt-BR": "Prefira a entrada XeSS: a entrada DLSS pode voltar para FSR e fazer o jogo fechar inesperadamente na inicialização.",
-        "ru": "Рекомендуется использовать режим XeSS: режим DLSS может переключаться обратно на FSR и вызывать вылет игры при запуске.",
+        "ru": "Рекомендуется использовать XeSS: DLSS может переключаться обратно на FSR и вызывать вылет игры при запуске.",
         "zh-Hans": "建议使用 XeSS 输入：DLSS 输入可能会切换回 FSR，导致游戏启动时崩溃。",
         "zh-Hant": "建議使用 XeSS 輸入：DLSS 輸入可能會切換回 FSR，導致遊戲啟動時當機。"
       }
@@ -2588,7 +2588,7 @@
         "fr": "L’entrée DLSS peut provoquer un scintillement avec certains préréglages, notamment Balanced ; utilisez plutôt l’entrée FSR.",
         "ja": "DLSS 入力では、「Balanced」など一部のプリセットで画面がちらつくことがあります。代わりに FSR 入力を使用してください。",
         "pt-BR": "A entrada DLSS pode causar cintilação na imagem em alguns presets, como Balanced; use a entrada FSR em vez dela.",
-        "ru": "В режиме DLSS изображение может мерцать на некоторых пресетах, включая Balanced. В таком случае используйте режим FSR.",
+        "ru": "При использовании DLSS изображение может мерцать на некоторых пресетах, включая Balanced. В таком случае используйте FSR.",
         "zh-Hans": "使用 DLSS 输入时，画面可能会在 Balanced 等部分预设下闪烁；建议改用 FSR 输入。",
         "zh-Hant": "使用 DLSS 輸入時，畫面可能會在 Balanced 等部分預設下閃爍；建議改用 FSR 輸入。"
       }
@@ -2623,6 +2623,54 @@
         "ru": "В игре зафиксирован пресет Balanced. Чтобы изменить внутреннее разрешение рендеринга, используйте настройку Upscale Ratio Override в OptiScaler. Принудительно включить DX12 нельзя.",
         "zh-Hans": "游戏将超分辨率预设锁定为 Balanced。可通过 OptiScaler 中的 Upscale Ratio Override 调整内部渲染分辨率。无法强制启用 DX12。",
         "zh-Hant": "遊戲將升頻預設鎖定為 Balanced。可使用 OptiScaler 中的 Upscale Ratio Override 調整內部渲染解析度。無法強制啟用 DX12。"
+      }
+    },
+    {
+      "id": "optiscaler-remothered-red-nuns-legacy-reflex-fsr-fg",
+      "fallback_text": "NVIDIA Reflex is available without spoofing. FSR Frame Generation can be forced through Unreal Engine configuration.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "NVIDIA Reflex ist ohne Spoofing verfügbar. Die FSR-Frame-Erstellung kann über die Unreal-Engine-Konfiguration erzwungen werden.",
+        "es": "NVIDIA Reflex está disponible sin spoofing. La generación de fotogramas de FSR se puede forzar mediante la configuración de Unreal Engine.",
+        "fr": "NVIDIA Reflex est disponible sans spoofing. La génération d’images FSR peut être forcée via la configuration d’Unreal Engine.",
+        "ja": "NVIDIA Reflex はスプーフィングなしで利用できます。Unreal Engine の設定により FSR フレーム生成を強制的に有効化できます。",
+        "pt-BR": "O NVIDIA Reflex está disponível sem spoofing. A geração de quadros do FSR pode ser forçada por meio da configuração da Unreal Engine.",
+        "ru": "NVIDIA Reflex доступен без спуфинга. Генерацию кадров FSR можно принудительно включить, изменив настройки Unreal Engine.",
+        "zh-Hans": "无需伪装显卡即可使用 NVIDIA Reflex。可通过虚幻引擎配置强制启用 FSR 帧生成。",
+        "zh-Hant": "無需偽裝顯示卡即可使用 NVIDIA Reflex。可透過虛幻引擎設定強制啟用 FSR 畫格生成。"
+      }
+    },
+    {
+      "id": "optiscaler-scp-project-pneuma-demo-xefg-streamline-crash",
+      "fallback_text": "NVIDIA Reflex is available without spoofing. XeFG Frame Generation output crashes when using DLSS input via Streamline.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "NVIDIA Reflex ist ohne Spoofing verfügbar. Die XeFG-Frame-Erstellung führt zum Absturz des Spiels, wenn DLSS über Streamline verwendet wird.",
+        "es": "NVIDIA Reflex está disponible sin spoofing. La generación de fotogramas XeFG se bloquea al usar DLSS a través de Streamline.",
+        "fr": "NVIDIA Reflex est disponible sans spoofing. La génération d’images XeFG plante avec DLSS via Streamline.",
+        "ja": "NVIDIA Reflex はスプーフィングなしで利用できます。Streamline 経由で DLSS を使用すると、XeFG フレーム生成によりゲームがクラッシュします。",
+        "pt-BR": "O NVIDIA Reflex está disponível sem spoofing. A geração de quadros XeFG causa uma falha no jogo ao usar o DLSS via Streamline.",
+        "ru": "NVIDIA Reflex доступен без спуфинга. При использовании DLSS через Streamline генерация кадров XeFG приводит к вылету игры.",
+        "zh-Hans": "无需伪装显卡即可使用 NVIDIA Reflex。通过 Streamline 使用 DLSS 时，XeFG 帧生成会导致游戏崩溃。",
+        "zh-Hant": "無需偽裝顯示卡即可使用 NVIDIA Reflex。透過 Streamline 使用 DLSS 時，XeFG 畫格生成會導致遊戲當機。"
+      }
+    },
+    {
+      "id": "optiscaler-persona-3-reload-p3r-enhanced",
+      "fallback_text": "huutaiii's P3R Enhanced mod is required for this game to work with OptiScaler.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Für dieses Spiel ist die Mod P3R Enhanced von huutaiii erforderlich, damit OptiScaler funktioniert.",
+        "es": "Este juego requiere el mod P3R Enhanced de huutaiii para funcionar con OptiScaler.",
+        "fr": "Le mod P3R Enhanced de huutaiii est requis pour que ce jeu fonctionne avec OptiScaler.",
+        "ja": "このゲームで OptiScaler を動作させるには、huutaiii 氏の P3R Enhanced MOD が必要です。",
+        "pt-BR": "O mod P3R Enhanced de huutaiii é necessário para que este jogo funcione com o OptiScaler.",
+        "ru": "Для работы OptiScaler в этой игре требуется мод P3R Enhanced от huutaiii.",
+        "zh-Hans": "此游戏需要 huutaiii 的 P3R Enhanced 模组才能与 OptiScaler 配合使用。",
+        "zh-Hant": "此遊戲需要 huutaiii 的 P3R Enhanced 模組才能與 OptiScaler 配合使用。"
       }
     }
   ]

@@ -3,8 +3,8 @@
   "revision": "2026-10-26.1",
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
-    "snapshot_revision": "2026-10-26",
-    "snapshot_sha256": "8a1f98bf2e3dbe2fca15f0f1d2969dfc66b025f9385928412c09300135967db6"
+    "snapshot_revision": "2026-11-02",
+    "snapshot_sha256": "419fd6c8a40764760eabb2c8c0250c0abdb3deba1ec4fe6dab621a706d4699fa"
   },
   "entries": [
     {
@@ -11253,6 +11253,37 @@
       ]
     },
     {
+      "id": "persona-3-reload",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "2161700"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "xess"],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-persona-3-reload-p3r-enhanced",
+            "fallback_text": "huutaiii's P3R Enhanced mod is required for this game to work with OptiScaler."
+          }
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
       "id": "persona-5-royal",
       "status": "working",
       "identities": [
@@ -12233,6 +12264,37 @@
       ]
     },
     {
+      "id": "remothered-red-nuns-legacy",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "3335310"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus"],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-remothered-red-nuns-legacy-reflex-fsr-fg",
+            "fallback_text": "NVIDIA Reflex is available without spoofing. FSR Frame Generation can be forced through Unreal Engine configuration."
+          }
+        }
+      ],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
       "id": "resident-evil-2-remake",
       "status": "working",
       "identities": [
@@ -13172,6 +13234,37 @@
       ],
       "declared_inputs": ["fsr2_plus"],
       "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "scp-project-pneuma-demo",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "3872430"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus"],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-scp-project-pneuma-demo-xefg-streamline-crash",
+            "fallback_text": "NVIDIA Reflex is available without spoofing. XeFG Frame Generation output crashes when using DLSS input via Streamline."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {

@@ -579,6 +579,12 @@
       "context": "compatibility"
     },
     {
+      "id": "optiscaler-persona-3-reload-p3r-enhanced",
+      "fallback_text": "huutaiii's P3R Enhanced mod is required for this game to work with OptiScaler.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
       "id": "optiscaler-planet-coaster-2-dlss-input",
       "fallback_text": "Use DLSS because FSR 3 inputs are unavailable.",
       "guidance_kind": "compatibility",
@@ -651,6 +657,12 @@
       "context": "compatibility"
     },
     {
+      "id": "optiscaler-remothered-red-nuns-legacy-reflex-fsr-fg",
+      "fallback_text": "NVIDIA Reflex is available without spoofing. FSR Frame Generation can be forced through Unreal Engine configuration.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
       "id": "optiscaler-resident-evil-2-remake-reframework-upscalerbase-plugin",
       "fallback_text": "REFramework (pd-upscaler branch) and PureDark's UpscalerBasePlugin version 1.1.2 are required for this game to work.",
       "guidance_kind": "compatibility",
@@ -719,6 +731,12 @@
     {
       "id": "optiscaler-scathe-dx12-fsr-input",
       "fallback_text": "FSR mode can crash the game.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
+      "id": "optiscaler-scp-project-pneuma-demo-xefg-streamline-crash",
+      "fallback_text": "NVIDIA Reflex is available without spoofing. XeFG Frame Generation output crashes when using DLSS input via Streamline.",
       "guidance_kind": "compatibility",
       "context": "compatibility"
     },
