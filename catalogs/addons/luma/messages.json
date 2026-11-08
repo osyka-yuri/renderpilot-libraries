@@ -786,38 +786,6 @@
       }
     },
     {
-      "id": "luma.metro-2033-redux.warning",
-      "fallback_text": "Requires windowed or borderless mode, configured via mods or by disabling fullscreen in the game config.",
-      "kind": "warning",
-      "context": "guidance.warning",
-      "translations": {
-        "de": "Erfordert Fenster- oder rahmenlosen Modus, konfiguriert über Mods oder durch Deaktivieren von Vollbild in der Spielkonfiguration.",
-        "es": "Requiere modo ventana o sin bordes, configurado mediante mods o desactivando la pantalla completa en la configuración del juego.",
-        "fr": "Nécessite le mode fenêtré ou sans bordures, configuré via des mods ou en désactivant le plein écran dans la configuration du jeu.",
-        "ja": "ウィンドウまたはボーダーレスモードが必要です。MOD を使用するか、ゲーム設定ファイルでフルスクリーンを無効化してください。",
-        "pt-BR": "Exige o modo janela ou janela sem bordas, configurado por mods ou pela desativação da tela cheia no arquivo de configuração do jogo.",
-        "ru": "Требуется оконный или безрамочный режим: через моды либо отключением полноэкранного режима в конфиге игры.",
-        "zh-Hans": "需要窗口化或无边框模式，可通过模组或在游戏配置文件中关闭全屏进行设置。",
-        "zh-Hant": "需要視窗化或無邊框模式，可透過模組或在遊戲設定檔中關閉全螢幕進行設定。"
-      }
-    },
-    {
-      "id": "luma.metro-2033-redux.windowed_borderless_only",
-      "fallback_text": "Use borderless windowed mode.",
-      "kind": "game_setting",
-      "context": "guidance.game_setting",
-      "translations": {
-        "de": "Verwende den rahmenlosen Fenstermodus.",
-        "es": "Usa el modo ventana sin bordes.",
-        "fr": "Utilisez le mode fenêtré sans bordures.",
-        "ja": "ボーダーレスウィンドウモードを使用してください。",
-        "pt-BR": "Use o modo janela sem bordas.",
-        "ru": "Используйте безрамочный оконный режим.",
-        "zh-Hans": "请使用无边框窗口模式。",
-        "zh-Hant": "請使用無邊框視窗模式。"
-      }
-    },
-    {
       "id": "luma.middle-earth-shadow-of-war.dlss-only",
       "fallback_text": "This profile supports DLSS only; HDR is not currently supported.",
       "kind": "compatibility",
@@ -1551,6 +1519,54 @@
         "ru": "На растительности и очень мелких деталях может быть заметно дрожание изображения.",
         "zh-Hans": "植被和非常细小的细节可能出现明显抖动。",
         "zh-Hant": "植被與非常細小的細節可能出現明顯抖動。"
+      }
+    },
+    {
+      "id": "luma.mafia-definitive-edition.warning",
+      "fallback_text": "This profile supports DLAA only (no HDR) and requires an NVIDIA RTX GPU. In the game settings, set Anti-Aliasing to Low.",
+      "kind": "warning",
+      "context": "guidance.warning",
+      "translations": {
+        "de": "Dieses Profil unterstützt nur DLAA (kein HDR) und erfordert eine NVIDIA-RTX-Grafikkarte. Stelle in den Spieleinstellungen das Anti-Aliasing auf Low.",
+        "es": "Este perfil solo es compatible con DLAA (sin HDR) y requiere una GPU NVIDIA RTX. En los ajustes del juego, establece el suavizado de bordes (Anti-Aliasing) en Bajo.",
+        "fr": "Ce profil prend en charge uniquement le DLAA (sans HDR) et nécessite un GPU NVIDIA RTX. Dans les paramètres du jeu, réglez l’anticrénelage sur Faible.",
+        "ja": "このプロファイルは DLAA のみをサポートし（HDR 非対応）、NVIDIA RTX GPU が必要です。ゲーム内設定でアンチエイリアスを Low に設定してください。",
+        "pt-BR": "Este perfil é compatível apenas com DLAA (sem HDR) e requer uma GPU NVIDIA RTX. Nas configurações do jogo, defina o suavizado (Anti-Aliasing) como Baixo.",
+        "ru": "Этот профиль поддерживает только DLAA (без HDR) и требует видеокарту NVIDIA RTX. В настройках игры установите сглаживание на Low.",
+        "zh-Hans": "此配置文件仅支持 DLAA（不支持 HDR），且需要 NVIDIA RTX 显卡。在游戏设置中将抗锯齿设为 Low。",
+        "zh-Hant": "此設定檔僅支援 DLAA（不支援 HDR），且需要 NVIDIA RTX 顯示卡。在遊戲設定中將消除鋸齒設為 Low。"
+      }
+    },
+    {
+      "id": "luma.metal-gear-solid-v-the-phantom-pain.warning",
+      "fallback_text": "This profile supports upscaling only (FSR 4, FSR 3, or DLSS); HDR is not supported. In the game settings, enable Motion Blur and set Post-Processing to High or above.",
+      "kind": "warning",
+      "context": "guidance.warning",
+      "translations": {
+        "de": "Dieses Profil unterstützt nur Upscaling (FSR 4, FSR 3 oder DLSS); HDR wird nicht unterstützt. Aktiviere in den Spieleinstellungen Motion Blur und stelle Post-Processing auf High oder höher.",
+        "es": "Este perfil solo admite reescalado (FSR 4, FSR 3 o DLSS); HDR no es compatible. En los ajustes del juego, activa Motion Blur y establece Post-Processing en High o superior.",
+        "fr": "Ce profil prend en charge uniquement la mise à l’échelle (FSR 4, FSR 3 ou DLSS) ; le HDR n’est pas pris en charge. Dans les paramètres du jeu, activez le Motion Blur et réglez le Post-Processing sur High ou supérieur.",
+        "ja": "このプロファイルはアップスケーリング（FSR 4、FSR 3 または DLSS）のみをサポートしています（HDR 非対応）。ゲーム内設定でモーションブラーを有効にし、ポストプロセッシングを High 以上に設定してください。",
+        "pt-BR": "Este perfil é compatível apenas com upscaling (FSR 4, FSR 3 ou DLSS); HDR não é compatível. Nas configurações do jogo, ative o Motion Blur e defina o Post-Processing como High ou superior.",
+        "ru": "Этот профиль поддерживает только масштабирование (FSR 4, FSR 3 или DLSS); HDR не поддерживается. В настройках игры включите Motion Blur и установите Post-Processing на High или выше.",
+        "zh-Hans": "此配置文件仅支持画面缩放（FSR 4、FSR 3 或 DLSS），不支持 HDR。在游戏设置中开启动态模糊（Motion Blur），并将后处理（Post-Processing）设为 High 或更高。",
+        "zh-Hant": "此設定檔僅支援影像縮放（FSR 4、FSR 3 或 DLSS），不支援 HDR。在遊戲設定中開啟動態模糊（Motion Blur），並將後製處理（Post-Processing）設為 High 或更高。"
+      }
+    },
+    {
+      "id": "luma.saints-row-the-third-remastered.game_setting",
+      "fallback_text": "In the game settings, set Anti-Aliasing to TAA for DLAA or FSR 3, or FXAA for SMAA. Enable Ambient Occlusion to use XeGTAO.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Wähle in den Spieleinstellungen Anti-Aliasing auf TAA für DLAA oder FSR 3, oder FXAA für SMAA. Aktiviere Ambient Occlusion, um XeGTAO zu nutzen.",
+        "es": "En los ajustes del juego, selecciona Anti-Aliasing en TAA para DLAA o FSR 3, o FXAA para SMAA. Activa Ambient Occlusion para usar XeGTAO.",
+        "fr": "Dans les paramètres du jeu, réglez l’anticrénelage sur TAA pour le DLAA ou le FSR 3, ou sur FXAA pour le SMAA. Activez l’Ambient Occlusion pour utiliser XeGTAO.",
+        "ja": "ゲーム内設定で、DLAA または FSR 3 の場合はアンチエイリアスを TAA に、SMAA の場合は FXAA に設定してください。XeGTAO を使用するにはアンビエントオクルージョンを有効にしてください。",
+        "pt-BR": "Nas configurações do jogo, defina Anti-Aliasing como TAA para DLAA ou FSR 3, ou FXAA para SMAA. Ative a Oclusão de Ambiente para usar XeGTAO.",
+        "ru": "В настройках игры выберите сглаживание TAA для DLAA или FSR 3, либо FXAA для SMAA. Для использования XeGTAO включите Ambient Occlusion.",
+        "zh-Hans": "在游戏设置中，若使用 DLAA 或 FSR 3 请将抗锯齿设为 TAA，使用 SMAA 请设为 FXAA。开启环境光遮蔽以启用 XeGTAO。",
+        "zh-Hant": "在遊戲設定中，若使用 DLAA 或 FSR 3 請將消除鋸齒設為 TAA，使用 SMAA 請設為 FXAA。開啟環境光遮蔽以啟用 XeGTAO。"
       }
     }
   ]

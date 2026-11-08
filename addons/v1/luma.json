@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-20T00:00:00Z",
+  "generated_at": "2026-11-08T00:00:00Z",
   "minimum_reshade_version": "6.7.0",
   "games": [
     {
@@ -521,6 +521,36 @@
       "profile": "game"
     },
     {
+      "id": "mafia-definitive-edition",
+      "name": "Mafia: Definitive Edition",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1030840",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "mafiadefinitiveedition.exe",
+          "tier": 70
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Mafia_Definitive_Edition.zip",
+        "addon_file": "Luma-Mafia Definitive Edition.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.mafia-definitive-edition.warning",
+          "kind": "warning",
+          "fallback_text": "This profile supports DLAA only (no HDR) and requires an NVIDIA RTX GPU. In the game settings, set Anti-Aliasing to Low."
+        }
+      ]
+    },
+    {
       "id": "mafia-2-definitive-edition",
       "name": "Mafia II: Definitive Edition",
       "architecture": "X64",
@@ -587,19 +617,7 @@
         "release_asset": "Luma-Metro_Redux.zip",
         "addon_file": "Luma-Metro Redux.addon"
       },
-      "profile": "game",
-      "guidance": [
-        {
-          "id": "luma.metro-2033-redux.warning",
-          "kind": "warning",
-          "fallback_text": "Requires windowed or borderless mode, configured via mods or by disabling fullscreen in the game config."
-        },
-        {
-          "id": "luma.metro-2033-redux.windowed_borderless_only",
-          "kind": "game_setting",
-          "fallback_text": "Use borderless windowed mode."
-        }
-      ]
+      "profile": "game"
     },
     {
       "id": "middle-earth-shadow-of-war",
@@ -4506,6 +4524,36 @@
       "profile": "game"
     },
     {
+      "id": "metal-gear-solid-v-the-phantom-pain",
+      "name": "Metal Gear Solid V: The Phantom Pain",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "287700",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "mgsvtpp.exe",
+          "tier": 70
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Metal_Gear_Solid_V_The_Phantom_Pain.zip",
+        "addon_file": "Luma-Metal Gear Solid V The Phantom Pain.addon"
+      },
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.metal-gear-solid-v-the-phantom-pain.warning",
+          "kind": "warning",
+          "fallback_text": "This profile supports upscaling only (FSR 4, FSR 3, or DLSS); HDR is not supported. In the game settings, enable Motion Blur and set Post-Processing to High or above."
+        }
+      ]
+    },
+    {
       "id": "metaphor-refantazio",
       "name": "Metaphor: ReFantazio",
       "architecture": "X64",
@@ -4616,10 +4664,33 @@
       "profile": "game"
     },
     {
+      "id": "nier-replicant",
+      "name": "NieR Replicant",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1113560",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "NieR Replicant ver.1.22474487139.exe",
+          "tier": 70
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-NieR_Replicant.zip",
+        "addon_file": "Luma-NieR Replicant.addon"
+      },
+      "profile": "game"
+    },
+    {
       "id": "saints-row-the-third-remastered",
       "name": "Saints Row: The Third Remastered",
       "architecture": "X64",
-      "status": "unknown",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
@@ -4636,7 +4707,14 @@
         "release_asset": "Luma-Saints_Row_The_Third_Remastered.zip",
         "addon_file": "Luma-Saints Row The Third Remastered.addon"
       },
-      "profile": "game"
+      "profile": "game",
+      "guidance": [
+        {
+          "id": "luma.saints-row-the-third-remastered.game_setting",
+          "kind": "game_setting",
+          "fallback_text": "In the game settings, set Anti-Aliasing to TAA for DLAA or FSR 3, or FXAA for SMAA. Enable Ambient Occlusion to use XeGTAO."
+        }
+      ]
     },
     {
       "id": "shenmue-1-and-2",
@@ -4653,6 +4731,29 @@
       "package": {
         "release_asset": "Luma-Shenmue_I_._II.zip",
         "addon_file": "Luma-Shenmue I & II.addon"
+      },
+      "profile": "game"
+    },
+    {
+      "id": "sunset-overdrive",
+      "name": "Sunset Overdrive",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "847370",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "Sunset.exe",
+          "tier": 70
+        }
+      ],
+      "package": {
+        "release_asset": "Luma-Sunset_Overdrive.zip",
+        "addon_file": "Luma-Sunset Overdrive.addon"
       },
       "profile": "game"
     },

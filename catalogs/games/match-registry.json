@@ -13703,6 +13703,29 @@
       ]
     },
     {
+      "id": "metal-gear-solid-v-the-phantom-pain",
+      "rules": [
+        {
+          "id": "steam-287700",
+          "kind": "steam_appid",
+          "value": "287700",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:luma:metal-gear-solid-v-the-phantom-pain"
+          }
+        },
+        {
+          "id": "exe-name-metal-gear-solid-v-the-phantom-pain",
+          "kind": "exe_name",
+          "value": "mgsvtpp.exe",
+          "provenance": {
+            "source": "steam-appinfo",
+            "locator": "steam-executable-observation:287700"
+          }
+        }
+      ]
+    },
+    {
       "id": "metal-hellsinger",
       "rules": [
         {

@@ -309,6 +309,31 @@
     "game_target_ids": ["lego-city-undercover"]
   },
   {
+    "id": "mafia-definitive-edition",
+    "name": "Mafia: Definitive Edition",
+    "asset": "Luma-Mafia_Definitive_Edition.zip",
+    "addon_file": "Luma-Mafia Definitive Edition.addon",
+    "arch": "X64",
+    "status": "working",
+    "guidance": [
+      {
+        "id": "luma.mafia-definitive-edition.warning",
+        "kind": "warning",
+        "fallback_text": "This profile supports DLAA only (no HDR) and requires an NVIDIA RTX GPU. In the game settings, set Anti-Aliasing to Low."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "completed",
+        "name": "Mafia: Definitive Edition",
+        "fingerprint": "a729369fb5d0d7c5539a07ed6a333a4bb231bde98c1cf3a5c4d7f0134438b93b",
+        "disposition": "published",
+        "guidance_ids": ["luma.mafia-definitive-edition.warning"]
+      }
+    ],
+    "game_target_ids": ["mafia-definitive-edition"]
+  },
+  {
     "id": "mafia-2-definitive-edition",
     "name": "Mafia II: Definitive Edition",
     "asset": "Luma-Mafia_II_Definitive_Edition.zip",
@@ -334,27 +359,6 @@
     "arch": "X64",
     "status": "working",
     "wiki_aliases": ["Metro Redux (2033 and Last Light)"],
-    "guidance": [
-      {
-        "id": "luma.metro-2033-redux.warning",
-        "kind": "warning",
-        "fallback_text": "Requires windowed or borderless mode, configured via mods or by disabling fullscreen in the game config."
-      },
-      {
-        "id": "luma.metro-2033-redux.windowed_borderless_only",
-        "kind": "game_setting",
-        "fallback_text": "Use borderless windowed mode."
-      }
-    ],
-    "wiki_note_reviews": [
-      {
-        "section": "completed",
-        "name": "Metro Redux (2033 and Last Light)",
-        "fingerprint": "f4771e5f49fa7602aa6c9de97cd9bbd1a20a2fc4ed86ee3b43216d4a774bff33",
-        "disposition": "published",
-        "guidance_ids": ["luma.metro-2033-redux.warning"]
-      }
-    ],
     "game_target_ids": ["metro-2033-redux"]
   },
   {
@@ -3400,15 +3404,6 @@
         }
       ]
     },
-    "wiki_note_reviews": [
-      {
-        "section": "completed",
-        "name": "Borderlands 2",
-        "fingerprint": "a1af92993113ce7ab195bb0e77aac1e6e122bc53adcc066c9744c6688090df15",
-        "disposition": "omitted",
-        "reason": "RenderPilot installs and configures the managed dgVoodoo dependency."
-      }
-    ],
     "game_target_ids": ["borderlands-2"]
   },
   {
@@ -3466,15 +3461,6 @@
         }
       ]
     },
-    "wiki_note_reviews": [
-      {
-        "section": "completed",
-        "name": "Borderlands: The Pre-Sequel",
-        "fingerprint": "a1af92993113ce7ab195bb0e77aac1e6e122bc53adcc066c9744c6688090df15",
-        "disposition": "omitted",
-        "reason": "RenderPilot installs and configures the managed dgVoodoo dependency."
-      }
-    ],
     "game_target_ids": ["borderlands-the-pre-sequel"]
   },
   {
@@ -3667,6 +3653,31 @@
     "game_target_ids": ["metal-gear-solid-4-guns-of-the-patriots"]
   },
   {
+    "id": "metal-gear-solid-v-the-phantom-pain",
+    "name": "Metal Gear Solid V: The Phantom Pain",
+    "asset": "Luma-Metal_Gear_Solid_V_The_Phantom_Pain.zip",
+    "addon_file": "Luma-Metal Gear Solid V The Phantom Pain.addon",
+    "arch": "X64",
+    "status": "working",
+    "guidance": [
+      {
+        "id": "luma.metal-gear-solid-v-the-phantom-pain.warning",
+        "kind": "warning",
+        "fallback_text": "This profile supports upscaling only (FSR 4, FSR 3, or DLSS); HDR is not supported. In the game settings, enable Motion Blur and set Post-Processing to High or above."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "completed",
+        "name": "Metal Gear Solid V: The Phantom Pain",
+        "fingerprint": "85f29be627a881dcc83761d6f94a77f7fc32ef7d717a14c03834379343b4d7a8",
+        "disposition": "published",
+        "guidance_ids": ["luma.metal-gear-solid-v-the-phantom-pain.warning"]
+      }
+    ],
+    "game_target_ids": ["metal-gear-solid-v-the-phantom-pain"]
+  },
+  {
     "id": "metaphor-refantazio",
     "name": "Metaphor: ReFantazio",
     "asset": "Luma-Metaphor_ReFantazio.zip",
@@ -3712,12 +3723,37 @@
     "game_target_ids": ["nier-automata"]
   },
   {
+    "id": "nier-replicant",
+    "name": "NieR Replicant",
+    "asset": "Luma-NieR_Replicant.zip",
+    "addon_file": "Luma-NieR Replicant.addon",
+    "arch": "X64",
+    "status": "working",
+    "game_target_ids": ["nier-replicant"]
+  },
+  {
     "id": "saints-row-the-third-remastered",
     "name": "Saints Row: The Third Remastered",
     "asset": "Luma-Saints_Row_The_Third_Remastered.zip",
     "addon_file": "Luma-Saints Row The Third Remastered.addon",
     "arch": "X64",
-    "status": "unknown",
+    "status": "working",
+    "guidance": [
+      {
+        "id": "luma.saints-row-the-third-remastered.game_setting",
+        "kind": "game_setting",
+        "fallback_text": "In the game settings, set Anti-Aliasing to TAA for DLAA or FSR 3, or FXAA for SMAA. Enable Ambient Occlusion to use XeGTAO."
+      }
+    ],
+    "wiki_note_reviews": [
+      {
+        "section": "completed",
+        "name": "Saints Row: The Third Remastered",
+        "fingerprint": "7b0923a7e8b71bfd981efd3e9c22a330ab0abba31f00ad494603fbd735677a5b",
+        "disposition": "published",
+        "guidance_ids": ["luma.saints-row-the-third-remastered.game_setting"]
+      }
+    ],
     "game_target_ids": ["saints-row-the-third-remastered"]
   },
   {
@@ -3728,6 +3764,15 @@
     "arch": "X64",
     "status": "construction",
     "game_target_ids": ["shenmue-1-and-2"]
+  },
+  {
+    "id": "sunset-overdrive",
+    "name": "Sunset Overdrive",
+    "asset": "Luma-Sunset_Overdrive.zip",
+    "addon_file": "Luma-Sunset Overdrive.addon",
+    "arch": "X64",
+    "status": "working",
+    "game_target_ids": ["sunset-overdrive"]
   },
   {
     "id": "the-evil-within-2",
