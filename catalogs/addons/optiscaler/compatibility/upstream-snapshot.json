@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "optiscaler-wiki-compatibility-list",
   "snapshot_revision": "2026-11-02",
-  "snapshot_sha256": "419fd6c8a40764760eabb2c8c0250c0abdb3deba1ec4fe6dab621a706d4699fa",
+  "snapshot_sha256": "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04",
   "rows": [
     {
       "source_key": "main:0001",
@@ -3993,8 +3993,9 @@
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
       "optipatcher_supported": true,
-      "note": null,
-      "row_fingerprint": "6c9f62d88bdffdfed92226a1ba51739ead9427291e6eabff261e5643bb4fdd9d"
+      "note": "For DLSSG inputs, may require r.Streamline.Load.DLSSG=1 under ConsoleVariables in Engine.ini.",
+      "row_fingerprint": "9b42a3be8ee1bbe200f62038e9a038630b5a4ddab9512f944b4b0e95661dcc8d",
+      "note_fingerprint": "bfd3ae765431c49bc9792b989c890c42a6bd584c0df24c42300fdd3857e4f598"
     },
     {
       "source_key": "main:0379",

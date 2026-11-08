@@ -531,6 +531,12 @@
       "context": "game_setting"
     },
     {
+      "id": "optiscaler-mortal-shell-ii-dlssg-streamline",
+      "fallback_text": "When using DLSSG via Streamline, you may need to set r.Streamline.Load.DLSSG=1 in the [ConsoleVariables] section of the Unreal Engine configuration.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility"
+    },
+    {
       "id": "optiscaler-mr-photographer-dx11",
       "fallback_text": "XeSS input is unavailable in DirectX 11 mode.",
       "guidance_kind": "compatibility",

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "revision": "2026-10-26.1",
   "source": "optiscaler-wiki-compatibility-list",
-  "snapshot_sha256": "419fd6c8a40764760eabb2c8c0250c0abdb3deba1ec4fe6dab621a706d4699fa",
+  "snapshot_sha256": "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04",
   "entries": [
     {
       "id": "007-first-light",
@@ -7998,7 +7998,12 @@
       "source_ref": "main:0378",
       "status": "working",
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message_id": "optiscaler-mortal-shell-ii-dlssg-streamline"
+        }
+      ],
       "variants": [
         {
           "proxy": {

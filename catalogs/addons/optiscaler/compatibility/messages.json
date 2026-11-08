@@ -2672,6 +2672,22 @@
         "zh-Hans": "此游戏需要 huutaiii 的 P3R Enhanced 模组才能与 OptiScaler 配合使用。",
         "zh-Hant": "此遊戲需要 huutaiii 的 P3R Enhanced 模組才能與 OptiScaler 配合使用。"
       }
+    },
+    {
+      "id": "optiscaler-mortal-shell-ii-dlssg-streamline",
+      "fallback_text": "When using DLSSG via Streamline, you may need to set r.Streamline.Load.DLSSG=1 in the [ConsoleVariables] section of the Unreal Engine configuration.",
+      "guidance_kind": "compatibility",
+      "context": "compatibility",
+      "translations": {
+        "de": "Bei Verwendung von DLSSG über Streamline muss möglicherweise r.Streamline.Load.DLSSG=1 im Abschnitt [ConsoleVariables] der Unreal-Engine-Konfiguration gesetzt werden.",
+        "es": "Al usar DLSSG a través de Streamline, puede ser necesario configurar r.Streamline.Load.DLSSG=1 en la sección [ConsoleVariables] de la configuración de Unreal Engine.",
+        "fr": "Lors de l’utilisation de DLSSG via Streamline, il peut être nécessaire de définir r.Streamline.Load.DLSSG=1 dans la section [ConsoleVariables] de la configuration d’Unreal Engine.",
+        "ja": "Streamline 経由で DLSSG を使用する場合、Unreal Engine 設定の [ConsoleVariables] セクションに r.Streamline.Load.DLSSG=1 を指定する必要がある場合があります。",
+        "pt-BR": "Ao usar o DLSSG via Streamline, pode ser necessário definir r.Streamline.Load.DLSSG=1 na seção [ConsoleVariables] da configuração da Unreal Engine.",
+        "ru": "При использовании DLSSG через Streamline может потребоваться установить r.Streamline.Load.DLSSG=1 в секции [ConsoleVariables] конфигурации Unreal Engine.",
+        "zh-Hans": "通过 Streamline 使用 DLSSG 时，可能需要在 Unreal Engine 配置的 [ConsoleVariables] 部分设置 r.Streamline.Load.DLSSG=1。",
+        "zh-Hant": "透過 Streamline 使用 DLSSG 時，可能需要在 Unreal Engine 設定的 [ConsoleVariables] 區段設定 r.Streamline.Load.DLSSG=1。"
+      }
     }
   ]
 }

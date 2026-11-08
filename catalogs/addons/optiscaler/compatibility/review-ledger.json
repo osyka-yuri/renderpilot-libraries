@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_sha256": "419fd6c8a40764760eabb2c8c0250c0abdb3deba1ec4fe6dab621a706d4699fa",
+  "snapshot_sha256": "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04",
   "rows": [
     {
       "source_key": "main:0001",
@@ -5104,12 +5104,20 @@
     },
     {
       "source_key": "main:0378",
-      "row_fingerprint": "6c9f62d88bdffdfed92226a1ba51739ead9427291e6eabff261e5643bb4fdd9d",
+      "row_fingerprint": "9b42a3be8ee1bbe200f62038e9a038630b5a4ddab9512f944b4b0e95661dcc8d",
       "disposition": {
         "kind": "published",
         "entry_id": "mortal-shell-ii"
       },
-      "notes": []
+      "notes": [
+        {
+          "fingerprint": "bfd3ae765431c49bc9792b989c890c42a6bd584c0df24c42300fdd3857e4f598",
+          "disposition": {
+            "kind": "guidance",
+            "message_ids": ["optiscaler-mortal-shell-ii-dlssg-streamline"]
+          }
+        }
+      ]
     },
     {
       "source_key": "main:0379",

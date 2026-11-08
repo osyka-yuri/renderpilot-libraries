@@ -4,7 +4,7 @@
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
     "snapshot_revision": "2026-11-02",
-    "snapshot_sha256": "419fd6c8a40764760eabb2c8c0250c0abdb3deba1ec4fe6dab621a706d4699fa"
+    "snapshot_sha256": "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04"
   },
   "entries": [
     {
@@ -10074,7 +10074,15 @@
         }
       ],
       "declared_inputs": ["dlss2_plus", "fsr2_plus"],
-      "guidance": [],
+      "guidance": [
+        {
+          "kind": "compatibility",
+          "message": {
+            "id": "optiscaler-mortal-shell-ii-dlssg-streamline",
+            "fallback_text": "When using DLSSG via Streamline, you may need to set r.Streamline.Load.DLSSG=1 in the [ConsoleVariables] section of the Unreal Engine configuration."
+          }
+        }
+      ],
       "variants": [
         {
           "proxy": {
