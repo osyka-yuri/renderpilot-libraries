@@ -754,6 +754,9 @@
   "dead-letter-dept": {
     "game_target_ids": ["dead-letter-dept"]
   },
+  "dead-space": {
+    "game_target_ids": ["dead-space-2023"]
+  },
   "deadcore-redux-demo": {
     "game_target_ids": ["deadcore-redux-demo"]
   },

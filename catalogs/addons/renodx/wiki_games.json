@@ -541,6 +541,13 @@
     "id": "dead-island-2"
   },
   {
+    "name": "Dead Space",
+    "slug": "deadspace",
+    "arch": "X64",
+    "status": "working",
+    "id": "dead-space"
+  },
+  {
     "name": "DEATH STRANDING DIRECTOR'S CUT",
     "slug": "deathstrandingdc",
     "arch": "X64",
