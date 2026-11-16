@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_sha256": "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04",
+  "snapshot_sha256": "150af293671eeed8dc9f7a57ed3ee27769a8405b573f75f83877f4a830c7fd3b",
   "rows": [
     {
       "source_key": "main:0001",
@@ -42,8 +42,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "one-seven-one"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0004",
@@ -68,8 +67,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "63-days"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0006",
@@ -77,8 +75,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "687-days-on-mars-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0007",
@@ -103,8 +100,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "achilles-legends-untold"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0009",
@@ -129,8 +125,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ai-limit"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0011",
@@ -138,8 +133,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "airborne-empire"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0012",
@@ -147,8 +141,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "airportsim"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0013",
@@ -173,8 +166,7 @@
       "disposition": {
         "kind": "pending_identity",
         "reason": "The Epic launcher AppName is not verified; CatalogItemId alone is not a reachable runtime identity."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0015",
@@ -182,8 +174,7 @@
       "disposition": {
         "kind": "pending_identity",
         "reason": "No verified exact Epic Games Store identity is available."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0016",
@@ -191,8 +182,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "alien-rogue-incursion-evolved-edition"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0017",
@@ -217,8 +207,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "aliens-fireteam-elite-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0019",
@@ -244,8 +233,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ambulance-life-a-paramedic-simulator"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0021",
@@ -270,8 +258,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "anchor-quest-for-atlantis"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0023",
@@ -296,8 +283,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "a-plague-tale-requiem"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0025",
@@ -390,8 +376,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "armatus-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0031",
@@ -399,8 +384,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "arons-adventure"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0032",
@@ -425,8 +409,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ashgard-infinity-mask"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0034",
@@ -434,8 +417,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "aska"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0035",
@@ -562,8 +544,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "astrobotanica"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0043",
@@ -571,8 +552,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "atelier-yumia-the-alchemist-of-memories-the-envisioned-land"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0044",
@@ -580,8 +560,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "atlas-fallen-reign-of-sand"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0045",
@@ -623,8 +602,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "automation-the-car-company-tycoon-game"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0048",
@@ -683,8 +661,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "baldurs-gate-3"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0052",
@@ -692,8 +669,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ballads-of-hongye"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0053",
@@ -752,8 +728,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "bears-in-space"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0057",
@@ -761,8 +736,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "beast-false-prophet"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0058",
@@ -787,8 +761,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "bellwright"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0060",
@@ -796,8 +769,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "beyond-hanwell"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0061",
@@ -805,8 +777,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "black-myth-wukong"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0062",
@@ -882,8 +853,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "bleak-haven"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0067",
@@ -891,8 +861,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "blind-fate-edo-no-yami"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0068",
@@ -934,12 +903,11 @@
       "disposition": {
         "kind": "published",
         "entry_id": "boba-cafe-simulator"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0071",
-      "row_fingerprint": "816f32784f31fcc2816e18c4aa196ccc2f90f62cf1dbb49b230185692595a307",
+      "row_fingerprint": "9a3333abf5a0d8d1ccc14014d111426feda389426fd1949aea2c26c99625edd6",
       "disposition": {
         "kind": "published",
         "entry_id": "borderlands-4"
@@ -994,8 +962,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "break-arts-iii"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0075",
@@ -1089,8 +1056,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "burning-sword-death"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0081",
@@ -1166,8 +1132,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "carmageddon-rogue-shift"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0086",
@@ -1280,8 +1245,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "choo-choo-charles"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0093",
@@ -1289,8 +1253,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "chorus"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0094",
@@ -1298,8 +1261,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "chronicles-of-sagrea"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0095",
@@ -1325,8 +1287,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "cities-skylines-ii"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0097",
@@ -1334,8 +1295,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "city-of-springs"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0098",
@@ -1394,8 +1354,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "code-exit-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0102",
@@ -1403,8 +1362,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "code-vein-ii"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0103",
@@ -1412,8 +1370,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "commandos-origins"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0104",
@@ -1421,8 +1378,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "company-of-heroes-3"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0105",
@@ -1464,8 +1420,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "control-ultimate-edition"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0108",
@@ -1507,8 +1462,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "creatures-of-ava"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0111",
@@ -1533,8 +1487,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "crimson-desert"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0113",
@@ -1542,8 +1495,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "crimson-moon"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0114",
@@ -1568,8 +1520,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "crisol-theater-of-idols"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0116",
@@ -1577,8 +1528,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "cronos-the-new-dawn"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0117",
@@ -1586,8 +1536,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "crysis-remastered"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0118",
@@ -1595,8 +1544,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "crysis-2-remastered"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0119",
@@ -1604,8 +1552,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "crysis-3-remastered"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0120",
@@ -1613,8 +1560,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "cthulhu-the-cosmic-abyss"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0121",
@@ -1622,8 +1568,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "cursed-deal"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0122",
@@ -1682,8 +1627,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dakar-desert-rally"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0126",
@@ -1691,8 +1635,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "darkwatch"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0127",
@@ -1735,8 +1678,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "daydream-forgotten-sorrow"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0130",
@@ -1744,8 +1686,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "daymare-1994-sandcastle"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0131",
@@ -1787,8 +1728,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dead-as-disco"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0134",
@@ -1796,8 +1736,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dead-island-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0135",
@@ -1856,8 +1795,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dead-signal"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0139",
@@ -2001,8 +1939,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "deep-rock-galactic"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0148",
@@ -2010,8 +1947,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "deep-rock-galactic-rogue-core"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0149",
@@ -2070,8 +2006,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "demonologist"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0153",
@@ -2198,8 +2133,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "directive-8020"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0161",
@@ -2207,8 +2141,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "directorate-novitiate-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0162",
@@ -2216,8 +2149,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dolmen"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0163",
@@ -2225,8 +2157,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "doom-eternal"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0164",
@@ -2234,8 +2165,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "doom-the-dark-ages"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0165",
@@ -2345,8 +2275,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dreams-far-away"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0172",
@@ -2371,8 +2300,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dying-light-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0174",
@@ -2380,8 +2308,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dying-light-the-beast"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0175",
@@ -2389,8 +2316,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "dynasty-warriors-origins"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0176",
@@ -2398,8 +2324,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ea-sports-wrc"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0177",
@@ -2424,8 +2349,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "echo-91"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0179",
@@ -2467,8 +2391,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "echo-point-nova"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0182",
@@ -2476,8 +2399,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "edge-of-eternity"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0183",
@@ -2485,8 +2407,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "emissary-zero"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0184",
@@ -2511,22 +2432,21 @@
       "disposition": {
         "kind": "published",
         "entry_id": "empyreal"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0186",
-      "row_fingerprint": "780b83efe8f9702e198b7bcb8eeb42240501856dcd37fc5de2685dd65d733b02",
+      "row_fingerprint": "26f8ee0d27bd2192cb3e6830a0e292b29c1020ea80497fe083016fa32511c34a",
       "disposition": {
         "kind": "published",
         "entry_id": "enshrouded"
       },
       "notes": [
         {
-          "fingerprint": "19a5572285f0ffe25d39e8e6ca5785edfd1b529c965983ce0c52c2aca853b006",
+          "fingerprint": "f83cf733dea9d70d22df21a4b48521caa21dac53315a57a8530a699753d487e4",
           "disposition": {
             "kind": "omitted",
-            "reason": "The artifact report does not provide a bounded configuration or installation policy."
+            "reason": "FSR3 inputs are not declared; the observation provides no additional actionable policy."
           }
         }
       ]
@@ -2571,8 +2491,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "epic-mickey-rebrushed"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0190",
@@ -2614,8 +2533,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "escape-from-naraka"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0193",
@@ -2657,8 +2575,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "eternal-strands"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0196",
@@ -2666,8 +2583,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "europa-universalis-v"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0197",
@@ -2675,8 +2591,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "everspace-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0198",
@@ -2684,8 +2599,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "everwind-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0199",
@@ -2711,8 +2625,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "evotinction"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0201",
@@ -2720,8 +2633,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "f1-2020"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0202",
@@ -2797,8 +2709,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "fairy-tail-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0207",
@@ -2823,8 +2734,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "far-far-west"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0209",
@@ -2832,8 +2742,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "farming-simulator-22"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0210",
@@ -2858,8 +2767,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "fatal-frame-ii-crimson-butterfly-remake"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0212",
@@ -2918,8 +2826,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "final-fantasy-xiv-dawntrail"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0216",
@@ -2961,8 +2868,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "firefighting-simulator-ignite"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0219",
@@ -2970,8 +2876,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "firmament"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0220",
@@ -2979,8 +2884,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "f-i-s-t-forged-in-shadow-torch"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0221",
@@ -2988,8 +2892,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "fishing-north-atlantic-edition"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0222",
@@ -3151,8 +3054,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "forza-motorsport"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0232",
@@ -3228,8 +3130,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gaming-cafe-simulator"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0237",
@@ -3305,8 +3206,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ghost-of-tsushima-directors-cut"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0242",
@@ -3349,8 +3249,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ghostwire-tokyo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0245",
@@ -3409,8 +3308,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "god-of-war-ragnarok"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0249",
@@ -3418,8 +3316,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gotham-knights"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0250",
@@ -3427,8 +3324,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gord"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0251",
@@ -3436,8 +3332,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gori-cuddly-carnage"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0252",
@@ -3530,8 +3425,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "greedfall-the-dying-world"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0258",
@@ -3573,8 +3467,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gripper"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0261",
@@ -3582,8 +3475,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "grounded-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0262",
@@ -3608,8 +3500,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gungrave-gore"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0264",
@@ -3617,8 +3508,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gun-jam"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0265",
@@ -3626,8 +3516,7 @@
       "disposition": {
         "kind": "pending_identity",
         "reason": "No verified exact match target or executable observation is available."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0266",
@@ -3635,8 +3524,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "gylt"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0267",
@@ -3644,8 +3532,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "half-sword"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0268",
@@ -3653,8 +3540,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "halo-campaign-evolved"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0269",
@@ -3662,8 +3548,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "haste"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0270",
@@ -3671,8 +3556,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "hellblade-senuas-sacrifice"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0271",
@@ -3680,8 +3564,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "hellbreak"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0272",
@@ -3706,8 +3589,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "hell-pie"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0274",
@@ -3732,8 +3614,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "hi-fi-rush"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0276",
@@ -3741,8 +3622,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "high-on-life"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0277",
@@ -3750,8 +3630,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "high-on-life-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0278",
@@ -3827,8 +3706,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "homeworld-3"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0283",
@@ -3836,8 +3714,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "horizon-forbidden-west-complete-edition"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0284",
@@ -3845,8 +3722,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "horizon-zero-dawn-complete-edition"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0285",
@@ -3854,8 +3730,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "horizon-zero-dawn-remastered"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0286",
@@ -3863,8 +3738,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "hot-wheels-unleashed"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0287",
@@ -3889,8 +3763,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "hydroneer"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0289",
@@ -3898,8 +3771,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "i-am-jesus-christ"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0290",
@@ -3907,8 +3779,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "icarus"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0291",
@@ -3984,8 +3855,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "industria"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0296",
@@ -3993,8 +3863,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "industria-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0297",
@@ -4002,8 +3871,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "industry-giant-4"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0298",
@@ -4045,8 +3913,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "into-the-dead-our-darkest-days"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0301",
@@ -4071,8 +3938,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "it-reaches"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0303",
@@ -4080,8 +3946,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "jagged-alliance-3"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0304",
@@ -4157,8 +4022,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "jurassic-world-evolution-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0309",
@@ -4200,8 +4064,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "karma-the-dark-world"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0312",
@@ -4346,8 +4209,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lanesplit-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0321",
@@ -4389,8 +4251,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "layers-of-fear-2023"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0324",
@@ -4415,8 +4276,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lego-builders-journey"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0326",
@@ -4441,8 +4301,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lego-horizon-adventures"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0328",
@@ -4450,8 +4309,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lies-of-p"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0329",
@@ -4459,8 +4317,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lightyear-frontier"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0330",
@@ -4485,8 +4342,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "like-a-dragon-ishin"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0332",
@@ -4494,8 +4350,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "like-a-dragon-pirate-yakuza-in-hawaii"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0333",
@@ -4503,8 +4358,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "like-a-dragon-gaiden-the-man-who-erased-his-name"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0334",
@@ -4529,8 +4383,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "little-nightmares-iii"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0336",
@@ -4538,8 +4391,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "loopmancer"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0337",
@@ -4581,8 +4433,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lost-skies"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0340",
@@ -4590,8 +4441,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lost-soul-aside"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0341",
@@ -4599,8 +4449,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "lords-of-the-fallen-2023"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0342",
@@ -4676,8 +4525,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "luto"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0347",
@@ -4753,8 +4601,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "marvels-avengers"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0352",
@@ -4762,8 +4609,7 @@
       "disposition": {
         "kind": "omitted",
         "reason": "Already represented by published main:0258 as canonical guardians-of-the-galaxy (Steam 1088850)."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0353",
@@ -4788,8 +4634,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "marvels-spider-man-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0355",
@@ -4797,8 +4642,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "marvels-spider-man-miles-morales"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0356",
@@ -4806,8 +4650,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "marvels-spider-man-remastered"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0357",
@@ -4815,8 +4658,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "matcho-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0358",
@@ -4858,8 +4700,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "medieval-dynasty"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0361",
@@ -4867,8 +4708,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "memorys-reach-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0362",
@@ -4876,8 +4716,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "menace"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0363",
@@ -4919,8 +4758,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "microsoft-flight-simulator-2020"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0366",
@@ -5081,8 +4919,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "moroi"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0376",
@@ -5090,8 +4927,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "mortal-kombat-1"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0377",
@@ -5099,8 +4935,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "mortal-shell"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0378",
@@ -5125,8 +4960,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "mount-and-blade-ii-bannerlord"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0380",
@@ -5220,8 +5054,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "necrophosis"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0386",
@@ -5246,8 +5079,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "nightingale"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0388",
@@ -5272,8 +5104,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "ninja-gaiden-4"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0390",
@@ -5281,8 +5112,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "nioh-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0391",
@@ -5324,8 +5154,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "no-mans-sky"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0394",
@@ -5333,8 +5162,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "no-rest-for-the-wicked"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0395",
@@ -5342,8 +5170,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "norse-oath-of-blood-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0396",
@@ -5351,8 +5178,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "observer-system-redux"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0397",
@@ -5411,8 +5237,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "once-alive"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0401",
@@ -5471,8 +5296,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "orbit-industries"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0405",
@@ -5480,8 +5304,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "otherskin"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0406",
@@ -5523,8 +5346,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "outpost-infinity-siege"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0409",
@@ -5549,8 +5371,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "pacific-drive"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0411",
@@ -5558,8 +5379,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "painkiller-demo"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0412",
@@ -5584,8 +5404,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "panicore"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0414",
@@ -5627,8 +5446,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "party-animals"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0417",
@@ -5687,8 +5505,7 @@
       "disposition": {
         "kind": "pending_identity",
         "reason": "An Epic-only candidate exists, but no verified exact Epic Games Store identity is available."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0421",
@@ -5696,21 +5513,36 @@
       "disposition": {
         "kind": "published",
         "entry_id": "perceptum-playtest"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0422",
-      "row_fingerprint": "2b8260e69fc02df0890abcc63692d4786279b2f777d1a81b4401e99053a23902",
+      "row_fingerprint": "884682ceb553d48a7048cb36d64da0132e5f223d5096b116ab662f654058350f",
       "disposition": {
         "kind": "published",
-        "entry_id": "pizzapocalypse"
+        "entry_id": "phantom-blade-zero"
       },
-      "notes": []
+      "notes": [
+        {
+          "fingerprint": "b1afacaad58276abbe29042a325afe9b346b4ab14b5ee3645fbdea47b0c6f862",
+          "disposition": {
+            "kind": "omitted",
+            "reason": "The compatibility entry link provides no bounded policy."
+          }
+        }
+      ]
     },
     {
       "source_key": "main:0423",
-      "row_fingerprint": "69cc97507cade9be0ad18cee3f857789e3c69f6bac88b2ad9973d3a1de95d937",
+      "row_fingerprint": "14211261bbfee764f069dfb6765374422a119fa727227bc5c87245c149ccb7ec",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "pizzapocalypse"
+      }
+    },
+    {
+      "source_key": "main:0424",
+      "row_fingerprint": "e48b595e74cb9e351111e6187e66ad59033ec1aac6833dddcbd389866a81b3fc",
       "disposition": {
         "kind": "published",
         "entry_id": "planet-coaster-2"
@@ -5726,8 +5558,8 @@
       ]
     },
     {
-      "source_key": "main:0424",
-      "row_fingerprint": "b837b37aa0733b6e020fed004f8266d6c139700804f70affd48a18938b72035f",
+      "source_key": "main:0425",
+      "row_fingerprint": "f3c008d7ac8882168145c96f1d48c4a59c19af1b3d33e3b55ddd4653fea0e87c",
       "disposition": {
         "kind": "published",
         "entry_id": "polaris-demo"
@@ -5743,35 +5575,32 @@
       ]
     },
     {
-      "source_key": "main:0425",
-      "row_fingerprint": "74dacfc79cbeff3b7a33ae1e17d649d3dc35838350a556d3ac94245cfdcd5064",
+      "source_key": "main:0426",
+      "row_fingerprint": "85b92f193885af1d734592c8a792dc8bafe4f427f82026eb61b27bbeb72d99cd",
       "disposition": {
         "kind": "published",
         "entry_id": "pools"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0426",
-      "row_fingerprint": "e3114a3a3d0ed0c491bdbb19f73eef9aa8d478480904d795bdf9ebabab8dee40",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "portal-prelude-rtx"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0427",
-      "row_fingerprint": "df3831757822204511716fb4b565dacebba8ea388be4d6a8453f4659e6fae5d5",
+      "row_fingerprint": "1d57c288b1b248a4fa4bd4705d712300ed6211e9ce87a4a6655b7b5dd3345452",
       "disposition": {
         "kind": "published",
-        "entry_id": "postal-4-no-regerts"
-      },
-      "notes": []
+        "entry_id": "portal-prelude-rtx"
+      }
     },
     {
       "source_key": "main:0428",
-      "row_fingerprint": "f3800f1f71225d88ebd89e65320146e70f97ffc1c2614337155b1fe07b702baf",
+      "row_fingerprint": "da22a77a38c507b5d85e8c3e7e7f2ff0748f3f89e3f9021e57cef067ef99b0ab",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "postal-4-no-regerts"
+      }
+    },
+    {
+      "source_key": "main:0429",
+      "row_fingerprint": "ca6f17e7c4ad384f618dee0c984277b52d95ebe32a47f895e2b2dae7384258fe",
       "disposition": {
         "kind": "published",
         "entry_id": "pragmata"
@@ -5787,17 +5616,16 @@
       ]
     },
     {
-      "source_key": "main:0429",
-      "row_fingerprint": "2aaac238d713c12da4df33c1b39d78fd4f3c6dcb19d9ab08d271239594131be7",
+      "source_key": "main:0430",
+      "row_fingerprint": "c36a502de88ebdcfdd6cd93f2fd55ffce85d374e1fa2ee15a265f1286e3c3c1a",
       "disposition": {
         "kind": "published",
         "entry_id": "project-borealis-prologue"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0430",
-      "row_fingerprint": "b69f35ea009ad1b8b52a0a39ac75ce7a17f37c07027bf04128b538a257c2d3c2",
+      "source_key": "main:0431",
+      "row_fingerprint": "1a8aff36928af9ed0a1a07c3f458f7560501e4482966a4a32204c045c5c86cbb",
       "disposition": {
         "kind": "published",
         "entry_id": "project-songbird-teaser-faceless"
@@ -5815,8 +5643,8 @@
       ]
     },
     {
-      "source_key": "main:0431",
-      "row_fingerprint": "25d40fff1eb5d3f01090f9b169b95308090dfff4d57ae35e0a335ae738ec72eb",
+      "source_key": "main:0432",
+      "row_fingerprint": "87172eb412d2b38fcf28d631f674c550de9269b3c6fc26fbcdf24c986f40211c",
       "disposition": {
         "kind": "published",
         "entry_id": "project-station-demo"
@@ -5833,17 +5661,16 @@
       ]
     },
     {
-      "source_key": "main:0432",
-      "row_fingerprint": "0656521764b84b57e71e181f2de84c9dea142d1b8d1ced7dd3690320364578da",
+      "source_key": "main:0433",
+      "row_fingerprint": "77547f406babe24c0a5fe000c927f0370abd19164fdb95b69f097d932e6f9a8c",
       "disposition": {
         "kind": "published",
         "entry_id": "promise-mascot-agency"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0433",
-      "row_fingerprint": "bb8e6bfbbacf107969c27d1e632a70b27ad595384809e198d330d29098c89631",
+      "source_key": "main:0434",
+      "row_fingerprint": "52b74560f5b2264f30384ed882b87e4f5795e3a66174ad20ea520f8d58ca78d4",
       "disposition": {
         "kind": "published",
         "entry_id": "protocol-terminate-demo"
@@ -5859,8 +5686,8 @@
       ]
     },
     {
-      "source_key": "main:0434",
-      "row_fingerprint": "d6dbab0ca5477ab5248e9d3b6a53c5b3f4ec31b6a6796a228072d62ba81d45a4",
+      "source_key": "main:0435",
+      "row_fingerprint": "e8a26b83bfd939605c27ea0ffd9423ec967faebcb8b1d07032f9261e3e7ec545",
       "disposition": {
         "kind": "published",
         "entry_id": "psalm-2"
@@ -5876,8 +5703,8 @@
       ]
     },
     {
-      "source_key": "main:0435",
-      "row_fingerprint": "60d962bb46f9c6dd8134aca6994a3a06cf39479f167ffb5b917c8a7fc460a50a",
+      "source_key": "main:0436",
+      "row_fingerprint": "c2032e9fb89554e6f03df5a16a05f049ad50186c08a74956dab8a5e15c820356",
       "disposition": {
         "kind": "published",
         "entry_id": "psycho-fear"
@@ -5893,17 +5720,16 @@
       ]
     },
     {
-      "source_key": "main:0436",
-      "row_fingerprint": "78dca14a5958c0d06161aaf49da7165d5d595767145efbe730e22d9f21cb70e3",
+      "source_key": "main:0437",
+      "row_fingerprint": "e7fff530a3344aaa177eca0d2d6c98153abe35175a78b73083aa2daa3d246a16",
       "disposition": {
         "kind": "published",
         "entry_id": "pumpkin-jack"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0437",
-      "row_fingerprint": "77d8eb4c8d5afbb4ad7dd5e1e8e9724748ea3c9902d4d4f83ede2c4c9a47fbaa",
+      "source_key": "main:0438",
+      "row_fingerprint": "8472f19b93b9321fa651b9a722f3738eb7dbae67c1a4dcabbe8e73c8b3a64ec9",
       "disposition": {
         "kind": "published",
         "entry_id": "quarantine-zone-the-last-check"
@@ -5921,17 +5747,16 @@
       ]
     },
     {
-      "source_key": "main:0438",
-      "row_fingerprint": "9570f0be6b4183f7e40e3c65b651f3df9d49d4159d4520838d89cb8dcb5b7928",
+      "source_key": "main:0439",
+      "row_fingerprint": "07435db5f6b70edc366f179e2105149d47e61bca2a80f8e96c4ac5db48670c49",
       "disposition": {
         "kind": "published",
         "entry_id": "qube-10th-anniversary"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0439",
-      "row_fingerprint": "a3aef48a465cd8dc5cf0e53e42dee8a41306b88ac71fe3a6411ac557fb95360c",
+      "source_key": "main:0440",
+      "row_fingerprint": "398eac787d33ebf40892f65f5e620b09a4686a236651e4064f718abb7c03c9c5",
       "disposition": {
         "kind": "published",
         "entry_id": "raji-an-ancient-epic"
@@ -5947,26 +5772,24 @@
       ]
     },
     {
-      "source_key": "main:0440",
-      "row_fingerprint": "c3291c0af019961e3f039ead34445c5668cbef93544690526d08625e0b56bf11",
+      "source_key": "main:0441",
+      "row_fingerprint": "a17d2008d2c2cb5098ad07f293e8bb7819d9a319f33e274f42695eb528977257",
       "disposition": {
         "kind": "published",
         "entry_id": "ranch-simulator"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0441",
-      "row_fingerprint": "781a7a7cf580232211f5b12870cde478f15d9f83eb1a4667f5f1e0b75d98ece3",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "ratchet-clank-rift-apart"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0442",
-      "row_fingerprint": "4c38fe031ced64094daa92c8d3d4e1d4dee3ff93e6a0e58016a99d2215ce1178",
+      "row_fingerprint": "7d51058ae49d22ae9974c693fc606bfc2628d147df97a6dd22955aa8a1a44327",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "ratchet-clank-rift-apart"
+      }
+    },
+    {
+      "source_key": "main:0443",
+      "row_fingerprint": "88a96e950e7e9e8d57c2733f4c139aba3f8e35ae17e7107f8f396480b333df68",
       "disposition": {
         "kind": "published",
         "entry_id": "ready-or-not"
@@ -5982,8 +5805,8 @@
       ]
     },
     {
-      "source_key": "main:0443",
-      "row_fingerprint": "4fa27e0078bcc1868f9aa8abfff0495e6da4de45fef58a80ec918d9d2d36d6f6",
+      "source_key": "main:0444",
+      "row_fingerprint": "a473247f05c918b21b35fb8a32324975e060997a89ba7f499f6d5ef86c1a4e84",
       "disposition": {
         "kind": "published",
         "entry_id": "realmwalker"
@@ -5999,26 +5822,24 @@
       ]
     },
     {
-      "source_key": "main:0444",
-      "row_fingerprint": "c41687840e3739412dcc1f951e729c3c141ddc57fc1857e567cbf05548f70ad0",
+      "source_key": "main:0445",
+      "row_fingerprint": "f3208169c17794ea3cd4f52429c85efa9971143d67a136262fa422df7304988f",
       "disposition": {
         "kind": "published",
         "entry_id": "reanimal"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0445",
-      "row_fingerprint": "6c051b1bef042291f5e5ca1bc373eb59c28da1a788a138e72fd6c3bd9827bf46",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "red-dead-redemption"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0446",
-      "row_fingerprint": "c5c5a2bb86e6f8032b6913658ee7e973836bba908c5d4097b0379fe27508ba1b",
+      "row_fingerprint": "9ff67c2b71304c279f2e7e3f9e1a7643aaad4935be2447d354c060f85bd7cd2e",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "red-dead-redemption"
+      }
+    },
+    {
+      "source_key": "main:0447",
+      "row_fingerprint": "cd10d2a0112b15081e341afb2fd04b04ec9c9f2eb46efbaf97f4d31a5f17db74",
       "disposition": {
         "kind": "published",
         "entry_id": "red-dead-redemption-2-vulkan"
@@ -6034,8 +5855,8 @@
       ]
     },
     {
-      "source_key": "main:0447",
-      "row_fingerprint": "1703214c180f56f93157767831851c8bb8eb281538cc911a344298103d09eccd",
+      "source_key": "main:0448",
+      "row_fingerprint": "d9e4585b8051d35599cdfd3265eace5e97a21a1704edae57b45ba56631d94bd3",
       "disposition": {
         "kind": "published",
         "entry_id": "redfall"
@@ -6051,17 +5872,16 @@
       ]
     },
     {
-      "source_key": "main:0448",
-      "row_fingerprint": "c51db14f99004953849f1290d32eafeb9d1932b816e029f413ba0274c4d74ccf",
+      "source_key": "main:0449",
+      "row_fingerprint": "c5a96f7c5155f59198a7686ee942950eb98c2a682c728c37948d6e3ed60f5e4e",
       "disposition": {
         "kind": "published",
         "entry_id": "redout-space-assault"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0449",
-      "row_fingerprint": "4a6749bd90c3f77d6f340d9406ed687f5378f9b672217091237404e64535387f",
+      "source_key": "main:0450",
+      "row_fingerprint": "924cf2c2a0a750d81e8b1473b55117b11b60d4110ef0482df87967613f71c081",
       "disposition": {
         "kind": "published",
         "entry_id": "redout-2"
@@ -6077,17 +5897,16 @@
       ]
     },
     {
-      "source_key": "main:0450",
-      "row_fingerprint": "95a0bd53159fec16be270143f9303e045c5e8c86e450e68342d6090928fccb49",
+      "source_key": "main:0451",
+      "row_fingerprint": "53edc89a884785ff0a061959eb50a64639fdb97fd1aacd92155a62e4cf01e52b",
       "disposition": {
         "kind": "published",
         "entry_id": "remnant-2"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0451",
-      "row_fingerprint": "1a6376a26a886e643c950dd33f665a976cd0db2e4596404b1b5a3158b3e0769a",
+      "source_key": "main:0452",
+      "row_fingerprint": "089c812939b2da291d5be3a4fc02aefd786af7224fb584f1bbaacd2e210a45c3",
       "disposition": {
         "kind": "published",
         "entry_id": "remothered-red-nuns-legacy"
@@ -6103,8 +5922,8 @@
       ]
     },
     {
-      "source_key": "main:0452",
-      "row_fingerprint": "d941774cb2caf4d3bedfc34a36b462fd0623d056e4fce404d94124c6b64073f4",
+      "source_key": "main:0453",
+      "row_fingerprint": "5ac838860f1470bbefcbbec18cc80e05e268a349342648eb620e135cabfec0bd",
       "disposition": {
         "kind": "published",
         "entry_id": "resident-evil-requiem"
@@ -6120,8 +5939,8 @@
       ]
     },
     {
-      "source_key": "main:0453",
-      "row_fingerprint": "906000cb341789f4afafeb2a9358df355b00269b5ffb0d28b0e0d2d1409ce187",
+      "source_key": "main:0454",
+      "row_fingerprint": "f1ac1596620315c4d46e208d55227402b24e4798dcc35e501dd3783988676195",
       "disposition": {
         "kind": "published",
         "entry_id": "returnal"
@@ -6137,8 +5956,8 @@
       ]
     },
     {
-      "source_key": "main:0454",
-      "row_fingerprint": "16c326b436c4c8bc3a675a82d95dd7a7abe3f30c5357aa4267385c99dd614033",
+      "source_key": "main:0455",
+      "row_fingerprint": "784127f700b4b36bb0460506558bcad2d8a96b27eed0d1192440c84cb949b023",
       "disposition": {
         "kind": "published",
         "entry_id": "revenge-of-the-savage-planet"
@@ -6154,17 +5973,16 @@
       ]
     },
     {
-      "source_key": "main:0455",
-      "row_fingerprint": "de8e0122bd4504ecdec02ea76f8395d5cb1321a1e1ccb412e4322d5f553ee8db",
+      "source_key": "main:0456",
+      "row_fingerprint": "1b5c0f9d3efd33daa363a5aad071a33bbb7865974cd6fba00c89bc3ebd4a6a49",
       "disposition": {
         "kind": "published",
         "entry_id": "ripout"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0456",
-      "row_fingerprint": "e4f0aa8c9078fa789a818e819288e842bbd80f88d054e38d67f953febcf8bb67",
+      "source_key": "main:0457",
+      "row_fingerprint": "c9f131468613a255686639da1dcbc68f7b6d2c2b6e2960a03d15f4ea7612eb2f",
       "disposition": {
         "kind": "published",
         "entry_id": "rise-of-the-ronin"
@@ -6180,25 +5998,24 @@
       ]
     },
     {
-      "source_key": "main:0457",
-      "row_fingerprint": "85af92adf04e8268ee2ec3c3132af6ed1c85d79d49171446ea4ff4d6e3c2197d",
+      "source_key": "main:0458",
+      "row_fingerprint": "b677d1d6eb50812df53a5d96ca749f9abfd94ca42016fe2282efa2f60adb92cd",
       "disposition": {
         "kind": "published",
         "entry_id": "rise-of-the-tomb-raider"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0458",
-      "row_fingerprint": "64394d0e97642bc6eb8a99d9c282a8f6088ee0b11925e94b0a72ad2d44e3f91d",
+      "source_key": "main:0459",
+      "row_fingerprint": "41bf5ce60928825da62de16acaf0f4a2aaacb49c9daed19ba2331baf88c1211b",
       "disposition": {
         "kind": "published",
         "entry_id": "rivage"
       }
     },
     {
-      "source_key": "main:0459",
-      "row_fingerprint": "b17f496d968c0f2f1196ad7f489ff5734a74bba4d462e3845ab9000f0f0877c5",
+      "source_key": "main:0460",
+      "row_fingerprint": "af18c94b2e7b1521edb4249e28b8e25a4de1fca338a643e7d86a5dce0ea225ad",
       "disposition": {
         "kind": "published",
         "entry_id": "riven"
@@ -6214,17 +6031,16 @@
       ]
     },
     {
-      "source_key": "main:0460",
-      "row_fingerprint": "91585e3a1725737adb18abd57bc9c9d05b97d2e09b920decc085f2f8c4c33f93",
+      "source_key": "main:0461",
+      "row_fingerprint": "0c5f2473b186b52cce5c3f47c0cd70784c89e80d5abaa1d355908d5930a5583c",
       "disposition": {
         "kind": "published",
         "entry_id": "roadcraft"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0461",
-      "row_fingerprint": "fbdece9c48f6bf62b249aebfaa22251fe13b72ae78956a0632585e6e5153ad71",
+      "source_key": "main:0462",
+      "row_fingerprint": "655f32b9b9abd72917c4cfc6b83347169aa463b7e283820afe324720fd04575c",
       "disposition": {
         "kind": "published",
         "entry_id": "robocop-rogue-city"
@@ -6240,8 +6056,8 @@
       ]
     },
     {
-      "source_key": "main:0462",
-      "row_fingerprint": "1176d086aed7b78466b9fb1e05195a1743658dee455cc5f371bdf64af3d3ef90",
+      "source_key": "main:0463",
+      "row_fingerprint": "6e344839f29ec5fa0d41720e1bbfb3ec7c1f39f84e6b092aa471da7600608375",
       "disposition": {
         "kind": "published",
         "entry_id": "robocop-rogue-city-unfinished-business"
@@ -6259,8 +6075,8 @@
       ]
     },
     {
-      "source_key": "main:0463",
-      "row_fingerprint": "11ce91f2d1f4ac139a247c6327bc08cf0a00e6f9b1c30e41007e8a00564cdf94",
+      "source_key": "main:0464",
+      "row_fingerprint": "7e7fa9919d765d889aeeafc6ee26492b73dc3a803ef1b87654a5a7285ea4d9ba",
       "disposition": {
         "kind": "published",
         "entry_id": "robots-at-midnight"
@@ -6276,8 +6092,8 @@
       ]
     },
     {
-      "source_key": "main:0464",
-      "row_fingerprint": "d0a050d8ec4284e9fbd0156e943ee442a4ddfc98c166511937869c75a979a6f3",
+      "source_key": "main:0465",
+      "row_fingerprint": "5eb19ae45c59e66a721784b0b806f7920abe4f8421cb7d40137807fc0c02c8a8",
       "disposition": {
         "kind": "published",
         "entry_id": "romancelvania"
@@ -6294,8 +6110,8 @@
       ]
     },
     {
-      "source_key": "main:0465",
-      "row_fingerprint": "05d20bb453854041d97bbe5c0697bc6b688d69c3101c9240ea7aed488e2bd585",
+      "source_key": "main:0466",
+      "row_fingerprint": "5622fed90301f62bd09a1a40e61238ec81da14342c18b94d1d9673f7a105c4a9",
       "disposition": {
         "kind": "published",
         "entry_id": "romeo-is-a-dead-man"
@@ -6311,8 +6127,8 @@
       ]
     },
     {
-      "source_key": "main:0466",
-      "row_fingerprint": "fa7588143dc80d36efe545279e1010268201789cde14995eb044a0974c112d48",
+      "source_key": "main:0467",
+      "row_fingerprint": "1ec8dd9706a744278846cd109ae91cde7bb512b1d890cdfd47a0f85178ab2ba1",
       "disposition": {
         "kind": "pending_identity",
         "reason": "Store results are different products and do not establish an exact title binding."
@@ -6328,17 +6144,16 @@
       ]
     },
     {
-      "source_key": "main:0467",
-      "row_fingerprint": "b8367da0030854a5a471b37dce98abe0fa70ec5c3d7831c72a0c17ea3b6c4305",
+      "source_key": "main:0468",
+      "row_fingerprint": "e53974b4f51f38cfae82a31e46a84af93b90d93589588680ffa503b6ddb2057e",
       "disposition": {
         "kind": "published",
         "entry_id": "routine"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0468",
-      "row_fingerprint": "4b920a225a959a4774f7ce17f906cbb2e336b9f68b2ffd69402568d71913a2c2",
+      "source_key": "main:0469",
+      "row_fingerprint": "6c92dded51ea3dcd6fa00d06914c550bee14a70d42f592b472ac04f5ea559d24",
       "disposition": {
         "kind": "published",
         "entry_id": "rune-factory-guardians-of-azuma"
@@ -6354,8 +6169,8 @@
       ]
     },
     {
-      "source_key": "main:0469",
-      "row_fingerprint": "503706ea58c0b189f675e4f344698ce71e2b770567f78850d6079d2aa89fc56a",
+      "source_key": "main:0470",
+      "row_fingerprint": "acbc58d1e6917004487b82569f779b5b3416cea1fc751672ab04447aac21a3f6",
       "disposition": {
         "kind": "published",
         "entry_id": "runescape-dragonwilds"
@@ -6371,17 +6186,16 @@
       ]
     },
     {
-      "source_key": "main:0470",
-      "row_fingerprint": "7404572b24ff552f60101f2dcc89d6073262a12ea9aad1f95ed0dfc3a4fda84a",
+      "source_key": "main:0471",
+      "row_fingerprint": "e7bbd9c4d3dcacace4119b5e3af7939d01022fe6662c9700297e9879f16dadd6",
       "disposition": {
         "kind": "published",
         "entry_id": "rv-there-yet"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0471",
-      "row_fingerprint": "0e628f21ba25afed7f68d960723a6cf41f4b7cbfb881708f0bc53676be54fedd",
+      "source_key": "main:0472",
+      "row_fingerprint": "e28baee93eefe6fd6a170f8490c28f7bdb9de67ef55f605fe8aaa395dbca56e6",
       "disposition": {
         "kind": "pending_identity",
         "reason": "The upstream source deliberately provides no bindable identity."
@@ -6397,26 +6211,24 @@
       ]
     },
     {
-      "source_key": "main:0472",
-      "row_fingerprint": "83f9665cbf1a2aa7514e4cd2d50654b77fd2c2682c781b9c5440b14383c59fa2",
+      "source_key": "main:0473",
+      "row_fingerprint": "5e76be0141475928b1415f063104c6713bce58d1364272da69dbdb8f5c121945",
       "disposition": {
         "kind": "published",
         "entry_id": "sackboy-a-big-adventure"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0473",
-      "row_fingerprint": "bad6fd1bdcf137b5ec566c98f37f69472ba04d09fed0c9d7feba713cedd0b3a2",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "sagas-of-lumin"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0474",
-      "row_fingerprint": "485f2bcbf76c3a2e0410410a1aea6d225f5553790bd664b839a4e2709ec5fdf7",
+      "row_fingerprint": "242cf39336feb5d14850589d7b17eba4a617350127d36959aef3dc8657568dbb",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "sagas-of-lumin"
+      }
+    },
+    {
+      "source_key": "main:0475",
+      "row_fingerprint": "a049590af482a603a0c6732a7dbdc3afecc1b5eb777a003b000bb4ed5924fdca",
       "disposition": {
         "kind": "published",
         "entry_id": "saints-row-2022"
@@ -6432,17 +6244,16 @@
       ]
     },
     {
-      "source_key": "main:0475",
-      "row_fingerprint": "d9c5d3754505c44d6c3c202f0315dcf290c11eda683b7f5199590ce25fe61d06",
+      "source_key": "main:0476",
+      "row_fingerprint": "184a95189275cc58c3a8962b00c874397f6988f63551065c459d7f709e116100",
       "disposition": {
         "kind": "published",
         "entry_id": "samson"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0476",
-      "row_fingerprint": "9c324a489617f23a0ad445a5569441c32e75e0cf78feb440d056e821dda379e0",
+      "source_key": "main:0477",
+      "row_fingerprint": "6436cc4ef7899189a2d54366737d696c7d96b3f3ba188d45e91fe8b39ba6e811",
       "disposition": {
         "kind": "published",
         "entry_id": "sands-of-aura"
@@ -6458,8 +6269,8 @@
       ]
     },
     {
-      "source_key": "main:0477",
-      "row_fingerprint": "a223e59a6369ef0902b69b3eb745a5707b249fa8d5a22d75f0beae1e6e311447",
+      "source_key": "main:0478",
+      "row_fingerprint": "9a636fa8954f08b4d067b10df077c8bd4c4fea9f22310e3625bdb22443eccc87",
       "disposition": {
         "kind": "published",
         "entry_id": "satisfactory"
@@ -6475,8 +6286,8 @@
       ]
     },
     {
-      "source_key": "main:0478",
-      "row_fingerprint": "116a2efd33966bc6b15adb0e29d985456d512cd324d401954080d55e6a4ef06a",
+      "source_key": "main:0479",
+      "row_fingerprint": "52631d72949adf5bd8b25cf62c57b34cfa9b53b626891be31c2d26b57e778778",
       "disposition": {
         "kind": "published",
         "entry_id": "scathe"
@@ -6493,8 +6304,8 @@
       ]
     },
     {
-      "source_key": "main:0479",
-      "row_fingerprint": "83dea8f591c1accb5b3009881a5ea9e6249ebb659ea2161548d2e106e620e289",
+      "source_key": "main:0480",
+      "row_fingerprint": "a0ab90a584dde406385e180caa0ae4121aa981c22f8b0f86efa14b7fcc7fe76f",
       "disposition": {
         "kind": "published",
         "entry_id": "scorn"
@@ -6510,8 +6321,8 @@
       ]
     },
     {
-      "source_key": "main:0480",
-      "row_fingerprint": "5db6976a37e0c8120d20c30e4862c0a379ea38acc12ab7b2fac0546e3f4c6389",
+      "source_key": "main:0481",
+      "row_fingerprint": "b8b16a569701a0f54332d98ed52373c12ede8486942a0ff117382b2de10d555c",
       "disposition": {
         "kind": "published",
         "entry_id": "scp-project-pneuma-demo"
@@ -6527,8 +6338,8 @@
       ]
     },
     {
-      "source_key": "main:0481",
-      "row_fingerprint": "4ec731fc95dd66a3c6bf480a9322ea84cd3a7bf355c521b50e3594b8d058c892",
+      "source_key": "main:0482",
+      "row_fingerprint": "2123096b755891024857e99961af61957c372f7468734778b5f8cf97042f70c8",
       "disposition": {
         "kind": "published",
         "entry_id": "scp-secret-files"
@@ -6545,8 +6356,8 @@
       ]
     },
     {
-      "source_key": "main:0482",
-      "row_fingerprint": "9357bcd9326970cf0dfdd52f6f3fb13a4c180b46a098789985f8817ae0757615",
+      "source_key": "main:0483",
+      "row_fingerprint": "f097f1efec58fe897783d15a90fdac1603361b86f8b444dce53f968cecf37ba9",
       "disposition": {
         "kind": "published",
         "entry_id": "season-a-letter-to-the-future"
@@ -6562,17 +6373,16 @@
       ]
     },
     {
-      "source_key": "main:0483",
-      "row_fingerprint": "4bac40e5d965175bc20b235860caabcda41bc65c06968409de509fc231eb7232",
+      "source_key": "main:0484",
+      "row_fingerprint": "14880b7f886b89af141132b54a4154ea1fc5e07508436c9383b1d0c8da3dc09c",
       "disposition": {
         "kind": "published",
         "entry_id": "sengoku-dynasty"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0484",
-      "row_fingerprint": "92558b78ee78cf165788a771767495423399080576cd4a888b6d824d6f2a2fc7",
+      "source_key": "main:0485",
+      "row_fingerprint": "4e63619f77eb09401f025af5703e34ad2a447fd2f0e3d6763d110646f5ede657",
       "disposition": {
         "kind": "published",
         "entry_id": "hellblade-ii-senuas-saga"
@@ -6588,8 +6398,8 @@
       ]
     },
     {
-      "source_key": "main:0485",
-      "row_fingerprint": "746be96fd4b2a06425d7d82ac62948b53196b8bb1d564ce5eb2f0263d0045c5f",
+      "source_key": "main:0486",
+      "row_fingerprint": "a57bdfd05d33d2f52ad1e92695a425c42bb328542247a7f82d43e09a33bac317",
       "disposition": {
         "kind": "published",
         "entry_id": "severed-steel"
@@ -6605,35 +6415,32 @@
       ]
     },
     {
-      "source_key": "main:0486",
-      "row_fingerprint": "3de0bbc61ab8629f7b0a9230965456a14c126a528de28686ec6bc3ac00c8b664",
+      "source_key": "main:0487",
+      "row_fingerprint": "c101c169876ca9cd821054a3924e660b615806711127f6541a15c855f75fe9b9",
       "disposition": {
         "kind": "published",
         "entry_id": "shadow-of-the-tomb-raider"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0487",
-      "row_fingerprint": "767b323a35a16adbb446caf00b466eb5a8d0dacfbb5f1c1e1b8440e3cda914ee",
-      "disposition": {
-        "kind": "pending_identity",
-        "reason": "No exact verifiable store identity is available."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0488",
-      "row_fingerprint": "958ec2296ebe9b43d05d9c3329c1a17ffb7256a6ab11f9ac963113da11b8dd6e",
+      "row_fingerprint": "00034b2094bbd3ea31f647b33c8010256b74e8f77a8f1a68d578daaee1976db5",
       "disposition": {
-        "kind": "published",
-        "entry_id": "shadows-of-doubt"
-      },
-      "notes": []
+        "kind": "pending_identity",
+        "reason": "No exact verifiable store identity is available."
+      }
     },
     {
       "source_key": "main:0489",
-      "row_fingerprint": "1be14a81c0f9eb8f74569364c6b1d0becf61b5499eedaafb0d7759694151fb1f",
+      "row_fingerprint": "386272f711bfc479f5a957c89003a0c1f93a487a65e67fd5a81dde0bc617c083",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "shadows-of-doubt"
+      }
+    },
+    {
+      "source_key": "main:0490",
+      "row_fingerprint": "585c3d9b87529c510c06d9ecf6da8f8c1db34d7c37172fadc0781315aa985883",
       "disposition": {
         "kind": "published",
         "entry_id": "shadow-project-demo"
@@ -6649,8 +6456,8 @@
       ]
     },
     {
-      "source_key": "main:0490",
-      "row_fingerprint": "811f95986433a18e1611377a8978ac1b2d1dde0310890df139fc52ec01631271",
+      "source_key": "main:0491",
+      "row_fingerprint": "31b7b640087f8cef8537cde33e0fe22879ad050b28bbda28101593c26b530f20",
       "disposition": {
         "kind": "published",
         "entry_id": "shadow-warrior-3"
@@ -6667,8 +6474,8 @@
       ]
     },
     {
-      "source_key": "main:0491",
-      "row_fingerprint": "2138d8cb8aac47efe39f94702bf3be176e32675e51a161996e2325c2366f9f6f",
+      "source_key": "main:0492",
+      "row_fingerprint": "ea717bc39c467ddd72a2122e3423f6828c2f2d926cff28851d41661cf838c376",
       "disposition": {
         "kind": "published",
         "entry_id": "shatterline"
@@ -6684,17 +6491,16 @@
       ]
     },
     {
-      "source_key": "main:0492",
-      "row_fingerprint": "4431f8fcb3ed4a926621394344f075636e17cad05618f22d65a1de68c35902b0",
+      "source_key": "main:0493",
+      "row_fingerprint": "cc2691ac66e54f8277234de7460d6988365efad70f4001da072f9a3b456407a3",
       "disposition": {
         "kind": "published",
         "entry_id": "sherlock-holmes-the-awakened"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0493",
-      "row_fingerprint": "61ade8ef5689344f9bf3b2f89b3440d4e4ac4cb3f37fb31612714f638160ad9c",
+      "source_key": "main:0494",
+      "row_fingerprint": "4a0586a0f123a612b0abe285af4246625976ca0e74fc06c0da1851245413c342",
       "disposition": {
         "kind": "published",
         "entry_id": "shrot-demo"
@@ -6710,17 +6516,16 @@
       ]
     },
     {
-      "source_key": "main:0494",
-      "row_fingerprint": "cb679bdb8e0690b7a34a734cea6506abccceca0893a73fc5a47c0a278d2ac635",
+      "source_key": "main:0495",
+      "row_fingerprint": "4d6eccabfd8fc0f4da83475c2de843b9e1a8fdbffc093c54dc136f5b2917b4c5",
       "disposition": {
         "kind": "published",
         "entry_id": "sifu"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0495",
-      "row_fingerprint": "09f494aa9d614a0b23d294a56e2cc53d7bcda2bd3e38cce5665b34680f8e3fec",
+      "source_key": "main:0496",
+      "row_fingerprint": "5241c6b5d823f0d2a26686533d3d158986a50f270e902e1b349fee576123064b",
       "disposition": {
         "kind": "published",
         "entry_id": "silent-hill-2-remake"
@@ -6736,8 +6541,8 @@
       ]
     },
     {
-      "source_key": "main:0496",
-      "row_fingerprint": "f99b3b1258f1f944e0d8ba28690a98fc093367c034879a192ed01d9bbec2ba1f",
+      "source_key": "main:0497",
+      "row_fingerprint": "e6e9d42e34b53edbdc8a7588c572135f2d80512d29daad9de159f982ba2dad70",
       "disposition": {
         "kind": "published",
         "entry_id": "silent-hill-f"
@@ -6753,8 +6558,8 @@
       ]
     },
     {
-      "source_key": "main:0497",
-      "row_fingerprint": "a362870fcc6192598fa40e1692ebe51f2b635df30528efacde66fd6d9bc76ea7",
+      "source_key": "main:0498",
+      "row_fingerprint": "96424d783981a74e21e599c6e57a2cdd02fe624517f0ac49a0b7302637604c98",
       "disposition": {
         "kind": "published",
         "entry_id": "silent-hill-townfall"
@@ -6770,53 +6575,48 @@
       ]
     },
     {
-      "source_key": "main:0498",
-      "row_fingerprint": "4e49b2edd1fb6d575adc29e5d9814ab52f051150f26d23244cb1f018fa1bc43b",
+      "source_key": "main:0499",
+      "row_fingerprint": "4b1142b8d21c4a744371e1e9fc7a2bd84cafd49468208695d0ac0f1bb22f42c8",
       "disposition": {
         "kind": "published",
         "entry_id": "simulakros"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0499",
-      "row_fingerprint": "96b1f8831f31299d2493e883f265b1f26b289db96f026bd5966490deabbf084a",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "slavicpunk-oldtimer"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0500",
-      "row_fingerprint": "1b33ae00d21f4c9ee73914860508c45e127926488be7a88735724942e71e66ba",
+      "row_fingerprint": "ff32ed51c77dc3066754d874da8dc9f602553fefff41d0dc6cf3b3e7ffa41a54",
       "disposition": {
         "kind": "published",
-        "entry_id": "slender-the-arrival"
-      },
-      "notes": []
+        "entry_id": "slavicpunk-oldtimer"
+      }
     },
     {
       "source_key": "main:0501",
-      "row_fingerprint": "347decb240306b512adcdaf8e0d47814e15f1fbc1a665cd8ae211a33590289f3",
+      "row_fingerprint": "76185ab6f158ad3bda542ae37cd66bd14cac2bf7d0fb5bd423a4865a9dd2ba14",
       "disposition": {
         "kind": "published",
-        "entry_id": "smalland-survive-the-wilds"
-      },
-      "notes": []
+        "entry_id": "slender-the-arrival"
+      }
     },
     {
       "source_key": "main:0502",
-      "row_fingerprint": "39abe946678a9092aabc87131d72ba353f767d0b07f84df2429a59e60029e31e",
+      "row_fingerprint": "a62f6de4d0f36ce1fa1643b4f47a45c180b2838fd0c8bda05572a804d003d04d",
       "disposition": {
-        "kind": "omitted",
-        "reason": "This duplicates upstream row main:0497 and has no independent policy."
-      },
-      "notes": []
+        "kind": "published",
+        "entry_id": "smalland-survive-the-wilds"
+      }
     },
     {
       "source_key": "main:0503",
-      "row_fingerprint": "bc69abb96dc5b9dca6b87f4e927c2f5440181e323d732561a11fb0bfaaa3b968",
+      "row_fingerprint": "18fe6fae28bd7f96016aa5a1f0cf0faa599236477f94b84fbb03275e1856b821",
+      "disposition": {
+        "kind": "omitted",
+        "reason": "This duplicates upstream row main:0497 and has no independent policy."
+      }
+    },
+    {
+      "source_key": "main:0504",
+      "row_fingerprint": "fc6afe1e1350f55e36d7aeffe46b81df2ccab0de1645b7fd4a9697e695af6464",
       "disposition": {
         "kind": "published",
         "entry_id": "smile-protocol-demo"
@@ -6832,17 +6632,16 @@
       ]
     },
     {
-      "source_key": "main:0504",
-      "row_fingerprint": "8590aa4381fc3509b26895eba029ef99ea19e7aabb115b9f2a28022036d99469",
+      "source_key": "main:0505",
+      "row_fingerprint": "a45a30bec9a19e2c1369fce3cb655f2a9856a477aeb6248e948892abdd8ce558",
       "disposition": {
         "kind": "published",
         "entry_id": "solasta-ii"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0505",
-      "row_fingerprint": "bb78a0bc44b4c0f733f2f15af9b59b87379eae8d10287da37d98d96e27f28bee",
+      "source_key": "main:0506",
+      "row_fingerprint": "8e5293c849dab475591afd96f03f70561e2c3deddbab2540729f9ea40134ea2e",
       "disposition": {
         "kind": "published",
         "entry_id": "sons-of-the-forest"
@@ -6858,8 +6657,8 @@
       ]
     },
     {
-      "source_key": "main:0506",
-      "row_fingerprint": "61e45ae6121a405386a56435e214da6e064cf1f9366ce536cea5db7d51342ca5",
+      "source_key": "main:0507",
+      "row_fingerprint": "b2d70c2da3d9e643469b91e78fa3c3d6cf2838375cd1d00c99323ef038233904",
       "disposition": {
         "kind": "published",
         "entry_id": "soulmask"
@@ -6875,8 +6674,8 @@
       ]
     },
     {
-      "source_key": "main:0507",
-      "row_fingerprint": "b51e648a984edb559a43cc493e7868cdda50549fd1c3e946bdb66e0ea4e8ef65",
+      "source_key": "main:0508",
+      "row_fingerprint": "12729a1c13396dc2bf350e3b77da68be416ebcc9de98d5d4564646ab49695baf",
       "disposition": {
         "kind": "published",
         "entry_id": "soulslinger-envoy-of-death"
@@ -6894,8 +6693,8 @@
       ]
     },
     {
-      "source_key": "main:0508",
-      "row_fingerprint": "5faf7894f223cd6c66777f325bd36f0a26d77aa93eb332bc7e86a30c80d198fe",
+      "source_key": "main:0509",
+      "row_fingerprint": "6834613171793cfb49566dc3ed75ff519feac0b4789832b2bd744e2f02034f72",
       "disposition": {
         "kind": "published",
         "entry_id": "soulstice"
@@ -6911,17 +6710,16 @@
       ]
     },
     {
-      "source_key": "main:0509",
-      "row_fingerprint": "d46237bc5b94b2a7d711cf94aa1cec89fbe7b346a39a83f0c7b54d86d14c78b8",
+      "source_key": "main:0510",
+      "row_fingerprint": "a05b7013583e076b5ffb1c562b4ad171415c81fce1ebaddebfcf4b60828465fd",
       "disposition": {
         "kind": "published",
         "entry_id": "south-of-midnight"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0510",
-      "row_fingerprint": "088742dcac7bafbda9e8aabcbdf0365426d1b3fc9ad5f3c9c94448d5a620cbad",
+      "source_key": "main:0511",
+      "row_fingerprint": "81dd2dcc941e0a7fe142bcd4fe69f849e05657710ad65071b45ccb498b545c31",
       "disposition": {
         "kind": "published",
         "entry_id": "space-engineers-2"
@@ -6937,44 +6735,40 @@
       ]
     },
     {
-      "source_key": "main:0511",
-      "row_fingerprint": "30d17d4aa6a252a09aa830bd4e861ce8dce247265bc7f5719bad78533e886531",
+      "source_key": "main:0512",
+      "row_fingerprint": "2596b1c5a0d3e4834534122c48e6d71d8b8ce933b3020d986cc7c41862e7e086",
       "disposition": {
         "kind": "published",
         "entry_id": "spirit-of-the-north-2"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0512",
-      "row_fingerprint": "205f9264d57d07707df6033f78399a7961fee91eb595749c33d73b05d3b87a80",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "spirit-x-strike"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0513",
-      "row_fingerprint": "6ac3a1e03fb24e78545c1ecbe48909f6ad1adcf218ae7b141f2a7fad5608f884",
+      "row_fingerprint": "40247f6ed652cc96b9b44eda2f1e2218445892a09a650e7e1f62053d31967bc0",
       "disposition": {
         "kind": "published",
-        "entry_id": "split-fiction"
-      },
-      "notes": []
+        "entry_id": "spirit-x-strike"
+      }
     },
     {
       "source_key": "main:0514",
-      "row_fingerprint": "56730f53364bf65b73faf74f31b576dea8341a578e9f48c9d15a8361ec5a2be7",
+      "row_fingerprint": "0e66a4e22203082241e2332a115e9278aaa920979c16393066d61cc339268fa5",
       "disposition": {
         "kind": "published",
-        "entry_id": "spongebob-squarepants-titans-of-the-tide"
-      },
-      "notes": []
+        "entry_id": "split-fiction"
+      }
     },
     {
       "source_key": "main:0515",
-      "row_fingerprint": "32adc87e6aa2dddf7d2725a9f74026d870b8a7a20ce42847419555bd3dcf496a",
+      "row_fingerprint": "e11eb15d47520089d4d26f97354d551386e763693a8137d6fdf74a858c68c2bb",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "spongebob-squarepants-titans-of-the-tide"
+      }
+    },
+    {
+      "source_key": "main:0516",
+      "row_fingerprint": "206ea175cd902558141a8581d5ac2a9fbb4b3a427bf17b3f93a7ba8af95976c7",
       "disposition": {
         "kind": "published",
         "entry_id": "sprawl"
@@ -6990,8 +6784,8 @@
       ]
     },
     {
-      "source_key": "main:0516",
-      "row_fingerprint": "6b1bad768fe3bb602cb9426efa4ef4a61256d66b15d10282b08cad01cf45c3a4",
+      "source_key": "main:0517",
+      "row_fingerprint": "b72377ba0397cf8b75430a219cbb92b30cf40c56189b837cfaf905a09c3494d9",
       "disposition": {
         "kind": "published",
         "entry_id": "stalker-call-of-prypiat-enhanced-edition"
@@ -7009,8 +6803,8 @@
       ]
     },
     {
-      "source_key": "main:0517",
-      "row_fingerprint": "0c4d91461e9aef70815b091654d07f76727f9c6440576ca0f131ee154f4c2422",
+      "source_key": "main:0518",
+      "row_fingerprint": "e18df7574710e326bb6e91a67cd96ee9bdacc499f31f2eeb0582dffcfdb4c059",
       "disposition": {
         "kind": "published",
         "entry_id": "stalker-clear-sky-enhanced-edition"
@@ -7026,8 +6820,8 @@
       ]
     },
     {
-      "source_key": "main:0518",
-      "row_fingerprint": "13b1275dd50ecf8c3ad9a45a6123d9594e99c04dd44f0a823bd7b245c67637ec",
+      "source_key": "main:0519",
+      "row_fingerprint": "e9fc71fcce058de7ca9fac148163f7c2dbd2431ba75a6cb9bc1b1e0a3d636a5c",
       "disposition": {
         "kind": "published",
         "entry_id": "stalker-shadow-of-chornobyl-enhanced-edition"
@@ -7045,44 +6839,40 @@
       ]
     },
     {
-      "source_key": "main:0519",
-      "row_fingerprint": "7c04521d7e7f649371e6eb42009d39897b672774cd0fccef8b7b443cbcc64976",
+      "source_key": "main:0520",
+      "row_fingerprint": "c7002e43a020a12c565fe4dfb94ab354ef021b6194f48e6ac41e07929636f94b",
       "disposition": {
         "kind": "published",
         "entry_id": "s-t-a-l-k-e-r-2-heart-of-chornobyl"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0520",
-      "row_fingerprint": "b50c718cee36c2dbbc7b9920ee37427a2ec4744775a6ea159000c2f4254e50e9",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "starfield"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0521",
-      "row_fingerprint": "93aa1624a5ed28e7e15a212707403e747560bb577061c8e624df88f277bfd3dd",
+      "row_fingerprint": "780bd3e2aab2b1a77e65cbbe862e9209cf238f48d97817da68d332276f85e0e9",
       "disposition": {
         "kind": "published",
-        "entry_id": "star-overdrive"
-      },
-      "notes": []
+        "entry_id": "starfield"
+      }
     },
     {
       "source_key": "main:0522",
-      "row_fingerprint": "b12edee0d88787246f26ab99a910bff4571b93725d7a4dbb32c147b1c429f1dc",
+      "row_fingerprint": "4bd0024d9d71958d369ff47c271b9b9c4295b3112d468f1f02f5f120a1a04dba",
       "disposition": {
         "kind": "published",
-        "entry_id": "star-trek-voyager-across-the-unknown"
-      },
-      "notes": []
+        "entry_id": "star-overdrive"
+      }
     },
     {
       "source_key": "main:0523",
-      "row_fingerprint": "907918a29c456c4699050f14b8352d1e6f0d83b1005a462c9e137d5043d4b879",
+      "row_fingerprint": "d9e79d3959259417722adc97994697762f45a141c288b4d02aed5c7526993fda",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "star-trek-voyager-across-the-unknown"
+      }
+    },
+    {
+      "source_key": "main:0524",
+      "row_fingerprint": "4ba4c9febf192c93d12b89b4aceb3c953002a6829641ad0be9327b678b6059b7",
       "disposition": {
         "kind": "published",
         "entry_id": "jedi-survivor"
@@ -7101,17 +6891,16 @@
       ]
     },
     {
-      "source_key": "main:0524",
-      "row_fingerprint": "6940b3ee81c8257b82f2aa2836d21de92294ea45d4d6c5ddbf49488a09444d69",
+      "source_key": "main:0525",
+      "row_fingerprint": "90729fe5b116b79f15a69eadabd483bcdb3272f786252e12e1d02abcf08e1f2d",
       "disposition": {
         "kind": "published",
         "entry_id": "star-wars-outlaws"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0525",
-      "row_fingerprint": "1fe724a40fa3b3443cbe4cc1d492298a2b6240a2d167878a58b069799970a376",
+      "source_key": "main:0526",
+      "row_fingerprint": "c8bb80aa22958e217cd22f05f4eb362d2594d547af2b23a241ac4ca43057e75b",
       "disposition": {
         "kind": "published",
         "entry_id": "star-wars-zero-company"
@@ -7127,17 +6916,16 @@
       ]
     },
     {
-      "source_key": "main:0526",
-      "row_fingerprint": "7de62e9bec8728952c2707152595001327610421d6a48faac3add4ec88ea518c",
+      "source_key": "main:0527",
+      "row_fingerprint": "f437506b4fdbbd2f92963c08de4ab72655f4adceb1c8118a5187f88ade4eb14c",
       "disposition": {
         "kind": "published",
         "entry_id": "stay-in-the-light"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0527",
-      "row_fingerprint": "78d200f89ea189fff431d301f92fb7bbc5e5ef97d80801a2b77a00f5333fa985",
+      "source_key": "main:0528",
+      "row_fingerprint": "3618907bb8dbc6d2894ad0f5203cea165d7c6612d67520362011a77dcb2755d0",
       "disposition": {
         "kind": "published",
         "entry_id": "steel-seed"
@@ -7153,8 +6941,8 @@
       ]
     },
     {
-      "source_key": "main:0528",
-      "row_fingerprint": "ffebc96a43df5930ebe474609a6102a255fc9915ae86e840c01e50a80bd0d493",
+      "source_key": "main:0529",
+      "row_fingerprint": "5d5765ec78cceb0454a4789a8578ded14dc9c3e5a81e04e1013348ea904462aa",
       "disposition": {
         "kind": "published",
         "entry_id": "steelrising"
@@ -7170,8 +6958,8 @@
       ]
     },
     {
-      "source_key": "main:0529",
-      "row_fingerprint": "7ee782b33c9ecd30f106fb2295cec9264cb0afc35b6717949cd358e58697aced",
+      "source_key": "main:0530",
+      "row_fingerprint": "714fb119125c7733f9eab128f493bb6f6b130690e14692cbaece34406949e94f",
       "disposition": {
         "kind": "published",
         "entry_id": "stellar-blade"
@@ -7187,17 +6975,16 @@
       ]
     },
     {
-      "source_key": "main:0530",
-      "row_fingerprint": "49bf088392e1498baefc0a57bad413c4a72c5bf744710c635607103c3f929b5e",
+      "source_key": "main:0531",
+      "row_fingerprint": "4ebd911c7d806750a18de39782156f66cce5e8f55b28397ec7214f782cf25665",
       "disposition": {
         "kind": "published",
         "entry_id": "still-wakes-the-deep"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0531",
-      "row_fingerprint": "082718c499129360fbbc7560336dcfab706ac2455f9719a175baf5ed5f54fbe5",
+      "source_key": "main:0532",
+      "row_fingerprint": "cc7c11bc6f36a440252be7b67c8dc56f935360c785926356f63c530b971b7f57",
       "disposition": {
         "kind": "published",
         "entry_id": "storage-hunter-simulator"
@@ -7213,8 +7000,8 @@
       ]
     },
     {
-      "source_key": "main:0532",
-      "row_fingerprint": "807e0fe573af888e4dd872cc906929f54b558d541141206f172f005d86678fba",
+      "source_key": "main:0533",
+      "row_fingerprint": "cea9ac3c4d30efd6168e076f734607778b429fbc92a7db0ad15ed1c16d9be7e7",
       "disposition": {
         "kind": "published",
         "entry_id": "stranger-of-paradise-final-fantasy-origin"
@@ -7230,8 +7017,8 @@
       ]
     },
     {
-      "source_key": "main:0533",
-      "row_fingerprint": "8ef5daeeddb4035b585303dae65fae7e148a1dbcb31cb4cdddd9ba72614ba2da",
+      "source_key": "main:0534",
+      "row_fingerprint": "3487fbb3eee1efb3ad3cf2afbfb888b03b6b416109032a1f6e181491f1bb15cd",
       "disposition": {
         "kind": "published",
         "entry_id": "stranded-alien-dawn"
@@ -7247,26 +7034,24 @@
       ]
     },
     {
-      "source_key": "main:0534",
-      "row_fingerprint": "f4e1302b31322bb204b13236e6001076c4a45a20777e40323f8ded29f0bf0481",
+      "source_key": "main:0535",
+      "row_fingerprint": "79cbab2844850f3e99095f9e6929599311b4d075c4e55eaa97eeaa9c33bf470e",
       "disposition": {
         "kind": "published",
         "entry_id": "strayed-lights"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0535",
-      "row_fingerprint": "7f83661569f36ac8e34a3a2b76d2a485b977a7b6e36b053719eaa4b907a6d745",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "stygian-outer-gods"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0536",
-      "row_fingerprint": "8f7ef8a057390eed15fb4e20b1d84ba656fa55d58421875de4cf14ac71a8d7e3",
+      "row_fingerprint": "8b4e8d33e2633d7b92ad5757252c1b440393bb4083369f41713aff1ce1873514",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "stygian-outer-gods"
+      }
+    },
+    {
+      "source_key": "main:0537",
+      "row_fingerprint": "29829d86f9de1b925d7a093a5200fefa90ffdc60c99113f49e1fdfacf8df72b7",
       "disposition": {
         "kind": "published",
         "entry_id": "styx-blades-of-greed"
@@ -7282,17 +7067,16 @@
       ]
     },
     {
-      "source_key": "main:0537",
-      "row_fingerprint": "1d15b5b2931e902f174f253702c3b2821d6801aea3ba14fd891252e7989c6102",
+      "source_key": "main:0538",
+      "row_fingerprint": "f403afb19e5034429853d2ac879989b6d1fd16fe096b03001c4ac223e7522dce",
       "disposition": {
         "kind": "published",
         "entry_id": "subliminal"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0538",
-      "row_fingerprint": "56a12c42ffe5d17b80ae55a3e6ddb88669e894c0a9e88daeae12f4c3c571ef89",
+      "source_key": "main:0539",
+      "row_fingerprint": "d5fe08f6602b959a629d5a143be1ef91521c431f12708faa13d60279f98907f6",
       "disposition": {
         "kind": "published",
         "entry_id": "subnautica-2"
@@ -7308,8 +7092,8 @@
       ]
     },
     {
-      "source_key": "main:0539",
-      "row_fingerprint": "d820d05d35aec4ae2647c60cb81da55150c8cd0a3bfadc533804874ddc2820c2",
+      "source_key": "main:0540",
+      "row_fingerprint": "a0bb7279f1d58a992dc00433272f2e40542a1131e014703cdde8ec18b01de330",
       "disposition": {
         "kind": "published",
         "entry_id": "suicide-squad-kill-the-justice-league"
@@ -7325,8 +7109,8 @@
       ]
     },
     {
-      "source_key": "main:0540",
-      "row_fingerprint": "e6ccdaa5b0cedc7206c1cbf1e4e2d7d13da1055b8f2d7a21987955dc580d1852",
+      "source_key": "main:0541",
+      "row_fingerprint": "c3c74bc9e3fca198f2534caadfd0cec948a6081d41d4ab913a6a112f1593b0d7",
       "disposition": {
         "kind": "published",
         "entry_id": "sumerian-six"
@@ -7342,8 +7126,8 @@
       ]
     },
     {
-      "source_key": "main:0541",
-      "row_fingerprint": "9c3ccc34da7b425836212c228b9dda8471b34a334ec8416160248006d9085d8a",
+      "source_key": "main:0542",
+      "row_fingerprint": "06cedf799a82d050b38d76672276174b77432279d2c0a78f1ae128223ccd41c4",
       "disposition": {
         "kind": "published",
         "entry_id": "super-meat-boy-3d"
@@ -7359,8 +7143,8 @@
       ]
     },
     {
-      "source_key": "main:0542",
-      "row_fingerprint": "c4e60c5d50cafa5dbfef65f154b4663dfc24e659450eafd4a4ab644614ce24e1",
+      "source_key": "main:0543",
+      "row_fingerprint": "61fba1425bc08af7a40f1ca5ade2aa4163623181a566f10ef8269ca0426c0e64",
       "disposition": {
         "kind": "published",
         "entry_id": "supraland"
@@ -7376,8 +7160,8 @@
       ]
     },
     {
-      "source_key": "main:0543",
-      "row_fingerprint": "58db3562bcfa267d1ae09e1b1ef4a7c71a8f894aeb92a7dd1cb093feabf9174f",
+      "source_key": "main:0544",
+      "row_fingerprint": "f1ae75fbfb122361a237101faf309db394568aefc9ef686ee4cf81370b39a2d4",
       "disposition": {
         "kind": "published",
         "entry_id": "supraland-six-inches-under"
@@ -7393,8 +7177,8 @@
       ]
     },
     {
-      "source_key": "main:0544",
-      "row_fingerprint": "deae05e11aff66d85b1c0ad2d7105a536c66a27606863090f7b44eae1e82f447",
+      "source_key": "main:0545",
+      "row_fingerprint": "0c072afc7590b2cba75080d8586062fc9dfe5ecbfcf97f63bc2468746557011e",
       "disposition": {
         "kind": "published",
         "entry_id": "supraworld"
@@ -7410,17 +7194,16 @@
       ]
     },
     {
-      "source_key": "main:0545",
-      "row_fingerprint": "eb7220fa94187d380281b76a84d007a25de44011bcbe9ebc7af004e591ed16bb",
+      "source_key": "main:0546",
+      "row_fingerprint": "6e8f937f8ecb8612a4c933996493b8a71d5792ed68cb00c78659566d6ac2c3c4",
       "disposition": {
         "kind": "published",
         "entry_id": "synthetik-2"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0546",
-      "row_fingerprint": "50fb2d3575bbe5117cd5632a5bd18970c6b61f66c2f03c3fe4790051e8ff15dd",
+      "source_key": "main:0547",
+      "row_fingerprint": "1486012ef5cb7e119aa97b5b0fdf4798eeb2dbb9b43a9a84f743470b461a4bae",
       "disposition": {
         "kind": "published",
         "entry_id": "system-shock-remake"
@@ -7436,8 +7219,8 @@
       ]
     },
     {
-      "source_key": "main:0547",
-      "row_fingerprint": "005e214b0fd83c5c62e33ce17ddabc1169180581bf3206c07700f5a4c9fd27d0",
+      "source_key": "main:0548",
+      "row_fingerprint": "3f5f6a1b5df39f702b205bac650b45014f2d38be346256828ec19e05cb100989",
       "disposition": {
         "kind": "published",
         "entry_id": "tainted-grail-the-fall-of-avalon"
@@ -7454,26 +7237,24 @@
       ]
     },
     {
-      "source_key": "main:0548",
-      "row_fingerprint": "62c1fca35d8690d22f7a4c00d770e1eb3c81031cea8c6b8e641558bcec1fa80d",
+      "source_key": "main:0549",
+      "row_fingerprint": "df34422279d9a3a6db6af1689784220e70921b3813851f0f9f0410a2dbcce11f",
       "disposition": {
         "kind": "published",
         "entry_id": "tales-of-kenzera-zau"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0549",
-      "row_fingerprint": "cb9c538f496b7aa3ebcc10896dd5ed4a50c9a61f28c01eb4d30a1aab7554ab16",
-      "disposition": {
-        "kind": "pending_identity",
-        "reason": "An Epic candidate exists, but no verified exact Epic Games Store identity is available."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0550",
-      "row_fingerprint": "382a17aebdfd64bee18d1c6b4691051587f402f057e11e1291f9382bb92c3d7c",
+      "row_fingerprint": "34a96ca212b66e882d892f0b0535c27cc1949673dde047c04b6500ea0199b70c",
+      "disposition": {
+        "kind": "pending_identity",
+        "reason": "An Epic candidate exists, but no verified exact Epic Games Store identity is available."
+      }
+    },
+    {
+      "source_key": "main:0551",
+      "row_fingerprint": "c4ba78b8c76cc860d7d18b9bc12aa74cce68a278a7aca2c53b03fc3d90a7bfdb",
       "disposition": {
         "kind": "published",
         "entry_id": "tchia"
@@ -7489,17 +7270,16 @@
       ]
     },
     {
-      "source_key": "main:0551",
-      "row_fingerprint": "b193f46f1b086644a5a4a2eb2c7b4797b39cf44c84eddecb6863d8b5169baeb5",
+      "source_key": "main:0552",
+      "row_fingerprint": "45eb44f23cc1b0836f019d79540a75c8c5fc99c7bad704029469308179cbad48",
       "disposition": {
         "kind": "published",
         "entry_id": "technofumer"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0552",
-      "row_fingerprint": "7a225d02b657431d3e477bbbb5ab13a2cccbad6e7824a8cd46ea499edf1c63ce",
+      "source_key": "main:0553",
+      "row_fingerprint": "9dcae155359549a05f04e40dd5e9638a5ca20e445529014e62b4e0143c759832",
       "disposition": {
         "kind": "published",
         "entry_id": "tekken-8"
@@ -7515,8 +7295,8 @@
       ]
     },
     {
-      "source_key": "main:0553",
-      "row_fingerprint": "f5a61759288e98f5357d892d485d5dc891a6b3a28565d03d24e0c32bab9e1334",
+      "source_key": "main:0554",
+      "row_fingerprint": "8666e64ae15e26b2ff95e8f3eff0def60fac5e0c054be772d0feb9d208839633",
       "disposition": {
         "kind": "published",
         "entry_id": "tempest-rising"
@@ -7532,8 +7312,8 @@
       ]
     },
     {
-      "source_key": "main:0554",
-      "row_fingerprint": "004a58bce6484bc4f844f8735b8c131551808a704f77305c483928d2ea03f5c4",
+      "source_key": "main:0555",
+      "row_fingerprint": "153ad0a201c25616c17a2189da32ae423e54588ee29f6aebdc1128495da4c134",
       "disposition": {
         "kind": "published",
         "entry_id": "terratech-legion"
@@ -7549,17 +7329,16 @@
       ]
     },
     {
-      "source_key": "main:0555",
-      "row_fingerprint": "3838e916563fadc98342b4cf7b303a7e64f7e65499530d257f014734b34d5a4b",
+      "source_key": "main:0556",
+      "row_fingerprint": "47294e7e9bd5148c5ade64ead544c17f125d6b1aecc7878be59445cbf3f924d7",
       "disposition": {
         "kind": "published",
         "entry_id": "test-drive-unlimited-solar-crown"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0556",
-      "row_fingerprint": "d0a9b30b48b862ed45acb4f28292a4a647755777ce9cc1eae6c45b1c0c176c85",
+      "source_key": "main:0557",
+      "row_fingerprint": "09286891b7cebed6a9bd6b4fdffff6a2407b83a27335e2220d1169bca71fb213",
       "disposition": {
         "kind": "published",
         "entry_id": "testament-the-order-of-high-human"
@@ -7575,8 +7354,8 @@
       ]
     },
     {
-      "source_key": "main:0557",
-      "row_fingerprint": "cf4d5784ec876b56fd056a41241773efce3f4164b08001fa496e9c133feadd54",
+      "source_key": "main:0558",
+      "row_fingerprint": "9b36131ec4ac39162eeb54fc888d52c763620f344fd41c4778200f25d4f0ad0f",
       "disposition": {
         "kind": "published",
         "entry_id": "the-alley-demo"
@@ -7592,8 +7371,8 @@
       ]
     },
     {
-      "source_key": "main:0558",
-      "row_fingerprint": "e98a7cf80b66b69b2b6c56e10120a6e0458c07fa264bd571ed4ef39639a0900a",
+      "source_key": "main:0559",
+      "row_fingerprint": "0a46168d00ee3b9cff8f8cb4dea731b965dbf05af13a9fd397af33aa81361cff",
       "disposition": {
         "kind": "published",
         "entry_id": "the-alters"
@@ -7609,8 +7388,8 @@
       ]
     },
     {
-      "source_key": "main:0559",
-      "row_fingerprint": "f9a4916a18d78f8aec67c6648200d3de44bc432f590c22cbc45c99a76d00dc16",
+      "source_key": "main:0560",
+      "row_fingerprint": "e414714fe6f4be6ea256f4be88d7e4f88302e1cc2537631cc6df4acfad0a8e4d",
       "disposition": {
         "kind": "published",
         "entry_id": "the-ascent"
@@ -7626,35 +7405,32 @@
       ]
     },
     {
-      "source_key": "main:0560",
-      "row_fingerprint": "26eccbcbc5ad74e923155893759bb49d54acb6979a3b3008c0a5901be4a8c814",
+      "source_key": "main:0561",
+      "row_fingerprint": "36c811cb52c2f14e270ef94dbeea3c1ceddda32517f53623e4f7adeb0bbbb406",
       "disposition": {
         "kind": "published",
         "entry_id": "the-axis-unseen"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0561",
-      "row_fingerprint": "b8d8e1baecef524ae3522aa6a06c25acf93bb7440cbdd58ad603f859707513b6",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "the-black-ice"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0562",
-      "row_fingerprint": "1d403a47f8a131137f6c81517abe89ca92fdc83cad389a60c70ce59ef8933d98",
+      "row_fingerprint": "d85642e45dd4a6f610392eb455be2c0b4deda2e53d0291164d5beea1abad5146",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-blood-of-dawnwalker"
-      },
-      "notes": []
+        "entry_id": "the-black-ice"
+      }
     },
     {
       "source_key": "main:0563",
-      "row_fingerprint": "20b142ccf6a1f83aa8eac6252ed16f863e351c50730e23fb6c45ac7d98e94d66",
+      "row_fingerprint": "4fc67ba9a57063ba270027b5aa536ead235c894f770a068f8b489c43374a7f04",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "the-blood-of-dawnwalker"
+      }
+    },
+    {
+      "source_key": "main:0564",
+      "row_fingerprint": "4d006b168378593920c7b422eb8c16cda24579410a8bae2d2032977f8ed48599",
       "disposition": {
         "kind": "published",
         "entry_id": "the-callisto-protocol"
@@ -7670,8 +7446,8 @@
       ]
     },
     {
-      "source_key": "main:0564",
-      "row_fingerprint": "1f09874ad420e0fa7f6d9a5666ab449e335d9ae73b8c93c7e6b146b5f0a56f5b",
+      "source_key": "main:0565",
+      "row_fingerprint": "e524428728cc937a481dcf429f89660749888c4c58396d272334c883ece3039e",
       "disposition": {
         "kind": "published",
         "entry_id": "the-casting-of-frank-stone"
@@ -7687,8 +7463,8 @@
       ]
     },
     {
-      "source_key": "main:0565",
-      "row_fingerprint": "20ebcbeb1d1470db1a054c01528daec0e9851d996d62a7afb422425f93de7a1c",
+      "source_key": "main:0566",
+      "row_fingerprint": "ffe42010a7c51694ab53785ca4164883aa68e9099028a941e7229501ce686782",
       "disposition": {
         "kind": "published",
         "entry_id": "the-chant"
@@ -7704,17 +7480,16 @@
       ]
     },
     {
-      "source_key": "main:0566",
-      "row_fingerprint": "631e8f62e3ceb7e5fa70cea88239e214ae369d57ff59ae63c6945f2420ccd90f",
+      "source_key": "main:0567",
+      "row_fingerprint": "0c02d8fd803e1d1dcdb31f8013defc0533463acb2b9958bf29c4eccd13d4ff44",
       "disposition": {
         "kind": "published",
         "entry_id": "the-diofield-chronicle"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0567",
-      "row_fingerprint": "75ae8e29dee3d30ba5c804976d77d4eaab3479ae570af54bc43dfc14b5555dd6",
+      "source_key": "main:0568",
+      "row_fingerprint": "0820abd4b1686fd057858e7e7ba338cfe039b6fcbedd469ccf3c98c34264d56a",
       "disposition": {
         "kind": "published",
         "entry_id": "the-elder-scrolls-iv-oblivion-remastered"
@@ -7730,26 +7505,24 @@
       ]
     },
     {
-      "source_key": "main:0568",
-      "row_fingerprint": "bf3474ae92ab8b52384ab30fdbc1a417e5ac1d8f60e3514ddbe5d940e7f67d4c",
+      "source_key": "main:0569",
+      "row_fingerprint": "43904d3067470e1d7c189c6bda1bc492673e933313b3ebfec4069e8aa7bf1b53",
       "disposition": {
         "kind": "published",
         "entry_id": "the-elder-scrolls-v-skyrim-special-edition"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0569",
-      "row_fingerprint": "477d13ba82afd3ce3b7e3fcc27a6de4af1f3a6366f072874e8e142bf3abcbb63",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "the-first-berserker-khazan"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0570",
-      "row_fingerprint": "447a76d5432e4273799bf90d7c8a4e3a23244cf1182fceefe31d9106bf8c7f94",
+      "row_fingerprint": "94e58eb1c72b69f1f6ca9b5d30f7529505b1887d1395553cf853a372f6f0291f",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "the-first-berserker-khazan"
+      }
+    },
+    {
+      "source_key": "main:0571",
+      "row_fingerprint": "7076f8f3d45ecd24e645a6804c90dffb72afa5617ad80081e74a14f34a2adc80",
       "disposition": {
         "kind": "published",
         "entry_id": "the-hollow-complex-demo"
@@ -7765,8 +7538,8 @@
       ]
     },
     {
-      "source_key": "main:0571",
-      "row_fingerprint": "408995ddcd8f5e3b8f2a5439c5a6d1f61b38cd88d3a11332078873dacee28a14",
+      "source_key": "main:0572",
+      "row_fingerprint": "079b239833ad158084c95e795672da1be96048ec0f3aad28b72fb98e8ac0d30a",
       "disposition": {
         "kind": "published",
         "entry_id": "the-invincible"
@@ -7782,8 +7555,8 @@
       ]
     },
     {
-      "source_key": "main:0572",
-      "row_fingerprint": "fecd5a5aea594e7e167dc0797cfeb26313ac9ec1e05719284b34df8ae120c457",
+      "source_key": "main:0573",
+      "row_fingerprint": "3b8069f1f65cd4fb9b6218fa2e9da73e6e35d32be0b862fa461e2d224c36c6b5",
       "disposition": {
         "kind": "published",
         "entry_id": "the-joy-of-creation"
@@ -7799,80 +7572,72 @@
       ]
     },
     {
-      "source_key": "main:0573",
-      "row_fingerprint": "0503bfbc6b51bcd39eb825fcea103bc8a5ff49d1e45f2acfbef34968c58cdb9b",
+      "source_key": "main:0574",
+      "row_fingerprint": "9cd3428a731f1a96135fcdba97ead3bf09138e1d4e4a285897a84ce81ba215e7",
       "disposition": {
         "kind": "published",
         "entry_id": "the-killing-antidote"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0574",
-      "row_fingerprint": "c55a28d02f7ce7ccf66db07ca7880973a8fa5b33c727451ce1579fadf3bb75cc",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "the-last-caretaker"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0575",
-      "row_fingerprint": "2bc764f7adbe7ff4b121a0f431c51676194e2c762812d9ae6eedd29de6927d95",
+      "row_fingerprint": "14132eec6943294b7729a20876cb591aeb1602868f5943677d7c7c7d6bae2a1c",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-last-of-us-part-i"
-      },
-      "notes": []
+        "entry_id": "the-last-caretaker"
+      }
     },
     {
       "source_key": "main:0576",
-      "row_fingerprint": "309645cfc9fdcd32f84d646476ecd21395f2517fa620ca7b4699286c8c161a29",
+      "row_fingerprint": "da22aca13ca7cf81b14dec6daef275674e9bebdb8a9398adf668e6c747786bbd",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-last-of-us-part-ii-remastered"
-      },
-      "notes": []
+        "entry_id": "the-last-of-us-part-i"
+      }
     },
     {
       "source_key": "main:0577",
-      "row_fingerprint": "a26ebe335cf102d656cf84d363e3db0225c6a34365f737fcc2c9149149d408f1",
+      "row_fingerprint": "025388e26f83e6d561322c6f69d6dd8c445ca6e8518eea2d2212b3049d6c51ed",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-last-oricru"
-      },
-      "notes": []
+        "entry_id": "the-last-of-us-part-ii-remastered"
+      }
     },
     {
       "source_key": "main:0578",
-      "row_fingerprint": "1b291f4aea65b117b90a1e6bad7972ccb1e7ac03729c3a77c4de6387d6af2e36",
+      "row_fingerprint": "ea8adebbcda51113b7850ab75c1cc9d1cb8841f346d566b9184420667b6c2311",
       "disposition": {
         "kind": "published",
-        "entry_id": "trails-through-daybreak-1-2-d2"
-      },
-      "notes": []
+        "entry_id": "the-last-oricru"
+      }
     },
     {
       "source_key": "main:0579",
-      "row_fingerprint": "b5db470ad5d0380a7d66295f46dd670e643d2fbcfa3990300a3279c9e0bb32b5",
+      "row_fingerprint": "e72b91f07405a8454b8a243d9420d2089b72c6d1829bd725de3aa6e401cc717b",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-lord-of-the-rings-gollum"
-      },
-      "notes": []
+        "entry_id": "trails-through-daybreak-1-2-d2"
+      }
     },
     {
       "source_key": "main:0580",
-      "row_fingerprint": "9b8b2020d6668ec967cb1f0b6e07c718106b9fc2d25b0e8a34b31fcda68c7f47",
+      "row_fingerprint": "88e418540a9cc27c82094e48ce5e90ba0f6f68c5dd46309cb9b45467fbfe07bd",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-lord-of-the-rings-return-to-moria"
-      },
-      "notes": []
+        "entry_id": "the-lord-of-the-rings-gollum"
+      }
     },
     {
       "source_key": "main:0581",
-      "row_fingerprint": "4ae7ad426739c4cc5fd1489c650d1046ce26fd4e779981ef9e19fb56d5fd11b2",
+      "row_fingerprint": "8a3f231277ed3ba04f31c698f27a95efa19f5d7b3108d93aa9ab7679e0e49ef8",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "the-lord-of-the-rings-return-to-moria"
+      }
+    },
+    {
+      "source_key": "main:0582",
+      "row_fingerprint": "ef3b2389390f4db61fd6586a718b2a138653216d775bb6da8a443fe3f5a60baa",
       "disposition": {
         "kind": "published",
         "entry_id": "the-medium"
@@ -7888,8 +7653,8 @@
       ]
     },
     {
-      "source_key": "main:0582",
-      "row_fingerprint": "fb6f856f0f650f49d086aa4c24f1f0543a8e8bdcf30a8a7f14fe4379e7b4707c",
+      "source_key": "main:0583",
+      "row_fingerprint": "ae46d5cd70ab1536fdb1f35330ee0aa9e11d89da63a79bdd44c8e6a094aaf2cb",
       "disposition": {
         "kind": "published",
         "entry_id": "the-midnight-walk"
@@ -7905,17 +7670,16 @@
       ]
     },
     {
-      "source_key": "main:0583",
-      "row_fingerprint": "c25419c0d2d943f9e9b5fbb554d7ccbd0bc4fab3aaad248851c6e91833618cc2",
+      "source_key": "main:0584",
+      "row_fingerprint": "9798f1cbeef46e0f643762b6751b116ade478e3410eb440f904f4e973f7afe9e",
       "disposition": {
         "kind": "published",
         "entry_id": "the-mound-omen-of-cthulhu"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0584",
-      "row_fingerprint": "fc6cd22a6c50fc1caa6f5b5e715fbd1829f55163a91bdfa1a55fb5ee4ba23da7",
+      "source_key": "main:0585",
+      "row_fingerprint": "472c925cb67892088394828a1ddfa5f3a5e2263f831b44b2db50665b0f7d3a42",
       "disposition": {
         "kind": "published",
         "entry_id": "the-occultist"
@@ -7933,8 +7697,8 @@
       ]
     },
     {
-      "source_key": "main:0585",
-      "row_fingerprint": "e561e79a2df50eb2103c5b76c25b2dea58c5f189d5582b8cf155cea51fd5630a",
+      "source_key": "main:0586",
+      "row_fingerprint": "118c5639e7ebbb876c6180d0d861aa2e742b34fc41b31467ebdfb81d27eb0300",
       "disposition": {
         "kind": "published",
         "entry_id": "the-orville-interactive-fan-experience"
@@ -7952,8 +7716,8 @@
       ]
     },
     {
-      "source_key": "main:0586",
-      "row_fingerprint": "cb65408d00c8b271dafca8ee42ae9b47675a0b342bcd1d83725af5656cd9f3df",
+      "source_key": "main:0587",
+      "row_fingerprint": "d4a5e3f91b26d5bce2811fad41f9b15590d2de22f5d6a375c508fa1c98310ee6",
       "disposition": {
         "kind": "published",
         "entry_id": "the-other-side"
@@ -7969,26 +7733,24 @@
       ]
     },
     {
-      "source_key": "main:0587",
-      "row_fingerprint": "63afc041ed4f648be926f0c113fd46c73a410c2513d438ea8554acb5398f7da4",
+      "source_key": "main:0588",
+      "row_fingerprint": "b3dcb98038b778f0674d7538d8ac7aebd7338059a8896c81a6908598ba600979",
       "disposition": {
         "kind": "published",
         "entry_id": "the-outer-worlds-spacer-s-choice-edition"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0588",
-      "row_fingerprint": "76d9026e5a5a77eb6a47187c26be00efd5504ff35f72650a87b40b2f07202f3e",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "the-outer-worlds-2"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0589",
-      "row_fingerprint": "f88dc26f2dea4f12291b62553ab2de6f72fd0be55e5efabc129dd741e3d7e82f",
+      "row_fingerprint": "c5f69a8ce1de5b4d22c810acb56b839a7784cc3c3d35d8bbdf223362d57ef6f3",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "the-outer-worlds-2"
+      }
+    },
+    {
+      "source_key": "main:0590",
+      "row_fingerprint": "8aca487df9c44adca7f8116370f776700fa55832eb510551b8e251b92082afef",
       "disposition": {
         "kind": "published",
         "entry_id": "the-path-into-the-abyss"
@@ -8004,35 +7766,32 @@
       ]
     },
     {
-      "source_key": "main:0590",
-      "row_fingerprint": "424553860a28e092feda37f315c25a61f66f78b7042467022540cbd85b7b7b07",
+      "source_key": "main:0591",
+      "row_fingerprint": "1917ceb980f9dfe940fbcf3ca3cb7626ab8cc78f35a2788071eb7a62eafd4405",
       "disposition": {
         "kind": "published",
         "entry_id": "the-persistence"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0591",
-      "row_fingerprint": "973be8d4adce66ae4026b5a0af0a06aa101b57828d4b27b9e5d65c06606155d2",
-      "disposition": {
-        "kind": "pending_identity",
-        "reason": "The prior Steam AppID 3763780 is no longer a current app; other Rift results are distinct games."
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0592",
-      "row_fingerprint": "10d05f600f7b160f7907106f7c601862dd0684d6df7f05a0165bc3f43f8f30c9",
+      "row_fingerprint": "83639ab49cff570a041cf76a94de2bc8862dc1cfbd8166a99d03473a4a67e6ec",
       "disposition": {
-        "kind": "published",
-        "entry_id": "the-riftbreaker"
-      },
-      "notes": []
+        "kind": "pending_identity",
+        "reason": "The prior Steam AppID 3763780 is no longer a current app; other Rift results are distinct games."
+      }
     },
     {
       "source_key": "main:0593",
-      "row_fingerprint": "d2c7ae462057e20728a77b6b8af1d9db5297f8642625507a9eca0337eb937bb9",
+      "row_fingerprint": "a244716108626d25826b37f6ee908ae637d267a2c1c47e98686604683a5238b5",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "the-riftbreaker"
+      }
+    },
+    {
+      "source_key": "main:0594",
+      "row_fingerprint": "f339144e0952af83f091328df8246e0aa3ced3cea59546133b52e2ecfd48d4fa",
       "disposition": {
         "kind": "published",
         "entry_id": "the-rpg"
@@ -8048,8 +7807,8 @@
       ]
     },
     {
-      "source_key": "main:0594",
-      "row_fingerprint": "489187f986969c1d80c8c15a0a5eb29c972dab5a320730bee7ddcd70537d9d32",
+      "source_key": "main:0595",
+      "row_fingerprint": "7900d79525c39af6db45f85542540e2e3cfa3eea8735053b1fb177183c4f3146",
       "disposition": {
         "kind": "published",
         "entry_id": "the-seven-deadly-sins-origin"
@@ -8065,35 +7824,32 @@
       ]
     },
     {
-      "source_key": "main:0595",
-      "row_fingerprint": "3048b20ccf884f5addbfe2ff29765658dad08d22b258c65c270f5b7d5b23925c",
+      "source_key": "main:0596",
+      "row_fingerprint": "af3959b830fa611daa24b6841d83543c05cb62546379cf32fa2ac1aeaa3917c3",
       "disposition": {
         "kind": "published",
         "entry_id": "the-sinking-city-2"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0596",
-      "row_fingerprint": "cd800f7b2677c9c4a83a65eb87eba4aae55fb903e09d6934f437f5fdbed57e76",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "the-sinking-city"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0597",
-      "row_fingerprint": "bc24d851596378107158ba9d2515c5fc7d87442304575a641c9cd7c97c0a0212",
+      "row_fingerprint": "f6f51f299a7c992c2f91914861410873f0014a8af2f57eaeb734f9f31856a729",
       "disposition": {
         "kind": "published",
-        "entry_id": "the-talos-principle-reawakened"
-      },
-      "notes": []
+        "entry_id": "the-sinking-city"
+      }
     },
     {
       "source_key": "main:0598",
-      "row_fingerprint": "3a96d4d2b296514a07da8f0c7737a10c2622a34b5ede9bd08a1abca5a519e01f",
+      "row_fingerprint": "18a14e8e3a86b43ea541076d254ef3e4f10beedee23488131da2d0bf6c98e727",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "the-talos-principle-reawakened"
+      }
+    },
+    {
+      "source_key": "main:0599",
+      "row_fingerprint": "754ab86438b2995e5823732bb6c04403aa72a4b0d40c24ad95f387ae6868cea0",
       "disposition": {
         "kind": "published",
         "entry_id": "the-talos-principle-2"
@@ -8109,8 +7865,8 @@
       ]
     },
     {
-      "source_key": "main:0599",
-      "row_fingerprint": "795a5a2f34c66d5203aeeae701bed0d24286f7faab13d514380a3be8f019ad8d",
+      "source_key": "main:0600",
+      "row_fingerprint": "bd828313912638ef608cdf1343c39447f7c5a486a83f7dfeb7c617ff11aa37fc",
       "disposition": {
         "kind": "published",
         "entry_id": "the-thaumaturge"
@@ -8126,8 +7882,8 @@
       ]
     },
     {
-      "source_key": "main:0600",
-      "row_fingerprint": "75ce2007a39c13ee11c5c4366b6dd4dbfa93f4aa4148dee02543910e8bad9c54",
+      "source_key": "main:0601",
+      "row_fingerprint": "eedc3035f60adc8b709ccb2d794c27227128e12185e25e0b5380bde9e2a89b19",
       "disposition": {
         "kind": "pending_identity",
         "reason": "No verified exact match target or executable observation is available."
@@ -8143,17 +7899,16 @@
       ]
     },
     {
-      "source_key": "main:0601",
-      "row_fingerprint": "6e7e1f95789fb712fcc09367f286987e6e2bc757c562e0fa3fc76ff821bf19c7",
+      "source_key": "main:0602",
+      "row_fingerprint": "6115b24ec9f394285f2cebe8de0640a98603161a2fa6249177f2d5e2fdc09866",
       "disposition": {
         "kind": "published",
         "entry_id": "the-witcher-3"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0602",
-      "row_fingerprint": "1c86bcbe1db58cfa0562c75056b0ffff4713f707637f86aa2b925c74f6c3af13",
+      "source_key": "main:0603",
+      "row_fingerprint": "6a71c146a6977aa4bfaedbd675e84cafc7136ab9dd80fe8830fbc912fd36e120",
       "disposition": {
         "kind": "published",
         "entry_id": "thiefs-shelter"
@@ -8169,44 +7924,40 @@
       ]
     },
     {
-      "source_key": "main:0603",
-      "row_fingerprint": "02defbc844addea8387555f9e9465a37ea4fa861753303c48c4ba6950d3b46b9",
+      "source_key": "main:0604",
+      "row_fingerprint": "b4715b7abd167fd8cd145f3d5c1a78f5d2975eee7ec403136ed106d6b91849d7",
       "disposition": {
         "kind": "published",
         "entry_id": "thymesia"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0604",
-      "row_fingerprint": "62d8b29220e741bb32119a6d522824f8336795be084be616d460766006b577ae",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "time-breaker"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0605",
-      "row_fingerprint": "6747610baadfa353c259e7e3c1a10598264a1370a4394fa367998affd218dcc2",
+      "row_fingerprint": "e741e623b1fd028ee75925326a721729be03d3a356ab008153b219f9c74f1db1",
       "disposition": {
         "kind": "published",
-        "entry_id": "tiny-tina-s-wonderlands"
-      },
-      "notes": []
+        "entry_id": "time-breaker"
+      }
     },
     {
       "source_key": "main:0606",
-      "row_fingerprint": "12c720ae81cd6e370a18c38f013f034106988f68358183b389d5b21c08662bf4",
+      "row_fingerprint": "dcaf2e73a34013a9227b1300f7065839079fdf1bffd242035c64058681f25b30",
       "disposition": {
         "kind": "published",
-        "entry_id": "titan-station"
-      },
-      "notes": []
+        "entry_id": "tiny-tina-s-wonderlands"
+      }
     },
     {
       "source_key": "main:0607",
-      "row_fingerprint": "b1dc86b1931df6ece7166a93dbb0175379250c999028804cb8aaf1d919aafb67",
+      "row_fingerprint": "45c5fcb507c3c1d9166c7075ddd9029cad1106ed550beab66a0dcf3ef4f10f90",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "titan-station"
+      }
+    },
+    {
+      "source_key": "main:0608",
+      "row_fingerprint": "4cd0114ce8e1f820cfb9cc6887a28d5768f0d020aea19decbdf1fa6c60928825",
       "disposition": {
         "kind": "published",
         "entry_id": "titan-quest-ii"
@@ -8222,26 +7973,24 @@
       ]
     },
     {
-      "source_key": "main:0608",
-      "row_fingerprint": "bb78ccebff8dd1aa46c2ff2d4b096e277e5e259502809d300f2c6cb1dfdb01a3",
+      "source_key": "main:0609",
+      "row_fingerprint": "b21defc980cdda75ef3f66867811e52ad85af2f3cd7e2e417cbfc03b030de38e",
       "disposition": {
         "kind": "published",
         "entry_id": "togges"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0609",
-      "row_fingerprint": "36a3aae0f108f47ea3ae1ec491ae0413fe9ab5af4bbf06a8c4a69417092901bd",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "tokyo-xtreme-racer"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0610",
-      "row_fingerprint": "be4344daf06bc13816bcf981d3882b068ed1f603166ba2c8c25748ea55333f40",
+      "row_fingerprint": "151f2e6a3f4ad67c76f118b4f301e5be5886d71fdf8cbcb673ae74a415b7da5c",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "tokyo-xtreme-racer"
+      }
+    },
+    {
+      "source_key": "main:0611",
+      "row_fingerprint": "d7ad79ec09122fd208ebc36dc38987e116b437e6a66ed2acf65c2351c73a7789",
       "disposition": {
         "kind": "published",
         "entry_id": "tony-hawks-pro-skater-3-4"
@@ -8257,8 +8006,8 @@
       ]
     },
     {
-      "source_key": "main:0611",
-      "row_fingerprint": "5bdb84141a4269b5946a17b7f4c30847c0301c1e1b5a515a0be0840fb00621a1",
+      "source_key": "main:0612",
+      "row_fingerprint": "5b495c2ea3f6e1fdf93867f599f9b086a0a5880f60f975bbf7d0a335f6fb4b8d",
       "disposition": {
         "kind": "published",
         "entry_id": "tormented-souls-2"
@@ -8274,17 +8023,16 @@
       ]
     },
     {
-      "source_key": "main:0612",
-      "row_fingerprint": "8cb77808a040c3bf3d9b13acb1083676dc2ef70500466d344ab041c5ca46bb45",
+      "source_key": "main:0613",
+      "row_fingerprint": "9e1544a699948d8a3618f3bb1746a84006ed1c11718442757fa054a5f6e47ec1",
       "disposition": {
         "kind": "published",
         "entry_id": "trail-out"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0613",
-      "row_fingerprint": "e31583e330ff898a2a0829c63fc597a7aa699211a4111889da11cc3c47e23667",
+      "source_key": "main:0614",
+      "row_fingerprint": "16d0a41165c4b39ac44fbaf25508f7d67084ed2ef69cda3e40bdd9bd10c79c81",
       "disposition": {
         "kind": "published",
         "entry_id": "trails-in-the-sky-1st-chapter"
@@ -8302,8 +8050,8 @@
       ]
     },
     {
-      "source_key": "main:0614",
-      "row_fingerprint": "92be4c31037e9c9186bf5c21952c557fd405e7ea1563647a768738b85cab41ed",
+      "source_key": "main:0615",
+      "row_fingerprint": "45f4b72129357b3783d63fc7fe9d9116e19a5765e347e3081d0a1aad33ce1194",
       "disposition": {
         "kind": "pending_identity",
         "reason": "No verified exact match target or executable observation is available."
@@ -8319,8 +8067,8 @@
       ]
     },
     {
-      "source_key": "main:0615",
-      "row_fingerprint": "b4c4304616ca0c475e47e48d4e19c7f1979be59c6eaf02533488852e3128280c",
+      "source_key": "main:0616",
+      "row_fingerprint": "975d485d6eafcd65fb4e1e68c17cee92fe8b7ae8f74e5104b286f4b1737c3f38",
       "disposition": {
         "kind": "published",
         "entry_id": "trepang2"
@@ -8337,8 +8085,8 @@
       ]
     },
     {
-      "source_key": "main:0616",
-      "row_fingerprint": "b7ebc6363a106c492d5274fea82b5b4b575cf11677669f1bd94067907abd7b11",
+      "source_key": "main:0617",
+      "row_fingerprint": "c3475d68f5370d96bd888d12f4d2532847608fc86b4d98eaf827f72a6f513e38",
       "disposition": {
         "kind": "published",
         "entry_id": "trine-5"
@@ -8354,26 +8102,24 @@
       ]
     },
     {
-      "source_key": "main:0617",
-      "row_fingerprint": "a6114f0fd6d855242d33355c023b0b292342f471164389430d766c8771b3129a",
+      "source_key": "main:0618",
+      "row_fingerprint": "04a080139b8d2e97a5e98fc1fd6824aa506c1e21e38ec684ffea8b7e75668414",
       "disposition": {
         "kind": "published",
         "entry_id": "troublemaker-2-beyond-dream"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0618",
-      "row_fingerprint": "753a0432b4af014ffc4dc44e6d4afa3a3e42bb4d84cecd03dd2be3066163249b",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "turbo-sloths"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0619",
-      "row_fingerprint": "168a775235c5d52ee64d9ad30aab4e29b95304591e4c52b52a50b4d33ec7ba61",
+      "row_fingerprint": "5a23a714b9e023aafeb1ea0b67b9eb27f6104501a51f6061cb6f7cc084aeef72",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "turbo-sloths"
+      }
+    },
+    {
+      "source_key": "main:0620",
+      "row_fingerprint": "a8afd105d6df38700e62e4bfe91a7ce0d2e1d7610669fbc0ace6a8e4c5ba82d6",
       "disposition": {
         "kind": "published",
         "entry_id": "twin-stones-the-journey-of-bukka"
@@ -8389,53 +8135,48 @@
       ]
     },
     {
-      "source_key": "main:0620",
-      "row_fingerprint": "15712b47f5cce3aa8aca18e48838850db429124656f3ce2e13f08ab26635eef4",
+      "source_key": "main:0621",
+      "row_fingerprint": "4f0f81c409ca7a179c6333aea41ecb459f3a3319cbab8b95b08a88814378586c",
       "disposition": {
         "kind": "published",
         "entry_id": "uboat"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0621",
-      "row_fingerprint": "b8520007ca5aaf0b489c33ec1c0770316fc49f4f5adaa8e346f0ba0d8a4eb806",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "undertaker"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0622",
-      "row_fingerprint": "9db37a1d45d1701a835e59e2ac1a543a3d83f7d946e2d06e4193a1125410dc95",
+      "row_fingerprint": "9e910014dc6cd0f9952aa8cd9e5192596870db8b7a65f12c9feaa90d58a938a2",
       "disposition": {
         "kind": "published",
-        "entry_id": "uncharted-legacy-of-thieves-collection"
-      },
-      "notes": []
+        "entry_id": "undertaker"
+      }
     },
     {
       "source_key": "main:0623",
-      "row_fingerprint": "e2de4cab9b72d30b4f6cd98bd9eb61bcd10848294d2c3674b0e0473180e5d3d3",
+      "row_fingerprint": "3269ac278d368ef4be2f87cea040aef95c73f7a82a2656fbb0f0cab1b5c32997",
       "disposition": {
         "kind": "published",
-        "entry_id": "unholy"
-      },
-      "notes": []
+        "entry_id": "uncharted-legacy-of-thieves-collection"
+      }
     },
     {
       "source_key": "main:0624",
-      "row_fingerprint": "71e885d9199207cdb5d797f54fc157fb62bb930bcc2cc10ff934d75e67eaf51c",
+      "row_fingerprint": "baa77f538684b8e8c10e014a891027d5bcaeb796efa80fccbe8267e83a1d44e4",
       "disposition": {
         "kind": "published",
-        "entry_id": "unknown-9-awakening"
-      },
-      "notes": []
+        "entry_id": "unholy"
+      }
     },
     {
       "source_key": "main:0625",
-      "row_fingerprint": "051ea58c3062565f3f485ab8252b78c58e17033df6f672946eca811cbdca28b8",
+      "row_fingerprint": "fa5583d6d093fe8de357fa9a394d5102254def3672e35c04ee6212f381d93123",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "unknown-9-awakening"
+      }
+    },
+    {
+      "source_key": "main:0626",
+      "row_fingerprint": "eadfdb5b4872989553d9e56fdb3d84fdf0fbfcb34e290d2843a96024316ff6e1",
       "disposition": {
         "kind": "published",
         "entry_id": "until-dawn"
@@ -8451,35 +8192,32 @@
       ]
     },
     {
-      "source_key": "main:0626",
-      "row_fingerprint": "121bea984ef0b4c9ae5bd7115cac799942582510eb4cc82b816969831221a00f",
+      "source_key": "main:0627",
+      "row_fingerprint": "1b9feeb73d38840301bb5af261dc10cc8f13442e360b2fff78153e4738704031",
       "disposition": {
         "kind": "published",
         "entry_id": "valkyrie-elysium"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0627",
-      "row_fingerprint": "a83b942a4c8fbe3b3a8bc5d6c064cd2c81cdbec71f25d3b2c369f0459f22e002",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "valor-mortis"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0628",
-      "row_fingerprint": "ae2e7dd6597efa0a3552c06a331325ece2b725bb8ed021fbc429df6f67f3ea41",
+      "row_fingerprint": "f971adfb2d2aa3ba2d5fe756af8d7a1ee5bc873ffb20e9c001edea5b6f670556",
       "disposition": {
         "kind": "published",
-        "entry_id": "vampire-the-masquerade-bloodlines-2"
-      },
-      "notes": []
+        "entry_id": "valor-mortis"
+      }
     },
     {
       "source_key": "main:0629",
-      "row_fingerprint": "ecf1b0ab0a684dfcaf7da2a78706627da7296cdf36a0356d5f84f2a9fda84e48",
+      "row_fingerprint": "d641383e2ab66a6b845a6e964c68372e4c1fed6c1b243dc8dc4774b2d6fab6d2",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "vampire-the-masquerade-bloodlines-2"
+      }
+    },
+    {
+      "source_key": "main:0630",
+      "row_fingerprint": "d5b4bd0eede51dc8abf3d971a7fc0d3617b9a05d6490a353975cdd10658e7934",
       "disposition": {
         "kind": "published",
         "entry_id": "vein"
@@ -8495,17 +8233,16 @@
       ]
     },
     {
-      "source_key": "main:0630",
-      "row_fingerprint": "6d94e75e7eec851e943ddc2352f6f2c836aa27348cbed334928139083d185557",
+      "source_key": "main:0631",
+      "row_fingerprint": "c532a0c8665c061a660224b286b92fdf71571a7e6688386cd4f69ee3b16a0e28",
       "disposition": {
         "kind": "published",
         "entry_id": "venus-vacation-prism-dead-or-alive-xtreme"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0631",
-      "row_fingerprint": "f6601851f242b743bb73856cad404d8d1794c6ca3c921656f8fb3b8cadbf705b",
+      "source_key": "main:0632",
+      "row_fingerprint": "4fe3daaf260ec9ca48f70e0d20ccb5f533e46c2e0d53a4ad49211e4aafeb74d6",
       "disposition": {
         "kind": "published",
         "entry_id": "vindictus-defying-fate"
@@ -8521,17 +8258,16 @@
       ]
     },
     {
-      "source_key": "main:0632",
-      "row_fingerprint": "352f47cd9a52358ca7446d5965d991e36b4494f6016cc8436c2c3aef9106a2e3",
+      "source_key": "main:0633",
+      "row_fingerprint": "4d4b601fd99f9417974c93df0d7755fdf06156aac94bebbaa3a47b613366b9ae",
       "disposition": {
         "kind": "published",
         "entry_id": "virtua-fighter-5-revo-world-stage"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0633",
-      "row_fingerprint": "73aeaf235289aec242b229a3c8b5ec10972bdc353481d19bf0eafa50207e6ef4",
+      "source_key": "main:0634",
+      "row_fingerprint": "1bcc4b57a7a73d4b644cf077e621a23fa7077708b623a811cd7f92317b5eff46",
       "disposition": {
         "kind": "published",
         "entry_id": "visions-of-mana"
@@ -8547,26 +8283,24 @@
       ]
     },
     {
-      "source_key": "main:0634",
-      "row_fingerprint": "1f9d2487ab2cf70e1daaa744f43cd3224116392bfa1aa953e945042bb7f201ca",
+      "source_key": "main:0635",
+      "row_fingerprint": "53bd48c246618901aeabb7a0ccdee22aebb4b25b2d5d81f47c23ccd619a7059e",
       "disposition": {
         "kind": "published",
         "entry_id": "vladik-brutal"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0635",
-      "row_fingerprint": "0d924c8d37b8ba29beb8d23175e9caf6e0346c978feffaddcf7b06396b2c626e",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "void-breaker"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0636",
-      "row_fingerprint": "59e68656c5e6115e202f1c29d85a64ec22243e21db6a507d16de2bf7f8d8c53e",
+      "row_fingerprint": "1b70ba3288d9665dc282aa8a7674c6424d9bffc5d8c2fb06d74a96d99e98cff0",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "void-breaker"
+      }
+    },
+    {
+      "source_key": "main:0637",
+      "row_fingerprint": "4bdcfb3173c92440f510b6d993d106a856e8d6f04892df5f411dba590b282068",
       "disposition": {
         "kind": "published",
         "entry_id": "voidtrain"
@@ -8582,8 +8316,8 @@
       ]
     },
     {
-      "source_key": "main:0637",
-      "row_fingerprint": "3ae099c6871b6244c83c94af4fcea367f471f091c6e3b33f16998eb45fd79c55",
+      "source_key": "main:0638",
+      "row_fingerprint": "48e3a26633060fe572be05feaedbed8108f897ec33120d994e4c7c3f3b5854ab",
       "disposition": {
         "kind": "published",
         "entry_id": "voin"
@@ -8599,8 +8333,8 @@
       ]
     },
     {
-      "source_key": "main:0638",
-      "row_fingerprint": "62c4453e61e062af9d309edf01fe7a0e907cc96789a013eee1c7986c9a27f1a0",
+      "source_key": "main:0639",
+      "row_fingerprint": "eed9e139e040613da643f98f4775c0145be2bae7c4016032bc1d5d76ed1c6474",
       "disposition": {
         "kind": "published",
         "entry_id": "voodoo-fishin"
@@ -8616,35 +8350,32 @@
       ]
     },
     {
-      "source_key": "main:0639",
-      "row_fingerprint": "4cd4fa5f71025ac737ff1d7c07d5ba6cbe3b6b1d0439439a627a3cc3aac86665",
+      "source_key": "main:0640",
+      "row_fingerprint": "65768373566e0b4d36ae6ea4054455a73f1b8ffb872a5ff7acd79da246126681",
       "disposition": {
         "kind": "published",
         "entry_id": "voyagers-of-nera"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0640",
-      "row_fingerprint": "dbf63c763979ac669ec8007115987cb8b863c92647549888f457f12ea44c07d7",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "wanted-dead"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0641",
-      "row_fingerprint": "408f8369d8056acd717f2d7561e4d285aa1b4dc2309539407e80cfd63682e9c0",
+      "row_fingerprint": "1842c464cd53195a8d14f7fb4efc94a5b9c588e32b0d968550b1a17e12220c6e",
       "disposition": {
         "kind": "published",
-        "entry_id": "warhammer-40000-darktide"
-      },
-      "notes": []
+        "entry_id": "wanted-dead"
+      }
     },
     {
       "source_key": "main:0642",
-      "row_fingerprint": "cdba10f6d87ccc0e7ee1ac117289ec30224415dc4bda052d60be8c53d78f4629",
+      "row_fingerprint": "005eca05ac9737198b99b1dae919ea88535966faa3862fc151a1ebd29e49e603",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "warhammer-40000-darktide"
+      }
+    },
+    {
+      "source_key": "main:0643",
+      "row_fingerprint": "612c0047f25d9bfa40964203d8e0f6491e5b1d84036b0478c04a17d36ef0aacb",
       "disposition": {
         "kind": "published",
         "entry_id": "warhammer-40-000-space-marine-2"
@@ -8660,17 +8391,16 @@
       ]
     },
     {
-      "source_key": "main:0643",
-      "row_fingerprint": "c6ef459b1c26c92f2df10d10a0fa371f827e875284e03ee6595d311dd9b39fa0",
+      "source_key": "main:0644",
+      "row_fingerprint": "e9fffd2e77e022d24e0fc1e98b647b1aceff4b49dfc7b0cb41d02af586468aab",
       "disposition": {
         "kind": "published",
         "entry_id": "watch-dogs-legion"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0644",
-      "row_fingerprint": "bee767700319e7380cb20f4f13c8aa3d698b995bf64ef9844003906ac269642e",
+      "source_key": "main:0645",
+      "row_fingerprint": "270e24f4fc6615ce389a24c5f045b29bdf11a2d00cd8554cdd216b3d8cfcb734",
       "disposition": {
         "kind": "published",
         "entry_id": "way-of-the-hunter"
@@ -8686,26 +8416,24 @@
       ]
     },
     {
-      "source_key": "main:0645",
-      "row_fingerprint": "adf7fc1aace4cb40c1015a23fcdf7aaad65b0b4b8a548b09c39a2d0b9de0723c",
+      "source_key": "main:0646",
+      "row_fingerprint": "9378a36b9b98aec64c60fe34af547f3c1acc517bc4fdc7275242c8afb6c8834a",
       "disposition": {
         "kind": "published",
         "entry_id": "wayfinder"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0646",
-      "row_fingerprint": "1ffbe68581cf46e998846d16acb84ce81f18fc3dc4353bc234f48eda70390bea",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "welcome-to-paradize"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0647",
-      "row_fingerprint": "0223f1275c73da8a50684842e3d5a2f5797d252d325cadd4d7c843dd91703808",
+      "row_fingerprint": "306a132d427ed51f0f829d20266b14bfb07f6e0335fa6c23ca7046a9bb193b09",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "welcome-to-paradize"
+      }
+    },
+    {
+      "source_key": "main:0648",
+      "row_fingerprint": "b51f45854ea34b7be05c1452780f53a8372832c1fdcb4e14a9d352405234b3fc",
       "disposition": {
         "kind": "published",
         "entry_id": "welcome-to-the-game-iii"
@@ -8721,8 +8449,8 @@
       ]
     },
     {
-      "source_key": "main:0648",
-      "row_fingerprint": "4a469c299bea1f5280da9606d7335215eb7a283b2c3adac11eac8b06a8b19a7f",
+      "source_key": "main:0649",
+      "row_fingerprint": "38a1df5ca026fc34edc57d83ffa187c50d19340c156982c537b917570b1e8b1b",
       "disposition": {
         "kind": "published",
         "entry_id": "werewolf-the-inner-beast"
@@ -8738,8 +8466,8 @@
       ]
     },
     {
-      "source_key": "main:0649",
-      "row_fingerprint": "9f21907ad0d54e17f871c6677971c7f39ba2e49db68a3556d32633163b916d39",
+      "source_key": "main:0650",
+      "row_fingerprint": "5948355e54d058e994b712e09d32daf9c567c7c3b0b57f08fa3bec093261bf3b",
       "disposition": {
         "kind": "published",
         "entry_id": "we-were-here-tomorrow-demo"
@@ -8755,34 +8483,33 @@
       ]
     },
     {
-      "source_key": "main:0650",
-      "row_fingerprint": "a974e99eb0fc26289289c90aa69062721dd176590fa74048ec0f2535a42e7829",
+      "source_key": "main:0651",
+      "row_fingerprint": "45c58a5a2161c2175aabedc6d9d56f86690fe6583136fefda0d448fe07ae5c8e",
       "disposition": {
         "kind": "published",
         "entry_id": "where-winds-meet"
       },
       "notes": [
         {
-          "fingerprint": "a2837882c33950e35f92857d4d2f749baad97d4de0b7a2f8eb19bb22f04cf864",
+          "fingerprint": "47fca16456f394213ab2f1569ba95b12918512ae915ed3e92eb3974b0c697af3",
           "disposition": {
             "kind": "typed_policy",
-            "reason": "The exact dxgi.dll installation directive is represented by the default proxy policy; the generic online-risk wording is not published."
+            "reason": "The exact dxgi.dll installation directive is represented by the default proxy policy; the generic online-risk and spoofing caveats provide no additional bounded policy."
           }
         }
       ]
     },
     {
-      "source_key": "main:0651",
-      "row_fingerprint": "50fca00bf2e7ad435681796823a9f467bd52abd575ea6bb789620d1a2d833d76",
+      "source_key": "main:0652",
+      "row_fingerprint": "c255f6c2aca3f0d698ff0d6f39b6c0e918b039f16b7bbf5ff62db6f7a204998a",
       "disposition": {
         "kind": "published",
         "entry_id": "whiskerwood"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "main:0652",
-      "row_fingerprint": "f921e92bfd58d1ae7edf89ee7d9d9621406fda8ee6491e3e2c660eb28c2020b7",
+      "source_key": "main:0653",
+      "row_fingerprint": "7708b26e28956efeb98376f67c4976bb68d59776a9002e25e07173ea3a65699d",
       "disposition": {
         "kind": "published",
         "entry_id": "wicked-island"
@@ -8798,8 +8525,8 @@
       ]
     },
     {
-      "source_key": "main:0653",
-      "row_fingerprint": "c78fb708368afb7a2f88584051252bdd536a5a3c9269da3b4e57aa638aa9a489",
+      "source_key": "main:0654",
+      "row_fingerprint": "7c82a2549be6e7e8d75435d31ae5a08eb46f6624e6d11cc999f709f647f20133",
       "disposition": {
         "kind": "published",
         "entry_id": "wild-hearts"
@@ -8815,26 +8542,24 @@
       ]
     },
     {
-      "source_key": "main:0654",
-      "row_fingerprint": "eb55c8dee01d6e9884e9b02c98ca4b5f1f11c7722149ae4cae7e6b0fb568ca37",
+      "source_key": "main:0655",
+      "row_fingerprint": "e1cb4cf4c21c1c2e7fd24abc4f7e64301e8df1c9bdb7e264662b02c452acbb81",
       "disposition": {
         "kind": "published",
         "entry_id": "will-follow-the-light"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0655",
-      "row_fingerprint": "1f4d9a351c2ab26ebfe4058af07946e6343073bea5070c7679e3cdebe027c17e",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "windrose"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0656",
-      "row_fingerprint": "833ba1efa6b56f82bbcaeb1fd92086d203eadd4fe133851df1e06aa37529a706",
+      "row_fingerprint": "8716a223e0f93cfc986ac77c831696de58aeba9591a64dd3723104696001d374",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "windrose"
+      }
+    },
+    {
+      "source_key": "main:0657",
+      "row_fingerprint": "e7a1e1a4ac358b4eb0c48bf2fce3b852b23d80d4388ab0447286725118edabd7",
       "disposition": {
         "kind": "published",
         "entry_id": "winemaker-simulator"
@@ -8850,26 +8575,24 @@
       ]
     },
     {
-      "source_key": "main:0657",
-      "row_fingerprint": "bc1b37feef084aabb0edcb83b9bc4816d847a604c67356016e43a29460d37f70",
+      "source_key": "main:0658",
+      "row_fingerprint": "4f7f7a740883c93c8d50217a78b5b79cdcab7b56afd89adb2efdabe6fcf7b3a9",
       "disposition": {
         "kind": "published",
         "entry_id": "witchfire"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0658",
-      "row_fingerprint": "0a45856048453e9b50c0a0859a7d8866351e85e44f38083316fa82beef529ac1",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "wo-long-fallen-dynasty"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0659",
-      "row_fingerprint": "7626a517638cb657a9c55a5a0d52eb0927b5a265f9e78361adff6ccc29b0553c",
+      "row_fingerprint": "b750a61982db2a3f35b9c0521a3a6a7af2599c53ae0cd1c0fc4edfc597673d12",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "wo-long-fallen-dynasty"
+      }
+    },
+    {
+      "source_key": "main:0660",
+      "row_fingerprint": "45d96c9d6f9a85be8ce94ecab026c0c3c6cca239cfe59c7049af7b10bf9383d6",
       "disposition": {
         "kind": "published",
         "entry_id": "wolfenstein-youngblood"
@@ -8885,8 +8608,8 @@
       ]
     },
     {
-      "source_key": "main:0660",
-      "row_fingerprint": "158d07f37ac2872202d02e7bf0eb29075e0d18256263b8f28a79acb2ddc4511e",
+      "source_key": "main:0661",
+      "row_fingerprint": "ca019cfdbc2f05c437d38cf032ece220b4c108bf8829e018f1b4479355d2720a",
       "disposition": {
         "kind": "published",
         "entry_id": "wonder-ball"
@@ -8902,26 +8625,24 @@
       ]
     },
     {
-      "source_key": "main:0661",
-      "row_fingerprint": "e8ad886b4928ddb884ade5a92c26b0995c5fd5d1cce0ac57954201b26564bb85",
+      "source_key": "main:0662",
+      "row_fingerprint": "77b7049717f784617bb221295d5521cc0391192144eda8953781e2d3ba978b5c",
       "disposition": {
         "kind": "published",
         "entry_id": "world-war-z"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0662",
-      "row_fingerprint": "3621bd2f2881d7cf26ef1db8af7713476908f32b003191803bf84503e998d77e",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "wrc-generations"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0663",
-      "row_fingerprint": "aa8afce9e9ffbdab5b0e252bd7b2d1824edf590bfcb8393e8e8de1958f9afb13",
+      "row_fingerprint": "dca9ab602123d930d93c8763d6e343dc6707b064570ea3f61e45ab7a0d8db8fb",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "wrc-generations"
+      }
+    },
+    {
+      "source_key": "main:0664",
+      "row_fingerprint": "2004bc13541956775541a9f518797c59344ad58cc6a577eb57192648c6b7791c",
       "disposition": {
         "kind": "published",
         "entry_id": "wreckfest-2"
@@ -8937,26 +8658,24 @@
       ]
     },
     {
-      "source_key": "main:0664",
-      "row_fingerprint": "10b5680e5375e41c00726bcc03f3bc39ebb8dc5228bcfd3000dec741bf00296a",
+      "source_key": "main:0665",
+      "row_fingerprint": "002d7586d30b726d0b25cebebd1d4e5fc5d5719e3d7117f71d69b156859d1481",
       "disposition": {
         "kind": "published",
         "entry_id": "wrench"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0665",
-      "row_fingerprint": "506bee1c3cf99ad11cea8654f6eb2ebb7ddd2e4d82f3fab9e492a691c722c67e",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "wuchang-fallen-feathers"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0666",
-      "row_fingerprint": "e9882a0fcf41a70210049f18dd3fa833158844c73173bf419aaa279fe81b71a1",
+      "row_fingerprint": "15621e787187803ee19a62a760a4450ae7fc67de1ba224b64106af64aae3a2ce",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "wuchang-fallen-feathers"
+      }
+    },
+    {
+      "source_key": "main:0667",
+      "row_fingerprint": "126213e47d2f3d18a63a602ab46c7b574aa40166a2b83b62b89e9adc44399da4",
       "disposition": {
         "kind": "published",
         "entry_id": "wuthering-waves"
@@ -8972,8 +8691,8 @@
       ]
     },
     {
-      "source_key": "main:0667",
-      "row_fingerprint": "929c7e1784810fbfe3707da64474bb8bc178378b1535419acae85099069bd905",
+      "source_key": "main:0668",
+      "row_fingerprint": "538ff30e575d207ecd7c5fdfe232715f3d344d7458a078b4019e3848fe9d4162",
       "disposition": {
         "kind": "published",
         "entry_id": "xuan-yuan-sword-vii"
@@ -8989,8 +8708,8 @@
       ]
     },
     {
-      "source_key": "main:0668",
-      "row_fingerprint": "c5f4ae9739e2efd58e923669fc3457f3a715438d287f7ef4fb2c6de47331be66",
+      "source_key": "main:0669",
+      "row_fingerprint": "06d8a4a3079d72a31af6ffe6f4998bc2e8bd5d5cc5b6286b5c01a59d3f40c6b7",
       "disposition": {
         "kind": "published",
         "entry_id": "yet-another-zombie-survivors"
@@ -9006,8 +8725,8 @@
       ]
     },
     {
-      "source_key": "main:0669",
-      "row_fingerprint": "dea8de789da42448c3fa5e368712b2c0e3e47d631251f5ea7006cd4df27e9d91",
+      "source_key": "main:0670",
+      "row_fingerprint": "35a77669f44bce682314920810db00638eac053df93a5c680e8d05eb1f9b70d7",
       "disposition": {
         "kind": "published",
         "entry_id": "yooka-replaylee"
@@ -9023,8 +8742,8 @@
       ]
     },
     {
-      "source_key": "main:0670",
-      "row_fingerprint": "33a5dd1a1b79fb91687791f58c013712ea55f2bcfb6d0b9ea0c79b5daecce4cb",
+      "source_key": "main:0671",
+      "row_fingerprint": "683dabb12a1ae4c79e83752396c85d24d1bc6e22db66c2c57ea39f8b27dac951",
       "disposition": {
         "kind": "published",
         "entry_id": "zenless-zone-zero"
@@ -9040,26 +8759,24 @@
       ]
     },
     {
-      "source_key": "main:0671",
-      "row_fingerprint": "d2bcd14f6787adb1fe061df252bfd0520000fe134f0488dc6afb8b7695fed874",
+      "source_key": "main:0672",
+      "row_fingerprint": "8de8228c6b4465a7deb4113f0c20a4cabcddcf5dd81833668d872e10ab4f2f9c",
       "disposition": {
         "kind": "published",
         "entry_id": "zombieville-usa-3d"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "main:0672",
-      "row_fingerprint": "5f8db9b1a540d7902379d642355dd1f050836bdb0a0f4198a45cb9466d985523",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "zoochosis"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "main:0673",
-      "row_fingerprint": "be0991870de917a959c2ab2d6f67e80e7f96be737855b7b6684d0ef3a3b481ae",
+      "row_fingerprint": "2ac9c05b827c7590a0cec02870f514955bc2604e2deca6e659eb769f1fa70350",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "zoochosis"
+      }
+    },
+    {
+      "source_key": "main:0674",
+      "row_fingerprint": "79d190e1014615fbe72c6d5d082cdf9c47fa514b473af0e6efeebdc1db575ccd",
       "disposition": {
         "kind": "published",
         "entry_id": "zouhri-the-cursed-blood-demo"
@@ -9341,8 +9058,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "resident-evil-village"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "upscaler_mods:0017",
@@ -9418,8 +9134,7 @@
       "disposition": {
         "kind": "published",
         "entry_id": "aliens-fireteam-elite"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "luma_unreal:0002",
@@ -9440,16 +9155,32 @@
     },
     {
       "source_key": "luma_unreal:0003",
-      "row_fingerprint": "f3aa8df6ce08b408da9c1ee5f70512c8bfc810c56f9545dd1510277feebc39e2",
+      "row_fingerprint": "676a0c8eb5b1b1158ff80cb4e5430cdef41bcf1acb29cc1a0180b035d60991ae",
       "disposition": {
         "kind": "published",
-        "entry_id": "breathedge"
+        "entry_id": "borderlands-3"
       },
-      "notes": []
+      "notes": [
+        {
+          "fingerprint": "adeefcdcb472e7ff54df3f57b4625750a416fbac649c22b0e642535a06fed952",
+          "disposition": {
+            "kind": "omitted",
+            "reason": "Advisory compatibility observation; the image is reported fine and no actionable policy is required."
+          }
+        }
+      ]
     },
     {
       "source_key": "luma_unreal:0004",
-      "row_fingerprint": "55bd69fa0ac1e5c31f204db279816c2d58f4eb0087bd1c5cb6816b3dfa691665",
+      "row_fingerprint": "21c8972d1f6090b37e9a74f7b361511319dd7c0b576533c54392f40de280fbfc",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "breathedge"
+      }
+    },
+    {
+      "source_key": "luma_unreal:0005",
+      "row_fingerprint": "c3953319cac0d04da34b02b5865d8b8faeca629d42ea12edc7338150765045d7",
       "disposition": {
         "kind": "published",
         "entry_id": "crash-bandicoot-4-its-about-time"
@@ -9465,8 +9196,8 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0005",
-      "row_fingerprint": "d20ca112647d67fcbddac63d4beefb6685bbd338bedb86bdffeb510faed65f31",
+      "source_key": "luma_unreal:0006",
+      "row_fingerprint": "68037b27abfb7668ab274e331318b11059cd3b5780a1d7aee50e3419c7a6059c",
       "disposition": {
         "kind": "published",
         "entry_id": "darksiders-iii"
@@ -9482,8 +9213,8 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0006",
-      "row_fingerprint": "d2a25a79eeb1b45371da0b8eb56dc727dc47a6b5ceecd55b99e854a73bbe3aec",
+      "source_key": "luma_unreal:0007",
+      "row_fingerprint": "7cc65eb7f316ad92b81c8dc3fd689f06e765f042ad3ef30974d6aff420bcc985",
       "disposition": {
         "kind": "published",
         "entry_id": "guilty-gear-strive"
@@ -9499,35 +9230,32 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0007",
-      "row_fingerprint": "ff5dfe687314bba17495f28c0f3e3bf254b2121cec83be03650b969a62e675d1",
+      "source_key": "luma_unreal:0008",
+      "row_fingerprint": "e96634bc9fae6aee548a0d1ed737df3a2f59fdc4fe4b850ff0cf395d63d6c10a",
       "disposition": {
         "kind": "published",
         "entry_id": "life-is-strange-2"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "luma_unreal:0008",
-      "row_fingerprint": "5632f55d21398cb4669ffcebe8ac93d8fc0ce4d8d3250e0566d44d1c5ec4be15",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "little-nightmares"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "luma_unreal:0009",
-      "row_fingerprint": "59331faf896885383094b3917f24c8dd03841f867dad8d3e0383c9d6ff55e7c3",
+      "row_fingerprint": "76adf621a2d3c1de73179d1758651ac9b1429c8bbd5ec76adbcf014a5fee13bd",
       "disposition": {
         "kind": "published",
-        "entry_id": "little-nightmares-ii"
-      },
-      "notes": []
+        "entry_id": "little-nightmares"
+      }
     },
     {
       "source_key": "luma_unreal:0010",
-      "row_fingerprint": "13799f90af913dd54ed75f6171ee89a68f5cc17c3cc6210016bfc444bb936c68",
+      "row_fingerprint": "a1afc74065164167cd6e58a8a190d810aac363db3295f8249600b9c059862bb8",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "little-nightmares-ii"
+      }
+    },
+    {
+      "source_key": "luma_unreal:0011",
+      "row_fingerprint": "b5162e176a4f60206fc049fd824cd7384e5b01074aa1c9a09e82ae44916c2f65",
       "disposition": {
         "kind": "published",
         "entry_id": "mothergunship"
@@ -9543,8 +9271,8 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0011",
-      "row_fingerprint": "1ab6eeb981ebe1ab2d9c66411cb2368bd2a32ff74eb0aa9c8f258bc29ee3ce54",
+      "source_key": "luma_unreal:0012",
+      "row_fingerprint": "18deecf759d6012fbd44cb8669ce0a57a1265efd9d9e3f38b0081ffe470c4450",
       "disposition": {
         "kind": "published",
         "entry_id": "octopath-traveler"
@@ -9560,8 +9288,8 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0012",
-      "row_fingerprint": "6defe8a33308ce780ee35af4dbee56f45d93a757d44b81b4006703f0afbe67b9",
+      "source_key": "luma_unreal:0013",
+      "row_fingerprint": "9ccae0549840a6fe14166b5cdabb409564d7d8b3a0916c779fec6205df727799",
       "disposition": {
         "kind": "published",
         "entry_id": "psychonauts-2"
@@ -9577,17 +9305,16 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0013",
-      "row_fingerprint": "bc49f981d1d6c20f0cb192e7fc6fe53a7a64f5eb29c6476bf1c286a5ae0b30f8",
+      "source_key": "luma_unreal:0014",
+      "row_fingerprint": "1dffdc26f861b106f3525808ba103569b271aff4a233745bda1e4f1c3c1bbca1",
       "disposition": {
         "kind": "published",
         "entry_id": "redeemer-enhanced-edition"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "luma_unreal:0014",
-      "row_fingerprint": "3940b60bf0fc6736ba50a5abb5622376a2ae5cae7d8938a5dc0c19e73ba17765",
+      "source_key": "luma_unreal:0015",
+      "row_fingerprint": "f4a200160b3fb591c148b101f3f62312b5824eec9d1889af1c762c5cb31425ab",
       "disposition": {
         "kind": "published",
         "entry_id": "redout-enhanced-edition"
@@ -9603,8 +9330,8 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0015",
-      "row_fingerprint": "6e20fe1ac8062733d6a1f18763b3f3c8097d1f0e5c94ba7e0c106e8c7cf05142",
+      "source_key": "luma_unreal:0016",
+      "row_fingerprint": "05ff6015e17d311e40fd4306f1d80d79cb238a379002a2c9f2b680dc06ead6ac",
       "disposition": {
         "kind": "published",
         "entry_id": "remnant-from-the-ashes"
@@ -9620,8 +9347,8 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0016",
-      "row_fingerprint": "ed31ddb8ec8a35f48cab8685f2dd7ee0ff2629a0e49ae5562a5a2256f5858b89",
+      "source_key": "luma_unreal:0017",
+      "row_fingerprint": "67b0950c417e841b4475268b8f3e7d666f22d718b6de7b8594b4180480a9cc53",
       "disposition": {
         "kind": "published",
         "entry_id": "roboquest"
@@ -9637,17 +9364,16 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0017",
-      "row_fingerprint": "a03622222b32a4e58fd6fd72cc0367c1563fbc7c8803241d8568bfc4639f64c4",
+      "source_key": "luma_unreal:0018",
+      "row_fingerprint": "8b62396918b510d4b5d08bc7d401950309b8e43cd3fcc399bd3975f2478a0400",
       "disposition": {
         "kind": "published",
         "entry_id": "ruiner"
-      },
-      "notes": []
+      }
     },
     {
-      "source_key": "luma_unreal:0018",
-      "row_fingerprint": "5e5ebd03f871098efe072ab7271e7d26fda04e4f3c52e0e0cceff5659e3af353",
+      "source_key": "luma_unreal:0019",
+      "row_fingerprint": "943a4c2edff29169123aa8f0621a20e8a9b0b1ae983bc97ec8e898541211e897",
       "disposition": {
         "kind": "published",
         "entry_id": "spyro-reignited-trilogy"
@@ -9663,26 +9389,24 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0019",
-      "row_fingerprint": "3445040f1985e3e145306ae7c961f51685dc4e9617aa23f5ee8f7cb515138639",
+      "source_key": "luma_unreal:0020",
+      "row_fingerprint": "cd0730657e1cdebc0f814f3643e4c3b0461c837bae3a89f1d27bebae1a2b5ede",
       "disposition": {
         "kind": "published",
         "entry_id": "star-wars-jedi-fallen-order"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "luma_unreal:0020",
-      "row_fingerprint": "149b7165fc7d6aa35425ea9a75c0076be466f7285964cef7c40783c0a2ec392b",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "stray"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "luma_unreal:0021",
-      "row_fingerprint": "89045054c7ef6e4b4dc3dd1b57f4240b79570f6cca20d1a97869116e4a51dc84",
+      "row_fingerprint": "91ff27b22ffa6d60462f8a348c85f4db9a86af0c3c294c718a3740c392308348",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "stray"
+      }
+    },
+    {
+      "source_key": "luma_unreal:0022",
+      "row_fingerprint": "2655a1d4b684c2c9cda813f6f3bda9a77c105f394b9ae95455725c1935f2c500",
       "disposition": {
         "kind": "published",
         "entry_id": "styx-shards-of-darkness"
@@ -9698,26 +9422,24 @@
       ]
     },
     {
-      "source_key": "luma_unreal:0022",
-      "row_fingerprint": "b40b3fba2be7010ca554daa613e4042222387fd0ef8c1588c4e15eefc860d46a",
+      "source_key": "luma_unreal:0023",
+      "row_fingerprint": "037de8d1f68e2516cb7a18c7ebf9d1a84018e5dbbb6ba8f379864d7343fe6c9c",
       "disposition": {
         "kind": "published",
         "entry_id": "terminator-resistance"
-      },
-      "notes": []
-    },
-    {
-      "source_key": "luma_unreal:0023",
-      "row_fingerprint": "ebc2dfef852b5533b3a0a30d5254822f67bff5c07f8d72d6e7cbf535def12b43",
-      "disposition": {
-        "kind": "published",
-        "entry_id": "trek-to-yomi"
-      },
-      "notes": []
+      }
     },
     {
       "source_key": "luma_unreal:0024",
-      "row_fingerprint": "a6c465412d158de0f98172cfe2ca0ba54ffc3b39fb6f6334ab2725771c96c0a5",
+      "row_fingerprint": "2c33b70ad974d8f74e1c2e346d875c063f34c7ffbae3a6100b697b7b09eb17b3",
+      "disposition": {
+        "kind": "published",
+        "entry_id": "trek-to-yomi"
+      }
+    },
+    {
+      "source_key": "luma_unreal:0025",
+      "row_fingerprint": "e3c3553fb156d36f5be486177b767e179d4caf4bd9542176d03b6bc3f295a245",
       "disposition": {
         "kind": "published",
         "entry_id": "vampyr"

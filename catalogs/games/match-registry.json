@@ -16207,6 +16207,20 @@
       ]
     },
     {
+      "id": "phantom-blade-zero",
+      "rules": [
+        {
+          "id": "steam-4115450",
+          "kind": "steam_appid",
+          "value": "4115450",
+          "provenance": {
+            "source": "optiscaler-reviewed-match",
+            "locator": "main:0422"
+          }
+        }
+      ]
+    },
+    {
       "id": "phasmophobia",
       "rules": [
         {
@@ -16741,7 +16755,7 @@
           "value": "3710560",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0433"
+            "locator": "main:0434"
           }
         }
       ]
@@ -20304,7 +20318,7 @@
           "value": "2581410",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0535"
+            "locator": "main:0536"
           }
         }
       ]
@@ -21905,7 +21919,7 @@
           "value": "1663640",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0577"
+            "locator": "main:0578"
           }
         }
       ]
@@ -22115,7 +22129,7 @@
           "value": "2764750",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0586"
+            "locator": "main:0587"
           }
         }
       ]
@@ -23845,7 +23859,7 @@
           "value": "4030360",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0621"
+            "locator": "main:0622"
           }
         }
       ]
@@ -25059,7 +25073,7 @@
           "value": "2640030",
           "provenance": {
             "source": "optiscaler-reviewed-match",
-            "locator": "main:0660"
+            "locator": "main:0661"
           }
         }
       ]

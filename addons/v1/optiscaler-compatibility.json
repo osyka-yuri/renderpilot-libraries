@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "revision": "2026-10-26.1",
+  "revision": "2026-11-12.1",
   "upstream": {
     "source": "optiscaler-wiki-compatibility-list",
-    "snapshot_revision": "2026-11-02",
-    "snapshot_sha256": "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04"
+    "snapshot_revision": "2026-11-12",
+    "snapshot_sha256": "150af293671eeed8dc9f7a57ed3ee27769a8405b573f75f83877f4a830c7fd3b"
   },
   "entries": [
     {
@@ -1785,6 +1785,29 @@
           "restricted_modules": [],
           "optipatcher": "unspecified",
           "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "borderlands-3",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "397540"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "unspecified",
+          "prerequisite": "luma"
         }
       ]
     },
@@ -11314,6 +11337,29 @@
           "ini_overrides": [],
           "restricted_modules": [],
           "optipatcher": "unspecified",
+          "prerequisite": "none"
+        }
+      ]
+    },
+    {
+      "id": "phantom-blade-zero",
+      "status": "working",
+      "identities": [
+        {
+          "kind": "steam_appid",
+          "value": "4115450"
+        }
+      ],
+      "declared_inputs": ["dlss2_plus", "fsr2_plus", "xess"],
+      "guidance": [],
+      "variants": [
+        {
+          "proxy": {
+            "kind": "automatic"
+          },
+          "ini_overrides": [],
+          "restricted_modules": [],
+          "optipatcher": "supported",
           "prerequisite": "none"
         }
       ]

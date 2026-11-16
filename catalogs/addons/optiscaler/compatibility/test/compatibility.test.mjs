@@ -13,20 +13,20 @@ import {
 import { createMatchRegistry } from "../../../../../scripts/lib/match-registry.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "../../../../..");
-const EXPECTED_PUBLISHED_ENTRY_COUNT = 700;
+const EXPECTED_PUBLISHED_ENTRY_COUNT = 702;
 const CURRENT_WIKI_SNAPSHOT = {
-  revision: "2026-11-02",
-  sha256: "b5e0522d06561ab14e84d008fa4e3b4057c843e4c30333ffe93c219928fd5b04",
-  rows: 717,
+  revision: "2026-11-12",
+  sha256: "150af293671eeed8dc9f7a57ed3ee27769a8405b573f75f83877f4a830c7fd3b",
+  rows: 719,
 };
 const SHIFTED_MAIN_SOURCE_KEYS = [
   ...Array.from(
     { length: 28 },
-    (_, index) => `main:${String(452 + index).padStart(4, "0")}`,
+    (_, index) => `main:${String(453 + index).padStart(4, "0")}`,
   ),
   ...Array.from(
     { length: 193 },
-    (_, index) => `main:${String(481 + index).padStart(4, "0")}`,
+    (_, index) => `main:${String(482 + index).padStart(4, "0")}`,
   ),
 ];
 const EXPECTED_REFRAMEWORK_FAMILY = [
@@ -76,7 +76,7 @@ const EXPECTED_REFRAMEWORK_FAMILY = [
   },
   {
     id: "resident-evil-requiem",
-    sourceKey: "main:0452",
+    sourceKey: "main:0453",
     inputs: ["dlss2_plus", "fsr2_plus"],
     steamAppId: "3764200",
     messageId: "optiscaler-resident-evil-requiem-reframework",
@@ -139,16 +139,16 @@ const EXPECTED_PENDING_IDENTITY_REASONS = {
   "main:0370": "No supported exact runtime or store identity is available.",
   "main:0420":
     "An Epic-only candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0466":
+  "main:0467":
     "Store results are different products and do not establish an exact title binding.",
-  "main:0471": "The upstream source deliberately provides no bindable identity.",
-  "main:0487": "No exact verifiable store identity is available.",
-  "main:0549":
+  "main:0472": "The upstream source deliberately provides no bindable identity.",
+  "main:0488": "No exact verifiable store identity is available.",
+  "main:0550":
     "An Epic candidate exists, but no verified exact Epic Games Store identity is available.",
-  "main:0591":
+  "main:0592":
     "The prior Steam AppID 3763780 is no longer a current app; other Rift results are distinct games.",
-  "main:0600": "No verified exact match target or executable observation is available.",
-  "main:0614": "No verified exact match target or executable observation is available.",
+  "main:0601": "No verified exact match target or executable observation is available.",
+  "main:0615": "No verified exact match target or executable observation is available.",
 };
 const EXPECTED_REAUDITED_BINDINGS = {
   "main:0030": {
@@ -176,32 +176,32 @@ const EXPECTED_REAUDITED_BINDINGS = {
     targetId: "online-404",
     identity: { kind: "steam_appid", value: "4094350" },
   },
-  "main:0433": {
+  "main:0434": {
     entryId: "protocol-terminate-demo",
     targetId: "protocol-terminate",
     identity: { kind: "steam_appid", value: "3710560" },
   },
-  "main:0535": {
+  "main:0536": {
     entryId: "stygian-outer-gods",
     targetId: "stygian-outer-gods",
     identity: { kind: "steam_appid", value: "2581410" },
   },
-  "main:0577": {
+  "main:0578": {
     entryId: "the-last-oricru",
     targetId: "the-last-oricru",
     identity: { kind: "steam_appid", value: "1663640" },
   },
-  "main:0586": {
+  "main:0587": {
     entryId: "the-other-side",
     targetId: "the-other-side",
     identity: { kind: "steam_appid", value: "2764750" },
   },
-  "main:0621": {
+  "main:0622": {
     entryId: "undertaker",
     targetId: "undertaker",
     identity: { kind: "steam_appid", value: "4030360" },
   },
-  "main:0660": {
+  "main:0661": {
     entryId: "wonder-ball",
     targetId: "wonder-ball",
     identity: { kind: "steam_appid", value: "2640030" },
@@ -973,12 +973,12 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
       `${sourceKey} must retain its exact post-rekey source binding`,
     );
   }
-  assert.equal(snapshotBySource.get("main:0673")?.title, "Zouhri: The Cursed Blood Demo");
+  assert.equal(snapshotBySource.get("main:0674")?.title, "Zouhri: The Cursed Blood Demo");
 
   const zero = entriesById.get("star-wars-zero-company");
   assert.deepEqual(zero, {
     id: "star-wars-zero-company",
-    source_ref: "main:0525",
+    source_ref: "main:0526",
     status: "working",
     declared_inputs: ["dlss2_plus", "fsr2_plus", "xess"],
     guidance: [
@@ -998,11 +998,11 @@ test("current Wiki refresh preserves the verified ordinal rekey and exact Zero C
     ],
     game_target_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0525")?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0526")?.disposition, {
     kind: "published",
     entry_id: "star-wars-zero-company",
   });
-  assert.deepEqual(ledgerBySource.get("main:0525")?.notes?.[0]?.disposition, {
+  assert.deepEqual(ledgerBySource.get("main:0526")?.notes?.[0]?.disposition, {
     kind: "guidance",
     message_ids: ["optiscaler-star-wars-zero-company-vendor-options"],
   });
