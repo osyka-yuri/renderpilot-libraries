@@ -297,7 +297,7 @@ omit(
 assign(
   keyList(
     "ue-extended",
-    "bodycam choo-choo-charles code-vein-ii conan-exiles-enhanced crab-champions cthulu-the-cosmin-abyss destroy-all-humans-2-reprobed directive-8020 everwind garfield-escape-from-monday grounded-2 inzoi marsupilami-2-salsa-palombia meccha-chameleon mortal-shell-ii nikoderiko-the-magical-world nobody-wants-to-die quarantine-zone-the-last-check rv-there-yet satisfactory solarpunk song-of-nunu-a-league-of-legends-story subnautica-2 system-shock-remake the-blood-of-dawnwalker the-enjenir-the-engineering-physics-building-simulator",
+    "bodycam broken-pieces choo-choo-charles chromatic-conundrum code-vein-ii conan-exiles-enhanced crab-champions cthulu-the-cosmin-abyss destroy-all-humans-2-reprobed directive-8020 everwind garfield-escape-from-monday grounded-2 inzoi marsupilami-2-salsa-palombia meccha-chameleon mortal-shell-ii nikoderiko-the-magical-world nobody-wants-to-die quarantine-zone-the-last-check rv-there-yet satisfactory solarpunk song-of-nunu-a-league-of-legends-story subnautica-2 system-shock-remake the-blood-of-dawnwalker the-enjenir-the-engineering-physics-building-simulator the-midnight-walk",
   ),
   [
     ini(
@@ -321,11 +321,19 @@ assign(keyList("ue-extended", "ready-or-not"), [
   info("RenoDX slider changes do not apply in real time in this game."),
   info("This configuration has limited playtesting."),
 ]);
-assign(
-  keyList("ue-extended", "chromatic-conundrum"),
-  [warn("Upgrade Path is incompatible with this title and causes broken rendering.")],
-  { inheritCommon: true, processingPath: "native" },
-);
+assign(keyList("ue-extended", "the-chant"), [
+  ini(
+    "Add these settings to Engine.ini for the UE Extended HDR path.",
+    UE_HDR_ENGINE_INI_RECIPE,
+  ),
+  info("Launch the game with DirectX 11."),
+]);
+assign(keyList("ue-extended", "star-wars-jedi-fallen-ordertm"), [
+  external(
+    "Use the dedicated Luma Framework mod for full correction.",
+    "https://github.com/Filoppi/Luma-Framework",
+  ),
+]);
 assign(
   keyList("ue-extended", "deep-rock-galactic-rogue-core"),
   [
@@ -1931,11 +1939,13 @@ assign(
   { inheritCommon: true },
 );
 pending(
-  keyList(
-    "unity",
-    "gunfire-reborn lego-bricktales monster-train morbid-metal-demo phasmophobia",
-  ),
+  keyList("unity", "gunfire-reborn lego-bricktales monster-train morbid-metal-demo"),
   "The upstream resource-upgrade instruction is incomplete and does not identify a format.",
+);
+assign(
+  keyList("unity", "phasmophobia"),
+  [info("This configuration has limited playtesting.")],
+  { inheritCommon: true },
 );
 assign(
   keyList("unity", "great-god-grove"),
@@ -2413,6 +2423,104 @@ assign(
     info(
       "Increase the Highlights slider substantially because the default highlights are dim.",
     ),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "inside"),
+  [
+    external(
+      "Use the dedicated Luma Framework mod for full correction.",
+      "https://github.com/Filoppi/Luma-Framework",
+    ),
+  ],
+  { inheritCommon: true },
+);
+assign(keyList("unity", "green-hell"), [], { inheritCommon: true });
+assign(
+  keyList("unity", "blasphemous"),
+  [
+    addonSettings([
+      { name: "Swapchain Proxy", value: "On" },
+      { name: "Swapchain Encoding", value: "Gamma" },
+    ]),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "bloons-td-6 thalassomania"),
+  [
+    addonSettings([
+      { name: "Swapchain Encoding", value: "Gamma" },
+      { name: "R8G8B8A8_TYPELESS", value: "Any Size" },
+    ]),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "the-room"),
+  [
+    addonSetting("Swapchain Encoding", "Gamma", "Set Swapchain Encoding to Gamma."),
+    info("This configuration has limited playtesting."),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "my-summer-car"),
+  [
+    addonSettings([
+      { name: "Swapchain Proxy", value: "On" },
+      { name: "Swapchain Encoding", value: "Gamma" },
+    ]),
+    gameSetting("Native HDR", "Off", "Disable the game's native HDR."),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "database-detective-minor-crimes"),
+  [info("Peak brightness remains limited in some content.")],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "papers-please"),
+  [
+    addonSetting("Swapchain Encoding", "Gamma", "Set Swapchain Encoding to Gamma."),
+    warn("The game is not yet fully playable with this profile."),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "potion-craft-alchemist-simulator rain-world return-of-the-obra-dinn"),
+  [warn("The game is not yet fully playable with this profile.")],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "phoenix-wright-ace-attorney-trilogy pony-island"),
+  [
+    addonSettings([
+      { name: "Swapchain Proxy", value: "On" },
+      { name: "Swapchain Encoding", value: "Gamma" },
+    ]),
+    info("Peak brightness remains limited in some content."),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList(
+    "unity",
+    "i-have-no-mouth-and-i-must-scream ultimate-chicken-horse vampire-survivors",
+  ),
+  [
+    addonSetting("Swapchain Encoding", "Gamma", "Set Swapchain Encoding to Gamma."),
+    info("Peak brightness remains limited in some content."),
+  ],
+  { inheritCommon: true },
+);
+assign(
+  keyList("unity", "untitled-goose-game"),
+  [
+    addonSetting("Swapchain Proxy", "On", "Enable RenoDX Swapchain Proxy."),
+    info("Peak brightness remains limited in some content."),
   ],
   { inheritCommon: true },
 );

@@ -2966,6 +2966,20 @@
       ]
     },
     {
+      "id": "blasphemous",
+      "rules": [
+        {
+          "id": "steam-774361",
+          "kind": "steam_appid",
+          "value": "774361",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:blasphemous"
+          }
+        }
+      ]
+    },
+    {
       "id": "blazblue-entropy-effect",
       "rules": [
         {
@@ -3068,6 +3082,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#bloody-hell"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bloons-td-6",
+      "rules": [
+        {
+          "id": "steam-960090",
+          "kind": "steam_appid",
+          "value": "960090",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:bloons-td-6"
           }
         }
       ]
@@ -5334,6 +5362,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0124"
+          }
+        }
+      ]
+    },
+    {
+      "id": "database-detective-minor-crimes",
+      "rules": [
+        {
+          "id": "steam-3950130",
+          "kind": "steam_appid",
+          "value": "3950130",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:database-detective-minor-crimes"
           }
         }
       ]
@@ -9775,6 +9817,20 @@
       ]
     },
     {
+      "id": "green-hell",
+      "rules": [
+        {
+          "id": "steam-815370",
+          "kind": "steam_appid",
+          "value": "815370",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:green-hell"
+          }
+        }
+      ]
+    },
+    {
       "id": "grid-legends",
       "rules": [
         {
@@ -10880,6 +10936,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0285"
+          }
+        }
+      ]
+    },
+    {
+      "id": "i-have-no-mouth-and-i-must-scream",
+      "rules": [
+        {
+          "id": "steam-245390",
+          "kind": "steam_appid",
+          "value": "245390",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:i-have-no-mouth-and-i-must-scream"
           }
         }
       ]
@@ -14478,6 +14548,20 @@
       ]
     },
     {
+      "id": "my-summer-car",
+      "rules": [
+        {
+          "id": "steam-516750",
+          "kind": "steam_appid",
+          "value": "516750",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:my-summer-car"
+          }
+        }
+      ]
+    },
+    {
       "id": "mycopunk",
       "rules": [
         {
@@ -15090,6 +15174,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#node-the-last-favor-of-the-antarii"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nomad-drive",
+      "rules": [
+        {
+          "id": "steam-2223980",
+          "kind": "steam_appid",
+          "value": "2223980",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:nomad-drive"
           }
         }
       ]
@@ -15775,6 +15873,20 @@
       ]
     },
     {
+      "id": "papers-please",
+      "rules": [
+        {
+          "id": "steam-239030",
+          "kind": "steam_appid",
+          "value": "239030",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:papers-please"
+          }
+        }
+      ]
+    },
+    {
       "id": "paradise-killer",
       "rules": [
         {
@@ -16123,6 +16235,20 @@
       ]
     },
     {
+      "id": "phoenix-wright-ace-attorney-trilogy",
+      "rules": [
+        {
+          "id": "steam-787480",
+          "kind": "steam_appid",
+          "value": "787480",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:phoenix-wright-ace-attorney-trilogy"
+          }
+        }
+      ]
+    },
+    {
       "id": "pih",
       "rules": [
         {
@@ -16291,6 +16417,20 @@
       ]
     },
     {
+      "id": "pony-island",
+      "rules": [
+        {
+          "id": "steam-405640",
+          "kind": "steam_appid",
+          "value": "405640",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:pony-island"
+          }
+        }
+      ]
+    },
+    {
       "id": "pools",
       "rules": [
         {
@@ -16384,6 +16524,20 @@
           "provenance": {
             "source": "renodx-match-overlay",
             "locator": "catalogs/addons/renodx/match_overlay.json#postal-brain-damaged"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion-craft-alchemist-simulator",
+      "rules": [
+        {
+          "id": "steam-1210320",
+          "kind": "steam_appid",
+          "value": "1210320",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:potion-craft-alchemist-simulator"
           }
         }
       ]
@@ -16806,6 +16960,20 @@
           "provenance": {
             "source": "steam-appinfo",
             "locator": "steam-executable-observation:2288350"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rain-world",
+      "rules": [
+        {
+          "id": "steam-312520",
+          "kind": "steam_appid",
+          "value": "312520",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:rain-world"
           }
         }
       ]
@@ -17394,6 +17562,20 @@
           "provenance": {
             "source": "steam-store-search",
             "locator": "pending:renodx:restory-chill-electronics-repairs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "return-of-the-obra-dinn",
+      "rules": [
+        {
+          "id": "steam-653530",
+          "kind": "steam_appid",
+          "value": "653530",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:return-of-the-obra-dinn"
           }
         }
       ]
@@ -18513,6 +18695,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0487"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shellshock-live",
+      "rules": [
+        {
+          "id": "steam-326460",
+          "kind": "steam_appid",
+          "value": "326460",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:shellshock-live"
           }
         }
       ]
@@ -21065,6 +21261,20 @@
       ]
     },
     {
+      "id": "thalassomania",
+      "rules": [
+        {
+          "id": "steam-3050090",
+          "kind": "steam_appid",
+          "value": "3050090",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:thalassomania"
+          }
+        }
+      ]
+    },
+    {
       "id": "the-alley-demo",
       "rules": [
         {
@@ -22097,6 +22307,20 @@
       ]
     },
     {
+      "id": "the-room",
+      "rules": [
+        {
+          "id": "steam-288160",
+          "kind": "steam_appid",
+          "value": "288160",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:the-room"
+          }
+        }
+      ]
+    },
+    {
       "id": "the-room-4-old-sins",
       "rules": [
         {
@@ -22505,6 +22729,20 @@
           "provenance": {
             "source": "luma-curated-games",
             "locator": "catalogs/addons/luma/curated_games.json#thief-2014"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thief-simulator",
+      "rules": [
+        {
+          "id": "steam-704850",
+          "kind": "steam_appid",
+          "value": "704850",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:thief-simulator"
           }
         }
       ]
@@ -23534,6 +23772,20 @@
       ]
     },
     {
+      "id": "ultimate-chicken-horse",
+      "rules": [
+        {
+          "id": "steam-386940",
+          "kind": "steam_appid",
+          "value": "386940",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:ultimate-chicken-horse"
+          }
+        }
+      ]
+    },
+    {
       "id": "ultrakill",
       "rules": [
         {
@@ -23669,6 +23921,20 @@
       ]
     },
     {
+      "id": "untitled-goose-game",
+      "rules": [
+        {
+          "id": "steam-837470",
+          "kind": "steam_appid",
+          "value": "837470",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:untitled-goose-game"
+          }
+        }
+      ]
+    },
+    {
       "id": "v-rising",
       "rules": [
         {
@@ -23752,6 +24018,20 @@
           "provenance": {
             "source": "optiscaler-reviewed-match",
             "locator": "main:0627"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vampire-survivors",
+      "rules": [
+        {
+          "id": "steam-1794680",
+          "kind": "steam_appid",
+          "value": "1794680",
+          "provenance": {
+            "source": "steam-store-search",
+            "locator": "pending:renodx:vampire-survivors"
           }
         }
       ]

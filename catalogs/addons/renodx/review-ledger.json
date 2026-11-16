@@ -2,9 +2,9 @@
   "policy_version": "renodx-guidance-v2-2026-09-14",
   "source": {
     "wiki": "https://raw.githubusercontent.com/wiki/clshortfuse/renodx/Mods.md",
-    "wiki_content_sha256": "3cfe6e8f2e12e1977bf448ee4ed22e6c4eb2fa6eb8389dee3088cc1bafa58343",
+    "wiki_content_sha256": "3f919277545d1e9487bb2d2ce8860f1d2a5fa3741b57e09ea9f843993d811344",
     "ignored_sections": ["Deprecated", "Related Mods"],
-    "active_message_fingerprint": "1ababadbb17dfce3de47acf533f55031266406af8d28a79bf37dcf7e58db00a5",
+    "active_message_fingerprint": "b0a849e0a77077ff570d4c243d00ae35bf900752fbd686400c8ab8c102cba0e1",
     "page_reviews": [
       {
         "id": "installation.reshade-addon",
@@ -424,7 +424,7 @@
       "title": "A Way Out",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "b4c2395329e3c5b25b521755654d398654243fce3be721c523c5085db7d08ae3",
+      "note_sha256": "a0758785bc5eae513fb012d08565f8d296e03c57ca967648df673a425cf7543d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -444,7 +444,7 @@
       "title": "ABZÛ",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "0564a8a79474b5ee0800378b1ac2d8ceeb5ef33e35f84f9961b5a3e44da8241d",
+      "note_sha256": "2f9ce75062eec7a0aaf63995ed7e45bd0286ace5ea77a4603984d48c82168300",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -474,7 +474,7 @@
       "title": "Astroneer",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a20a38879ba850b908d46326065374712f4f1f476fcb033e23412502e11af380",
+      "note_sha256": "ee07581db44bb7807a8eed2ee28d83df5f0a0e83345cc4fd2bbf8aff8aed055f",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -504,7 +504,7 @@
       "title": "BLACKTAIL",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -525,6 +525,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "f5f610194cb21836415081596734639c5a9e055450bd8ede527ae7a4311c423d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:broken-pieces",
+      "game_id": "broken-pieces",
+      "title": "Broken Pieces",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -554,7 +564,7 @@
       "title": "Chromatic Conundrum",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a94c57fe05e73503cbdcdc5cff132b172e7cf534a1ff05a18456ccbd962d49e4",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -634,7 +644,7 @@
       "title": "Deep Rock Galactic: Rogue Core",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "4c4f3d6785383c332f01cf614d809c496401a1ef5d22fec5ad7814c12479d630",
+      "note_sha256": "b6684a50fbd2697ca85a1e14105c9447faf36152b55d1309bd9261f8b4a939b0",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -644,7 +654,7 @@
       "title": "Deliver Us The Moon",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "note_sha256": "c1dbafe60a70c3b89da026d9b167eeeebca8931c4c8c0733c302cc5404f30eee",
       "disposition": "pending",
       "reason": "Upstream configuration instructions pending manual review."
     },
@@ -654,7 +664,7 @@
       "title": "Destroy All Humans",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "note_sha256": "c1dbafe60a70c3b89da026d9b167eeeebca8931c4c8c0733c302cc5404f30eee",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -684,7 +694,7 @@
       "title": "End of Abyss",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "06c1a554a1623b98f92dd50c8cd5d40b98bf6cf54dd99eb213637743dbd2cb4a",
+      "note_sha256": "bc6a0c8a3a849bef44ae29560683fa86317eb094add8e0ed8b7976ddec408dd0",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -694,7 +704,7 @@
       "title": "Escape the Backrooms",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "3e5c2b31b335c65855a03d021104a1994938c40771991fa5c702066c438bc951",
+      "note_sha256": "ed554506c183aecc92bd734a1eee2bac1732d09cf1ff86185b951c1226bf2e7e",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -704,7 +714,7 @@
       "title": "Eternal Strands",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "9e6ed60b28a8dc800d777c7691b19189275cc26f99df774d6f46e16b9b9fe4b3",
+      "note_sha256": "70a530aa6117d21c6ffa15a02eb438368ac4b2c7963565e29061596a11e06723",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -734,7 +744,7 @@
       "title": "FlyKnight Enhanced Edition",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "51b64235d8d89bb204cb9cc15aa73be4ae8c6045e6d292db34cf113c0343e94a",
+      "note_sha256": "313eaeda818fba29bb5b880c48b6aae7b97c0a62bb6461e5841105b67665c70a",
       "disposition": "omitted",
       "reason": "Moved to resolved legacy title guidance; no UE Extended processing policy is emitted for this source row."
     },
@@ -744,7 +754,7 @@
       "title": "Frostpunk 2",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "9d402d1c7c3d3d17d369ec0fde8b98e3bfe836c7268b6875d1d11c46c19da3e7",
+      "note_sha256": "fe1b91815cf43f0f03d5165db63470cd92a36c2391e2005a0e629c8afc1fd8f3",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -774,7 +784,7 @@
       "title": "Ghostrunner",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -784,7 +794,7 @@
       "title": "Ghostrunner 2",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "f7b617e26b9d75aa6beec35115e23c52b5bbba8d9782b267a50d660434fcdc23",
+      "note_sha256": "14f41f9f4274bdb7ec69d6527185cfcf7a8e4ae9433a8fc46ef2933517a4a4f5",
       "disposition": "omitted",
       "reason": "Moved to resolved legacy title guidance; no UE Extended processing policy is emitted for this source row."
     },
@@ -804,7 +814,7 @@
       "title": "Goat Simulator 3",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -824,7 +834,7 @@
       "title": "Grand Theft Auto: The Trilogy – The Definitive Edition (III, Vice City, San Andreas)",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "omitted",
       "reason": "This UE Extended source row resolves to a legacy, dedicated, or absent manifest output; its guidance is intentionally not duplicated here."
     },
@@ -874,7 +884,7 @@
       "title": "Hi-Fi Rush",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "129ba9a798ac6d672f22cae9946f45369e1bf508c74d308efa3e21f75b87f63d",
+      "note_sha256": "64b0e4958bb220bd1336d40dac51f63ad88b37a82a902a6503aa9a601a02c4ce",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -884,7 +894,7 @@
       "title": "Hydroneer",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -904,7 +914,7 @@
       "title": "It Takes Two",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -944,7 +954,7 @@
       "title": "Like a Dragon: Ishin!",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "af7524caf689fbcb20ce6c88c8dd952939a434a5af8fcddf2e23721503e6b772",
+      "note_sha256": "93aaab5aceb93be252eff45e05012e68357a8444ed4398056b44c0339473cdd8",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -954,7 +964,7 @@
       "title": "Little Nightmares",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -964,7 +974,7 @@
       "title": "Little Nightmares Enhanced",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -974,7 +984,7 @@
       "title": "Little Nightmares II",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "c49c254d84ca8768765d8181b218405fc175d2a532f59370af81ea091286c23c",
+      "note_sha256": "ca83b9cc84b03ee28cb4e2321ed364ac1832be3879a73b33efc7d3293e0134af",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -984,7 +994,7 @@
       "title": "Little Nightmares II Enhanced",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "c49c254d84ca8768765d8181b218405fc175d2a532f59370af81ea091286c23c",
+      "note_sha256": "ca83b9cc84b03ee28cb4e2321ed364ac1832be3879a73b33efc7d3293e0134af",
       "disposition": "omitted",
       "reason": "This UE Extended source row resolves to a legacy, dedicated, or absent manifest output; its guidance is intentionally not duplicated here."
     },
@@ -1064,7 +1074,7 @@
       "title": "Motor Town: Behind The Wheel",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "0ea9daa47815b7a5cdad4c0982ee1266772f8313134e3f4931e21b71893909d6",
+      "note_sha256": "99778a28851784c917314171fb74c590780f7c4208426d2add9669ef7935c470",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1094,7 +1104,7 @@
       "title": "Pacific Drive",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "note_sha256": "c1dbafe60a70c3b89da026d9b167eeeebca8931c4c8c0733c302cc5404f30eee",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1104,7 +1114,7 @@
       "title": "Palworld",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "b4c2395329e3c5b25b521755654d398654243fce3be721c523c5085db7d08ae3",
+      "note_sha256": "a0758785bc5eae513fb012d08565f8d296e03c57ca967648df673a425cf7543d",
       "disposition": "omitted",
       "reason": "Moved to resolved legacy title guidance; no UE Extended processing policy is emitted for this source row."
     },
@@ -1114,7 +1124,7 @@
       "title": "Persona 3 Reload",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1124,7 +1134,7 @@
       "title": "Pih",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "pending",
       "reason": "Upstream configuration instructions pending manual review."
     },
@@ -1174,7 +1184,7 @@
       "title": "Scorn",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1184,7 +1194,7 @@
       "title": "Sifu",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "ff597655c8738d0bb116ee781e9a620d216941b23f3a998d992213beb9204160",
+      "note_sha256": "b7d7145abecc3de12112580550378c054c847b259eecc34ad0e9272d35f15e79",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1224,7 +1234,7 @@
       "title": "SPRAWL",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "note_sha256": "c1dbafe60a70c3b89da026d9b167eeeebca8931c4c8c0733c302cc5404f30eee",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1249,6 +1259,16 @@
       "reason": null
     },
     {
+      "source_key": "ue-extended:star-wars-jedi-fallen-ordertm",
+      "game_id": "star-wars-jedi-fallen-ordertm",
+      "title": "STAR WARS Jedi: Fallen Order™",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "4b0a16cb679b00f15e5a50467fa41140ab07176a553b071cfbaccc482a59d307",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "ue-extended:star-wars-zero-companytm",
       "game_id": "star-wars-zero-companytm",
       "title": "STAR WARS Zero Company™",
@@ -1264,7 +1284,7 @@
       "title": "State Of Decay 2",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "0e9a3541bffa57285f0d9c77637984c9716cf533982dfff5b7a7f40ac61f78c7",
+      "note_sha256": "20f29d20bd6dd60acde131e60494bd85c33bccd4af949314758d2b6b434b862d",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1274,7 +1294,7 @@
       "title": "Stellar Blade",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "12ec08ddfac27caf13a00a6c9d7c44a6048c436a2063f9326ab07cefc571c528",
+      "note_sha256": "aefaa8d19bcb80e6c32502f2a1bc5c679bfe4ffce5aedec3c0836745d2d34d5b",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1294,7 +1314,7 @@
       "title": "Stray",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1324,7 +1344,7 @@
       "title": "The Alters",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1335,6 +1355,16 @@
       "section": "ue-extended",
       "profile_source": "ue-extended",
       "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:the-chant",
+      "game_id": "the-chant",
+      "title": "The Chant",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "028d80483fce9ae1e3e3d65cade6da36bae01f9a1c9860ba35651d191658bde6",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1354,7 +1384,7 @@
       "title": "The First Berserker: Khazan",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "f7b617e26b9d75aa6beec35115e23c52b5bbba8d9782b267a50d660434fcdc23",
+      "note_sha256": "14f41f9f4274bdb7ec69d6527185cfcf7a8e4ae9433a8fc46ef2933517a4a4f5",
       "disposition": "omitted",
       "reason": "Moved to resolved dedicated title guidance; no UE Extended processing policy is emitted for this source row."
     },
@@ -1364,7 +1394,7 @@
       "title": "The Forgotten City",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "note_sha256": "c1dbafe60a70c3b89da026d9b167eeeebca8931c4c8c0733c302cc5404f30eee",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1374,7 +1404,17 @@
       "title": "The iDOLM@STER: Starlit Season",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "b7ed211d50222bebc80ff2a2dd79cd26a5f2ae38b13b654f48c512b5ad00ba4c",
+      "note_sha256": "2c1464c118bfba7df0e240ef6c51dac3326624710732cf515a7cb3768f1b6e3b",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "ue-extended:the-midnight-walk",
+      "game_id": "the-midnight-walk",
+      "title": "The Midnight Walk",
+      "section": "ue-extended",
+      "profile_source": "ue-extended",
+      "note_sha256": "7818c8ca27d1eeb7b243664ea856ffa2dc06805a03177fa7c51e845424247f04",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1384,7 +1424,7 @@
       "title": "THRESHOLD",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "7daf157adbe73212a4f7de86b9e93f066996eaf6197e29ce08713f52f4d959ae",
+      "note_sha256": "c1dbafe60a70c3b89da026d9b167eeeebca8931c4c8c0733c302cc5404f30eee",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1404,7 +1444,7 @@
       "title": "Tormented Souls 2",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "c2f4d9fddd1d7bc13156bde2554f807ecee6b69e6c964c0de9879922c2079f53",
+      "note_sha256": "e9a435b8266e0c8643bf0b29a3c86f290e07b3a73e28cee8628e065565cbaa96",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1424,7 +1464,7 @@
       "title": "VHOLUME",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "a73cecfbee1ae6be109a2b43309b85a489238c67d6df93e83ce0255c4dd482c4",
+      "note_sha256": "b985179d733255cfeada4c5b75acf15137065f7a7723ff0b28520edc2e467869",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -1434,7 +1474,7 @@
       "title": "What Remains of Edith Finch",
       "section": "ue-extended",
       "profile_source": "ue-extended",
-      "note_sha256": "05a7f1b1b1f2604566a8d7d07035d2ce4322da880d9eb3063d788915c73c6c32",
+      "note_sha256": "725853f4c911c66b217825772f02a2e44dc81cc928f821a54be3a476a26441d4",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3369,6 +3409,16 @@
       "reason": "The 32-bit requirement is represented by the manifest architecture."
     },
     {
+      "source_key": "unity:blasphemous",
+      "game_id": "blasphemous",
+      "title": "Blasphemous",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "900057179d8e36edce226005728b1c9bc8fc75145a727508779c13e75c60e54e",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:blazblue-entropy-effect",
       "game_id": "blazblue-entropy-effect",
       "title": "BlazBlue Entropy Effect",
@@ -3385,6 +3435,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "f61c60bf03facacc0d1d838bdad68389a306da85ff9deef9a83e443275918adf",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:bloons-td-6",
+      "game_id": "bloons-td-6",
+      "title": "Bloons TD 6",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "4ac595472399553a02fbcfe47ec8ead57b4739cc35cf711cff91f6f1dfce1d23",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -3585,6 +3645,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:database-detective-minor-crimes",
+      "game_id": "database-detective-minor-crimes",
+      "title": "Database Detective: Minor Crimes",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "ecccff4abd450f179ee716356960625046661dca6d04d8060f791691c23e45fb",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4079,6 +4149,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:green-hell",
+      "game_id": "green-hell",
+      "title": "Green Hell",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "a0a95b3ef1ea8275dc791e422dce02648d71137e5997e4c14758be796533033e",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:gunfire-reborn",
       "game_id": "gunfire-reborn",
       "title": "Gunfire Reborn",
@@ -4189,6 +4269,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:i-have-no-mouth-and-i-must-scream",
+      "game_id": "i-have-no-mouth-and-i-must-scream",
+      "title": "I Have No Mouth, and I Must Scream",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "6f4d114f0b77c49eb71c11920ec61d6a626ae343d4a358e6b2e09493c4298100",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:i-know-a-guy-shady-life-simulator",
       "game_id": "i-know-a-guy-shady-life-simulator",
       "title": "I Know a Guy: Shady Life Simulator",
@@ -4235,6 +4325,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "f119cce008f4e16e3db3b6569f0772295e8ce8279835416130ea41c008234084",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:inside",
+      "game_id": "inside",
+      "title": "INSIDE",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "632fd16cfb858c979f0c21166dff957cffe4fbafaa52b7f8f829488cfcfa72a3",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4569,6 +4669,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:my-summer-car",
+      "game_id": "my-summer-car",
+      "title": "My Summer Car",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "3328b6f844fd52f8e1a54e4716a345fd7567df228740ef250e397835d7b71d5d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:necropolis-brutal-edition",
       "game_id": "necropolis-brutal-edition",
       "title": "NECROPOLIS: BRUTAL EDITION",
@@ -4759,6 +4869,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:papers-please",
+      "game_id": "papers-please",
+      "title": "Papers, Please",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "418230be956346a5ba0b0a2261dde0296399cc9004d1ec586877b7c2dbc0f218",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:party-club",
       "game_id": "party-club",
       "title": "Party Club",
@@ -4784,9 +4904,19 @@
       "title": "Phasmophobia",
       "section": "unity",
       "profile_source": "unityengine",
-      "note_sha256": "945d3f151596b69b84bcb0db631a2ef5b6f3709181c9f05321b733eba06bec5e",
-      "disposition": "pending",
-      "reason": "The upstream resource-upgrade instruction is incomplete and does not identify a format."
+      "note_sha256": "d3bd8ef8ef81a5ce49c6119f95eb378e47a58423132a27d7af1d7414b5845f5b",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:phoenix-wright-ace-attorney-trilogy",
+      "game_id": "phoenix-wright-ace-attorney-trilogy",
+      "title": "Phoenix Wright: Ace Attorney Trilogy",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "1963abe1fe6799d08da2136db67295037921572beae1f14bf2f5cd7d3a33f471",
+      "disposition": "curated_manual",
+      "reason": null
     },
     {
       "source_key": "unity:pillars-of-eternity",
@@ -4815,6 +4945,26 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "137a8a53d0d03c35aee3ad04f73bc70c22a68142c0dc63df1eb737b69f0ec393",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:pony-island",
+      "game_id": "pony-island",
+      "title": "Pony Island",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "fc60ead9fb042a4a913486fc97add734bd7a800ccaff54a5232193c64b6aa70f",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:potion-craft-alchemist-simulator",
+      "game_id": "potion-craft-alchemist-simulator",
+      "title": "Potion Craft: Alchemist Simulator",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "f0d5a67cfb2a167f40d27640e9ef4d83ca83fcdf7ac0b91911a79039e46b133f",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -4849,6 +4999,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:rain-world",
+      "game_id": "rain-world",
+      "title": "Rain World",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "f0d5a67cfb2a167f40d27640e9ef4d83ca83fcdf7ac0b91911a79039e46b133f",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:reka",
       "game_id": "reka",
       "title": "REKA",
@@ -4865,6 +5025,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "d6a90cce522f0d40cb3ae0f37521410847bc03d6a87da45b0e5b48b4f9827180",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:return-of-the-obra-dinn",
+      "game_id": "return-of-the-obra-dinn",
+      "title": "Return of the Obra Dinn",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "e88cb495bd030ff981141555896994293a7c4d4bee9b3ee0191dd51240ff2a5e",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -5239,6 +5409,16 @@
       "reason": null
     },
     {
+      "source_key": "unity:thalassomania",
+      "game_id": "thalassomania",
+      "title": "Thalassomania",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "4ac595472399553a02fbcfe47ec8ead57b4739cc35cf711cff91f6f1dfce1d23",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
       "source_key": "unity:the-first-tree",
       "game_id": "the-first-tree",
       "title": "The First Tree",
@@ -5285,6 +5465,16 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:the-room",
+      "game_id": "the-room",
+      "title": "The Room",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "bfd6b6c2b926786e594d55535d6de92b7910b12c6d72a4fc0c4898579415a1a8",
       "disposition": "curated_manual",
       "reason": null
     },
@@ -5345,6 +5535,36 @@
       "section": "unity",
       "profile_source": "unityengine",
       "note_sha256": "16a87ef34e48c992830ca0aa84fa32f382a271e622e69ecb47b829e346836c62",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:ultimate-chicken-horse",
+      "game_id": "ultimate-chicken-horse",
+      "title": "Ultimate Chicken Horse",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "30edcab3f19d792c8891d30e51fb5e0de6884e670a848f05a4464537c2bad5ae",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:untitled-goose-game",
+      "game_id": "untitled-goose-game",
+      "title": "Untitled Goose Game",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "4efcacbedd4d61252e776259c5304559e31fd0b3da12e774888c6fd87181639d",
+      "disposition": "curated_manual",
+      "reason": null
+    },
+    {
+      "source_key": "unity:vampire-survivors",
+      "game_id": "vampire-survivors",
+      "title": "Vampire Survivors",
+      "section": "unity",
+      "profile_source": "unityengine",
+      "note_sha256": "275e81fb40f8f02dae74bf853c25b0369b1b8eac5dddb2527854dd229d045258",
       "disposition": "curated_manual",
       "reason": null
     },

@@ -739,6 +739,13 @@
     "id": "far-cry-primal"
   },
   {
+    "name": "Farming Simulator 25",
+    "slug": "farming-simulator-25",
+    "arch": "X64",
+    "status": "working",
+    "id": "farming-simulator-25"
+  },
+  {
     "name": "Fate/Samurai Remnant",
     "slug": "fatesamurairemnant",
     "arch": "X64",
@@ -1182,6 +1189,13 @@
     "arch": "X64",
     "status": "working",
     "id": "metal-gear-solid-snake-eater"
+  },
+  {
+    "name": "Microsoft Flight Simulator 2024",
+    "slug": "microsoft-flight-simulator-2024",
+    "arch": "X64",
+    "status": "working",
+    "id": "microsoft-flight-simulator-2024"
   },
   {
     "name": "Middle-earth™: Shadow of War™",
@@ -2155,7 +2169,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "a-way-out",
-    "notes": "Upgrade Path: On. Lacks testing.",
+    "notes": "SDR to HDR. Lacks testing.",
     "source_key": "ue-extended:a-way-out",
     "section": "ue-extended"
   },
@@ -2175,7 +2189,7 @@
     "arch": "X64",
     "status": "working",
     "id": "abzu",
-    "notes": "Upgrade Path: On `B8G8R8A8_TYPELESS` `Output Size` for 100% render resolution or `Output Ratio` for other percentages.",
+    "notes": "SDR to HDR `B8G8R8A8_TYPELESS` `Output Size` for 100% render resolution or `Output Ratio` for other percentages.",
     "source_key": "ue-extended:abzu",
     "section": "ue-extended"
   },
@@ -2205,7 +2219,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "astroneer",
-    "notes": "Upgrade Path: On. Grading and flickering issues.",
+    "notes": "SDR to HDR. Grading and flickering issues.",
     "source_key": "ue-extended:astroneer",
     "section": "ue-extended"
   },
@@ -2225,7 +2239,7 @@
     "arch": "X64",
     "status": "working",
     "id": "blacktail",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:blacktail",
     "section": "ue-extended"
   },
@@ -2247,6 +2261,16 @@
     "id": "borderlands-4",
     "notes": "Native HDR",
     "source_key": "ue-extended:borderlands-4",
+    "section": "ue-extended"
+  },
+  {
+    "name": "Broken Pieces",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "broken-pieces",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:broken-pieces",
     "section": "ue-extended"
   },
   {
@@ -2275,7 +2299,7 @@
     "arch": "X64",
     "status": "working",
     "id": "chromatic-conundrum",
-    "notes": "Upgrade Path: Off. Broken rendering when enabled.",
+    "notes": "Engine.ini",
     "source_key": "ue-extended:chromatic-conundrum",
     "section": "ue-extended"
   },
@@ -2335,7 +2359,7 @@
     "arch": "X64",
     "status": "working",
     "id": "deep-rock-galactic-rogue-core",
-    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Native HDR is broken.",
+    "notes": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`. Native HDR is broken.",
     "source_key": "ue-extended:deep-rock-galactic-rogue-core",
     "section": "ue-extended"
   },
@@ -2345,7 +2369,7 @@
     "arch": "X64",
     "status": "working",
     "id": "deliver-us-the-moon",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`.",
     "source_key": "ue-extended:deliver-us-the-moon",
     "section": "ue-extended"
   },
@@ -2355,7 +2379,7 @@
     "arch": "X64",
     "status": "working",
     "id": "destroy-all-humans",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`.",
     "source_key": "ue-extended:destroy-all-humans",
     "section": "ue-extended"
   },
@@ -2385,7 +2409,7 @@
     "arch": "X64",
     "status": "working",
     "id": "end-of-abyss",
-    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Engine.ini HDR can't be used due to issues with saving game progress.",
+    "notes": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`. Engine.ini HDR can't be used due to issues with saving game progress.",
     "source_key": "ue-extended:end-of-abyss",
     "section": "ue-extended"
   },
@@ -2395,7 +2419,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "escape-the-backrooms",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Lacks testing.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`. Lacks testing.",
     "source_key": "ue-extended:escape-the-backrooms",
     "section": "ue-extended"
   },
@@ -2405,7 +2429,7 @@
     "arch": "X64",
     "status": "working",
     "id": "eternal-strands",
-    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`.",
+    "notes": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`.",
     "source_key": "ue-extended:eternal-strands",
     "section": "ue-extended"
   },
@@ -2435,7 +2459,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "flyknight-enhanced-edition",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Multiple in-game filters change HDR presentation, Lacks testing.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`. Multiple in-game filters change HDR presentation, Lacks testing.",
     "source_key": "ue-extended:flyknight-enhanced-edition",
     "section": "ue-extended"
   },
@@ -2445,7 +2469,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "frostpunk-2",
-    "notes": "Upgrade Path: On. UI slider controls paper white.",
+    "notes": "SDR to HDR. UI slider controls paper white.",
     "source_key": "ue-extended:frostpunk-2",
     "section": "ue-extended"
   },
@@ -2475,7 +2499,7 @@
     "arch": "X64",
     "status": "working",
     "id": "ghostrunner",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:ghostrunner",
     "section": "ue-extended"
   },
@@ -2495,7 +2519,7 @@
     "arch": "X64",
     "status": "working",
     "id": "goat-simulator-3",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:goat-simulator-3",
     "section": "ue-extended"
   },
@@ -2515,7 +2539,7 @@
     "arch": "X64",
     "status": "working",
     "id": "grand-theft-auto-the-trilogy-the-definitive-edition-iii-vice-city-san-andreas",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:grand-theft-auto-the-trilogy-the-definitive-edition-iii-vice-city-san-andreas",
     "section": "ue-extended"
   },
@@ -2565,7 +2589,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "hi-fi-rush",
-    "notes": "Upgrade Path: On as Engine.ini edits overexposed the shading. Gameplay and highlights are clamped to UI brightness. `Upgrade Copy Destinations` `Off` `R8G8R8A8_TYPELESS` `Any Size`",
+    "notes": "SDR to HDR as Engine.ini edits overexposed the shading. Gameplay and highlights are clamped to UI brightness. `Upgrade Copy Destinations` `Off` `R8G8R8A8_TYPELESS` `Any Size`",
     "source_key": "ue-extended:hi-fi-rush",
     "section": "ue-extended"
   },
@@ -2575,7 +2599,7 @@
     "arch": "X64",
     "status": "working",
     "id": "hydroneer",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:hydroneer",
     "section": "ue-extended"
   },
@@ -2595,7 +2619,7 @@
     "arch": "X64",
     "status": "working",
     "id": "it-takes-two",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:it-takes-two",
     "section": "ue-extended"
   },
@@ -2635,7 +2659,7 @@
     "arch": "X64",
     "status": "working",
     "id": "like-a-dragon-ishin",
-    "notes": "Upgrade Path: On, `R8G8B8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`.",
+    "notes": "SDR to HDR, `R8G8B8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`.",
     "source_key": "ue-extended:like-a-dragon-ishin",
     "section": "ue-extended"
   },
@@ -2645,7 +2669,7 @@
     "arch": "X64",
     "status": "working",
     "id": "little-nightmares",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:little-nightmares",
     "section": "ue-extended"
   },
@@ -2655,7 +2679,7 @@
     "arch": "X64",
     "status": "working",
     "id": "little-nightmares-enhanced-edition",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:little-nightmares-enhanced",
     "section": "ue-extended"
   },
@@ -2665,7 +2689,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "little-nightmares-ii",
-    "notes": "Upgrade Path: On. Grading issues.",
+    "notes": "SDR to HDR. Grading issues.",
     "source_key": "ue-extended:little-nightmares-ii",
     "section": "ue-extended"
   },
@@ -2675,7 +2699,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "little-nightmares-ii-enhanced",
-    "notes": "Upgrade Path: On. Grading issues.",
+    "notes": "SDR to HDR. Grading issues.",
     "source_key": "ue-extended:little-nightmares-ii-enhanced",
     "section": "ue-extended"
   },
@@ -2755,7 +2779,7 @@
     "arch": "X64",
     "status": "working",
     "id": "motor-town-behind-the-wheel",
-    "notes": "Upgrade Path: On. Sliders do not change in real-time.",
+    "notes": "SDR to HDR. Sliders do not change in real-time.",
     "source_key": "ue-extended:motor-town-behind-the-wheel",
     "section": "ue-extended"
   },
@@ -2785,7 +2809,7 @@
     "arch": "X64",
     "status": "working",
     "id": "pacific-drive",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`.",
     "source_key": "ue-extended:pacific-drive",
     "section": "ue-extended"
   },
@@ -2805,7 +2829,7 @@
     "arch": "X64",
     "status": "working",
     "id": "persona-3-reload",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:persona-3-reload",
     "section": "ue-extended"
   },
@@ -2815,7 +2839,7 @@
     "arch": "X64",
     "status": "working",
     "id": "pih",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:pih",
     "section": "ue-extended"
   },
@@ -2865,7 +2889,7 @@
     "arch": "X64",
     "status": "working",
     "id": "scorn",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:scorn",
     "section": "ue-extended"
   },
@@ -2875,7 +2899,7 @@
     "arch": "X64",
     "status": "working",
     "id": "sifu",
-    "notes": "Upgrade Path: On. Limited brightness.",
+    "notes": "SDR to HDR. Limited brightness.",
     "source_key": "ue-extended:sifu",
     "section": "ue-extended"
   },
@@ -2915,7 +2939,7 @@
     "arch": "X64",
     "status": "working",
     "id": "sprawl",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`.",
     "source_key": "ue-extended:sprawl",
     "section": "ue-extended"
   },
@@ -2927,6 +2951,16 @@
     "id": "star-wars-galactic-racertm",
     "notes": "Native HDR",
     "source_key": "ue-extended:star-wars-galactic-racertm",
+    "section": "ue-extended"
+  },
+  {
+    "name": "STAR WARS Jedi: Fallen Order™",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "unknown",
+    "id": "star-wars-jedi-fallen-ordertm",
+    "notes": "Use the Luma Framework mod below.",
+    "source_key": "ue-extended:star-wars-jedi-fallen-ordertm",
     "section": "ue-extended"
   },
   {
@@ -2945,7 +2979,7 @@
     "arch": "X64",
     "status": "working",
     "id": "state-of-decay-2",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`.",
     "source_key": "ue-extended:state-of-decay-2",
     "section": "ue-extended"
   },
@@ -2955,7 +2989,7 @@
     "arch": "X64",
     "status": "working",
     "id": "stellar-blade",
-    "notes": "Upgrade Path: On. Disable in game HDR.",
+    "notes": "SDR to HDR. Disable in game HDR.",
     "source_key": "ue-extended:stellar-blade",
     "section": "ue-extended"
   },
@@ -2975,7 +3009,7 @@
     "arch": "X64",
     "status": "working",
     "id": "stray",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:stray",
     "section": "ue-extended"
   },
@@ -3005,7 +3039,7 @@
     "arch": "X64",
     "status": "working",
     "id": "the-alters",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:the-alters",
     "section": "ue-extended"
   },
@@ -3017,6 +3051,16 @@
     "id": "the-blood-of-dawnwalker",
     "notes": "Engine.ini",
     "source_key": "ue-extended:the-blood-of-dawnwalker",
+    "section": "ue-extended"
+  },
+  {
+    "name": "The Chant",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-chant",
+    "notes": "Engine.ini. Use DX11.",
+    "source_key": "ue-extended:the-chant",
     "section": "ue-extended"
   },
   {
@@ -3035,7 +3079,7 @@
     "arch": "X64",
     "status": "working",
     "id": "the-forgotten-city",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`.",
     "source_key": "ue-extended:the-forgotten-city",
     "section": "ue-extended"
   },
@@ -3045,8 +3089,18 @@
     "arch": "X64",
     "status": "construction",
     "id": "the-idolm-ster-starlit-season",
-    "notes": "Upgrade Path: On as Engine.ini edits overexposed the shading. DX11; refused to boot up DX12 as Low Level Fatal Error Line: 266 Camped to UI brightness has issues with Commu's blue lighting, as well for the stage lighting on the top. Small cameras with multiple idols during certain Commus does not highlight the HDR. `Upgrade Copy Destinations` `Off` `B8G8R8A8_TYPELESS` `Any Size`",
+    "notes": "SDR to HDR as Engine.ini edits overexposed the shading. DX11; refused to boot up DX12 as Low Level Fatal Error Line: 266 Camped to UI brightness has issues with Commu's blue lighting, as well for the stage lighting on the top. Small cameras with multiple idols during certain Commus does not highlight the HDR. `Upgrade Copy Destinations` `Off` `B8G8R8A8_TYPELESS` `Any Size`",
     "source_key": "ue-extended:the-idolm-ster-starlit-season",
+    "section": "ue-extended"
+  },
+  {
+    "name": "The Midnight Walk",
+    "slug": "ue-extended",
+    "arch": "X64",
+    "status": "working",
+    "id": "the-midnight-walk",
+    "notes": "Engine.ini",
+    "source_key": "ue-extended:the-midnight-walk",
     "section": "ue-extended"
   },
   {
@@ -3055,7 +3109,7 @@
     "arch": "X64",
     "status": "working",
     "id": "threshold",
-    "notes": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`.",
+    "notes": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`.",
     "source_key": "ue-extended:threshold",
     "section": "ue-extended"
   },
@@ -3075,7 +3129,7 @@
     "arch": "X64",
     "status": "working",
     "id": "tormented-souls-2",
-    "notes": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Turn off in game HDR.",
+    "notes": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`. Turn off in game HDR.",
     "source_key": "ue-extended:tormented-souls-2",
     "section": "ue-extended"
   },
@@ -3095,7 +3149,7 @@
     "arch": "X64",
     "status": "working",
     "id": "vholume",
-    "notes": "Upgrade Path: On",
+    "notes": "SDR to HDR",
     "source_key": "ue-extended:vholume",
     "section": "ue-extended"
   },
@@ -3105,7 +3159,7 @@
     "arch": "X64",
     "status": "working",
     "id": "what-remains-of-edith-finch",
-    "notes": "Upgrade Path: On <details><summary>High DPI scaling users</summary>The game may be clamped for you, even if DPI is overridden to the application. Set system wide DPI scaling to 100% and launch the game once. After that you can bring DPI scaling back. </details>",
+    "notes": "SDR to HDR <details><summary>High DPI scaling users</summary>The game may be clamped for you, even if DPI is overridden to the application. Set system wide DPI scaling to 100% and launch the game once. After that you can bring DPI scaling back. </details>",
     "source_key": "ue-extended:what-remains-of-edith-finch",
     "section": "ue-extended"
   },
@@ -3943,16 +3997,6 @@
     "id": "miasma-chronicles",
     "notes": "`R8G8B8A8_TYPELESS` `Output Size`",
     "source_key": "unreal:miasma-chronicles",
-    "section": "unreal"
-  },
-  {
-    "name": "The Midnight Walk",
-    "slug": "unrealengine",
-    "arch": "X64",
-    "status": "working",
-    "id": "the-midnight-walk",
-    "notes": "`R10G10B10A2_UNORM` `Output Size`",
-    "source_key": "unreal:the-midnight-walk",
     "section": "unreal"
   },
   {
@@ -5136,6 +5180,16 @@
     "section": "unity"
   },
   {
+    "name": "Blasphemous",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "blasphemous",
+    "notes": "Enable Swapchain Proxy, Encoding: Gamma.",
+    "source_key": "unity:blasphemous",
+    "section": "unity"
+  },
+  {
     "name": "BlazBlue Entropy Effect",
     "slug": "unityengine",
     "arch": "X64",
@@ -5153,6 +5207,16 @@
     "id": "bloody-hell",
     "notes": "Upgrade R11G11B10_FLOAT. Both compatibility offsets +1",
     "source_key": "unity:bloody-hell",
+    "section": "unity"
+  },
+  {
+    "name": "Bloons TD 6",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "bloons-td-6",
+    "notes": "Swapchain Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS to Any Size.",
+    "source_key": "unity:bloons-td-6",
     "section": "unity"
   },
   {
@@ -5465,6 +5529,16 @@
     "arch": "X64",
     "status": "working",
     "id": "darkwood",
+    "section": "unity"
+  },
+  {
+    "name": "Database Detective: Minor Crimes",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "database-detective-minor-crimes",
+    "notes": "Works out of the box, but very brightness limited (peaks around 220 nits).",
+    "source_key": "unity:database-detective-minor-crimes",
     "section": "unity"
   },
   {
@@ -6182,6 +6256,16 @@
     "section": "unity"
   },
   {
+    "name": "Green Hell",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "green-hell",
+    "notes": "Avoid Exclusive Fullscreen.",
+    "source_key": "unity:green-hell",
+    "section": "unity"
+  },
+  {
     "name": "GRIME",
     "slug": "unityengine",
     "arch": "X64",
@@ -6386,6 +6470,16 @@
     "section": "unity"
   },
   {
+    "name": "I Have No Mouth, and I Must Scream",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "i-have-no-mouth-and-i-must-scream",
+    "notes": "Swapchain Encoding: Gamma. Pre-rendered graphics limit HDR.",
+    "source_key": "unity:i-have-no-mouth-and-i-must-scream",
+    "section": "unity"
+  },
+  {
     "name": "I Know a Guy: Shady Life Simulator",
     "slug": "unityengine",
     "arch": "X64",
@@ -6441,6 +6535,16 @@
     "id": "inscryption",
     "notes": "Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`.",
     "source_key": "unity:inscryption",
+    "section": "unity"
+  },
+  {
+    "name": "INSIDE",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "unknown",
+    "id": "inside",
+    "notes": "Use the Luma Framework mod below",
+    "source_key": "unity:inside",
     "section": "unity"
   },
   {
@@ -6996,6 +7100,16 @@
     "section": "unity"
   },
   {
+    "name": "My Summer Car",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "my-summer-car",
+    "notes": "Disable in-game HDR. Enable Swapchain Proxy, Encoding: Gamma.",
+    "source_key": "unity:my-summer-car",
+    "section": "unity"
+  },
+  {
     "name": "Mycopunk",
     "slug": "unityengine",
     "arch": "X64",
@@ -7087,6 +7201,14 @@
     "id": "node-the-last-favor-of-the-antarii",
     "notes": "Upgrade R11G11B10_FLOAT",
     "source_key": "unity:node-the-last-favor-of-the-antarii",
+    "section": "unity"
+  },
+  {
+    "name": "Nomad Drive",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "nomad-drive",
     "section": "unity"
   },
   {
@@ -7274,6 +7396,16 @@
     "section": "unity"
   },
   {
+    "name": "Papers, Please",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "unknown",
+    "id": "papers-please",
+    "notes": "Swapchain Encoding: Gamma. Does not really work, output is clamped.",
+    "source_key": "unity:papers-please",
+    "section": "unity"
+  },
+  {
     "name": "Parkitect",
     "slug": "unityengine",
     "arch": "X64",
@@ -7331,7 +7463,7 @@
     "arch": "X64",
     "status": "construction",
     "id": "phasmophobia",
-    "notes": "Upgrade ??????????????",
+    "notes": "Needs testing.",
     "source_key": "unity:phasmophobia",
     "section": "unity"
   },
@@ -7341,6 +7473,16 @@
     "arch": "X64",
     "status": "construction",
     "id": "phoenix-point",
+    "section": "unity"
+  },
+  {
+    "name": "Phoenix Wright: Ace Attorney Trilogy",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "phoenix-wright-ace-attorney-trilogy",
+    "notes": "Enable Swapchain Proxy, Encoding: Gamma. Artwork is what it is.",
+    "source_key": "unity:phoenix-wright-ace-attorney-trilogy",
     "section": "unity"
   },
   {
@@ -7406,6 +7548,16 @@
     "section": "unity"
   },
   {
+    "name": "Pony Island",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "pony-island",
+    "notes": "Enable Swapchain Proxy, Encoding: Gamma. Not very impactful HDR.",
+    "source_key": "unity:pony-island",
+    "section": "unity"
+  },
+  {
     "name": "POOLS",
     "slug": "unityengine",
     "arch": "X64",
@@ -7419,6 +7571,16 @@
     "arch": "X64",
     "status": "construction",
     "id": "postal-brain-damaged",
+    "section": "unity"
+  },
+  {
+    "name": "Potion Craft: Alchemist Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "unknown",
+    "id": "potion-craft-alchemist-simulator",
+    "notes": "Custom rendering, broken with the mod.",
+    "source_key": "unity:potion-craft-alchemist-simulator",
     "section": "unity"
   },
   {
@@ -7473,6 +7635,16 @@
     "arch": "X64",
     "status": "construction",
     "id": "raft",
+    "section": "unity"
+  },
+  {
+    "name": "Rain World",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "unknown",
+    "id": "rain-world",
+    "notes": "Custom rendering, broken with the mod.",
+    "source_key": "unity:rain-world",
     "section": "unity"
   },
   {
@@ -7541,6 +7713,16 @@
     "arch": "X64",
     "status": "working",
     "id": "restory-chill-electronics-repairs",
+    "section": "unity"
+  },
+  {
+    "name": "Return of the Obra Dinn",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "unknown",
+    "id": "return-of-the-obra-dinn",
+    "notes": "Does not work.",
+    "source_key": "unity:return-of-the-obra-dinn",
     "section": "unity"
   },
   {
@@ -7637,7 +7819,7 @@
     "name": "Schedule I",
     "slug": "unityengine",
     "arch": "X64",
-    "status": "construction",
+    "status": "working",
     "id": "schedule-i",
     "section": "unity"
   },
@@ -7713,6 +7895,14 @@
     "arch": "X64",
     "status": "working",
     "id": "shape-of-dreams",
+    "section": "unity"
+  },
+  {
+    "name": "ShellShock Live",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "shellshock-live",
     "section": "unity"
   },
   {
@@ -8146,6 +8336,16 @@
     "section": "unity"
   },
   {
+    "name": "Thalassomania",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "thalassomania",
+    "notes": "Swapchain Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS to Any Size.",
+    "source_key": "unity:thalassomania",
+    "section": "unity"
+  },
+  {
     "name": "The Dungeon Of Naheulbeuk: The Amulet Of Chaos",
     "slug": "unityengine",
     "arch": "X64",
@@ -8268,6 +8468,16 @@
     "section": "unity"
   },
   {
+    "name": "The Room",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "the-room",
+    "notes": "Swapchain Encoding: Gamma. Lacks testing.",
+    "source_key": "unity:the-room",
+    "section": "unity"
+  },
+  {
     "name": "The Room Two",
     "slug": "unityengine",
     "arch": "X64",
@@ -8340,6 +8550,14 @@
     "section": "unity"
   },
   {
+    "name": "Thief Simulator",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "thief-simulator",
+    "section": "unity"
+  },
+  {
     "name": "Timelie",
     "slug": "unityengine",
     "arch": "X64",
@@ -8397,6 +8615,44 @@
     "arch": "X64",
     "status": "construction",
     "id": "totally-reliable-delivery-service",
+    "section": "unity"
+  },
+  {
+    "name": "Ultimate Chicken Horse",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "ultimate-chicken-horse",
+    "notes": "Swapchain Encoding: Gamma. Not very impactful HDR.",
+    "source_key": "unity:ultimate-chicken-horse",
+    "section": "unity"
+  },
+  {
+    "name": "Untitled Goose Game",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "untitled-goose-game",
+    "notes": "Enable Swapchain Proxy. Not very impactful HDR.",
+    "source_key": "unity:untitled-goose-game",
+    "section": "unity"
+  },
+  {
+    "name": "Vampire Survivors",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "construction",
+    "id": "vampire-survivors",
+    "notes": "Swapchain Encoding: Gamma. Partially works, sprites limit HDR.",
+    "source_key": "unity:vampire-survivors",
+    "section": "unity"
+  },
+  {
+    "name": "White Knuckle",
+    "slug": "unityengine",
+    "arch": "X64",
+    "status": "working",
+    "id": "white-knuckle",
     "section": "unity"
   },
   {

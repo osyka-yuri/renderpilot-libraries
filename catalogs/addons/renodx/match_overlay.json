@@ -437,6 +437,9 @@
   "blackwind": {
     "game_target_ids": ["blackwind"]
   },
+  "blasphemous": {
+    "game_target_ids": ["blasphemous"]
+  },
   "blazblue-entropy-effect": {
     "game_target_ids": ["blazblue-entropy-effect"]
   },
@@ -445,6 +448,9 @@
   },
   "bloody-hell": {
     "game_target_ids": ["bloody-hell"]
+  },
+  "bloons-td-6": {
+    "game_target_ids": ["bloons-td-6"]
   },
   "blue-prince": {
     "game_target_ids": ["blue-prince"]
@@ -485,6 +491,9 @@
   },
   "bright-memory-infinite": {
     "game_target_ids": ["bright-memory-infinite"]
+  },
+  "broken-pieces": {
+    "game_target_ids": ["broken-pieces"]
   },
   "bubsy-4d": {
     "game_target_ids": ["bubsy-4d"]
@@ -720,6 +729,9 @@
   },
   "darkwood": {
     "game_target_ids": ["darkwood"]
+  },
+  "database-detective-minor-crimes": {
+    "game_target_ids": ["database-detective-minor-crimes"]
   },
   "dave-the-diver": {
     "game_target_ids": ["dave-the-diver"]
@@ -1089,6 +1101,13 @@
   "far-lone-sails": {
     "game_target_ids": ["far-lone-sails"]
   },
+  "farming-simulator-25": {
+    "external": {
+      "url": "https://www.nexusmods.com/farmingsimulator25/mods/230",
+      "label_key": "renodx.external.nexus"
+    },
+    "game_target_ids": ["farming-simulator-25"]
+  },
   "fast-food-simulator": {
     "game_target_ids": ["fast-food-simulator"]
   },
@@ -1277,6 +1296,9 @@
     "download_url": "https://github.com/RankFTW/renodx/releases/download/snapshot/renodx-greedfall2.addon64",
     "game_target_ids": ["greedfall-the-dying-world"]
   },
+  "green-hell": {
+    "game_target_ids": ["green-hell"]
+  },
   "grim-dawn": {
     "game_target_ids": ["grim-dawn"]
   },
@@ -1432,6 +1454,9 @@
   "hyper-light-breaker": {
     "game_target_ids": ["hyper-light-breaker"]
   },
+  "i-have-no-mouth-and-i-must-scream": {
+    "game_target_ids": ["i-have-no-mouth-and-i-must-scream"]
+  },
   "i-know-a-guy-shady-life-simulator": {
     "game_target_ids": ["i-know-a-guy-shady-life-simulator"]
   },
@@ -1464,6 +1489,9 @@
   },
   "inscryption": {
     "game_target_ids": ["inscryption"]
+  },
+  "inside": {
+    "game_target_ids": ["inside"]
   },
   "inzoi": {
     "game_target_ids": ["inzoi"]
@@ -1805,6 +1833,13 @@
   "miasma-chronicles": {
     "game_target_ids": ["miasma-chronicles"]
   },
+  "microsoft-flight-simulator-2024": {
+    "external": {
+      "url": "https://discord.com/invite/renodx",
+      "label_key": "renodx.external.discord"
+    },
+    "game_target_ids": ["microsoft-flight-simulator-2024"]
+  },
   "middle-earth-shadow-of-war": {
     "game_target_ids": ["middle-earth-shadow-of-war"]
   },
@@ -1877,6 +1912,9 @@
   },
   "my-friendly-neighborhood": {
     "game_target_ids": ["my-friendly-neighborhood"]
+  },
+  "my-summer-car": {
+    "game_target_ids": ["my-summer-car"]
   },
   "mycopunk": {
     "game_target_ids": ["mycopunk"]
@@ -1984,6 +2022,9 @@
   "node-the-last-favor-of-the-antarii": {
     "game_target_ids": ["node-the-last-favor-of-the-antarii"]
   },
+  "nomad-drive": {
+    "game_target_ids": ["nomad-drive"]
+  },
   "normal-golf-game": {
     "game_target_ids": ["normal-golf-game"]
   },
@@ -2069,6 +2110,9 @@
   "palworld": {
     "game_target_ids": ["palworld"]
   },
+  "papers-please": {
+    "game_target_ids": ["papers-please"]
+  },
   "parkitect": {
     "game_target_ids": ["parkitect"]
   },
@@ -2120,6 +2164,9 @@
   "phoenix-point": {
     "game_target_ids": ["phoenix-point"]
   },
+  "phoenix-wright-ace-attorney-trilogy": {
+    "game_target_ids": ["phoenix-wright-ace-attorney-trilogy"]
+  },
   "pih": {
     "game_target_ids": ["pih"]
   },
@@ -2147,6 +2194,9 @@
   "poly-bridge-3": {
     "game_target_ids": ["poly-bridge-3"]
   },
+  "pony-island": {
+    "game_target_ids": ["pony-island"]
+  },
   "pools": {
     "game_target_ids": ["pools"]
   },
@@ -2162,6 +2212,9 @@
   },
   "postal-brain-damaged": {
     "game_target_ids": ["postal-brain-damaged"]
+  },
+  "potion-craft-alchemist-simulator": {
+    "game_target_ids": ["potion-craft-alchemist-simulator"]
   },
   "powerwash-simulator": {
     "game_target_ids": ["powerwash-simulator"]
@@ -2196,6 +2249,9 @@
   "raidou-remastered-the-mystery-of-the-soulless-army": {
     "download_url": "https://marat569.github.io/renodx/renodx-raidou.addon64",
     "game_target_ids": ["raidou-remastered-the-mystery-of-the-soulless-army"]
+  },
+  "rain-world": {
+    "game_target_ids": ["rain-world"]
   },
   "ready-or-not": {
     "game_target_ids": ["ready-or-not"]
@@ -2273,6 +2329,9 @@
   },
   "restory-chill-electronics-repairs": {
     "game_target_ids": ["restory-chill-electronics-repairs"]
+  },
+  "return-of-the-obra-dinn": {
+    "game_target_ids": ["return-of-the-obra-dinn"]
   },
   "returnal": {
     "game_target_ids": ["returnal"]
@@ -2418,6 +2477,9 @@
   "shape-of-dreams": {
     "game_target_ids": ["shape-of-dreams"]
   },
+  "shellshock-live": {
+    "game_target_ids": ["shellshock-live"]
+  },
   "shift-87": {
     "game_target_ids": ["shift-87"]
   },
@@ -2562,6 +2624,9 @@
   },
   "star-wars-galactic-racertm": {
     "game_target_ids": ["star-wars-galactic-racer"]
+  },
+  "star-wars-jedi-fallen-ordertm": {
+    "game_target_ids": ["star-wars-jedi-fallen-order"]
   },
   "star-wars-jedi-survivor": {
     "game_target_ids": ["jedi-survivor"]
@@ -2739,6 +2804,9 @@
   "terratech": {
     "game_target_ids": ["terratech"]
   },
+  "thalassomania": {
+    "game_target_ids": ["thalassomania"]
+  },
   "the-alters": {
     "game_target_ids": ["the-alters"]
   },
@@ -2756,6 +2824,9 @@
   },
   "the-callisto-protocol": {
     "game_target_ids": ["the-callisto-protocol"]
+  },
+  "the-chant": {
+    "game_target_ids": ["the-chant"]
   },
   "the-dungeon-of-naheulbeuk-the-amulet-of-chaos": {
     "game_target_ids": ["the-dungeon-of-naheulbeuk-the-amulet-of-chaos"]
@@ -2928,6 +2999,9 @@
   "the-rogue-prince-of-persia": {
     "game_target_ids": ["the-rogue-prince-of-persia"]
   },
+  "the-room": {
+    "game_target_ids": ["the-room"]
+  },
   "the-room-4-old-sins": {
     "game_target_ids": ["the-room-4-old-sins"]
   },
@@ -2936,6 +3010,10 @@
   },
   "the-room-two": {
     "game_target_ids": ["the-room-two"]
+  },
+  "the-saboteur": {
+    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-saboteur.addon32",
+    "game_target_ids": ["the-saboteur"]
   },
   "the-seance-of-blake-manor": {
     "game_target_ids": ["the-seance-of-blake-manor"]
@@ -2977,6 +3055,9 @@
   "the-witness": {
     "game_target_ids": ["the-witness"]
   },
+  "thief-simulator": {
+    "game_target_ids": ["thief-simulator"]
+  },
   "threshold": {
     "game_target_ids": ["threshold"]
   },
@@ -3013,6 +3094,10 @@
   },
   "tom-clancy-s-splinter-cell-blacklist": {
     "game_target_ids": ["splinter-cell-blacklist"]
+  },
+  "tom-clancy-s-splinter-cell-chaos-theory": {
+    "download_url": "https://github.com/ldavid1994/renodx/releases/download/snapshot/renodx-scct.addon32",
+    "game_target_ids": ["tom-clancy-s-splinter-cell-chaos-theory"]
   },
   "tomb-raider": {
     "game_target_ids": ["tomb-raider"]
@@ -3096,6 +3181,9 @@
   "two-point-hospital": {
     "game_target_ids": ["two-point-hospital"]
   },
+  "ultimate-chicken-horse": {
+    "game_target_ids": ["ultimate-chicken-horse"]
+  },
   "ultrakill": {
     "game_target_ids": ["ultrakill"]
   },
@@ -3114,6 +3202,9 @@
   "until-dawn": {
     "game_target_ids": ["until-dawn"]
   },
+  "untitled-goose-game": {
+    "game_target_ids": ["untitled-goose-game"]
+  },
   "v-rising": {
     "game_target_ids": ["v-rising"]
   },
@@ -3122,6 +3213,9 @@
   },
   "valley": {
     "game_target_ids": ["valley"]
+  },
+  "vampire-survivors": {
+    "game_target_ids": ["vampire-survivors"]
   },
   "vampire-the-masquerade-bloodlines-2": {
     "game_target_ids": ["vampire-the-masquerade-bloodlines-2"]
@@ -3209,6 +3303,9 @@
   "whisper-of-the-house": {
     "game_target_ids": ["whisper-of-the-house"]
   },
+  "white-knuckle": {
+    "game_target_ids": ["white-knuckle"]
+  },
   "wicked-seed": {
     "game_target_ids": ["wicked-seed"]
   },
@@ -3276,13 +3373,5 @@
   "zenless-zone-zero": {
     "download_url": "https://github.com/skyline330/renodx/releases/download/snapshot/renodx-zenless-zone-zero.addon64",
     "game_target_ids": ["zenless-zone-zero"]
-  },
-  "the-saboteur": {
-    "download_url": "https://github.com/CommandGenius/renodx/releases/download/snapshot/renodx-saboteur.addon32",
-    "game_target_ids": ["the-saboteur"]
-  },
-  "tom-clancy-s-splinter-cell-chaos-theory": {
-    "download_url": "https://github.com/ldavid1994/renodx/releases/download/snapshot/renodx-scct.addon32",
-    "game_target_ids": ["tom-clancy-s-splinter-cell-chaos-theory"]
   }
 }

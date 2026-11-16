@@ -285,7 +285,7 @@
     "title": "A Way Out",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Lacks testing."
+    "note": "SDR to HDR. Lacks testing."
   },
   {
     "source_key": "ue-extended:abiotic-factor",
@@ -301,7 +301,7 @@
     "title": "ABZÛ",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On `B8G8R8A8_TYPELESS` `Output Size` for 100% render resolution or `Output Ratio` for other percentages."
+    "note": "SDR to HDR `B8G8R8A8_TYPELESS` `Output Size` for 100% render resolution or `Output Ratio` for other percentages."
   },
   {
     "source_key": "ue-extended:assetto-corsa-competizione",
@@ -325,7 +325,7 @@
     "title": "Astroneer",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Grading and flickering issues."
+    "note": "SDR to HDR. Grading and flickering issues."
   },
   {
     "source_key": "ue-extended:avowed",
@@ -349,7 +349,7 @@
     "title": "BLACKTAIL",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:bodycam",
@@ -366,6 +366,14 @@
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Native HDR"
+  },
+  {
+    "source_key": "ue-extended:broken-pieces",
+    "game_id": "broken-pieces",
+    "title": "Broken Pieces",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini"
   },
   {
     "source_key": "ue-extended:chained-together",
@@ -389,7 +397,7 @@
     "title": "Chromatic Conundrum",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: Off. Broken rendering when enabled."
+    "note": "Engine.ini"
   },
   {
     "source_key": "ue-extended:code-vein-ii",
@@ -453,7 +461,7 @@
     "title": "Deep Rock Galactic: Rogue Core",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Native HDR is broken."
+    "note": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`. Native HDR is broken."
   },
   {
     "source_key": "ue-extended:deliver-us-the-moon",
@@ -461,7 +469,7 @@
     "title": "Deliver Us The Moon",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:destroy-all-humans",
@@ -469,7 +477,7 @@
     "title": "Destroy All Humans",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:destroy-all-humans-2-reprobed",
@@ -493,7 +501,7 @@
     "title": "End of Abyss",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Engine.ini HDR can't be used due to issues with saving game progress."
+    "note": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`. Engine.ini HDR can't be used due to issues with saving game progress."
   },
   {
     "source_key": "ue-extended:escape-the-backrooms",
@@ -501,7 +509,7 @@
     "title": "Escape the Backrooms",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Lacks testing."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`. Lacks testing."
   },
   {
     "source_key": "ue-extended:eternal-strands",
@@ -509,7 +517,7 @@
     "title": "Eternal Strands",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`."
+    "note": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`."
   },
   {
     "source_key": "ue-extended:everwind",
@@ -533,7 +541,7 @@
     "title": "FlyKnight Enhanced Edition",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`. Multiple in-game filters change HDR presentation, Lacks testing."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`. Multiple in-game filters change HDR presentation, Lacks testing."
   },
   {
     "source_key": "ue-extended:frostpunk-2",
@@ -541,7 +549,7 @@
     "title": "Frostpunk 2",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. UI slider controls paper white."
+    "note": "SDR to HDR. UI slider controls paper white."
   },
   {
     "source_key": "ue-extended:garfield-escape-from-monday",
@@ -565,7 +573,7 @@
     "title": "Ghostrunner",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:ghostrunner-2",
@@ -573,7 +581,7 @@
     "title": "Ghostrunner 2",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Tonemapping issues, Lacks testing."
+    "note": "SDR to HDR. Tonemapping issues, Lacks testing."
   },
   {
     "source_key": "ue-extended:ghostwire-tokyo",
@@ -589,7 +597,7 @@
     "title": "Goat Simulator 3",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:gothic-1-remake",
@@ -605,7 +613,7 @@
     "title": "Grand Theft Auto: The Trilogy – The Definitive Edition (III, Vice City, San Andreas)",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:grounded-2",
@@ -645,7 +653,7 @@
     "title": "Hi-Fi Rush",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On as Engine.ini edits overexposed the shading. Gameplay and highlights are clamped to UI brightness. `Upgrade Copy Destinations` `Off` `R8G8R8A8_TYPELESS` `Any Size`"
+    "note": "SDR to HDR as Engine.ini edits overexposed the shading. Gameplay and highlights are clamped to UI brightness. `Upgrade Copy Destinations` `Off` `R8G8R8A8_TYPELESS` `Any Size`"
   },
   {
     "source_key": "ue-extended:hydroneer",
@@ -653,7 +661,7 @@
     "title": "Hydroneer",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:inzoi",
@@ -669,7 +677,7 @@
     "title": "It Takes Two",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:jusant",
@@ -701,7 +709,7 @@
     "title": "Like a Dragon: Ishin!",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `R8G8B8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`."
+    "note": "SDR to HDR, `R8G8B8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`."
   },
   {
     "source_key": "ue-extended:little-nightmares",
@@ -709,7 +717,7 @@
     "title": "Little Nightmares",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:little-nightmares-enhanced",
@@ -717,7 +725,7 @@
     "title": "Little Nightmares Enhanced",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:little-nightmares-ii",
@@ -725,7 +733,7 @@
     "title": "Little Nightmares II",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Grading issues."
+    "note": "SDR to HDR. Grading issues."
   },
   {
     "source_key": "ue-extended:little-nightmares-ii-enhanced",
@@ -733,7 +741,7 @@
     "title": "Little Nightmares II Enhanced",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Grading issues."
+    "note": "SDR to HDR. Grading issues."
   },
   {
     "source_key": "ue-extended:lords-of-the-fallen",
@@ -797,7 +805,7 @@
     "title": "Motor Town: Behind The Wheel",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Sliders do not change in real-time."
+    "note": "SDR to HDR. Sliders do not change in real-time."
   },
   {
     "source_key": "ue-extended:nikoderiko-the-magical-world",
@@ -821,7 +829,7 @@
     "title": "Pacific Drive",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:palworld",
@@ -829,7 +837,7 @@
     "title": "Palworld",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Lacks testing."
+    "note": "SDR to HDR. Lacks testing."
   },
   {
     "source_key": "ue-extended:persona-3-reload",
@@ -837,7 +845,7 @@
     "title": "Persona 3 Reload",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:pih",
@@ -845,7 +853,7 @@
     "title": "Pih",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:quarantine-zone-the-last-check",
@@ -885,7 +893,7 @@
     "title": "Scorn",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:sifu",
@@ -893,7 +901,7 @@
     "title": "Sifu",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Limited brightness."
+    "note": "SDR to HDR. Limited brightness."
   },
   {
     "source_key": "ue-extended:silent-hill-townfall",
@@ -925,7 +933,7 @@
     "title": "SPRAWL",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:s-t-a-l-k-e-r-2-heart-of-chornobyl",
@@ -944,6 +952,14 @@
     "note": "Native HDR"
   },
   {
+    "source_key": "ue-extended:star-wars-jedi-fallen-ordertm",
+    "game_id": "star-wars-jedi-fallen-ordertm",
+    "title": "STAR WARS Jedi: Fallen Order™",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Use the Luma Framework mod below."
+  },
+  {
     "source_key": "ue-extended:star-wars-zero-companytm",
     "game_id": "star-wars-zero-companytm",
     "title": "STAR WARS Zero Company™",
@@ -957,7 +973,7 @@
     "title": "State Of Decay 2",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`, `R10G10B10A2_UNORM` `Output Size`."
   },
   {
     "source_key": "ue-extended:stellar-blade",
@@ -965,7 +981,7 @@
     "title": "Stellar Blade",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Disable in game HDR."
+    "note": "SDR to HDR. Disable in game HDR."
   },
   {
     "source_key": "ue-extended:still-wakes-the-deep",
@@ -981,7 +997,7 @@
     "title": "Stray",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:subnautica-2",
@@ -1005,7 +1021,7 @@
     "title": "The Alters",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:the-blood-of-dawnwalker",
@@ -1014,6 +1030,14 @@
     "section": "ue-extended",
     "profile_source": "ue-extended",
     "note": "Engine.ini"
+  },
+  {
+    "source_key": "ue-extended:the-chant",
+    "game_id": "the-chant",
+    "title": "The Chant",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini. Use DX11."
   },
   {
     "source_key": "ue-extended:the-enjenir-the-engineering-physics-building-simulator",
@@ -1029,7 +1053,7 @@
     "title": "The First Berserker: Khazan",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On. Tonemapping issues, Lacks testing."
+    "note": "SDR to HDR. Tonemapping issues, Lacks testing."
   },
   {
     "source_key": "ue-extended:the-forgotten-city",
@@ -1037,7 +1061,7 @@
     "title": "The Forgotten City",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:the-idolm-ster-starlit-season",
@@ -1045,7 +1069,15 @@
     "title": "The iDOLM@STER: Starlit Season",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On as Engine.ini edits overexposed the shading. DX11; refused to boot up DX12 as Low Level Fatal Error Line: 266 Camped to UI brightness has issues with Commu's blue lighting, as well for the stage lighting on the top. Small cameras with multiple idols during certain Commus does not highlight the HDR. `Upgrade Copy Destinations` `Off` `B8G8R8A8_TYPELESS` `Any Size`"
+    "note": "SDR to HDR as Engine.ini edits overexposed the shading. DX11; refused to boot up DX12 as Low Level Fatal Error Line: 266 Camped to UI brightness has issues with Commu's blue lighting, as well for the stage lighting on the top. Small cameras with multiple idols during certain Commus does not highlight the HDR. `Upgrade Copy Destinations` `Off` `B8G8R8A8_TYPELESS` `Any Size`"
+  },
+  {
+    "source_key": "ue-extended:the-midnight-walk",
+    "game_id": "the-midnight-walk",
+    "title": "The Midnight Walk",
+    "section": "ue-extended",
+    "profile_source": "ue-extended",
+    "note": "Engine.ini"
   },
   {
     "source_key": "ue-extended:threshold",
@@ -1053,7 +1085,7 @@
     "title": "THRESHOLD",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `B8G8R8A8_TYPELESS` `Output Size`."
+    "note": "SDR to HDR, `B8G8R8A8_TYPELESS` `Output Size`."
   },
   {
     "source_key": "ue-extended:tokyo-xtreme-racer",
@@ -1069,7 +1101,7 @@
     "title": "Tormented Souls 2",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On, `R10G10B10A2_UNORM` `Output Size`. Turn off in game HDR."
+    "note": "SDR to HDR, `R10G10B10A2_UNORM` `Output Size`. Turn off in game HDR."
   },
   {
     "source_key": "ue-extended:until-dawn",
@@ -1085,7 +1117,7 @@
     "title": "VHOLUME",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On"
+    "note": "SDR to HDR"
   },
   {
     "source_key": "ue-extended:what-remains-of-edith-finch",
@@ -1093,7 +1125,7 @@
     "title": "What Remains of Edith Finch",
     "section": "ue-extended",
     "profile_source": "ue-extended",
-    "note": "Upgrade Path: On <details><summary>High DPI scaling users</summary>The game may be clamped for you, even if DPI is overridden to the application. Set system wide DPI scaling to 100% and launch the game once. After that you can bring DPI scaling back. </details>"
+    "note": "SDR to HDR <details><summary>High DPI scaling users</summary>The game may be clamped for you, even if DPI is overridden to the application. Set system wide DPI scaling to 100% and launch the game once. After that you can bring DPI scaling back. </details>"
   },
   {
     "source_key": "unreal:abiotic-factor",
@@ -2640,6 +2672,14 @@
     "note": "32-bit."
   },
   {
+    "source_key": "unity:blasphemous",
+    "game_id": "blasphemous",
+    "title": "Blasphemous",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Enable Swapchain Proxy, Encoding: Gamma."
+  },
+  {
     "source_key": "unity:blazblue-entropy-effect",
     "game_id": "blazblue-entropy-effect",
     "title": "BlazBlue Entropy Effect",
@@ -2654,6 +2694,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT. Both compatibility offsets +1"
+  },
+  {
+    "source_key": "unity:bloons-td-6",
+    "game_id": "bloons-td-6",
+    "title": "Bloons TD 6",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS to Any Size."
   },
   {
     "source_key": "unity:bo-path-of-the-teal-lotus",
@@ -2814,6 +2862,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Enable Swapchain Proxy"
+  },
+  {
+    "source_key": "unity:database-detective-minor-crimes",
+    "game_id": "database-detective-minor-crimes",
+    "title": "Database Detective: Minor Crimes",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Works out of the box, but very brightness limited (peaks around 220 nits)."
   },
   {
     "source_key": "unity:dave-the-diver",
@@ -3208,6 +3264,14 @@
     "note": "Upgrade R11G11B10_FLOAT to Output Ratio"
   },
   {
+    "source_key": "unity:green-hell",
+    "game_id": "green-hell",
+    "title": "Green Hell",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Avoid Exclusive Fullscreen."
+  },
+  {
     "source_key": "unity:gunfire-reborn",
     "game_id": "gunfire-reborn",
     "title": "Gunfire Reborn",
@@ -3296,6 +3360,14 @@
     "note": "Upgrade R11G11B10_FLOAT"
   },
   {
+    "source_key": "unity:i-have-no-mouth-and-i-must-scream",
+    "game_id": "i-have-no-mouth-and-i-must-scream",
+    "title": "I Have No Mouth, and I Must Scream",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Pre-rendered graphics limit HDR."
+  },
+  {
     "source_key": "unity:i-know-a-guy-shady-life-simulator",
     "game_id": "i-know-a-guy-shady-life-simulator",
     "title": "I Know a Guy: Shady Life Simulator",
@@ -3334,6 +3406,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Swapchain Encoding: Gamma, Upgrade `R8G8B8A8_TYPELESS` to `Any Size`."
+  },
+  {
+    "source_key": "unity:inside",
+    "game_id": "inside",
+    "title": "INSIDE",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Use the Luma Framework mod below"
   },
   {
     "source_key": "unity:jotunnslayer-hordes-of-hel",
@@ -3600,6 +3680,14 @@
     "note": "Upgrade R11G11B10_FLOAT"
   },
   {
+    "source_key": "unity:my-summer-car",
+    "game_id": "my-summer-car",
+    "title": "My Summer Car",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Disable in-game HDR. Enable Swapchain Proxy, Encoding: Gamma."
+  },
+  {
     "source_key": "unity:necropolis-brutal-edition",
     "game_id": "necropolis-brutal-edition",
     "title": "NECROPOLIS: BRUTAL EDITION",
@@ -3752,6 +3840,14 @@
     "note": "Upgrade R11G11B10_FLOAT"
   },
   {
+    "source_key": "unity:papers-please",
+    "game_id": "papers-please",
+    "title": "Papers, Please",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Does not really work, output is clamped."
+  },
+  {
     "source_key": "unity:party-club",
     "game_id": "party-club",
     "title": "Party Club",
@@ -3773,7 +3869,15 @@
     "title": "Phasmophobia",
     "section": "unity",
     "profile_source": "unityengine",
-    "note": "Upgrade ??????????????"
+    "note": "Needs testing."
+  },
+  {
+    "source_key": "unity:phoenix-wright-ace-attorney-trilogy",
+    "game_id": "phoenix-wright-ace-attorney-trilogy",
+    "title": "Phoenix Wright: Ace Attorney Trilogy",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Enable Swapchain Proxy, Encoding: Gamma. Artwork is what it is."
   },
   {
     "source_key": "unity:pillars-of-eternity",
@@ -3800,6 +3904,22 @@
     "note": "Enable Swapchain Proxy"
   },
   {
+    "source_key": "unity:pony-island",
+    "game_id": "pony-island",
+    "title": "Pony Island",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Enable Swapchain Proxy, Encoding: Gamma. Not very impactful HDR."
+  },
+  {
+    "source_key": "unity:potion-craft-alchemist-simulator",
+    "game_id": "potion-craft-alchemist-simulator",
+    "title": "Potion Craft: Alchemist Simulator",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Custom rendering, broken with the mod."
+  },
+  {
     "source_key": "unity:praey-for-the-gods",
     "game_id": "praey-for-the-gods",
     "title": "Praey for the Gods",
@@ -3824,6 +3944,14 @@
     "note": "Enable Swapchain Proxy, Encoding: Gamma"
   },
   {
+    "source_key": "unity:rain-world",
+    "game_id": "rain-world",
+    "title": "Rain World",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Custom rendering, broken with the mod."
+  },
+  {
     "source_key": "unity:reka",
     "game_id": "reka",
     "title": "REKA",
@@ -3838,6 +3966,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade `R8G8B8A8_TYPELESS` to `Any Size`"
+  },
+  {
+    "source_key": "unity:return-of-the-obra-dinn",
+    "game_id": "return-of-the-obra-dinn",
+    "title": "Return of the Obra Dinn",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Does not work."
   },
   {
     "source_key": "unity:reveil",
@@ -4136,6 +4272,14 @@
     "note": "Enable Swapchain Proxy, Encoding: Gamma"
   },
   {
+    "source_key": "unity:thalassomania",
+    "game_id": "thalassomania",
+    "title": "Thalassomania",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Upgrade R8G8B8A8_TYPELESS to Any Size."
+  },
+  {
     "source_key": "unity:the-first-tree",
     "game_id": "the-first-tree",
     "title": "The First Tree",
@@ -4174,6 +4318,14 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT"
+  },
+  {
+    "source_key": "unity:the-room",
+    "game_id": "the-room",
+    "title": "The Room",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Lacks testing."
   },
   {
     "source_key": "unity:the-room-two",
@@ -4222,6 +4374,30 @@
     "section": "unity",
     "profile_source": "unityengine",
     "note": "Upgrade R11G11B10_FLOAT"
+  },
+  {
+    "source_key": "unity:ultimate-chicken-horse",
+    "game_id": "ultimate-chicken-horse",
+    "title": "Ultimate Chicken Horse",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Not very impactful HDR."
+  },
+  {
+    "source_key": "unity:untitled-goose-game",
+    "game_id": "untitled-goose-game",
+    "title": "Untitled Goose Game",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Enable Swapchain Proxy. Not very impactful HDR."
+  },
+  {
+    "source_key": "unity:vampire-survivors",
+    "game_id": "vampire-survivors",
+    "title": "Vampire Survivors",
+    "section": "unity",
+    "profile_source": "unityengine",
+    "note": "Swapchain Encoding: Gamma. Partially works, sprites limit HDR."
   },
   {
     "source_key": "unity:touhou-dystopian",

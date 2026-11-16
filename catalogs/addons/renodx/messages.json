@@ -658,6 +658,22 @@
       }
     },
     {
+      "id": "renodx.ue.extended.broken.pieces.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.chained.together.1",
       "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
       "kind": "engine_ini",
@@ -707,18 +723,18 @@
     },
     {
       "id": "renodx.ue.extended.chromatic.conundrum.1",
-      "fallback_text": "Upgrade Path is incompatible with this title and causes broken rendering.",
-      "kind": "warning",
-      "context": "guidance.warning",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
       "translations": {
-        "de": "Der Upgrade Path ist mit diesem Titel inkompatibel und führt zu fehlerhafter Darstellung.",
-        "es": "Upgrade Path es incompatible con este juego y provoca fallos en el renderizado.",
-        "fr": "L'Upgrade Path est incompatible avec ce jeu et entraîne un affichage défectueux.",
-        "ja": "Upgrade Path はこのタイトルと互換性がなく、描画の破綻を引き起こします。",
-        "pt-BR": "O Upgrade Path é incompatível com este título e causa renderização corrompida.",
-        "ru": "Upgrade Path несовместим с этой игрой и вызывает ошибки рендеринга.",
-        "zh-Hans": "Upgrade Path 与此游戏不兼容，会导致渲染损坏。",
-        "zh-Hant": "Upgrade Path 與此遊戲不相容，會導致渲染損壞。"
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
       }
     },
     {
@@ -1538,6 +1554,22 @@
       }
     },
     {
+      "id": "renodx.ue.extended.star.wars.jedi.fallen.ordertm.1",
+      "fallback_text": "Use the dedicated Luma Framework mod for full correction.",
+      "kind": "external_tool",
+      "context": "guidance.external_tool",
+      "translations": {
+        "de": "Verwende die dedizierte Luma-Framework-Mod für eine vollständige Korrektur.",
+        "es": "Usa el mod dedicado de Luma Framework para una corrección completa.",
+        "fr": "Utilisez le mod dédié Luma Framework pour une correction complète.",
+        "ja": "完全な補正を行うには、専用の Luma Framework Mod を使用してください。",
+        "pt-BR": "Use o mod dedicado do Luma Framework para uma correção completa.",
+        "ru": "Используйте специальный мод Luma Framework для полной коррекции.",
+        "zh-Hans": "请使用专用的 Luma Framework Mod 以获得完全修正。",
+        "zh-Hant": "請使用專用的 Luma Framework Mod 以獲得完整修正。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.star.wars.zero.companytm.1",
       "fallback_text": "Enable the game's native HDR.",
       "kind": "game_setting",
@@ -1618,6 +1650,38 @@
       }
     },
     {
+      "id": "renodx.ue.extended.the.chant.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.the.chant.2",
+      "fallback_text": "Launch the game with DirectX 11.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Starte das Spiel mit DirectX 11.",
+        "es": "Inicia el juego con DirectX 11.",
+        "fr": "Lancez le jeu avec DirectX 11.",
+        "ja": "DirectX 11 でゲームを起動してください。",
+        "pt-BR": "Inicie o jogo com DirectX 11.",
+        "ru": "Запустите игру с параметром DirectX 11.",
+        "zh-Hans": "请使用 DirectX 11 启动游戏。",
+        "zh-Hant": "請使用 DirectX 11 啟動遊戲。"
+      }
+    },
+    {
       "id": "renodx.ue.extended.the.enjenir.the.engineering.physics.building.simulator.1",
       "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
       "kind": "engine_ini",
@@ -1647,6 +1711,22 @@
         "ru": "Освещение в некоторых сценах общения и на сцене остаётся ограниченным по яркости или не создаёт HDR-хайлайтов.",
         "zh-Hans": "部分交流剧情与舞台光照仍受限制，或无法产生 HDR 高光。",
         "zh-Hant": "部分交流劇情與舞台光照仍受限制，或無法產生 HDR 高光。"
+      }
+    },
+    {
+      "id": "renodx.ue.extended.the.midnight.walk.1",
+      "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+      "kind": "engine_ini",
+      "context": "guidance.engine_ini",
+      "translations": {
+        "de": "Füge diese Einstellungen für den erweiterten UE-HDR-Pfad zu Engine.ini hinzu.",
+        "es": "Añade estos ajustes a Engine.ini para la ruta HDR extendida de Unreal Engine.",
+        "fr": "Ajoutez ces paramètres à Engine.ini pour le chemin Unreal Engine Extended HDR.",
+        "ja": "UE Extended の HDR パスを利用するには、これらの設定を Engine.ini に追加してください。",
+        "pt-BR": "Adicione estas configurações ao Engine.ini para o caminho HDR do UE Extended.",
+        "ru": "Добавьте эти настройки в Engine.ini для расширенного HDR-пути Unreal Engine.",
+        "zh-Hans": "请将这些设置添加到 Engine.ini 以使用 UE Extended HDR 路径。",
+        "zh-Hant": "請將這些設定加入 Engine.ini 以使用 UE Extended HDR 路徑。"
       }
     },
     {
@@ -1823,6 +1903,22 @@
         "ru": "Запустите игру в режиме DirectX 11.",
         "zh-Hans": "请使用 DirectX 11 选项启动游戏。",
         "zh-Hant": "請使用 DirectX 11 選項啟動遊戲。"
+      }
+    },
+    {
+      "id": "renodx.unity.database.detective.minor.crimes.1",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
       }
     },
     {
@@ -2034,6 +2130,38 @@
       }
     },
     {
+      "id": "renodx.unity.i.have.no.mouth.and.i.must.scream.2",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
+      }
+    },
+    {
+      "id": "renodx.unity.inside.1",
+      "fallback_text": "Use the dedicated Luma Framework mod for full correction.",
+      "kind": "external_tool",
+      "context": "guidance.external_tool",
+      "translations": {
+        "de": "Verwende die dedizierte Luma-Framework-Mod für eine vollständige Korrektur.",
+        "es": "Usa el mod dedicado de Luma Framework para una corrección completa.",
+        "fr": "Utilisez le mod dédié Luma Framework pour une correction complète.",
+        "ja": "完全な補正を行うには、専用の Luma Framework Mod を使用してください。",
+        "pt-BR": "Use o mod dedicado do Luma Framework para uma correção completa.",
+        "ru": "Используйте специальный мод Luma Framework для полной коррекции.",
+        "zh-Hans": "请使用专用的 Luma Framework Mod 以获得完全修正。",
+        "zh-Hant": "請使用專用的 Luma Framework Mod 以獲得完整修正。"
+      }
+    },
+    {
       "id": "renodx.unity.jotunnslayer.hordes.of.hel.2",
       "fallback_text": "Tonemapping and color-grading changes do not appear in real time.",
       "kind": "compatibility",
@@ -2095,6 +2223,22 @@
         "ru": "Перезапустите уровень, чтобы обновить тонмаппинг и цветокоррекцию.",
         "zh-Hans": "重新开始关卡以刷新色调映射和色彩分级。",
         "zh-Hant": "重新開始關卡以重新整理色調映射與色彩分級。"
+      }
+    },
+    {
+      "id": "renodx.unity.my.summer.car.2",
+      "fallback_text": "Disable the game's native HDR.",
+      "kind": "game_setting",
+      "context": "guidance.game_setting",
+      "translations": {
+        "de": "Deaktiviere das native HDR des Spiels.",
+        "es": "Desactiva el HDR nativo del juego.",
+        "fr": "Désactivez le HDR natif du jeu.",
+        "ja": "ゲームのネイティブ HDR を無効にしてください。",
+        "pt-BR": "Desative o HDR nativo do jogo.",
+        "ru": "Отключите нативный HDR в игре.",
+        "zh-Hans": "请禁用游戏的原生 HDR。",
+        "zh-Hant": "請停用遊戲的原生 HDR。"
       }
     },
     {
@@ -2162,6 +2306,22 @@
       }
     },
     {
+      "id": "renodx.unity.papers.please.2",
+      "fallback_text": "The game is not yet fully playable with this profile.",
+      "kind": "warning",
+      "context": "guidance.warning",
+      "translations": {
+        "de": "Das Spiel ist mit diesem Profil noch nicht vollständig spielbar.",
+        "es": "El juego aún no es completamente jugable con este perfil.",
+        "fr": "Le jeu n'est pas encore pleinement jouable avec ce profil.",
+        "ja": "このプロファイルでは、まだ完全にプレイ可能な状態ではありません。",
+        "pt-BR": "O jogo ainda não está totalmente jogável com este perfil.",
+        "ru": "С этим профилем игра пока не полностью готова к прохождению.",
+        "zh-Hans": "使用此配置文件时，游戏尚无法完全正常游玩。",
+        "zh-Hant": "使用此設定檔時，遊戲尚無法完全正常遊玩。"
+      }
+    },
+    {
       "id": "renodx.unity.peak.1",
       "fallback_text": "Launch the game with DirectX 11.",
       "kind": "compatibility",
@@ -2175,6 +2335,70 @@
         "ru": "Запустите игру с параметром DirectX 11.",
         "zh-Hans": "请使用 DirectX 11 启动游戏。",
         "zh-Hant": "請使用 DirectX 11 啟動遊戲。"
+      }
+    },
+    {
+      "id": "renodx.unity.phasmophobia.1",
+      "fallback_text": "This configuration has limited playtesting.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Diese Konfiguration wurde nur eingeschränkt im Spiel getestet.",
+        "es": "Esta configuración cuenta con pruebas de juego limitadas.",
+        "fr": "Cette configuration a fait l'objet de tests en jeu limités.",
+        "ja": "この構成は十分なプレイテストが行われていません。",
+        "pt-BR": "Esta configuração passou por testes limitados de jogabilidade.",
+        "ru": "Эта конфигурация прошла лишь ограниченное игровое тестирование.",
+        "zh-Hans": "此配置的实际游玩测试较为有限。",
+        "zh-Hant": "此組態的實際遊玩測試相當有限。"
+      }
+    },
+    {
+      "id": "renodx.unity.phoenix.wright.ace.attorney.trilogy.2",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
+      }
+    },
+    {
+      "id": "renodx.unity.pony.island.2",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
+      }
+    },
+    {
+      "id": "renodx.unity.potion.craft.alchemist.simulator.1",
+      "fallback_text": "The game is not yet fully playable with this profile.",
+      "kind": "warning",
+      "context": "guidance.warning",
+      "translations": {
+        "de": "Das Spiel ist mit diesem Profil noch nicht vollständig spielbar.",
+        "es": "El juego aún no es completamente jugable con este perfil.",
+        "fr": "Le jeu n'est pas encore pleinement jouable avec ce profil.",
+        "ja": "このプロファイルでは、まだ完全にプレイ可能な状態ではありません。",
+        "pt-BR": "O jogo ainda não está totalmente jogável com este perfil.",
+        "ru": "С этим профилем игра пока не полностью готова к прохождению.",
+        "zh-Hans": "使用此配置文件时，游戏尚无法完全正常游玩。",
+        "zh-Hant": "使用此設定檔時，遊戲尚無法完全正常遊玩。"
       }
     },
     {
@@ -2210,6 +2434,22 @@
       }
     },
     {
+      "id": "renodx.unity.rain.world.1",
+      "fallback_text": "The game is not yet fully playable with this profile.",
+      "kind": "warning",
+      "context": "guidance.warning",
+      "translations": {
+        "de": "Das Spiel ist mit diesem Profil noch nicht vollständig spielbar.",
+        "es": "El juego aún no es completamente jugable con este perfil.",
+        "fr": "Le jeu n'est pas encore pleinement jouable avec ce profil.",
+        "ja": "このプロファイルでは、まだ完全にプレイ可能な状態ではありません。",
+        "pt-BR": "O jogo ainda não está totalmente jogável com este perfil.",
+        "ru": "С этим профилем игра пока не полностью готова к прохождению.",
+        "zh-Hans": "使用此配置文件时，游戏尚无法完全正常游玩。",
+        "zh-Hant": "使用此設定檔時，遊戲尚無法完全正常遊玩。"
+      }
+    },
+    {
       "id": "renodx.unity.reset_display_controls",
       "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise.",
       "kind": "game_setting",
@@ -2223,6 +2463,22 @@
         "ru": "Оставляйте настройки яркости, контрастности и гаммы в игре по умолчанию, если в описании игры не указано иное.",
         "zh-Hans": "除非该游戏的备注另有说明，否则请将游戏的亮度、对比度和伽玛设置保持为默认值。",
         "zh-Hant": "除非該遊戲的備註另有說明，否則請將遊戲的亮度、對比度和伽瑪設定保持為預設值。"
+      }
+    },
+    {
+      "id": "renodx.unity.return.of.the.obra.dinn.1",
+      "fallback_text": "The game is not yet fully playable with this profile.",
+      "kind": "warning",
+      "context": "guidance.warning",
+      "translations": {
+        "de": "Das Spiel ist mit diesem Profil noch nicht vollständig spielbar.",
+        "es": "El juego aún no es completamente jugable con este perfil.",
+        "fr": "Le jeu n'est pas encore pleinement jouable avec ce profil.",
+        "ja": "このプロファイルでは、まだ完全にプレイ可能な状態ではありません。",
+        "pt-BR": "O jogo ainda não está totalmente jogável com este perfil.",
+        "ru": "С этим профилем игра пока не полностью готова к прохождению.",
+        "zh-Hans": "使用此配置文件时，游戏尚无法完全正常游玩。",
+        "zh-Hant": "使用此設定檔時，遊戲尚無法完全正常遊玩。"
       }
     },
     {
@@ -2354,6 +2610,22 @@
       }
     },
     {
+      "id": "renodx.unity.the.room.2",
+      "fallback_text": "This configuration has limited playtesting.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Diese Konfiguration wurde nur eingeschränkt im Spiel getestet.",
+        "es": "Esta configuración cuenta con pruebas de juego limitadas.",
+        "fr": "Cette configuration a fait l'objet de tests en jeu limités.",
+        "ja": "この構成は十分なプレイテストが行われていません。",
+        "pt-BR": "Esta configuração passou por testes limitados de jogabilidade.",
+        "ru": "Эта конфигурация прошла лишь ограниченное игровое тестирование.",
+        "zh-Hans": "此配置的实际游玩测试较为有限。",
+        "zh-Hant": "此組態的實際遊玩測試相當有限。"
+      }
+    },
+    {
       "id": "renodx.unity.towaga.among.shadows.2",
       "fallback_text": "Enable post-processing in the game settings.",
       "kind": "game_setting",
@@ -2418,6 +2690,22 @@
       }
     },
     {
+      "id": "renodx.unity.ultimate.chicken.horse.2",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
+      }
+    },
+    {
       "id": "renodx.unity.ultros.1",
       "fallback_text": "Enable color grading in the game settings.",
       "kind": "game_setting",
@@ -2431,6 +2719,22 @@
         "ru": "Включите цветокоррекцию в настройках игры.",
         "zh-Hans": "请在游戏设置中启用色彩分级。",
         "zh-Hant": "請在遊戲設定中啟用色彩分級。"
+      }
+    },
+    {
+      "id": "renodx.unity.untitled.goose.game.2",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
       }
     },
     {
@@ -2463,6 +2767,22 @@
         "ru": "В сетевой игре встаньте на солнце или откройте Графика > Калибровка яркости и подтвердите значение по умолчанию 50, чтобы обновить LUT.",
         "zh-Hans": "多人游戏时，站在阳光下或打开“图形”>“校准亮度”并确认默认值 50 以刷新 LUT。",
         "zh-Hant": "多人遊戲時，站在陽光下或開啟「畫面」>「校準亮度」並確認預設值 50 以重新整理 LUT。"
+      }
+    },
+    {
+      "id": "renodx.unity.vampire.survivors.2",
+      "fallback_text": "Peak brightness remains limited in some content.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die Spitzenhelligkeit bleibt in manchen Inhalten begrenzt.",
+        "es": "El brillo máximo sigue limitado en parte del contenido.",
+        "fr": "La luminosité maximale reste limitée dans certains contenus.",
+        "ja": "一部のコンテンツではピーク輝度が制限されたままになります。",
+        "pt-BR": "O brilho máximo permanece limitado em parte do conteúdo.",
+        "ru": "В части контента пиковая яркость остаётся ограниченной.",
+        "zh-Hans": "部分内容中的峰值亮度仍受限制。",
+        "zh-Hant": "部分內容中的峰值亮度仍受限制。"
       }
     },
     {

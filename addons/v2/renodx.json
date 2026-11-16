@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-08T00:00:00Z",
+  "generated_at": "2026-11-16T00:00:00Z",
   "games": [
     {
       "id": "007-first-light",
@@ -2208,6 +2208,30 @@
       }
     },
     {
+      "id": "farming-simulator-25",
+      "name": "Farming Simulator 25",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2300320",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "farming-simulator-25"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://www.nexusmods.com/farmingsimulator25/mods/230",
+        "message": {
+          "id": "renodx.external.nexus",
+          "fallback_text": "Get the add-on from Nexus Mods, then install the downloaded file."
+        }
+      }
+    },
+    {
       "id": "fate-samurai-remnant",
       "name": "Fate/Samurai Remnant",
       "architecture": "X64",
@@ -3401,6 +3425,30 @@
       ],
       "addon": {
         "slug": "mgsdelta"
+      }
+    },
+    {
+      "id": "microsoft-flight-simulator-2024",
+      "name": "Microsoft Flight Simulator 2024",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2537590",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "microsoft-flight-simulator-2024"
+      },
+      "availability": {
+        "kind": "external",
+        "url": "https://discord.com/invite/renodx",
+        "message": {
+          "id": "renodx.external.discord",
+          "fallback_text": "Get the add-on from Discord, then install the downloaded file."
+        }
       }
     },
     {
@@ -6635,6 +6683,64 @@
       "processing_path": "native"
     },
     {
+      "id": "broken-pieces",
+      "name": "Broken Pieces",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1293730",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.broken.pieces.1",
+          "message_id": "renodx.ue.extended.broken.pieces.1",
+          "kind": "engine_ini",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+          "engine_ini": {
+            "schema_version": 1,
+            "revision": 1,
+            "sections": [
+              {
+                "name": "SystemSettings",
+                "entries": [
+                  {
+                    "key": "r.AllowHDR",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.EnableHDROutput",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.Display.OutputDevice",
+                    "value": "3"
+                  },
+                  {
+                    "key": "r.HDR.Display.ColorGamut",
+                    "value": "2"
+                  },
+                  {
+                    "key": "r.HDR.UI.CompositeMode",
+                    "value": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
+        }
+      ],
+      "profile_id": "ue_extended"
+    },
+    {
       "id": "chained-together",
       "name": "Chained Together",
       "architecture": "X64",
@@ -6774,10 +6880,10 @@
       },
       "guidance": [
         {
-          "id": "renodx.ue_extended.hdr_engine_ini",
+          "id": "renodx.ue.extended.chromatic.conundrum.1",
+          "message_id": "renodx.ue.extended.chromatic.conundrum.1",
           "kind": "engine_ini",
-          "message_id": "renodx.ue_extended.hdr_engine_ini",
-          "fallback_text": "For the UE5 HDR path, add these settings to Engine.ini.",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
           "engine_ini": {
             "schema_version": 1,
             "revision": 1,
@@ -6809,48 +6915,10 @@
               }
             ]
           },
-          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1",
-          "condition": {
-            "engine": "unreal",
-            "unreal_major": 5
-          }
-        },
-        {
-          "id": "renodx.ue_extended.lut_update",
-          "kind": "engine_ini",
-          "message_id": "renodx.ue_extended.lut_update",
-          "fallback_text": "For UE5.3 and newer, add this setting to enable real-time sliders.",
-          "engine_ini": {
-            "schema_version": 1,
-            "revision": 1,
-            "sections": [
-              {
-                "name": "/Script/Engine.RendererSettings",
-                "entries": [
-                  {
-                    "key": "r.LUT.UpdateEveryFrame",
-                    "value": "1"
-                  }
-                ]
-              }
-            ]
-          },
-          "code": "[/Script/Engine.RendererSettings]\nr.LUT.UpdateEveryFrame=1",
-          "condition": {
-            "engine": "unreal",
-            "unreal_major": 5,
-            "unreal_minor_min": 3
-          }
-        },
-        {
-          "id": "renodx.ue.extended.chromatic.conundrum.1",
-          "message_id": "renodx.ue.extended.chromatic.conundrum.1",
-          "kind": "warning",
-          "fallback_text": "Upgrade Path is incompatible with this title and causes broken rendering."
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
         }
       ],
-      "profile_id": "ue_extended",
-      "processing_path": "native"
+      "profile_id": "ue_extended"
     },
     {
       "id": "conan-exiles-enhanced",
@@ -9913,6 +9981,33 @@
       "processing_path": "native"
     },
     {
+      "id": "star-wars-jedi-fallen-ordertm",
+      "name": "STAR WARS Jedi: Fallen Order™",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1172380",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.star.wars.jedi.fallen.ordertm.1",
+          "message_id": "renodx.ue.extended.star.wars.jedi.fallen.ordertm.1",
+          "kind": "external_tool",
+          "fallback_text": "Use the dedicated Luma Framework mod for full correction.",
+          "url": "https://github.com/Filoppi/Luma-Framework"
+        }
+      ],
+      "profile_id": "ue_extended"
+    },
+    {
       "id": "star-wars-zero-companytm",
       "name": "STAR WARS Zero Company™",
       "architecture": "X64",
@@ -10461,6 +10556,70 @@
       "profile_id": "ue_extended"
     },
     {
+      "id": "the-chant",
+      "name": "The Chant",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1577250",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.the.chant.1",
+          "message_id": "renodx.ue.extended.the.chant.1",
+          "kind": "engine_ini",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+          "engine_ini": {
+            "schema_version": 1,
+            "revision": 1,
+            "sections": [
+              {
+                "name": "SystemSettings",
+                "entries": [
+                  {
+                    "key": "r.AllowHDR",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.EnableHDROutput",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.Display.OutputDevice",
+                    "value": "3"
+                  },
+                  {
+                    "key": "r.HDR.Display.ColorGamut",
+                    "value": "2"
+                  },
+                  {
+                    "key": "r.HDR.UI.CompositeMode",
+                    "value": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
+        },
+        {
+          "id": "renodx.ue.extended.the.chant.2",
+          "message_id": "renodx.ue.extended.the.chant.2",
+          "kind": "compatibility",
+          "fallback_text": "Launch the game with DirectX 11."
+        }
+      ],
+      "profile_id": "ue_extended"
+    },
+    {
       "id": "the-enjenir",
       "name": "The Enjenir: The Engineering Physics Building Simulator",
       "architecture": "X64",
@@ -10594,6 +10753,64 @@
           "requirement": "required"
         }
       }
+    },
+    {
+      "id": "the-midnight-walk",
+      "name": "The Midnight Walk",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2863640",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "ue-extended",
+        "source": "https://marat569.github.io/renodx/renodx-ue-extended.addon64"
+      },
+      "guidance": [
+        {
+          "id": "renodx.ue.extended.the.midnight.walk.1",
+          "message_id": "renodx.ue.extended.the.midnight.walk.1",
+          "kind": "engine_ini",
+          "fallback_text": "Add these settings to Engine.ini for the UE Extended HDR path.",
+          "engine_ini": {
+            "schema_version": 1,
+            "revision": 1,
+            "sections": [
+              {
+                "name": "SystemSettings",
+                "entries": [
+                  {
+                    "key": "r.AllowHDR",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.EnableHDROutput",
+                    "value": "1"
+                  },
+                  {
+                    "key": "r.HDR.Display.OutputDevice",
+                    "value": "3"
+                  },
+                  {
+                    "key": "r.HDR.Display.ColorGamut",
+                    "value": "2"
+                  },
+                  {
+                    "key": "r.HDR.UI.CompositeMode",
+                    "value": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          "code": "[SystemSettings]\nr.AllowHDR=1\nr.HDR.EnableHDROutput=1\nr.HDR.Display.OutputDevice=3\nr.HDR.Display.ColorGamut=2\nr.HDR.UI.CompositeMode=1"
+        }
+      ],
+      "profile_id": "ue_extended"
     },
     {
       "id": "threshold",
@@ -13371,31 +13588,6 @@
         "settings": [
           {
             "key": "Upgrade_R8G8B8A8_TYPELESS",
-            "value": 1
-          }
-        ]
-      },
-      "profile_id": "unreal_legacy"
-    },
-    {
-      "id": "the-midnight-walk",
-      "name": "The Midnight Walk",
-      "architecture": "X64",
-      "status": "working",
-      "match": [
-        {
-          "kind": "steam_appid",
-          "value": "2863640",
-          "tier": 100
-        }
-      ],
-      "addon": {
-        "slug": "unrealengine"
-      },
-      "renodx_config": {
-        "settings": [
-          {
-            "key": "Upgrade_R10G10B10A2_UNORM",
             "value": 1
           }
         ]
@@ -17389,6 +17581,49 @@
       "profile_id": "unity"
     },
     {
+      "id": "blasphemous",
+      "name": "Blasphemous",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "774361",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Use_Swapchain_Proxy",
+            "value": 1
+          },
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "blazblue-entropy-effect",
       "name": "BlazBlue Entropy Effect",
       "architecture": "X64",
@@ -17469,6 +17704,49 @@
           {
             "key": "Tonemap_Offset",
             "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
+      "id": "bloons-td-6",
+      "name": "Bloons TD 6",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "960090",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          },
+          {
+            "key": "Upgrade_R8G8B8A8_TYPELESS",
+            "value": 3
           }
         ]
       },
@@ -18693,6 +18971,43 @@
           "kind": "compatibility",
           "message_id": "renodx.unity.windowed",
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "database-detective-minor-crimes",
+      "name": "Database Detective: Minor Crimes",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3950130",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.database.detective.minor.crimes.1",
+          "message_id": "renodx.unity.database.detective.minor.crimes.1",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
         }
       ],
       "profile_id": "unity"
@@ -21522,6 +21837,37 @@
       "profile_id": "unity"
     },
     {
+      "id": "green-hell",
+      "name": "Green Hell",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "815370",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
       "id": "grime",
       "name": "GRIME",
       "architecture": "X64",
@@ -22328,6 +22674,51 @@
       "profile_id": "unity"
     },
     {
+      "id": "i-have-no-mouth-and-i-must-scream",
+      "name": "I Have No Mouth, and I Must Scream",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "245390",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.i.have.no.mouth.and.i.must.scream.2",
+          "message_id": "renodx.unity.i.have.no.mouth.and.i.must.scream.2",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "i-know-a-guy-shady-life-simulator",
       "name": "I Know a Guy: Shady Life Simulator",
       "architecture": "X64",
@@ -22559,6 +22950,49 @@
           }
         ]
       },
+      "profile_id": "unity"
+    },
+    {
+      "id": "inside",
+      "name": "INSIDE",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "304430",
+          "tier": 100
+        },
+        {
+          "kind": "exe_name",
+          "value": "INSIDE.exe",
+          "tier": 70
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.inside.1",
+          "message_id": "renodx.unity.inside.1",
+          "kind": "external_tool",
+          "fallback_text": "Use the dedicated Luma Framework mod for full correction.",
+          "url": "https://github.com/Filoppi/Luma-Framework"
+        }
+      ],
       "profile_id": "unity"
     },
     {
@@ -24633,6 +25067,61 @@
       "profile_id": "unity"
     },
     {
+      "id": "my-summer-car",
+      "name": "My Summer Car",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "516750",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.my.summer.car.2",
+          "message_id": "renodx.unity.my.summer.car.2",
+          "kind": "game_setting",
+          "fallback_text": "Disable the game's native HDR.",
+          "settings": [
+            {
+              "name": "Native HDR",
+              "value": "Off"
+            }
+          ]
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Use_Swapchain_Proxy",
+            "value": 1
+          },
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "mycopunk",
       "name": "Mycopunk",
       "architecture": "X64",
@@ -24969,6 +25458,37 @@
           }
         ]
       },
+      "profile_id": "unity"
+    },
+    {
+      "id": "nomad-drive",
+      "name": "Nomad Drive",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "2223980",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
       "profile_id": "unity"
     },
     {
@@ -25701,6 +26221,51 @@
       "profile_id": "unity"
     },
     {
+      "id": "papers-please",
+      "name": "Papers, Please",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "239030",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.papers.please.2",
+          "message_id": "renodx.unity.papers.please.2",
+          "kind": "warning",
+          "fallback_text": "The game is not yet fully playable with this profile."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "parkitect",
       "name": "Parkitect",
       "architecture": "X64",
@@ -25925,6 +26490,26 @@
       "addon": {
         "slug": "unityengine"
       },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.phasmophobia.1",
+          "message_id": "renodx.unity.phasmophobia.1",
+          "kind": "compatibility",
+          "fallback_text": "This configuration has limited playtesting."
+        }
+      ],
       "profile_id": "unity"
     },
     {
@@ -25956,6 +26541,55 @@
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
         }
       ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "phoenix-wright-ace-attorney-trilogy",
+      "name": "Phoenix Wright: Ace Attorney Trilogy",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "787480",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.phoenix.wright.ace.attorney.trilogy.2",
+          "message_id": "renodx.unity.phoenix.wright.ace.attorney.trilogy.2",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Use_Swapchain_Proxy",
+            "value": 1
+          },
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
       "profile_id": "unity"
     },
     {
@@ -26212,6 +26846,55 @@
       "profile_id": "unity"
     },
     {
+      "id": "pony-island",
+      "name": "Pony Island",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "405640",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.pony.island.2",
+          "message_id": "renodx.unity.pony.island.2",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Use_Swapchain_Proxy",
+            "value": 1
+          },
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "pools",
       "name": "POOLS",
       "architecture": "X64",
@@ -26269,6 +26952,43 @@
           "kind": "compatibility",
           "message_id": "renodx.unity.windowed",
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "potion-craft-alchemist-simulator",
+      "name": "Potion Craft: Alchemist Simulator",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1210320",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.potion.craft.alchemist.simulator.1",
+          "message_id": "renodx.unity.potion.craft.alchemist.simulator.1",
+          "kind": "warning",
+          "fallback_text": "The game is not yet fully playable with this profile."
         }
       ],
       "profile_id": "unity"
@@ -26481,6 +27201,43 @@
           "kind": "compatibility",
           "message_id": "renodx.unity.windowed",
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "rain-world",
+      "name": "Rain World",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "312520",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.rain.world.1",
+          "message_id": "renodx.unity.rain.world.1",
+          "kind": "warning",
+          "fallback_text": "The game is not yet fully playable with this profile."
         }
       ],
       "profile_id": "unity"
@@ -26745,6 +27502,43 @@
           "kind": "compatibility",
           "message_id": "renodx.unity.windowed",
           "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "return-of-the-obra-dinn",
+      "name": "Return of the Obra Dinn",
+      "architecture": "X64",
+      "status": "unknown",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "653530",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.return.of.the.obra.dinn.1",
+          "message_id": "renodx.unity.return.of.the.obra.dinn.1",
+          "kind": "warning",
+          "fallback_text": "The game is not yet fully playable with this profile."
         }
       ],
       "profile_id": "unity"
@@ -27077,7 +27871,7 @@
       "id": "schedule-i",
       "name": "Schedule I",
       "architecture": "X64",
-      "status": "construction",
+      "status": "working",
       "match": [
         {
           "kind": "steam_appid",
@@ -27368,6 +28162,37 @@
         {
           "kind": "steam_appid",
           "value": "2444750",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "shellshock-live",
+      "name": "ShellShock Live",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "326460",
           "tier": 100
         }
       ],
@@ -29108,6 +29933,49 @@
       "profile_id": "unity"
     },
     {
+      "id": "thalassomania",
+      "name": "Thalassomania",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3050090",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          },
+          {
+            "key": "Upgrade_R8G8B8A8_TYPELESS",
+            "value": 3
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "the-dungeon-of-naheulbeuk-the-amulet-of-chaos",
       "name": "The Dungeon Of Naheulbeuk: The Amulet Of Chaos",
       "architecture": "X64",
@@ -29582,6 +30450,51 @@
       "profile_id": "unity"
     },
     {
+      "id": "the-room",
+      "name": "The Room",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "288160",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.the.room.2",
+          "message_id": "renodx.unity.the.room.2",
+          "kind": "compatibility",
+          "fallback_text": "This configuration has limited playtesting."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
       "id": "the-room-two",
       "name": "The Room Two",
       "architecture": "X64",
@@ -29866,6 +30779,37 @@
       "profile_id": "unity"
     },
     {
+      "id": "thief-simulator",
+      "name": "Thief Simulator",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "704850",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
       "id": "timelie",
       "name": "Timelie",
       "architecture": "X64",
@@ -30076,6 +31020,172 @@
         {
           "kind": "steam_appid",
           "value": "1011670",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        }
+      ],
+      "profile_id": "unity"
+    },
+    {
+      "id": "ultimate-chicken-horse",
+      "name": "Ultimate Chicken Horse",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "386940",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.ultimate.chicken.horse.2",
+          "message_id": "renodx.unity.ultimate.chicken.horse.2",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
+      "id": "untitled-goose-game",
+      "name": "Untitled Goose Game",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "837470",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.untitled.goose.game.2",
+          "message_id": "renodx.unity.untitled.goose.game.2",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Use_Swapchain_Proxy",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
+      "id": "vampire-survivors",
+      "name": "Vampire Survivors",
+      "architecture": "X64",
+      "status": "construction",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "1794680",
+          "tier": 100
+        }
+      ],
+      "addon": {
+        "slug": "unityengine"
+      },
+      "guidance": [
+        {
+          "id": "renodx.unity.reset_display_controls",
+          "kind": "game_setting",
+          "message_id": "renodx.unity.reset_display_controls",
+          "fallback_text": "Keep the game's brightness, contrast, and gamma controls at their default values unless a title note says otherwise."
+        },
+        {
+          "id": "renodx.unity.windowed",
+          "kind": "compatibility",
+          "message_id": "renodx.unity.windowed",
+          "fallback_text": "Avoid Exclusive Fullscreen; use Borderless or Windowed mode."
+        },
+        {
+          "id": "renodx.unity.vampire.survivors.2",
+          "message_id": "renodx.unity.vampire.survivors.2",
+          "kind": "compatibility",
+          "fallback_text": "Peak brightness remains limited in some content."
+        }
+      ],
+      "renodx_config": {
+        "settings": [
+          {
+            "key": "Swapchain_Encoding",
+            "value": 1
+          }
+        ]
+      },
+      "profile_id": "unity"
+    },
+    {
+      "id": "white-knuckle",
+      "name": "White Knuckle",
+      "architecture": "X64",
+      "status": "working",
+      "match": [
+        {
+          "kind": "steam_appid",
+          "value": "3195790",
           "tier": 100
         }
       ],
