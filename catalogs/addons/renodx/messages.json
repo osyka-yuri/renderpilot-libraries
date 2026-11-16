@@ -18,6 +18,54 @@
       }
     },
     {
+      "id": "renodx.blocked.broken_mod",
+      "fallback_text": "The RenoDX mod does not work with this game.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die RenoDX-Mod funktioniert mit diesem Spiel nicht.",
+        "es": "El mod RenoDX no funciona con este juego.",
+        "fr": "Le mod RenoDX ne fonctionne pas avec ce jeu.",
+        "ja": "RenoDX Mod はこのゲームでは動作しません。",
+        "pt-BR": "O mod RenoDX não funciona com este jogo.",
+        "ru": "Мод RenoDX не работает с этой игрой.",
+        "zh-Hans": "RenoDX Mod 无法在此游戏中运行。",
+        "zh-Hant": "RenoDX Mod 無法在此遊戲中運作。"
+      }
+    },
+    {
+      "id": "renodx.blocked.custom_rendering",
+      "fallback_text": "Custom rendering prevents the RenoDX mod from working.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Benutzerdefiniertes Rendering verhindert die Funktion der RenoDX-Mod.",
+        "es": "El renderizado personalizado impide que el mod RenoDX funcione.",
+        "fr": "Un rendu personnalisé empêche le mod RenoDX de fonctionner.",
+        "ja": "カスタムレンダリングのため RenoDX Mod は動作しません。",
+        "pt-BR": "A renderização personalizada impede o funcionamento do mod RenoDX.",
+        "ru": "Нестандартный рендеринг препятствует работе мода RenoDX.",
+        "zh-Hans": "非标准自定义渲染导致 RenoDX Mod 无法正常运行。",
+        "zh-Hant": "非標準自訂渲染導致 RenoDX Mod 無法正常運作。"
+      }
+    },
+    {
+      "id": "renodx.blocked.output_limited",
+      "fallback_text": "HDR output is clamped, limiting the effectiveness of RenoDX.",
+      "kind": "compatibility",
+      "context": "guidance.compatibility",
+      "translations": {
+        "de": "Die HDR-Ausgabe wird begrenzt, was die Wirkung von RenoDX einschränkt.",
+        "es": "La salida HDR está limitada, lo que reduce la eficacia de RenoDX.",
+        "fr": "La sortie HDR est écrêtée, ce qui limite l'efficacité de RenoDX.",
+        "ja": "HDR 出力がクランプされているため、RenoDX の効果が制限されます。",
+        "pt-BR": "A saída HDR é limitada, o que reduz a eficácia do RenoDX.",
+        "ru": "Выходные значения HDR ограничены, что снижает эффективность RenoDX.",
+        "zh-Hans": "HDR 输出受限，从而削弱了 RenoDX 的效果。",
+        "zh-Hant": "HDR 輸出受限，進而削弱了 RenoDX 的效果。"
+      }
+    },
+    {
       "id": "renodx.external.discord",
       "fallback_text": "Get the add-on from Discord, then install the downloaded file.",
       "kind": "compatibility",

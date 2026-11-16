@@ -10617,7 +10617,13 @@
           "fallback_text": "Launch the game with DirectX 11."
         }
       ],
-      "profile_id": "ue_extended"
+      "profile_id": "ue_extended",
+      "requirements": {
+        "launch": {
+          "arguments": ["-dx11"],
+          "requirement": "required"
+        }
+      }
     },
     {
       "id": "the-enjenir",
@@ -26235,6 +26241,13 @@
       "addon": {
         "slug": "unityengine"
       },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.output_limited",
+          "fallback_text": "HDR output is clamped, limiting the effectiveness of RenoDX."
+        }
+      },
       "guidance": [
         {
           "id": "renodx.unity.reset_display_controls",
@@ -26971,6 +26984,13 @@
       "addon": {
         "slug": "unityengine"
       },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.custom_rendering",
+          "fallback_text": "Custom rendering prevents the RenoDX mod from working."
+        }
+      },
       "guidance": [
         {
           "id": "renodx.unity.reset_display_controls",
@@ -27219,6 +27239,13 @@
       ],
       "addon": {
         "slug": "unityengine"
+      },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.custom_rendering",
+          "fallback_text": "Custom rendering prevents the RenoDX mod from working."
+        }
       },
       "guidance": [
         {
@@ -27520,6 +27547,13 @@
       ],
       "addon": {
         "slug": "unityengine"
+      },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.broken_mod",
+          "fallback_text": "The RenoDX mod does not work with this game."
+        }
       },
       "guidance": [
         {

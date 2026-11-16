@@ -321,13 +321,17 @@ assign(keyList("ue-extended", "ready-or-not"), [
   info("RenoDX slider changes do not apply in real time in this game."),
   info("This configuration has limited playtesting."),
 ]);
-assign(keyList("ue-extended", "the-chant"), [
-  ini(
-    "Add these settings to Engine.ini for the UE Extended HDR path.",
-    UE_HDR_ENGINE_INI_RECIPE,
-  ),
-  info("Launch the game with DirectX 11."),
-]);
+assign(
+  keyList("ue-extended", "the-chant"),
+  [
+    ini(
+      "Add these settings to Engine.ini for the UE Extended HDR path.",
+      UE_HDR_ENGINE_INI_RECIPE,
+    ),
+    info("Launch the game with DirectX 11."),
+  ],
+  { launch: launch(["-dx11"]) },
+);
 assign(keyList("ue-extended", "star-wars-jedi-fallen-ordertm"), [
   external(
     "Use the dedicated Luma Framework mod for full correction.",

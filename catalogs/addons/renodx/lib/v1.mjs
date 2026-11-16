@@ -7,6 +7,11 @@ import { requiredNonEmptyString } from "../../../../scripts/lib/common.mjs";
 export const SCHEMA_VERSION = 1;
 
 const FALLBACKS = Object.freeze({
+  "renodx.blocked.broken_mod": "The RenoDX mod does not work with this game.",
+  "renodx.blocked.custom_rendering":
+    "Custom rendering prevents the RenoDX mod from working.",
+  "renodx.blocked.output_limited":
+    "HDR output is clamped, limiting the effectiveness of RenoDX.",
   "renodx.external.discord":
     "Get the add-on from Discord, then install the downloaded file.",
   "renodx.external.nexus":

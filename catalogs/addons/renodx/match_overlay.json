@@ -2111,6 +2111,7 @@
     "game_target_ids": ["palworld"]
   },
   "papers-please": {
+    "blacklist": "renodx.blocked.output_limited",
     "game_target_ids": ["papers-please"]
   },
   "parkitect": {
@@ -2214,6 +2215,7 @@
     "game_target_ids": ["postal-brain-damaged"]
   },
   "potion-craft-alchemist-simulator": {
+    "blacklist": "renodx.blocked.custom_rendering",
     "game_target_ids": ["potion-craft-alchemist-simulator"]
   },
   "powerwash-simulator": {
@@ -2251,6 +2253,7 @@
     "game_target_ids": ["raidou-remastered-the-mystery-of-the-soulless-army"]
   },
   "rain-world": {
+    "blacklist": "renodx.blocked.custom_rendering",
     "game_target_ids": ["rain-world"]
   },
   "ready-or-not": {
@@ -2331,6 +2334,7 @@
     "game_target_ids": ["restory-chill-electronics-repairs"]
   },
   "return-of-the-obra-dinn": {
+    "blacklist": "renodx.blocked.broken_mod",
     "game_target_ids": ["return-of-the-obra-dinn"]
   },
   "returnal": {

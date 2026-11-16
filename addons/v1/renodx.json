@@ -15308,6 +15308,13 @@
       ],
       "addon": {
         "slug": "unityengine"
+      },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.output_limited",
+          "fallback_text": "HDR output is clamped, limiting the effectiveness of RenoDX."
+        }
       }
     },
     {
@@ -15628,6 +15635,13 @@
       ],
       "addon": {
         "slug": "unityengine"
+      },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.custom_rendering",
+          "fallback_text": "Custom rendering prevents the RenoDX mod from working."
+        }
       }
     },
     {
@@ -15745,6 +15759,13 @@
       ],
       "addon": {
         "slug": "unityengine"
+      },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.custom_rendering",
+          "fallback_text": "Custom rendering prevents the RenoDX mod from working."
+        }
       }
     },
     {
@@ -15889,6 +15910,13 @@
       ],
       "addon": {
         "slug": "unityengine"
+      },
+      "availability": {
+        "kind": "blocked",
+        "message": {
+          "id": "renodx.blocked.broken_mod",
+          "fallback_text": "The RenoDX mod does not work with this game."
+        }
       }
     },
     {
